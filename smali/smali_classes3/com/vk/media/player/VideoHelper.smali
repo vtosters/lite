@@ -4,12 +4,12 @@
 
 
 # static fields
-.field private static a:Lcom/vk/media/player/PlayerAnalytics$a;
+.field private static a:Lcom/vk/media/player/b$a;
 
-.field private static final b:Lkotlin/Lazy2;
+.field private static final b:Lkotlin/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Landroid/os/Handler;",
             ">;"
         }
@@ -33,11 +33,11 @@
     .line 2
     sget-object v0, Lcom/vk/media/player/VideoHelper$handler$1;->a:Lcom/vk/media/player/VideoHelper$handler$1;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/media/player/VideoHelper;->b:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/media/player/VideoHelper;->b:Lkotlin/e;
 
     return-void
 .end method
@@ -94,25 +94,25 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/media/player/PlayerAnalytics$a;
+.method public final a()Lcom/vk/media/player/b$a;
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/media/player/VideoHelper;->a:Lcom/vk/media/player/PlayerAnalytics$a;
+    sget-object v0, Lcom/vk/media/player/VideoHelper;->a:Lcom/vk/media/player/b$a;
 
     return-object v0
 .end method
 
-.method public final a(Lcom/vk/media/player/PlayerAnalytics$a;)V
+.method public final a(Lcom/vk/media/player/b$a;)V
     .locals 1
 
     .line 3
-    sget-object v0, Lcom/vk/media/player/VideoHelper;->a:Lcom/vk/media/player/PlayerAnalytics$a;
+    sget-object v0, Lcom/vk/media/player/VideoHelper;->a:Lcom/vk/media/player/b$a;
 
     if-eq v0, p1, :cond_0
 
     .line 4
-    sput-object p1, Lcom/vk/media/player/VideoHelper;->a:Lcom/vk/media/player/PlayerAnalytics$a;
+    sput-object p1, Lcom/vk/media/player/VideoHelper;->a:Lcom/vk/media/player/b$a;
 
     :cond_0
     return-void
@@ -122,9 +122,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/media/player/VideoHelper;->b:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/media/player/VideoHelper;->b:Lkotlin/e;
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

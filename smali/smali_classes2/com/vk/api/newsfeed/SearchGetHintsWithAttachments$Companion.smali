@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -67,7 +67,7 @@
 
     invoke-direct {v3, v2}, Lcom/vk/api/newsfeed/SearchGetHintsWithAttachments$Companion$parseResponse$hints$1;-><init>(Landroid/util/SparseArray;)V
 
-    invoke-static {v1, v3}, Lcom/vk/api/base/VkPaginationList1;->a(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)Lcom/vk/api/base/VkPaginationList;
+    invoke-static {v1, v3}, Lcom/vk/api/base/k;->a(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)Lcom/vk/api/base/VkPaginationList;
 
     move-result-object v1
 
@@ -106,7 +106,7 @@
 
     const-string v8, "this.getJSONObject(i)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     sget-object v8, Lcom/vk/dto/newsfeed/Owner;->h:Lcom/vk/dto/newsfeed/Owner$b;
@@ -165,7 +165,7 @@
     if-eqz v5, :cond_3
 
     .line 12
-    invoke-static {v5, v2}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v5, v2}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v5
 

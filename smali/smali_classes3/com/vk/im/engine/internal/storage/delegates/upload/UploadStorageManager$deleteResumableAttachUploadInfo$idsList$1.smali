@@ -3,7 +3,7 @@
 .source "UploadStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/Object;",
         "Ljava/lang/String;",
         ">;"
@@ -75,12 +75,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 

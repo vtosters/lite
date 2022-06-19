@@ -3,7 +3,7 @@
 .source "MyGamesListFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/common/data/ApiApplication;",
@@ -69,9 +69,9 @@
 
     const-string v1, "apps"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/holder/gamepage/GamesAdapter;->m(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/holder/gamepage/o;->m(Ljava/util/List;)V
 
     return-void
 .end method

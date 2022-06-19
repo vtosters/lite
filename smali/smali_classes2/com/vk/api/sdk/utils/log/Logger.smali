@@ -13,11 +13,11 @@
 
 
 # virtual methods
-.method public abstract a()Lkotlin/Lazy2;
+.method public abstract a()Lkotlin/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Lcom/vk/api/sdk/utils/log/Logger$LogLevel;",
             ">;"
         }

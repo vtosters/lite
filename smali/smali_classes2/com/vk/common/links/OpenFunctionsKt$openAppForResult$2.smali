@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/app/Activity;Ljava/lang/String;Landroid/net/Uri;IILcom/vk/common/links/OpenCallback;)Lio/reactivex/disposables/Disposable;
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/app/Activity;Ljava/lang/String;Landroid/net/Uri;IILcom/vk/common/links/f;)Lio/reactivex/disposables/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/webapp/VkUiConnectFragment$a;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -58,7 +58,7 @@
 
     iget v1, p0, Lcom/vk/common/links/OpenFunctionsKt$openAppForResult$2;->$requestCode:I
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/app/Activity;I)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/navigation/o;->a(Landroid/app/Activity;I)V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$openAppForResult$2;->a(Lcom/vk/webapp/VkUiConnectFragment$a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

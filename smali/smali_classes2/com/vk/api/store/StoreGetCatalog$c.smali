@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/api/store/StoreGetStickerSectionByName$a;",
+            "Lcom/vk/api/store/g$a;",
             ">;"
         }
     .end annotation
@@ -111,7 +111,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/api/store/StoreGetCatalog$c;->b:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/api/base/utils/PurchasesUtils;->a(Ljava/util/Collection;)V
+    invoke-static {v0}, Lcom/vk/api/base/utils/c;->a(Ljava/util/Collection;)V
 
     const-string v0, "sections"
 
@@ -144,13 +144,13 @@
     .line 10
     iget-object v3, p0, Lcom/vk/api/store/StoreGetCatalog$c;->a:Ljava/util/List;
 
-    new-instance v4, Lcom/vk/api/store/StoreGetStickerSectionByName$a;
+    new-instance v4, Lcom/vk/api/store/g$a;
 
     invoke-virtual {v0, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v5
 
-    invoke-direct {v4, v5}, Lcom/vk/api/store/StoreGetStickerSectionByName$a;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v4, v5}, Lcom/vk/api/store/g$a;-><init>(Lorg/json/JSONObject;)V
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -235,7 +235,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/api/store/StoreGetStickerSectionByName$a;Lcom/vk/api/store/StoreGetStickerSectionByName$a;)V
+.method public a(Lcom/vk/api/store/g$a;Lcom/vk/api/store/g$a;)V
     .locals 1
 
     .line 2

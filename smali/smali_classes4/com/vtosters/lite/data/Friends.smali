@@ -164,7 +164,7 @@
     .locals 3
 
     .line 36
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -227,7 +227,7 @@
     const/4 p0, 0x1
 
     .line 17
-    invoke-static {v0, p0}, Lcom/vtosters/lite/BroadcastEvents;->a(Landroid/content/Intent;Z)V
+    invoke-static {v0, p0}, Lcom/vtosters/lite/p;->a(Landroid/content/Intent;Z)V
 
     return-void
 .end method
@@ -253,7 +253,7 @@
     invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     .line 35
-    sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string p1, "com.vtosters.lite.permission.ACCESS_DATA"
 
@@ -636,11 +636,11 @@
 
     .line 2
     :try_start_0
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->b1()Z
+    invoke-virtual {v1}, Lb/h/h/d/c;->b1()Z
 
     move-result v1
     :try_end_0
@@ -663,12 +663,12 @@
     invoke-static {p0}, Lcom/vtosters/lite/data/Friends;->b(Ljava/lang/String;)V
 
     .line 5
-    invoke-static {}, Lcom/vtosters/lite/j0/Cache;->c()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/vtosters/lite/j0/b;->c()Ljava/util/ArrayList;
 
     move-result-object p0
 
     .line 6
-    invoke-static {}, Lcom/vtosters/lite/j0/Cache;->b()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/vtosters/lite/j0/b;->b()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -702,31 +702,31 @@
     invoke-static {p0}, Lcom/vtosters/lite/data/Friends;->b(Ljava/lang/String;)V
 
     .line 12
-    new-instance p0, Lcom/vk/api/friends/FriendsGet;
+    new-instance p0, Lcom/vk/api/friends/e;
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
 
     move-result v1
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v1, v2}, Lcom/vk/api/friends/FriendsGet;-><init>(IZ)V
+    invoke-direct {p0, v1, v2}, Lcom/vk/api/friends/e;-><init>(IZ)V
 
     new-instance v1, Lcom/vtosters/lite/data/Friends$a;
 
     invoke-direct {v1}, Lcom/vtosters/lite/data/Friends$a;-><init>()V
 
     .line 13
-    invoke-virtual {p0, v1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {p0, v1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
 
     move-result-object p0
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/api/base/ApiCallbackDisposable;->b()Z
+    invoke-virtual {p0}, Lcom/vk/api/base/b;->b()Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -903,7 +903,7 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 10
-    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->e()I
+    invoke-static {}, Lcom/vtosters/lite/w;->e()I
 
     move-result v1
 
@@ -911,10 +911,10 @@
 
     sub-int/2addr v1, v2
 
-    invoke-static {v1}, Lcom/vtosters/lite/MenuCountersState;->e(I)V
+    invoke-static {v1}, Lcom/vtosters/lite/w;->e(I)V
 
     .line 11
-    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->e()I
+    invoke-static {}, Lcom/vtosters/lite/w;->e()I
 
     move-result v1
 
@@ -928,7 +928,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 13
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
 
@@ -994,7 +994,7 @@
     .locals 3
 
     .line 4
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -1025,7 +1025,7 @@
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 3
-    sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
 
@@ -1082,7 +1082,7 @@
 
     .line 2
     :try_start_0
-    invoke-static {v0, v1, v2}, Lcom/vk/im/engine/internal/i/FutureUtils;->a(Ljava/util/concurrent/Future;J)Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Lcom/vk/im/engine/internal/i/a;->a(Ljava/util/concurrent/Future;J)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

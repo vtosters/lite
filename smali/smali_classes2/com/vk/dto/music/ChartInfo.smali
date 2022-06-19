@@ -3,7 +3,7 @@
 .source "ChartInfo.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/core/serialize/a;
 
 
 # annotations
@@ -38,7 +38,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/music/ChartInfo$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/music/ChartInfo$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/music/ChartInfo$b;
@@ -105,7 +105,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/dto/music/ChartInfo$toJSONObject$1;-><init>(Lcom/vk/dto/music/ChartInfo;)V
 
-    invoke-static {v0}, Lcom/vk/dto/common/data/JsonObj1;->a(Lkotlin/jvm/b/Functions2;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/vk/dto/common/data/b;->a(Lkotlin/jvm/b/b;)Lorg/json/JSONObject;
 
     move-result-object v0
 

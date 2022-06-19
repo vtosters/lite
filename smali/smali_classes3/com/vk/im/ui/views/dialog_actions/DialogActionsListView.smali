@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;
-.super Lb/h/l/a/VkLibActionsListView;
+.super Lb/h/l/a/k;
 .source "DialogActionsListView.kt"
 
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field private h:Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;
+.field private h:Lcom/vk/im/ui/views/dialog_actions/a;
 
 
 # direct methods
@@ -38,7 +38,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/16 v0, 0x18
 
@@ -49,9 +49,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->OPEN_USER_PROFILE:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_user_profile:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_user_profile:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_dialog_option_open_user_profile:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_dialog_option_open_user_profile:I
 
     const/4 v5, 0x1
 
@@ -66,9 +66,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->OPEN_GROUP_PROFILE:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_group_profile:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_group_profile:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_dialog_option_open_group_profile:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_dialog_option_open_group_profile:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -79,9 +79,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->CHAT_SETTINGS:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_chat_settings:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_chat_settings:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_chat_settings:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_chat_settings:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -94,9 +94,9 @@
 
     sget-object v3, Lcom/vk/im/ui/components/common/DialogAction;->SEARCH:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v4, Lcom/vk/im/ui/R5;->im_ic_search:I
+    sget v4, Lcom/vk/im/ui/c;->im_ic_search:I
 
-    sget v6, Lcom/vk/im/ui/R4;->vkim_search:I
+    sget v6, Lcom/vk/im/ui/m;->vkim_search:I
 
     invoke-direct {v1, v3, v5, v4, v6}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -109,9 +109,9 @@
 
     sget-object v3, Lcom/vk/im/ui/components/common/DialogAction;->ADD_CHAT_MEMBER:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v4, Lcom/vk/im/ui/R5;->im_ic_add_members:I
+    sget v4, Lcom/vk/im/ui/c;->im_ic_add_members:I
 
-    sget v6, Lcom/vk/im/ui/R4;->vkim_add_chat_members:I
+    sget v6, Lcom/vk/im/ui/m;->vkim_add_chat_members:I
 
     invoke-direct {v1, v3, v5, v4, v6}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -124,9 +124,9 @@
 
     sget-object v3, Lcom/vk/im/ui/components/common/DialogAction;->PINNED_MSG_HIDE:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v4, Lcom/vk/im/ui/R5;->im_ic_pinned_msg_hide:I
+    sget v4, Lcom/vk/im/ui/c;->im_ic_pinned_msg_hide:I
 
-    sget v6, Lcom/vk/im/ui/R4;->vkim_dialog_option_pinned_msg_hide:I
+    sget v6, Lcom/vk/im/ui/m;->vkim_dialog_option_pinned_msg_hide:I
 
     invoke-direct {v1, v3, v2, v4, v6}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -139,9 +139,9 @@
 
     sget-object v3, Lcom/vk/im/ui/components/common/DialogAction;->PINNED_MSG_SHOW:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v4, Lcom/vk/im/ui/R5;->im_ic_pinned_msg_show:I
+    sget v4, Lcom/vk/im/ui/c;->im_ic_pinned_msg_show:I
 
-    sget v6, Lcom/vk/im/ui/R4;->vkim_dialog_option_pinned_msg_show:I
+    sget v6, Lcom/vk/im/ui/m;->vkim_dialog_option_pinned_msg_show:I
 
     invoke-direct {v1, v3, v2, v4, v6}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -154,9 +154,9 @@
 
     sget-object v3, Lcom/vk/im/ui/components/common/DialogAction;->PINNED_MSG_DETACH:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v4, Lcom/vk/im/ui/R5;->im_ic_pinned_msg_detach:I
+    sget v4, Lcom/vk/im/ui/c;->im_ic_pinned_msg_detach:I
 
-    sget v6, Lcom/vk/im/ui/R4;->vkim_dialog_option_pinned_msg_detach:I
+    sget v6, Lcom/vk/im/ui/m;->vkim_dialog_option_pinned_msg_detach:I
 
     invoke-direct {v1, v3, v2, v4, v6}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -169,9 +169,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->SHOW_ATTACHES:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_show_attaches:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_show_attaches:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_dialog_attaches_open:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_dialog_attaches_open:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -184,9 +184,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->CHANNEL_INVITE_LINK:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_invite_link:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_invite_link:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_channel_invite_link:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_channel_invite_link:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -199,9 +199,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->NOTIFICATIONS_ON:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_notifications_on:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_notifications_on:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_notifications_enable:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_notifications_enable:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -214,9 +214,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->NOTIFICATIONS_OFF:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_notifications_off:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_notifications_off:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_notifications_disable:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_notifications_disable:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -229,9 +229,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->GROUP_RECEIVE_MSGS_ENABLE:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_receive_msgs_enable:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_receive_msgs_enable:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_groups_receive_msg_enable:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_groups_receive_msg_enable:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -244,9 +244,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->GROUP_RECEIVE_MSGS_DISABLE:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_receive_msgs_disable:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_receive_msgs_disable:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_groups_receive_msg_disable:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_groups_receive_msg_disable:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -259,9 +259,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->GROUP_RECEIVE_NOTIFY_DISABLE:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_receive_msgs_disable:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_receive_msgs_disable:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_groups_receive_notify_disable:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_groups_receive_notify_disable:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -274,9 +274,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->CLEAR_HISTORY:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_clear_history:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_clear_history:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_clear_history:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_clear_history:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -289,9 +289,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->LEAVE:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_leave_dialog:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_leave_dialog:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_leave_chat:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_leave_chat:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -304,9 +304,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->LEAVE_CHANNEL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_leave_dialog:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_leave_dialog:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_leave_channel:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_leave_channel:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -319,9 +319,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->RETURN:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_return_to_dialog:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_return_to_dialog:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_return_to_chat:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_return_to_chat:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -334,9 +334,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->RETURN_TO_CHANNEL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_return_to_dialog:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_return_to_dialog:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_return_to_channel:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_return_to_channel:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -349,9 +349,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->AUDIO_BTN_AUDIO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_voip_call_audio:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_voip_call_audio:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_call_with_audio:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_call_with_audio:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -364,9 +364,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->AUDIO_BTN_VIDEO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_voip_call_video:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_voip_call_video:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_call_with_video:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_call_with_video:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -379,9 +379,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->VIDEO_BTN_VIDEO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_voip_call_video:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_voip_call_video:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_call_with_video:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_call_with_video:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -394,9 +394,9 @@
 
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->VIDEO_BTN_AUDIO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
-    sget v3, Lcom/vk/im/ui/R5;->im_ic_voip_call_audio:I
+    sget v3, Lcom/vk/im/ui/c;->im_ic_voip_call_audio:I
 
-    sget v4, Lcom/vk/im/ui/R4;->vkim_msg_header_menu_call_with_audio:I
+    sget v4, Lcom/vk/im/ui/m;->vkim_msg_header_menu_call_with_audio:I
 
     invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -442,14 +442,14 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lb/h/l/a/VkLibActionsListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lb/h/l/a/k;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 2
     new-instance p1, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$a;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$a;-><init>(Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;)V
 
-    invoke-virtual {p0, p1}, Lb/h/l/a/VkLibActionsListView;->setActionClickListener(Lb/h/l/a/ActionClickListener;)V
+    invoke-virtual {p0, p1}, Lb/h/l/a/k;->setActionClickListener(Lb/h/l/a/c;)V
 
     return-void
 .end method
@@ -506,11 +506,11 @@
 
 
 # virtual methods
-.method public final getOnActionClickListener()Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;
+.method public final getOnActionClickListener()Lcom/vk/im/ui/views/dialog_actions/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->h:Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;
+    iget-object v0, p0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->h:Lcom/vk/im/ui/views/dialog_actions/a;
 
     return-object v0
 .end method
@@ -630,13 +630,13 @@
     move-result-object v4
 
     .line 11
-    new-instance v5, Lb/h/l/a/Action;
+    new-instance v5, Lb/h/l/a/a;
 
     invoke-virtual {v1}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;->b()I
 
     move-result v1
 
-    invoke-direct {v5, v2, v1, v3, v4}, Lb/h/l/a/Action;-><init>(IILandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)V
+    invoke-direct {v5, v2, v1, v3, v4}, Lb/h/l/a/a;-><init>(IILandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)V
 
     invoke-interface {p1, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -644,16 +644,16 @@
 
     .line 12
     :cond_2
-    invoke-virtual {p0, p1}, Lb/h/l/a/VkLibActionsListView;->setActions(Ljava/util/List;)V
+    invoke-virtual {p0, p1}, Lb/h/l/a/k;->setActions(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public final setOnActionClickListener(Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;)V
+.method public final setOnActionClickListener(Lcom/vk/im/ui/views/dialog_actions/a;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->h:Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;
+    iput-object p1, p0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->h:Lcom/vk/im/ui/views/dialog_actions/a;
 
     return-void
 .end method

@@ -67,7 +67,7 @@
     return-object v0
 .end method
 
-.method protected final a(Lkotlin/jvm/b/Functions2;)V
+.method protected final a(Lkotlin/jvm/b/b;)V
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -75,9 +75,9 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -85,14 +85,14 @@
     .line 2
     new-instance v0, Lcom/vk/audioipc/core/ListenersNotifyManager$notifyListeners$runnable$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/core/ListenersNotifyManager$notifyListeners$runnable$1;-><init>(Lcom/vk/audioipc/core/ListenersNotifyManager;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/core/ListenersNotifyManager$notifyListeners$runnable$1;-><init>(Lcom/vk/audioipc/core/ListenersNotifyManager;Lkotlin/jvm/b/b;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/audioipc/core/ListenersNotifyManager;->a:Landroid/os/Handler;
 
-    new-instance v1, Lcom/vk/audioipc/core/ListenersNotifyManager1;
+    new-instance v1, Lcom/vk/audioipc/core/h;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/core/h;-><init>(Lkotlin/jvm/b/a;)V
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic I:[Lkotlin/u/KProperty5;
+.field static final synthetic I:[Lkotlin/u/j;
 
 
 # instance fields
@@ -46,7 +46,7 @@
 
 .field private H:I
 
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
 .field private b:I
 
@@ -77,13 +77,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/core/ui/swipes/ButtonsSwipeView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -91,15 +91,15 @@
 
     const-string v4, "getVelocityTracker()Landroid/view/VelocityTracker;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/ui/swipes/ButtonsSwipeView;->I:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/core/ui/swipes/ButtonsSwipeView;->I:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -113,11 +113,11 @@
     .line 3
     sget-object p2, Lcom/vk/core/ui/swipes/ButtonsSwipeView$velocityTracker$2;->a:Lcom/vk/core/ui/swipes/ButtonsSwipeView$velocityTracker$2;
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/core/ui/swipes/ButtonsSwipeView;->a:Lkotlin/Lazy2;
+    iput-object p2, p0, Lcom/vk/core/ui/swipes/ButtonsSwipeView;->a:Lkotlin/e;
 
     const/4 p2, -0x1
 
@@ -131,7 +131,7 @@
 
     const-string v0, "ViewConfiguration.get(context)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
 
@@ -204,7 +204,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -629,15 +629,15 @@
 .method private final getVelocityTracker()Landroid/view/VelocityTracker;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/ui/swipes/ButtonsSwipeView;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/core/ui/swipes/ButtonsSwipeView;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/ui/swipes/ButtonsSwipeView;->I:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/ui/swipes/ButtonsSwipeView;->I:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -989,7 +989,7 @@
     const v2, 0x7fffffff
 
     .line 3
-    invoke-static {p1, v1, v2, v0}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
+    invoke-static {p1, v1, v2, v0}, Lcom/vk/core/utils/d;->a(IIII)I
 
     move-result v0
 

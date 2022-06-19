@@ -42,7 +42,7 @@
     :try_start_0
     iget-object v0, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$d;->a:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
-    invoke-static {v0}, Lorg/chromium/net/impl/CronetBidirectionalStream;->f(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/VersionSafeCallbacks3;
+    invoke-static {v0}, Lorg/chromium/net/impl/CronetBidirectionalStream;->f(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/m;
 
     move-result-object v0
 
@@ -50,11 +50,11 @@
 
     iget-object v2, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$d;->a:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
-    invoke-static {v2}, Lorg/chromium/net/impl/CronetBidirectionalStream;->e(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    invoke-static {v2}, Lorg/chromium/net/impl/CronetBidirectionalStream;->e(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/k;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lorg/chromium/net/impl/VersionSafeCallbacks3;->a(Lorg/chromium/net/BidirectionalStream;Lorg/chromium/net/UrlResponseInfo;)V
+    invoke-virtual {v0, v1, v2}, Lorg/chromium/net/impl/m;->a(Lorg/chromium/net/e;Lorg/chromium/net/x;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -78,7 +78,7 @@
 
     const-string v0, "Exception in onCanceled method"
 
-    invoke-static {v1, v0, v2}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method

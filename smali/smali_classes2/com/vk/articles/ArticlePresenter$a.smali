@@ -3,7 +3,7 @@
 .source "ArticlePresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,11 +57,11 @@
 
 
 # virtual methods
-.method public final a(Lb/h/t/l/a/PollUpdatedEvent;)Lcom/vk/dto/polls/Poll;
+.method public final a(Lb/h/t/l/a/a;)Lcom/vk/dto/polls/Poll;
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lb/h/t/l/a/PollUpdatedEvent;->a()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p1}, Lb/h/t/l/a/a;->a()Lcom/vk/dto/polls/Poll;
 
     move-result-object p1
 
@@ -72,9 +72,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/t/l/a/PollUpdatedEvent;
+    check-cast p1, Lb/h/t/l/a/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/articles/ArticlePresenter$a;->a(Lb/h/t/l/a/PollUpdatedEvent;)Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p0, p1}, Lcom/vk/articles/ArticlePresenter$a;->a(Lb/h/t/l/a/a;)Lcom/vk/dto/polls/Poll;
 
     move-result-object p1
 

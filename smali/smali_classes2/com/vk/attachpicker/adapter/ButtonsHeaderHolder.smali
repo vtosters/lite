@@ -40,7 +40,7 @@
 
     const-string v1, "view.findViewById(R.id.p\u2026ttach_gallery_photo_view)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder;->b:Landroid/view/View;
 
@@ -53,7 +53,7 @@
 
     const-string v1, "view.findViewById(R.id.p\u2026ttach_gallery_video_view)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder;->c:Landroid/view/View;
 
@@ -66,7 +66,7 @@
 
     const-string v1, "view.findViewById(R.id.p\u2026h_gallery_separator_view)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder;->d:Landroid/view/View;
 
@@ -84,7 +84,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/attachpicker/adapter/ButtonsHeaderFactory;)V
+.method public final a(Lcom/vk/attachpicker/adapter/c;)V
     .locals 2
 
     .line 1
@@ -100,9 +100,9 @@
 
     new-instance v1, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$1;-><init>(Lcom/vk/attachpicker/adapter/ButtonsHeaderFactory;)V
+    invoke-direct {v1, p1}, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$1;-><init>(Lcom/vk/attachpicker/adapter/c;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 2
     :cond_0
@@ -118,9 +118,9 @@
 
     new-instance v1, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$2;
 
-    invoke-direct {v1, p1}, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$2;-><init>(Lcom/vk/attachpicker/adapter/ButtonsHeaderFactory;)V
+    invoke-direct {v1, p1}, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$2;-><init>(Lcom/vk/attachpicker/adapter/c;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     :cond_1
     return-void

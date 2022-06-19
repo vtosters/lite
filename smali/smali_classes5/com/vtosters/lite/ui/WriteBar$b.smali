@@ -338,13 +338,13 @@
     :cond_5
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar$b;->b:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->q(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/navigation/ActivityLauncher;
+    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->q(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/navigation/a;
 
     move-result-object v0
 
     const/16 v1, 0x271a
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/navigation/ActivityLauncher;->a(Landroid/content/Intent;I)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/navigation/a;->a(Landroid/content/Intent;I)V
 
     return-void
 .end method

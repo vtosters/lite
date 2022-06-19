@@ -20,9 +20,9 @@
 
 .field private C:Z
 
-.field private a:Lcom/vk/attachpicker/drawing/DrawingState;
+.field private a:Lcom/vk/attachpicker/drawing/d;
 
-.field private b:Lcom/vk/attachpicker/drawing/DrawingCanvas;
+.field private b:Lcom/vk/attachpicker/drawing/a;
 
 .field private c:Z
 
@@ -63,11 +63,11 @@
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lcom/vk/attachpicker/drawing/DrawingState;
+    new-instance p1, Lcom/vk/attachpicker/drawing/d;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/drawing/DrawingState;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/drawing/d;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iput-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     const/4 p1, 0x0
 
@@ -83,14 +83,14 @@
     iput v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->g:I
 
     .line 6
-    sget-object v1, Lcom/vk/attachpicker/drawing/DrawingColors;->a:[I
+    sget-object v1, Lcom/vk/attachpicker/drawing/b;->a:[I
 
     aget p1, v1, p1
 
     iput p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->h:I
 
     .line 7
-    sget-object p1, Lcom/vk/attachpicker/drawing/DrawingState;->j:[F
+    sget-object p1, Lcom/vk/attachpicker/drawing/d;->j:[F
 
     const/4 v1, 0x2
 
@@ -111,11 +111,11 @@
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 10
-    new-instance p1, Lcom/vk/attachpicker/drawing/DrawingState;
+    new-instance p1, Lcom/vk/attachpicker/drawing/d;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/drawing/DrawingState;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/drawing/d;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iput-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     const/4 p1, 0x0
 
@@ -131,14 +131,14 @@
     iput p2, p0, Lcom/vk/attachpicker/drawing/DrawingView;->g:I
 
     .line 14
-    sget-object v0, Lcom/vk/attachpicker/drawing/DrawingColors;->a:[I
+    sget-object v0, Lcom/vk/attachpicker/drawing/b;->a:[I
 
     aget p1, v0, p1
 
     iput p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->h:I
 
     .line 15
-    sget-object p1, Lcom/vk/attachpicker/drawing/DrawingState;->j:[F
+    sget-object p1, Lcom/vk/attachpicker/drawing/d;->j:[F
 
     const/4 v0, 0x2
 
@@ -159,11 +159,11 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 18
-    new-instance p1, Lcom/vk/attachpicker/drawing/DrawingState;
+    new-instance p1, Lcom/vk/attachpicker/drawing/d;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/drawing/DrawingState;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/drawing/d;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iput-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     const/4 p1, 0x0
 
@@ -179,14 +179,14 @@
     iput p2, p0, Lcom/vk/attachpicker/drawing/DrawingView;->g:I
 
     .line 22
-    sget-object p3, Lcom/vk/attachpicker/drawing/DrawingColors;->a:[I
+    sget-object p3, Lcom/vk/attachpicker/drawing/b;->a:[I
 
     aget p1, p3, p1
 
     iput p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->h:I
 
     .line 23
-    sget-object p1, Lcom/vk/attachpicker/drawing/DrawingState;->j:[F
+    sget-object p1, Lcom/vk/attachpicker/drawing/d;->j:[F
 
     const/4 p3, 0x2
 
@@ -245,16 +245,16 @@
     move-result p1
 
     .line 4
-    iget-object v1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/drawing/DrawingState;->c()Lcom/vk/attachpicker/drawing/DrawingPath;
+    invoke-virtual {v1}, Lcom/vk/attachpicker/drawing/d;->c()Lcom/vk/attachpicker/drawing/c;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 5
-    invoke-virtual {v1, v0, p1}, Lcom/vk/attachpicker/drawing/DrawingPath;->a(FF)V
+    invoke-virtual {v1, v0, p1}, Lcom/vk/attachpicker/drawing/c;->a(FF)V
 
     .line 6
     :cond_1
@@ -267,9 +267,9 @@
 
     .line 8
     :cond_2
-    iget-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/DrawingCanvas;
+    iget-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/a;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/drawing/DrawingCanvas;->c()V
+    invoke-virtual {p1}, Lcom/vk/attachpicker/drawing/a;->c()V
 
     return-void
 .end method
@@ -308,9 +308,9 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/attachpicker/drawing/f/PenBrush;
+    new-instance v0, Lcom/vk/attachpicker/drawing/f/e;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/drawing/f/PenBrush;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/drawing/f/e;-><init>()V
 
     goto :goto_0
 
@@ -318,9 +318,9 @@
     if-nez v0, :cond_1
 
     .line 3
-    new-instance v0, Lcom/vk/attachpicker/drawing/f/EraserBrush;
+    new-instance v0, Lcom/vk/attachpicker/drawing/f/b;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/drawing/f/EraserBrush;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/drawing/f/b;-><init>()V
 
     goto :goto_0
 
@@ -330,9 +330,9 @@
     if-ne v0, v1, :cond_2
 
     .line 4
-    new-instance v0, Lcom/vk/attachpicker/drawing/f/MarkerBrush;
+    new-instance v0, Lcom/vk/attachpicker/drawing/f/c;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/drawing/f/MarkerBrush;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/drawing/f/c;-><init>()V
 
     goto :goto_0
 
@@ -342,25 +342,25 @@
     if-ne v0, v1, :cond_3
 
     .line 5
-    new-instance v0, Lcom/vk/attachpicker/drawing/f/NeonBrush;
+    new-instance v0, Lcom/vk/attachpicker/drawing/f/d;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/drawing/f/NeonBrush;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/drawing/f/d;-><init>()V
 
     .line 6
     :goto_0
     iget v1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->B:F
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/drawing/f/Brush;->a(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/drawing/f/a;->a(F)V
 
     .line 7
     iget v1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->h:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/drawing/f/Brush;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/drawing/f/a;->b(I)V
 
     .line 8
-    new-instance v1, Lcom/vk/attachpicker/drawing/DrawingPath;
+    new-instance v1, Lcom/vk/attachpicker/drawing/c;
 
-    invoke-direct {v1}, Lcom/vk/attachpicker/drawing/DrawingPath;-><init>()V
+    invoke-direct {v1}, Lcom/vk/attachpicker/drawing/c;-><init>()V
 
     .line 9
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -373,17 +373,17 @@
     move-result p1
 
     .line 11
-    invoke-virtual {v1, v2, p1}, Lcom/vk/attachpicker/drawing/DrawingPath;->a(FF)V
+    invoke-virtual {v1, v2, p1}, Lcom/vk/attachpicker/drawing/c;->a(FF)V
 
     .line 12
-    iget-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/attachpicker/drawing/DrawingState;->a(Lcom/vk/attachpicker/drawing/DrawingPath;Lcom/vk/attachpicker/drawing/f/Brush;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/attachpicker/drawing/d;->a(Lcom/vk/attachpicker/drawing/c;Lcom/vk/attachpicker/drawing/f/a;)V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/DrawingCanvas;
+    iget-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/a;
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/attachpicker/drawing/DrawingCanvas;->a(Lcom/vk/attachpicker/drawing/f/Brush;Lcom/vk/attachpicker/drawing/DrawingPath;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/attachpicker/drawing/a;->a(Lcom/vk/attachpicker/drawing/f/a;Lcom/vk/attachpicker/drawing/c;)V
 
     :cond_3
     return-void
@@ -393,22 +393,22 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingState;->c()Lcom/vk/attachpicker/drawing/DrawingPath;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/d;->c()Lcom/vk/attachpicker/drawing/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingPath;->a()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/c;->a()V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/DrawingCanvas;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/a;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingCanvas;->d()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/a;->d()V
 
     return-void
 .end method
@@ -417,22 +417,22 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/DrawingCanvas;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/a;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingCanvas;->a()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/a;->a()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     if-eqz v0, :cond_0
 
     .line 4
-    iget-object v1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/DrawingCanvas;
+    iget-object v1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/attachpicker/drawing/DrawingCanvas;->a(Lcom/vk/attachpicker/drawing/DrawingState;)V
+    invoke-virtual {v1, v0}, Lcom/vk/attachpicker/drawing/a;->a(Lcom/vk/attachpicker/drawing/d;)V
 
     .line 5
     :cond_0
@@ -463,9 +463,9 @@
     .locals 1
 
     .line 11
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingState;->a()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/d;->a()V
 
     .line 12
     invoke-direct {p0}, Lcom/vk/attachpicker/drawing/DrawingView;->g()V
@@ -477,7 +477,7 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     if-eqz v0, :cond_0
 
@@ -486,7 +486,7 @@
     int-to-float p2, p2
 
     .line 6
-    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/drawing/DrawingState;->a(FF)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/drawing/d;->a(FF)V
 
     .line 7
     :cond_0
@@ -499,12 +499,12 @@
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     if-eqz v0, :cond_0
 
     .line 9
-    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/drawing/DrawingState;->a(Landroid/graphics/Matrix;Landroid/graphics/Matrix;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/drawing/d;->a(Landroid/graphics/Matrix;Landroid/graphics/Matrix;)V
 
     .line 10
     :cond_0
@@ -517,9 +517,9 @@
     .locals 1
 
     .line 9
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingState;->j()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/d;->j()I
 
     move-result v0
 
@@ -540,12 +540,12 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingState;->g()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/d;->g()V
 
     .line 7
     :cond_0
@@ -558,9 +558,9 @@
     .locals 1
 
     .line 14
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingState;->h()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/d;->h()V
 
     return-void
 .end method
@@ -569,9 +569,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingState;->f()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/d;->f()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/attachpicker/drawing/DrawingView;->g()V
@@ -597,13 +597,13 @@
     return v0
 .end method
 
-.method public getDrawingStateCopy()Lcom/vk/attachpicker/drawing/DrawingState;
+.method public getDrawingStateCopy()Lcom/vk/attachpicker/drawing/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingState;->b()Lcom/vk/attachpicker/drawing/DrawingState;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/d;->b()Lcom/vk/attachpicker/drawing/d;
 
     move-result-object v0
 
@@ -614,11 +614,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingState;->j()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/d;->j()I
 
     move-result v0
 
@@ -647,9 +647,9 @@
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/DrawingCanvas;
+    iget-object v0, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/drawing/DrawingCanvas;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/drawing/a;->a(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
@@ -664,21 +664,21 @@
     invoke-virtual {p0, p1, p2}, Lcom/vk/attachpicker/drawing/DrawingView;->a(II)V
 
     .line 3
-    new-instance p3, Lcom/vk/attachpicker/drawing/DrawingCanvas;
+    new-instance p3, Lcom/vk/attachpicker/drawing/a;
 
-    invoke-direct {p3, p1, p2}, Lcom/vk/attachpicker/drawing/DrawingCanvas;-><init>(II)V
+    invoke-direct {p3, p1, p2}, Lcom/vk/attachpicker/drawing/a;-><init>(II)V
 
-    iput-object p3, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/DrawingCanvas;
+    iput-object p3, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/a;
 
     .line 4
-    iget-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iget-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     if-eqz p1, :cond_0
 
     .line 5
-    iget-object p2, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/DrawingCanvas;
+    iget-object p2, p0, Lcom/vk/attachpicker/drawing/DrawingView;->b:Lcom/vk/attachpicker/drawing/a;
 
-    invoke-virtual {p2, p1}, Lcom/vk/attachpicker/drawing/DrawingCanvas;->a(Lcom/vk/attachpicker/drawing/DrawingState;)V
+    invoke-virtual {p2, p1}, Lcom/vk/attachpicker/drawing/a;->a(Lcom/vk/attachpicker/drawing/d;)V
 
     :cond_0
     return-void
@@ -707,7 +707,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {p0}, Lcom/vk/attachpicker/util/Utils;->a(Landroid/view/View;)I
+    invoke-static {p0}, Lcom/vk/attachpicker/util/f;->a(Landroid/view/View;)I
 
     move-result v0
 
@@ -724,7 +724,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {p0}, Lcom/vk/attachpicker/util/Utils;->b(Landroid/view/View;)I
+    invoke-static {p0}, Lcom/vk/attachpicker/util/f;->b(Landroid/view/View;)I
 
     move-result v2
 
@@ -855,11 +855,11 @@
     return-void
 .end method
 
-.method public setDrawingState(Lcom/vk/attachpicker/drawing/DrawingState;)V
+.method public setDrawingState(Lcom/vk/attachpicker/drawing/d;)V
     .locals 1
 
     .line 1
-    iput-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/DrawingState;
+    iput-object p1, p0, Lcom/vk/attachpicker/drawing/DrawingView;->a:Lcom/vk/attachpicker/drawing/d;
 
     .line 2
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I

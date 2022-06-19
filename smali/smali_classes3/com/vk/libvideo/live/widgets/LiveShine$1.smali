@@ -3,7 +3,7 @@
 .source "LiveShine.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Landroid/graphics/drawable/Drawable;",
         ">;"
     }
@@ -51,7 +51,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/live/widgets/LiveShine$1;->$context:Landroid/content/Context;
 
-    sget v1, Lcom/vk/libvideo/R7;->badge_live_20:I
+    sget v1, Lcom/vk/libvideo/e;->badge_live_20:I
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 

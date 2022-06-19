@@ -52,9 +52,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
+    sget-object v0, Lb/h/k/c;->b:Lb/h/k/c;
 
-    invoke-virtual {v0, p1}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, p1}, Lb/h/k/c;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -63,7 +63,7 @@
     .locals 6
 
     .line 1
-    sget-object v0, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
+    sget-object v0, Lb/h/k/c;->b:Lb/h/k/c;
 
     sget-wide v4, Landroidx/recyclerview/widget/internal/IdleTaskScheduler;->idleWindow:J
 
@@ -71,7 +71,7 @@
 
     move-wide v2, p2
 
-    invoke-virtual/range {v0 .. v5}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;JJ)V
+    invoke-virtual/range {v0 .. v5}, Lb/h/k/c;->a(Ljava/lang/Runnable;JJ)V
 
     return-void
 .end method

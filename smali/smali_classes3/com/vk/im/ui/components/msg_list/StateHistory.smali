@@ -15,10 +15,10 @@
 # instance fields
 .field private a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-.field private final b:Lcom/vk/im/engine/models/EntityValue;
+.field private final b:Lcom/vk/im/engine/models/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/b<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;"
         }
@@ -27,7 +27,7 @@
 
 .field private final c:Lcom/vk/im/engine/models/ProfilesInfo;
 
-.field private d:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+.field private d:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
 .field private e:Z
 
@@ -35,7 +35,7 @@
 
 .field private g:I
 
-.field private h:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
+.field private h:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
 
 .field private i:Lcom/vk/im/engine/models/messages/MsgIdType;
 
@@ -63,11 +63,11 @@
     iput-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
     .line 3
-    new-instance v0, Lcom/vk/im/engine/models/EntityValue;
+    new-instance v0, Lcom/vk/im/engine/models/b;
 
-    invoke-direct {v0}, Lcom/vk/im/engine/models/EntityValue;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/engine/models/b;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/EntityValue;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/b;
 
     .line 4
     new-instance v0, Lcom/vk/im/engine/models/ProfilesInfo;
@@ -90,13 +90,13 @@
     iput-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->l:Lcom/vk/im/ui/components/msg_list/StateHistory$State;
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/EntityValue;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/b;
 
-    new-instance v1, Lcom/vk/im/engine/models/EntityValue;
+    new-instance v1, Lcom/vk/im/engine/models/b;
 
-    invoke-direct {v1, p1}, Lcom/vk/im/engine/models/EntityValue;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, p1}, Lcom/vk/im/engine/models/b;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/EntityValue;->a(Lcom/vk/im/engine/models/EntityValue;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/b;->a(Lcom/vk/im/engine/models/b;)V
 
     return-void
 .end method
@@ -109,7 +109,7 @@
     .line 20
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v0, v0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v0, v0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -123,7 +123,7 @@
     .line 21
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v2, v2, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v2, v2, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -179,7 +179,7 @@
     .line 26
     iget-object v1, v0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v1, v1, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -221,7 +221,7 @@
     :cond_1
     iget-object v3, v0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v3, v3, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v3, v3, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -253,7 +253,7 @@
     .line 33
     iget-object v11, v0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v11, v11, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v11, v11, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v11, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -336,7 +336,7 @@
     .line 41
     iget-object v3, v0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v3, v3, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v3, v3, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -348,7 +348,7 @@
     .line 42
     iget-object v7, v0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v7, v7, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v7, v7, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -470,11 +470,11 @@
     .line 24
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v1, v1, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     sget-object v2, Lcom/vk/im/ui/components/msg_list/StateHistory$findMsgBunchByLocalId$historyMap$1;->a:Lcom/vk/im/ui/components/msg_list/StateHistory$findMsgBunchByLocalId$historyMap$1;
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Map;
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -483,7 +483,7 @@
 
     invoke-direct {v2, v1, v0}, Lcom/vk/im/ui/components/msg_list/StateHistory$b;-><init>(Ljava/util/Map;Ljava/util/List;)V
 
-    invoke-virtual {p1, v2}, Lcom/vk/im/engine/utils/collection/IntArrayList;->a(Lcom/vk/im/engine/utils/collection/IntCollection$a;)V
+    invoke-virtual {p1, v2}, Lcom/vk/im/engine/utils/collection/IntArrayList;->a(Lcom/vk/im/engine/utils/collection/d$a;)V
 
     return-object v0
 .end method
@@ -494,12 +494,12 @@
     .line 11
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/History;->clear()V
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/d;->clear()V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/EntityValue;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/b;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityValue;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/b;->a()V
 
     .line 13
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->c:Lcom/vk/im/engine/models/ProfilesInfo;
@@ -507,11 +507,11 @@
     invoke-virtual {v0}, Lcom/vk/im/engine/models/ProfilesInfo;->clear()V
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->d:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->d:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->a()V
 
     :cond_0
     const/4 v0, 0x0
@@ -528,7 +528,7 @@
     const/4 v0, 0x0
 
     .line 18
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->h:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->h:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
 
     .line 19
     sget-object v0, Lcom/vk/im/ui/components/msg_list/StateHistory$State;->NONE:Lcom/vk/im/ui/components/msg_list/StateHistory$State;
@@ -632,20 +632,20 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->d:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->d:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->h:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->h:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
 
     return-void
 .end method
@@ -682,7 +682,7 @@
     return p1
 .end method
 
-.method public final b()Lcom/vk/im/engine/models/ProfilesIds1;
+.method public final b()Lcom/vk/im/engine/models/l;
     .locals 1
 
     .line 3
@@ -694,7 +694,7 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->c:Lcom/vk/im/engine/models/ProfilesInfo;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/ProfilesInfo;->t1()Lcom/vk/im/engine/models/ProfilesIds1;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/ProfilesInfo;->t1()Lcom/vk/im/engine/models/l;
 
     move-result-object v0
 
@@ -743,7 +743,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v0, v0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v0, v0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -761,7 +761,7 @@
     .line 4
     iget-object v4, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v4, v4, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v4, v4, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -777,7 +777,7 @@
     .line 6
     iget-object v5, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    invoke-virtual {v5, v4}, Lcom/vk/im/engine/models/History;->b(I)Z
+    invoke-virtual {v5, v4}, Lcom/vk/im/engine/models/d;->b(I)Z
 
     move-result v4
 
@@ -804,7 +804,7 @@
     .line 7
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-boolean v1, v0, Lcom/vk/im/engine/models/History;->hasHistoryAfter:Z
+    iget-boolean v1, v0, Lcom/vk/im/engine/models/d;->hasHistoryAfter:Z
 
     if-eqz v1, :cond_4
 
@@ -812,9 +812,9 @@
     new-instance v1, Lcom/vk/im/ui/components/msg_list/StateHistory$a;
 
     .line 9
-    new-instance v4, Lcom/vk/im/engine/models/Weight;
+    new-instance v4, Lcom/vk/im/engine/models/q;
 
-    iget-object v0, v0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v0, v0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -822,13 +822,13 @@
 
     check-cast v0, Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-direct {v4, v0}, Lcom/vk/im/engine/models/Weight;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-direct {v4, v0}, Lcom/vk/im/engine/models/q;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
 
     .line 10
     sget-object v0, Lcom/vk/im/engine/models/Direction;->BEFORE:Lcom/vk/im/engine/models/Direction;
 
     .line 11
-    invoke-direct {v1, v4, v0, v2}, Lcom/vk/im/ui/components/msg_list/StateHistory$a;-><init>(Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)V
+    invoke-direct {v1, v4, v0, v2}, Lcom/vk/im/ui/components/msg_list/StateHistory$a;-><init>(Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)V
 
     goto :goto_2
 
@@ -837,9 +837,9 @@
     new-instance v1, Lcom/vk/im/ui/components/msg_list/StateHistory$a;
 
     .line 13
-    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
 
     move-result-object v0
 
@@ -847,7 +847,7 @@
     sget-object v3, Lcom/vk/im/engine/models/Direction;->BEFORE:Lcom/vk/im/engine/models/Direction;
 
     .line 15
-    invoke-direct {v1, v0, v3, v2}, Lcom/vk/im/ui/components/msg_list/StateHistory$a;-><init>(Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)V
+    invoke-direct {v1, v0, v3, v2}, Lcom/vk/im/ui/components/msg_list/StateHistory$a;-><init>(Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)V
 
     goto :goto_2
 
@@ -856,11 +856,11 @@
     new-instance v1, Lcom/vk/im/ui/components/msg_list/StateHistory$a;
 
     .line 17
-    new-instance v0, Lcom/vk/im/engine/models/Weight;
+    new-instance v0, Lcom/vk/im/engine/models/q;
 
     iget-object v4, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v4, v4, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v4, v4, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -868,13 +868,13 @@
 
     check-cast v3, Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-direct {v0, v3}, Lcom/vk/im/engine/models/Weight;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-direct {v0, v3}, Lcom/vk/im/engine/models/q;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
 
     .line 18
     sget-object v3, Lcom/vk/im/engine/models/Direction;->BEFORE:Lcom/vk/im/engine/models/Direction;
 
     .line 19
-    invoke-direct {v1, v0, v3, v2}, Lcom/vk/im/ui/components/msg_list/StateHistory$a;-><init>(Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)V
+    invoke-direct {v1, v0, v3, v2}, Lcom/vk/im/ui/components/msg_list/StateHistory$a;-><init>(Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)V
 
     :goto_2
     return-object v1
@@ -889,19 +889,19 @@
     return-void
 .end method
 
-.method public final d()Lcom/vk/im/engine/models/Weight;
+.method public final d()Lcom/vk/im/engine/models/q;
     .locals 3
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-boolean v1, v0, Lcom/vk/im/engine/models/History;->hasHistoryBefore:Z
+    iget-boolean v1, v0, Lcom/vk/im/engine/models/d;->hasHistoryBefore:Z
 
     if-nez v1, :cond_0
 
-    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->d()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->d()Lcom/vk/im/engine/models/q;
 
     move-result-object v0
 
@@ -909,7 +909,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, v0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v0, v0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -917,9 +917,9 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->d()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->d()Lcom/vk/im/engine/models/q;
 
     move-result-object v0
 
@@ -927,11 +927,11 @@
 
     .line 4
     :cond_1
-    new-instance v0, Lcom/vk/im/engine/models/Weight;
+    new-instance v0, Lcom/vk/im/engine/models/q;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v1, v1, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     const/4 v2, 0x0
 
@@ -941,7 +941,7 @@
 
     check-cast v1, Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/Weight;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/q;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
 
     :goto_0
     return-object v0
@@ -956,19 +956,19 @@
     return-void
 .end method
 
-.method public final e()Lcom/vk/im/engine/models/Weight;
+.method public final e()Lcom/vk/im/engine/models/q;
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-boolean v1, v0, Lcom/vk/im/engine/models/History;->hasHistoryAfter:Z
+    iget-boolean v1, v0, Lcom/vk/im/engine/models/d;->hasHistoryAfter:Z
 
     if-nez v1, :cond_0
 
-    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
 
     move-result-object v0
 
@@ -976,7 +976,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, v0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v0, v0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -984,9 +984,9 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
 
     move-result-object v0
 
@@ -994,11 +994,11 @@
 
     .line 3
     :cond_1
-    new-instance v0, Lcom/vk/im/engine/models/Weight;
+    new-instance v0, Lcom/vk/im/engine/models/q;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v1, v1, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -1012,7 +1012,7 @@
 
     check-cast v1, Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/Weight;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/q;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
 
     :goto_0
     return-object v0
@@ -1022,9 +1022,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/EntityValue;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/b;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityValue;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/b;->b()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1062,28 +1062,28 @@
     return v0
 .end method
 
-.method public final h()Lcom/vk/im/engine/models/EntityValue;
+.method public final h()Lcom/vk/im/engine/models/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/b<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/EntityValue;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/b;
 
     return-object v0
 .end method
 
-.method public final i()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+.method public final i()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->d:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->d:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     return-object v0
 .end method
@@ -1142,11 +1142,11 @@
     return-object v0
 .end method
 
-.method public final p()Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
+.method public final p()Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->h:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->h:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
 
     return-object v0
 .end method
@@ -1175,7 +1175,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v0, v0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v0, v0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
     invoke-static {v0}, Lkotlin/collections/l;->j(Ljava/util/List;)Ljava/lang/Object;
 
@@ -1214,9 +1214,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/EntityValue;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->b:Lcom/vk/im/engine/models/b;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityValue;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/b;->f()Z
 
     move-result v0
 
@@ -1248,7 +1248,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/StateHistory;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/History;->a()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/d;->a()Z
 
     move-result v0
 

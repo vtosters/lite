@@ -1,16 +1,16 @@
 .class public final Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;
-.super Lcom/vk/articles/webinterfaces/BaseWebInterface;
+.super Lcom/vk/articles/webinterfaces/c;
 .source "ArticleWebInterfaceImpl.kt"
 
 # interfaces
-.implements Lcom/vk/articles/webinterfaces/article/ArticleWebInterface;
+.implements Lcom/vk/articles/webinterfaces/article/a;
 
 
 # instance fields
-.field private b:Lcom/vk/bridges/ImageViewer$d;
+.field private b:Lcom/vk/bridges/p$d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/bridges/ImageViewer$d<",
+            "Lcom/vk/bridges/p$d<",
             "*>;"
         }
     .end annotation
@@ -24,7 +24,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/articles/webinterfaces/BaseWebInterface;-><init>()V
+    invoke-direct {p0}, Lcom/vk/articles/webinterfaces/c;-><init>()V
 
     iput-object p1, p0, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;->c:Lcom/vk/articles/ArticleWebView;
 
@@ -53,11 +53,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;Lcom/vk/bridges/ImageViewer$d;)V
+.method public static final synthetic a(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;Lcom/vk/bridges/p$d;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;->b:Lcom/vk/bridges/ImageViewer$d;
+    iput-object p1, p0, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;->b:Lcom/vk/bridges/p$d;
 
     return-void
 .end method
@@ -73,11 +73,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;)Lcom/vk/bridges/ImageViewer$d;
+.method public static final synthetic c(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;)Lcom/vk/bridges/p$d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;->b:Lcom/vk/bridges/ImageViewer$d;
+    iget-object p0, p0, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;->b:Lcom/vk/bridges/p$d;
 
     return-object p0
 .end method
@@ -125,7 +125,7 @@
     move-object v0, v9
 
     .line 8
-    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     .line 9
     sget-object v0, Lcom/vk/dto/articles/Article;->J:Lcom/vk/dto/articles/Article$b;
@@ -155,7 +155,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl$articleAnalyticsTrackEvent$1;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/BaseWebInterface;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/c;->a(Lkotlin/jvm/b/a;)V
 
     :cond_0
     return-void
@@ -182,7 +182,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl$articleBookmarked$1;-><init>(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;Lorg/json/JSONObject;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/BaseWebInterface;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/c;->a(Lkotlin/jvm/b/a;)V
 
     :cond_0
     return-void
@@ -198,7 +198,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl$articlePhotoView$1;-><init>(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/BaseWebInterface;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/c;->a(Lkotlin/jvm/b/a;)V
 
     :cond_0
     return-void
@@ -225,7 +225,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl$articleUpdate$1;-><init>(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;Lorg/json/JSONObject;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/BaseWebInterface;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/c;->a(Lkotlin/jvm/b/a;)V
 
     :cond_0
     return-void

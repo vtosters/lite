@@ -3,7 +3,7 @@
 .source "DocumentsListFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/api/base/Document;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -68,14 +68,14 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0, v1}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/api/base/Document;Landroid/content/Context;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -90,7 +90,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/documents/list/DocumentsListFragment$onDocumentClicked$1;->a(Lcom/vk/api/base/Document;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

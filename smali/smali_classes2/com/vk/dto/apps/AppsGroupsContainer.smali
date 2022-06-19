@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/apps/AppsGroupsContainer$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/apps/AppsGroupsContainer$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/apps/AppsGroupsContainer;->d:Lcom/vk/dto/apps/AppsGroupsContainer$b;
 
@@ -123,7 +123,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/apps/AppsGroupsContainer;->a:Lcom/vk/dto/group/Group;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -139,7 +139,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/apps/AppsGroupsContainer;->c:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

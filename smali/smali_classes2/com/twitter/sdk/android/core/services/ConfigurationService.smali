@@ -4,17 +4,17 @@
 
 
 # virtual methods
-.method public abstract configuration()Lretrofit2/Call;
+.method public abstract configuration()Lf/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lretrofit2/Call<",
+            "Lf/b<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
-    .annotation runtime Lf/q/GET;
+    .annotation runtime Lf/q/e;
         value = "/1.1/help/configuration.json"
     .end annotation
 .end method

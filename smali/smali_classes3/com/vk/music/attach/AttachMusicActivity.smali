@@ -3,12 +3,12 @@
 .source "AttachMusicActivity.java"
 
 # interfaces
-.implements Lcom/vk/music/attach/a/AttachMusicController$e;
+.implements Lcom/vk/music/attach/a/a$e;
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field private final G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+.field private final G:Lcom/vk/music/common/d;
 
 .field H:Landroid/widget/TextView;
 
@@ -22,7 +22,7 @@
 
 .field M:Landroidx/recyclerview/widget/RecyclerView;
 
-.field N:Lcom/vk/music/view/LastReachedScrollListener;
+.field N:Lcom/vk/music/view/q;
 
 .field O:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -64,11 +64,11 @@
     .end annotation
 .end field
 
-.field S:Lcom/vk/music/attach/b/MusicLoader;
+.field S:Lcom/vk/music/attach/b/a;
 
-.field T:Lcom/vk/music/attach/b/PlaylistsLoader;
+.field T:Lcom/vk/music/attach/b/e;
 
-.field U:Lcom/vk/music/attach/b/PlaylistMusicLoader;
+.field U:Lcom/vk/music/attach/b/c;
 
 .field V:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -92,7 +92,7 @@
     .end annotation
 .end field
 
-.field X:Lcom/vk/music/player/PlayerModel;
+.field X:Lcom/vk/music/player/d;
 
 .field Y:Ljava/lang/Long;
 
@@ -109,13 +109,13 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
-    sget-object v0, Lcom/vk/music/common/Music;->INSTANCE:Lcom/vk/music/common/Music;
+    sget-object v0, Lcom/vk/music/common/c;->e:Lcom/vk/music/common/c;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/Music;->d()Lcom/vk/music/common/MusicAppStateCacheHelper;
+    invoke-virtual {v0}, Lcom/vk/music/common/c;->d()Lcom/vk/music/common/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/d;
 
     .line 3
     new-instance v0, Ljava/util/ArrayList;
@@ -125,16 +125,16 @@
     iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->R:Ljava/util/ArrayList;
 
     .line 4
-    sget-object v0, Lcom/vk/music/common/Music$a;->a:Lcom/vk/music/common/Music$c;
+    sget-object v0, Lcom/vk/music/common/c$a;->a:Lcom/vk/music/common/c$c;
 
-    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->X:Lcom/vk/music/player/PlayerModel;
+    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->X:Lcom/vk/music/player/d;
 
     .line 5
-    sget-object v0, Lcom/vk/music/playlist/PlaylistsModel;->a:Ljava/lang/Long;
+    sget-object v0, Lcom/vk/music/playlist/g;->a:Ljava/lang/Long;
 
     iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->Y:Ljava/lang/Long;
 
@@ -152,11 +152,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/music/attach/AttachMusicActivity;->z1()Lcom/vk/music/attach/a/AttachMusicController;
+    invoke-direct {p0}, Lcom/vk/music/attach/AttachMusicActivity;->z1()Lcom/vk/music/attach/a/a;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vk/music/attach/a/MyMusicController;
+    instance-of v0, v0, Lcom/vk/music/attach/a/c;
 
     return v0
 .end method
@@ -199,13 +199,13 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lcom/vk/music/common/MusicAppStateCacheHelper;Ljava/util/ArrayList;Ljava/util/ArrayList;I)Landroid/content/Intent;
+.method public static a(Landroid/content/Context;Lcom/vk/music/common/d;Ljava/util/ArrayList;Ljava/util/ArrayList;I)Landroid/content/Intent;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lcom/vk/music/common/MusicAppStateCacheHelper;",
+            "Lcom/vk/music/common/d;",
             "Ljava/util/ArrayList<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;",
@@ -226,7 +226,7 @@
     const-string p0, "AttachMusicActivity.key.currentTracks"
 
     .line 17
-    invoke-virtual {p1, p0, p2}, Lcom/vk/music/common/MusicAppStateCacheHelper;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
+    invoke-virtual {p1, p0, p2}, Lcom/vk/music/common/d;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
 
     move-result-object p2
 
@@ -235,7 +235,7 @@
     const-string p0, "AttachMusicActivity.key.attachedTracks"
 
     .line 18
-    invoke-virtual {p1, p0, p3}, Lcom/vk/music/common/MusicAppStateCacheHelper;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
+    invoke-virtual {p1, p0, p3}, Lcom/vk/music/common/d;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -249,7 +249,7 @@
     return-object v0
 .end method
 
-.method public static a(Landroid/content/Intent;Ljava/lang/String;Lcom/vk/music/common/MusicAppStateCacheHelper;)Ljava/util/ArrayList;
+.method public static a(Landroid/content/Intent;Ljava/lang/String;Lcom/vk/music/common/d;)Ljava/util/ArrayList;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -259,7 +259,7 @@
             "(",
             "Landroid/content/Intent;",
             "Ljava/lang/String;",
-            "Lcom/vk/music/common/MusicAppStateCacheHelper;",
+            "Lcom/vk/music/common/d;",
             ")",
             "Ljava/util/ArrayList<",
             "Lcom/vk/dto/music/MusicTrack;",
@@ -293,7 +293,7 @@
 
     const-class v0, Lcom/vk/dto/music/MusicTrack;
 
-    invoke-virtual {p2, p1, p0, v0}, Lcom/vk/music/common/MusicAppStateCacheHelper;->a(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-virtual {p2, p1, p0, v0}, Lcom/vk/music/common/d;->a(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Class;)Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -323,9 +323,9 @@
     return-void
 .end method
 
-.method private a(Lcom/vk/music/attach/a/AttachMusicController;Ljava/lang/Class;Landroid/os/Bundle;Z)V
+.method private a(Lcom/vk/music/attach/a/a;Ljava/lang/Class;Landroid/os/Bundle;Z)V
     .locals 2
-    .param p1    # Lcom/vk/music/attach/a/AttachMusicController;
+    .param p1    # Lcom/vk/music/attach/a/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -340,10 +340,10 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/attach/a/AttachMusicController;",
+            "Lcom/vk/music/attach/a/a;",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/vk/music/attach/a/AttachMusicController;",
+            "Lcom/vk/music/attach/a/a;",
             ">;",
             "Landroid/os/Bundle;",
             "Z)V"
@@ -612,7 +612,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
+    invoke-static {p1}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;)V
 
     return v2
 
@@ -641,7 +641,7 @@
     return-object p0
 .end method
 
-.method private z1()Lcom/vk/music/attach/a/AttachMusicController;
+.method private z1()Lcom/vk/music/attach/a/a;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -667,7 +667,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/attach/a/AttachMusicController;
+    check-cast v0, Lcom/vk/music/attach/a/a;
 
     return-object v0
 .end method
@@ -694,22 +694,22 @@
     return-object v0
 .end method
 
-.method public L0()Lcom/vk/music/attach/b/MusicLoader;
+.method public L0()Lcom/vk/music/attach/b/a;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->S:Lcom/vk/music/attach/b/MusicLoader;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->S:Lcom/vk/music/attach/b/a;
 
     if-nez v0, :cond_0
 
     .line 2
-    const-class v0, Lcom/vk/music/attach/b/MusicLoader;
+    const-class v0, Lcom/vk/music/attach/b/a;
 
     iget v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->Z:I
 
-    invoke-static {v1}, Lcom/vk/music/attach/b/MusicLoader;->n0(I)Landroid/os/Bundle;
+    invoke-static {v1}, Lcom/vk/music/attach/b/a;->n0(I)Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -717,13 +717,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/attach/b/MusicLoader;
+    check-cast v0, Lcom/vk/music/attach/b/a;
 
-    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->S:Lcom/vk/music/attach/b/MusicLoader;
+    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->S:Lcom/vk/music/attach/b/a;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->S:Lcom/vk/music/attach/b/MusicLoader;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->S:Lcom/vk/music/attach/b/a;
 
     return-object v0
 .end method
@@ -757,7 +757,7 @@
             "(",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/vk/music/attach/c/SharedState;",
+            "Lcom/vk/music/attach/c/b;",
             ">;)",
             "Landroid/os/Bundle;"
         }
@@ -783,7 +783,7 @@
     return-object p1
 .end method
 
-.method public varargs a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/music/player/PlayerModel$a;
+.method public varargs a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/music/player/d$a;
     .locals 1
 
     .line 34
@@ -817,9 +817,9 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/attach/a/AttachMusicController;Ljava/lang/Class;Landroid/os/Bundle;)V
+.method public a(Lcom/vk/music/attach/a/a;Ljava/lang/Class;Landroid/os/Bundle;)V
     .locals 1
-    .param p1    # Lcom/vk/music/attach/a/AttachMusicController;
+    .param p1    # Lcom/vk/music/attach/a/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -834,10 +834,10 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/attach/a/AttachMusicController;",
+            "Lcom/vk/music/attach/a/a;",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/vk/music/attach/a/AttachMusicController;",
+            "Lcom/vk/music/attach/a/a;",
             ">;",
             "Landroid/os/Bundle;",
             ")V"
@@ -857,22 +857,22 @@
     const/4 v0, 0x1
 
     .line 25
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/vk/music/attach/AttachMusicActivity;->a(Lcom/vk/music/attach/a/AttachMusicController;Ljava/lang/Class;Landroid/os/Bundle;Z)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/vk/music/attach/AttachMusicActivity;->a(Lcom/vk/music/attach/a/a;Ljava/lang/Class;Landroid/os/Bundle;Z)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/view/LastReachedScrollListener$a;)V
+.method public a(Lcom/vk/music/view/q$a;)V
     .locals 1
-    .param p1    # Lcom/vk/music/view/LastReachedScrollListener$a;
+    .param p1    # Lcom/vk/music/view/q$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 4
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->N:Lcom/vk/music/view/LastReachedScrollListener;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->N:Lcom/vk/music/view/q;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/LastReachedScrollListener;->a(Lcom/vk/music/view/LastReachedScrollListener$a;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/q;->a(Lcom/vk/music/view/q$a;)V
 
     return-void
 .end method
@@ -892,7 +892,7 @@
             "(",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/vk/music/attach/c/SharedState;",
+            "Lcom/vk/music/attach/c/b;",
             ">;",
             "Landroid/os/Bundle;",
             ")V"
@@ -1132,7 +1132,7 @@
     return-object v0
 .end method
 
-.method public b(Ljava/util/List;)Lcom/vk/core/ui/IdClickListener;
+.method public b(Ljava/util/List;)Lcom/vk/core/ui/k;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1140,7 +1140,7 @@
             "Ljava/util/List<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;)",
-            "Lcom/vk/core/ui/IdClickListener<",
+            "Lcom/vk/core/ui/k<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
         }
@@ -1244,7 +1244,7 @@
             "(",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/vk/music/attach/c/SharedState;",
+            "Lcom/vk/music/attach/c/b;",
             ">;)V"
         }
     .end annotation
@@ -1325,22 +1325,22 @@
     return v2
 .end method
 
-.method public k1()Lcom/vk/music/attach/b/PlaylistsLoader;
+.method public k1()Lcom/vk/music/attach/b/e;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->T:Lcom/vk/music/attach/b/PlaylistsLoader;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->T:Lcom/vk/music/attach/b/e;
 
     if-nez v0, :cond_0
 
     .line 2
-    const-class v0, Lcom/vk/music/attach/b/PlaylistsLoader;
+    const-class v0, Lcom/vk/music/attach/b/e;
 
     iget v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->Z:I
 
-    invoke-static {v1}, Lcom/vk/music/attach/b/PlaylistsLoader;->n0(I)Landroid/os/Bundle;
+    invoke-static {v1}, Lcom/vk/music/attach/b/e;->n0(I)Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -1348,13 +1348,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/attach/b/PlaylistsLoader;
+    check-cast v0, Lcom/vk/music/attach/b/e;
 
-    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->T:Lcom/vk/music/attach/b/PlaylistsLoader;
+    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->T:Lcom/vk/music/attach/b/e;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->T:Lcom/vk/music/attach/b/PlaylistsLoader;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->T:Lcom/vk/music/attach/b/e;
 
     return-object v0
 .end method
@@ -1432,7 +1432,7 @@
     move-result-object p1
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/music/attach/AttachMusicActivity;->z1()Lcom/vk/music/attach/a/AttachMusicController;
+    invoke-direct {p0}, Lcom/vk/music/attach/AttachMusicActivity;->z1()Lcom/vk/music/attach/a/a;
 
     move-result-object p2
 
@@ -1444,7 +1444,7 @@
     const-string p1, ""
 
     :goto_0
-    invoke-virtual {p2, p1}, Lcom/vk/music/attach/a/AttachMusicController;->M(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/vk/music/attach/a/a;->M(Ljava/lang/String;)V
 
     :cond_3
     return-void
@@ -1454,11 +1454,11 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/music/attach/AttachMusicActivity;->z1()Lcom/vk/music/attach/a/AttachMusicController;
+    invoke-direct {p0}, Lcom/vk/music/attach/AttachMusicActivity;->z1()Lcom/vk/music/attach/a/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/music/attach/a/AttachMusicController;->E4()Z
+    invoke-virtual {v0}, Lcom/vk/music/attach/a/a;->E4()Z
 
     move-result v0
 
@@ -1555,14 +1555,14 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/d;
 
     iget-object v2, p0, Lcom/vk/music/attach/AttachMusicActivity;->O:Ljava/util/ArrayList;
 
     const-string v3, "result_attached"
 
     .line 3
-    invoke-virtual {v1, v3, v2}, Lcom/vk/music/common/MusicAppStateCacheHelper;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
+    invoke-virtual {v1, v3, v2}, Lcom/vk/music/common/d;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -1570,14 +1570,14 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/d;
 
     iget-object v2, p0, Lcom/vk/music/attach/AttachMusicActivity;->P:Ljava/util/ArrayList;
 
     const-string v3, "result_removed"
 
     .line 4
-    invoke-virtual {v1, v3, v2}, Lcom/vk/music/common/MusicAppStateCacheHelper;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
+    invoke-virtual {v1, v3, v2}, Lcom/vk/music/common/d;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -1654,7 +1654,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/Window;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroid/view/Window;I)V
 
     const v0, 0x7f0a08da
 
@@ -1758,18 +1758,18 @@
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 20
-    new-instance v1, Lcom/vk/music/view/LastReachedScrollListener;
+    new-instance v1, Lcom/vk/music/view/q;
 
     const/16 v2, 0xf
 
-    invoke-direct {v1, v0, v2}, Lcom/vk/music/view/LastReachedScrollListener;-><init>(Landroidx/recyclerview/widget/LinearLayoutManager;I)V
+    invoke-direct {v1, v0, v2}, Lcom/vk/music/view/q;-><init>(Landroidx/recyclerview/widget/LinearLayoutManager;I)V
 
-    iput-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->N:Lcom/vk/music/view/LastReachedScrollListener;
+    iput-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->N:Lcom/vk/music/view/q;
 
     .line 21
     iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->M:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->N:Lcom/vk/music/view/LastReachedScrollListener;
+    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->N:Lcom/vk/music/view/q;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
@@ -1790,7 +1790,7 @@
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 24
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -1829,11 +1829,11 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/d;
 
     const-string v2, "AttachMusicActivity.key.currentTracks"
 
-    invoke-static {v0, v2, v1}, Lcom/vk/music/attach/AttachMusicActivity;->a(Landroid/content/Intent;Ljava/lang/String;Lcom/vk/music/common/MusicAppStateCacheHelper;)Ljava/util/ArrayList;
+    invoke-static {v0, v2, v1}, Lcom/vk/music/attach/AttachMusicActivity;->a(Landroid/content/Intent;Ljava/lang/String;Lcom/vk/music/common/d;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1861,7 +1861,7 @@
 
     move-result-object v0
 
-    sget-object v2, Lcom/vk/music/playlist/PlaylistsModel;->a:Ljava/lang/Long;
+    sget-object v2, Lcom/vk/music/playlist/g;->a:Ljava/lang/Long;
 
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
@@ -1888,11 +1888,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/bridges/AuthBridge3;->b()I
+    invoke-interface {v2}, Lcom/vk/bridges/f;->b()I
 
     move-result v2
 
@@ -1911,20 +1911,20 @@
     invoke-direct {p0}, Lcom/vk/music/attach/AttachMusicActivity;->B1()V
 
     .line 33
-    const-class p1, Lcom/vk/music/attach/a/MyMusicController;
+    const-class p1, Lcom/vk/music/attach/a/c;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v1, p1, v1, v3}, Lcom/vk/music/attach/AttachMusicActivity;->a(Lcom/vk/music/attach/a/AttachMusicController;Ljava/lang/Class;Landroid/os/Bundle;Z)V
+    invoke-direct {p0, v1, p1, v1, v3}, Lcom/vk/music/attach/AttachMusicActivity;->a(Lcom/vk/music/attach/a/a;Ljava/lang/Class;Landroid/os/Bundle;Z)V
 
     .line 34
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/d;
 
-    invoke-static {p1, v0, v1}, Lcom/vk/music/attach/AttachMusicActivity;->a(Landroid/content/Intent;Ljava/lang/String;Lcom/vk/music/common/MusicAppStateCacheHelper;)Ljava/util/ArrayList;
+    invoke-static {p1, v0, v1}, Lcom/vk/music/attach/AttachMusicActivity;->a(Landroid/content/Intent;Ljava/lang/String;Lcom/vk/music/common/d;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -1937,7 +1937,7 @@
 
     .line 36
     :cond_2
-    iget-object v2, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iget-object v2, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/d;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
@@ -1945,14 +1945,14 @@
 
     const-class v4, Lcom/vk/dto/music/MusicTrack;
 
-    invoke-virtual {v2, v0, v3, v4}, Lcom/vk/music/common/MusicAppStateCacheHelper;->a(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-virtual {v2, v0, v3, v4}, Lcom/vk/music/common/d;->a(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Class;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->O:Ljava/util/ArrayList;
 
     .line 37
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/d;
 
     const-string v2, "AttachMusicActivity.key.removedTracks"
 
@@ -1962,18 +1962,18 @@
 
     const-class v4, Lcom/vk/dto/music/MusicTrack;
 
-    invoke-virtual {v0, v2, v3, v4}, Lcom/vk/music/common/MusicAppStateCacheHelper;->a(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-virtual {v0, v2, v3, v4}, Lcom/vk/music/common/d;->a(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Class;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->P:Ljava/util/ArrayList;
 
     .line 38
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->b()I
+    invoke-interface {v0}, Lcom/vk/bridges/f;->b()I
 
     move-result v0
 
@@ -1997,26 +1997,26 @@
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/d;
 
     iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->O:Ljava/util/ArrayList;
 
     const-string v2, "AttachMusicActivity.key.attachedTracks"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/music/common/MusicAppStateCacheHelper;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/music/common/d;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
 
     move-result-object v0
 
     invoke-virtual {p1, v2, v0}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->G:Lcom/vk/music/common/d;
 
     iget-object v1, p0, Lcom/vk/music/attach/AttachMusicActivity;->P:Ljava/util/ArrayList;
 
     const-string v2, "AttachMusicActivity.key.removedTracks"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/music/common/MusicAppStateCacheHelper;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/music/common/d;->a(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -2032,27 +2032,27 @@
     return-void
 .end method
 
-.method public r0()Lcom/vk/music/player/PlayerModel;
+.method public r0()Lcom/vk/music/player/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->X:Lcom/vk/music/player/PlayerModel;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->X:Lcom/vk/music/player/d;
 
     return-object v0
 .end method
 
-.method public r1()Lcom/vk/music/attach/b/PlaylistMusicLoader;
+.method public r1()Lcom/vk/music/attach/b/c;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->U:Lcom/vk/music/attach/b/PlaylistMusicLoader;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->U:Lcom/vk/music/attach/b/c;
 
     if-nez v0, :cond_0
 
     .line 2
-    const-class v0, Lcom/vk/music/attach/b/PlaylistMusicLoader;
+    const-class v0, Lcom/vk/music/attach/b/c;
 
     const/4 v1, 0x0
 
@@ -2060,13 +2060,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/attach/b/PlaylistMusicLoader;
+    check-cast v0, Lcom/vk/music/attach/b/c;
 
-    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->U:Lcom/vk/music/attach/b/PlaylistMusicLoader;
+    iput-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->U:Lcom/vk/music/attach/b/c;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->U:Lcom/vk/music/attach/b/PlaylistMusicLoader;
+    iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity;->U:Lcom/vk/music/attach/b/c;
 
     return-object v0
 .end method

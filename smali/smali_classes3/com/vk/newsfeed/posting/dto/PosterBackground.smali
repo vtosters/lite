@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/dto/PosterBackground$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/dto/PosterBackground$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/newsfeed/posting/dto/PosterBackground;->B:Lcom/vk/newsfeed/posting/dto/PosterBackground$b;
 
@@ -78,7 +78,7 @@
 
     const/4 v12, 0x0
 
-    invoke-direct/range {v2 .. v12}, Lcom/vk/newsfeed/posting/dto/PosterBackground;-><init>(IIIILcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v12}, Lcom/vk/newsfeed/posting/dto/PosterBackground;-><init>(IIIILcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     .line 2
     new-instance v0, Lcom/vk/newsfeed/posting/dto/PosterBackground$a;
@@ -124,7 +124,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIIILcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IIIILcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
     .locals 10
 
     move/from16 v0, p9

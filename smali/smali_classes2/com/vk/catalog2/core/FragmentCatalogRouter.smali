@@ -31,7 +31,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/FragmentCatalogRouter$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/FragmentCatalogRouter$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/FragmentCatalogRouter$a;
@@ -58,19 +58,19 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Lcom/vk/catalog2/core/CatalogConfiguration;Ljava/lang/String;Ljava/lang/String;)V
+.method public a(Landroid/content/Context;Lcom/vk/catalog2/core/a;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/catalog2/core/x/CatalogShowAllFragment$a;
+    new-instance v0, Lcom/vk/catalog2/core/x/d$a;
 
     invoke-virtual {p0}, Lcom/vk/catalog2/core/CatalogRouter;->t1()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, p2, p3, p4, v1}, Lcom/vk/catalog2/core/x/CatalogShowAllFragment$a;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p2, p3, p4, v1}, Lcom/vk/catalog2/core/x/d$a;-><init>(Lcom/vk/catalog2/core/a;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -79,11 +79,11 @@
     .locals 1
 
     .line 7
-    invoke-static {}, Lcom/vk/bridges/LinksBridge1;->a()Lcom/vk/bridges/LinksBridge;
+    invoke-static {}, Lcom/vk/bridges/s;->a()Lcom/vk/bridges/r;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/vk/bridges/LinksBridge;->a(Landroid/content/Context;Lcom/vk/dto/common/actions/ActionOpenUrl;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2, p3}, Lcom/vk/bridges/r;->a(Landroid/content/Context;Lcom/vk/dto/common/actions/ActionOpenUrl;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -120,11 +120,11 @@
 
     if-eqz p2, :cond_3
 
-    invoke-static {}, Lcom/vk/bridges/FriendsBridge;->a()Lcom/vk/bridges/FriendsBridge1;
+    invoke-static {}, Lcom/vk/bridges/m;->a()Lcom/vk/bridges/l;
 
     move-result-object p2
 
-    invoke-interface {p2, p1, p3}, Lcom/vk/bridges/FriendsBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p2, p1, p3}, Lcom/vk/bridges/l;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -138,11 +138,11 @@
 
     if-eqz p2, :cond_3
 
-    invoke-static {}, Lcom/vk/bridges/FriendsBridge;->a()Lcom/vk/bridges/FriendsBridge1;
+    invoke-static {}, Lcom/vk/bridges/m;->a()Lcom/vk/bridges/l;
 
     move-result-object p2
 
-    invoke-interface {p2, p1, p3}, Lcom/vk/bridges/FriendsBridge1;->c(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p2, p1, p3}, Lcom/vk/bridges/l;->c(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -156,20 +156,20 @@
 
     if-eqz p2, :cond_3
 
-    invoke-static {}, Lcom/vk/bridges/FriendsBridge;->a()Lcom/vk/bridges/FriendsBridge1;
+    invoke-static {}, Lcom/vk/bridges/m;->a()Lcom/vk/bridges/l;
 
     move-result-object p2
 
     const/4 v0, 0x1
 
-    invoke-interface {p2, p1, p3, v0}, Lcom/vk/bridges/FriendsBridge1;->a(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-interface {p2, p1, p3, v0}, Lcom/vk/bridges/l;->a(Landroid/content/Context;Ljava/lang/String;Z)V
 
     :cond_3
     :goto_0
     return-void
 .end method
 
-.method public a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
+.method public a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -178,18 +178,18 @@
             "Ljava/util/List<",
             "Lcom/vk/catalog2/core/api/dto/CatalogFilterData;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    sget-object v0, Lcom/vk/catalog2/core/ui/CatalogDialogs;->INSTANCE:Lcom/vk/catalog2/core/ui/CatalogDialogs;
+    sget-object v0, Lcom/vk/catalog2/core/ui/b;->b:Lcom/vk/catalog2/core/ui/b;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/catalog2/core/ui/CatalogDialogs;->a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/catalog2/core/ui/b;->a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method

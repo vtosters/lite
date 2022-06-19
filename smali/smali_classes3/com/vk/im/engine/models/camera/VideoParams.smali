@@ -61,7 +61,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/camera/VideoParams$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/camera/VideoParams$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/camera/VideoParams$a;
@@ -196,7 +196,7 @@
 
     .line 18
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -270,7 +270,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/io/File;[ILjava/io/File;ZZII[FJJLjava/io/File;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/io/File;[ILjava/io/File;ZZII[FJJLjava/io/File;IIIILkotlin/jvm/internal/i;)V
     .locals 16
 
     move/from16 v0, p17
@@ -623,7 +623,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/camera/VideoParams;->a:Ljava/io/File;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -633,7 +633,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/camera/VideoParams;->b:[I
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -643,7 +643,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/camera/VideoParams;->c:Ljava/io/File;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -677,7 +677,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/camera/VideoParams;->h:[F
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -703,7 +703,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/camera/VideoParams;->D:Ljava/io/File;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

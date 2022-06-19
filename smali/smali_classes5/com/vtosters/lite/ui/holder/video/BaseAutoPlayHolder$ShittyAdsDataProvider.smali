@@ -231,7 +231,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder$ShittyAdsDataProvider;->b:Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/AdsUtil;->a(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/ShitAttachment;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/b;->a(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/ShitAttachment;)V
 
     return-void
 .end method

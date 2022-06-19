@@ -48,7 +48,7 @@
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/j0/GroupsCache;->b()Ljava/util/List;
+    invoke-static {}, Lcom/vtosters/lite/j0/d;->b()Ljava/util/List;
 
     move-result-object v1
 
@@ -60,29 +60,29 @@
     if-nez v1, :cond_0
 
     .line 4
-    new-instance v1, Lcom/vk/api/execute/ExecuteGroupsGet;
+    new-instance v1, Lcom/vk/api/execute/d;
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lcom/vk/api/execute/ExecuteGroupsGet;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/api/execute/d;-><init>(I)V
 
     new-instance v2, Lcom/vtosters/lite/data/Groups$c$a;
 
     invoke-direct {v2, p0, v0}, Lcom/vtosters/lite/data/Groups$c$a;-><init>(Lcom/vtosters/lite/data/Groups$c;Ljava/util/concurrent/atomic/AtomicBoolean;)V
 
     .line 5
-    invoke-virtual {v1, v2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {v1, v2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
 
     move-result-object v1
 
     .line 6
-    invoke-virtual {v1}, Lcom/vk/api/base/ApiCallbackDisposable;->b()Z
+    invoke-virtual {v1}, Lcom/vk/api/base/b;->b()Z
 
     .line 7
     :cond_0

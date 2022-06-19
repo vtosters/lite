@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/Functions;)Landroid/animation/Animator;
+    value = Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/a;)Landroid/animation/Animator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,16 +17,16 @@
 # instance fields
 .field final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Lkotlin/jvm/b/Functions;
+.field final synthetic b:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/extensions/AnimationExtKt$c;->a:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/vk/core/extensions/AnimationExtKt$c;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/core/extensions/AnimationExtKt$c;->b:Lkotlin/jvm/b/a;
 
     .line 1
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -40,15 +40,15 @@
     .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/vk/core/extensions/AnimationExtKt$c;->b:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/core/extensions/AnimationExtKt$c;->b:Lkotlin/jvm/b/a;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     .line 2
     :cond_0

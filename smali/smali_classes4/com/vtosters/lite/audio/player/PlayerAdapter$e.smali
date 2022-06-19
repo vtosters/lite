@@ -67,7 +67,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$e;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
 
     iget-object v2, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$e;->c:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/audio/player/Player;->a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/audio/player/u;->a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;)Z
 
     return-void
 .end method

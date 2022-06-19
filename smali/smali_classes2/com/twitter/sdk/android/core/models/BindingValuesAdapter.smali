@@ -12,10 +12,10 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/google/gson/q<",
-        "Lcom/twitter/sdk/android/core/models/BindingValues;",
+        "Lcom/twitter/sdk/android/core/models/c;",
         ">;",
         "Lcom/google/gson/j<",
-        "Lcom/twitter/sdk/android/core/models/BindingValues;",
+        "Lcom/twitter/sdk/android/core/models/c;",
         ">;"
     }
 .end annotation
@@ -33,7 +33,7 @@
 
 
 # virtual methods
-.method public a(Lcom/twitter/sdk/android/core/models/BindingValues;Ljava/lang/reflect/Type;Lcom/google/gson/p;)Lcom/google/gson/k;
+.method public a(Lcom/twitter/sdk/android/core/models/c;Ljava/lang/reflect/Type;Lcom/google/gson/p;)Lcom/google/gson/k;
     .locals 0
 
     const/4 p1, 0x0
@@ -45,16 +45,16 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/twitter/sdk/android/core/models/BindingValues;
+    check-cast p1, Lcom/twitter/sdk/android/core/models/c;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/twitter/sdk/android/core/models/BindingValuesAdapter;->a(Lcom/twitter/sdk/android/core/models/BindingValues;Ljava/lang/reflect/Type;Lcom/google/gson/p;)Lcom/google/gson/k;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/twitter/sdk/android/core/models/BindingValuesAdapter;->a(Lcom/twitter/sdk/android/core/models/c;Ljava/lang/reflect/Type;Lcom/google/gson/p;)Lcom/google/gson/k;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/twitter/sdk/android/core/models/BindingValues;
+.method public a(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/twitter/sdk/android/core/models/c;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -70,9 +70,9 @@
     if-nez p2, :cond_0
 
     .line 4
-    new-instance p1, Lcom/twitter/sdk/android/core/models/BindingValues;
+    new-instance p1, Lcom/twitter/sdk/android/core/models/c;
 
-    invoke-direct {p1}, Lcom/twitter/sdk/android/core/models/BindingValues;-><init>()V
+    invoke-direct {p1}, Lcom/twitter/sdk/android/core/models/c;-><init>()V
 
     return-object p1
 
@@ -142,9 +142,9 @@
 
     .line 13
     :cond_1
-    new-instance p1, Lcom/twitter/sdk/android/core/models/BindingValues;
+    new-instance p1, Lcom/twitter/sdk/android/core/models/c;
 
-    invoke-direct {p1, p2}, Lcom/twitter/sdk/android/core/models/BindingValues;-><init>(Ljava/util/Map;)V
+    invoke-direct {p1, p2}, Lcom/twitter/sdk/android/core/models/c;-><init>(Ljava/util/Map;)V
 
     return-object p1
 .end method
@@ -158,7 +158,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/twitter/sdk/android/core/models/BindingValuesAdapter;->a(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/twitter/sdk/android/core/models/BindingValues;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/twitter/sdk/android/core/models/BindingValuesAdapter;->a(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/twitter/sdk/android/core/models/c;
 
     move-result-object p1
 
@@ -296,7 +296,7 @@
 
     move-result-object p1
 
-    const-class v0, Lcom/twitter/sdk/android/core/models/UserValue;
+    const-class v0, Lcom/twitter/sdk/android/core/models/f;
 
     invoke-interface {p2, p1, v0}, Lcom/google/gson/i;->a(Lcom/google/gson/k;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
@@ -312,7 +312,7 @@
 
     move-result-object p1
 
-    const-class v0, Lcom/twitter/sdk/android/core/models/ImageValue;
+    const-class v0, Lcom/twitter/sdk/android/core/models/d;
 
     invoke-interface {p2, p1, v0}, Lcom/google/gson/i;->a(Lcom/google/gson/k;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 

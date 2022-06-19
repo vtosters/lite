@@ -3,7 +3,7 @@
 .source "FriendsFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/SearchViewWrapper$i;
+.implements Lcom/vtosters/lite/ui/x$i;
 
 
 # annotations
@@ -54,7 +54,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -71,7 +71,7 @@
     :goto_0
     iget-object v2, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$f;->a:Lcom/vtosters/lite/fragments/friends/FriendsFragment;
 
-    invoke-static {v2}, Lcom/vtosters/lite/fragments/friends/FriendsFragment;->c(Lcom/vtosters/lite/fragments/friends/FriendsFragment;)Lcom/vtosters/lite/fragments/friends/FriendsListFragment;
+    invoke-static {v2}, Lcom/vtosters/lite/fragments/friends/FriendsFragment;->c(Lcom/vtosters/lite/fragments/friends/FriendsFragment;)Lcom/vtosters/lite/fragments/friends/d;
 
     move-result-object v2
 
@@ -98,7 +98,7 @@
 
     xor-int/2addr v3, v0
 
-    invoke-virtual {v1, v3}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->x0(Z)V
+    invoke-virtual {v1, v3}, Ld/a/a/a/l;->x0(Z)V
 
     .line 6
     iget-object v1, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$f;->a:Lcom/vtosters/lite/fragments/friends/FriendsFragment;
@@ -109,13 +109,13 @@
 
     xor-int/2addr v0, v3
 
-    invoke-virtual {v1, v0}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->z0(Z)V
+    invoke-virtual {v1, v0}, Ld/a/a/a/l;->z0(Z)V
 
     :cond_1
     if-eqz v2, :cond_2
 
     .line 7
-    invoke-virtual {v2, p1}, Lcom/vtosters/lite/fragments/friends/FriendsListFragment;->M(Ljava/lang/String;)V
+    invoke-virtual {v2, p1}, Lcom/vtosters/lite/fragments/friends/d;->M(Ljava/lang/String;)V
 
     :cond_2
     return-void

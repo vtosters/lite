@@ -3,7 +3,7 @@
 .source "VKAuthApiManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/auth/api/VKAuthOkHttpExecutor;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/auth/api/a;",
         ">;"
     }
 .end annotation
@@ -45,19 +45,19 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/auth/api/VKAuthOkHttpExecutor;
+.method public final invoke()Lcom/vk/auth/api/a;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/auth/api/VKAuthOkHttpExecutor;
+    new-instance v0, Lcom/vk/auth/api/a;
 
-    new-instance v1, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
+    new-instance v1, Lcom/vk/api/sdk/okhttp/b;
 
     iget-object v2, p0, Lcom/vk/auth/api/VKAuthApiManager$executor$2;->$config:Lcom/vk/api/sdk/VKApiConfig;
 
-    invoke-direct {v1, v2}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;-><init>(Lcom/vk/api/sdk/VKApiConfig;)V
+    invoke-direct {v1, v2}, Lcom/vk/api/sdk/okhttp/b;-><init>(Lcom/vk/api/sdk/VKApiConfig;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/api/VKAuthOkHttpExecutor;-><init>(Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/api/a;-><init>(Lcom/vk/api/sdk/okhttp/b;)V
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/api/VKAuthApiManager$executor$2;->invoke()Lcom/vk/auth/api/VKAuthOkHttpExecutor;
+    invoke-virtual {p0}, Lcom/vk/auth/api/VKAuthApiManager$executor$2;->invoke()Lcom/vk/auth/api/a;
 
     move-result-object v0
 

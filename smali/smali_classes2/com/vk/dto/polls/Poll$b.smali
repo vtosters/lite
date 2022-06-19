@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -123,7 +123,7 @@
     .end annotation
 
     .line 75
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -169,7 +169,7 @@
     move-object v3, v0
 
     :goto_1
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -216,7 +216,7 @@
     move-object v5, v0
 
     :goto_3
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -271,7 +271,7 @@
 
     const-string v2, "this.keys()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     :goto_0
@@ -290,7 +290,7 @@
     const-string v3, "it"
 
     .line 4
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -304,7 +304,7 @@
 
     const-string v5, "this.getJSONObject(it)"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v2}, Lcom/vk/dto/polls/Owner$b;->b(Lorg/json/JSONObject;)Lcom/vk/dto/polls/Owner;
 
@@ -348,7 +348,7 @@
 
     const-string v2, "json.getString(KEY_QUESTION)"
 
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "answer_ids"
 
@@ -453,7 +453,7 @@
     const-string v2, "votes"
 
     .line 53
-    invoke-static {v0, v2, v8}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
+    invoke-static {v0, v2, v8}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
 
     move-result v11
 
@@ -476,7 +476,7 @@
     const-string v2, "end_date"
 
     .line 56
-    invoke-static {v0, v2, v14, v15}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;J)J
+    invoke-static {v0, v2, v14, v15}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;J)J
 
     move-result-wide v16
 
@@ -518,7 +518,7 @@
     const-string v2, "author_id"
 
     .line 62
-    invoke-static {v0, v2, v8}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
+    invoke-static {v0, v2, v8}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
 
     move-result v23
 
@@ -532,7 +532,7 @@
     const-string v2, "created"
 
     .line 64
-    invoke-static {v0, v2, v14, v15}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;J)J
+    invoke-static {v0, v2, v14, v15}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;J)J
 
     move-result-wide v25
 
@@ -887,7 +887,7 @@
     const-string v3, "author_id"
 
     .line 20
-    invoke-static {v0, v3, v1}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
+    invoke-static {v0, v3, v1}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
 
     move-result v3
 
@@ -912,7 +912,7 @@
 
     const-string v5, "json.getString(KEY_QUESTION)"
 
-    invoke-static {v10, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v5, "answer_ids"
 

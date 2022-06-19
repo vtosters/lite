@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vk/mediastore/a/e/d;->a:Landroid/os/Handler$Callback;
 
-    invoke-static {v0, p1}, Lcom/vk/mediastore/a/e/DownloadWrapper;->a(Landroid/os/Handler$Callback;Landroid/os/Message;)Z
+    invoke-static {v0, p1}, Lcom/vk/mediastore/a/e/h;->a(Landroid/os/Handler$Callback;Landroid/os/Message;)Z
 
     move-result p1
 

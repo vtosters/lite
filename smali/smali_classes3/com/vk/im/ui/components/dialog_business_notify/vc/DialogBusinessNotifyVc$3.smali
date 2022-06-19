@@ -3,7 +3,7 @@
 .source "DialogBusinessNotifyVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -52,13 +52,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc$3;->this$0:Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->a(Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;)Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVcCallback;
+    invoke-static {p1}, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->a(Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;)Lcom/vk/im/ui/components/dialog_business_notify/vc/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVcCallback;->b()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/dialog_business_notify/vc/a;->b()V
 
     :cond_0
     return-void
@@ -72,7 +72,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc$3;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

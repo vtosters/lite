@@ -3,7 +3,7 @@
 .source "BuyMusicSubscriptionButton.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions4;
+.implements Lkotlin/jvm/b/d;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions4<",
+        "Lkotlin/jvm/b/d<",
         "Landroid/widget/TextView;",
         "Landroid/widget/TextView;",
         "Lcom/vk/dto/common/data/Subscription;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton$onPriceResolvedListener$1;->a(Landroid/widget/TextView;Landroid/widget/TextView;Lcom/vk/dto/common/data/Subscription;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -71,7 +71,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton$onPriceResolvedListener$1;->$context:Landroid/content/Context;
 
-    sget v1, Lcom/vk/music/m/R4;->musc_bmsb_title_buy:I
+    sget v1, Lcom/vk/music/m/i;->musc_bmsb_title_buy:I
 
     const/4 v2, 0x1
 
@@ -99,7 +99,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton$onPriceResolvedListener$1;->$context:Landroid/content/Context;
 
-    sget p3, Lcom/vk/music/m/R4;->music_bmsb_subtitle:I
+    sget p3, Lcom/vk/music/m/i;->music_bmsb_subtitle:I
 
     invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

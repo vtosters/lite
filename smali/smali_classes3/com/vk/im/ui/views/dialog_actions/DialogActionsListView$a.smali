@@ -3,7 +3,7 @@
 .source "DialogActionsListView.kt"
 
 # interfaces
-.implements Lb/h/l/a/ActionClickListener;
+.implements Lb/h/l/a/c;
 
 
 # annotations
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public a(Lb/h/l/a/Action;)V
+.method public a(Lb/h/l/a/a;)V
     .locals 1
 
     .line 1
@@ -48,7 +48,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lb/h/l/a/Action;->c()I
+    invoke-virtual {p1}, Lb/h/l/a/a;->c()I
 
     move-result p1
 
@@ -57,13 +57,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$a;->a:Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->getOnActionClickListener()Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->getOnActionClickListener()Lcom/vk/im/ui/views/dialog_actions/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;->a(Lcom/vk/im/ui/components/common/DialogAction;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/views/dialog_actions/a;->a(Lcom/vk/im/ui/components/common/DialogAction;)V
 
     :cond_0
     return-void

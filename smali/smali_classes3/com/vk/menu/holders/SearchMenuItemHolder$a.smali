@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/menu/holders/SearchMenuItemHolder;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/menu/holders/SearchMenuItemHolder;-><init>(Landroid/view/View;Lkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,17 +40,17 @@
     .line 1
     iget-object p1, p0, Lcom/vk/menu/holders/SearchMenuItemHolder$a;->a:Lcom/vk/menu/holders/SearchMenuItemHolder;
 
-    invoke-static {p1}, Lcom/vk/menu/holders/SearchMenuItemHolder;->b(Lcom/vk/menu/holders/SearchMenuItemHolder;)Lkotlin/jvm/b/Functions2;
+    invoke-static {p1}, Lcom/vk/menu/holders/SearchMenuItemHolder;->b(Lcom/vk/menu/holders/SearchMenuItemHolder;)Lkotlin/jvm/b/b;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/menu/holders/SearchMenuItemHolder$a;->a:Lcom/vk/menu/holders/SearchMenuItemHolder;
 
-    invoke-static {v0}, Lcom/vk/menu/holders/SearchMenuItemHolder;->a(Lcom/vk/menu/holders/SearchMenuItemHolder;)Lcom/vk/menu/g/SearchMenuItem;
+    invoke-static {v0}, Lcom/vk/menu/holders/SearchMenuItemHolder;->a(Lcom/vk/menu/holders/SearchMenuItemHolder;)Lcom/vk/menu/g/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/menu/g/SearchMenuItem;->c()Landroid/view/MenuItem;
+    invoke-virtual {v0}, Lcom/vk/menu/g/c;->c()Landroid/view/MenuItem;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

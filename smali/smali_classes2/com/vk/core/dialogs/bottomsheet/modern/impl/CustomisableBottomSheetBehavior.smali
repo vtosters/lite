@@ -1049,7 +1049,7 @@
 
     move-result-object p3
 
-    sget v2, Lb/h/z/R9;->design_bottom_sheet_peek_height_min:I
+    sget v2, Lb/h/z/d;->design_bottom_sheet_peek_height_min:I
 
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

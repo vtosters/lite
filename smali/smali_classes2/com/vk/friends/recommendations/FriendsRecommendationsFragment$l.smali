@@ -3,12 +3,12 @@
 .source "FriendsRecommendationsFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
+    value = Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -50,16 +50,16 @@
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$l;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->e(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lb/h/g/k/VKProgressDialog;
+    invoke-static {p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->e(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lb/h/g/k/a;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     return-void
 .end method

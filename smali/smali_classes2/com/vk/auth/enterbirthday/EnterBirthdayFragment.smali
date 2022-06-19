@@ -3,7 +3,7 @@
 .source "EnterBirthdayFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/enterbirthday/EnterBirthdayView;
+.implements Lcom/vk/auth/enterbirthday/a;
 
 
 # annotations
@@ -18,7 +18,7 @@
         "Lcom/vk/auth/base/BaseAuthFragment<",
         "Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;",
         ">;",
-        "Lcom/vk/auth/enterbirthday/EnterBirthdayView;"
+        "Lcom/vk/auth/enterbirthday/a;"
     }
 .end annotation
 
@@ -37,7 +37,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/enterbirthday/EnterBirthdayFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/enterbirthday/EnterBirthdayFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
 
     move-result-object p0
 
@@ -85,7 +85,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/vk/auth/r/R1;->months_full:I
+    sget v4, Lcom/vk/auth/r/a;->months_full:I
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -126,7 +126,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -144,12 +144,12 @@
     return-void
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method public a(Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/SimpleDate;Lkotlin/jvm/b/Functions2;)V
+.method public a(Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/SimpleDate;Lkotlin/jvm/b/b;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -157,10 +157,10 @@
             "Lcom/vk/auth/enterbirthday/SimpleDate;",
             "Lcom/vk/auth/enterbirthday/SimpleDate;",
             "Lcom/vk/auth/enterbirthday/SimpleDate;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/auth/enterbirthday/SimpleDate;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -174,7 +174,7 @@
 
     new-instance v2, Lcom/vk/auth/enterbirthday/EnterBirthdayFragment$c;
 
-    invoke-direct {v2, p4}, Lcom/vk/auth/enterbirthday/EnterBirthdayFragment$c;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, p4}, Lcom/vk/auth/enterbirthday/EnterBirthdayFragment$c;-><init>(Lkotlin/jvm/b/b;)V
 
     .line 3
     invoke-virtual {p1}, Lcom/vk/auth/enterbirthday/SimpleDate;->H()I
@@ -201,7 +201,7 @@
 
     const-string p4, "dialog.datePicker"
 
-    invoke-static {p1, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Lcom/vk/auth/enterbirthday/SimpleDate;->K()J
 
@@ -214,7 +214,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Lcom/vk/auth/enterbirthday/SimpleDate;->K()J
 
@@ -228,7 +228,7 @@
     return-void
 .end method
 
-.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/AuthPresenter;
+.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/a;
     .locals 0
 
     .line 1
@@ -260,7 +260,7 @@
     .locals 1
 
     .line 1
-    sget p3, Lcom/vk/auth/r/R8;->vk_auth_enter_birthday_fragment:I
+    sget p3, Lcom/vk/auth/r/f;->vk_auth_enter_birthday_fragment:I
 
     const/4 v0, 0x0
 
@@ -278,7 +278,7 @@
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroyView()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
 
     move-result-object v0
 
@@ -296,7 +296,7 @@
     invoke-super {p0, p1, p2}, Lcom/vk/auth/base/BaseAuthFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    sget p2, Lcom/vk/auth/r/R5;->choose_birthday:I
+    sget p2, Lcom/vk/auth/r/e;->choose_birthday:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -304,7 +304,7 @@
 
     const-string v0, "view.findViewById(R.id.choose_birthday)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -322,7 +322,7 @@
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 4
-    sget p2, Lcom/vk/auth/r/R5;->error_txt:I
+    sget p2, Lcom/vk/auth/r/e;->error_txt:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -330,7 +330,7 @@
 
     const-string p2, "view.findViewById(R.id.error_txt)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/auth/enterbirthday/EnterBirthdayFragment;->g:Landroid/view/View;
 
@@ -345,17 +345,17 @@
 
     invoke-direct {p2, p0}, Lcom/vk/auth/enterbirthday/EnterBirthdayFragment$onViewCreated$2;-><init>(Lcom/vk/auth/enterbirthday/EnterBirthdayFragment;)V
 
-    invoke-static {p1, p2}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 6
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
 
     move-result-object p1
 
     check-cast p1, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;
 
-    invoke-virtual {p1, p0}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lcom/vk/auth/enterbirthday/EnterBirthdayView;)V
+    invoke-virtual {p1, p0}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lcom/vk/auth/enterbirthday/a;)V
 
     return-void
 
@@ -363,7 +363,7 @@
     const-string p1, "chooseBirthdayView"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -411,20 +411,20 @@
 
     if-eqz p1, :cond_0
 
-    sget v0, Lcom/vk/auth/r/R6;->vk_auth_bg_edittext_error:I
+    sget v0, Lcom/vk/auth/r/d;->vk_auth_bg_edittext_error:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 3
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -441,7 +441,7 @@
 
     if-eqz p1, :cond_3
 
-    sget v0, Lcom/vk/auth/r/R6;->vk_auth_bg_edittext:I
+    sget v0, Lcom/vk/auth/r/d;->vk_auth_bg_edittext:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -449,13 +449,13 @@
     return-void
 
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 6
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method

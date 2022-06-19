@@ -3,7 +3,7 @@
 .source "VideoConfig.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/core/serialize/a;
 
 
 # annotations
@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/account/VideoConfig$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/account/VideoConfig$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/account/VideoConfig;->C:Lcom/vk/dto/account/VideoConfig$b;
 
@@ -99,7 +99,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v12}, Lcom/vk/dto/account/VideoConfig;-><init>(ILcom/vk/dto/account/VideoConfig$PlayerType;JZZZZIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v12}, Lcom/vk/dto/account/VideoConfig;-><init>(ILcom/vk/dto/account/VideoConfig$PlayerType;JZZZZIIILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -131,7 +131,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILcom/vk/dto/account/VideoConfig$PlayerType;JZZZZIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ILcom/vk/dto/account/VideoConfig$PlayerType;JZZZZIIILkotlin/jvm/internal/i;)V
     .locals 11
 
     move/from16 v0, p11
@@ -333,7 +333,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 1
@@ -350,7 +350,7 @@
     const/4 v1, -0x1
 
     .line 16
-    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
+    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
 
     move-result v3
 
@@ -361,7 +361,7 @@
 
     const-string v2, "player_type"
 
-    invoke-static {p1, v2, v1}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
+    invoke-static {p1, v2, v1}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
 
     move-result v2
 
@@ -384,21 +384,21 @@
     const-string v0, "player_decoder_config"
 
     .line 18
-    invoke-static {p1, v0, v5, v6}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;J)J
+    invoke-static {p1, v0, v5, v6}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;J)J
 
     move-result-wide v5
 
     const-string v0, "gifAutoPlayAvailable"
 
     .line 19
-    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
+    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
 
     move-result v7
 
     const-string v0, "videoAutoPlayAvailable"
 
     .line 20
-    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
+    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
 
     move-result v8
 
@@ -407,14 +407,14 @@
     const-string v1, "videoDiscover"
 
     .line 21
-    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
+    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
 
     move-result v9
 
     const-string v1, "useVigo"
 
     .line 22
-    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
+    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
 
     move-result v10
 
@@ -423,14 +423,14 @@
     const-string v1, "vigoConnectTimeout"
 
     .line 23
-    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
+    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
 
     move-result v11
 
     const-string v1, "vigoReadTimeout"
 
     .line 24
-    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
+    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
 
     move-result v12
 
@@ -442,7 +442,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -872,7 +872,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/account/VideoConfig;->b:Lcom/vk/dto/account/VideoConfig$PlayerType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

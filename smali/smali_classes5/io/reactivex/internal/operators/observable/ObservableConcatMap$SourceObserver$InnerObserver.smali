@@ -3,7 +3,7 @@
 .source "ObservableConcatMap.java"
 
 # interfaces
-.implements Lio/reactivex/Observer;
+.implements Lc/a/r;
 
 
 # annotations
@@ -22,9 +22,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         ">;",
-        "Lio/reactivex/Observer<",
+        "Lc/a/r<",
         "TU;>;"
     }
 .end annotation
@@ -35,10 +35,10 @@
 
 
 # instance fields
-.field final downstream:Lio/reactivex/Observer;
+.field final downstream:Lc/a/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TU;>;"
         }
     .end annotation
@@ -55,12 +55,12 @@
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver;)V
+.method constructor <init>(Lc/a/r;Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TU;>;",
             "Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver<",
             "**>;)V"
@@ -71,7 +71,7 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver$InnerObserver;->downstream:Lio/reactivex/Observer;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver$InnerObserver;->downstream:Lc/a/r;
 
     .line 3
     iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver$InnerObserver;->parent:Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver;
@@ -90,11 +90,11 @@
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -108,9 +108,9 @@
     invoke-virtual {v0}, Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver;->o()V
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver$InnerObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver$InnerObserver;->downstream:Lc/a/r;
 
-    invoke-interface {v0, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -135,9 +135,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver$InnerObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMap$SourceObserver$InnerObserver;->downstream:Lc/a/r;
 
-    invoke-interface {v0, p1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -35,11 +35,11 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/api/sdk/VKApiValidationHandler$b;
+.method public final a()Lcom/vk/api/sdk/i$b;
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->b()Lcom/vk/api/sdk/VKApiValidationHandler$b;
+    invoke-static {}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->b()Lcom/vk/api/sdk/i$b;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
 
     const-string v0, "Intent(context, VKWebVie\u2026ATION_URL, validationUrl)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -73,11 +73,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/api/sdk/VKApiValidationHandler$b;)V
+.method public final a(Lcom/vk/api/sdk/i$b;)V
     .locals 0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->a(Lcom/vk/api/sdk/VKApiValidationHandler$b;)V
+    invoke-static {p1}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->a(Lcom/vk/api/sdk/i$b;)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -57,7 +57,7 @@
 
     const-string v0, "jo.optString(\"photo_200\"\u2026o.optString(\"photo_50\")))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -128,7 +128,7 @@
 
     move-result-object v8
 
-    invoke-static {v8, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     invoke-virtual {v8, v2}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
@@ -212,7 +212,7 @@
 
     move-result-object v7
 
-    invoke-static {v7, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     invoke-virtual {v7, v2}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
@@ -252,7 +252,7 @@
 
     invoke-direct {v2, v0, v1}, Lcom/vk/api/video/VideoRequest$Companion$parseExtendedVideoList$3;-><init>(Landroid/util/SparseArray;Landroid/util/SparseArray;)V
 
-    invoke-static {p1, v2}, Lcom/vk/api/base/VkPaginationList1;->a(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)Lcom/vk/api/base/VkPaginationList;
+    invoke-static {p1, v2}, Lcom/vk/api/base/k;->a(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)Lcom/vk/api/base/VkPaginationList;
 
     move-result-object p1
     :try_end_1

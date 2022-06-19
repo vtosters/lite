@@ -40,14 +40,14 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/network/proxy/NetworkProxy$f;->a:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/ProxyHost;->i()V
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/c;->i()V
 
     .line 2
-    invoke-static {}, Lcom/vk/core/util/DeviceState;->W()Z
+    invoke-static {}, Lcom/vk/core/util/v;->W()Z
 
     move-result v0
 
@@ -72,13 +72,13 @@
     .line 4
     iget-object v1, p0, Lcom/vk/core/network/proxy/NetworkProxy$f;->a:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v1}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
+    invoke-virtual {v1}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/vk/core/network/proxy/ProxyHost;->d:Lcom/vk/core/network/proxy/ProxySettings;
+    iget-object v1, v1, Lcom/vk/core/network/proxy/c;->d:Lcom/vk/core/network/proxy/j;
 
-    invoke-virtual {v1}, Lcom/vk/core/network/proxy/ProxySettings;->a()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lcom/vk/core/network/proxy/j;->a()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -98,10 +98,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/core/network/proxy/ProxyCertificate;
+    check-cast v2, Lcom/vk/core/network/proxy/b;
 
     .line 6
-    invoke-virtual {v2, v0}, Lcom/vk/core/network/proxy/ProxyCertificate;->a(Ljava/security/KeyStore;)Z
+    invoke-virtual {v2, v0}, Lcom/vk/core/network/proxy/b;->a(Ljava/security/KeyStore;)Z
 
     goto :goto_0
 
@@ -121,9 +121,9 @@
 
     if-eqz v2, :cond_2
 
-    sget-object v2, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
+    sget-object v2, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
 
-    invoke-virtual {v2}, Lcom/vk/core/util/DeviceState;->x()Z
+    invoke-virtual {v2}, Lcom/vk/core/util/v;->x()Z
 
     move-result v2
 
@@ -178,25 +178,25 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v2, v3}, Lcom/vk/core/network/proxy/NetworkProxy;->a(Lcom/vk/core/network/proxy/NetworkProxy;Lokhttp3/OkHttpClient;)V
+    invoke-static {v2, v3}, Lcom/vk/core/network/proxy/NetworkProxy;->a(Lcom/vk/core/network/proxy/NetworkProxy;Lokhttp3/x;)V
 
     .line 13
     iget-object v2, p0, Lcom/vk/core/network/proxy/NetworkProxy$f;->a:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v2}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
+    invoke-virtual {v2}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/vk/core/network/proxy/ProxyHost;->b(Z)V
+    invoke-virtual {v2, v1}, Lcom/vk/core/network/proxy/c;->b(Z)V
 
     .line 14
     iget-object v2, p0, Lcom/vk/core/network/proxy/NetworkProxy$f;->a:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v2}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
+    invoke-virtual {v2}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/core/network/proxy/ProxyHost;->f()Z
+    invoke-virtual {v2}, Lcom/vk/core/network/proxy/c;->f()Z
 
     move-result v2
 

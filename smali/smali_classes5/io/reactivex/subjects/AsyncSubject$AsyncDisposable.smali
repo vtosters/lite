@@ -40,12 +40,12 @@
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/subjects/AsyncSubject;)V
+.method constructor <init>(Lc/a/r;Lio/reactivex/subjects/AsyncSubject;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;",
             "Lio/reactivex/subjects/AsyncSubject<",
             "TT;>;)V"
@@ -53,7 +53,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/observers/DeferredScalarDisposable;-><init>(Lio/reactivex/Observer;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/observers/DeferredScalarDisposable;-><init>(Lc/a/r;)V
 
     .line 2
     iput-object p2, p0, Lio/reactivex/subjects/AsyncSubject$AsyncDisposable;->parent:Lio/reactivex/subjects/AsyncSubject;
@@ -74,15 +74,15 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lc/a/r;
 
-    invoke-interface {v0, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -99,9 +99,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lc/a/r;
 
-    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v0}, Lc/a/r;->b()V
 
     :cond_0
     return-void

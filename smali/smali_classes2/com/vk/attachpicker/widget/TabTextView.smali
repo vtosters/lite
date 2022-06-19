@@ -3,7 +3,7 @@
 .source "TabTextView.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # instance fields
@@ -102,7 +102,7 @@
 
     iget p2, p0, Lcom/vk/attachpicker/widget/TabTextView;->b:I
 
-    invoke-static {p1, p2, p3}, Lcom/vk/attachpicker/util/Utils;->b(IIF)I
+    invoke-static {p1, p2, p3}, Lcom/vk/attachpicker/util/f;->b(IIF)I
 
     move-result p1
 

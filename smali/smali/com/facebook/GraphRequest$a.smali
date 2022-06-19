@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/GraphResponse;)V
+.method public a(Lcom/facebook/i;)V
     .locals 2
 
     .line 1
@@ -44,7 +44,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Lcom/facebook/GraphResponse;->b()Lorg/json/JSONObject;
+    invoke-virtual {p1}, Lcom/facebook/i;->b()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -66,7 +66,7 @@
     :goto_0
     iget-object v1, p0, Lcom/facebook/GraphRequest$a;->a:Lcom/facebook/GraphRequest$g;
 
-    invoke-interface {v1, v0, p1}, Lcom/facebook/GraphRequest$g;->a(Lorg/json/JSONArray;Lcom/facebook/GraphResponse;)V
+    invoke-interface {v1, v0, p1}, Lcom/facebook/GraphRequest$g;->a(Lorg/json/JSONArray;Lcom/facebook/i;)V
 
     :cond_1
     return-void

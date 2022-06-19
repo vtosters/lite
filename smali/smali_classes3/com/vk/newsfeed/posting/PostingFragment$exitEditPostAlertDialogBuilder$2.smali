@@ -3,7 +3,7 @@
 .source "PostingFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;",
         ">;"
     }
@@ -53,7 +53,7 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/posting/PostingFragment$exitEditPostAlertDialogBuilder$2;->this$0:Lcom/vk/newsfeed/posting/PostingFragment;
 
-    invoke-virtual {v1}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {v1}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
@@ -93,7 +93,7 @@
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method

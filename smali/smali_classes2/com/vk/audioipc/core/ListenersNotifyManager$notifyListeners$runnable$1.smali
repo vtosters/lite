@@ -3,12 +3,12 @@
 .source "ListenersNotifyManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $action:Lkotlin/jvm/b/Functions2;
+.field final synthetic $action:Lkotlin/jvm/b/b;
 
 .field final synthetic this$0:Lcom/vk/audioipc/core/ListenersNotifyManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audioipc/core/ListenersNotifyManager;Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(Lcom/vk/audioipc/core/ListenersNotifyManager;Lkotlin/jvm/b/b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/audioipc/core/ListenersNotifyManager$notifyListeners$runnable$1;->this$0:Lcom/vk/audioipc/core/ListenersNotifyManager;
 
-    iput-object p2, p0, Lcom/vk/audioipc/core/ListenersNotifyManager$notifyListeners$runnable$1;->$action:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vk/audioipc/core/ListenersNotifyManager$notifyListeners$runnable$1;->$action:Lkotlin/jvm/b/b;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/audioipc/core/ListenersNotifyManager$notifyListeners$runnable$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -88,9 +88,9 @@
 
     .line 4
     :try_start_0
-    iget-object v2, p0, Lcom/vk/audioipc/core/ListenersNotifyManager$notifyListeners$runnable$1;->$action:Lkotlin/jvm/b/Functions2;
+    iget-object v2, p0, Lcom/vk/audioipc/core/ListenersNotifyManager$notifyListeners$runnable$1;->$action:Lkotlin/jvm/b/b;
 
-    invoke-interface {v2, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

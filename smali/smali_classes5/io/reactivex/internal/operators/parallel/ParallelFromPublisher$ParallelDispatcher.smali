@@ -3,7 +3,7 @@
 .source "ParallelFromPublisher.java"
 
 # interfaces
-.implements Lio/reactivex/FlowableSubscriber;
+.implements Lc/a/h;
 
 
 # annotations
@@ -28,7 +28,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lio/reactivex/FlowableSubscriber<",
+        "Lc/a/h<",
         "TT;>;"
     }
 .end annotation
@@ -55,10 +55,10 @@
 
 .field produced:I
 
-.field queue:Lc/a/a0/b/SimpleQueue;
+.field queue:Lc/a/a0/b/k;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/SimpleQueue<",
+            "Lc/a/a0/b/k<",
             "TT;>;"
         }
     .end annotation
@@ -70,26 +70,26 @@
 
 .field final subscriberCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field final subscribers:[Le/b/Subscriber;
+.field final subscribers:[Le/b/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field upstream:Le/b/Subscription;
+.field upstream:Le/b/d;
 
 
 # direct methods
-.method constructor <init>([Le/b/Subscriber;I)V
+.method constructor <init>([Le/b/c;I)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;I)V"
         }
     .end annotation
@@ -105,7 +105,7 @@
     iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->subscriberCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 3
-    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->subscribers:[Le/b/Subscriber;
+    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->subscribers:[Le/b/c;
 
     .line 4
     iput p2, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->prefetch:I
@@ -203,9 +203,9 @@
     iput-boolean p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->cancelled:Z
 
     .line 23
-    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/Subscription;
+    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/d;
 
-    invoke-interface {p1}, Le/b/Subscription;->cancel()V
+    invoke-interface {p1}, Le/b/d;->cancel()V
 
     .line 24
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -215,43 +215,43 @@
     if-nez p1, :cond_0
 
     .line 25
-    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/SimpleQueue;
+    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/k;
 
-    invoke-interface {p1}, Lc/a/a0/b/SimpleQueue;->clear()V
+    invoke-interface {p1}, Lc/a/a0/b/k;->clear()V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Le/b/Subscription;)V
+.method public a(Le/b/d;)V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/Subscription;
+    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/d;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Le/b/Subscription;Le/b/Subscription;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Le/b/d;Le/b/d;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/Subscription;
+    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/d;
 
     .line 3
-    instance-of v0, p1, Lc/a/a0/b/QueueSubscription;
+    instance-of v0, p1, Lc/a/a0/b/h;
 
     if-eqz v0, :cond_1
 
     .line 4
     move-object v0, p1
 
-    check-cast v0, Lc/a/a0/b/QueueSubscription;
+    check-cast v0, Lc/a/a0/b/h;
 
     const/4 v1, 0x7
 
     .line 5
-    invoke-interface {v0, v1}, Lc/a/a0/b/QueueFuseable;->a(I)I
+    invoke-interface {v0, v1}, Lc/a/a0/b/g;->a(I)I
 
     move-result v1
 
@@ -263,7 +263,7 @@
     iput v1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->sourceMode:I
 
     .line 7
-    iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/SimpleQueue;
+    iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/k;
 
     .line 8
     iput-boolean v2, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->done:Z
@@ -285,7 +285,7 @@
     iput v1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->sourceMode:I
 
     .line 12
-    iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/SimpleQueue;
+    iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/k;
 
     .line 13
     invoke-virtual {p0}, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->e()V
@@ -295,7 +295,7 @@
 
     int-to-long v0, v0
 
-    invoke-interface {p1, v0, v1}, Le/b/Subscription;->a(J)V
+    invoke-interface {p1, v0, v1}, Le/b/d;->a(J)V
 
     return-void
 
@@ -307,7 +307,7 @@
 
     invoke-direct {v0, v1}, Lio/reactivex/internal/queue/SpscArrayQueue;-><init>(I)V
 
-    iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/SimpleQueue;
+    iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/k;
 
     .line 16
     invoke-virtual {p0}, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->e()V
@@ -317,7 +317,7 @@
 
     int-to-long v0, v0
 
-    invoke-interface {p1, v0, v1}, Le/b/Subscription;->a(J)V
+    invoke-interface {p1, v0, v1}, Le/b/d;->a(J)V
 
     :cond_2
     return-void
@@ -368,18 +368,18 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/SimpleQueue;
+    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/k;
 
-    invoke-interface {v0, p1}, Lc/a/a0/b/SimpleQueue;->offer(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lc/a/a0/b/k;->offer(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/Subscription;
+    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/d;
 
-    invoke-interface {p1}, Le/b/Subscription;->cancel()V
+    invoke-interface {p1}, Le/b/d;->cancel()V
 
     .line 4
     new-instance p1, Lio/reactivex/exceptions/MissingBackpressureException;
@@ -405,10 +405,10 @@
     move-object/from16 v1, p0
 
     .line 1
-    iget-object v0, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/SimpleQueue;
+    iget-object v0, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/k;
 
     .line 2
-    iget-object v2, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->subscribers:[Le/b/Subscriber;
+    iget-object v2, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->subscribers:[Le/b/c;
 
     .line 3
     iget-object v3, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->requests:Ljava/util/concurrent/atomic/AtomicLongArray;
@@ -444,7 +444,7 @@
     if-eqz v12, :cond_2
 
     .line 9
-    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->clear()V
+    invoke-interface {v0}, Lc/a/a0/b/k;->clear()V
 
     return-void
 
@@ -460,7 +460,7 @@
     if-eqz v13, :cond_4
 
     .line 12
-    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->clear()V
+    invoke-interface {v0}, Lc/a/a0/b/k;->clear()V
 
     .line 13
     array-length v0, v2
@@ -471,7 +471,7 @@
     aget-object v3, v2, v10
 
     .line 14
-    invoke-interface {v3, v13}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v3, v13}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     add-int/lit8 v10, v10, 0x1
 
@@ -482,7 +482,7 @@
 
     .line 15
     :cond_4
-    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
+    invoke-interface {v0}, Lc/a/a0/b/k;->isEmpty()Z
 
     move-result v13
 
@@ -499,7 +499,7 @@
     aget-object v3, v2, v10
 
     .line 17
-    invoke-interface {v3}, Le/b/Subscriber;->b()V
+    invoke-interface {v3}, Le/b/c;->b()V
 
     add-int/lit8 v10, v10, 0x1
 
@@ -541,7 +541,7 @@
 
     .line 21
     :try_start_0
-    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->poll()Ljava/lang/Object;
+    invoke-interface {v0}, Lc/a/a0/b/k;->poll()Ljava/lang/Object;
 
     move-result-object v7
     :try_end_0
@@ -558,7 +558,7 @@
     :cond_8
     aget-object v12, v2, v6
 
-    invoke-interface {v12, v7}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
+    invoke-interface {v12, v7}, Le/b/c;->b(Ljava/lang/Object;)V
 
     const-wide/16 v12, 0x1
 
@@ -575,11 +575,11 @@
     if-ne v7, v11, :cond_9
 
     .line 25
-    iget-object v11, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/Subscription;
+    iget-object v11, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/d;
 
     int-to-long v12, v7
 
-    invoke-interface {v11, v12, v13}, Le/b/Subscription;->a(J)V
+    invoke-interface {v11, v12, v13}, Le/b/d;->a(J)V
 
     const/4 v7, 0x0
 
@@ -596,12 +596,12 @@
     move-object v3, v0
 
     .line 26
-    invoke-static {v3}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {v3}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 27
-    iget-object v0, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/Subscription;
+    iget-object v0, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/d;
 
-    invoke-interface {v0}, Le/b/Subscription;->cancel()V
+    invoke-interface {v0}, Le/b/d;->cancel()V
 
     .line 28
     array-length v0, v2
@@ -612,7 +612,7 @@
     aget-object v4, v2, v10
 
     .line 29
-    invoke-interface {v4, v3}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v4, v3}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     add-int/lit8 v10, v10, 0x1
 
@@ -673,10 +673,10 @@
     move-object/from16 v1, p0
 
     .line 1
-    iget-object v0, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/SimpleQueue;
+    iget-object v0, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->queue:Lc/a/a0/b/k;
 
     .line 2
-    iget-object v2, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->subscribers:[Le/b/Subscriber;
+    iget-object v2, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->subscribers:[Le/b/c;
 
     .line 3
     iget-object v3, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->requests:Ljava/util/concurrent/atomic/AtomicLongArray;
@@ -707,13 +707,13 @@
     if-eqz v11, :cond_2
 
     .line 8
-    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->clear()V
+    invoke-interface {v0}, Lc/a/a0/b/k;->clear()V
 
     return-void
 
     .line 9
     :cond_2
-    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
+    invoke-interface {v0}, Lc/a/a0/b/k;->isEmpty()Z
 
     move-result v11
 
@@ -728,7 +728,7 @@
     aget-object v3, v2, v9
 
     .line 11
-    invoke-interface {v3}, Le/b/Subscriber;->b()V
+    invoke-interface {v3}, Le/b/c;->b()V
 
     add-int/lit8 v9, v9, 0x1
 
@@ -765,7 +765,7 @@
 
     .line 15
     :try_start_0
-    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->poll()Ljava/lang/Object;
+    invoke-interface {v0}, Lc/a/a0/b/k;->poll()Ljava/lang/Object;
 
     move-result-object v10
     :try_end_0
@@ -782,7 +782,7 @@
     aget-object v3, v2, v9
 
     .line 17
-    invoke-interface {v3}, Le/b/Subscriber;->b()V
+    invoke-interface {v3}, Le/b/c;->b()V
 
     add-int/lit8 v9, v9, 0x1
 
@@ -795,7 +795,7 @@
     :cond_6
     aget-object v11, v2, v6
 
-    invoke-interface {v11, v10}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
+    invoke-interface {v11, v10}, Le/b/c;->b(Ljava/lang/Object;)V
 
     const-wide/16 v10, 0x1
 
@@ -814,12 +814,12 @@
     move-object v3, v0
 
     .line 20
-    invoke-static {v3}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {v3}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 21
-    iget-object v0, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/Subscription;
+    iget-object v0, v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->upstream:Le/b/d;
 
-    invoke-interface {v0}, Le/b/Subscription;->cancel()V
+    invoke-interface {v0}, Le/b/d;->cancel()V
 
     .line 22
     array-length v0, v2
@@ -830,7 +830,7 @@
     aget-object v4, v2, v9
 
     .line 23
-    invoke-interface {v4, v3}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v4, v3}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     add-int/lit8 v9, v9, 0x1
 
@@ -883,7 +883,7 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->subscribers:[Le/b/Subscriber;
+    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;->subscribers:[Le/b/c;
 
     .line 2
     array-length v1, v0
@@ -915,7 +915,7 @@
 
     invoke-direct {v5, p0, v2, v1}, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher$a;-><init>(Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;II)V
 
-    invoke-interface {v3, v5}, Le/b/Subscriber;->a(Le/b/Subscription;)V
+    invoke-interface {v3, v5}, Le/b/c;->a(Le/b/d;)V
 
     move v2, v4
 

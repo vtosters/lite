@@ -3,12 +3,12 @@
 .source "ComponentNameManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Action;
+.implements Lc/a/z/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/core/ComponentNameManager;->b(Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/audioipc/core/ComponentNameManager;->b(Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/audioipc/core/ComponentNameManager;
 
-.field final synthetic b:Lkotlin/jvm/b/Functions;
+.field final synthetic b:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audioipc/core/ComponentNameManager;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/audioipc/core/ComponentNameManager;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/audioipc/core/ComponentNameManager$b;->a:Lcom/vk/audioipc/core/ComponentNameManager;
 
-    iput-object p2, p0, Lcom/vk/audioipc/core/ComponentNameManager$b;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/audioipc/core/ComponentNameManager$b;->b:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,12 +46,12 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/audioipc/core/ComponentNameManager;->a(Lcom/vk/audioipc/core/ComponentNameManager;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {v0, v1}, Lcom/vk/audioipc/core/ComponentNameManager;->a(Lcom/vk/audioipc/core/ComponentNameManager;Lio/reactivex/disposables/b;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audioipc/core/ComponentNameManager$b;->b:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/audioipc/core/ComponentNameManager$b;->b:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

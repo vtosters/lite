@@ -3,7 +3,7 @@
 .source "GoodFragment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/z/ReplyBarController$h;
+.implements Lcom/vtosters/lite/ui/z/a$h;
 
 
 # annotations
@@ -98,7 +98,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$l;->a:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/ReplyBarController;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/a;
 
     move-result-object v0
 
@@ -107,11 +107,11 @@
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$l;->a:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/ReplyBarController;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/z/ReplyBarController;->b()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/z/a;->b()V
 
     .line 5
     :cond_1

@@ -3,7 +3,7 @@
 .source "User.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -72,7 +72,7 @@
 
     const-string v2, "Locale.getDefault()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_0
 
@@ -82,7 +82,7 @@
 
     const-string v1, "(this as java.lang.String).toLowerCase(locale)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 

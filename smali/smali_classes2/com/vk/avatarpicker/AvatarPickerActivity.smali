@@ -32,12 +32,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/avatarpicker/AvatarPickerActivity$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/avatarpicker/AvatarPickerActivity$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/avatarpicker/AvatarPickerActivity;->c:Lcom/vk/avatarpicker/AvatarPickerActivity$a;
 
     .line 1
-    sget v0, Lcom/vk/avatarpicker/R1;->root_view:I
+    sget v0, Lcom/vk/avatarpicker/b;->root_view:I
 
     sput v0, Lcom/vk/avatarpicker/AvatarPickerActivity;->a:I
 
@@ -197,7 +197,7 @@
     const/4 v1, 0x0
 
     .line 4
-    invoke-static {v1}, Lb/h/g/m/CameraUtils;->a(Z)Landroidx/core/util/Pair;
+    invoke-static {v1}, Lb/h/g/m/a;->a(Z)Landroidx/core/util/Pair;
 
     move-result-object v1
 
@@ -208,7 +208,7 @@
 
     const-string v3, "requestData.first!!"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v2, Ljava/lang/Number;
 
@@ -221,7 +221,7 @@
 
     check-cast v1, Ljava/io/File;
 
-    invoke-static {v1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v1}, Lb/h/g/m/d;->n(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -239,10 +239,10 @@
     move-result-object v6
 
     .line 10
-    sget v7, Lcom/vk/avatarpicker/R2;->permissions_intent_photo:I
+    sget v7, Lcom/vk/avatarpicker/d;->permissions_intent_photo:I
 
     .line 11
-    sget v8, Lcom/vk/avatarpicker/R2;->permissions_intent_photo_settings:I
+    sget v8, Lcom/vk/avatarpicker/d;->permissions_intent_photo_settings:I
 
     .line 12
     new-instance v9, Lcom/vk/avatarpicker/AvatarPickerActivity$openCamera$1;
@@ -257,13 +257,13 @@
     move-object v5, p0
 
     .line 14
-    invoke-virtual/range {v4 .. v10}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
+    invoke-virtual/range {v4 .. v10}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
 
     return-void
 
     .line 15
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -282,7 +282,7 @@
     move-result-object v2
 
     .line 3
-    sget v4, Lcom/vk/avatarpicker/R2;->permissions_storage:I
+    sget v4, Lcom/vk/avatarpicker/d;->permissions_storage:I
 
     .line 4
     new-instance v5, Lcom/vk/avatarpicker/AvatarPickerActivity$openGallery$1;
@@ -299,7 +299,7 @@
     move v3, v4
 
     .line 6
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
 
     return-void
 .end method
@@ -464,7 +464,7 @@
 
     const-string v0, "Intent().putExtra(MediaStore.EXTRA_OUTPUT, uri)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
@@ -477,18 +477,18 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/photogallery/dto/GalleryState2;)V
+.method public a(Lcom/vk/photogallery/dto/c;)V
     .locals 1
 
     .line 2
-    instance-of v0, p1, Lcom/vk/photogallery/dto/GalleryState3;
+    instance-of v0, p1, Lcom/vk/photogallery/dto/e;
 
     if-eqz v0, :cond_0
 
     .line 3
-    check-cast p1, Lcom/vk/photogallery/dto/GalleryState3;
+    check-cast p1, Lcom/vk/photogallery/dto/e;
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState3;->f()Lcom/vk/mediastore/system/MediaStoreEntry;
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/e;->f()Lcom/vk/mediastore/system/MediaStoreEntry;
 
     move-result-object p1
 
@@ -496,7 +496,7 @@
 
     const-string v0, "media.entry.path"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/avatarpicker/AvatarPickerActivity;->b(Landroid/net/Uri;)V
 
@@ -525,7 +525,7 @@
     invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/FragmentActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
-    invoke-static {p1}, Lb/h/g/m/CameraUtils;->b(I)Z
+    invoke-static {p1}, Lb/h/g/m/a;->b(I)Z
 
     move-result p3
 
@@ -536,20 +536,20 @@
     if-ne p2, p3, :cond_0
 
     .line 3
-    invoke-static {p1}, Lb/h/g/m/CameraUtils;->a(I)Ljava/io/File;
+    invoke-static {p1}, Lb/h/g/m/a;->a(I)Ljava/io/File;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
     .line 4
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {p1}, Lb/h/g/m/d;->n(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p1
 
     const-string p2, "FileUtils.uriFromFile(file)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/avatarpicker/AvatarPickerActivity;->b(Landroid/net/Uri;)V
 
@@ -577,7 +577,7 @@
 
     const-string v1, "supportFragmentManager"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getBackStackEntryCount()I
 
@@ -604,7 +604,7 @@
     invoke-virtual {p0, p1, p1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
     .line 3
-    sget p1, Lcom/vk/avatarpicker/R;->activity_image_picker:I
+    sget p1, Lcom/vk/avatarpicker/c;->activity_image_picker:I
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 

@@ -3,12 +3,12 @@
 .source "VKApiManager.kt"
 
 # interfaces
-.implements Lcom/vk/api/sdk/VKApiResponseParser;
+.implements Lcom/vk/api/sdk/h;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKMethodCall;)V
+    value = Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/l;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/api/sdk/VKApiResponseParser<",
-        "Lkotlin/Unit;",
+        "Lcom/vk/api/sdk/h<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -62,7 +62,7 @@
     .line 1
     invoke-virtual {p0, p1}, Lcom/vk/api/sdk/VKApiManager$a;->a(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

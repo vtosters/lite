@@ -18,7 +18,7 @@
         "Ljava/util/HashMap<",
         "Ljava/lang/String;",
         "Ljava/util/List<",
-        "Lcom/vigo/metrics/Question;",
+        "Lcom/vigo/metrics/e;",
         ">;>;"
     }
 .end annotation
@@ -48,7 +48,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vigo/metrics/Question;->a(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vigo/metrics/e;->a(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p1
 
@@ -63,7 +63,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vigo/metrics/Question;->a(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vigo/metrics/e;->a(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p1
 

@@ -250,7 +250,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/facebook/FacebookSdk;->j()I
+    invoke-static {}, Lcom/facebook/e;->j()I
 
     move-result v0
 

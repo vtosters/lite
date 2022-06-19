@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$e;->a:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;->getPresenter()Lcom/vtosters/lite/fragments/lives/LiveTabs$b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;->getPresenter()Lcom/vtosters/lite/fragments/lives/a$b;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vtosters/lite/fragments/lives/LiveTabs$b;->T3()V
+    invoke-interface {p1}, Lcom/vtosters/lite/fragments/lives/a$b;->T3()V
 
     :cond_0
     const/4 p1, 0x1

@@ -16,7 +16,7 @@
 
 .field private b:Z
 
-.field private final c:Lcom/vk/core/ui/tracking/internal/UiTrackingLogger;
+.field private final c:Lcom/vk/core/ui/tracking/internal/g;
 
 
 # direct methods
@@ -32,11 +32,11 @@
     iput-object v0, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->a:Lcom/vk/core/ui/tracking/internal/UiNotifyManager$AppNavigationState;
 
     .line 3
-    new-instance v0, Lcom/vk/core/ui/tracking/internal/UiTrackingLogger;
+    new-instance v0, Lcom/vk/core/ui/tracking/internal/g;
 
-    invoke-direct {v0}, Lcom/vk/core/ui/tracking/internal/UiTrackingLogger;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/ui/tracking/internal/g;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->c:Lcom/vk/core/ui/tracking/internal/UiTrackingLogger;
+    iput-object v0, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->c:Lcom/vk/core/ui/tracking/internal/g;
 
     return-void
 .end method
@@ -45,9 +45,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/ui/v/UiTracker;->INSTANCE:Lcom/vk/core/ui/v/UiTracker;
+    sget-object v0, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTracker;->i()Z
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/a;->i()Z
 
     move-result v0
 
@@ -58,21 +58,21 @@
     .locals 6
 
     .line 1
-    sget-object v0, Lcom/vk/core/ui/tracking/internal/UiTrackingStorage;->INSTANCE:Lcom/vk/core/ui/tracking/internal/UiTrackingStorage;
+    sget-object v0, Lcom/vk/core/ui/tracking/internal/i;->a:Lcom/vk/core/ui/tracking/internal/i;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/tracking/internal/UiTrackingStorage;->b()Lcom/vk/core/ui/v/UiTrackingScreen;
+    invoke-virtual {v0}, Lcom/vk/core/ui/tracking/internal/i;->b()Lcom/vk/core/ui/v/g;
 
     move-result-object v0
 
     .line 2
-    sget-object v1, Lcom/vk/core/ui/tracking/internal/UiTrackingStorage;->INSTANCE:Lcom/vk/core/ui/tracking/internal/UiTrackingStorage;
+    sget-object v1, Lcom/vk/core/ui/tracking/internal/i;->a:Lcom/vk/core/ui/tracking/internal/i;
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/tracking/internal/UiTrackingStorage;->a()J
+    invoke-virtual {v1}, Lcom/vk/core/ui/tracking/internal/i;->a()J
 
     move-result-wide v1
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->e()Z
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/g;->e()Z
 
     move-result v3
 
@@ -87,29 +87,29 @@
     .line 4
     sget-object v3, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-virtual {v3}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v3}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/c;
 
     move-result-object v3
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object v0
 
-    invoke-virtual {v3, v4, v0}, Lcom/vk/stat/a/i/NavigationEventBuilder;->d(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v3, v4, v0}, Lcom/vk/stat/a/i/c;->d(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     .line 6
-    invoke-virtual {v3}, Lcom/vk/stat/a/i/NavigationEventBuilder;->a()Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v3}, Lcom/vk/stat/a/i/c;->a()Lcom/vk/stat/a/i/c;
 
     .line 7
-    invoke-virtual {v3, v1, v2}, Lcom/vk/stat/a/i/NavigationEventBuilder;->a(J)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v3, v1, v2}, Lcom/vk/stat/a/i/c;->a(J)Lcom/vk/stat/a/i/c;
 
     .line 8
-    invoke-virtual {v3}, Lcom/vk/stat/a/i/NavigationEventBuilder;->d()Lcom/vk/stat/a/StatEvent7;
+    invoke-virtual {v3}, Lcom/vk/stat/a/i/c;->d()Lcom/vk/stat/a/f;
 
     :cond_0
     return-void
@@ -133,25 +133,25 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/core/ui/tracking/internal/UiTrackingLogger;
+.method public final a()Lcom/vk/core/ui/tracking/internal/g;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->c:Lcom/vk/core/ui/tracking/internal/UiTrackingLogger;
+    iget-object v0, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->c:Lcom/vk/core/ui/tracking/internal/g;
 
     return-object v0
 .end method
 
-.method public final a(Lcom/vk/core/ui/v/UiTrackingScreen;Lcom/vk/core/ui/v/UiTrackingScreen;Z)V
+.method public final a(Lcom/vk/core/ui/v/g;Lcom/vk/core/ui/v/g;Z)V
     .locals 4
 
     .line 14
-    iget-object v0, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->c:Lcom/vk/core/ui/tracking/internal/UiTrackingLogger;
+    iget-object v0, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->c:Lcom/vk/core/ui/tracking/internal/g;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/core/ui/tracking/internal/UiTrackingLogger;->a(Lcom/vk/core/ui/v/UiTrackingScreen;Lcom/vk/core/ui/v/UiTrackingScreen;Z)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/core/ui/tracking/internal/g;->a(Lcom/vk/core/ui/v/g;Lcom/vk/core/ui/v/g;Z)V
 
     .line 15
-    invoke-virtual {p0, p2}, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->a(Lcom/vk/core/ui/v/UiTrackingScreen;)Z
+    invoke-virtual {p0, p2}, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->a(Lcom/vk/core/ui/v/g;)Z
 
     move-result v0
 
@@ -161,7 +161,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/UiTrackingScreen;->e()Z
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/g;->e()Z
 
     move-result v0
 
@@ -180,24 +180,24 @@
     :cond_1
     sget-object v0, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-virtual {v0}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/c;
 
     move-result-object v0
 
     .line 17
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->d()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->d()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/stat/a/i/NavigationEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Object;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/stat/a/i/c;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Object;)Lcom/vk/stat/a/i/c;
 
     .line 18
     iget-object p1, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->a:Lcom/vk/core/ui/tracking/internal/UiNotifyManager$AppNavigationState;
@@ -252,61 +252,61 @@
 
     .line 20
     :cond_3
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object p1
 
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object p2
 
-    invoke-virtual {v0, p1, p3, p2}, Lcom/vk/stat/a/i/NavigationEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;ZLcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, p1, p3, p2}, Lcom/vk/stat/a/i/c;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;ZLcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     goto :goto_0
 
     .line 21
     :cond_4
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object p1
 
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object p2
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/stat/a/i/NavigationEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/stat/a/i/c;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     goto :goto_0
 
     .line 22
     :cond_5
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object p1
 
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object p2
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/stat/a/i/NavigationEventBuilder;->c(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/stat/a/i/c;->c(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     goto :goto_0
 
     .line 23
     :cond_6
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object p1
 
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object p2
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/stat/a/i/NavigationEventBuilder;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/stat/a/i/c;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     .line 24
     :goto_0
-    invoke-virtual {v0}, Lcom/vk/stat/a/i/NavigationEventBuilder;->d()Lcom/vk/stat/a/StatEvent7;
+    invoke-virtual {v0}, Lcom/vk/stat/a/i/c;->d()Lcom/vk/stat/a/f;
 
     .line 25
     invoke-direct {p0}, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->h()V
@@ -316,48 +316,48 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/ui/v/j/UiItemClicked;)V
+.method public final a(Lcom/vk/core/ui/v/j/a;)V
     .locals 2
 
     .line 38
     sget-object v0, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-virtual {v0}, Lcom/vk/stat/Stat;->c()Lcom/vk/stat/a/i/ClickEventBuilder;
+    invoke-virtual {v0}, Lcom/vk/stat/Stat;->c()Lcom/vk/stat/a/i/b;
 
     move-result-object v0
 
     .line 39
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/UiItemClicked;->a()Lcom/vk/stat/scheme/SchemeStat$TypeClick;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/a;->a()Lcom/vk/stat/scheme/SchemeStat$TypeClick;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stat/a/i/ClickEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$TypeClick;)Lcom/vk/stat/a/i/ClickEventBuilder;
+    invoke-virtual {v0, v1}, Lcom/vk/stat/a/i/b;->a(Lcom/vk/stat/scheme/SchemeStat$TypeClick;)Lcom/vk/stat/a/i/b;
 
     .line 40
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/UiItemClicked;->b()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/a;->b()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/stat/a/i/ClickEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/stat/a/i/ClickEventBuilder;
+    invoke-virtual {v0, p1}, Lcom/vk/stat/a/i/b;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/stat/a/i/b;
 
     .line 41
-    invoke-virtual {v0}, Lcom/vk/stat/a/i/ClickEventBuilder;->a()Lcom/vk/stat/a/StatEvent2;
+    invoke-virtual {v0}, Lcom/vk/stat/a/i/b;->a()Lcom/vk/stat/a/c;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/ui/v/j/UiItemViewed;)V
+.method public final a(Lcom/vk/core/ui/v/j/b;)V
     .locals 11
 
     .line 26
     sget-object v0, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-virtual {v0}, Lcom/vk/stat/Stat;->i()Lcom/vk/stat/a/i/ViewEventBuilder;
+    invoke-virtual {v0}, Lcom/vk/stat/Stat;->i()Lcom/vk/stat/a/i/e;
 
     move-result-object v0
 
     .line 27
-    instance-of v1, p1, Lcom/vk/core/ui/v/j/UiItemViewed$b;
+    instance-of v1, p1, Lcom/vk/core/ui/v/j/b$b;
 
     const/4 v2, 0x0
 
@@ -378,9 +378,9 @@
     .line 28
     move-object v1, p1
 
-    check-cast v1, Lcom/vk/core/ui/v/j/UiItemViewed$b;
+    check-cast v1, Lcom/vk/core/ui/v/j/b$b;
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/v/j/UiItemViewed$b;->g()Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;
+    invoke-virtual {v1}, Lcom/vk/core/ui/v/j/b$b;->g()Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;
 
     move-result-object v2
 
@@ -391,14 +391,14 @@
     new-instance v1, Lcom/vk/stat/scheme/SchemeStat$TypeView;
 
     .line 30
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/UiItemViewed;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/b;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object v5
 
     .line 31
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/UiItemViewed;->e()J
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/b;->e()J
 
     move-result-wide v3
 
@@ -413,7 +413,7 @@
     .line 32
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/UiItemViewed;->a()J
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/b;->a()J
 
     move-result-wide v3
 
@@ -426,7 +426,7 @@
     move-result-object v7
 
     .line 33
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/UiItemViewed;->c()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/b;->c()Ljava/lang/Integer;
 
     move-result-object v8
 
@@ -436,22 +436,22 @@
     invoke-direct/range {v4 .. v10}, Lcom/vk/stat/scheme/SchemeStat$TypeView;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeView$Type;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;)V
 
     .line 35
-    invoke-virtual {v0, v1}, Lcom/vk/stat/a/i/ViewEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$TypeView;)Lcom/vk/stat/a/i/ViewEventBuilder;
+    invoke-virtual {v0, v1}, Lcom/vk/stat/a/i/e;->a(Lcom/vk/stat/scheme/SchemeStat$TypeView;)Lcom/vk/stat/a/i/e;
 
     .line 36
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/UiItemViewed;->d()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/b;->d()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/stat/a/i/ViewEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/stat/a/i/ViewEventBuilder;
+    invoke-virtual {v0, p1}, Lcom/vk/stat/a/i/e;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/stat/a/i/e;
 
     .line 37
-    invoke-virtual {v0}, Lcom/vk/stat/a/i/ViewEventBuilder;->a()Lcom/vk/stat/a/StatEvent6;
+    invoke-virtual {v0}, Lcom/vk/stat/a/i/e;->a()Lcom/vk/stat/a/h;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/ui/v/UiTrackingScreen;)Z
+.method public final a(Lcom/vk/core/ui/v/g;)Z
     .locals 6
 
     .line 2
@@ -461,7 +461,7 @@
 
     if-nez v0, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->e()Z
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->e()Z
 
     move-result v0
 
@@ -476,7 +476,7 @@
     .line 4
     sget-object v0, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-virtual {v0}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/c;
 
     move-result-object v0
 
@@ -485,7 +485,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v2, v3}, Lcom/vk/stat/a/i/NavigationEventBuilder;->d(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, v2, v3}, Lcom/vk/stat/a/i/c;->d(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     .line 6
     iget-object v2, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->a:Lcom/vk/core/ui/tracking/internal/UiNotifyManager$AppNavigationState;
@@ -531,57 +531,57 @@
 
     .line 8
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/stat/a/i/NavigationEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, p1}, Lcom/vk/stat/a/i/c;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/stat/a/i/c;
 
     goto :goto_0
 
     .line 9
     :cond_2
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/stat/a/i/NavigationEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/stat/a/i/c;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     goto :goto_0
 
     .line 10
     :cond_3
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/stat/a/i/NavigationEventBuilder;->c(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/stat/a/i/c;->c(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     goto :goto_0
 
     .line 11
     :cond_4
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/stat/a/i/NavigationEventBuilder;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/stat/a/i/c;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     .line 12
     :goto_0
-    invoke-virtual {v0}, Lcom/vk/stat/a/i/NavigationEventBuilder;->d()Lcom/vk/stat/a/StatEvent7;
+    invoke-virtual {v0}, Lcom/vk/stat/a/i/c;->d()Lcom/vk/stat/a/f;
 
     .line 13
     invoke-direct {p0}, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->h()V
@@ -597,9 +597,9 @@
     .locals 3
 
     .line 3
-    sget-object v0, Lcom/vk/core/ui/v/UiTracker;->INSTANCE:Lcom/vk/core/ui/v/UiTracker;
+    sget-object v0, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTracker;->a()Lcom/vk/core/ui/v/UiTrackingScreen;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/a;->a()Lcom/vk/core/ui/v/g;
 
     move-result-object v0
 
@@ -608,7 +608,7 @@
     .line 4
     sget-object v0, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-virtual {v0}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/c;
 
     move-result-object v0
 
@@ -617,19 +617,19 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/stat/a/i/NavigationEventBuilder;->d(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/stat/a/i/c;->d(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/stat/a/i/NavigationEventBuilder;->b()Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v0}, Lcom/vk/stat/a/i/c;->b()Lcom/vk/stat/a/i/c;
 
     .line 7
-    invoke-virtual {v0}, Lcom/vk/stat/a/i/NavigationEventBuilder;->d()Lcom/vk/stat/a/StatEvent7;
+    invoke-virtual {v0}, Lcom/vk/stat/a/i/c;->d()Lcom/vk/stat/a/f;
 
     :cond_0
     return-void
 .end method
 
-.method public final b(Lcom/vk/core/ui/v/UiTrackingScreen;)V
+.method public final b(Lcom/vk/core/ui/v/g;)V
     .locals 1
 
     .line 1
@@ -640,7 +640,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->a(Lcom/vk/core/ui/v/UiTrackingScreen;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->a(Lcom/vk/core/ui/v/g;)Z
 
     :cond_0
     return-void
@@ -658,9 +658,9 @@
 
     .line 2
     :cond_0
-    sget-object v0, Lcom/vk/core/ui/v/UiTracker;->INSTANCE:Lcom/vk/core/ui/v/UiTracker;
+    sget-object v0, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTracker;->a()Lcom/vk/core/ui/v/UiTrackingScreen;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/a;->a()Lcom/vk/core/ui/v/g;
 
     move-result-object v0
 
@@ -669,7 +669,7 @@
     .line 3
     sget-object v1, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-virtual {v1}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v1}, Lcom/vk/stat/Stat;->e()Lcom/vk/stat/a/i/c;
 
     move-result-object v1
 
@@ -678,7 +678,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/stat/a/i/NavigationEventBuilder;->d(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/stat/a/i/c;->d(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     .line 5
     iget-object v2, p0, Lcom/vk/core/ui/tracking/internal/UiNotifyManager;->a:Lcom/vk/core/ui/tracking/internal/UiNotifyManager$AppNavigationState;
@@ -733,53 +733,53 @@
 
     .line 7
     :cond_2
-    invoke-virtual {v1}, Lcom/vk/stat/a/i/NavigationEventBuilder;->c()Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v1}, Lcom/vk/stat/a/i/c;->c()Lcom/vk/stat/a/i/c;
 
     goto :goto_0
 
     .line 8
     :cond_3
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/stat/a/i/NavigationEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v1, v2, v0}, Lcom/vk/stat/a/i/c;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     goto :goto_0
 
     .line 9
     :cond_4
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/stat/a/i/NavigationEventBuilder;->c(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v1, v2, v0}, Lcom/vk/stat/a/i/c;->c(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     goto :goto_0
 
     .line 10
     :cond_5
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/g;->c()Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/g;->b()Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/stat/a/i/NavigationEventBuilder;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/NavigationEventBuilder;
+    invoke-virtual {v1, v2, v0}, Lcom/vk/stat/a/i/c;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Lcom/vk/stat/scheme/SchemeStat$EventItem;)Lcom/vk/stat/a/i/c;
 
     .line 11
     :goto_0
-    invoke-virtual {v1}, Lcom/vk/stat/a/i/NavigationEventBuilder;->d()Lcom/vk/stat/a/StatEvent7;
+    invoke-virtual {v1}, Lcom/vk/stat/a/i/c;->d()Lcom/vk/stat/a/f;
 
     .line 12
     :cond_6

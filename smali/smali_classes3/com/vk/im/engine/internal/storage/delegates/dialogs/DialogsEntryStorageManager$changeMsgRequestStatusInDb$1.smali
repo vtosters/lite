@@ -3,7 +3,7 @@
 .source "DialogsEntryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -82,10 +82,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/a;
 
     .line 4
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/a;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v3
 
@@ -99,7 +99,7 @@
     goto :goto_2
 
     :cond_0
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/a;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v3
 
@@ -109,11 +109,11 @@
     const-string v4, "stmt"
 
     .line 5
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/a;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v5
 
@@ -126,7 +126,7 @@
     const/4 v4, 0x2
 
     .line 6
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/a;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v5
 
@@ -151,7 +151,7 @@
     const/4 v2, 0x4
 
     .line 8
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->C()Lcom/vk/im/engine/models/WritePermission;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/a;->C()Lcom/vk/im/engine/models/WritePermission;
 
     move-result-object v3
 
@@ -164,7 +164,7 @@
     const/4 v2, 0x5
 
     .line 9
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->getId()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/a;->getId()I
 
     move-result v1
 
@@ -177,12 +177,12 @@
 
     .line 11
     :cond_2
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 12
-    invoke-static {p1, v2}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v2}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -197,7 +197,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 .end method
@@ -210,7 +210,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$changeMsgRequestStatusInDb$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

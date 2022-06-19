@@ -154,7 +154,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/attachpicker/util/Utils;->a(Landroid/content/Context;)I
+    invoke-static {v1}, Lcom/vk/attachpicker/util/f;->a(Landroid/content/Context;)I
 
     move-result v1
 

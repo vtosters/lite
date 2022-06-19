@@ -61,29 +61,29 @@
     .locals 3
 
     .line 2
-    new-instance v0, Lb/h/p/f/Frame;
+    new-instance v0, Lb/h/p/f/c;
 
-    invoke-direct {v0}, Lb/h/p/f/Frame;-><init>()V
+    invoke-direct {v0}, Lb/h/p/f/c;-><init>()V
 
     const/4 v1, 0x1
 
     .line 3
-    invoke-virtual {v0, v1}, Lb/h/p/f/Frame;->a(Z)V
+    invoke-virtual {v0, v1}, Lb/h/p/f/c;->a(Z)V
 
     .line 4
     iget v1, p0, Lcom/vk/cameraui/CameraUIPresenter$o;->a:I
 
     iget v2, p0, Lcom/vk/cameraui/CameraUIPresenter$o;->b:I
 
-    invoke-virtual {v0, v1, v2}, Lb/h/p/f/Frame;->b(II)V
+    invoke-virtual {v0, v1, v2}, Lb/h/p/f/c;->b(II)V
 
     .line 5
     iget-object v1, p0, Lcom/vk/cameraui/CameraUIPresenter$o;->c:[B
 
-    invoke-virtual {v0, v1}, Lb/h/p/f/Frame;->a([B)V
+    invoke-virtual {v0, v1}, Lb/h/p/f/c;->a([B)V
 
     .line 6
-    invoke-static {v0}, Lb/h/p/f/FrameUtils;->a(Lb/h/p/f/Frame;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lb/h/p/f/d;->a(Lb/h/p/f/c;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -105,7 +105,7 @@
 
     move-result v2
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -118,7 +118,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
 
     move-result-object v0
 

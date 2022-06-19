@@ -1,5 +1,5 @@
 .class final Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$b;
-.super Lcom/vtosters/lite/api/SimpleCallback;
+.super Lcom/vtosters/lite/api/l;
 .source "StickersDetailsFragment.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/api/SimpleCallback<",
+        "Lcom/vtosters/lite/api/l<",
         "Lcom/vk/dto/stickers/StickerStockItem;",
         ">;"
     }
@@ -41,7 +41,7 @@
 
     iput-object p4, p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$b;->e:Landroid/content/Context;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/api/SimpleCallback;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/api/l;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -74,9 +74,9 @@
     if-eqz v0, :cond_0
 
     .line 4
-    sget-object v0, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
+    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->b()V
+    invoke-virtual {v0}, Lcom/vk/stickers/t;->b()V
 
     .line 5
     :cond_0

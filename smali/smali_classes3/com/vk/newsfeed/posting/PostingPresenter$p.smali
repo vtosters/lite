@@ -3,7 +3,7 @@
 .source "PostingPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -52,26 +52,26 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$p;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->h(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/PostingPostResponseHelper;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->h(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/c;
 
     move-result-object v0
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingPostResponseHelper;->b(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/helpers/c;->b(Ljava/lang/Throwable;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/posting/PostingPresenter$p;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->f(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-static {p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->f(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/f;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/PostingContracts13;->t(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/f;->t(Z)V
 
     return-void
 .end method

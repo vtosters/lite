@@ -1,5 +1,5 @@
 .class final Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder$a;
-.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ButtonsFeedbackHolder.kt"
 
 
@@ -21,7 +21,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/newsfeed/entries/Post$Feedback$Answer;",
         ">;"
     }
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder$a$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder$a$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder$a;->d:Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder$a$a;
 
@@ -55,7 +55,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     .line 2
     check-cast p1, Landroid/widget/TextView;

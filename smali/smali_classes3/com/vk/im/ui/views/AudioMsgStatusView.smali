@@ -70,7 +70,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/AudioMsgStatusView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/AudioMsgStatusView$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -90,7 +90,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/AudioMsgStatusView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/AudioMsgStatusView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -110,7 +110,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/AudioMsgStatusView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/AudioMsgStatusView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -158,7 +158,7 @@
     invoke-virtual {v1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     .line 9
-    sget-object v1, Lcom/vk/im/ui/R2;->AudioMsgStatusView:[I
+    sget-object v1, Lcom/vk/im/ui/o;->AudioMsgStatusView:[I
 
     const/4 v2, 0x0
 
@@ -167,7 +167,7 @@
     move-result-object p1
 
     .line 10
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_color:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_color:I
 
     const/high16 p3, -0x1000000
 
@@ -178,7 +178,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setColor(I)V
 
     .line 11
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_play_icon:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_play_icon:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -187,7 +187,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setPlayIconDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 12
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_play_icon_offsetX:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_play_icon_offsetX:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -196,7 +196,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setPlayIconOffsetX(I)V
 
     .line 13
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_play_icon_offsetY:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_play_icon_offsetY:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -205,7 +205,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setPlayIconOffsetY(I)V
 
     .line 14
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_play_content_description:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_play_content_description:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -214,7 +214,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setPlayContentDescription(Ljava/lang/CharSequence;)V
 
     .line 15
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_pause_icon:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_pause_icon:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -223,7 +223,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setPauseIconDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 16
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_pause_icon_offsetX:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_pause_icon_offsetX:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -232,7 +232,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setPauseIconOffsetX(I)V
 
     .line 17
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_pause_icon_offsetY:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_pause_icon_offsetY:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -241,7 +241,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setPauseIconOffsetY(I)V
 
     .line 18
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_pause_content_description:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_pause_content_description:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -250,7 +250,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setPauseContentDescription(Ljava/lang/CharSequence;)V
 
     .line 19
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_circle_stroke_size:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_circle_stroke_size:I
 
     const/high16 p3, 0x3fc00000    # 1.5f
 
@@ -265,7 +265,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setCircleStrokeSize(I)V
 
     .line 20
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_dot_position_degree:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_dot_position_degree:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -274,7 +274,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setDotPositionDegree(I)V
 
     .line 21
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_dot_size:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_dot_size:I
 
     const/4 p3, 0x5
 
@@ -289,7 +289,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setDotSize(I)V
 
     .line 22
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_dot_clip_size:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_dot_clip_size:I
 
     const/4 p3, 0x2
 
@@ -304,7 +304,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setDotClipSize(I)V
 
     .line 23
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_is_playing:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_is_playing:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -313,7 +313,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setPlaying(Z)V
 
     .line 24
-    sget p2, Lcom/vk/im/ui/R2;->AudioMsgStatusView_amsv_is_listened:I
+    sget p2, Lcom/vk/im/ui/o;->AudioMsgStatusView_amsv_is_listened:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -327,7 +327,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -364,7 +364,7 @@
 
     const-string v1, "Resources.getSystem()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -404,7 +404,7 @@
 
     const-string v1, "Resources.getSystem()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -1237,7 +1237,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/views/AudioMsgStatusView;->h:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1403,7 +1403,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/views/AudioMsgStatusView;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1540,7 +1540,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/views/AudioMsgStatusView;->a:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1548,7 +1548,7 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/views/AudioMsgStatusView;->g:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1556,7 +1556,7 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/views/AudioMsgStatusView;->F:Lcom/vk/im/ui/views/AudioMsgStatusView$a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1564,7 +1564,7 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/views/AudioMsgStatusView;->G:Lcom/vk/im/ui/views/AudioMsgStatusView$c;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

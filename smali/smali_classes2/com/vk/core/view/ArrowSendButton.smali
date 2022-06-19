@@ -35,7 +35,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/ArrowSendButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/ArrowSendButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/ArrowSendButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/ArrowSendButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -131,7 +131,7 @@
     invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
     .line 10
-    sget v1, Lb/h/z/R4;->blue_300:I
+    sget v1, Lb/h/z/c;->blue_300:I
 
     invoke-static {p1, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 
@@ -143,7 +143,7 @@
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 12
-    sget v0, Lb/h/z/R8;->ic_send_28:I
+    sget v0, Lb/h/z/e;->ic_send_28:I
 
     invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -166,7 +166,7 @@
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 15
-    sget v0, Lb/h/z/R2;->accessibility_send:I
+    sget v0, Lb/h/z/k;->accessibility_send:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -183,7 +183,7 @@
     invoke-direct {p3, p1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;)V
 
     .line 18
-    sget v0, Lb/h/z/R8;->bg_white_circle_with_border:I
+    sget v0, Lb/h/z/e;->bg_white_circle_with_border:I
 
     invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -197,7 +197,7 @@
     invoke-virtual {p3, v0}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 20
-    sget v0, Lb/h/z/R4;->azure_350:I
+    sget v0, Lb/h/z/c;->azure_350:I
 
     invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 
@@ -257,7 +257,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2

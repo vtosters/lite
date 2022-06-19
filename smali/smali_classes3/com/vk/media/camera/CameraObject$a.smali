@@ -21,7 +21,7 @@
 
 .field private c:I
 
-.field private d:Lb/h/p/MediaUtils$c;
+.field private d:Lb/h/p/c$c;
 
 
 # direct methods
@@ -36,11 +36,11 @@
 
 
 # virtual methods
-.method public final a()Lb/h/p/MediaUtils$c;
+.method public final a()Lb/h/p/c$c;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/media/camera/CameraObject$a;->d:Lb/h/p/MediaUtils$c;
+    iget-object v0, p0, Lcom/vk/media/camera/CameraObject$a;->d:Lb/h/p/c$c;
 
     return-object v0
 .end method
@@ -54,11 +54,11 @@
     return-void
 .end method
 
-.method public final a(Lb/h/p/MediaUtils$c;)V
+.method public final a(Lb/h/p/c$c;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/media/camera/CameraObject$a;->d:Lb/h/p/MediaUtils$c;
+    iput-object p1, p0, Lcom/vk/media/camera/CameraObject$a;->d:Lb/h/p/c$c;
 
     return-void
 .end method

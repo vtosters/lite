@@ -3,7 +3,7 @@
 .source "ReplyView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic B:[Lkotlin/u/KProperty5;
+.field static final synthetic B:[Lkotlin/u/j;
 
 
 # instance fields
@@ -29,11 +29,11 @@
 
 .field private final e:Lcom/vk/im/ui/views/ReplyView$a;
 
-.field private final f:Lkotlin/Lazy2;
+.field private final f:Lkotlin/e;
 
-.field private final g:Lkotlin/Lazy2;
+.field private final g:Lkotlin/e;
 
-.field private final h:Lkotlin/Lazy2;
+.field private final h:Lkotlin/e;
 
 
 # direct methods
@@ -42,13 +42,13 @@
 
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/views/ReplyView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -56,9 +56,9 @@
 
     const-string v4, "getNameFormatter()Lcom/vk/im/ui/formatters/DisplayNameFormatter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
@@ -68,7 +68,7 @@
 
     const-class v2, Lcom/vk/im/ui/views/ReplyView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -76,9 +76,9 @@
 
     const-string v4, "getContentFormatter()Lcom/vk/im/ui/formatters/MsgShortContentFormatter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x1
 
@@ -88,7 +88,7 @@
 
     const-class v2, Lcom/vk/im/ui/views/ReplyView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -96,15 +96,15 @@
 
     const-string v4, "getBlurPostProcessor()Lcom/facebook/imagepipeline/postprocessors/IterativeBoxBlurPostProcessor;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/views/ReplyView;->B:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/ui/views/ReplyView;->B:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -125,31 +125,31 @@
     .line 3
     sget-object v0, Lcom/vk/im/ui/views/ReplyView$nameFormatter$2;->a:Lcom/vk/im/ui/views/ReplyView$nameFormatter$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/e;
 
     .line 4
     new-instance v0, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;-><init>(Lcom/vk/im/ui/views/ReplyView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/e;
 
     .line 5
     sget-object v0, Lcom/vk/im/ui/views/ReplyView$blurPostProcessor$2;->a:Lcom/vk/im/ui/views/ReplyView$blurPostProcessor$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/e;
 
     const/4 v0, 0x0
 
@@ -177,31 +177,31 @@
     .line 9
     sget-object v0, Lcom/vk/im/ui/views/ReplyView$nameFormatter$2;->a:Lcom/vk/im/ui/views/ReplyView$nameFormatter$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/e;
 
     .line 10
     new-instance v0, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;-><init>(Lcom/vk/im/ui/views/ReplyView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/e;
 
     .line 11
     sget-object v0, Lcom/vk/im/ui/views/ReplyView$blurPostProcessor$2;->a:Lcom/vk/im/ui/views/ReplyView$blurPostProcessor$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/e;
 
     const/4 v0, 0x0
 
@@ -227,31 +227,31 @@
     .line 15
     sget-object v0, Lcom/vk/im/ui/views/ReplyView$nameFormatter$2;->a:Lcom/vk/im/ui/views/ReplyView$nameFormatter$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/e;
 
     .line 16
     new-instance v0, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;-><init>(Lcom/vk/im/ui/views/ReplyView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/e;
 
     .line 17
     sget-object v0, Lcom/vk/im/ui/views/ReplyView$blurPostProcessor$2;->a:Lcom/vk/im/ui/views/ReplyView$blurPostProcessor$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/e;
 
     const/4 v0, 0x0
 
@@ -280,31 +280,31 @@
     .line 21
     sget-object v0, Lcom/vk/im/ui/views/ReplyView$nameFormatter$2;->a:Lcom/vk/im/ui/views/ReplyView$nameFormatter$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/e;
 
     .line 22
     new-instance v0, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;-><init>(Lcom/vk/im/ui/views/ReplyView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/e;
 
     .line 23
     sget-object v0, Lcom/vk/im/ui/views/ReplyView$blurPostProcessor$2;->a:Lcom/vk/im/ui/views/ReplyView$blurPostProcessor$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/e;
 
     .line 24
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/ui/views/ReplyView;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -323,11 +323,11 @@
     return p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/attaches/WithPreview;)Lcom/facebook/imagepipeline/request/Postprocessor;
+.method private final a(Lcom/vk/im/engine/models/attaches/g;)Lcom/facebook/imagepipeline/request/c;
     .locals 2
 
     .line 31
-    instance-of v0, p1, Lcom/vk/im/engine/models/attaches/WithHiddenPreview;
+    instance-of v0, p1, Lcom/vk/im/engine/models/attaches/e;
 
     const/4 v1, 0x0
 
@@ -337,9 +337,9 @@
 
     .line 32
     :cond_0
-    check-cast p1, Lcom/vk/im/engine/models/attaches/WithHiddenPreview;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/e;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/attaches/WithHiddenPreview;->a()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/models/attaches/e;->a()Z
 
     move-result p1
 
@@ -349,7 +349,7 @@
 
     .line 33
     :cond_1
-    invoke-direct {p0}, Lcom/vk/im/ui/views/ReplyView;->getBlurPostProcessor()Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
+    invoke-direct {p0}, Lcom/vk/im/ui/views/ReplyView;->getBlurPostProcessor()Lcom/facebook/x/i/a;
 
     move-result-object v1
 
@@ -365,14 +365,14 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/R13;->vkim_reply_view:I
+    sget v1, Lcom/vk/im/ui/j;->vkim_reply_view:I
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 2
-    sget v0, Lcom/vk/im/ui/R11;->line:I
+    sget v0, Lcom/vk/im/ui/h;->line:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -380,14 +380,14 @@
 
     const-string v1, "findViewById(R.id.line)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
     iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->a:Landroid/widget/ImageView;
 
     .line 3
-    sget v0, Lcom/vk/im/ui/R11;->icon:I
+    sget v0, Lcom/vk/im/ui/h;->icon:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -395,14 +395,14 @@
 
     const-string v1, "findViewById(R.id.icon)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/im/ui/views/FrescoImageView;
 
     iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->b:Lcom/vk/im/ui/views/FrescoImageView;
 
     .line 4
-    sget v0, Lcom/vk/im/ui/R11;->title:I
+    sget v0, Lcom/vk/im/ui/h;->title:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -410,14 +410,14 @@
 
     const-string v1, "findViewById(R.id.title)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/im/ui/views/FixTextView;
 
     iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->c:Lcom/vk/im/ui/views/FixTextView;
 
     .line 5
-    sget v0, Lcom/vk/im/ui/R11;->subtitle:I
+    sget v0, Lcom/vk/im/ui/h;->subtitle:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -425,14 +425,14 @@
 
     const-string v1, "findViewById(R.id.subtitle)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/im/ui/views/FixTextView;
 
     iput-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->d:Lcom/vk/im/ui/views/FixTextView;
 
     .line 6
-    sget-object v0, Lcom/vk/im/ui/R2;->ReplyView:[I
+    sget-object v0, Lcom/vk/im/ui/o;->ReplyView:[I
 
     .line 7
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -442,7 +442,7 @@
     const-string p2, "ta"
 
     .line 8
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/views/ReplyView;->setupAttrsStyle(Landroid/content/res/TypedArray;)V
 
@@ -463,7 +463,7 @@
     :cond_0
     const-string p1, "lineView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -562,11 +562,11 @@
     .locals 1
 
     .line 27
-    invoke-direct {p0}, Lcom/vk/im/ui/views/ReplyView;->getNameFormatter()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
+    invoke-direct {p0}, Lcom/vk/im/ui/views/ReplyView;->getNameFormatter()Lcom/vk/im/ui/formatters/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -575,7 +575,7 @@
 
     move-result-object p2
 
-    sget v0, Lcom/vk/im/ui/R4;->vkim_msg_content_expired:I
+    sget v0, Lcom/vk/im/ui/m;->vkim_msg_content_expired:I
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -583,7 +583,7 @@
 
     const-string v0, "context.getString(R.stri\u2026vkim_msg_content_expired)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 29
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/ReplyView;->setTitleText(Ljava/lang/CharSequence;)V
@@ -598,24 +598,24 @@
     .locals 4
 
     .line 15
-    invoke-direct {p0}, Lcom/vk/im/ui/views/ReplyView;->getNameFormatter()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
+    invoke-direct {p0}, Lcom/vk/im/ui/views/ReplyView;->getNameFormatter()Lcom/vk/im/ui/formatters/d;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/messages/WithFrom;->getFrom()Lcom/vk/im/engine/models/Member;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/messages/g;->getFrom()Lcom/vk/im/engine/models/Member;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-virtual {v0, v1, p2}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object p2
 
     .line 16
-    invoke-direct {p0}, Lcom/vk/im/ui/views/ReplyView;->getContentFormatter()Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
+    invoke-direct {p0}, Lcom/vk/im/ui/views/ReplyView;->getContentFormatter()Lcom/vk/im/ui/formatters/q;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/formatters/MsgShortContentFormatter;->a(Lcom/vk/im/engine/models/messages/WithUserContent;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/formatters/q;->a(Lcom/vk/im/engine/models/messages/WithUserContent;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -647,7 +647,7 @@
     check-cast v3, Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 19
-    instance-of v3, v3, Lcom/vk/im/engine/models/attaches/WithPreview;
+    instance-of v3, v3, Lcom/vk/im/engine/models/attaches/g;
 
     if-eqz v3, :cond_0
 
@@ -658,17 +658,17 @@
 
     .line 20
     :goto_0
-    instance-of p1, v1, Lcom/vk/im/engine/models/attaches/WithPreview;
+    instance-of p1, v1, Lcom/vk/im/engine/models/attaches/g;
 
     if-nez p1, :cond_2
 
     move-object v1, v2
 
     :cond_2
-    check-cast v1, Lcom/vk/im/engine/models/attaches/WithPreview;
+    check-cast v1, Lcom/vk/im/engine/models/attaches/g;
 
     .line 21
-    invoke-direct {p0, v1}, Lcom/vk/im/ui/views/ReplyView;->a(Lcom/vk/im/engine/models/attaches/WithPreview;)Lcom/facebook/imagepipeline/request/Postprocessor;
+    invoke-direct {p0, v1}, Lcom/vk/im/ui/views/ReplyView;->a(Lcom/vk/im/engine/models/attaches/g;)Lcom/facebook/imagepipeline/request/c;
 
     move-result-object p1
 
@@ -681,7 +681,7 @@
     if-eqz v1, :cond_3
 
     .line 24
-    invoke-interface {v1}, Lcom/vk/im/engine/models/attaches/WithPreview;->f()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {v1}, Lcom/vk/im/engine/models/attaches/g;->f()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object p2
 
@@ -696,7 +696,7 @@
     if-eqz v1, :cond_4
 
     .line 25
-    invoke-interface {v1}, Lcom/vk/im/engine/models/attaches/WithPreview;->g()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {v1}, Lcom/vk/im/engine/models/attaches/g;->g()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v2
 
@@ -704,7 +704,7 @@
     invoke-virtual {p0, v2}, Lcom/vk/im/ui/views/ReplyView;->setIconRemoteImage(Lcom/vk/im/engine/models/ImageList;)V
 
     .line 26
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/ReplyView;->setIconPostProcessor(Lcom/facebook/imagepipeline/request/Postprocessor;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/ReplyView;->setIconPostProcessor(Lcom/facebook/imagepipeline/request/c;)V
 
     return-void
 .end method
@@ -851,69 +851,69 @@
     :cond_1
     const-string v0, "iconView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method private final getBlurPostProcessor()Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
+.method private final getBlurPostProcessor()Lcom/facebook/x/i/a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->h:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/views/ReplyView;->B:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/views/ReplyView;->B:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
+    check-cast v0, Lcom/facebook/x/i/a;
 
     return-object v0
 .end method
 
-.method private final getContentFormatter()Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
+.method private final getContentFormatter()Lcom/vk/im/ui/formatters/q;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->g:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/views/ReplyView;->B:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/views/ReplyView;->B:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
+    check-cast v0, Lcom/vk/im/ui/formatters/q;
 
     return-object v0
 .end method
 
-.method private final getNameFormatter()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
+.method private final getNameFormatter()Lcom/vk/im/ui/formatters/d;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/views/ReplyView;->f:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/views/ReplyView;->B:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/views/ReplyView;->B:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
+    check-cast v0, Lcom/vk/im/ui/formatters/d;
 
     return-object v0
 .end method
@@ -922,7 +922,7 @@
     .locals 3
 
     .line 1
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_lineColor:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_lineColor:I
 
     const/high16 v1, -0x1000000
 
@@ -933,7 +933,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/ReplyView;->setLineColor(I)V
 
     .line 2
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_lineSize:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_lineSize:I
 
     const/4 v1, 0x2
 
@@ -948,7 +948,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/ReplyView;->setLineSize(I)V
 
     .line 3
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_lineCornerRadius:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_lineCornerRadius:I
 
     invoke-direct {p0, v1}, Lcom/vk/im/ui/views/ReplyView;->a(I)I
 
@@ -961,7 +961,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/ReplyView;->setLineCornerRadius(I)V
 
     .line 4
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_iconWidth:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_iconWidth:I
 
     const/16 v1, 0x24
 
@@ -976,7 +976,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/ReplyView;->setIconWidth(I)V
 
     .line 5
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_iconHeight:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_iconHeight:I
 
     invoke-direct {p0, v1}, Lcom/vk/im/ui/views/ReplyView;->a(I)I
 
@@ -989,7 +989,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/ReplyView;->setIconHeight(I)V
 
     .line 6
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_iconCornerRadius:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_iconCornerRadius:I
 
     const/4 v1, 0x4
 
@@ -1012,7 +1012,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/ReplyView;->setIconRemoteImage(Lcom/vk/im/engine/models/ImageList;)V
 
     .line 9
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_titleText:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_titleText:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -1021,7 +1021,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/ReplyView;->setTitleText(Ljava/lang/CharSequence;)V
 
     .line 10
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_titleTextAppearance:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_titleTextAppearance:I
 
     const/4 v1, 0x0
 
@@ -1032,7 +1032,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/ReplyView;->setTitleTextAppearance(I)V
 
     .line 11
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_subtitleText:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_subtitleText:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -1041,7 +1041,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/ReplyView;->setSubtitleText(Ljava/lang/CharSequence;)V
 
     .line 12
-    sget v0, Lcom/vk/im/ui/R2;->ReplyView_vkim_subtitleTextAppearance:I
+    sget v0, Lcom/vk/im/ui/o;->ReplyView_vkim_subtitleTextAppearance:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -1060,7 +1060,7 @@
     if-eqz p3, :cond_0
 
     .line 13
-    invoke-interface {p1}, Lcom/vk/im/engine/models/messages/WithFrom;->getFrom()Lcom/vk/im/engine/models/Member;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/messages/g;->getFrom()Lcom/vk/im/engine/models/Member;
 
     move-result-object p1
 
@@ -1093,7 +1093,7 @@
     :cond_0
     const-string v0, "iconView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1121,7 +1121,7 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1161,7 +1161,7 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1185,14 +1185,14 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public final setIconPostProcessor(Lcom/facebook/imagepipeline/request/Postprocessor;)V
+.method public final setIconPostProcessor(Lcom/facebook/imagepipeline/request/c;)V
     .locals 1
 
     .line 1
@@ -1200,14 +1200,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/FrescoImageView;->setPostProcessor(Lcom/facebook/imagepipeline/request/Postprocessor;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/FrescoImageView;->setPostProcessor(Lcom/facebook/imagepipeline/request/c;)V
 
     return-void
 
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1231,7 +1231,7 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1273,7 +1273,7 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1337,7 +1337,7 @@
     :cond_0
     const-string p1, "lineView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1363,7 +1363,7 @@
     :cond_0
     const-string p1, "subtitleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1385,7 +1385,7 @@
     :cond_0
     const-string p1, "subtitleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1411,7 +1411,7 @@
     :cond_0
     const-string p1, "subtitleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1437,7 +1437,7 @@
     :cond_0
     const-string p1, "subtitleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1463,7 +1463,7 @@
     :cond_0
     const-string p1, "titleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1485,7 +1485,7 @@
     :cond_0
     const-string p1, "titleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1511,7 +1511,7 @@
     :cond_0
     const-string p1, "titleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1537,7 +1537,7 @@
     :cond_0
     const-string p1, "titleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1554,9 +1554,9 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v2, Lcom/vk/im/ui/R5;->im_reply_separator:I
+    sget v2, Lcom/vk/im/ui/c;->im_reply_separator:I
 
     invoke-static {v0, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -1575,9 +1575,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v4, Lcom/vk/im/ui/R5;->im_text_name:I
+    sget v4, Lcom/vk/im/ui/c;->im_text_name:I
 
     invoke-static {v3, v4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -1594,9 +1594,9 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v1, Lcom/vk/im/ui/R5;->text_primary:I
+    sget v1, Lcom/vk/im/ui/c;->text_primary:I
 
     invoke-static {v2, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -1609,7 +1609,7 @@
     :cond_0
     const-string v0, "subtitleView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1617,7 +1617,7 @@
     const-string v0, "titleView"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method

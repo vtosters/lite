@@ -3,7 +3,7 @@
 .source "MediaStorage.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/mediastore/a/SmallFileCache;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/mediastore/a/b;",
         ">;"
     }
 .end annotation
@@ -55,23 +55,23 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/mediastore/a/SmallFileCache;
+.method public final invoke()Lcom/vk/mediastore/a/b;
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vk/mediastore/a/SmallFileCache;
+    new-instance v0, Lcom/vk/mediastore/a/b;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->r()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/d;->r()Ljava/io/File;
 
     move-result-object v1
 
     const-string v2, "FileUtils.getSmallCacheDir()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/32 v2, 0xa00000
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/mediastore/a/SmallFileCache;-><init>(Ljava/io/File;J)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/mediastore/a/b;-><init>(Ljava/io/File;J)V
 
     return-object v0
 .end method
@@ -80,7 +80,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/mediastore/MediaStorage$smallFileCache$2;->invoke()Lcom/vk/mediastore/a/SmallFileCache;
+    invoke-virtual {p0}, Lcom/vk/mediastore/MediaStorage$smallFileCache$2;->invoke()Lcom/vk/mediastore/a/b;
 
     move-result-object v0
 

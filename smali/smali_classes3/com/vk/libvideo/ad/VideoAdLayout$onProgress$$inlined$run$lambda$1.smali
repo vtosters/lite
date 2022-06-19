@@ -3,12 +3,12 @@
 .source "VideoAdLayout.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/ad/VideoAdLayout;->a(FFZLjava/lang/Integer;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/libvideo/ad/VideoAdLayout;->a(FFZLjava/lang/Integer;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $onAdSkip$inlined:Lkotlin/jvm/b/Functions;
+.field final synthetic $onAdSkip$inlined:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lkotlin/jvm/b/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/libvideo/ad/VideoAdLayout$onProgress$$inlined$run$lambda$1;->$onAdSkip$inlined:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/libvideo/ad/VideoAdLayout$onProgress$$inlined$run$lambda$1;->$onAdSkip$inlined:Lkotlin/jvm/b/a;
 
     const/4 p1, 0x1
 
@@ -50,9 +50,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/libvideo/ad/VideoAdLayout$onProgress$$inlined$run$lambda$1;->$onAdSkip$inlined:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/libvideo/ad/VideoAdLayout$onProgress$$inlined$run$lambda$1;->$onAdSkip$inlined:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
@@ -65,7 +65,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/libvideo/ad/VideoAdLayout$onProgress$$inlined$run$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

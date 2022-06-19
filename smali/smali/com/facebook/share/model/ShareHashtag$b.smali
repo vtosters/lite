@@ -3,7 +3,7 @@
 .source "ShareHashtag.java"
 
 # interfaces
-.implements Lcom/facebook/share/model/ShareModelBuilder;
+.implements Lcom/facebook/share/model/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/facebook/share/model/ShareModelBuilder<",
+        "Lcom/facebook/share/model/a<",
         "Lcom/facebook/share/model/ShareHashtag;",
         "Lcom/facebook/share/model/ShareHashtag$b;",
         ">;"

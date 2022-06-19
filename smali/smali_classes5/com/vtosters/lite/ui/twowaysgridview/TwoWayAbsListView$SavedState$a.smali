@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/twowaysgridview/TwoWayAbsListView$SavedState;-><init>(Landroid/os/Parcel;Lcom/vtosters/lite/ui/twowaysgridview/TwoWayAbsListView;)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/twowaysgridview/TwoWayAbsListView$SavedState;-><init>(Landroid/os/Parcel;Lcom/vtosters/lite/ui/twowaysgridview/a;)V
 
     return-object v0
 .end method

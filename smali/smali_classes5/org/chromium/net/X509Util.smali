@@ -1397,7 +1397,7 @@
 
     .line 28
     :goto_3
-    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
 
     move-result-object v1
 

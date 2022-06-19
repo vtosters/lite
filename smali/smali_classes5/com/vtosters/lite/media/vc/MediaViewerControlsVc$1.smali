@@ -3,7 +3,7 @@
 .source "MediaViewerControlsVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$1;->this$0:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-    invoke-static {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->c(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)Lkotlin/Unit;
+    invoke-static {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->c(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)Lkotlin/m;
 
     return-void
 .end method
@@ -65,7 +65,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

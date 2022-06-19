@@ -1,5 +1,5 @@
 .class public final Lcom/vk/catalog2/core/api/dto/CatalogBadge$a;
-.super Lcom/vk/dto/common/data/JsonParser;
+.super Lcom/vk/dto/common/data/c;
 .source "JsonParser.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/JsonParser<",
+        "Lcom/vk/dto/common/data/c<",
         "Lcom/vk/catalog2/core/api/dto/CatalogBadge;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     const-string v2, "it.optString(ServerKeys.TEXT)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "type"
 
@@ -68,7 +68,7 @@
 
     const-string v2, "it.optString(ServerKeys.TYPE)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/api/dto/CatalogBadge;-><init>(Ljava/lang/String;Ljava/lang/String;)V

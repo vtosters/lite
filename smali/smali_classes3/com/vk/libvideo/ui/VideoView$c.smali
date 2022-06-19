@@ -3,7 +3,7 @@
 .source "VideoView.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/libvideo/y/VideoEvents12;",
+        "Lc/a/z/g<",
+        "Lcom/vk/libvideo/y/j;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/libvideo/y/VideoEvents12;)V
+.method public final a(Lcom/vk/libvideo/y/j;)V
     .locals 8
 
     .line 1
@@ -65,11 +65,11 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
+    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/VideoBridge1;->a(Lcom/vk/dto/common/VideoFile;)Z
+    invoke-interface {v0, p1}, Lcom/vk/bridges/k0;->a(Lcom/vk/dto/common/VideoFile;)Z
 
     move-result v0
 
@@ -79,13 +79,13 @@
 
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoView$c;->a:Lcom/vk/libvideo/ui/VideoView;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->y()Z
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->y()Z
 
     move-result v0
 
@@ -142,9 +142,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/y/VideoEvents12;
+    check-cast p1, Lcom/vk/libvideo/y/j;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/ui/VideoView$c;->a(Lcom/vk/libvideo/y/VideoEvents12;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/ui/VideoView$c;->a(Lcom/vk/libvideo/y/j;)V
 
     return-void
 .end method

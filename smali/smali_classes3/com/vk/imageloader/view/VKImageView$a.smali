@@ -1,11 +1,11 @@
 .class Lcom/vk/imageloader/view/VKImageView$a;
-.super Lcom/facebook/drawee/controller/BaseControllerListener;
+.super Lcom/facebook/drawee/controller/b;
 .source "VKImageView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/view/VKImageView;->setControllerListener(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;)V
+    value = Lcom/vk/imageloader/view/VKImageView;->setControllerListener(Lcom/facebook/u/b/a/e;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/facebook/drawee/controller/BaseControllerListener<",
-        "Lcom/facebook/x/g/ImageInfo;",
+        "Lcom/facebook/drawee/controller/b<",
+        "Lcom/facebook/x/g/f;",
         ">;"
     }
 .end annotation
@@ -33,20 +33,20 @@
     .line 1
     iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView$a;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-direct {p0}, Lcom/facebook/drawee/controller/BaseControllerListener;-><init>()V
+    invoke-direct {p0}, Lcom/facebook/drawee/controller/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;Lcom/facebook/x/g/ImageInfo;Landroid/graphics/drawable/Animatable;)V
+.method public a(Ljava/lang/String;Lcom/facebook/x/g/f;Landroid/graphics/drawable/Animatable;)V
     .locals 0
 
     .line 2
     iget-object p1, p0, Lcom/vk/imageloader/view/VKImageView$a;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-interface {p2}, Lcom/facebook/x/g/ImageInfo;->getWidth()I
+    invoke-interface {p2}, Lcom/facebook/x/g/f;->getWidth()I
 
     move-result p3
 
@@ -55,7 +55,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/imageloader/view/VKImageView$a;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-interface {p2}, Lcom/facebook/x/g/ImageInfo;->getHeight()I
+    invoke-interface {p2}, Lcom/facebook/x/g/f;->getHeight()I
 
     move-result p2
 
@@ -64,7 +64,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/imageloader/view/VKImageView$a;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {p1}, Lcom/vk/imageloader/view/VKImageView;->c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/OnLoadCallback;
+    invoke-static {p1}, Lcom/vk/imageloader/view/VKImageView;->c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/g;
 
     move-result-object p1
 
@@ -73,7 +73,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/imageloader/view/VKImageView$a;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {p1}, Lcom/vk/imageloader/view/VKImageView;->c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/OnLoadCallback;
+    invoke-static {p1}, Lcom/vk/imageloader/view/VKImageView;->c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/g;
 
     move-result-object p1
 
@@ -89,7 +89,7 @@
 
     move-result p3
 
-    invoke-interface {p1, p2, p3}, Lcom/vk/imageloader/OnLoadCallback;->a(II)V
+    invoke-interface {p1, p2, p3}, Lcom/vk/imageloader/g;->a(II)V
 
     :cond_0
     return-void
@@ -99,9 +99,9 @@
     .locals 0
 
     .line 1
-    check-cast p2, Lcom/facebook/x/g/ImageInfo;
+    check-cast p2, Lcom/facebook/x/g/f;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/imageloader/view/VKImageView$a;->a(Ljava/lang/String;Lcom/facebook/x/g/ImageInfo;Landroid/graphics/drawable/Animatable;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/imageloader/view/VKImageView$a;->a(Ljava/lang/String;Lcom/facebook/x/g/f;Landroid/graphics/drawable/Animatable;)V
 
     return-void
 .end method
@@ -124,7 +124,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/imageloader/view/VKImageView$a;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {p1}, Lcom/vk/imageloader/view/VKImageView;->c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/OnLoadCallback;
+    invoke-static {p1}, Lcom/vk/imageloader/view/VKImageView;->c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/g;
 
     move-result-object p1
 
@@ -133,11 +133,11 @@
     .line 9
     iget-object p1, p0, Lcom/vk/imageloader/view/VKImageView$a;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {p1}, Lcom/vk/imageloader/view/VKImageView;->c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/OnLoadCallback;
+    invoke-static {p1}, Lcom/vk/imageloader/view/VKImageView;->c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/g;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/imageloader/OnLoadCallback;->b()V
+    invoke-interface {p1}, Lcom/vk/imageloader/g;->b()V
 
     .line 10
     :cond_0
@@ -167,7 +167,7 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/imageloader/view/VKImageView$a;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {p1}, Lcom/vk/imageloader/ImageNetworkFailHandler;->b(Lcom/vk/imageloader/view/VKImageView;)V
+    invoke-static {p1}, Lcom/vk/imageloader/e;->b(Lcom/vk/imageloader/view/VKImageView;)V
 
     :goto_0
     return-void

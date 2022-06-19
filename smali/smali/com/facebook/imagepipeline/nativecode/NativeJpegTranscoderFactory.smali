@@ -3,11 +3,11 @@
 .source "NativeJpegTranscoderFactory.java"
 
 # interfaces
-.implements Lcom/facebook/x/k/ImageTranscoderFactory;
+.implements Lcom/facebook/x/k/d;
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/DoNotStrip;
+.annotation build Lcom/facebook/common/internal/d;
 .end annotation
 
 
@@ -20,7 +20,7 @@
 # direct methods
 .method public constructor <init>(IZ)V
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -37,13 +37,13 @@
 
 
 # virtual methods
-.method public createImageTranscoder(Lcom/facebook/w/ImageFormat;Z)Lcom/facebook/x/k/ImageTranscoder;
+.method public createImageTranscoder(Lcom/facebook/w/c;Z)Lcom/facebook/x/k/c;
     .locals 2
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/facebook/w/DefaultImageFormats;->a:Lcom/facebook/w/ImageFormat;
+    sget-object v0, Lcom/facebook/w/b;->a:Lcom/facebook/w/c;
 
     if-eq p1, v0, :cond_0
 

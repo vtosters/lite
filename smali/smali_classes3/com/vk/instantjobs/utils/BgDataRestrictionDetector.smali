@@ -30,12 +30,12 @@
 
 .field private final d:Landroid/content/Context;
 
-.field private final e:Lkotlin/jvm/b/Functions2;
+.field private final e:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/Boolean;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -43,16 +43,16 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -62,7 +62,7 @@
 
     iput-object p1, p0, Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;->d:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;->e:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;->e:Lkotlin/jvm/b/b;
 
     .line 2
     iget-object p1, p0, Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;->d:Landroid/content/Context;
@@ -141,13 +141,13 @@
     iput-boolean p1, p0, Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;->b:Z
 
     .line 6
-    iget-object v0, p0, Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;->e:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;->e:Lkotlin/jvm/b/b;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

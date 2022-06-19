@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILcom/vtosters/lite/upload/UploadNotification$State;IILandroid/os/Parcelable;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ILcom/vtosters/lite/upload/UploadNotification$State;IILandroid/os/Parcelable;Ljava/lang/Throwable;ILkotlin/jvm/internal/i;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x2
@@ -261,7 +261,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/upload/UploadNotification$b;->b:Lcom/vtosters/lite/upload/UploadNotification$State;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -283,7 +283,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/upload/UploadNotification$b;->e:Landroid/os/Parcelable;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -293,7 +293,7 @@
 
     iget-object p1, p1, Lcom/vtosters/lite/upload/UploadNotification$b;->f:Ljava/lang/Throwable;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

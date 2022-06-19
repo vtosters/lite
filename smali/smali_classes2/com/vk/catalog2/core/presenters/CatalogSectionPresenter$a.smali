@@ -3,7 +3,7 @@
 .source "CatalogSectionPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
+.implements Lcom/vk/catalog2/core/holders/common/i;
 
 
 # annotations

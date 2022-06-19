@@ -31,13 +31,13 @@
 
 .field private C:Ljava/lang/CharSequence;
 
-.field private D:Lkotlin/jvm/b/Functions2;
+.field private D:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -47,19 +47,19 @@
 
 .field private F:Ljava/lang/CharSequence;
 
-.field private G:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.field private G:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
 .field private H:Ljava/lang/CharSequence;
 
-.field private I:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.field private I:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
-.field private J:Lkotlin/jvm/b/Functions2;
+.field private J:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -138,7 +138,7 @@
 
 .field private h:Z
 
-.field private h0:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
+.field private h0:Lcom/vk/core/dialogs/bottomsheet/b;
 
 .field private final i0:Landroid/os/Handler;
 
@@ -171,7 +171,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->x0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog$a;
 
@@ -267,13 +267,13 @@
     iput p2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->Q:I
 
     .line 14
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy4;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/j;
 
     const/high16 v1, 0x3f000000    # 0.5f
 
-    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy4;-><init>(F)V
+    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/j;-><init>(F)V
 
-    iput-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->h0:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
+    iput-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->h0:Lcom/vk/core/dialogs/bottomsheet/b;
 
     .line 15
     new-instance v0, Landroid/os/Handler;
@@ -351,7 +351,7 @@
 
     move-result-object v3
 
-    sget v4, Lb/h/z/R10;->modal_dialog_bottom_sheet:I
+    sget v4, Lb/h/z/h;->modal_dialog_bottom_sheet:I
 
     const/4 v5, 0x0
 
@@ -372,7 +372,7 @@
 
     if-eqz v3, :cond_72
 
-    sget v6, Lb/h/z/R;->design_bottom_sheet:I
+    sget v6, Lb/h/z/g;->design_bottom_sheet:I
 
     invoke-virtual {v3, v6}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -380,7 +380,7 @@
 
     const-string v6, "coordinator.findViewById(R.id.design_bottom_sheet)"
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/view/ViewGroup;
 
@@ -393,7 +393,7 @@
 
     if-eqz v3, :cond_71
 
-    sget v7, Lb/h/z/R;->ivClose:I
+    sget v7, Lb/h/z/g;->ivClose:I
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -401,7 +401,7 @@
 
     const-string v7, "bottomSheet.findViewById(R.id.ivClose)"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/widget/ImageView;
 
@@ -412,7 +412,7 @@
 
     if-eqz v3, :cond_70
 
-    sget v7, Lb/h/z/R;->llTitleContainer:I
+    sget v7, Lb/h/z/g;->llTitleContainer:I
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -420,7 +420,7 @@
 
     const-string v7, "bottomSheet.findViewById(R.id.llTitleContainer)"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/view/ViewGroup;
 
@@ -431,7 +431,7 @@
 
     if-eqz v3, :cond_6f
 
-    sget v7, Lb/h/z/R;->tvTitle:I
+    sget v7, Lb/h/z/g;->tvTitle:I
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -439,7 +439,7 @@
 
     const-string v7, "bottomSheet.findViewById(R.id.tvTitle)"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/widget/TextView;
 
@@ -450,7 +450,7 @@
 
     if-eqz v3, :cond_6e
 
-    sget v7, Lb/h/z/R;->tvSubtitle:I
+    sget v7, Lb/h/z/g;->tvSubtitle:I
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -458,7 +458,7 @@
 
     const-string v7, "bottomSheet.findViewById(R.id.tvSubtitle)"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/widget/TextView;
 
@@ -469,7 +469,7 @@
 
     if-eqz v3, :cond_6d
 
-    sget v7, Lb/h/z/R;->ivEndIcon:I
+    sget v7, Lb/h/z/g;->ivEndIcon:I
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -477,7 +477,7 @@
 
     const-string v7, "bottomSheet.findViewById(R.id.ivEndIcon)"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/widget/ImageView;
 
@@ -488,7 +488,7 @@
 
     if-eqz v3, :cond_6c
 
-    sget v7, Lb/h/z/R;->header_shadow:I
+    sget v7, Lb/h/z/g;->header_shadow:I
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -496,7 +496,7 @@
 
     const-string v7, "bottomSheet.findViewById(R.id.header_shadow)"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v3, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->X:Landroid/view/View;
 
@@ -505,7 +505,7 @@
 
     if-eqz v3, :cond_6b
 
-    sget v7, Lb/h/z/R;->toolbar:I
+    sget v7, Lb/h/z/g;->toolbar:I
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -513,7 +513,7 @@
 
     const-string v7, "bottomSheet.findViewById(R.id.toolbar)"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/view/ViewGroup;
 
@@ -524,7 +524,7 @@
 
     if-eqz v3, :cond_6a
 
-    sget v7, Lb/h/z/R;->bottom_sheet_content_holder:I
+    sget v7, Lb/h/z/g;->bottom_sheet_content_holder:I
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -532,7 +532,7 @@
 
     const-string v7, "bottomSheet.findViewById\u2026tom_sheet_content_holder)"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/view/ViewGroup;
 
@@ -543,7 +543,7 @@
 
     if-eqz v3, :cond_69
 
-    sget v7, Lb/h/z/R;->tvEndTitle:I
+    sget v7, Lb/h/z/g;->tvEndTitle:I
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -551,7 +551,7 @@
 
     const-string v7, "bottomSheet.findViewById(R.id.tvEndTitle)"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/widget/TextView;
 
@@ -576,7 +576,7 @@
     if-eq v8, v11, :cond_0
 
     .line 27
-    invoke-static {}, Lcom/vk/core/drawable/VkUiDrawableHelper$a;->d()Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lcom/vk/core/drawable/l$a;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v8
 
@@ -594,7 +594,7 @@
     invoke-virtual {v8, v12, v13}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     .line 29
-    sget-object v12, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v12, Lkotlin/m;->a:Lkotlin/m;
 
     goto :goto_1
 
@@ -631,12 +631,12 @@
     iput v12, v8, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     .line 35
-    sget-object v8, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v8, Lkotlin/m;->a:Lkotlin/m;
 
     .line 36
     iget v8, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->O:I
 
-    invoke-static {v8}, Lcom/vk/core/util/ColorUtils;->b(I)Z
+    invoke-static {v8}, Lcom/vk/core/util/p;->b(I)Z
 
     move-result v8
 
@@ -665,7 +665,7 @@
     invoke-virtual {v12, v8}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 39
-    invoke-static {}, Lcom/vk/core/drawable/VkUiDrawableHelper$a;->d()Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lcom/vk/core/drawable/l$a;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v8
 
@@ -679,7 +679,7 @@
     invoke-virtual {v8, v12, v13}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     .line 41
-    sget-object v12, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v12, Lkotlin/m;->a:Lkotlin/m;
 
     goto :goto_1
 
@@ -690,13 +690,13 @@
 
     .line 42
     :cond_3
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 43
     :cond_4
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -711,13 +711,13 @@
     throw v1
 
     :cond_6
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 45
     :cond_7
-    invoke-static {}, Lcom/vk/core/drawable/VkUiDrawableHelper$a;->d()Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lcom/vk/core/drawable/l$a;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v8
 
@@ -766,7 +766,7 @@
 
     if-eqz v3, :cond_a
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v16
 
@@ -789,13 +789,13 @@
     goto :goto_4
 
     :cond_a
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 50
     :cond_b
-    invoke-static {v13}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v13}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -867,7 +867,7 @@
 
     invoke-direct {v13, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog$wrapInBottomSheet$4;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)V
 
-    invoke-static {v3, v13}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v3, v13}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 59
     iget-object v3, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->W:Landroid/widget/ImageView;
@@ -879,19 +879,19 @@
     goto :goto_5
 
     :cond_d
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 60
     :cond_e
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 61
     :cond_f
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -927,7 +927,7 @@
 
     invoke-direct {v13, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog$wrapInBottomSheet$5;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)V
 
-    invoke-static {v3, v13}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v3, v13}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 66
     iget-object v3, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->V:Landroid/widget/TextView;
@@ -939,19 +939,19 @@
     goto :goto_6
 
     :cond_11
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 67
     :cond_12
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 68
     :cond_13
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -980,7 +980,7 @@
 
     if-eqz v3, :cond_5f
 
-    sget v9, Lb/h/z/R;->buttons_container:I
+    sget v9, Lb/h/z/g;->buttons_container:I
 
     invoke-virtual {v3, v9}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -995,7 +995,7 @@
 
     if-eqz v3, :cond_5e
 
-    sget v9, Lb/h/z/R;->button_space:I
+    sget v9, Lb/h/z/g;->button_space:I
 
     invoke-virtual {v3, v9}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1006,7 +1006,7 @@
 
     if-eqz v9, :cond_5d
 
-    sget v10, Lb/h/z/R;->positive_button:I
+    sget v10, Lb/h/z/g;->positive_button:I
 
     invoke-virtual {v9, v10}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1014,7 +1014,7 @@
 
     const-string v10, "buttonsContainer!!.findV\u2026on>(R.id.positive_button)"
 
-    invoke-static {v9, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v9, Landroid/widget/TextView;
 
@@ -1035,7 +1035,7 @@
 
     if-eqz v9, :cond_17
 
-    iget-object v9, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->G:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v9, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->G:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     if-eqz v9, :cond_17
 
@@ -1057,7 +1057,7 @@
     invoke-virtual {v9, v15}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 78
-    sget-object v9, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v9, Lkotlin/m;->a:Lkotlin/m;
 
     .line 79
     iget-object v9, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->e0:Landroid/view/ViewGroup;
@@ -1069,13 +1069,13 @@
     goto :goto_7
 
     :cond_15
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v5
 
     .line 80
     :cond_16
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1104,7 +1104,7 @@
 
     if-eqz v9, :cond_59
 
-    sget v15, Lb/h/z/R;->negative_button:I
+    sget v15, Lb/h/z/g;->negative_button:I
 
     invoke-virtual {v9, v15}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1112,7 +1112,7 @@
 
     const-string v15, "buttonsContainer!!.findV\u2026on>(R.id.negative_button)"
 
-    invoke-static {v9, v15}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v15}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v9, Landroid/widget/TextView;
 
@@ -1131,7 +1131,7 @@
 
     if-eqz v9, :cond_1a
 
-    iget-object v9, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->I:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v9, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->I:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     if-eqz v9, :cond_1a
 
@@ -1153,7 +1153,7 @@
     invoke-virtual {v9, v14}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 88
-    sget-object v9, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v9, Lkotlin/m;->a:Lkotlin/m;
 
     .line 89
     iget-object v9, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->e0:Landroid/view/ViewGroup;
@@ -1165,13 +1165,13 @@
     goto :goto_8
 
     :cond_18
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v5
 
     .line 90
     :cond_19
-    invoke-static {v15}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v15}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1205,7 +1205,7 @@
     const-string v9, "buttonSpace"
 
     .line 94
-    invoke-static {v3, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -1219,7 +1219,7 @@
     goto :goto_9
 
     :cond_1b
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1252,7 +1252,7 @@
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
 
     .line 98
     :cond_1d
@@ -1262,7 +1262,7 @@
 
     invoke-static {v3}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
-    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
 
     .line 99
     :cond_1e
@@ -1281,13 +1281,13 @@
 
     .line 101
     :cond_1f
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 102
     :cond_20
-    invoke-static {v15}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v15}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1330,13 +1330,13 @@
 
     .line 106
     :cond_22
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 107
     :cond_23
-    invoke-static {v15}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v15}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1347,7 +1347,7 @@
 
     if-eqz v3, :cond_53
 
-    sget v9, Lb/h/z/R;->custom_bottom_container:I
+    sget v9, Lb/h/z/g;->custom_bottom_container:I
 
     invoke-virtual {v3, v9}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1408,7 +1408,7 @@
 
     invoke-virtual {v9, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
 
     .line 113
     :cond_27
@@ -1439,9 +1439,9 @@
     :cond_29
     new-instance v3, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;
 
-    iget-object v9, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->h0:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
+    iget-object v9, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->h0:Lcom/vk/core/dialogs/bottomsheet/b;
 
-    invoke-direct {v3, v9}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;-><init>(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)V
+    invoke-direct {v3, v9}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;-><init>(Lcom/vk/core/dialogs/bottomsheet/b;)V
 
     iput-object v3, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;
 
@@ -1454,7 +1454,7 @@
 
     invoke-virtual {v3, v9}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior$c;)V
 
-    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
 
     .line 118
     :cond_2a
@@ -1535,7 +1535,7 @@
     invoke-virtual {v3, v1, v11, v10}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;II)V
 
     :goto_c
-    sget-object v10, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v10, Lkotlin/m;->a:Lkotlin/m;
 
     .line 125
     iget-boolean v10, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->h:Z
@@ -1569,14 +1569,14 @@
 
     .line 129
     :cond_2f
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 130
     :cond_30
     :goto_d
-    sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
 
     goto :goto_10
 
@@ -1602,7 +1602,7 @@
     invoke-virtual {v3, v1, v12}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
 
     :goto_f
-    sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
 
     .line 133
     :goto_10
@@ -1683,7 +1683,7 @@
     goto :goto_14
 
     :cond_36
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1710,9 +1710,9 @@
 
     if-eqz v10, :cond_3a
 
-    new-instance v13, Lcom/vk/core/view/VkViewOutlineProvider;
+    new-instance v13, Lcom/vk/core/view/c;
 
-    invoke-direct {v13, v2, v12}, Lcom/vk/core/view/VkViewOutlineProvider;-><init>(FZ)V
+    invoke-direct {v13, v2, v12}, Lcom/vk/core/view/c;-><init>(FZ)V
 
     invoke-virtual {v10, v13}, Landroid/view/ViewGroup;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
@@ -1728,11 +1728,11 @@
 
     if-eqz v10, :cond_38
 
-    new-instance v13, Lcom/vk/core/view/VkViewOutlineProvider;
+    new-instance v13, Lcom/vk/core/view/c;
 
     const/4 v14, 0x2
 
-    invoke-direct {v13, v2, v12, v14, v5}, Lcom/vk/core/view/VkViewOutlineProvider;-><init>(FZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v13, v2, v12, v14, v5}, Lcom/vk/core/view/c;-><init>(FZILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v10, v13}, Landroid/view/ViewGroup;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
@@ -1740,9 +1740,9 @@
     invoke-virtual {v3, v8}, Landroid/view/View;->setClipToOutline(Z)V
 
     .line 148
-    new-instance v10, Lcom/vk/core/view/VkViewOutlineProvider;
+    new-instance v10, Lcom/vk/core/view/c;
 
-    invoke-direct {v10, v2, v12, v14, v5}, Lcom/vk/core/view/VkViewOutlineProvider;-><init>(FZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v10, v2, v12, v14, v5}, Lcom/vk/core/view/c;-><init>(FZILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v3, v10}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
@@ -1750,25 +1750,25 @@
 
     .line 149
     :cond_38
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 150
     :cond_39
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 151
     :cond_3a
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 152
     :cond_3b
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1781,7 +1781,7 @@
 
     invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->b(Landroid/view/View;)V
 
-    sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
 
     .line 154
     :cond_3d
@@ -1799,7 +1799,7 @@
     goto :goto_16
 
     :cond_3e
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1821,7 +1821,7 @@
 
     if-eqz v2, :cond_4e
 
-    sget v3, Lb/h/z/R;->touch_outside:I
+    sget v3, Lb/h/z/g;->touch_outside:I
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1850,7 +1850,7 @@
 
     move-object/from16 v16, v2
 
-    invoke-static/range {v13 .. v18}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v13 .. v18}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     .line 159
     iget-object v2, v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->k0:Landroid/view/View;
@@ -1914,7 +1914,7 @@
 
     .line 164
     :cond_41
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1947,7 +1947,7 @@
 
     invoke-virtual {v2, v3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->setAnchorId(I)V
 
-    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
 
     :cond_44
     const/16 v3, 0x31
@@ -1959,13 +1959,13 @@
     iput v3, v2, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->gravity:I
 
     .line 169
-    sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
 
     goto :goto_18
 
     .line 170
     :cond_45
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -1983,7 +1983,7 @@
     invoke-static {v2, v3}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
 
     .line 172
-    sget v2, Lb/h/z/R;->recycler:I
+    sget v2, Lb/h/z/g;->recycler:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2031,13 +2031,13 @@
     :cond_48
     const-string v1, "headerShadow"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 179
     :cond_49
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -2051,31 +2051,31 @@
     return-object v1
 
     :cond_4b
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 181
     :cond_4c
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 182
     :cond_4d
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 183
     :cond_4e
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 184
     :cond_4f
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -2090,203 +2090,203 @@
     throw v1
 
     :cond_51
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 186
     :cond_52
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 187
     :cond_53
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 188
     :cond_54
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 189
     :cond_55
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 190
     :cond_56
-    invoke-static {v15}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v15}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     :cond_57
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 191
     :cond_58
-    invoke-static {v15}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v15}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 192
     :cond_59
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v5
 
     .line 193
     :cond_5a
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     :cond_5b
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 194
     :cond_5c
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 195
     :cond_5d
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v5
 
     .line 196
     :cond_5e
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 197
     :cond_5f
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 198
     :cond_60
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 199
     :cond_61
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 200
     :cond_62
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 201
     :cond_63
-    invoke-static {v13}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v13}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 202
     :cond_64
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 203
     :cond_65
-    invoke-static {v13}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v13}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 204
     :cond_66
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 205
     :cond_67
-    invoke-static {v13}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v13}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 206
     :cond_68
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 207
     :cond_69
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 208
     :cond_6a
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 209
     :cond_6b
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 210
     :cond_6c
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 211
     :cond_6d
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 212
     :cond_6e
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 213
     :cond_6f
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 214
     :cond_70
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 215
     :cond_71
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 216
     :cond_72
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -2345,18 +2345,18 @@
     :cond_0
     const-string p0, "endTitle"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic d(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->D:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->D:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -2374,7 +2374,7 @@
     :cond_0
     const-string p0, "headerShadow"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -2394,18 +2394,18 @@
     :cond_0
     const-string p0, "ivEndIcon"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic g(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.method public static final synthetic g(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lcom/vk/core/dialogs/bottomsheet/h$e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->I:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object p0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->I:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-object p0
 .end method
@@ -2418,11 +2418,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic h(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic h(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->J:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->J:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -2436,11 +2436,11 @@
     return v0
 .end method
 
-.method public static final synthetic i(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.method public static final synthetic i(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lcom/vk/core/dialogs/bottomsheet/h$e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->G:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object p0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->G:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-object p0
 .end method
@@ -2458,7 +2458,7 @@
     :cond_0
     const-string p0, "toolbar"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -2531,14 +2531,14 @@
     const-string v0, "coordinator"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_2
     const-string v0, "bottomSheet"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2613,14 +2613,14 @@
     const-string v0, "coordinator"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_2
     const-string v0, "bottomSheet"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2743,25 +2743,25 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 7
     :cond_1
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_2
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_3
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2818,13 +2818,13 @@
     goto :goto_1
 
     :cond_6
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 13
     :cond_7
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2892,13 +2892,13 @@
     goto :goto_3
 
     :cond_c
-    invoke-static {v12}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v12}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 19
     :cond_d
-    invoke-static {v12}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v12}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2918,19 +2918,19 @@
     goto :goto_6
 
     :cond_f
-    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 21
     :cond_10
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 22
     :cond_11
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2958,13 +2958,13 @@
     goto :goto_5
 
     :cond_13
-    invoke-static {v12}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v12}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 26
     :cond_14
-    invoke-static {v12}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v12}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2988,31 +2988,31 @@
     return-void
 
     :cond_16
-    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 29
     :cond_17
-    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 30
     :cond_18
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_19
     const-string v0, "bottomSheet"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_1a
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -3068,7 +3068,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -3101,7 +3101,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -3112,13 +3112,13 @@
     return v0
 
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 4
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -3229,7 +3229,7 @@
     const-string v0, "bottomSheet"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -3302,11 +3302,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/b;)V
     .locals 0
 
     .line 9
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->h0:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->h0:Lcom/vk/core/dialogs/bottomsheet/b;
 
     return-void
 .end method
@@ -3320,14 +3320,14 @@
     return-void
 .end method
 
-.method public final a(Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+.method public final a(Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/h$e;)V
     .locals 0
 
     .line 11
     iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->H:Ljava/lang/CharSequence;
 
     .line 12
-    iput-object p2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->I:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iput-object p2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->I:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-void
 .end method
@@ -3341,21 +3341,21 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/Functions2;)V
+.method public final a(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 8
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->D:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->D:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -3409,33 +3409,33 @@
     return-void
 .end method
 
-.method public final b(Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+.method public final b(Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/h$e;)V
     .locals 0
 
     .line 6
     iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->F:Ljava/lang/CharSequence;
 
     .line 7
-    iput-object p2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->G:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iput-object p2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->G:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-void
 .end method
 
-.method public final b(Lkotlin/jvm/b/Functions2;)V
+.method public final b(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 4
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->J:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->J:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -3503,7 +3503,7 @@
     :cond_0
     const-string v0, "positiveButton"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -3557,7 +3557,7 @@
     :cond_0
     const-string v0, "toolbar"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

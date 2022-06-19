@@ -3,7 +3,7 @@
 .source "MessagesGetHistoryApiCmd.kt"
 
 # interfaces
-.implements Lcom/vk/api/sdk/VKApiResponseParser;
+.implements Lcom/vk/api/sdk/h;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/sdk/VKApiResponseParser<",
+        "Lcom/vk/api/sdk/h<",
         "Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;",
         ">;"
     }
@@ -67,13 +67,13 @@
     if-ne v1, v2, :cond_0
 
     .line 4
-    sget-object v1, Lcom/vk/im/engine/internal/api_parsers/ProfilesParser;->a:Lcom/vk/im/engine/internal/api_parsers/ProfilesParser;
+    sget-object v1, Lcom/vk/im/engine/internal/g/f0;->a:Lcom/vk/im/engine/internal/g/f0;
 
     const-string v2, "joResponse"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Lcom/vk/im/engine/internal/api_parsers/ProfilesParser;->a(Lorg/json/JSONObject;)Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {v1, p1}, Lcom/vk/im/engine/internal/g/f0;->a(Lorg/json/JSONObject;)Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object v1
 
@@ -85,13 +85,13 @@
     move-result-object v0
 
     .line 6
-    sget-object v2, Lcom/vk/im/engine/internal/api_parsers/ConversationParser;->a:Lcom/vk/im/engine/internal/api_parsers/ConversationParser$a;
+    sget-object v2, Lcom/vk/im/engine/internal/g/f;->a:Lcom/vk/im/engine/internal/g/f$a;
 
     const-string v3, "joConversation"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0, v1}, Lcom/vk/im/engine/internal/api_parsers/ConversationParser$a;->a(Lorg/json/JSONObject;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    invoke-virtual {v2, v0, v1}, Lcom/vk/im/engine/internal/g/f$a;->a(Lorg/json/JSONObject;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Lcom/vk/im/engine/models/dialogs/c;
 
     move-result-object v0
 
@@ -105,9 +105,9 @@
     const-string v2, "jaHistory"
 
     .line 8
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, v1}, Lcom/vk/im/engine/internal/api_parsers/MsgApiParser;->a(Lorg/json/JSONArray;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/util/List;
+    invoke-static {p1, v1}, Lcom/vk/im/engine/internal/g/a0;->a(Lorg/json/JSONArray;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/util/List;
 
     move-result-object p1
 
@@ -123,7 +123,7 @@
     .line 10
     new-instance v2, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;
 
-    invoke-direct {v2, v0, p1, v1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+    invoke-direct {v2, v0, p1, v1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;-><init>(Lcom/vk/im/engine/models/dialogs/c;Ljava/util/List;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     return-object v2
 

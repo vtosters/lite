@@ -3,7 +3,7 @@
 .source "CropFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -61,11 +61,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/avatarpicker/CropFragment$onViewCreated$1;->this$0:Lcom/vk/avatarpicker/CropFragment;
 
-    invoke-static {p1}, Lcom/vk/avatarpicker/CropFragment;->c(Lcom/vk/avatarpicker/CropFragment;)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1}, Lcom/vk/avatarpicker/CropFragment;->c(Lcom/vk/avatarpicker/CropFragment;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
 
     move-result p1
 
@@ -79,27 +79,27 @@
 
     invoke-direct {v0, p0}, Lcom/vk/avatarpicker/CropFragment$onViewCreated$1$a;-><init>(Lcom/vk/avatarpicker/CropFragment$onViewCreated$1;)V
 
-    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
+    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->b()Lio/reactivex/Scheduler;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->b()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
@@ -108,11 +108,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/avatarpicker/CropFragment$onViewCreated$1$b;-><init>(Lcom/vk/avatarpicker/CropFragment$onViewCreated$1;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/avatarpicker/CropFragment;->a(Lcom/vk/avatarpicker/CropFragment;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {p1, v0}, Lcom/vk/avatarpicker/CropFragment;->a(Lcom/vk/avatarpicker/CropFragment;Lio/reactivex/disposables/b;)V
 
     :cond_0
     return-void
@@ -126,7 +126,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/avatarpicker/CropFragment$onViewCreated$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

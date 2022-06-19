@@ -3,7 +3,7 @@
 .source "PostingPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingPresenter$setIsPosterMode$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -66,13 +66,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$setIsPosterMode$1;->this$0:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->k(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->k(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/p;
 
     move-result-object v0
 
     iget v1, p0, Lcom/vk/newsfeed/posting/PostingPresenter$setIsPosterMode$1;->$cursorPosition:I
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts3;->j(I)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/p;->j(I)V
 
     return-void
 .end method

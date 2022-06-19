@@ -3,7 +3,7 @@
 .source "ObservableCombineLatest.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -38,10 +38,10 @@
 
 .field volatile cancelled:Z
 
-.field final combiner:Lio/reactivex/functions/Function;
+.field final combiner:Lc/a/z/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-[",
             "Ljava/lang/Object;",
             "+TR;>;"
@@ -55,10 +55,10 @@
 
 .field volatile done:Z
 
-.field final downstream:Lio/reactivex/Observer;
+.field final downstream:Lc/a/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TR;>;"
         }
     .end annotation
@@ -78,10 +78,10 @@
     .end annotation
 .end field
 
-.field final queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+.field final queue:Lio/reactivex/internal/queue/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/internal/queue/SpscLinkedArrayQueue<",
+            "Lio/reactivex/internal/queue/a<",
             "[",
             "Ljava/lang/Object;",
             ">;"
@@ -91,14 +91,14 @@
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/functions/Function;IIZ)V
+.method constructor <init>(Lc/a/r;Lc/a/z/j;IIZ)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TR;>;",
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-[",
             "Ljava/lang/Object;",
             "+TR;>;IIZ)V"
@@ -116,10 +116,10 @@
     iput-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->errors:Lio/reactivex/internal/util/AtomicThrowable;
 
     .line 3
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->downstream:Lio/reactivex/Observer;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->downstream:Lc/a/r;
 
     .line 4
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->combiner:Lio/reactivex/functions/Function;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->combiner:Lc/a/z/j;
 
     .line 5
     iput-boolean p5, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->delayError:Z
@@ -153,11 +153,11 @@
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->observers:[Lio/reactivex/internal/operators/observable/ObservableCombineLatest$CombinerObserver;
 
     .line 10
-    new-instance p1, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    new-instance p1, Lio/reactivex/internal/queue/a;
 
-    invoke-direct {p1, p4}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;-><init>(I)V
+    invoke-direct {p1, p4}, Lio/reactivex/internal/queue/a;-><init>(I)V
 
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->queue:Lio/reactivex/internal/queue/a;
 
     return-void
 .end method
@@ -315,13 +315,13 @@
     if-ne v2, p1, :cond_2
 
     .line 21
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->queue:Lio/reactivex/internal/queue/a;
 
     invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->offer(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Lio/reactivex/internal/queue/a;->offer(Ljava/lang/Object;)Z
 
     const/4 p1, 0x1
 
@@ -452,18 +452,18 @@
 
     .line 36
     :cond_6
-    invoke-static {p2}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p2}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     :goto_2
     return-void
 .end method
 
-.method a(Lio/reactivex/internal/queue/SpscLinkedArrayQueue;)V
+.method a(Lio/reactivex/internal/queue/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/internal/queue/SpscLinkedArrayQueue<",
+            "Lio/reactivex/internal/queue/a<",
             "*>;)V"
         }
     .end annotation
@@ -483,7 +483,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 11
-    invoke-virtual {p1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->clear()V
+    invoke-virtual {p1}, Lio/reactivex/internal/queue/a;->clear()V
 
     return-void
 
@@ -499,12 +499,12 @@
     throw p1
 .end method
 
-.method public a([Lio/reactivex/ObservableSource;)V
+.method public a([Lc/a/p;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "+TT;>;)V"
         }
     .end annotation
@@ -516,9 +516,9 @@
     array-length v1, v0
 
     .line 3
-    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->downstream:Lio/reactivex/Observer;
+    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->downstream:Lc/a/r;
 
-    invoke-interface {v2, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {v2, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     const/4 v2, 0x0
 
@@ -542,7 +542,7 @@
 
     aget-object v4, v0, v2
 
-    invoke-interface {v3, v4}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
+    invoke-interface {v3, v4}, Lc/a/p;->a(Lc/a/r;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -567,10 +567,10 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->queue:Lio/reactivex/internal/queue/a;
 
     .line 3
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->downstream:Lio/reactivex/Observer;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->downstream:Lc/a/r;
 
     .line 4
     iget-boolean v2, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->delayError:Z
@@ -587,7 +587,7 @@
     if-eqz v5, :cond_2
 
     .line 6
-    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/SpscLinkedArrayQueue;)V
+    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/a;)V
 
     return-void
 
@@ -607,7 +607,7 @@
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a()V
 
     .line 9
-    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/SpscLinkedArrayQueue;)V
+    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/a;)V
 
     .line 10
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -616,7 +616,7 @@
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -625,7 +625,7 @@
     iget-boolean v5, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->done:Z
 
     .line 12
-    invoke-virtual {v0}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->poll()Ljava/lang/Object;
+    invoke-virtual {v0}, Lio/reactivex/internal/queue/a;->poll()Ljava/lang/Object;
 
     move-result-object v6
 
@@ -646,7 +646,7 @@
     if-eqz v7, :cond_6
 
     .line 13
-    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/SpscLinkedArrayQueue;)V
+    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/a;)V
 
     .line 14
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -658,13 +658,13 @@
     if-nez v0, :cond_5
 
     .line 15
-    invoke-interface {v1}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v1}, Lc/a/r;->b()V
 
     goto :goto_2
 
     .line 16
     :cond_5
-    invoke-interface {v1, v0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     :goto_2
     return-void
@@ -686,20 +686,20 @@
     .line 18
     :cond_7
     :try_start_0
-    iget-object v5, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->combiner:Lio/reactivex/functions/Function;
+    iget-object v5, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->combiner:Lc/a/z/j;
 
-    invoke-interface {v5, v6}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v6}, Lc/a/z/j;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
     const-string v6, "The combiner returned a null value"
 
-    invoke-static {v5, v6}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v5, v6}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 19
-    invoke-interface {v1, v5}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, v5}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -707,7 +707,7 @@
     move-exception v2
 
     .line 20
-    invoke-static {v2}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {v2}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 21
     iget-object v3, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -718,7 +718,7 @@
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a()V
 
     .line 23
-    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/SpscLinkedArrayQueue;)V
+    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/a;)V
 
     .line 24
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -728,7 +728,7 @@
     move-result-object v0
 
     .line 25
-    invoke-interface {v1, v0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -766,9 +766,9 @@
     if-nez v0, :cond_0
 
     .line 5
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->queue:Lio/reactivex/internal/queue/a;
 
-    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/SpscLinkedArrayQueue;)V
+    invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCombineLatest$LatestCoordinator;->a(Lio/reactivex/internal/queue/a;)V
 
     :cond_0
     return-void

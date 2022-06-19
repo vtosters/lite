@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd;
-.super Lcom/vk/im/engine/i/BaseImEngineCmd;
+.super Lcom/vk/im/engine/i/a;
 .source "ShowAudioMsgTranscriptCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
-        "Lkotlin/Unit;",
+        "Lcom/vk/im/engine/i/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd;->b:I
 
@@ -39,18 +39,18 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd;->a(Lcom/vk/im/engine/ImEnvironment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd;->a(Lcom/vk/im/engine/d;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/ImEnvironment;)V
+.method public a(Lcom/vk/im/engine/d;)V
     .locals 8
 
     .line 2
@@ -70,15 +70,15 @@
     iput-boolean v1, v2, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
     new-instance v3, Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd$onExecute$1;
 
-    invoke-direct {v3, p0, v0, v2, p1}, Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd$onExecute$1;-><init>(Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd;Lkotlin/jvm/internal/Ref$BooleanRef;Lkotlin/jvm/internal/Ref$BooleanRef;Lcom/vk/im/engine/ImEnvironment;)V
+    invoke-direct {v3, p0, v0, v2, p1}, Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd$onExecute$1;-><init>(Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd;Lkotlin/jvm/internal/Ref$BooleanRef;Lkotlin/jvm/internal/Ref$BooleanRef;Lcom/vk/im/engine/d;)V
 
-    invoke-virtual {v1, v3}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {v1, v3}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     .line 5
     iget-boolean v1, v2, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
@@ -86,7 +86,7 @@
     if-eqz v1, :cond_0
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
 
     move-result-object v1
 
@@ -94,7 +94,7 @@
 
     iget v3, p0, Lcom/vk/im/engine/commands/attaches/ShowAudioMsgTranscriptCmd;->b:I
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/internal/EventHelper;->c(Ljava/lang/Object;I)V
+    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/internal/c;->c(Ljava/lang/Object;I)V
 
     .line 7
     :cond_0
@@ -119,9 +119,9 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;-><init>(IIZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;-><init>(IIZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
 
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/d;->a(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
 
     :cond_1
     return-void

@@ -3,7 +3,7 @@
 .source "PollWebInterfaceImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl$pollChanged$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -80,7 +80,7 @@
 
     const-string v2, "JSONObject(data).getJSONObject(\"poll\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;->b(Lorg/json/JSONObject;)Lcom/vk/dto/polls/PollInfo;
 
@@ -89,11 +89,11 @@
     .line 3
     iget-object v1, p0, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl$pollChanged$1;->this$0:Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;
 
-    invoke-static {v1}, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;->b(Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;)Lkotlin/jvm/b/Functions2;
+    invoke-static {v1}, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;->b(Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;)Lkotlin/jvm/b/b;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

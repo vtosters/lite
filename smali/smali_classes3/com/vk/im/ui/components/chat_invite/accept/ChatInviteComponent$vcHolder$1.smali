@@ -3,12 +3,12 @@
 .source "ChatInviteComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;Z)V
+    value = Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;",
         ">;"
     }
@@ -59,11 +59,11 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$vcHolder$1;->this$0:Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;
 
-    invoke-static {v2}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    invoke-static {v2}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/chat_invite/accept/Model;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/chat_invite/accept/a;)V
 
     return-object v0
 .end method

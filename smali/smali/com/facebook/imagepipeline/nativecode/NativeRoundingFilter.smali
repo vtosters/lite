@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/DoNotStrip;
+.annotation build Lcom/facebook/common/internal/d;
 .end annotation
 
 
@@ -28,12 +28,12 @@
 .end method
 
 .method private static native nativeToCircleFilter(Landroid/graphics/Bitmap;Z)V
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private static native nativeToCircleWithBorderFilter(Landroid/graphics/Bitmap;IIZ)V
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
@@ -52,7 +52,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     invoke-static {p0, p1}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->nativeToCircleFilter(Landroid/graphics/Bitmap;Z)V
@@ -64,7 +64,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     invoke-static {p0, p1, p2, p3}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->nativeToCircleWithBorderFilter(Landroid/graphics/Bitmap;IIZ)V

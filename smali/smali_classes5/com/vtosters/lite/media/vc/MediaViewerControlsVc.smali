@@ -33,7 +33,7 @@
 
 .field private j:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
 
-.field private k:Lio/reactivex/disposables/Disposable;
+.field private k:Lio/reactivex/disposables/b;
 
 .field private final l:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;
 
@@ -56,7 +56,7 @@
 
     const-string v1, "parentView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, v0}, Lcom/vk/im/ui/formatters/MsgDateFormatter;-><init>(Landroid/content/Context;)V
 
@@ -67,7 +67,7 @@
 
     move-result-object p2
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -83,7 +83,7 @@
 
     const-string p2, "parentView.context.getLa\u2026rolls, parentView, false)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->h:Landroid/view/View;
 
@@ -98,7 +98,7 @@
 
     const-string p2, "view.findViewById(R.id.owner_container)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->b:Landroid/view/View;
 
@@ -113,7 +113,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_avatar)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/avatars/AvatarView;
 
@@ -130,7 +130,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_name_container)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->d:Landroid/view/View;
 
@@ -145,7 +145,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_name)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -162,7 +162,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_date)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -179,7 +179,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_share_btn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->g:Landroid/view/View;
 
@@ -233,7 +233,7 @@
 
     invoke-direct {p2, p0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$1;-><init>(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 14
     iget-object p1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->d:Landroid/view/View;
@@ -242,7 +242,7 @@
 
     invoke-direct {p2, p0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$2;-><init>(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 15
     iget-object p1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->g:Landroid/view/View;
@@ -251,7 +251,7 @@
 
     invoke-direct {p2, p0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$3;-><init>(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 16
     iget-object p1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->h:Landroid/view/View;
@@ -275,27 +275,27 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)Lio/reactivex/disposables/Disposable;
+.method public static final synthetic b(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)Lio/reactivex/disposables/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->k:Lio/reactivex/disposables/Disposable;
+    iget-object p0, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->k:Lio/reactivex/disposables/b;
 
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)Lkotlin/Unit;
+.method public static final synthetic c(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)Lkotlin/m;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->f()Lkotlin/Unit;
+    invoke-direct {p0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->f()Lkotlin/m;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final f()Lkotlin/Unit;
+.method private final f()Lkotlin/m;
     .locals 10
 
     .line 1
@@ -303,7 +303,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
+    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
 
     move-result-object v1
 
@@ -315,7 +315,7 @@
 
     const-string v3, "avatar.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;->a()I
 
@@ -333,9 +333,9 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     goto :goto_0
 
@@ -409,11 +409,11 @@
     if-eqz v0, :cond_2
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->k:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->k:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 4
     :cond_0
@@ -426,7 +426,7 @@
 
     move-result p1
 
-    invoke-interface {v0, p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;->Z(I)Lio/reactivex/Single;
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;->Z(I)Lc/a/t;
 
     move-result-object p1
 
@@ -440,17 +440,17 @@
     const-string p2, "MediaViewerControlsVc"
 
     .line 7
-    invoke-static {p2}, Lcom/vk/core/util/RxUtil;->a(Ljava/lang/String;)Lio/reactivex/functions/Consumer;
+    invoke-static {p2}, Lcom/vk/core/util/z0;->a(Ljava/lang/String;)Lc/a/z/g;
 
     move-result-object p2
 
     .line 8
-    invoke-virtual {p1, v0, p2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0, p2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v1
 
     :cond_1
-    iput-object v1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->k:Lio/reactivex/disposables/Disposable;
+    iput-object v1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->k:Lio/reactivex/disposables/b;
 
     return-void
 

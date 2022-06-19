@@ -42,9 +42,9 @@
     invoke-virtual {p3, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
     .line 5
-    iget p1, p0, Lb/h/p/f/Workers1;->e:I
+    iget p1, p0, Lb/h/p/f/h;->e:I
 
-    invoke-virtual {p0, p1}, Lb/h/p/f/Workers1;->f(I)V
+    invoke-virtual {p0, p1}, Lb/h/p/f/h;->f(I)V
 
     return-void
 .end method

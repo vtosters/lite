@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -52,7 +52,7 @@
 
     const-string v1, "Parcel.obtain()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     :try_start_0
@@ -92,7 +92,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p1, v0, v1, v2}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$a;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p1, v0, v1, v2}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$a;-><init>(IILkotlin/jvm/internal/i;)V
 
     return-object p1
 
@@ -201,7 +201,7 @@
 
     const-string v6, "key"
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v2, v4, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0

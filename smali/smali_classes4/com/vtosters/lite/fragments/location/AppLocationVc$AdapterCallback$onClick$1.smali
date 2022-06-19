@@ -3,12 +3,12 @@
 .source "AppLocationVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback;->a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)V
+    value = Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback;->a(Lcom/vk/im/ui/components/msg_send/picker/location/c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $item:Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
+.field final synthetic $item:Lcom/vk/im/ui/components/msg_send/picker/location/c;
 
 .field final synthetic this$0:Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback;Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)V
+.method constructor <init>(Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback;Lcom/vk/im/ui/components/msg_send/picker/location/c;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback$onClick$1;->this$0:Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback;
 
-    iput-object p2, p0, Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback$onClick$1;->$item:Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
+    iput-object p2, p0, Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback$onClick$1;->$item:Lcom/vk/im/ui/components/msg_send/picker/location/c;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback$onClick$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -74,9 +74,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback$onClick$1;->$item:Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback$onClick$1;->$item:Lcom/vk/im/ui/components/msg_send/picker/location/c;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;->b()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/c;->b()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v1
 

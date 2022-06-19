@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton$a;->a:Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;
 
-    invoke-static {p1}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;->a(Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;)Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;
+    invoke-static {p1}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;->a(Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;)Lcom/vk/music/subscription/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;->b()Lcom/vk/dto/common/data/Subscription;
+    invoke-interface {p1}, Lcom/vk/music/subscription/a;->b()Lcom/vk/dto/common/data/Subscription;
 
     move-result-object p1
 
@@ -54,11 +54,11 @@
 
     iget-object v0, p0, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton$a;->a:Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;
 
-    invoke-virtual {v0}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;->getOnBuySubscriptionClickedListener()Lkotlin/jvm/b/Functions2;
+    invoke-virtual {v0}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;->getOnBuySubscriptionClickedListener()Lkotlin/jvm/b/b;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

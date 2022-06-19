@@ -3,12 +3,12 @@
 .source "ArticleFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/articles/ArticleFragment;->a(Lkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/articles/ArticleFragment;->a(Lkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Ljava/lang/Boolean;",
-        "Lb/h/h/f/Favable;",
-        "Lkotlin/Unit;",
+        "Lb/h/h/f/a;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -65,16 +65,16 @@
 
     move-result p1
 
-    check-cast p2, Lb/h/h/f/Favable;
+    check-cast p2, Lb/h/h/f/a;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/articles/ArticleFragment$toggleFavorite$3;->a(ZLb/h/h/f/Favable;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/articles/ArticleFragment$toggleFavorite$3;->a(ZLb/h/h/f/a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public final a(ZLb/h/h/f/Favable;)V
+.method public final a(ZLb/h/h/f/a;)V
     .locals 0
 
     .line 2

@@ -3,7 +3,7 @@
 .source "VideoItemVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/video/VideoItemVh$onClick$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -60,22 +60,22 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/libvideo/y/VideoEvents10;
+    new-instance v0, Lcom/vk/libvideo/y/h;
 
     iget-object v1, p0, Lcom/vk/catalog2/core/holders/video/VideoItemVh$onClick$1;->$videoFile:Lcom/vk/dto/common/VideoFile;
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/y/VideoEvents10;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/y/h;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-static {v0}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
+    invoke-static {v0}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
 
     .line 3
-    new-instance v0, Lcom/vk/libvideo/y/VideoEvents6;
+    new-instance v0, Lcom/vk/libvideo/y/l;
 
     iget-object v1, p0, Lcom/vk/catalog2/core/holders/video/VideoItemVh$onClick$1;->$videoFile:Lcom/vk/dto/common/VideoFile;
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/y/VideoEvents6;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/y/l;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-static {v0}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
+    invoke-static {v0}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
 
     return-void
 .end method

@@ -72,13 +72,13 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$showAuthorsLayoutAnimatorListener$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/f;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts13;->f3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/f;->f3()V
 
     :cond_0
     return-void

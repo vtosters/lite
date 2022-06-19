@@ -74,13 +74,13 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/Functions;)V
+.method private final a(Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -90,9 +90,9 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v1, Lcom/vk/instantjobs/services/JobsForegroundServiceController1;
+    new-instance v1, Lcom/vk/instantjobs/services/b;
 
-    invoke-direct {v1, p1}, Lcom/vk/instantjobs/services/JobsForegroundServiceController1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p1}, Lcom/vk/instantjobs/services/b;-><init>(Lkotlin/jvm/b/a;)V
 
     move-object p1, v1
 
@@ -114,7 +114,7 @@
 
     invoke-direct {v0, p1, p2}, Lcom/vk/instantjobs/services/JobsForegroundServiceController$cancelNotification$1;-><init>(Landroid/content/Context;I)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/services/JobsForegroundServiceController;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/services/JobsForegroundServiceController;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -127,7 +127,7 @@
 
     invoke-direct {v0, p1, p2, p3}, Lcom/vk/instantjobs/services/JobsForegroundServiceController$startNotification$1;-><init>(Landroid/content/Context;ILandroid/app/Notification;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/services/JobsForegroundServiceController;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/services/JobsForegroundServiceController;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/auth/verification/base/BaseCheckFragment$d;->a:Lcom/vk/auth/verification/base/BaseCheckFragment;
 
-    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckFragment;->a(Lcom/vk/auth/verification/base/BaseCheckFragment;)Lcom/vk/auth/verification/base/CheckPresenter;
+    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckFragment;->a(Lcom/vk/auth/verification/base/BaseCheckFragment;)Lcom/vk/auth/verification/base/b;
 
     move-result-object p1
 
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthPresenter;->a(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/a;->a(Ljava/lang/String;)V
 
     return-void
 .end method

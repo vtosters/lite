@@ -3,7 +3,7 @@
 .source "WebViewLoginMethodHandler.java"
 
 # interfaces
-.implements Lcom/facebook/internal/WebDialog$g;
+.implements Lcom/facebook/internal/t$g;
 
 
 # annotations

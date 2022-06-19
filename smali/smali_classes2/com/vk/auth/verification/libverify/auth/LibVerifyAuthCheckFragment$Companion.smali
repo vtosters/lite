@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -44,9 +44,9 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 2
-    sget-object v1, Lcom/vk/auth/y/a/LibVerifyCheckFragment;->Companion:Lcom/vk/auth/y/a/LibVerifyCheckFragment$a;
+    sget-object v1, Lcom/vk/auth/y/a/b;->Companion:Lcom/vk/auth/y/a/b$a;
 
-    invoke-virtual {v1, v0, p1, p2, p3}, Lcom/vk/auth/y/a/LibVerifyCheckFragment$a;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-virtual {v1, v0, p1, p2, p3}, Lcom/vk/auth/y/a/b$a;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
 
     const-string p1, "authState"
 

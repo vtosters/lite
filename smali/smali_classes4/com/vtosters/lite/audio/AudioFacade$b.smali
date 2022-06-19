@@ -1,5 +1,5 @@
 .class final Lcom/vtosters/lite/audio/AudioFacade$b;
-.super Lcom/vtosters/lite/audio/player/PlayerConnectionListener$a;
+.super Lcom/vtosters/lite/audio/player/w$a;
 .source "AudioFacade.java"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic a:[Lcom/vtosters/lite/audio/player/PlayerConnection;
+.field final synthetic a:[Lcom/vtosters/lite/audio/player/v;
 
 .field final synthetic b:Ljava/util/List;
 
@@ -27,11 +27,11 @@
 
 
 # direct methods
-.method constructor <init>([Lcom/vtosters/lite/audio/player/PlayerConnection;Ljava/util/List;ILcom/vk/music/common/MusicPlaybackLaunchContext;I)V
+.method constructor <init>([Lcom/vtosters/lite/audio/player/v;Ljava/util/List;ILcom/vk/music/common/MusicPlaybackLaunchContext;I)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/audio/AudioFacade$b;->a:[Lcom/vtosters/lite/audio/player/PlayerConnection;
+    iput-object p1, p0, Lcom/vtosters/lite/audio/AudioFacade$b;->a:[Lcom/vtosters/lite/audio/player/v;
 
     iput-object p2, p0, Lcom/vtosters/lite/audio/AudioFacade$b;->b:Ljava/util/List;
 
@@ -41,7 +41,7 @@
 
     iput p5, p0, Lcom/vtosters/lite/audio/AudioFacade$b;->e:I
 
-    invoke-direct {p0}, Lcom/vtosters/lite/audio/player/PlayerConnectionListener$a;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/audio/player/w$a;-><init>()V
 
     return-void
 .end method
@@ -52,13 +52,13 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/audio/AudioFacade$b;->a:[Lcom/vtosters/lite/audio/player/PlayerConnection;
+    iget-object v0, p0, Lcom/vtosters/lite/audio/AudioFacade$b;->a:[Lcom/vtosters/lite/audio/player/v;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerConnection;->l()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/v;->l()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -73,15 +73,15 @@
 
     iget v5, p0, Lcom/vtosters/lite/audio/AudioFacade$b;->e:I
 
-    invoke-virtual {v0, v2, v3, v4, v5}, Lcom/vtosters/lite/audio/player/Player;->a(Ljava/util/Collection;ILcom/vk/music/common/MusicPlaybackLaunchContext;I)V
+    invoke-virtual {v0, v2, v3, v4, v5}, Lcom/vtosters/lite/audio/player/u;->a(Ljava/util/Collection;ILcom/vk/music/common/MusicPlaybackLaunchContext;I)V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/audio/AudioFacade$b;->a:[Lcom/vtosters/lite/audio/player/PlayerConnection;
+    iget-object v0, p0, Lcom/vtosters/lite/audio/AudioFacade$b;->a:[Lcom/vtosters/lite/audio/player/v;
 
     aget-object v0, v0, v1
 
-    invoke-virtual {v0}, Lcom/vk/core/service/BoundServiceConnection;->d()V
+    invoke-virtual {v0}, Lcom/vk/core/service/a;->d()V
 
     return-void
 .end method

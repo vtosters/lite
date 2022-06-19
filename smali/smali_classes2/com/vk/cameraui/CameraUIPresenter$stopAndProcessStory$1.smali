@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vtosters/lite/data/Analytics$l;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vtosters/lite/data/n$l;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/data/Analytics$l;)V
+.method public final a(Lcom/vtosters/lite/data/n$l;)V
     .locals 2
 
     const-string v0, "story_type"
@@ -64,7 +64,7 @@
     const-string v1, "video"
 
     .line 1
-    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -73,11 +73,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/data/Analytics$l;
+    check-cast p1, Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {p0, p1}, Lcom/vk/cameraui/CameraUIPresenter$stopAndProcessStory$1;->a(Lcom/vtosters/lite/data/Analytics$l;)V
+    invoke-virtual {p0, p1}, Lcom/vk/cameraui/CameraUIPresenter$stopAndProcessStory$1;->a(Lcom/vtosters/lite/data/n$l;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

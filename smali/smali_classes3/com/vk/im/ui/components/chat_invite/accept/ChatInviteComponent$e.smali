@@ -3,7 +3,7 @@
 .source "ChatInviteComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -69,11 +69,11 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$e;->a:Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    invoke-static {v0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->b(Ljava/lang/Throwable;)V
 

@@ -58,7 +58,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/notifications/NotificationsGetResponse$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/notifications/NotificationsGetResponse$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/notifications/NotificationsGetResponse;->h:Lcom/vk/dto/notifications/NotificationsGetResponse$b;
 
@@ -111,7 +111,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x40

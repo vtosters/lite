@@ -18,29 +18,29 @@
 
 
 # static fields
-.field static final synthetic j:[Lkotlin/u/KProperty5;
+.field static final synthetic j:[Lkotlin/u/j;
 
 .field private static final k:J
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
 .field private final b:Ljava/util/Date;
 
-.field private final c:Lkotlin/Lazy2;
+.field private final c:Lkotlin/e;
 
 .field private final d:Ljava/text/FieldPosition;
 
 .field private final e:Ljava/text/DateFormatSymbols;
 
-.field private final f:Lkotlin/Lazy2;
+.field private final f:Lkotlin/e;
 
-.field private final g:Lkotlin/Lazy2;
+.field private final g:Lkotlin/e;
 
-.field private final h:Lkotlin/Lazy2;
+.field private final h:Lkotlin/e;
 
-.field private final i:Lkotlin/Lazy2;
+.field private final i:Lkotlin/e;
 
 
 # direct methods
@@ -51,11 +51,11 @@
 
     const/4 v1, 0x6
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -63,9 +63,9 @@
 
     const-string v5, "getTargetCalendar()Ljava/util/Calendar;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -73,7 +73,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -81,9 +81,9 @@
 
     const-string v5, "getTodayCalendar()Ljava/util/Calendar;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x1
 
@@ -91,7 +91,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -99,9 +99,9 @@
 
     const-string v5, "getFormatToday()Ljava/text/SimpleDateFormat;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x2
 
@@ -109,7 +109,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -117,9 +117,9 @@
 
     const-string v5, "getFormatYesterday()Ljava/text/SimpleDateFormat;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x3
 
@@ -127,7 +127,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -135,9 +135,9 @@
 
     const-string v5, "getFormatIgnoreYear()Ljava/text/SimpleDateFormat;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x4
 
@@ -145,7 +145,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -153,21 +153,21 @@
 
     const-string v4, "getFormatWithYear()Ljava/text/SimpleDateFormat;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x5
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/im/ui/formatters/DialogTimeFormatter$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/DialogTimeFormatter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/DialogTimeFormatter$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
@@ -194,11 +194,11 @@
 
     sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter$targetCalendar$2;->a:Lcom/vk/im/ui/formatters/DialogTimeFormatter$targetCalendar$2;
 
-    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->a:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->a:Lkotlin/e;
 
     .line 3
     new-instance v0, Ljava/util/Date;
@@ -212,11 +212,11 @@
 
     sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter$todayCalendar$2;->a:Lcom/vk/im/ui/formatters/DialogTimeFormatter$todayCalendar$2;
 
-    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->c:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->c:Lkotlin/e;
 
     .line 5
     new-instance v0, Ljava/text/FieldPosition;
@@ -237,7 +237,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/im/ui/R6;->months_short:I
+    sget v2, Lcom/vk/im/ui/b;->months_short:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -255,11 +255,11 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/formatters/DialogTimeFormatter$formatToday$2;-><init>(Lcom/vk/im/ui/formatters/DialogTimeFormatter;Landroid/content/Context;)V
 
-    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->f:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->f:Lkotlin/e;
 
     .line 10
     sget-object v0, Lkotlin/LazyThreadSafetyMode;->NONE:Lkotlin/LazyThreadSafetyMode;
@@ -268,11 +268,11 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/formatters/DialogTimeFormatter$formatYesterday$2;-><init>(Lcom/vk/im/ui/formatters/DialogTimeFormatter;Landroid/content/Context;)V
 
-    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->g:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->g:Lkotlin/e;
 
     .line 11
     sget-object v0, Lkotlin/LazyThreadSafetyMode;->NONE:Lkotlin/LazyThreadSafetyMode;
@@ -281,11 +281,11 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/formatters/DialogTimeFormatter$formatIgnoreYear$2;-><init>(Lcom/vk/im/ui/formatters/DialogTimeFormatter;Landroid/content/Context;)V
 
-    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->h:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->h:Lkotlin/e;
 
     .line 12
     sget-object v0, Lkotlin/LazyThreadSafetyMode;->NONE:Lkotlin/LazyThreadSafetyMode;
@@ -294,11 +294,11 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/formatters/DialogTimeFormatter$formatWithYear$2;-><init>(Lcom/vk/im/ui/formatters/DialogTimeFormatter;Landroid/content/Context;)V
 
-    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->i:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->i:Lkotlin/e;
 
     return-void
 .end method
@@ -315,15 +315,15 @@
 .method private final a()Ljava/text/SimpleDateFormat;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->h:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->h:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/j;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -335,15 +335,15 @@
 .method private final b()Ljava/text/SimpleDateFormat;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->f:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->f:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -355,15 +355,15 @@
 .method private final c()Ljava/text/SimpleDateFormat;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->i:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->i:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/j;
 
     const/4 v2, 0x5
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -375,15 +375,15 @@
 .method private final d()Ljava/text/SimpleDateFormat;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->g:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->g:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/j;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -395,15 +395,15 @@
 .method private final e()Ljava/util/Calendar;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -415,15 +415,15 @@
 .method private final f()Ljava/util/Calendar;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->c:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->c:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/formatters/DialogTimeFormatter;->j:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -689,9 +689,9 @@
     invoke-virtual {p3, v0}, Ljava/lang/StringBuffer;->setLength(I)V
 
     .line 2
-    sget-object v1, Lcom/vk/core/formatters/TimeAgoFormatter1;->INSTANCE:Lcom/vk/core/formatters/TimeAgoFormatter1;
+    sget-object v1, Lcom/vk/core/formatters/b;->a:Lcom/vk/core/formatters/b;
 
-    invoke-virtual {v1, p1, p2, p3}, Lcom/vk/core/formatters/TimeAgoFormatter1;->a(JLjava/lang/StringBuffer;)V
+    invoke-virtual {v1, p1, p2, p3}, Lcom/vk/core/formatters/b;->a(JLjava/lang/StringBuffer;)V
 
     .line 3
     invoke-interface {p3}, Ljava/lang/CharSequence;->length()I

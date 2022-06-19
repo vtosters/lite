@@ -45,13 +45,13 @@
 
     iget-object v0, v0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView$postTextGestureDetector$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/p;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts3;->w2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/p;->w2()V
 
     .line 2
     :cond_0

@@ -1,5 +1,5 @@
 .class final Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider$b;
-.super Lb/h/n/AppLifecycleDispatcher$a;
+.super Lb/h/n/c$a;
 .source "ImAudioMsgPlayerProvider.kt"
 
 
@@ -23,7 +23,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lb/h/n/AppLifecycleDispatcher$a;-><init>()V
+    invoke-direct {p0}, Lb/h/n/c$a;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider$b;->a:Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController;
 

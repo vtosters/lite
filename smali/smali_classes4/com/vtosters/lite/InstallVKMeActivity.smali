@@ -22,16 +22,16 @@
     invoke-super {p0, p1}, Lcom/vk/navigation/NavigationDelegateActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
 
     move-result-object p1
 
     .line 3
-    invoke-interface {p1, p0}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;)Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
+    invoke-interface {p1, p0}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;)Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
 
     move-result-object p1
 
@@ -40,7 +40,7 @@
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/InstallVKMeActivity$onCreate$1;-><init>(Lcom/vtosters/lite/InstallVKMeActivity;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "VkAuthModel.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/auth/VkAuthModel$onLogin$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -70,18 +70,18 @@
     .locals 3
 
     .line 2
-    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
+    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
+    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
 
     move-result-object v0
 
     .line 3
-    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->Q()Lcom/vk/music/player/PlayState;
+    invoke-interface {v0}, Lcom/vk/music/player/d;->Q()Lcom/vk/music/player/PlayState;
 
     move-result-object v1
 
@@ -92,16 +92,16 @@
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
+    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
 
     move-result-object v1
 
     const-string v2, "none"
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/j/MusicPrefs;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/vk/music/j/a;->a(Ljava/lang/String;)V
 
     .line 5
-    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->J0()V
+    invoke-interface {v0}, Lcom/vk/music/player/d;->J0()V
 
     :cond_0
     return-void

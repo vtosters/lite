@@ -139,7 +139,7 @@
     .line 8
     iget-object v0, p0, Lcom/vtosters/lite/fragments/ProfileFragment$ParallaxPreDrawListener;->H:Lcom/vtosters/lite/fragments/ProfileFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/ProfileFragment;->K0(Lcom/vtosters/lite/fragments/ProfileFragment;)[Lcom/vtosters/lite/ui/a0/TransitionFadeDrawable;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/ProfileFragment;->K0(Lcom/vtosters/lite/fragments/ProfileFragment;)[Lcom/vtosters/lite/ui/a0/b;
 
     move-result-object v0
 
@@ -170,7 +170,7 @@
     .line 10
     iput v4, p0, Lcom/vtosters/lite/fragments/ProfileFragment$ParallaxPreDrawListener;->c:I
 
-    invoke-virtual {v3, v4}, Lcom/vtosters/lite/ui/a0/TransitionFadeDrawable;->a(I)V
+    invoke-virtual {v3, v4}, Lcom/vtosters/lite/ui/a0/b;->a(I)V
 
     :cond_0
     add-int/lit8 v2, v2, 0x1
@@ -341,7 +341,7 @@
     move-result-object v2
 
     .line 4
-    sget v3, Lcom/vk/profile/ui/BaseProfileFragment;->W0:I
+    sget v3, Lcom/vk/profile/ui/c;->W0:I
 
     const/16 v4, 0xff
 
@@ -998,7 +998,7 @@
     if-eqz v2, :cond_24
 
     .line 57
-    invoke-static {}, Lcom/vtosters/lite/ViewUtils;->b()I
+    invoke-static {}, Lcom/vtosters/lite/f0;->b()I
 
     move-result v2
 

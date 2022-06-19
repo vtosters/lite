@@ -26,10 +26,10 @@
     .end annotation
 .end field
 
-.field private static final c:Lcom/vtosters/lite/SearchIndexer;
+.field private static final c:Lcom/vtosters/lite/b0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vtosters/lite/SearchIndexer<",
+            "Lcom/vtosters/lite/b0<",
             "Lcom/vk/dto/group/Group;",
             ">;"
         }
@@ -60,11 +60,11 @@
     sput-object v0, Lcom/vtosters/lite/data/Groups;->b:Ljava/util/ArrayList;
 
     .line 3
-    new-instance v0, Lcom/vtosters/lite/SearchIndexer;
+    new-instance v0, Lcom/vtosters/lite/b0;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/SearchIndexer;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/b0;-><init>()V
 
-    sput-object v0, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/SearchIndexer;
+    sput-object v0, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/b0;
 
     const/4 v0, 0x0
 
@@ -81,17 +81,17 @@
     sput-object v0, Lcom/vtosters/lite/data/Groups;->e:Ljava/util/concurrent/ExecutorService;
 
     .line 6
-    invoke-static {}, Lb/h/g/l/ProfleEvents4;->a()Lb/h/v/RxBus;
+    invoke-static {}, Lb/h/g/l/h;->a()Lb/h/v/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
 
     move-result-object v0
 
     sget-object v1, Lcom/vtosters/lite/data/k;->a:Lcom/vtosters/lite/data/k;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -118,7 +118,7 @@
     return p0
 .end method
 
-.method public static a(Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)Lio/reactivex/Observable;
+.method public static a(Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -126,7 +126,7 @@
             "Lcom/vk/dto/group/Group;",
             "Lcom/vtosters/lite/data/Groups$JoinType;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -137,16 +137,16 @@
 
     if-ne p1, v0, :cond_0
 
-    new-instance p1, Lcom/vk/api/groups/GroupsLeave;
+    new-instance p1, Lcom/vk/api/groups/t;
 
     iget p0, p0, Lcom/vk/dto/group/Group;->b:I
 
-    invoke-direct {p1, p0}, Lcom/vk/api/groups/GroupsLeave;-><init>(I)V
+    invoke-direct {p1, p0}, Lcom/vk/api/groups/t;-><init>(I)V
 
     goto :goto_1
 
     :cond_0
-    new-instance v0, Lcom/vk/api/groups/GroupsJoin;
+    new-instance v0, Lcom/vk/api/groups/s;
 
     iget p0, p0, Lcom/vk/dto/group/Group;->b:I
 
@@ -162,13 +162,13 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-direct {v0, p0, p1}, Lcom/vk/api/groups/GroupsJoin;-><init>(IZ)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/api/groups/s;-><init>(IZ)V
 
     move-object p1, v0
 
     .line 35
     :goto_1
-    invoke-virtual {p1}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
+    invoke-virtual {p1}, Lcom/vk/api/base/d;->m()Lc/a/m;
 
     move-result-object p0
 
@@ -176,7 +176,7 @@
 
     invoke-direct {p1}, Lcom/vtosters/lite/data/Groups$b;-><init>()V
 
-    invoke-virtual {p0, p1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p0
 
@@ -203,9 +203,9 @@
 
     .line 32
     :try_start_0
-    sget-object v1, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/SearchIndexer;
+    sget-object v1, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/b0;
 
-    invoke-virtual {v1, p0}, Lcom/vtosters/lite/SearchIndexer;->a(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {v1, p0}, Lcom/vtosters/lite/b0;->a(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p0
 
@@ -228,7 +228,7 @@
     .locals 3
 
     .line 37
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -241,15 +241,15 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 38
-    invoke-static {}, Lb/h/g/l/ProfleEvents4;->a()Lb/h/v/RxBus;
+    invoke-static {}, Lb/h/g/l/h;->a()Lb/h/v/d;
 
     move-result-object v0
 
-    new-instance v1, Lb/h/g/l/ProfleEvents1;
+    new-instance v1, Lb/h/g/l/a;
 
-    invoke-direct {v1}, Lb/h/g/l/ProfleEvents1;-><init>()V
+    invoke-direct {v1}, Lb/h/g/l/a;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -258,7 +258,7 @@
     .locals 3
 
     .line 36
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -318,7 +318,7 @@
     .line 48
     sget-object p0, Lcom/vtosters/lite/data/Groups;->b:Ljava/util/ArrayList;
 
-    invoke-static {p0}, Lcom/vtosters/lite/j0/GroupsCache;->a(Ljava/util/List;)V
+    invoke-static {p0}, Lcom/vtosters/lite/j0/d;->a(Ljava/util/List;)V
 
     :cond_1
     return-void
@@ -370,7 +370,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lb/h/g/l/ProfleEvents5;)V
+.method static synthetic a(Lb/h/g/l/f;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -379,7 +379,7 @@
     .end annotation
 
     .line 4
-    invoke-virtual {p0}, Lb/h/g/l/ProfleEvents5;->a()I
+    invoke-virtual {p0}, Lb/h/g/l/f;->a()I
 
     move-result v0
 
@@ -392,16 +392,16 @@
     if-ne v0, v3, :cond_0
 
     .line 5
-    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->h()I
+    invoke-static {}, Lcom/vtosters/lite/w;->h()I
 
     move-result p0
 
     add-int/lit8 p0, p0, -0x1
 
-    invoke-static {p0}, Lcom/vtosters/lite/MenuCountersState;->h(I)V
+    invoke-static {p0}, Lcom/vtosters/lite/w;->h(I)V
 
     .line 6
-    sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v0, Landroid/content/Intent;
 
@@ -413,7 +413,7 @@
 
     .line 7
     :cond_0
-    invoke-virtual {p0}, Lb/h/g/l/ProfleEvents5;->a()I
+    invoke-virtual {p0}, Lb/h/g/l/f;->a()I
 
     move-result v0
 
@@ -422,16 +422,16 @@
     if-ne v0, v3, :cond_1
 
     .line 8
-    check-cast p0, Lb/h/g/l/ProfleEvents6;
+    check-cast p0, Lb/h/g/l/j;
 
-    invoke-virtual {p0}, Lb/h/g/l/ProfleEvents6;->b()I
+    invoke-virtual {p0}, Lb/h/g/l/j;->b()I
 
     move-result p0
 
-    invoke-static {p0}, Lcom/vtosters/lite/MenuCountersState;->h(I)V
+    invoke-static {p0}, Lcom/vtosters/lite/w;->h(I)V
 
     .line 9
-    sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v0, Landroid/content/Intent;
 
@@ -459,11 +459,11 @@
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 12
-    sget-object v1, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/SearchIndexer;
+    sget-object v1, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/b0;
 
     sget-object v2, Lcom/vtosters/lite/data/Groups;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/SearchIndexer;->a(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/b0;->a(Ljava/util/List;)V
 
     .line 13
     monitor-exit v0
@@ -471,12 +471,12 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 14
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-static {p0, v0}, Lcom/vtosters/lite/j0/GroupsCache;->a(Lcom/vk/dto/group/Group;Landroid/content/Context;)V
+    invoke-static {p0, v0}, Lcom/vtosters/lite/j0/d;->a(Lcom/vk/dto/group/Group;Landroid/content/Context;)V
 
     .line 15
-    sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v0, Landroid/content/Intent;
 
@@ -659,11 +659,11 @@
     throw p0
 .end method
 
-.method static synthetic a(Ljava/util/ArrayList;Lcom/vk/common/g/Predicate;)V
+.method static synthetic a(Ljava/util/ArrayList;Lcom/vk/common/g/e;)V
     .locals 0
 
     .line 3
-    invoke-static {p0, p1}, Lcom/vtosters/lite/data/Groups;->b(Ljava/util/ArrayList;Lcom/vk/common/g/Predicate;)V
+    invoke-static {p0, p1}, Lcom/vtosters/lite/data/Groups;->b(Ljava/util/ArrayList;Lcom/vk/common/g/e;)V
 
     return-void
 .end method
@@ -739,14 +739,14 @@
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
     .line 19
-    sget-object v1, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/SearchIndexer;
+    sget-object v1, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/b0;
 
     sget-object v2, Lcom/vtosters/lite/data/Groups;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/SearchIndexer;->a(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/b0;->a(Ljava/util/List;)V
 
     .line 20
-    invoke-static {}, Lcom/vtosters/lite/j0/GroupsCache;->a()V
+    invoke-static {}, Lcom/vtosters/lite/j0/d;->a()V
 
     .line 21
     monitor-exit v0
@@ -800,13 +800,13 @@
     throw p0
 .end method
 
-.method private static b(Ljava/util/ArrayList;Lcom/vk/common/g/Predicate;)V
+.method private static b(Ljava/util/ArrayList;Lcom/vk/common/g/e;)V
     .locals 1
     .param p0    # Ljava/util/ArrayList;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lcom/vk/common/g/Predicate;
+    .param p1    # Lcom/vk/common/g/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -816,7 +816,7 @@
             "Ljava/util/ArrayList<",
             "Lcom/vk/dto/group/Group;",
             ">;",
-            "Lcom/vk/common/g/Predicate<",
+            "Lcom/vk/common/g/e<",
             "Lcom/vk/dto/group/Group;",
             ">;)V"
         }
@@ -841,7 +841,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/common/g/Predicate;->a(Ljava/lang/Object;)Z
+    invoke-interface {p1, v0}, Lcom/vk/common/g/e;->a(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -884,11 +884,11 @@
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     .line 8
-    sget-object p0, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/SearchIndexer;
+    sget-object p0, Lcom/vtosters/lite/data/Groups;->c:Lcom/vtosters/lite/b0;
 
     sget-object v1, Lcom/vtosters/lite/data/Groups;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {p0, v1}, Lcom/vtosters/lite/SearchIndexer;->a(Ljava/util/List;)V
+    invoke-virtual {p0, v1}, Lcom/vtosters/lite/b0;->a(Ljava/util/List;)V
 
     .line 9
     monitor-exit v0
@@ -896,7 +896,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 10
-    sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v0, Landroid/content/Intent;
 
@@ -979,12 +979,12 @@
     return-void
 .end method
 
-.method public static c(I)Lio/reactivex/Observable;
+.method public static c(I)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/dto/group/Group;",
             ">;"
         }
@@ -998,27 +998,27 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p0
 
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p0, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object p0
 
     .line 4
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p0, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p0
 
@@ -1026,17 +1026,17 @@
 
     .line 5
     :cond_0
-    new-instance v0, Lcom/vk/api/groups/GroupsGetById;
+    new-instance v0, Lcom/vk/api/groups/i;
 
-    invoke-direct {v0, p0}, Lcom/vk/api/groups/GroupsGetById;-><init>(I)V
+    invoke-direct {v0, p0}, Lcom/vk/api/groups/i;-><init>(I)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
 
     move-result-object p0
 
     sget-object v0, Lcom/vtosters/lite/data/l;->a:Lcom/vtosters/lite/data/l;
 
-    invoke-virtual {p0, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p0, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p0
 

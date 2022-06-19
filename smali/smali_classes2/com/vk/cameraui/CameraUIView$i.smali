@@ -3,7 +3,7 @@
 .source "CameraUIView.kt"
 
 # interfaces
-.implements Lcom/vk/media/camera/qrcode/CameraQRUtils$d;
+.implements Lcom/vk/media/camera/qrcode/b$d;
 
 
 # annotations
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
+.method public a(Lcom/vk/media/camera/qrcode/a$b;)V
     .locals 2
 
     .line 1
@@ -62,7 +62,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/cameraui/CameraUIView$i;->a:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/CameraUIView;->getCustomQrListener()Lkotlin/jvm/b/Functions2;
+    invoke-virtual {v1}, Lcom/vk/cameraui/CameraUIView;->getCustomQrListener()Lkotlin/jvm/b/b;
 
     move-result-object v1
 
@@ -71,21 +71,21 @@
     .line 4
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$i;->a:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/CameraUIView;->getCustomQrListener()Lkotlin/jvm/b/Functions2;
+    invoke-virtual {v0}, Lcom/vk/cameraui/CameraUIView;->getCustomQrListener()Lkotlin/jvm/b/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;->d()Lcom/google/zxing/client/result/ParsedResult;
+    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/a$b;->d()Lcom/google/zxing/client/result/ParsedResult;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     goto :goto_0
 
@@ -97,20 +97,20 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/media/camera/qrcode/a$b;)V
 
     .line 6
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIView$i;->a:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {p1}, Lcom/vk/cameraui/CameraUIView;->j(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/core/util/Dismissable;
+    invoke-static {p1}, Lcom/vk/cameraui/CameraUIView;->j(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/core/util/w;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/core/util/Dismissable;->dismiss()V
+    invoke-interface {p1}, Lcom/vk/core/util/w;->dismiss()V
 
     .line 7
     :cond_2
@@ -118,7 +118,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/cameraui/CameraUIView;->a(Lcom/vk/cameraui/CameraUIView;Lcom/vk/core/util/Dismissable;)V
+    invoke-static {p1, v0}, Lcom/vk/cameraui/CameraUIView;->a(Lcom/vk/cameraui/CameraUIView;Lcom/vk/core/util/w;)V
 
     :cond_3
     return-void
@@ -130,7 +130,7 @@
     .line 8
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$i;->a:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/CameraUIView;->getCustomQrListener()Lkotlin/jvm/b/Functions2;
+    invoke-virtual {v0}, Lcom/vk/cameraui/CameraUIView;->getCustomQrListener()Lkotlin/jvm/b/b;
 
     move-result-object v0
 

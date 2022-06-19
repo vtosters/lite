@@ -18,18 +18,18 @@
 # instance fields
 .field private final mCallback:Landroidx/browser/customtabs/CustomTabsCallback;
 
-.field final mCallbackBinder:Landroid/support/customtabs/ICustomTabsCallback;
+.field final mCallbackBinder:La/a/a/a;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/customtabs/ICustomTabsCallback;)V
+.method constructor <init>(La/a/a/a;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsSessionToken;->mCallbackBinder:Landroid/support/customtabs/ICustomTabsCallback;
+    iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsSessionToken;->mCallbackBinder:La/a/a/a;
 
     .line 3
     new-instance p1, Landroidx/browser/customtabs/CustomTabsSessionToken$1;
@@ -53,7 +53,7 @@
 
     invoke-direct {v1}, Landroidx/browser/customtabs/CustomTabsSessionToken$MockCallback;-><init>()V
 
-    invoke-direct {v0, v1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(Landroid/support/customtabs/ICustomTabsCallback;)V
+    invoke-direct {v0, v1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(La/a/a/a;)V
 
     return-object v0
 .end method
@@ -83,11 +83,11 @@
     :cond_0
     new-instance v0, Landroidx/browser/customtabs/CustomTabsSessionToken;
 
-    invoke-static {p0}, Landroid/support/customtabs/ICustomTabsCallback$a;->asInterface(Landroid/os/IBinder;)Landroid/support/customtabs/ICustomTabsCallback;
+    invoke-static {p0}, La/a/a/a$a;->asInterface(Landroid/os/IBinder;)La/a/a/a;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(Landroid/support/customtabs/ICustomTabsCallback;)V
+    invoke-direct {v0, p0}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(La/a/a/a;)V
 
     return-object v0
 .end method
@@ -115,7 +115,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken;->mCallbackBinder:Landroid/support/customtabs/ICustomTabsCallback;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken;->mCallbackBinder:La/a/a/a;
 
     invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
@@ -141,7 +141,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken;->mCallbackBinder:Landroid/support/customtabs/ICustomTabsCallback;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken;->mCallbackBinder:La/a/a/a;
 
     invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
@@ -173,7 +173,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken;->mCallbackBinder:Landroid/support/customtabs/ICustomTabsCallback;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken;->mCallbackBinder:La/a/a/a;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 

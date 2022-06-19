@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final a:Lcom/vk/im/log/ImLogger;
+.field private static final a:Lcom/vk/im/log/a;
 
 .field public static final b:Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;
 
@@ -32,11 +32,11 @@
     const-string v0, "ImMsgHistory"
 
     .line 2
-    invoke-static {v0}, Lcom/vk/im/log/ImLoggerFactory;->a(Ljava/lang/String;)Lcom/vk/im/log/ImLogger;
+    invoke-static {v0}, Lcom/vk/im/log/b;->a(Ljava/lang/String;)Lcom/vk/im/log/a;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a:Lcom/vk/im/log/ImLogger;
+    sput-object v0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a:Lcom/vk/im/log/a;
 
     return-void
 .end method
@@ -56,7 +56,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/e;",
             ">;",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -74,21 +74,21 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/e;
 
     .line 110
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result v2
 
-    invoke-static {p2, v2}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;I)Z
+    invoke-static {p2, v2}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;I)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 111
-    sget-object v2, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a:Lcom/vk/im/log/ImLogger;
+    sget-object v2, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a:Lcom/vk/im/log/a;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -98,7 +98,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result v1
 
@@ -112,13 +112,13 @@
 
     move-result-object v1
 
-    invoke-interface {v2, v1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/String;)V
+    invoke-interface {v2, v1}, Lcom/vk/im/log/a;->a(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 112
     :cond_0
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->b()Z
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/e;->b()Z
 
     move-result v2
 
@@ -128,7 +128,7 @@
 
     .line 113
     :cond_1
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->a()Z
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/e;->a()Z
 
     move-result v1
 
@@ -153,15 +153,15 @@
     return v0
 .end method
 
-.method private final a(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)I
+.method private final a(Ljava/util/List;Lcom/vk/im/engine/models/q;)I
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/e;",
             ">;",
-            "Lcom/vk/im/engine/models/Weight;",
+            "Lcom/vk/im/engine/models/q;",
             ")I"
         }
     .end annotation
@@ -183,13 +183,13 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v3, Lcom/vk/im/engine/internal/storage/models/e;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
 
     move-result-object v3
 
-    invoke-virtual {v3, p2}, Lcom/vk/im/engine/models/Weight;->a(Lcom/vk/im/engine/models/Weight;)I
+    invoke-virtual {v3, p2}, Lcom/vk/im/engine/models/q;->a(Lcom/vk/im/engine/models/q;)I
 
     move-result v3
 
@@ -219,13 +219,13 @@
     return p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -234,7 +234,7 @@
     .end annotation
 
     .line 64
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -244,45 +244,45 @@
     move-result-object p1
 
     .line 66
-    invoke-virtual {p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->d(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->d(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;
+.method public static final synthetic a(Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/messages/j;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/messages/j;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+.method private final a(Lcom/vk/im/engine/d;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
     .locals 0
 
     .line 44
-    invoke-direct {p0, p1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;I)Lcom/vk/im/engine/models/Weight;
+    invoke-direct {p0, p1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;I)Lcom/vk/im/engine/models/q;
 
     move-result-object p3
 
     .line 45
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;IILcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+.method private final a(Lcom/vk/im/engine/d;IILcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
     .locals 6
 
     .line 42
-    invoke-direct {p0, p1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;I)Lcom/vk/im/engine/models/Weight;
+    invoke-direct {p0, p1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;I)Lcom/vk/im/engine/models/q;
 
     move-result-object v3
 
@@ -297,28 +297,28 @@
     move v5, p5
 
     .line 43
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/commands/messages/MsgHistoryLoadMode3;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+.method private final a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/commands/messages/r;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
     .locals 9
 
     .line 4
-    instance-of v0, p3, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode5;
+    instance-of v0, p3, Lcom/vk/im/engine/commands/messages/u;
 
     if-eqz v0, :cond_0
 
-    check-cast p3, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode5;
+    check-cast p3, Lcom/vk/im/engine/commands/messages/u;
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode5;->b()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/u;->b()Lcom/vk/im/engine/models/q;
 
     move-result-object v3
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode5;->a()Lcom/vk/im/engine/models/Direction;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/u;->a()Lcom/vk/im/engine/models/Direction;
 
     move-result-object v4
 
@@ -330,7 +330,7 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -338,24 +338,24 @@
 
     .line 5
     :cond_0
-    instance-of v0, p3, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode6;
+    instance-of v0, p3, Lcom/vk/im/engine/commands/messages/q;
 
     if-eqz v0, :cond_3
 
     .line 6
-    check-cast p3, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode6;
+    check-cast p3, Lcom/vk/im/engine/commands/messages/q;
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode6;->a()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/q;->a()Lcom/vk/im/engine/models/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight;->d()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/q;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode6;->a()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/q;->a()Lcom/vk/im/engine/models/q;
 
     move-result-object v4
 
@@ -369,7 +369,7 @@
 
     move v6, p4
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -377,17 +377,17 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode6;->a()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/q;->a()Lcom/vk/im/engine/models/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight;->e()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/q;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode6;->a()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/q;->a()Lcom/vk/im/engine/models/q;
 
     move-result-object v4
 
@@ -401,7 +401,7 @@
 
     move v6, p4
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -409,11 +409,11 @@
 
     .line 8
     :cond_2
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode6;->a()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/q;->a()Lcom/vk/im/engine/models/q;
 
     move-result-object p3
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -421,7 +421,7 @@
 
     .line 9
     :cond_3
-    instance-of v0, p3, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode1;
+    instance-of v0, p3, Lcom/vk/im/engine/commands/messages/t;
 
     const/4 v1, 0x2
 
@@ -429,9 +429,9 @@
 
     if-eqz v0, :cond_6
 
-    check-cast p3, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode1;
+    check-cast p3, Lcom/vk/im/engine/commands/messages/t;
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode1;->c()Lcom/vk/im/engine/models/messages/MsgIdType;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/t;->c()Lcom/vk/im/engine/models/messages/MsgIdType;
 
     move-result-object v0
 
@@ -448,11 +448,11 @@
     if-ne v0, v1, :cond_4
 
     .line 10
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode1;->b()I
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/t;->b()I
 
     move-result v6
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode1;->a()Lcom/vk/im/engine/models/Direction;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/t;->a()Lcom/vk/im/engine/models/Direction;
 
     move-result-object v7
 
@@ -464,7 +464,7 @@
 
     move v8, p4
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/ImEnvironment;IILcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v3 .. v8}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/d;IILcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -479,11 +479,11 @@
 
     .line 11
     :cond_5
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode1;->b()I
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/t;->b()I
 
     move-result v3
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode1;->a()Lcom/vk/im/engine/models/Direction;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/t;->a()Lcom/vk/im/engine/models/Direction;
 
     move-result-object v4
 
@@ -495,7 +495,7 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;IILcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;IILcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -503,13 +503,13 @@
 
     .line 12
     :cond_6
-    instance-of v0, p3, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode2;
+    instance-of v0, p3, Lcom/vk/im/engine/commands/messages/o;
 
     if-eqz v0, :cond_b
 
-    check-cast p3, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode2;
+    check-cast p3, Lcom/vk/im/engine/commands/messages/o;
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode2;->b()Lcom/vk/im/engine/models/messages/MsgIdType;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/o;->b()Lcom/vk/im/engine/models/messages/MsgIdType;
 
     move-result-object v0
 
@@ -526,7 +526,7 @@
     if-ne v0, v1, :cond_9
 
     .line 13
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode2;->a()I
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/o;->a()I
 
     move-result v0
 
@@ -534,9 +534,9 @@
 
     if-ne v0, v1, :cond_7
 
-    sget-object p3, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object p3, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p3}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
 
     move-result-object v3
 
@@ -550,7 +550,7 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -558,15 +558,15 @@
 
     .line 14
     :cond_7
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode2;->a()I
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/o;->a()I
 
     move-result v0
 
     if-gtz v0, :cond_8
 
-    sget-object p3, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object p3, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/models/Weight$a;->d()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p3}, Lcom/vk/im/engine/models/q$a;->d()Lcom/vk/im/engine/models/q;
 
     move-result-object v3
 
@@ -580,7 +580,7 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -588,11 +588,11 @@
 
     .line 15
     :cond_8
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode2;->a()I
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/o;->a()I
 
     move-result p3
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/ImEnvironment;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/d;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -608,11 +608,11 @@
 
     .line 17
     :cond_a
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode2;->a()I
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/o;->a()I
 
     move-result p3
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -620,11 +620,11 @@
 
     .line 18
     :cond_b
-    instance-of p3, p3, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode;
+    instance-of p3, p3, Lcom/vk/im/engine/commands/messages/p;
 
     if-eqz p3, :cond_c
 
-    invoke-direct {p0, p1, p2, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/ImEnvironment;II)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct {p0, p1, p2, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/d;II)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -639,7 +639,7 @@
     throw p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+.method private final a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
     .locals 10
 
     const/4 v0, 0x0
@@ -653,7 +653,7 @@
 
     invoke-direct {p2, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/q;)V
 
     return-object p1
 
@@ -678,7 +678,7 @@
 
     move-object v6, p3
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v3 .. v8}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object v1
 
@@ -704,7 +704,7 @@
 
     move-object v7, p3
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -734,9 +734,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast p2, Lcom/vk/im/engine/internal/storage/models/e;
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result p2
 
@@ -744,9 +744,9 @@
 
     move-result-object p4
 
-    check-cast p4, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast p4, Lcom/vk/im/engine/internal/storage/models/e;
 
-    invoke-virtual {p4}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {p4}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result p4
 
@@ -803,7 +803,7 @@
     .line 38
     new-instance p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/q;)V
 
     goto :goto_0
 
@@ -819,7 +819,7 @@
 
     new-instance p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
-    invoke-direct {p1, v1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)V
+    invoke-direct {p1, v1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/q;)V
 
     goto :goto_0
 
@@ -835,7 +835,7 @@
 
     new-instance p2, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
-    invoke-direct {p2, p1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)V
+    invoke-direct {p2, p1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/q;)V
 
     move-object p1, p2
 
@@ -849,13 +849,13 @@
 
     invoke-direct {p2, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/q;)V
 
     :goto_0
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+.method private final a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
     .locals 8
 
     if-nez p5, :cond_0
@@ -869,13 +869,13 @@
 
     invoke-direct {p2, p4}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/q;)V
 
     return-object p1
 
     .line 20
     :cond_0
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -899,7 +899,7 @@
     move v4, p5
 
     .line 22
-    invoke-static/range {v0 .. v7}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;IIILjava/lang/Object;)Ljava/util/List;
+    invoke-static/range {v0 .. v7}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;IIILjava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
@@ -915,12 +915,12 @@
     :cond_1
     new-instance p2, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
-    invoke-direct {p2, p1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)V
+    invoke-direct {p2, p1, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/q;)V
 
     return-object p2
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;)Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+.method private final a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;)Lcom/vk/im/engine/internal/storage/models/e;
     .locals 6
 
     const/4 v5, 0x2
@@ -936,7 +936,7 @@
     move-object v4, p4
 
     .line 62
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -951,7 +951,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/e;
 
     return-object p1
 .end method
@@ -975,27 +975,27 @@
     if-eqz v0, :cond_1
 
     .line 68
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->g()Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->g()Lcom/vk/im/engine/models/messages/d;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->g()Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->g()Lcom/vk/im/engine/models/messages/d;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;->c()Z
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/messages/d;->c()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->g()Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->g()Lcom/vk/im/engine/models/messages/d;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;->b()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/messages/d;->b()I
 
     move-result p2
 
@@ -1049,12 +1049,12 @@
     invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(I)V
 
     .line 74
-    new-instance v4, Lcom/vk/im/engine/utils/collection/IntArraySet;
+    new-instance v4, Lcom/vk/im/engine/utils/collection/c;
 
-    invoke-direct {v4}, Lcom/vk/im/engine/utils/collection/IntArraySet;-><init>()V
+    invoke-direct {v4}, Lcom/vk/im/engine/utils/collection/c;-><init>()V
 
     .line 75
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object v5
 
@@ -1062,12 +1062,12 @@
 
     invoke-direct {v6, p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$createMsgHistory$1;-><init>(Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;)V
 
-    invoke-static {v5, v6}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v5, v6}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v5
 
     .line 76
-    invoke-interface {v5}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {v5}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
@@ -1083,14 +1083,14 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v6, Lcom/vk/im/engine/internal/storage/models/e;
 
     .line 77
     invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->e()Landroid/util/SparseArray;
 
     move-result-object v7
 
-    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result v8
 
@@ -1106,7 +1106,7 @@
     invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 79
-    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->d()I
+    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/e;->d()I
 
     move-result v8
 
@@ -1128,17 +1128,17 @@
 
     .line 80
     :cond_4
-    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result v6
 
-    invoke-virtual {v4, v6}, Lcom/vk/im/engine/utils/collection/IntArraySet;->add(I)V
+    invoke-virtual {v4, v6}, Lcom/vk/im/engine/utils/collection/c;->add(I)V
 
     goto :goto_1
 
     .line 81
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -1159,29 +1159,29 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast p2, Lcom/vk/im/engine/internal/storage/models/e;
 
     .line 85
     invoke-static {v0}, Lkotlin/collections/l;->i(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/e;
 
     .line 86
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->b()Z
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/e;->b()Z
 
     move-result v5
 
     if-nez v5, :cond_8
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->d()Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->d()Lcom/vk/im/engine/internal/storage/models/e;
 
     move-result-object v5
 
     if-eqz v5, :cond_8
 
-    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->a()Z
+    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/e;->a()Z
 
     move-result v5
 
@@ -1198,13 +1198,13 @@
     if-nez v5, :cond_a
 
     .line 87
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->b()Z
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/e;->b()Z
 
     move-result v6
 
     if-nez v6, :cond_a
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->d()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/e;->d()I
 
     move-result p2
 
@@ -1214,7 +1214,7 @@
 
     if-ne p2, v6, :cond_a
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->d()Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->d()Lcom/vk/im/engine/internal/storage/models/e;
 
     move-result-object p2
 
@@ -1233,19 +1233,19 @@
 
     .line 88
     :goto_4
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->a()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->a()Z
 
     move-result v6
 
     if-nez v6, :cond_b
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->c()Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->c()Lcom/vk/im/engine/internal/storage/models/e;
 
     move-result-object v6
 
     if-eqz v6, :cond_b
 
-    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->b()Z
+    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/e;->b()Z
 
     move-result v6
 
@@ -1262,13 +1262,13 @@
     if-nez v6, :cond_d
 
     .line 89
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->a()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->a()Z
 
     move-result v7
 
     if-nez v7, :cond_d
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->d()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->d()I
 
     move-result v0
 
@@ -1278,7 +1278,7 @@
 
     if-ne v0, v7, :cond_d
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->c()Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->c()Lcom/vk/im/engine/internal/storage/models/e;
 
     move-result-object p1
 
@@ -1313,7 +1313,7 @@
 
     move v6, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/models/messages/MsgHistory;-><init>(Ljava/lang/Iterable;Lcom/vk/im/engine/utils/collection/IntSet;ZZZZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/models/messages/MsgHistory;-><init>(Ljava/lang/Iterable;Lcom/vk/im/engine/utils/collection/h;ZZZZ)V
 
     return-object v7
 .end method
@@ -1329,31 +1329,31 @@
     xor-int/lit8 v1, p1, 0x1
 
     .line 92
-    iput-boolean v1, v0, Lcom/vk/im/engine/models/History;->hasHistoryBeforeCached:Z
+    iput-boolean v1, v0, Lcom/vk/im/engine/models/d;->hasHistoryBeforeCached:Z
 
     xor-int/lit8 v1, p1, 0x1
 
     .line 93
-    iput-boolean v1, v0, Lcom/vk/im/engine/models/History;->hasHistoryBefore:Z
+    iput-boolean v1, v0, Lcom/vk/im/engine/models/d;->hasHistoryBefore:Z
 
     xor-int/lit8 v1, p1, 0x1
 
     .line 94
-    iput-boolean v1, v0, Lcom/vk/im/engine/models/History;->hasHistoryAfterCached:Z
+    iput-boolean v1, v0, Lcom/vk/im/engine/models/d;->hasHistoryAfterCached:Z
 
     xor-int/lit8 p1, p1, 0x1
 
     .line 95
-    iput-boolean p1, v0, Lcom/vk/im/engine/models/History;->hasHistoryAfter:Z
+    iput-boolean p1, v0, Lcom/vk/im/engine/models/d;->hasHistoryAfter:Z
 
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;I)Lcom/vk/im/engine/models/Weight;
+.method private final a(Lcom/vk/im/engine/d;I)Lcom/vk/im/engine/models/q;
     .locals 0
 
     .line 46
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -1363,7 +1363,7 @@
     move-result-object p1
 
     .line 48
-    invoke-virtual {p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->m(I)Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->m(I)Lcom/vk/im/engine/models/q;
 
     move-result-object p1
 
@@ -1373,9 +1373,9 @@
 
     .line 49
     :cond_0
-    sget-object p1, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object p1, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
 
     move-result-object p1
 
@@ -1383,11 +1383,11 @@
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;II)Lcom/vk/im/engine/models/Weight;
+.method private final a(Lcom/vk/im/engine/d;II)Lcom/vk/im/engine/models/q;
     .locals 1
 
     .line 50
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -1397,14 +1397,14 @@
     move-result-object v0
 
     .line 52
-    invoke-virtual {v0, p3}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->h(I)Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    invoke-virtual {v0, p3}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->h(I)Lcom/vk/im/engine/internal/storage/models/e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 53
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
 
     move-result-object p1
 
@@ -1412,7 +1412,7 @@
 
     .line 54
     :cond_0
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -1422,34 +1422,34 @@
     move-result-object p1
 
     .line 56
-    invoke-virtual {p1, p2, p3}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->e(II)Lcom/vk/im/engine/models/Nearest;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->e(II)Lcom/vk/im/engine/models/i;
 
     move-result-object p1
 
     .line 57
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/Nearest;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/i;->b()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast p2, Lcom/vk/im/engine/internal/storage/models/e;
 
     .line 58
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/Nearest;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/i;->a()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/e;
 
     if-eqz p2, :cond_1
 
     .line 59
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->a()Z
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/e;->a()Z
 
     move-result p3
 
     if-nez p3, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
 
     move-result-object p1
 
@@ -1459,13 +1459,13 @@
     if-eqz p1, :cond_2
 
     .line 60
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->b()Z
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/e;->b()Z
 
     move-result p2
 
     if-nez p2, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
 
     move-result-object p1
 
@@ -1473,9 +1473,9 @@
 
     .line 61
     :cond_2
-    sget-object p1, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object p1, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
 
     move-result-object p1
 
@@ -1491,7 +1491,7 @@
             "Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/e;",
             ">;"
         }
     .end annotation
@@ -1503,11 +1503,11 @@
 
     move-result-object v1
 
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->b()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;->b()Lcom/vk/im/engine/models/q;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)I
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Ljava/util/List;Lcom/vk/im/engine/models/q;)I
 
     move-result v1
 
@@ -1619,7 +1619,7 @@
 
     move-object v8, v1
 
-    check-cast v8, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v8, Lcom/vk/im/engine/internal/storage/models/e;
 
     const/4 v9, 0x0
 
@@ -1641,7 +1641,7 @@
 
     const/16 v18, 0x0
 
-    invoke-static/range {v8 .. v18}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->a(Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;IIIZLcom/vk/im/engine/models/Weight;ZZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    invoke-static/range {v8 .. v18}, Lcom/vk/im/engine/internal/storage/models/e;->a(Lcom/vk/im/engine/internal/storage/models/e;IIIZLcom/vk/im/engine/models/q;ZZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/e;
 
     move-result-object v1
 
@@ -1674,7 +1674,7 @@
 
     move-object v8, v2
 
-    check-cast v8, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v8, Lcom/vk/im/engine/internal/storage/models/e;
 
     const/4 v9, 0x0
 
@@ -1696,7 +1696,7 @@
 
     const/16 v18, 0x0
 
-    invoke-static/range {v8 .. v18}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->a(Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;IIIZLcom/vk/im/engine/models/Weight;ZZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    invoke-static/range {v8 .. v18}, Lcom/vk/im/engine/internal/storage/models/e;->a(Lcom/vk/im/engine/internal/storage/models/e;IIIZLcom/vk/im/engine/models/q;ZZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/e;
 
     move-result-object v2
 
@@ -1715,7 +1715,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/e;",
             ">;",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -1745,21 +1745,21 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v3, Lcom/vk/im/engine/internal/storage/models/e;
 
     .line 33
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result v4
 
-    invoke-static {p2, v4}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;I)Z
+    invoke-static {p2, v4}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;I)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
     .line 34
-    sget-object v4, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a:Lcom/vk/im/log/ImLogger;
+    sget-object v4, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a:Lcom/vk/im/log/a;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1769,7 +1769,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result v3
 
@@ -1783,13 +1783,13 @@
 
     move-result-object v3
 
-    invoke-interface {v4, v3}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/String;)V
+    invoke-interface {v4, v3}, Lcom/vk/im/log/a;->a(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 35
     :cond_0
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->a()Z
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/e;->a()Z
 
     move-result v4
 
@@ -1801,7 +1801,7 @@
 
     .line 36
     :cond_1
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->b()Z
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/e;->b()Z
 
     move-result v3
 
@@ -1824,32 +1824,32 @@
     return v0
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;
+.method private final b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/messages/j;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;
     .locals 9
 
     .line 1
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;->b()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/j;->b()I
 
     move-result v0
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/ImEnvironment;I)Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/d;I)Lcom/vk/im/engine/models/messages/d;
 
     move-result-object v2
 
     .line 2
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;->b()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/j;->b()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;->d()Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode3;
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/j;->d()Lcom/vk/im/engine/commands/messages/r;
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;->c()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/j;->c()I
 
     move-result v3
 
-    invoke-direct {p0, p1, v0, v1, v3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/commands/messages/MsgHistoryLoadMode3;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct {p0, p1, v0, v1, v3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/commands/messages/r;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object v0
 
@@ -1859,7 +1859,7 @@
     move-result-object v3
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->a()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->a()Lcom/vk/im/engine/models/q;
 
     move-result-object v6
 
@@ -1878,7 +1878,7 @@
 
     .line 6
     :cond_0
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;->b()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/j;->b()I
 
     move-result v0
 
@@ -1886,15 +1886,15 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v4, Lcom/vk/im/engine/internal/storage/models/e;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
 
     move-result-object v4
 
     sget-object v5, Lcom/vk/im/engine/models/Direction;->BEFORE:Lcom/vk/im/engine/models/Direction;
 
-    invoke-direct {p0, p1, v0, v4, v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;)Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    invoke-direct {p0, p1, v0, v4, v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;)Lcom/vk/im/engine/internal/storage/models/e;
 
     move-result-object v0
 
@@ -1914,7 +1914,7 @@
 
     .line 8
     :cond_1
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;->b()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/j;->b()I
 
     move-result p2
 
@@ -1922,15 +1922,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/im/engine/models/Direction;->AFTER:Lcom/vk/im/engine/models/Direction;
 
-    invoke-direct {p0, p1, p2, v0, v1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;)Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    invoke-direct {p0, p1, p2, v0, v1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;)Lcom/vk/im/engine/internal/storage/models/e;
 
     move-result-object p2
 
@@ -1947,7 +1947,7 @@
 
     move-result v0
 
-    invoke-interface {p2, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->d(I)V
+    invoke-interface {p2, v0}, Lcom/vk/im/engine/utils/collection/d;->d(I)V
 
     .line 11
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1966,32 +1966,32 @@
     move-result-object v1
 
     .line 12
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/e;
 
     .line 13
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result v1
 
-    invoke-interface {p2, v1}, Lcom/vk/im/engine/utils/collection/IntCollection;->add(I)V
+    invoke-interface {p2, v1}, Lcom/vk/im/engine/utils/collection/d;->add(I)V
 
     goto :goto_2
 
     :cond_2
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object v7
 
     .line 14
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
 
     move-result v8
 
@@ -2000,31 +2000,31 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;-><init>(Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;Ljava/util/List;Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;Lcom/vk/im/engine/models/Weight;Landroid/util/SparseArray;I)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;-><init>(Lcom/vk/im/engine/models/messages/d;Ljava/util/List;Lcom/vk/im/engine/internal/storage/models/e;Lcom/vk/im/engine/internal/storage/models/e;Lcom/vk/im/engine/models/q;Landroid/util/SparseArray;I)V
 
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;II)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+.method private final b(Lcom/vk/im/engine/d;II)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
     .locals 7
 
     .line 23
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     .line 24
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
 
     move-result-object v0
 
     .line 25
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v0
 
     .line 26
-    invoke-virtual {v0, p2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->c(I)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    invoke-virtual {v0, p2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->c(I)Lcom/vk/im/engine/internal/storage/models/a;
 
     move-result-object v0
 
@@ -2039,29 +2039,29 @@
 
     invoke-direct {p2, p3}, Ljava/util/ArrayList;-><init>(I)V
 
-    sget-object p3, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object p3, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {p3}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {p3}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
 
     move-result-object p3
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/q;)V
 
     goto :goto_0
 
     .line 28
     :cond_0
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->g()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/a;->g()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->x()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/a;->x()I
 
     move-result v0
 
-    invoke-direct {p0, p1, p2, v0, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/ImEnvironment;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct {p0, p1, p2, v0, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b(Lcom/vk/im/engine/d;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -2069,9 +2069,9 @@
 
     .line 29
     :cond_1
-    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
+    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
 
     move-result-object v4
 
@@ -2085,7 +2085,7 @@
 
     move v6, p3
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
@@ -2093,27 +2093,27 @@
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+.method private final b(Lcom/vk/im/engine/d;III)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
     .locals 0
 
     .line 21
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;II)Lcom/vk/im/engine/models/Weight;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;II)Lcom/vk/im/engine/models/q;
 
     move-result-object p3
 
     .line 22
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;IILcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+.method private final b(Lcom/vk/im/engine/d;IILcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
     .locals 6
 
     .line 19
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;II)Lcom/vk/im/engine/models/Weight;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;II)Lcom/vk/im/engine/models/q;
 
     move-result-object v3
 
@@ -2128,18 +2128,18 @@
     move v5, p5
 
     .line 20
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;I)Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+.method private final b(Lcom/vk/im/engine/d;I)Lcom/vk/im/engine/models/messages/d;
     .locals 0
 
     .line 16
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -2149,7 +2149,7 @@
     move-result-object p1
 
     .line 18
-    invoke-virtual {p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->i(I)Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+    invoke-virtual {p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->i(I)Lcom/vk/im/engine/models/messages/d;
 
     move-result-object p1
 
@@ -2158,26 +2158,26 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;)Lcom/vk/im/engine/models/messages/MsgHistory;
+.method public final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/messages/j;)Lcom/vk/im/engine/models/messages/MsgHistory;
     .locals 2
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;
 
-    invoke-direct {v1, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;-><init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;)V
+    invoke-direct {v1, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;-><init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/messages/j;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;
 
     .line 3
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;->e()Lcom/vk/im/engine/models/Order;
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/messages/j;->e()Lcom/vk/im/engine/models/Order;
 
     move-result-object p2
 

@@ -3,7 +3,7 @@
 .source "DiscoverFragment.kt"
 
 # interfaces
-.implements Lb/h/g/l/NotificationListener;
+.implements Lb/h/g/l/e;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/g/l/NotificationListener<",
+        "Lb/h/g/l/e<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;"
     }

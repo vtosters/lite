@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions;Z)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/a;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,11 +28,11 @@
 
 .field final synthetic e:Ljava/lang/CharSequence;
 
-.field final synthetic f:Lkotlin/jvm/b/Functions;
+.field final synthetic f:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$c;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;
@@ -45,7 +45,7 @@
 
     iput-object p5, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$c;->e:Ljava/lang/CharSequence;
 
-    iput-object p6, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$c;->f:Lkotlin/jvm/b/Functions;
+    iput-object p6, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$c;->f:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -68,9 +68,9 @@
 
     iget-object v4, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$c;->e:Ljava/lang/CharSequence;
 
-    iget-object v5, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$c;->f:Lkotlin/jvm/b/Functions;
+    iget-object v5, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$c;->f:Lkotlin/jvm/b/a;
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

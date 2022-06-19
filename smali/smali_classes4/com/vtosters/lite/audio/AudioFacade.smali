@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/audio/AudioFacade;
-.super Lcom/vk/music/PlayerIntents;
+.super Lcom/vk/music/c;
 .source "AudioFacade.java"
 
 
@@ -30,11 +30,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
+    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/music/j/MusicPrefs;->l()Z
+    invoke-virtual {v0}, Lcom/vk/music/j/a;->l()Z
 
     move-result v0
 
@@ -45,12 +45,12 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
+    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
 
     move-result-object v0
 
     .line 2
-    sget-object v1, Lcom/vk/bridges/VoipBridge1;->a:Lcom/vk/bridges/VoipBridge;
+    sget-object v1, Lcom/vk/bridges/n0;->a:Lcom/vk/bridges/m0;
 
     .line 3
     invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->u()Lcom/vk/music/player/PlayState;
@@ -61,13 +61,13 @@
 
     if-ne v2, v3, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/music/j/MusicPrefs;->f()Z
+    invoke-virtual {v0}, Lcom/vk/music/j/a;->f()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v1}, Lcom/vk/bridges/VoipBridge;->p()Z
+    invoke-interface {v1}, Lcom/vk/bridges/m0;->p()Z
 
     move-result v1
 
@@ -76,10 +76,10 @@
     const/4 v1, 0x0
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/music/j/MusicPrefs;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/j/a;->a(Z)V
 
     .line 5
-    invoke-static {}, Lcom/vk/music/PlayerIntents;->h()V
+    invoke-static {}, Lcom/vk/music/c;->h()V
 
     :cond_0
     return-void
@@ -101,7 +101,7 @@
 
     .line 63
     :cond_0
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -168,7 +168,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p0}, Lcom/vtosters/lite/audio/utils/Utils;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vtosters/lite/audio/utils/e;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -193,9 +193,9 @@
     .locals 5
 
     .line 14
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -209,7 +209,7 @@
     if-eqz v1, :cond_0
 
     .line 16
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->f()J
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->f()J
 
     move-result-wide v1
 
@@ -225,7 +225,7 @@
 
     float-to-int p0, p0
 
-    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/player/Player;->b(I)Z
+    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/player/u;->b(I)Z
 
     :cond_0
     return-void
@@ -246,7 +246,7 @@
     .line 20
     sget-object v0, Lcom/vk/music/player/PlayerRequest;->ACTION_ADD_TO_PLAYLIST:Lcom/vk/music/player/PlayerRequest;
 
-    invoke-static {p0, v0}, Lcom/vk/music/PlayerIntents;->a(Landroid/content/Context;Lcom/vk/music/player/PlayerRequest;)Landroid/content/Intent;
+    invoke-static {p0, v0}, Lcom/vk/music/c;->a(Landroid/content/Context;Lcom/vk/music/player/PlayerRequest;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -256,7 +256,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     .line 22
-    invoke-static {p0, v0}, Lcom/vk/music/PlayerIntents;->a(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p0, v0}, Lcom/vk/music/c;->a(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -276,7 +276,7 @@
     .line 17
     sget-object v0, Lcom/vk/music/player/PlayerRequest;->ACTION_PLAY_NEXT:Lcom/vk/music/player/PlayerRequest;
 
-    invoke-static {p0, v0}, Lcom/vk/music/PlayerIntents;->a(Landroid/content/Context;Lcom/vk/music/player/PlayerRequest;)Landroid/content/Intent;
+    invoke-static {p0, v0}, Lcom/vk/music/c;->a(Landroid/content/Context;Lcom/vk/music/player/PlayerRequest;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -290,7 +290,7 @@
     invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     .line 19
-    invoke-static {p0, v0}, Lcom/vk/music/PlayerIntents;->a(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p0, v0}, Lcom/vk/music/c;->a(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -325,9 +325,9 @@
     .locals 1
 
     .line 12
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -337,7 +337,7 @@
 
     .line 13
     :cond_0
-    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/player/Player;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/player/u;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     return-void
 .end method
@@ -358,12 +358,12 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vtosters/lite/audio/a;-><init>(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;)V
 
-    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PlayerConnection;->a(Lcom/vtosters/lite/audio/player/PlayerConnection$b;)V
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/v;->a(Lcom/vtosters/lite/audio/player/v$b;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;Lcom/vtosters/lite/audio/player/Player;)V
+.method static synthetic a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;Lcom/vtosters/lite/audio/player/u;)V
     .locals 0
     .param p0    # Lcom/vk/music/player/PauseReason;
         .annotation build Landroidx/annotation/NonNull;
@@ -375,7 +375,7 @@
     .end param
 
     .line 35
-    invoke-virtual {p2, p0, p1}, Lcom/vtosters/lite/audio/player/Player;->a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;)Z
+    invoke-virtual {p2, p0, p1}, Lcom/vtosters/lite/audio/player/u;->a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -384,9 +384,9 @@
     .locals 1
 
     .line 8
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -401,49 +401,49 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p0, p1}, Lcom/vtosters/lite/audio/player/Player;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p0, p1}, Lcom/vtosters/lite/audio/player/u;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static a(Lcom/vk/music/player/PlayerListener;)V
+.method public static a(Lcom/vk/music/player/c;)V
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/AudioStateListener;->a(Lcom/vk/music/player/PlayerListener;)V
+    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/d;->a(Lcom/vk/music/player/c;)V
 
     return-void
 .end method
 
-.method public static a(Lcom/vk/music/player/PlayerListener;Z)V
+.method public static a(Lcom/vk/music/player/c;Z)V
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0, p0, p1}, Lcom/vtosters/lite/audio/AudioStateListener;->a(Lcom/vk/music/player/PlayerListener;Z)V
+    invoke-virtual {v0, p0, p1}, Lcom/vtosters/lite/audio/d;->a(Lcom/vk/music/player/c;Z)V
 
     return-void
 .end method
 
-.method static a(Lcom/vk/music/player/TrackInfo;)V
+.method static a(Lcom/vk/music/player/e;)V
     .locals 2
 
     .line 38
-    invoke-virtual {p0}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p0}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
     iget v0, v0, Lcom/vk/dto/music/MusicTrack;->e:I
 
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->b()I
+    invoke-interface {v1}, Lcom/vk/bridges/f;->b()I
 
     move-result v1
 
@@ -456,19 +456,19 @@
     if-eqz v0, :cond_0
 
     .line 39
-    invoke-virtual {p0}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p0}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/vk/music/PlayerIntents;->a(Lcom/vk/dto/music/MusicTrack;Z)V
+    invoke-static {p0, v0}, Lcom/vk/music/c;->a(Lcom/vk/dto/music/MusicTrack;Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public static a(Lcom/vtosters/lite/audio/AudioFacade$StorageType;Lcom/vtosters/lite/audio/AudioFacade$StorageType;Lcom/vtosters/lite/ProgressCallback;)V
+.method public static a(Lcom/vtosters/lite/audio/AudioFacade$StorageType;Lcom/vtosters/lite/audio/AudioFacade$StorageType;Lcom/vtosters/lite/z;)V
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -503,7 +503,7 @@
 
     .line 43
     :cond_0
-    sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const/4 v0, 0x0
 
@@ -520,7 +520,7 @@
     if-nez p0, :cond_1
 
     .line 46
-    invoke-interface {p2}, Lcom/vtosters/lite/ProgressCallback;->a()V
+    invoke-interface {p2}, Lcom/vtosters/lite/z;->a()V
 
     return-void
 
@@ -528,7 +528,7 @@
     :cond_1
     array-length v0, p0
 
-    invoke-interface {p2, v0}, Lcom/vtosters/lite/ProgressCallback;->b(I)V
+    invoke-interface {p2, v0}, Lcom/vtosters/lite/z;->b(I)V
 
     .line 48
     sget-object v0, Lcom/vtosters/lite/audio/player/SavedTrack;->g:Lcom/vtosters/lite/audio/player/SavedTrack$b;
@@ -608,7 +608,7 @@
     invoke-direct {v6, p1, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 55
-    invoke-static {v5, v6, v2}, Lcom/vtosters/lite/audio/utils/Utils;->a(Ljava/io/File;Ljava/io/File;Z)V
+    invoke-static {v5, v6, v2}, Lcom/vtosters/lite/audio/utils/e;->a(Ljava/io/File;Ljava/io/File;Z)V
 
     .line 56
     invoke-interface {v1, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -623,13 +623,13 @@
     iput-object v6, v5, Lcom/vtosters/lite/audio/player/SavedTrack;->e:Ljava/io/File;
 
     .line 58
-    invoke-virtual {v5}, Lcom/vtosters/lite/audio/f/DataObject;->G()Z
+    invoke-virtual {v5}, Lcom/vtosters/lite/audio/f/a;->G()Z
 
     :cond_4
     add-int/lit8 v4, v4, 0x1
 
     .line 59
-    invoke-interface {p2, v4}, Lcom/vtosters/lite/ProgressCallback;->a(I)V
+    invoke-interface {p2, v4}, Lcom/vtosters/lite/z;->a(I)V
 
     :goto_2
     add-int/lit8 v3, v3, 0x1
@@ -638,14 +638,14 @@
 
     .line 60
     :cond_5
-    invoke-interface {p2}, Lcom/vtosters/lite/ProgressCallback;->a()V
+    invoke-interface {p2}, Lcom/vtosters/lite/z;->a()V
 
     return-void
 
     .line 61
     :cond_6
     :goto_3
-    invoke-interface {p2}, Lcom/vtosters/lite/ProgressCallback;->a()V
+    invoke-interface {p2}, Lcom/vtosters/lite/z;->a()V
 
     return-void
 .end method
@@ -674,9 +674,9 @@
 
     .line 4
     :cond_0
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->h()Lcom/vtosters/lite/audio/player/SavedTracks;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->h()Lcom/vtosters/lite/audio/player/SavedTracks;
 
     move-result-object v0
 
@@ -690,25 +690,25 @@
     :cond_1
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lcom/vtosters/lite/audio/player/PlayerConnection;
+    new-array v0, v0, [Lcom/vtosters/lite/audio/player/v;
 
     .line 6
-    new-instance v1, Lcom/vtosters/lite/audio/player/PlayerConnection;
+    new-instance v1, Lcom/vtosters/lite/audio/player/v;
 
     new-instance v2, Lcom/vtosters/lite/audio/AudioFacade$a;
 
-    invoke-direct {v2, v0, p0, p1}, Lcom/vtosters/lite/audio/AudioFacade$a;-><init>([Lcom/vtosters/lite/audio/player/PlayerConnection;Ljava/util/Collection;Z)V
+    invoke-direct {v2, v0, p0, p1}, Lcom/vtosters/lite/audio/AudioFacade$a;-><init>([Lcom/vtosters/lite/audio/player/v;Ljava/util/Collection;Z)V
 
     sget-object p0, Lcom/vk/music/player/PlayerRequest;->ACTION_CONNECT:Lcom/vk/music/player/PlayerRequest;
 
-    invoke-direct {v1, v2, p0}, Lcom/vtosters/lite/audio/player/PlayerConnection;-><init>(Lcom/vtosters/lite/audio/player/PlayerConnectionListener;Lcom/vk/music/player/PlayerRequest;)V
+    invoke-direct {v1, v2, p0}, Lcom/vtosters/lite/audio/player/v;-><init>(Lcom/vtosters/lite/audio/player/w;Lcom/vk/music/player/PlayerRequest;)V
 
     const/4 p0, 0x0
 
     aput-object v1, v0, p0
 
     .line 7
-    invoke-virtual {v1}, Lcom/vk/core/service/BoundServiceConnection;->a()V
+    invoke-virtual {v1}, Lcom/vk/core/service/a;->a()V
 
     :cond_2
     :goto_0
@@ -747,7 +747,7 @@
     if-ge p1, v0, :cond_0
 
     .line 37
-    sget-object v0, Lcom/vk/music/common/Music$a;->e:Lcom/vk/music/restriction/MusicRestrictionManager;
+    sget-object v0, Lcom/vk/music/common/c$a;->e:Lcom/vk/music/restriction/h;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -755,7 +755,7 @@
 
     check-cast p0, Lcom/vk/dto/music/MusicTrack;
 
-    invoke-interface {v0, p0}, Lcom/vk/music/restriction/MusicRestrictionManager;->a(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-interface {v0, p0}, Lcom/vk/music/restriction/h;->a(Lcom/vk/dto/music/MusicTrack;)V
 
     :cond_0
     return-void
@@ -778,7 +778,7 @@
     invoke-static {p0, p2}, Lcom/vtosters/lite/audio/AudioFacade;->a(Ljava/util/List;I)V
 
     .line 27
-    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
+    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
 
     move-result-object v0
 
@@ -788,11 +788,11 @@
 
     if-nez p4, :cond_0
 
-    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
+    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
 
     move-result-object p4
 
-    invoke-virtual {p4}, Lcom/vk/music/j/MusicPrefs;->m()Z
+    invoke-virtual {p4}, Lcom/vk/music/j/a;->m()Z
 
     move-result p4
 
@@ -806,10 +806,10 @@
     const/4 p4, 0x0
 
     :goto_0
-    invoke-virtual {v0, p4}, Lcom/vk/music/j/MusicPrefs;->e(Z)V
+    invoke-virtual {v0, p4}, Lcom/vk/music/j/a;->e(Z)V
 
     .line 28
-    invoke-static {p0}, Lcom/vk/music/n/AudioPlayerUtils;->a(Ljava/util/Collection;)Ljava/util/List;
+    invoke-static {p0}, Lcom/vk/music/n/a;->a(Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object v5
 
@@ -853,10 +853,10 @@
 
     if-nez p0, :cond_3
 
-    new-array p0, v1, [Lcom/vtosters/lite/audio/player/PlayerConnection;
+    new-array p0, v1, [Lcom/vtosters/lite/audio/player/v;
 
     .line 32
-    new-instance p2, Lcom/vtosters/lite/audio/player/PlayerConnection;
+    new-instance p2, Lcom/vtosters/lite/audio/player/v;
 
     new-instance p4, Lcom/vtosters/lite/audio/AudioFacade$b;
 
@@ -868,16 +868,16 @@
 
     move v8, p1
 
-    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/audio/AudioFacade$b;-><init>([Lcom/vtosters/lite/audio/player/PlayerConnection;Ljava/util/List;ILcom/vk/music/common/MusicPlaybackLaunchContext;I)V
+    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/audio/AudioFacade$b;-><init>([Lcom/vtosters/lite/audio/player/v;Ljava/util/List;ILcom/vk/music/common/MusicPlaybackLaunchContext;I)V
 
     sget-object p1, Lcom/vk/music/player/PlayerRequest;->ACTION_CONNECT_AND_PLAY:Lcom/vk/music/player/PlayerRequest;
 
-    invoke-direct {p2, p4, p1}, Lcom/vtosters/lite/audio/player/PlayerConnection;-><init>(Lcom/vtosters/lite/audio/player/PlayerConnectionListener;Lcom/vk/music/player/PlayerRequest;)V
+    invoke-direct {p2, p4, p1}, Lcom/vtosters/lite/audio/player/v;-><init>(Lcom/vtosters/lite/audio/player/w;Lcom/vk/music/player/PlayerRequest;)V
 
     aput-object p2, p0, v2
 
     .line 33
-    invoke-virtual {p2}, Lcom/vk/core/service/BoundServiceConnection;->a()V
+    invoke-virtual {p2}, Lcom/vk/core/service/a;->a()V
 
     :cond_3
     return-void
@@ -928,16 +928,16 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->b()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->b()I
 
     move-result v0
 
@@ -967,9 +967,9 @@
     .locals 2
 
     .line 3
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -983,7 +983,7 @@
     if-eqz v1, :cond_0
 
     .line 5
-    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/player/Player;->b(I)Z
+    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/player/u;->b(I)Z
 
     :cond_0
     return-void
@@ -993,9 +993,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->h()Lcom/vtosters/lite/audio/player/SavedTracks;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->h()Lcom/vtosters/lite/audio/player/SavedTracks;
 
     move-result-object v0
 
@@ -1023,16 +1023,16 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->j()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->j()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v0
 
@@ -1057,16 +1057,16 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/player/Player;->c(Ljava/lang/String;)V
+    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/player/u;->c(Ljava/lang/String;)V
 
     const/4 p0, 0x1
 
@@ -1093,9 +1093,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -1109,7 +1109,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->c()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->c()Ljava/util/List;
 
     move-result-object v0
 
@@ -1121,9 +1121,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -1135,7 +1135,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->d()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->d()I
 
     move-result v0
 
@@ -1147,9 +1147,9 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -1158,7 +1158,7 @@
     .line 2
     sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->m()J
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->m()J
 
     move-result-wide v2
 
@@ -1180,9 +1180,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -1194,7 +1194,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->n()Lcom/vk/music/player/TrackInfo;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->n()Lcom/vk/music/player/e;
 
     move-result-object v0
 
@@ -1204,7 +1204,7 @@
 
     .line 3
     :cond_1
-    invoke-virtual {v0}, Lcom/vk/music/player/TrackInfo;->f()Lcom/vk/music/player/PlayerTrack;
+    invoke-virtual {v0}, Lcom/vk/music/player/e;->f()Lcom/vk/music/player/PlayerTrack;
 
     move-result-object v1
 
@@ -1218,16 +1218,16 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->j()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->j()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v1
 
@@ -1236,7 +1236,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->j()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->j()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v0
 
@@ -1276,22 +1276,22 @@
     return-object v0
 .end method
 
-.method public static s()Lcom/vk/music/player/TrackInfo;
+.method public static s()Lcom/vk/music/player/e;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->n()Lcom/vk/music/player/TrackInfo;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->n()Lcom/vk/music/player/e;
 
     move-result-object v0
 
@@ -1308,11 +1308,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
+    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/music/j/MusicPrefs;->e()Lcom/vk/music/player/LoopMode;
+    invoke-virtual {v0}, Lcom/vk/music/j/a;->e()Lcom/vk/music/player/LoopMode;
 
     move-result-object v0
 
@@ -1325,9 +1325,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->f()Lcom/vk/music/player/PlayState;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->f()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -1338,11 +1338,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
+    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/music/j/MusicPrefs;->c()F
+    invoke-virtual {v0}, Lcom/vk/music/j/a;->c()F
 
     move-result v0
 
@@ -1353,9 +1353,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
+    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->g()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->g()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
@@ -1367,7 +1367,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->n()Lcom/vk/music/player/TrackInfo;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->n()Lcom/vk/music/player/e;
 
     move-result-object v0
 
@@ -1377,7 +1377,7 @@
 
     .line 3
     :cond_1
-    invoke-virtual {v0}, Lcom/vk/music/player/TrackInfo;->i()Lcom/vk/music/player/PlayerTrack;
+    invoke-virtual {v0}, Lcom/vk/music/player/e;->i()Lcom/vk/music/player/PlayerTrack;
 
     move-result-object v0
 
@@ -1398,15 +1398,15 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->y()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->y()Z
 
     move-result v0
 
@@ -1414,7 +1414,7 @@
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     .line 2
     invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
@@ -1442,14 +1442,14 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->s()Lcom/vk/music/player/TrackInfo;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->s()Lcom/vk/music/player/e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/music/player/TrackInfo;->o()Z
+    invoke-virtual {v0}, Lcom/vk/music/player/e;->o()Z
 
     move-result v0
 

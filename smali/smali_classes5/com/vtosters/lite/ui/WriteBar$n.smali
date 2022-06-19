@@ -3,12 +3,12 @@
 .source "WriteBar.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ui/WriteBar;->b(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vtosters/lite/ui/WriteBar;->b(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/util/List<",
         "Ljava/lang/String;",
         ">;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions;
+.field final synthetic a:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/ui/WriteBar;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/WriteBar;Lkotlin/jvm/b/a;)V
     .locals 0
 
     .line 1
-    iput-object p2, p0, Lcom/vtosters/lite/ui/WriteBar$n;->a:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vtosters/lite/ui/WriteBar$n;->a:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public a(Ljava/util/List;)Lkotlin/Unit;
+.method public a(Ljava/util/List;)Lkotlin/m;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,17 +55,17 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;)",
-            "Lkotlin/Unit;"
+            "Lkotlin/m;"
         }
     .end annotation
 
     .line 1
-    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$n;->a:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$n;->a:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     .line 2
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -76,7 +76,7 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/WriteBar$n;->a(Ljava/util/List;)Lkotlin/Unit;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/WriteBar$n;->a(Ljava/util/List;)Lkotlin/m;
 
     move-result-object p1
 

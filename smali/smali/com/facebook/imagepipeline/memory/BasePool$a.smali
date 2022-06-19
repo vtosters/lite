@@ -111,7 +111,7 @@
     const-string v1, "Unexpected decrement of %d. Current numBytes = %d, count = %d"
 
     .line 7
-    invoke-static {p1, v1, v0}, Lcom/facebook/common/h/FLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p1, v1, v0}, Lcom/facebook/common/h/a;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0
     return-void

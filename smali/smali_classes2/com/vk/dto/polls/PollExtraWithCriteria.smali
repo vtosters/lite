@@ -6,13 +6,13 @@
 # instance fields
 .field private final a:Lcom/vk/dto/polls/PollExtra;
 
-.field private final b:Lcom/vk/dto/polls/PollVotersCriteria1;
+.field private final b:Lcom/vk/dto/polls/c;
 
 .field private final c:Lcom/vk/dto/polls/Poll;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/dto/polls/PollExtra;Lcom/vk/dto/polls/PollVotersCriteria1;Lcom/vk/dto/polls/Poll;)V
+.method public constructor <init>(Lcom/vk/dto/polls/PollExtra;Lcom/vk/dto/polls/c;Lcom/vk/dto/polls/Poll;)V
     .locals 0
 
     .line 1
@@ -20,7 +20,7 @@
 
     iput-object p1, p0, Lcom/vk/dto/polls/PollExtraWithCriteria;->a:Lcom/vk/dto/polls/PollExtra;
 
-    iput-object p2, p0, Lcom/vk/dto/polls/PollExtraWithCriteria;->b:Lcom/vk/dto/polls/PollVotersCriteria1;
+    iput-object p2, p0, Lcom/vk/dto/polls/PollExtraWithCriteria;->b:Lcom/vk/dto/polls/c;
 
     iput-object p3, p0, Lcom/vk/dto/polls/PollExtraWithCriteria;->c:Lcom/vk/dto/polls/Poll;
 
@@ -41,7 +41,7 @@
 
     const-string v2, "obj.getJSONObject(\"get_extra_result\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/dto/polls/PollExtra;-><init>(Lorg/json/JSONObject;)V
 
@@ -50,11 +50,11 @@
 
     invoke-direct {v1, p1}, Lcom/vk/dto/polls/PollExtraWithCriteria$1;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/dto/polls/PollVotersCriteria1;
+    check-cast v1, Lcom/vk/dto/polls/c;
 
     .line 4
     sget-object v2, Lcom/vk/dto/polls/Poll;->P:Lcom/vk/dto/polls/Poll$b;
@@ -67,7 +67,7 @@
 
     const-string v3, "obj.getJSONObject(\"poll\")"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -78,18 +78,18 @@
     move-result-object p1
 
     .line 5
-    invoke-direct {p0, v0, v1, p1}, Lcom/vk/dto/polls/PollExtraWithCriteria;-><init>(Lcom/vk/dto/polls/PollExtra;Lcom/vk/dto/polls/PollVotersCriteria1;Lcom/vk/dto/polls/Poll;)V
+    invoke-direct {p0, v0, v1, p1}, Lcom/vk/dto/polls/PollExtraWithCriteria;-><init>(Lcom/vk/dto/polls/PollExtra;Lcom/vk/dto/polls/c;Lcom/vk/dto/polls/Poll;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/dto/polls/PollVotersCriteria1;
+.method public final a()Lcom/vk/dto/polls/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/polls/PollExtraWithCriteria;->b:Lcom/vk/dto/polls/PollVotersCriteria1;
+    iget-object v0, p0, Lcom/vk/dto/polls/PollExtraWithCriteria;->b:Lcom/vk/dto/polls/c;
 
     return-object v0
 .end method

@@ -29,7 +29,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -95,7 +95,7 @@
 
     move v3, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -176,7 +176,7 @@
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 16
-    sget v2, Lcom/vk/im/ui/R4;->vkim_accessibility_story:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_accessibility_story:I
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -265,7 +265,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/im/ui/R4;->fontRobotoRegular:I
+    sget v2, Lcom/vk/im/ui/m;->fontRobotoRegular:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -306,7 +306,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x2
@@ -342,7 +342,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/R2;->MsgPartExpiredStorySnippet:[I
+    sget-object v0, Lcom/vk/im/ui/o;->MsgPartExpiredStorySnippet:[I
 
     .line 2
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -350,9 +350,9 @@
     move-result-object p2
 
     .line 3
-    sget p3, Lcom/vk/im/ui/R2;->MsgPartExpiredStorySnippet_vkim_lineColor:I
+    sget p3, Lcom/vk/im/ui/o;->MsgPartExpiredStorySnippet_vkim_lineColor:I
 
-    sget p4, Lcom/vk/im/ui/R5;->im_forward_line_tint:I
+    sget p4, Lcom/vk/im/ui/c;->im_forward_line_tint:I
 
     invoke-static {p1, p4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -366,7 +366,7 @@
     invoke-virtual {p0, p3}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet;->setLineColor(I)V
 
     .line 5
-    sget p3, Lcom/vk/im/ui/R2;->MsgPartExpiredStorySnippet_vkim_icon:I
+    sget p3, Lcom/vk/im/ui/o;->MsgPartExpiredStorySnippet_vkim_icon:I
 
     .line 6
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -379,7 +379,7 @@
 
     .line 7
     :cond_0
-    sget p3, Lcom/vk/im/ui/R12;->ic_story_outline_28:I
+    sget p3, Lcom/vk/im/ui/f;->ic_story_outline_28:I
 
     invoke-static {p1, p3}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -392,9 +392,9 @@
     invoke-virtual {p0, p3}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 9
-    sget p3, Lcom/vk/im/ui/R2;->MsgPartExpiredStorySnippet_vkim_textColor:I
+    sget p3, Lcom/vk/im/ui/o;->MsgPartExpiredStorySnippet_vkim_textColor:I
 
-    sget p4, Lcom/vk/im/ui/R5;->im_service_message_text:I
+    sget p4, Lcom/vk/im/ui/c;->im_service_message_text:I
 
     invoke-static {p1, p4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -408,9 +408,9 @@
     invoke-virtual {p0, p3}, Lcom/vk/im/ui/views/msg/MsgPartExpiredStorySnippet;->setTextColor(I)V
 
     .line 11
-    sget p3, Lcom/vk/im/ui/R2;->MsgPartExpiredStorySnippet_vkim_iconTint:I
+    sget p3, Lcom/vk/im/ui/o;->MsgPartExpiredStorySnippet_vkim_iconTint:I
 
-    sget p4, Lcom/vk/im/ui/R5;->im_service_message_text:I
+    sget p4, Lcom/vk/im/ui/c;->im_service_message_text:I
 
     invoke-static {p1, p4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -430,7 +430,7 @@
 
     .line 14
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 

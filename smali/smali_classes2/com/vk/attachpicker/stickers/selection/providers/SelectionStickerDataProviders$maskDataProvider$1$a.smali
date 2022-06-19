@@ -3,12 +3,12 @@
 .source "SelectionStickerDataProviders.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/selection/providers/SelectionStickerDataProviders$maskDataProvider$1;->invoke()Lio/reactivex/Observable;
+    value = Lcom/vk/attachpicker/stickers/selection/providers/SelectionStickerDataProviders$maskDataProvider$1;->invoke()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -55,7 +55,7 @@
             "Lcom/vk/dto/stickers/StickerItem;",
             ")",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/attachpicker/stickers/selection/h/ClickableItem;",
+            "Lcom/vk/attachpicker/stickers/selection/h/a;",
             ">;"
         }
     .end annotation
@@ -84,7 +84,7 @@
     aget-object v5, p1, v4
 
     .line 3
-    new-instance v6, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem2;
+    new-instance v6, Lcom/vk/attachpicker/stickers/selection/h/d;
 
     .line 4
     invoke-static {}, Lcom/vk/core/util/Screen;->h()I
@@ -103,7 +103,7 @@
 
     const-string v8, "Objects.requireNonNull<S\u2026(Screen.realWidth() / 3))"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v7, Ljava/lang/String;
 
@@ -113,7 +113,7 @@
     move-result v5
 
     .line 6
-    invoke-direct {v6, v7, v5}, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem2;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v6, v7, v5}, Lcom/vk/attachpicker/stickers/selection/h/d;-><init>(Ljava/lang/String;I)V
 
     .line 7
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -139,9 +139,9 @@
     if-nez p1, :cond_4
 
     .line 9
-    new-instance p1, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem1;
+    new-instance p1, Lcom/vk/attachpicker/stickers/selection/h/c;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem1;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/stickers/selection/h/c;-><init>()V
 
     .line 10
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/providers/SelectionStickerDataProviders$maskDataProvider$1$a;->a:Lcom/vk/attachpicker/stickers/selection/providers/SelectionStickerDataProviders$maskDataProvider$1;
@@ -178,7 +178,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem1;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/stickers/selection/h/c;->a(Ljava/lang/String;)V
 
     .line 12
     :cond_3
@@ -186,11 +186,11 @@
 
     iget-object v1, v1, Lcom/vk/attachpicker/stickers/selection/providers/SelectionStickerDataProviders$maskDataProvider$1;->$baseView:Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->getTimeStyle()Lcom/vk/stories/clickable/models/time/TimeStickerInfo;
+    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->getTimeStyle()Lcom/vk/stories/clickable/models/time/b;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem1;->a(Lcom/vk/stories/clickable/models/time/TimeStickerInfo;)V
+    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/stickers/selection/h/c;->a(Lcom/vk/stories/clickable/models/time/b;)V
 
     .line 13
     invoke-virtual {v0, v3, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V

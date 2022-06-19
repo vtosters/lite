@@ -3,7 +3,7 @@
 .source "ISticker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/Float;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -61,11 +61,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/ISticker$doBounce$1;->this$0:Lcom/vk/attachpicker/stickers/ISticker;
 
-    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
+    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/attachpicker/stickers/ISticker1;->b()F
+    invoke-interface {v1}, Lcom/vk/attachpicker/stickers/a0;->b()F
 
     move-result v1
 
@@ -88,17 +88,17 @@
     .line 3
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/ISticker$doBounce$1;->this$0:Lcom/vk/attachpicker/stickers/ISticker;
 
-    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/ISticker;->getInvalidator()Lkotlin/jvm/b/Functions;
+    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/ISticker;->getInvalidator()Lkotlin/jvm/b/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_0
     return-void
@@ -116,7 +116,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/ISticker$doBounce$1;->a(F)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

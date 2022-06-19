@@ -3,7 +3,7 @@
 .source "VerticalListVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Ljava/lang/Integer;",
         "Lcom/vk/catalog2/core/blocks/UIBlock;",
         "Ljava/lang/Integer;",
@@ -57,17 +57,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/VerticalListVh$createView$$inlined$also$lambda$1;->this$0:Lcom/vk/catalog2/core/holders/containers/VerticalListVh;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/containers/VerticalListVh;->a(Lcom/vk/catalog2/core/holders/containers/VerticalListVh;)Lcom/vk/catalog2/core/analytics/UIBlockPositionIndex;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/containers/VerticalListVh;->a(Lcom/vk/catalog2/core/holders/containers/VerticalListVh;)Lcom/vk/catalog2/core/analytics/e;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/vk/catalog2/core/analytics/UIBlockPositionIndex;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)Lcom/vk/catalog2/core/analytics/UIBlockPositionRecord;
+    invoke-virtual {v0, p2}, Lcom/vk/catalog2/core/analytics/e;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)Lcom/vk/catalog2/core/analytics/f;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/catalog2/core/analytics/UIBlockPositionRecord;->b()I
+    invoke-virtual {p2}, Lcom/vk/catalog2/core/analytics/f;->b()I
 
     move-result p1
 

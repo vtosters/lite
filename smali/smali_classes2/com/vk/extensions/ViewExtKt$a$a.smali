@@ -3,12 +3,12 @@
 .source "ViewExt.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Cancellable;
+.implements Lc/a/z/f;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/extensions/ViewExtKt$a;->a(Lio/reactivex/ObservableEmitter;)V
+    value = Lcom/vk/extensions/ViewExtKt$a;->a(Lc/a/n;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

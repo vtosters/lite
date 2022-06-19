@@ -56,7 +56,7 @@
 
     const-string v1, "GLSurfaceView"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lorg/webrtc/videoengine/GLTextureView$LogWriter;->mBuilder:Ljava/lang/StringBuilder;

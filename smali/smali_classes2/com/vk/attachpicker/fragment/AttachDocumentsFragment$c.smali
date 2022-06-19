@@ -1,5 +1,5 @@
 .class public final Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;
-.super Lcom/vk/documents/list/DocumentsListAdapter$b;
+.super Lcom/vk/documents/list/a$b;
 .source "AttachDocumentsFragment.kt"
 
 # interfaces
@@ -28,20 +28,20 @@
     .end annotation
 .end field
 
-.field private final C:Lcom/vk/core/util/ItemClickListener;
+.field private final C:Lcom/vk/core/util/k0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/ItemClickListener<",
+            "Lcom/vk/core/util/k0<",
             "Lcom/vk/api/base/Document;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final D:Lcom/vk/attachpicker/base/AttachPickerInterfaces2;
+.field private final D:Lcom/vk/attachpicker/base/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/attachpicker/base/AttachPickerInterfaces2<",
+            "Lcom/vk/attachpicker/base/d<",
             "Lcom/vk/api/base/Document;",
             ">;"
         }
@@ -50,20 +50,20 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/StreamParcelableSelection;Lcom/vk/core/util/ItemClickListener;Lcom/vk/attachpicker/base/AttachPickerInterfaces2;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/f;Lcom/vk/core/util/k0;Lcom/vk/attachpicker/base/d;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lcom/vk/attachpicker/base/StreamParcelableSelection<",
+            "Lcom/vk/attachpicker/base/f<",
             "Lcom/vk/api/base/Document;",
             ">;",
-            "Lcom/vk/core/util/ItemClickListener<",
+            "Lcom/vk/core/util/k0<",
             "-",
             "Lcom/vk/api/base/Document;",
             ">;",
-            "Lcom/vk/attachpicker/base/AttachPickerInterfaces2<",
+            "Lcom/vk/attachpicker/base/d<",
             "-",
             "Lcom/vk/api/base/Document;",
             ">;)V"
@@ -83,11 +83,11 @@
     move-object v1, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/documents/list/DocumentsListAdapter$b;-><init>(Landroid/view/ViewGroup;Lcom/vtosters/lite/fragments/p2/DocumentClickListener;Lcom/vtosters/lite/fragments/p2/DocumentStatListener;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/documents/list/a$b;-><init>(Landroid/view/ViewGroup;Lcom/vtosters/lite/fragments/p2/c;Lcom/vtosters/lite/fragments/p2/d;ILkotlin/jvm/internal/i;)V
 
-    iput-object p3, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->C:Lcom/vk/core/util/ItemClickListener;
+    iput-object p3, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->C:Lcom/vk/core/util/k0;
 
-    iput-object p4, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->D:Lcom/vk/attachpicker/base/AttachPickerInterfaces2;
+    iput-object p4, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->D:Lcom/vk/attachpicker/base/d;
 
     .line 2
     new-instance p1, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;
@@ -98,12 +98,12 @@
 
     check-cast p3, Landroid/view/ViewGroup;
 
-    invoke-direct {p1, p3, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;-><init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/StreamParcelableSelection;)V
+    invoke-direct {p1, p3, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;-><init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/f;)V
 
     iput-object p1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->B:Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/documents/list/DocumentsListAdapter$b;->h0()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p0}, Lcom/vk/documents/list/a$b;->h0()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object p1
 
@@ -119,7 +119,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c$a;-><init>(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 
@@ -138,7 +138,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/documents/list/DocumentsListAdapter$b;->g0()Landroid/widget/TextView;
+    invoke-virtual {p0}, Lcom/vk/documents/list/a$b;->g0()Landroid/widget/TextView;
 
     move-result-object p0
 
@@ -149,7 +149,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/documents/list/DocumentsListAdapter$b;->i0()Landroid/widget/TextView;
+    invoke-virtual {p0}, Lcom/vk/documents/list/a$b;->i0()Landroid/widget/TextView;
 
     move-result-object p0
 
@@ -162,7 +162,7 @@
     .locals 1
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/documents/list/DocumentsListAdapter$b;->a(Lcom/vk/api/base/Document;)V
+    invoke-super {p0, p1}, Lcom/vk/documents/list/a$b;->a(Lcom/vk/api/base/Document;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->B:Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;
@@ -174,7 +174,7 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f040095
 
@@ -228,28 +228,28 @@
 
     if-ne p1, v0, :cond_2
 
-    iget-object p1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->D:Lcom/vk/attachpicker/base/AttachPickerInterfaces2;
+    iget-object p1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->D:Lcom/vk/attachpicker/base/d;
 
     if-eqz p1, :cond_3
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lcom/vk/attachpicker/base/AttachPickerInterfaces2;->d(Ljava/lang/Object;)V
+    invoke-interface {p1, v0}, Lcom/vk/attachpicker/base/d;->d(Ljava/lang/Object;)V
 
     goto :goto_2
 
     .line 3
     :cond_2
     :goto_1
-    iget-object p1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->C:Lcom/vk/core/util/ItemClickListener;
+    iget-object p1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->C:Lcom/vk/core/util/k0;
 
     if-eqz p1, :cond_3
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/api/base/Document;
 
@@ -259,7 +259,7 @@
 
     move-result v1
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/core/util/ItemClickListener;->a(Ljava/lang/Object;I)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/core/util/k0;->a(Ljava/lang/Object;I)V
 
     nop
 

@@ -3,7 +3,7 @@
 .source "GeoAttachment.java"
 
 # interfaces
-.implements Lcom/vk/newsfeed/i0/PostingDraftJsonItem;
+.implements Lcom/vk/newsfeed/i0/b;
 
 
 # static fields
@@ -302,11 +302,11 @@
     const/4 v0, 0x0
 
     .line 13
-    invoke-static {p0, v0}, Lcom/vtosters/lite/fragments/location/GeoPlaceFragment;->a(Lcom/vtosters/lite/attachments/GeoAttachment;Z)Lcom/vk/navigation/Navigator;
+    invoke-static {p0, v0}, Lcom/vtosters/lite/fragments/location/b;->a(Lcom/vtosters/lite/attachments/GeoAttachment;Z)Lcom/vk/navigation/o;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     return-void
 
@@ -375,13 +375,13 @@
 
     .line 10
     :catchall_0
-    invoke-static {p0}, Lcom/vtosters/lite/utils/Utils;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {p0}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/vtosters/lite/ActivityUtils;->a(Landroid/app/Activity;Z)Z
+    invoke-static {p0, p1}, Lcom/vtosters/lite/n;->a(Landroid/app/Activity;Z)Z
 
     :goto_0
     return-void
@@ -417,9 +417,9 @@
     .locals 5
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/i0/PostingDraftJsonItem;->w:Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;
+    sget-object v0, Lcom/vk/newsfeed/i0/b;->w:Lcom/vk/newsfeed/i0/b$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;->a(Lcom/vk/newsfeed/i0/PostingDraftJsonItem;)Lorg/json/JSONObject;
+    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/b$a;->a(Lcom/vk/newsfeed/i0/b;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -549,7 +549,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f120aca
 
@@ -564,7 +564,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->r:I
+    sget v0, Lcom/vk/dto/attachments/a;->r:I
 
     return v0
 .end method

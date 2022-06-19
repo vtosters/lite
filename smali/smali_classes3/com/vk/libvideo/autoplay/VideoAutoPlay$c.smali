@@ -3,12 +3,12 @@
 .source "VideoAutoPlay.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/dto/common/VideoFile;Lcom/vk/media/player/video/ExoVideoSource2;IZ)Lio/reactivex/Single;
+    value = Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/dto/common/VideoFile;Lcom/vk/media/player/video/e;IZ)Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/SingleSource<",
+        "Lc/a/x<",
         "+TR;>;>;"
     }
 .end annotation
@@ -35,7 +35,7 @@
 # instance fields
 .field final synthetic a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-.field final synthetic b:Lcom/vk/media/player/video/ExoVideoSource2;
+.field final synthetic b:Lcom/vk/media/player/video/e;
 
 .field final synthetic c:I
 
@@ -43,12 +43,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/media/player/video/ExoVideoSource2;IJ)V
+.method constructor <init>(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/media/player/video/e;IJ)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    iput-object p2, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->b:Lcom/vk/media/player/video/ExoVideoSource2;
+    iput-object p2, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->b:Lcom/vk/media/player/video/e;
 
     iput p3, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->c:I
 
@@ -61,17 +61,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/VideoFile;)Lio/reactivex/Single;
+.method public final a(Lcom/vk/dto/common/VideoFile;)Lc/a/t;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/common/VideoFile;",
             ")",
-            "Lio/reactivex/Single<",
+            "Lc/a/t<",
             "Lkotlin/Pair<",
             "Lcom/vk/dto/common/VideoFile;",
-            "Lcom/vk/media/player/video/ExoVideoSource2;",
+            "Lcom/vk/media/player/video/e;",
             ">;>;"
         }
     .end annotation
@@ -79,7 +79,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    iget-object v1, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->b:Lcom/vk/media/player/video/ExoVideoSource2;
+    iget-object v1, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->b:Lcom/vk/media/player/video/e;
 
     iget v3, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->c:I
 
@@ -93,7 +93,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/media/player/video/ExoVideoSource2;Lcom/vk/dto/common/VideoFile;IJZILjava/lang/Object;)Lio/reactivex/Single;
+    invoke-static/range {v0 .. v8}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/media/player/video/e;Lcom/vk/dto/common/VideoFile;IJZILjava/lang/Object;)Lc/a/t;
 
     move-result-object p1
 
@@ -106,7 +106,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/common/VideoFile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->a(Lcom/vk/dto/common/VideoFile;)Lio/reactivex/Single;
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$c;->a(Lcom/vk/dto/common/VideoFile;)Lc/a/t;
 
     move-result-object p1
 

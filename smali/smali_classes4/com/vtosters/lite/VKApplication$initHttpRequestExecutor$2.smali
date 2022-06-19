@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/httpexecutor/api/HttpRequestExecutor;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/httpexecutor/api/g;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/httpexecutor/api/HttpRequestExecutor;
+.method public final invoke()Lcom/vk/httpexecutor/api/g;
     .locals 1
 
     .line 2
     sget-object v0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->b:Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;
 
-    invoke-virtual {v0}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->a()Lcom/vk/httpexecutor/api/HttpRequestExecutor;
+    invoke-virtual {v0}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->a()Lcom/vk/httpexecutor/api/g;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/VKApplication$initHttpRequestExecutor$2;->invoke()Lcom/vk/httpexecutor/api/HttpRequestExecutor;
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKApplication$initHttpRequestExecutor$2;->invoke()Lcom/vk/httpexecutor/api/g;
 
     move-result-object v0
 

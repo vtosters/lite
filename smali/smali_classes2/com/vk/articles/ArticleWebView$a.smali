@@ -1,5 +1,5 @@
 .class public final Lcom/vk/articles/ArticleWebView$a;
-.super Lcom/vk/webapp/helpers/WebClients;
+.super Lcom/vk/webapp/helpers/g;
 .source "ArticleWebView.kt"
 
 
@@ -36,7 +36,7 @@
 
     iput-object p2, p0, Lcom/vk/articles/ArticleWebView$a;->d:Landroid/content/Context;
 
-    invoke-direct {p0}, Lcom/vk/webapp/helpers/WebClients;-><init>()V
+    invoke-direct {p0}, Lcom/vk/webapp/helpers/g;-><init>()V
 
     return-void
 .end method
@@ -61,17 +61,17 @@
     .line 3
     iget-object v0, p0, Lcom/vk/articles/ArticleWebView$a;->c:Lcom/vk/articles/ArticleWebView;
 
-    invoke-virtual {v0}, Lcom/vk/articles/ArticleWebView;->getOnPagePreloadErrorListener()Lkotlin/jvm/b/Functions1;
+    invoke-virtual {v0}, Lcom/vk/articles/ArticleWebView;->getOnPagePreloadErrorListener()Lkotlin/jvm/b/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_0
     return-void
@@ -89,7 +89,7 @@
 
     move-result-object v0
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -124,33 +124,33 @@
     .line 5
     iget-object v0, p0, Lcom/vk/articles/ArticleWebView$a;->c:Lcom/vk/articles/ArticleWebView;
 
-    invoke-virtual {v0}, Lcom/vk/articles/ArticleWebView;->getOnPageFinishedListener()Lkotlin/jvm/b/Functions1;
+    invoke-virtual {v0}, Lcom/vk/articles/ArticleWebView;->getOnPageFinishedListener()Lkotlin/jvm/b/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/m;
 
     .line 6
     :cond_1
     iget-object v0, p0, Lcom/vk/articles/ArticleWebView$a;->c:Lcom/vk/articles/ArticleWebView;
 
-    invoke-virtual {v0}, Lcom/vk/articles/ArticleWebView;->getOnPagePreloadFinishedListener()Lkotlin/jvm/b/Functions1;
+    invoke-virtual {v0}, Lcom/vk/articles/ArticleWebView;->getOnPagePreloadFinishedListener()Lkotlin/jvm/b/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_2
     :goto_0
@@ -167,7 +167,7 @@
 
     move-result-object p2
 
-    invoke-static {p4, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p4, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -197,33 +197,33 @@
     .line 4
     iget-object p2, p0, Lcom/vk/articles/ArticleWebView$a;->c:Lcom/vk/articles/ArticleWebView;
 
-    invoke-virtual {p2}, Lcom/vk/articles/ArticleWebView;->getOnPageErrorListener()Lkotlin/jvm/b/Functions1;
+    invoke-virtual {p2}, Lcom/vk/articles/ArticleWebView;->getOnPageErrorListener()Lkotlin/jvm/b/c;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    invoke-interface {p2, p1, p4}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1, p4}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lkotlin/Unit;
+    check-cast p2, Lkotlin/m;
 
     .line 5
     :cond_1
     iget-object p2, p0, Lcom/vk/articles/ArticleWebView$a;->c:Lcom/vk/articles/ArticleWebView;
 
-    invoke-virtual {p2}, Lcom/vk/articles/ArticleWebView;->getOnPagePreloadErrorListener()Lkotlin/jvm/b/Functions1;
+    invoke-virtual {p2}, Lcom/vk/articles/ArticleWebView;->getOnPagePreloadErrorListener()Lkotlin/jvm/b/c;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
-    invoke-interface {p2, p1, p4}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1, p4}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_2
     :goto_0
@@ -259,7 +259,7 @@
 
     move-result-object p3
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p3
 
@@ -297,7 +297,7 @@
     if-eqz p2, :cond_1
 
     .line 2
-    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
+    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
 
     iget-object p1, p0, Lcom/vk/articles/ArticleWebView$a;->c:Lcom/vk/articles/ArticleWebView;
 
@@ -323,7 +323,7 @@
 
     move-object v2, p2
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     :cond_1
     const/4 p1, 0x1

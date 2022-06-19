@@ -3,13 +3,13 @@
 .source "PhotoVideoAttachActivity.java"
 
 # interfaces
-.implements Lcom/vk/attachpicker/SelectionContext$b;
-.implements Lcom/vk/attachpicker/AttachResulter;
-.implements Lcom/vk/core/ui/v/j/UiTracking;
+.implements Lcom/vk/attachpicker/p$b;
+.implements Lcom/vk/attachpicker/j;
+.implements Lcom/vk/core/ui/v/j/c;
 
 
 # instance fields
-.field private final G:Lcom/vk/attachpicker/SelectionContext;
+.field private final G:Lcom/vk/attachpicker/p;
 
 .field private H:Z
 
@@ -41,10 +41,10 @@
 
 .field private N:Landroid/view/ViewGroup;
 
-.field private final O:Lb/h/g/l/NotificationListener;
+.field private final O:Lb/h/g/l/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/NotificationListener<",
+            "Lb/h/g/l/e<",
             "Ljava/lang/Void;",
             ">;"
         }
@@ -60,27 +60,27 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/attachpicker/SelectionContext;
+    new-instance v0, Lcom/vk/attachpicker/p;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/SelectionContext;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/p;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iput-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/p;
 
     .line 3
     new-instance v0, Lcom/vk/attachpicker/PhotoVideoAttachActivity$d;
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/PhotoVideoAttachActivity$d;-><init>(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->O:Lb/h/g/l/NotificationListener;
+    iput-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->O:Lb/h/g/l/e;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/SelectionContext;
+.method static synthetic a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/p;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object p0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/p;
 
     return-object p0
 .end method
@@ -103,13 +103,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/FragmentManagerImplSimple;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/f;
 
     move-result-object v0
 
     const v1, 0x7f0a042b
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/core/fragments/FragmentManagerImplSimple;->b(ILcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/core/fragments/f;->b(ILcom/vk/core/fragments/FragmentImpl;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -228,9 +228,9 @@
 
     const v3, 0x7f100096
 
-    iget-object v4, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v4, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/p;
 
-    invoke-virtual {v4}, Lcom/vk/attachpicker/SelectionContext;->g()I
+    invoke-virtual {v4}, Lcom/vk/attachpicker/p;->g()I
 
     move-result v4
 
@@ -309,7 +309,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
+.method public a(Lcom/vk/core/ui/v/g;)V
     .locals 2
 
     .line 3
@@ -326,7 +326,7 @@
     .line 4
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PHOTO_PICKER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     goto :goto_0
 
@@ -334,7 +334,7 @@
     :cond_0
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->VIDEO_PICKER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     goto :goto_0
 
@@ -342,7 +342,7 @@
     :cond_1
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PHOTO_VIDEO_PICKER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     :goto_0
     return-void
@@ -352,20 +352,20 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/p;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->g()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->g()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/p;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->a()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->a()V
 
     goto :goto_0
 
@@ -732,7 +732,7 @@
     move-result v4
 
     .line 24
-    iget-object v11, v0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v11, v0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/p;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -750,12 +750,12 @@
 
     move-result v4
 
-    invoke-virtual {v11, v4}, Lcom/vk/attachpicker/SelectionContext;->a(I)V
+    invoke-virtual {v11, v4}, Lcom/vk/attachpicker/p;->a(I)V
 
     .line 25
-    iget-object v4, v0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v4, v0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/p;
 
-    invoke-virtual {v4, v3}, Lcom/vk/attachpicker/SelectionContext;->b(I)V
+    invoke-virtual {v4, v3}, Lcom/vk/attachpicker/p;->b(I)V
 
     const v3, 0x7f0d0435
 
@@ -972,23 +972,23 @@
     invoke-virtual {v4, v2, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 57
-    new-instance v2, Lcom/vk/attachpicker/fragment/GalleryFragment;
+    new-instance v2, Lcom/vk/attachpicker/fragment/s;
 
-    invoke-direct {v2}, Lcom/vk/attachpicker/fragment/GalleryFragment;-><init>()V
+    invoke-direct {v2}, Lcom/vk/attachpicker/fragment/s;-><init>()V
 
     .line 58
     invoke-virtual {v2, v4}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 59
-    invoke-virtual {v2, v1}, Lcom/vk/attachpicker/fragment/GalleryFragment;->M(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Lcom/vk/attachpicker/fragment/s;->M(Ljava/lang/String;)V
 
     move/from16 v1, v30
 
     .line 60
-    invoke-virtual {v2, v1}, Lcom/vk/attachpicker/fragment/GalleryFragment;->x0(Z)V
+    invoke-virtual {v2, v1}, Lcom/vk/attachpicker/fragment/s;->x0(Z)V
 
     .line 61
-    invoke-virtual {v2, v0}, Lcom/vk/attachpicker/fragment/GalleryFragment;->a(Landroid/content/Context;)Landroid/view/ViewGroup;
+    invoke-virtual {v2, v0}, Lcom/vk/attachpicker/fragment/s;->a(Landroid/content/Context;)Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -998,15 +998,15 @@
     invoke-direct {v0, v2}, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 63
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v1
 
-    iget-object v2, v0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->O:Lb/h/g/l/NotificationListener;
+    iget-object v2, v0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->O:Lb/h/g/l/e;
 
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v3, v2}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
+    invoke-virtual {v1, v3, v2}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
 
     .line 64
     invoke-static/range {p0 .. p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(Landroid/app/Activity;)V
@@ -1021,22 +1021,22 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->O:Lb/h/g/l/NotificationListener;
+    iget-object v1, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->O:Lb/h/g/l/e;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
 
     return-void
 .end method
 
-.method public t()Lcom/vk/attachpicker/SelectionContext;
+.method public t()Lcom/vk/attachpicker/p;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/p;
 
     return-object v0
 .end method
@@ -1096,9 +1096,9 @@
 
     if-nez v3, :cond_2
 
-    iget-object v3, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v3, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->G:Lcom/vk/attachpicker/p;
 
-    invoke-virtual {v3}, Lcom/vk/attachpicker/SelectionContext;->g()I
+    invoke-virtual {v3}, Lcom/vk/attachpicker/p;->g()I
 
     move-result v3
 

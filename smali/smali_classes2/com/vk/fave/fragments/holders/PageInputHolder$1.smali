@@ -3,12 +3,12 @@
 .source "PageInputHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/fragments/holders/PageInputHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/fave/fragments/holders/PageInputHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -47,12 +47,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/fave/fragments/holders/PageInputHolder;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/fave/fragments/holders/PageInputHolder$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method

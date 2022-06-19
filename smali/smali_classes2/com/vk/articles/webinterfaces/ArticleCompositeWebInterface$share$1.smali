@@ -3,7 +3,7 @@
 .source "ArticleCompositeWebInterface.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface$share$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -125,13 +125,13 @@
 
     iget-object v2, p0, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface$share$1;->this$0:Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;
 
-    invoke-static {v2}, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;->d(Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;)Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceI;
+    invoke-static {v2}, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;->d(Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;)Lcom/vk/articles/webinterfaces/poll/a;
 
     move-result-object v2
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v2, v1}, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceI;->b(Lorg/json/JSONObject;)Lcom/vk/dto/polls/PollInfo;
+    invoke-interface {v2, v1}, Lcom/vk/articles/webinterfaces/poll/a;->b(Lorg/json/JSONObject;)Lcom/vk/dto/polls/PollInfo;
 
     move-result-object v1
 
@@ -151,13 +151,13 @@
 
     iget-object v0, p0, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface$share$1;->this$0:Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;
 
-    invoke-static {v0}, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;->a(Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;)Lcom/vk/articles/webinterfaces/article/ArticleWebInterface;
+    invoke-static {v0}, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;->a(Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;)Lcom/vk/articles/webinterfaces/article/a;
 
     move-result-object v0
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterface;->a(Lorg/json/JSONObject;)Lcom/vk/dto/articles/Article;
+    invoke-interface {v0, v1}, Lcom/vk/articles/webinterfaces/article/a;->a(Lorg/json/JSONObject;)Lcom/vk/dto/articles/Article;
 
     move-result-object v0
 

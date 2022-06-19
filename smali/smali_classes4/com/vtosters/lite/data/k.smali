@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # static fields
@@ -36,9 +36,9 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lb/h/g/l/ProfleEvents5;
+    check-cast p1, Lb/h/g/l/f;
 
-    invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->a(Lb/h/g/l/ProfleEvents5;)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->a(Lb/h/g/l/f;)V
 
     return-void
 .end method

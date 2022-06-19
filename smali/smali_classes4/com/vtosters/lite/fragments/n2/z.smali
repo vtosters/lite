@@ -36,7 +36,7 @@
 .method public final run()V
     .locals 0
 
-    invoke-static {}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->k5()V
+    invoke-static {}, Lcom/vtosters/lite/fragments/n2/q0;->k5()V
 
     return-void
 .end method

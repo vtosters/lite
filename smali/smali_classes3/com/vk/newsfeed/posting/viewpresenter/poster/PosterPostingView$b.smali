@@ -62,11 +62,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$b;->a:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;)Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;)Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;->b(I)Lcom/vk/newsfeed/posting/dto/PosterBackground;
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/a;->b(I)Lcom/vk/newsfeed/posting/dto/PosterBackground;
 
     move-result-object p1
 
@@ -74,7 +74,7 @@
 
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$b;->a:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
@@ -84,12 +84,12 @@
 
     move-result p1
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts11;->q(I)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/h;->q(I)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 

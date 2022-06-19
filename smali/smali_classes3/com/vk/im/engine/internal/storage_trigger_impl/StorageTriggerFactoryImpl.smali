@@ -3,7 +3,7 @@
 .source "StorageTriggerFactoryImpl.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/internal/storage/StorageTriggerFactory;
+.implements Lcom/vk/im/engine/internal/storage/e;
 
 
 # annotations
@@ -25,8 +25,8 @@
             "Ljava/util/Map<",
             "Ljava/lang/Class<",
             "*>;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lcom/vk/im/engine/internal/storage/StorageTrigger<",
+            "Lkotlin/jvm/b/a<",
+            "Lcom/vk/im/engine/internal/storage/d<",
             "*>;>;>;"
         }
     .end annotation
@@ -49,13 +49,13 @@
     new-array p1, p1, [Lkotlin/Pair;
 
     .line 2
-    const-class v0, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
+    const-class v0, Lcom/vk/im/engine/internal/storage/models/b;
 
     new-instance v1, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl$triggers$1;
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl$triggers$1;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl;)V
 
-    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -64,13 +64,13 @@
     aput-object v0, p1, v1
 
     .line 3
-    const-class v0, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    const-class v0, Lcom/vk/im/engine/internal/storage/models/a;
 
     new-instance v1, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl$triggers$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl$triggers$2;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl;)V
 
-    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -85,7 +85,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl$triggers$3;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl;)V
 
-    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -94,13 +94,13 @@
     aput-object v0, p1, v1
 
     .line 5
-    const-class v0, Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+    const-class v0, Lcom/vk/im/engine/models/account/a;
 
     new-instance v1, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl$triggers$4;
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl$triggers$4;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl;)V
 
-    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -115,7 +115,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl$triggers$5;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl;)V
 
-    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -144,7 +144,7 @@
 
 
 # virtual methods
-.method public create(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
+.method public create(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -153,7 +153,7 @@
             ">(",
             "Ljava/lang/Class<",
             "TT;>;)",
-            "Lcom/vk/im/engine/internal/storage/StorageTrigger<",
+            "Lcom/vk/im/engine/internal/storage/d<",
             "TT;>;"
         }
     .end annotation
@@ -165,17 +165,17 @@
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/jvm/b/Functions;
+    check-cast p1, Lkotlin/jvm/b/a;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/d;
 
     goto :goto_0
 
@@ -183,7 +183,7 @@
     move-object p1, v0
 
     :goto_0
-    instance-of v1, p1, Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    instance-of v1, p1, Lcom/vk/im/engine/internal/storage/d;
 
     if-nez v1, :cond_1
 

@@ -3,7 +3,7 @@
 .source "AL.kt"
 
 # interfaces
-.implements Lb/h/r/BaseContract;
+.implements Lb/h/r/a;
 
 
 # annotations

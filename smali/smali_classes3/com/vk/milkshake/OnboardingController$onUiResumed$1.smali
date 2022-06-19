@@ -61,7 +61,7 @@
 
     const-string v2, "view.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v1}, Lcom/vk/milkshake/OnboardingController;->a(Lcom/vk/milkshake/OnboardingController;Landroid/content/Context;)V
 
@@ -74,7 +74,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/milkshake/OnboardingController$onUiResumed$1$1;-><init>(Lcom/vk/milkshake/OnboardingController$onUiResumed$1;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/milkshake/OnboardingController;->a(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/milkshake/OnboardingController;->a(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     goto :goto_0
 

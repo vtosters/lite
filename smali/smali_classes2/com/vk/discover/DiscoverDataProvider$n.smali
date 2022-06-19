@@ -3,12 +3,12 @@
 .source "DiscoverDataProvider.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/BiFunction;
+.implements Lc/a/z/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/dto/discover/DiscoverCategory;Lcom/vk/discover/DiscoverCategoriesContainer;)Lio/reactivex/Observable;
+    value = Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/dto/discover/DiscoverCategory;Lcom/vk/discover/DiscoverCategoriesContainer;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/BiFunction<",
+        "Lc/a/z/c<",
         "Lcom/vk/discover/DiscoverCategoriesContainer;",
         "Ljava/util/List<",
         "+",

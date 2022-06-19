@@ -28,7 +28,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;-><init>(ZILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ZILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1

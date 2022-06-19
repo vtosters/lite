@@ -24,7 +24,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/httpexecutor/api/exceptions/QuicException$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/httpexecutor/api/exceptions/QuicException$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const-wide v0, 0x1c666a95bc9a2644L    # 7.250656504051929E-172
 

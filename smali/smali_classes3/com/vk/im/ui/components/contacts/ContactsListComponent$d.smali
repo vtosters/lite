@@ -3,12 +3,12 @@
 .source "ContactsListComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/CompositeDisposable;)V
+    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lkotlin/Pair<",
         "+",
         "Ljava/lang/Throwable;",
@@ -74,11 +74,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$d;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/contacts/vc/ContactsVc;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/contacts/vc/d;->a(Ljava/lang/Throwable;)V
 
     :cond_0
     return-void

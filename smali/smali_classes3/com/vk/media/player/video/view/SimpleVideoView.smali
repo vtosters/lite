@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+.field private final B:Lcom/vk/media/player/video/h;
 
-.field private final C:Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+.field private final C:Lcom/vk/media/player/exo/d;
 
 .field private final D:Lcom/vk/media/player/video/VideoScale;
 
@@ -207,11 +207,11 @@
     sget-object v2, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
     .line 7
-    invoke-virtual {v2}, Lcom/vk/core/network/Network;->c()Lcom/vk/core/network/utils/NetworkUserAgent;
+    invoke-virtual {v2}, Lcom/vk/core/network/Network;->c()Lcom/vk/core/network/utils/d;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/core/network/utils/NetworkUserAgent;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/core/network/utils/d;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -241,22 +241,22 @@
     iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->h:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 11
-    new-instance p1, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    new-instance p1, Lcom/vk/media/player/video/h;
 
     new-instance v1, Lcom/vk/media/player/video/view/SimpleVideoView$a;
 
     invoke-direct {v1, p0}, Lcom/vk/media/player/video/view/SimpleVideoView$a;-><init>(Lcom/vk/media/player/video/view/SimpleVideoView;)V
 
-    invoke-direct {p1, v1}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;-><init>(Lcom/vk/media/player/video/VideoPlayerAudioFocusListener$a;)V
+    invoke-direct {p1, v1}, Lcom/vk/media/player/video/h;-><init>(Lcom/vk/media/player/video/h$a;)V
 
-    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/h;
 
     .line 12
-    new-instance p1, Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    new-instance p1, Lcom/vk/media/player/exo/d;
 
-    invoke-direct {p1}, Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;-><init>()V
+    invoke-direct {p1}, Lcom/vk/media/player/exo/d;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/d;
 
     .line 13
     new-instance p1, Lcom/vk/media/player/video/VideoScale;
@@ -367,11 +367,11 @@
     sget-object v1, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
     .line 31
-    invoke-virtual {v1}, Lcom/vk/core/network/Network;->c()Lcom/vk/core/network/utils/NetworkUserAgent;
+    invoke-virtual {v1}, Lcom/vk/core/network/Network;->c()Lcom/vk/core/network/utils/d;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/core/network/utils/NetworkUserAgent;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/core/network/utils/d;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -401,22 +401,22 @@
     iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->h:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 35
-    new-instance p1, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    new-instance p1, Lcom/vk/media/player/video/h;
 
     new-instance v0, Lcom/vk/media/player/video/view/SimpleVideoView$a;
 
     invoke-direct {v0, p0}, Lcom/vk/media/player/video/view/SimpleVideoView$a;-><init>(Lcom/vk/media/player/video/view/SimpleVideoView;)V
 
-    invoke-direct {p1, v0}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;-><init>(Lcom/vk/media/player/video/VideoPlayerAudioFocusListener$a;)V
+    invoke-direct {p1, v0}, Lcom/vk/media/player/video/h;-><init>(Lcom/vk/media/player/video/h$a;)V
 
-    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/h;
 
     .line 36
-    new-instance p1, Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    new-instance p1, Lcom/vk/media/player/exo/d;
 
-    invoke-direct {p1}, Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;-><init>()V
+    invoke-direct {p1}, Lcom/vk/media/player/exo/d;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/d;
 
     .line 37
     new-instance p1, Lcom/vk/media/player/video/VideoScale;
@@ -527,11 +527,11 @@
     sget-object v0, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
     .line 55
-    invoke-virtual {v0}, Lcom/vk/core/network/Network;->c()Lcom/vk/core/network/utils/NetworkUserAgent;
+    invoke-virtual {v0}, Lcom/vk/core/network/Network;->c()Lcom/vk/core/network/utils/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/network/utils/NetworkUserAgent;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/core/network/utils/d;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -561,22 +561,22 @@
     iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->h:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 59
-    new-instance p1, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    new-instance p1, Lcom/vk/media/player/video/h;
 
     new-instance p3, Lcom/vk/media/player/video/view/SimpleVideoView$a;
 
     invoke-direct {p3, p0}, Lcom/vk/media/player/video/view/SimpleVideoView$a;-><init>(Lcom/vk/media/player/video/view/SimpleVideoView;)V
 
-    invoke-direct {p1, p3}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;-><init>(Lcom/vk/media/player/video/VideoPlayerAudioFocusListener$a;)V
+    invoke-direct {p1, p3}, Lcom/vk/media/player/video/h;-><init>(Lcom/vk/media/player/video/h$a;)V
 
-    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/h;
 
     .line 60
-    new-instance p1, Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    new-instance p1, Lcom/vk/media/player/exo/d;
 
-    invoke-direct {p1}, Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;-><init>()V
+    invoke-direct {p1}, Lcom/vk/media/player/exo/d;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    iput-object p1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/d;
 
     .line 61
     new-instance p1, Lcom/vk/media/player/video/VideoScale;
@@ -1433,9 +1433,9 @@
 
     .line 3
     :cond_0
-    sget-object v1, Lcom/vk/media/player/k/PlayerUtils$a;->INSTANCE:Lcom/vk/media/player/k/PlayerUtils$a;
+    sget-object v1, Lcom/vk/media/player/k/b$a;->e:Lcom/vk/media/player/k/b$a;
 
-    invoke-virtual {v1}, Lcom/vk/media/player/k/PlayerUtils$a;->c()Z
+    invoke-virtual {v1}, Lcom/vk/media/player/k/b$a;->c()Z
 
     move-result v1
 
@@ -1544,7 +1544,7 @@
 
     .line 24
     :cond_0
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/ExoVideoCache;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/i;
 
     move-result-object v0
 
@@ -1552,7 +1552,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/mediastore/a/e/ExoVideoCache;->a(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/mediastore/a/e/i;->a(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1573,7 +1573,7 @@
 
     .line 26
     :cond_1
-    iget-object v0, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    iget-object v0, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/d;
 
     iget-object v1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->e0:Ljava/lang/String;
 
@@ -1589,16 +1589,16 @@
     move-result-object v1
 
     :goto_0
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/player/exo/d;->a(Ljava/lang/String;)V
 
     .line 27
-    iget-object v0, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    iget-object v0, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/d;
 
     invoke-direct {p0, p1}, Lcom/vk/media/player/video/view/SimpleVideoView;->a(Landroid/net/Uri;)Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/player/exo/d;->a(Z)V
 
     .line 28
     iget-object v0, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->a0:Lcom/google/android/exoplayer2/upstream/cache/s;
@@ -1716,7 +1716,7 @@
 
     .line 42
     :goto_2
-    iget-object p2, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    iget-object p2, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/d;
 
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/o0;->a(Lcom/google/android/exoplayer2/q0/c;)V
 
@@ -1932,11 +1932,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/media/player/k/PlayerUtils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/vk/media/player/k/b;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    iget-object v1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/h;
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 
@@ -2066,7 +2066,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+    iget-object v1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->C:Lcom/vk/media/player/exo/d;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/o0;->b(Lcom/google/android/exoplayer2/q0/c;)V
 
@@ -2276,11 +2276,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/media/player/k/PlayerUtils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/vk/media/player/k/b;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    iget-object v1, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/h;
 
     iget v2, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->P:I
 
@@ -2296,19 +2296,19 @@
     if-ne v0, v1, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    iget-object v0, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/h;
 
-    invoke-virtual {v0, v3}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;->onAudioFocusChange(I)V
+    invoke-virtual {v0, v3}, Lcom/vk/media/player/video/h;->onAudioFocusChange(I)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
+    iget-object v0, p0, Lcom/vk/media/player/video/view/SimpleVideoView;->B:Lcom/vk/media/player/video/h;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;->onAudioFocusChange(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/player/video/h;->onAudioFocusChange(I)V
 
     :goto_0
     return-void

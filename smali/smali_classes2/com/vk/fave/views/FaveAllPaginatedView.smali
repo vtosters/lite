@@ -19,7 +19,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/fave/views/FaveAllPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/fave/views/FaveAllPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -39,7 +39,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/fave/views/FaveAllPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/fave/views/FaveAllPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -55,12 +55,12 @@
 
     invoke-direct {p1}, Lcom/vk/fave/views/FaveAllPaginatedView$a;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->setFooterEmptyViewProvider(Lcom/vk/lists/FooterEmptyViewProvider;)V
+    invoke-virtual {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->setFooterEmptyViewProvider(Lcom/vk/lists/j;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -83,11 +83,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/fave/views/FaveAllPaginatedView;)Lcom/vk/lists/PaginatedRecyclerAdapter;
+.method public static final synthetic a(Lcom/vk/fave/views/FaveAllPaginatedView;)Lcom/vk/lists/s;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object p0, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/s;
 
     return-object p0
 .end method
@@ -105,7 +105,7 @@
 
     const-string v1, "recyclerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -118,9 +118,9 @@
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/fave/views/FaveAllEmptyView;
+    new-instance v0, Lcom/vk/fave/views/a;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/fave/views/FaveAllEmptyView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/fave/views/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/lists/AbstractPaginatedView;->a()Landroid/view/ViewGroup$LayoutParams;
@@ -132,18 +132,18 @@
     return-object v0
 .end method
 
-.method public a(Lcom/vk/lists/EmptyViewConfiguration;)V
+.method public a(Lcom/vk/lists/h;)V
     .locals 1
 
     .line 4
-    invoke-super {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/EmptyViewConfiguration;)V
+    invoke-super {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/h;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->J:Landroidx/recyclerview/widget/RecyclerView;
 
     const-string v0, "recyclerView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x8
 
@@ -163,7 +163,7 @@
 
     const-string v1, "recyclerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -183,7 +183,7 @@
 
     const-string v1, "recyclerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -192,7 +192,7 @@
     return-void
 .end method
 
-.method protected i()Lcom/vk/lists/PaginationHelper$l;
+.method protected i()Lcom/vk/lists/t$l;
     .locals 1
 
     .line 1

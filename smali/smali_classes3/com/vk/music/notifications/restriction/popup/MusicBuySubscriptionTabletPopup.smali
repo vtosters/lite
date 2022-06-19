@@ -1,29 +1,29 @@
 .class public final Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;
-.super Lcom/vk/music/notifications/inapp/PopupNotification;
+.super Lcom/vk/music/notifications/inapp/d;
 .source "MusicBuySubscriptionTabletPopup.kt"
 
 
 # instance fields
 .field private final B:I
 
-.field private final C:Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;
+.field private final C:Lcom/vk/music/subscription/b;
 
-.field private final D:Lkotlin/jvm/b/Functions;
+.field private final D:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final E:Lkotlin/jvm/b/Functions2;
+.field private final E:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/dto/common/data/Subscription;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -33,19 +33,19 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;)V
+.method public constructor <init>(Lcom/vk/music/subscription/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lcom/vk/music/subscription/b;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/common/data/Subscription;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;",
             "Landroid/view/View$OnClickListener;",
             ")V"
@@ -53,13 +53,13 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/music/notifications/inapp/PopupNotification;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/notifications/inapp/d;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->C:Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;
+    iput-object p1, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->C:Lcom/vk/music/subscription/b;
 
-    iput-object p2, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->D:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->D:Lkotlin/jvm/b/a;
 
-    iput-object p3, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->E:Lkotlin/jvm/b/Functions2;
+    iput-object p3, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->E:Lkotlin/jvm/b/b;
 
     iput-object p4, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->F:Landroid/view/View$OnClickListener;
 
@@ -80,11 +80,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic b(Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->E:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->E:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -95,9 +95,9 @@
     .locals 1
 
     .line 6
-    iget-object v0, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->D:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->D:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     .line 7
     invoke-super {p0}, Lcom/vk/music/notifications/inapp/InAppNotification;->a()V
@@ -125,15 +125,15 @@
     invoke-direct {v8, v0, v0}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->C:Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;
+    iget-object v0, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->C:Lcom/vk/music/subscription/b;
 
     const-string v1, "this"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->C:Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;
+    iget-object v1, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->C:Lcom/vk/music/subscription/b;
 
-    invoke-virtual {v1}, Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;->b()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/music/subscription/b;->b()Ljava/util/List;
 
     move-result-object v3
 
@@ -151,16 +151,16 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;->a(Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;Landroid/view/ViewGroup;ILjava/util/List;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v7}, Lcom/vk/music/subscription/b;->a(Lcom/vk/music/subscription/b;Landroid/view/ViewGroup;ILjava/util/List;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {p1, v0, v8}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->C:Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;
+    iget-object v0, p0, Lcom/vk/music/notifications/restriction/popup/MusicBuySubscriptionTabletPopup;->C:Lcom/vk/music/subscription/b;
 
-    invoke-virtual {v0}, Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/music/subscription/b;->a()Ljava/util/List;
 
     move-result-object v3
 
@@ -174,7 +174,7 @@
 
     const/16 v6, 0x8
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;->a(Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;Landroid/view/ViewGroup;ILjava/util/List;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v7}, Lcom/vk/music/subscription/b;->a(Lcom/vk/music/subscription/b;Landroid/view/ViewGroup;ILjava/util/List;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 

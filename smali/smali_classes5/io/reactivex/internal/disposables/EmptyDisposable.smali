@@ -3,7 +3,7 @@
 .source "EmptyDisposable.java"
 
 # interfaces
-.implements Lc/a/a0/b/QueueDisposable;
+.implements Lc/a/a0/b/f;
 
 
 # annotations
@@ -12,7 +12,7 @@
         "Ljava/lang/Enum<",
         "Lio/reactivex/internal/disposables/EmptyDisposable;",
         ">;",
-        "Lc/a/a0/b/QueueDisposable<",
+        "Lc/a/a0/b/f<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -85,12 +85,12 @@
     return-void
 .end method
 
-.method public static a(Lio/reactivex/Observer;)V
+.method public static a(Lc/a/r;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "*>;)V"
         }
     .end annotation
@@ -98,35 +98,35 @@
     .line 1
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
-    invoke-interface {p0, v0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p0, v0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     .line 2
-    invoke-interface {p0}, Lio/reactivex/Observer;->b()V
+    invoke-interface {p0}, Lc/a/r;->b()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Throwable;Lio/reactivex/CompletableObserver;)V
+.method public static a(Ljava/lang/Throwable;Lc/a/c;)V
     .locals 1
 
     .line 5
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
-    invoke-interface {p1, v0}, Lio/reactivex/CompletableObserver;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v0}, Lc/a/c;->a(Lio/reactivex/disposables/b;)V
 
     .line 6
-    invoke-interface {p1, p0}, Lio/reactivex/CompletableObserver;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p0}, Lc/a/c;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Throwable;Lio/reactivex/Observer;)V
+.method public static a(Ljava/lang/Throwable;Lc/a/r;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Throwable;",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "*>;)V"
         }
     .end annotation
@@ -134,21 +134,21 @@
     .line 3
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
-    invoke-interface {p1, v0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     .line 4
-    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Throwable;Lio/reactivex/SingleObserver;)V
+.method public static a(Ljava/lang/Throwable;Lc/a/v;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Throwable;",
-            "Lio/reactivex/SingleObserver<",
+            "Lc/a/v<",
             "*>;)V"
         }
     .end annotation
@@ -156,10 +156,10 @@
     .line 7
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
-    invoke-interface {p1, v0}, Lio/reactivex/SingleObserver;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v0}, Lc/a/v;->a(Lio/reactivex/disposables/b;)V
 
     .line 8
-    invoke-interface {p1, p0}, Lio/reactivex/SingleObserver;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p0}, Lc/a/v;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method

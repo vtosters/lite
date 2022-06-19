@@ -3,7 +3,7 @@
 .source "Selection.kt"
 
 # interfaces
-.implements Lcom/vk/cameraui/i/BasePresenter;
+.implements Lcom/vk/cameraui/i/a;
 
 
 # annotations
@@ -25,7 +25,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/cameraui/i/BasePresenter<",
+        "Lcom/vk/cameraui/i/a<",
         "Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;",
         ">;"
     }

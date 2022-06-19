@@ -3,7 +3,7 @@
 .source "CommonImageViewer.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/ImageViewer;
+.implements Lcom/vk/bridges/p;
 
 
 # annotations
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method private final a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/bridges/ImageViewer$d;
+.method private final a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/bridges/p$d;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -54,16 +54,16 @@
             "Ljava/util/List<",
             "+TT;>;",
             "Landroid/app/Activity;",
-            "Lcom/vk/bridges/ImageViewer$a;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lcom/vk/bridges/p$a;",
+            "Lkotlin/jvm/b/b<",
             "-TT;+",
             "Lcom/vk/dto/common/AttachmentWithMedia;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;+",
             "Lcom/vk/im/engine/models/attaches/AttachWithImage;",
             ">;)",
-            "Lcom/vk/bridges/ImageViewer$d<",
+            "Lcom/vk/bridges/p$d<",
             "TT;>;"
         }
     .end annotation
@@ -110,7 +110,7 @@
     .line 12
     sget-object v3, Lcom/vtosters/lite/bridges/CommonImageViewer;->a:Lcom/vtosters/lite/bridges/CommonImageViewer;
 
-    invoke-interface {p5, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p5, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -138,7 +138,7 @@
     move-object v6, p6
 
     .line 13
-    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(Lcom/vk/bridges/ImageViewer$a;Landroid/app/Activity;Ljava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/photoviewer/CallbackAdapter;
+    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(Lcom/vk/bridges/p$a;Landroid/app/Activity;Ljava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/photoviewer/c;
 
     move-result-object p2
 
@@ -153,7 +153,7 @@
     .line 16
     new-instance p1, Lcom/vtosters/lite/bridges/CommonImageViewer$e;
 
-    invoke-direct {p1, p4, p5, p2, p6}, Lcom/vtosters/lite/bridges/CommonImageViewer$e;-><init>(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/Functions2;Lcom/vk/photoviewer/CallbackAdapter;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, p4, p5, p2, p6}, Lcom/vtosters/lite/bridges/CommonImageViewer$e;-><init>(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/b;Lcom/vk/photoviewer/c;Lkotlin/jvm/b/b;)V
 
     return-object p1
 
@@ -202,7 +202,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 24
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -318,7 +318,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 37
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -358,7 +358,7 @@
     check-cast v0, Lcom/vk/dto/common/ImageSize;
 
     .line 42
-    invoke-static {v0, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/common/ImageSize;->t1()I
 
@@ -376,7 +376,7 @@
     check-cast v4, Lcom/vk/dto/common/ImageSize;
 
     .line 45
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Lcom/vk/dto/common/ImageSize;->t1()I
 
@@ -409,7 +409,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 49
     new-instance v0, Ljava/util/ArrayList;
@@ -438,7 +438,7 @@
     check-cast v2, Lcom/vk/dto/common/ImageSize;
 
     .line 51
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -494,7 +494,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p1}, Lcom/vtosters/lite/bridges/CommonImageViewer$c;-><init>(Ljava/util/List;)V
 
@@ -515,26 +515,26 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/bridges/ImageViewer$a;Landroid/app/Activity;Ljava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/photoviewer/CallbackAdapter;
+.method private final a(Lcom/vk/bridges/p$a;Landroid/app/Activity;Ljava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/photoviewer/c;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/vk/bridges/ImageViewer$a;",
+            "Lcom/vk/bridges/p$a;",
             "Landroid/app/Activity;",
             "Ljava/util/List<",
             "+TT;>;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;+",
             "Lcom/vk/dto/common/AttachmentWithMedia;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;+",
             "Lcom/vk/im/engine/models/attaches/AttachWithImage;",
             ">;)",
-            "Lcom/vk/photoviewer/CallbackAdapter<",
+            "Lcom/vk/photoviewer/c<",
             "*>;"
         }
     .end annotation
@@ -542,7 +542,7 @@
     .line 17
     new-instance p5, Lcom/vtosters/lite/bridges/CommonImageViewer$b;
 
-    invoke-direct {p5, p2, p1}, Lcom/vtosters/lite/bridges/CommonImageViewer$b;-><init>(Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-direct {p5, p2, p1}, Lcom/vtosters/lite/bridges/CommonImageViewer$b;-><init>(Landroid/content/Context;Lcom/vk/bridges/p$a;)V
 
     .line 18
     new-instance v0, Ljava/util/ArrayList;
@@ -572,7 +572,7 @@
     move-result-object v1
 
     .line 20
-    invoke-interface {p4, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p4, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -584,14 +584,14 @@
     :cond_0
     new-instance p3, Lcom/vk/ui/photoviewer/VkAppCallback;
 
-    invoke-direct {p3, v0, p5, p1, p2}, Lcom/vk/ui/photoviewer/VkAppCallback;-><init>(Ljava/util/List;Lcom/vk/photoviewer/PhotoViewer$d;Lcom/vk/bridges/ImageViewer$a;Landroid/app/Activity;)V
+    invoke-direct {p3, v0, p5, p1, p2}, Lcom/vk/ui/photoviewer/VkAppCallback;-><init>(Ljava/util/List;Lcom/vk/photoviewer/PhotoViewer$d;Lcom/vk/bridges/p$a;Landroid/app/Activity;)V
 
     return-object p3
 .end method
 
 
 # virtual methods
-.method public a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+.method public a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -601,9 +601,9 @@
             "Lcom/vk/dto/common/AttachmentWithMedia;",
             ">;",
             "Landroid/app/Activity;",
-            "Lcom/vk/bridges/ImageViewer$a;",
+            "Lcom/vk/bridges/p$a;",
             ")",
-            "Lcom/vk/bridges/ImageViewer$d<",
+            "Lcom/vk/bridges/p$d<",
             "Lcom/vk/dto/common/AttachmentWithMedia;",
             ">;"
         }
@@ -626,14 +626,14 @@
     move-object v4, p4
 
     .line 8
-    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/bridges/p$d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+.method public a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -643,9 +643,9 @@
             "Lcom/vk/dto/photo/Photo;",
             ">;",
             "Landroid/content/Context;",
-            "Lcom/vk/bridges/ImageViewer$a;",
+            "Lcom/vk/bridges/p$a;",
             ")",
-            "Lcom/vk/bridges/ImageViewer$d<",
+            "Lcom/vk/bridges/p$d<",
             "Lcom/vk/dto/photo/Photo;",
             ">;"
         }
@@ -671,14 +671,14 @@
     move-object v4, p4
 
     .line 5
-    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/bridges/p$d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/models/attaches/AttachWithImage;Ljava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+.method public a(Lcom/vk/im/engine/models/attaches/AttachWithImage;Ljava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -689,9 +689,9 @@
             "Lcom/vk/im/engine/models/attaches/AttachWithImage;",
             ">;",
             "Landroid/app/Activity;",
-            "Lcom/vk/bridges/ImageViewer$a;",
+            "Lcom/vk/bridges/p$a;",
             ")",
-            "Lcom/vk/bridges/ImageViewer$d<",
+            "Lcom/vk/bridges/p$d<",
             "Lcom/vk/im/engine/models/attaches/AttachWithImage;",
             ">;"
         }
@@ -764,7 +764,7 @@
 
     .line 57
     :cond_4
-    invoke-static {p2, p1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/lang/Object;)Ljava/lang/Integer;
+    invoke-static {p2, p1}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/Object;)Ljava/lang/Integer;
 
     move-result-object p1
 
@@ -797,14 +797,14 @@
     move-object v7, p4
 
     .line 60
-    invoke-direct/range {v3 .. v9}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-direct/range {v3 .. v9}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/bridges/p$d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public b(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+.method public b(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -814,9 +814,9 @@
             "Lcom/vk/dto/common/Image;",
             ">;",
             "Landroid/content/Context;",
-            "Lcom/vk/bridges/ImageViewer$a;",
+            "Lcom/vk/bridges/p$a;",
             ")",
-            "Lcom/vk/bridges/ImageViewer$d<",
+            "Lcom/vk/bridges/p$d<",
             "Lcom/vk/dto/common/Image;",
             ">;"
         }
@@ -842,7 +842,7 @@
     move-object v4, p4
 
     .line 4
-    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/bridges/p$d;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "MenuCounterUpdater.kt"
 
 # interfaces
-.implements Lcom/vk/api/base/ApiCallback;
+.implements Lcom/vk/api/base/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/ApiCallback<",
+        "Lcom/vk/api/base/a<",
         "Lorg/json/JSONObject;",
         ">;"
     }
@@ -79,7 +79,7 @@
     invoke-static {v0, p1}, Lcom/vtosters/lite/MenuCounterUpdater;->a(Lcom/vtosters/lite/MenuCounterUpdater;Lorg/json/JSONObject;)V
 
     .line 4
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v0, Landroid/content/Intent;
 

@@ -3,7 +3,7 @@
 .source "ContactsListLoadCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/models/contacts/Contact;",
-        "Lcom/vk/im/engine/models/Profile;",
+        "Lcom/vk/im/engine/models/j;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/contacts/Contact;)Lcom/vk/im/engine/models/Profile;
+.method public final a(Lcom/vk/im/engine/models/contacts/Contact;)Lcom/vk/im/engine/models/j;
     .locals 1
 
     .line 1
@@ -62,14 +62,14 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/Profile;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/j;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -82,7 +82,7 @@
     .line 1
     check-cast p1, Lcom/vk/im/engine/models/contacts/Contact;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/tasks/ContactsListLoadCmd$filterNewUsers$2;->a(Lcom/vk/im/engine/models/contacts/Contact;)Lcom/vk/im/engine/models/Profile;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/tasks/ContactsListLoadCmd$filterNewUsers$2;->a(Lcom/vk/im/engine/models/contacts/Contact;)Lcom/vk/im/engine/models/j;
 
     move-result-object p1
 

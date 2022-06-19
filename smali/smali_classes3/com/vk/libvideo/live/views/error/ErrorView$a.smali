@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/libvideo/live/views/error/ErrorView$a;->a:Lcom/vk/libvideo/live/views/error/ErrorView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/error/ErrorView;->a(Lcom/vk/libvideo/live/views/error/ErrorView;)Lcom/vk/libvideo/live/views/error/ErrorContract;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/error/ErrorView;->a(Lcom/vk/libvideo/live/views/error/ErrorView;)Lcom/vk/libvideo/live/views/error/a;
 
     move-result-object p1
 
@@ -50,11 +50,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/libvideo/live/views/error/ErrorView$a;->a:Lcom/vk/libvideo/live/views/error/ErrorView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/error/ErrorView;->a(Lcom/vk/libvideo/live/views/error/ErrorView;)Lcom/vk/libvideo/live/views/error/ErrorContract;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/error/ErrorView;->a(Lcom/vk/libvideo/live/views/error/ErrorView;)Lcom/vk/libvideo/live/views/error/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/error/ErrorContract;->a()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/error/a;->a()V
 
     :cond_0
     return-void

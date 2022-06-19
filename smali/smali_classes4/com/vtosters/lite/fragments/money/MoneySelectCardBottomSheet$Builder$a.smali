@@ -3,7 +3,7 @@
 .source "MoneySelectCardBottomSheet.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/b0/q/AddCardItemHolder$a;
+.implements Lcom/vtosters/lite/ui/b0/q/a$a;
 
 
 # annotations
@@ -45,17 +45,17 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder$a;->b:Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder;->a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder;)Lkotlin/jvm/b/Functions2;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder;->a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder;)Lkotlin/jvm/b/b;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder$a;->a:Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;
 
-    invoke-static {v1}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {v1}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

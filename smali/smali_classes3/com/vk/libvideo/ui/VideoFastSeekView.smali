@@ -81,7 +81,7 @@
 
 .field private final f:Landroid/widget/ImageView;
 
-.field private final g:Lcom/vk/libvideo/x/CustomRippleDrawable;
+.field private final g:Lcom/vk/libvideo/x/b;
 
 .field private h:Landroid/text/StaticLayout;
 
@@ -94,7 +94,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoFastSeekView$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoFastSeekView$Companion;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/16 v0, 0x10
 
@@ -299,7 +299,7 @@
     move-result p2
 
     .line 24
-    sget p3, Lcom/vk/libvideo/R7;->ic_fast_forward_arrow:I
+    sget p3, Lcom/vk/libvideo/e;->ic_fast_forward_arrow:I
 
     invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -318,42 +318,42 @@
     :cond_0
     iget-object p3, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->a:Landroid/widget/ImageView;
 
-    sget v0, Lcom/vk/libvideo/R7;->ic_fast_forward_arrow:I
+    sget v0, Lcom/vk/libvideo/e;->ic_fast_forward_arrow:I
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 27
     iget-object p3, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->b:Landroid/widget/ImageView;
 
-    sget v0, Lcom/vk/libvideo/R7;->ic_fast_forward_arrow:I
+    sget v0, Lcom/vk/libvideo/e;->ic_fast_forward_arrow:I
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 28
     iget-object p3, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->c:Landroid/widget/ImageView;
 
-    sget v0, Lcom/vk/libvideo/R7;->ic_fast_forward_arrow:I
+    sget v0, Lcom/vk/libvideo/e;->ic_fast_forward_arrow:I
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 29
     iget-object p3, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->d:Landroid/widget/ImageView;
 
-    sget v0, Lcom/vk/libvideo/R7;->ic_fast_forward_arrow:I
+    sget v0, Lcom/vk/libvideo/e;->ic_fast_forward_arrow:I
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 30
     iget-object p3, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->e:Landroid/widget/ImageView;
 
-    sget v0, Lcom/vk/libvideo/R7;->ic_fast_forward_arrow:I
+    sget v0, Lcom/vk/libvideo/e;->ic_fast_forward_arrow:I
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 31
     iget-object p3, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->f:Landroid/widget/ImageView;
 
-    sget v0, Lcom/vk/libvideo/R7;->ic_fast_forward_arrow:I
+    sget v0, Lcom/vk/libvideo/e;->ic_fast_forward_arrow:I
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -434,7 +434,7 @@
     .line 42
     iget-object p2, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->C:Landroid/text/TextPaint;
 
-    sget p3, Lcom/vk/libvideo/R10;->roboto_regular:I
+    sget p3, Lcom/vk/libvideo/f;->roboto_regular:I
 
     invoke-static {p1, p3}, Landroidx/core/content/res/ResourcesCompat;->getFont(Landroid/content/Context;I)Landroid/graphics/Typeface;
 
@@ -455,14 +455,14 @@
     invoke-virtual {p0, p2, p3}, Landroid/view/ViewGroup;->setLayerType(ILandroid/graphics/Paint;)V
 
     .line 45
-    new-instance p2, Lcom/vk/libvideo/x/CustomRippleDrawable;
+    new-instance p2, Lcom/vk/libvideo/x/b;
 
-    invoke-direct {p2, p1}, Lcom/vk/libvideo/x/CustomRippleDrawable;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/libvideo/x/b;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
+    iput-object p2, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
 
     .line 46
-    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
+    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -542,7 +542,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/libvideo/R11;->n_seconds:I
+    sget v2, Lcom/vk/libvideo/j;->n_seconds:I
 
     new-array v3, v13, [Ljava/lang/Object;
 
@@ -614,7 +614,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/libvideo/R11;->n_sec:I
+    sget v2, Lcom/vk/libvideo/j;->n_sec:I
 
     new-array v3, v13, [Ljava/lang/Object;
 
@@ -644,7 +644,7 @@
 
     move-result-object v2
 
-    sget v5, Lcom/vk/libvideo/R11;->n_mins_secs:I
+    sget v5, Lcom/vk/libvideo/j;->n_mins_secs:I
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -686,7 +686,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/libvideo/R11;->n_hours_mins:I
+    sget v2, Lcom/vk/libvideo/j;->n_hours_mins:I
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -748,7 +748,7 @@
     goto :goto_4
 
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v14
 
@@ -871,7 +871,7 @@
 
     .line 36
     :goto_7
-    iget-object v1, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
+    iget-object v1, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
 
     if-eqz v0, :cond_12
 
@@ -883,10 +883,10 @@
     const/16 v0, 0x32
 
     :goto_8
-    invoke-virtual {v1, v0}, Lcom/vk/libvideo/x/CustomRippleDrawable;->a(I)V
+    invoke-virtual {v1, v0}, Lcom/vk/libvideo/x/b;->a(I)V
 
     .line 37
-    iget-object v0, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
+    iget-object v0, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
 
     sget-object v1, Lcom/vk/libvideo/ui/VideoFastSeekView$Companion$Type;->SEEK:Lcom/vk/libvideo/ui/VideoFastSeekView$Companion$Type;
 
@@ -902,7 +902,7 @@
     move-object/from16 v1, p2
 
     :goto_9
-    invoke-virtual {v0, v1, v10, v12}, Lcom/vk/libvideo/x/CustomRippleDrawable;->a(Landroid/graphics/PointF;ZZ)V
+    invoke-virtual {v0, v1, v10, v12}, Lcom/vk/libvideo/x/b;->a(Landroid/graphics/PointF;ZZ)V
 
     .line 38
     iget-boolean v0, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->J:Z
@@ -934,7 +934,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/libvideo/R11;->video_fast_seek_tooltip:I
+    sget v2, Lcom/vk/libvideo/j;->video_fast_seek_tooltip:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -980,7 +980,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v10}, Lcom/vk/libvideo/ui/VideoFastSeekView$c;->a(Landroid/content/Context;Z)V
 
@@ -1074,9 +1074,9 @@
     invoke-static/range {v0 .. v9}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;JJLjava/lang/Runnable;Landroid/view/animation/Interpolator;ZILjava/lang/Object;)Landroid/view/ViewPropertyAnimator;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
+    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/x/CustomRippleDrawable;->a()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/x/b;->a()V
 
     const/4 v0, 0x0
 
@@ -1467,7 +1467,7 @@
     goto :goto_1
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -1590,7 +1590,7 @@
 
     .line 26
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 

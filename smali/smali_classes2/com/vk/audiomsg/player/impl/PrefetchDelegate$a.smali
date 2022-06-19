@@ -28,7 +28,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcom/vk/audiomsg/player/PrefetchTag;",
+            "Lcom/vk/audiomsg/player/e;",
             ">;"
         }
     .end annotation
@@ -44,7 +44,7 @@
             "Ljava/util/concurrent/Future<",
             "*>;",
             "Ljava/util/Set<",
-            "Lcom/vk/audiomsg/player/PrefetchTag;",
+            "Lcom/vk/audiomsg/player/e;",
             ">;)V"
         }
     .end annotation
@@ -83,7 +83,7 @@
         value = {
             "()",
             "Ljava/util/Set<",
-            "Lcom/vk/audiomsg/player/PrefetchTag;",
+            "Lcom/vk/audiomsg/player/e;",
             ">;"
         }
     .end annotation

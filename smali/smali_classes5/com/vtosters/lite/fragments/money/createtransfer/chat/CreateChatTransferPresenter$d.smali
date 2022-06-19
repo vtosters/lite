@@ -3,7 +3,7 @@
 .source "CreateChatTransferPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/money/MoneyReceiverInfo;",
         ">;"
     }
@@ -66,15 +66,15 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {v1}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/bridges/AuthBridge1;->m()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/bridges/a;->m()Ljava/lang/String;
 
     move-result-object v1
 
@@ -91,31 +91,31 @@
     .line 4
     iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter$d;->a:Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferContract1;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/b;
 
     move-result-object p1
 
     const v0, 0x7f120754
 
-    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/q/CreateTransferContract1;->A(I)V
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/q/d;->A(I)V
 
     .line 5
     iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter$d;->a:Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferContract1;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/b;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vtosters/lite/fragments/money/q/CreateTransferContract1;->f2()V
+    invoke-interface {p1}, Lcom/vtosters/lite/fragments/money/q/d;->f2()V
 
     .line 6
     iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter$d;->a:Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferContract1;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/b;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vtosters/lite/fragments/money/q/CreateTransferContract1;->s3()V
+    invoke-interface {p1}, Lcom/vtosters/lite/fragments/money/q/d;->s3()V
 
     :cond_1
     return-void

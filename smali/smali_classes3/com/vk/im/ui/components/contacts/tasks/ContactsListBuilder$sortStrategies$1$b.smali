@@ -48,7 +48,7 @@
     .end annotation
 
     .line 1
-    check-cast p2, Lcom/vk/im/engine/models/Profile;
+    check-cast p2, Lcom/vk/im/engine/models/j;
 
     .line 2
     instance-of v0, p2, Lcom/vk/im/engine/models/contacts/Contact;
@@ -65,7 +65,7 @@
 
     .line 3
     :cond_0
-    invoke-interface {p2}, Lcom/vk/im/engine/models/Profile;->d0()Lcom/vk/dto/user/OnlineInfo;
+    invoke-interface {p2}, Lcom/vk/im/engine/models/j;->d0()Lcom/vk/dto/user/OnlineInfo;
 
     move-result-object p2
 
@@ -90,7 +90,7 @@
 
     move-result-object p2
 
-    check-cast p1, Lcom/vk/im/engine/models/Profile;
+    check-cast p1, Lcom/vk/im/engine/models/j;
 
     .line 5
     instance-of v0, p1, Lcom/vk/im/engine/models/contacts/Contact;
@@ -103,7 +103,7 @@
 
     .line 6
     :cond_2
-    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->d0()Lcom/vk/dto/user/OnlineInfo;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->d0()Lcom/vk/dto/user/OnlineInfo;
 
     move-result-object p1
 

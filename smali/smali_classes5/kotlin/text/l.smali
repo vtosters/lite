@@ -26,7 +26,7 @@
 .method public static bridge synthetic a(Ljava/lang/Appendable;)Ljava/lang/Appendable;
     .locals 0
 
-    invoke-static {p0}, Lkotlin/text/StringBuilderJVM;->a(Ljava/lang/Appendable;)Ljava/lang/Appendable;
+    invoke-static {p0}, Lkotlin/text/o;->a(Ljava/lang/Appendable;)Ljava/lang/Appendable;
 
     move-result-object p0
 
@@ -46,7 +46,7 @@
 .method public static bridge synthetic a(Ljava/lang/CharSequence;I)Ljava/lang/String;
     .locals 0
 
-    invoke-static {p0, p1}, Lkotlin/text/StringsJVM;->a(Ljava/lang/CharSequence;I)Ljava/lang/String;
+    invoke-static {p0, p1}, Lkotlin/text/s;->a(Ljava/lang/CharSequence;I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -56,7 +56,7 @@
 .method public static bridge synthetic a(Ljava/lang/String;CCZILjava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    invoke-static/range {p0 .. p5}, Lkotlin/text/StringsJVM;->a(Ljava/lang/String;CCZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {p0 .. p5}, Lkotlin/text/s;->a(Ljava/lang/String;CCZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -116,7 +116,7 @@
 .method public static bridge synthetic a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lkotlin/text/StringsJVM;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {p0, p1, p2, p3}, Lkotlin/text/s;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p0
 
@@ -126,7 +126,7 @@
 .method public static bridge synthetic a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    invoke-static/range {p0 .. p5}, Lkotlin/text/StringsJVM;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {p0 .. p5}, Lkotlin/text/s;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -136,7 +136,7 @@
 .method public static bridge synthetic a(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
     .locals 0
 
-    invoke-static {p0}, Lkotlin/text/StringBuilderJVM;->a(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, Lkotlin/text/o;->a(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
 
     return-object p0
 .end method
@@ -144,7 +144,7 @@
 .method public static bridge synthetic a(Ljava/lang/String;)Ljava/math/BigInteger;
     .locals 0
 
-    invoke-static {p0}, Lkotlin/text/StringNumberConversionsJVM;->a(Ljava/lang/String;)Ljava/math/BigInteger;
+    invoke-static {p0}, Lkotlin/text/q;->a(Ljava/lang/String;)Ljava/math/BigInteger;
 
     move-result-object p0
 
@@ -171,7 +171,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic a(Ljava/lang/Appendable;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;)V
+.method public static bridge synthetic a(Ljava/lang/Appendable;Ljava/lang/Object;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -180,14 +180,14 @@
             ">(",
             "Ljava/lang/Appendable;",
             "TT;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;+",
             "Ljava/lang/CharSequence;",
             ">;)V"
         }
     .end annotation
 
-    invoke-static {p0, p1, p2}, Lkotlin/text/StringBuilder;->a(Ljava/lang/Appendable;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p0, p1, p2}, Lkotlin/text/p;->a(Ljava/lang/Appendable;Ljava/lang/Object;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -195,7 +195,7 @@
 .method public static bridge synthetic a(Ljava/lang/CharSequence;)Z
     .locals 0
 
-    invoke-static {p0}, Lkotlin/text/StringsJVM;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p0}, Lkotlin/text/s;->a(Ljava/lang/CharSequence;)Z
 
     move-result p0
 
@@ -245,7 +245,7 @@
 .method public static bridge synthetic a(Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lkotlin/text/StringsJVM;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {p0, p1, p2}, Lkotlin/text/s;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
 
@@ -255,7 +255,7 @@
 .method public static bridge synthetic a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
     .locals 0
 
-    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/StringsJVM;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/s;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result p0
 
@@ -295,7 +295,7 @@
 .method public static bridge synthetic b(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 0
 
-    invoke-static {p0}, Lkotlin/text/StringNumberConversions;->b(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {p0}, Lkotlin/text/r;->b(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p0
 
@@ -335,7 +335,7 @@
 .method public static bridge synthetic b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    invoke-static/range {p0 .. p5}, Lkotlin/text/StringsJVM;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {p0 .. p5}, Lkotlin/text/s;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -345,7 +345,7 @@
 .method public static bridge synthetic b(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
     .locals 0
 
-    invoke-static {p0}, Lkotlin/text/StringBuilderJVM;->b(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, Lkotlin/text/o;->b(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
 
     return-object p0
 .end method
@@ -393,7 +393,7 @@
 .method public static bridge synthetic b(Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lkotlin/text/StringsJVM;->b(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {p0, p1, p2}, Lkotlin/text/s;->b(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
 
@@ -403,7 +403,7 @@
 .method public static bridge synthetic b(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
     .locals 0
 
-    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/StringsJVM;->b(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/s;->b(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result p0
 
@@ -433,7 +433,7 @@
 .method public static bridge synthetic c(Ljava/lang/String;I)Ljava/lang/Long;
     .locals 0
 
-    invoke-static {p0, p1}, Lkotlin/text/StringNumberConversions;->c(Ljava/lang/String;I)Ljava/lang/Long;
+    invoke-static {p0, p1}, Lkotlin/text/r;->c(Ljava/lang/String;I)Ljava/lang/Long;
 
     move-result-object p0
 
@@ -493,7 +493,7 @@
 .method public static bridge synthetic c(Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lkotlin/text/StringsJVM;->c(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {p0, p1, p2}, Lkotlin/text/s;->c(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
 
@@ -503,7 +503,7 @@
 .method public static bridge synthetic c(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
     .locals 0
 
-    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/StringsJVM;->c(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/s;->c(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result p0
 
@@ -513,7 +513,7 @@
 .method public static bridge synthetic d(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    invoke-static {p0}, Lkotlin/text/StringsJVM;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lkotlin/text/s;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -533,7 +533,7 @@
 .method public static bridge synthetic e(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    invoke-static {p0}, Lkotlin/text/StringsJVM;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lkotlin/text/s;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

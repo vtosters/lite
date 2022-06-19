@@ -3,7 +3,7 @@
 .source "MarketCartCheckoutContract.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -93,11 +93,11 @@
     .line 4
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$f;->a:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->c()Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->c()Lcom/vk/market/orders/checkout/n;
 
     move-result-object p1
 
-    invoke-interface {p1, v3}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->J(I)V
+    invoke-interface {p1, v3}, Lcom/vk/market/orders/checkout/n;->J(I)V
 
     goto :goto_0
 
@@ -124,11 +124,11 @@
     .line 6
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$f;->a:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->c()Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->c()Lcom/vk/market/orders/checkout/n;
 
     move-result-object p1
 
-    invoke-interface {p1, v2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->J(I)V
+    invoke-interface {p1, v2}, Lcom/vk/market/orders/checkout/n;->J(I)V
 
     :cond_1
     :goto_0

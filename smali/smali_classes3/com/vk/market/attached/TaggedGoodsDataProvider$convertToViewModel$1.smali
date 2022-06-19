@@ -3,7 +3,7 @@
 .source "TaggedGoodsDataProviders.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/dto/tags/Tag;",
-        "Lcom/vk/market/attached/TaggedGoodsAdapter;",
+        "Lcom/vk/market/attached/c;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/tags/Tag;)Lcom/vk/market/attached/TaggedGoodsAdapter;
+.method public final a(Lcom/vk/dto/tags/Tag;)Lcom/vk/market/attached/c;
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/market/attached/TaggedGoodsDataProviders1;->a(Lcom/vk/dto/tags/Tag;)Lcom/vk/market/attached/TaggedGoodsAdapter;
+    invoke-static {p1}, Lcom/vk/market/attached/e;->a(Lcom/vk/dto/tags/Tag;)Lcom/vk/market/attached/c;
 
     move-result-object p1
 
@@ -75,14 +75,14 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 2
 
-    const-class v0, Lcom/vk/market/attached/TaggedGoodsDataProviders1;
+    const-class v0, Lcom/vk/market/attached/e;
 
     const-string v1, "app_armUpload"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/tags/Tag;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/attached/TaggedGoodsDataProvider$convertToViewModel$1;->a(Lcom/vk/dto/tags/Tag;)Lcom/vk/market/attached/TaggedGoodsAdapter;
+    invoke-virtual {p0, p1}, Lcom/vk/market/attached/TaggedGoodsDataProvider$convertToViewModel$1;->a(Lcom/vk/dto/tags/Tag;)Lcom/vk/market/attached/c;
 
     move-result-object p1
 

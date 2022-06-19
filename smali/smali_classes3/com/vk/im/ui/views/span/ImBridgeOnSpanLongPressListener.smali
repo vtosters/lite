@@ -3,7 +3,7 @@
 .source "ImBridgeOnSpanLongPressListener.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/views/span/OnSpanLongPressListener;
+.implements Lcom/vk/im/ui/views/span/c;
 
 
 # annotations
@@ -16,13 +16,13 @@
 
 .field private final b:Lcom/vk/im/engine/models/dialogs/DialogExt;
 
-.field private final c:Lcom/vk/im/ui/p/ImBridge8;
+.field private final c:Lcom/vk/im/ui/p/b;
 
 .field private final d:Landroid/app/Activity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/ImBridge8;Landroid/app/Activity;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/b;Landroid/app/Activity;)V
     .locals 0
 
     .line 1
@@ -30,7 +30,7 @@
 
     iput-object p1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->b:Lcom/vk/im/engine/models/dialogs/DialogExt;
 
-    iput-object p2, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/ImBridge8;
+    iput-object p2, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/b;
 
     iput-object p3, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->d:Landroid/app/Activity;
 
@@ -50,7 +50,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -81,13 +81,13 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object v0, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/b;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/p/ImBridge1;->f(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/p/a;->f(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -129,7 +129,7 @@
     invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener$openEmailActions$3;-><init>(Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;)V
 
     .line 6
-    invoke-virtual {v0, p2, v1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p2, v1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->a(Ljava/lang/String;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -147,15 +147,15 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object v0, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/b;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->b:Lcom/vk/im/engine/models/dialogs/DialogExt;
 
-    invoke-interface {v0, p1, v1, p2}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;)V
+    invoke-interface {v0, p1, v1, p2}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -197,7 +197,7 @@
     invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener$openHashtagActions$3;-><init>(Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;)V
 
     .line 5
-    invoke-virtual {v0, p2, v1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->b(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p2, v1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->b(Ljava/lang/String;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -225,7 +225,7 @@
     invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener$openNumbersActions$2;-><init>(Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;)V
 
     .line 4
-    invoke-virtual {v0, p2, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p2, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->a(Ljava/lang/String;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -258,7 +258,7 @@
     invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener$openPhoneActions$3;-><init>(Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;)V
 
     .line 5
-    invoke-virtual {v0, p2, v1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->c(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p2, v1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->c(Ljava/lang/String;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -267,13 +267,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object v0, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/b;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -306,7 +306,7 @@
     invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener$openUrlActions$3;-><init>(Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;)V
 
     .line 5
-    invoke-virtual {v0, p2, v1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->d(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p2, v1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSpans;->d(Ljava/lang/String;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -315,13 +315,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object v0, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/b;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/p/ImBridge1;->c(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/p/a;->c(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -351,10 +351,10 @@
     .locals 3
 
     .line 10
-    invoke-static {p1, p2}, Lcom/vk/im/ui/utils/ClipboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {p1, p2}, Lcom/vk/im/ui/utils/b;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 11
-    sget p2, Lcom/vk/im/ui/R4;->vkim_copy_to_clipboard_done:I
+    sget p2, Lcom/vk/im/ui/m;->vkim_copy_to_clipboard_done:I
 
     const/4 v0, 0x0
 
@@ -362,7 +362,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, p2, v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
+    invoke-static {p1, p2, v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
 
     return-void
 .end method
@@ -371,21 +371,21 @@
     .locals 9
 
     .line 2
-    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/MentionSpan;
+    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/e;
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object p1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->c:Lcom/vk/im/ui/p/b;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->e()Lcom/vk/bridges/UsersBridge;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->e()Lcom/vk/bridges/i0;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->d:Landroid/app/Activity;
 
-    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/MentionSpan;
+    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/e;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/MentionSpan;->b()Lcom/vk/im/engine/models/Member;
+    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/e;->b()Lcom/vk/im/engine/models/Member;
 
     move-result-object p1
 
@@ -405,21 +405,21 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v8}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/UrlSpan;
+    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/h;
 
     if-eqz p1, :cond_1
 
     iget-object p1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->d:Landroid/app/Activity;
 
-    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/UrlSpan;
+    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/h;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/UrlSpan;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/h;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -429,15 +429,15 @@
 
     .line 4
     :cond_1
-    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/EmailSpan;
+    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/c;
 
     if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->d:Landroid/app/Activity;
 
-    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/EmailSpan;
+    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/c;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/EmailSpan;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/c;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -447,15 +447,15 @@
 
     .line 5
     :cond_2
-    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/HashtagSpan;
+    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/d;
 
     if-eqz p1, :cond_3
 
     iget-object p1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->d:Landroid/app/Activity;
 
-    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/HashtagSpan;
+    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/d;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/HashtagSpan;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/d;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -465,15 +465,15 @@
 
     .line 6
     :cond_3
-    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/PhoneSpan;
+    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/g;
 
     if-eqz p1, :cond_4
 
     iget-object p1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->d:Landroid/app/Activity;
 
-    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/PhoneSpan;
+    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/g;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/PhoneSpan;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/g;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -483,15 +483,15 @@
 
     .line 7
     :cond_4
-    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/NumbersSpan;
+    instance-of p1, p2, Lcom/vk/im/ui/formatters/linkparser/l/f;
 
     if-eqz p1, :cond_5
 
     iget-object p1, p0, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;->d:Landroid/app/Activity;
 
-    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/NumbersSpan;
+    check-cast p2, Lcom/vk/im/ui/formatters/linkparser/l/f;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/NumbersSpan;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/im/ui/formatters/linkparser/l/f;->b()Ljava/lang/String;
 
     move-result-object p2
 

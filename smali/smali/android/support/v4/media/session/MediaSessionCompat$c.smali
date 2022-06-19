@@ -65,7 +65,7 @@
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompat$c$d;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$c;)V
 
-    invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi24;->a(Landroid/support/v4/media/session/MediaSessionCompatApi24$a;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/session/f;->a(Landroid/support/v4/media/session/f$a;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -83,7 +83,7 @@
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompat$c$c;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$c;)V
 
-    invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi23;->a(Landroid/support/v4/media/session/MediaSessionCompatApi23$a;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/session/e;->a(Landroid/support/v4/media/session/e$a;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompat$c$b;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$c;)V
 
-    invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->a(Landroid/support/v4/media/session/MediaSessionCompatApi21$a;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/session/d;->a(Landroid/support/v4/media/session/d$a;)Ljava/lang/Object;
 
     move-result-object v0
 

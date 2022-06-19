@@ -3,7 +3,7 @@
 .source "FragmentNavigationController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -63,7 +63,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentNavigationController$showForResult$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -114,7 +114,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->b()V
+    invoke-virtual {v1}, Lcom/vk/core/fragments/j/b/b;->b()V
 
     .line 5
     iget-object v1, p0, Lcom/vk/core/fragments/FragmentNavigationController$showForResult$1;->this$0:Lcom/vk/core/fragments/FragmentNavigationController;
@@ -185,7 +185,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/core/fragments/FragmentNavigationController$showForResult$1;->this$0:Lcom/vk/core/fragments/FragmentNavigationController;
 
-    invoke-static {v0}, Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentNavigationController;)Lcom/vk/core/fragments/FragmentNavigationListener;
+    invoke-static {v0}, Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentNavigationController;)Lcom/vk/core/fragments/g;
 
     move-result-object v0
 
@@ -211,7 +211,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/core/fragments/FragmentNavigationListener;->a(Ljava/lang/Class;)V
+    invoke-interface {v0, v1}, Lcom/vk/core/fragments/g;->a(Ljava/lang/Class;)V
 
     :cond_1
     return-void

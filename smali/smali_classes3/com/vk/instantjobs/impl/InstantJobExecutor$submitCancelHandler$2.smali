@@ -3,12 +3,12 @@
 .source "InstantJobExecutor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobInfo;Ljava/lang/String;Z)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
+    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/b;Ljava/lang/String;Z)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/instantjobs/impl/InstantJobExecutor$b;",
         "Lcom/vk/instantjobs/impl/InstantJobExecutor$b;",
         ">;"
@@ -30,7 +30,7 @@
 # instance fields
 .field final synthetic $interrupted:Z
 
-.field final synthetic $jobInfo:Lcom/vk/instantjobs/impl/InstantJobInfo;
+.field final synthetic $jobInfo:Lcom/vk/instantjobs/impl/b;
 
 .field final synthetic $reason:Ljava/lang/String;
 
@@ -38,14 +38,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Ljava/lang/String;Lcom/vk/instantjobs/impl/InstantJobInfo;Z)V
+.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Ljava/lang/String;Lcom/vk/instantjobs/impl/b;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->this$0:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
     iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->$reason:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iput-object p3, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/b;
 
     iput-boolean p4, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->$interrupted:Z
 
@@ -80,9 +80,9 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/b;
 
-    invoke-virtual {v2}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {v2}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v2
 
@@ -174,9 +174,9 @@
     .line 9
     iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->this$0:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitCancelHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/b;
 
-    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->g(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)Ljava/util/concurrent/Future;
+    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->g(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)Ljava/util/concurrent/Future;
 
     move-result-object v8
 

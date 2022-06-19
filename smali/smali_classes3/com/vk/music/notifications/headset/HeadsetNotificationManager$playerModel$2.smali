@@ -3,7 +3,7 @@
 .source "HeadsetNotificationManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/music/player/PlayerModel;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/music/player/d;",
         ">;"
     }
 .end annotation
@@ -55,17 +55,17 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/music/player/PlayerModel;
+.method public final invoke()Lcom/vk/music/player/d;
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
+    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
+    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager$playerModel$2;->invoke()Lcom/vk/music/player/PlayerModel;
+    invoke-virtual {p0}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager$playerModel$2;->invoke()Lcom/vk/music/player/d;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "CameraUI.kt"
 
 # interfaces
-.implements Lcom/vk/cameraui/i/BaseView;
+.implements Lcom/vk/cameraui/i/b;
 
 
 # annotations
@@ -25,7 +25,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/cameraui/i/BaseView<",
+        "Lcom/vk/cameraui/i/b<",
         "Lcom/vk/cameraui/CameraUI$c;",
         ">;"
     }
@@ -78,7 +78,7 @@
 .method public abstract Q()V
 .end method
 
-.method public abstract R()Lcom/vk/libvideo/live/views/broadcast/BroadcastView;
+.method public abstract R()Lcom/vk/libvideo/live/views/broadcast/e;
 .end method
 
 .method public abstract S()V
@@ -105,18 +105,18 @@
 .method public abstract Z()V
 .end method
 
-.method public abstract a(Ljava/util/List;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/cameraui/CameraUI$States;II)Lcom/vk/stories/editor/base/BaseCameraEditorView;
+.method public abstract a(Ljava/util/List;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/cameraui/CameraUI$States;II)Lcom/vk/stories/editor/base/d0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/cameraui/entities/StoryRawData3;",
+            "Lcom/vk/cameraui/entities/d;",
             ">;",
             "Lcom/vk/dto/stories/model/CommonUploadParams;",
             "Lcom/vk/dto/stories/model/StoryUploadParams;",
             "Lcom/vk/cameraui/CameraUI$States;",
             "II)",
-            "Lcom/vk/stories/editor/base/BaseCameraEditorView;"
+            "Lcom/vk/stories/editor/base/d0;"
         }
     .end annotation
 .end method
@@ -164,12 +164,12 @@
 .method public abstract a(Landroid/net/Uri;)V
 .end method
 
-.method public abstract a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
+.method public abstract a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/attachpicker/stickers/ISticker;",
-            "Lkotlin/jvm/b/Functions4<",
+            "Lkotlin/jvm/b/d<",
             "-",
             "Ljava/lang/Integer;",
             "-",
@@ -183,7 +183,7 @@
     .end annotation
 .end method
 
-.method public abstract a(Lcom/vk/cameraui/entities/RotationDirection;)V
+.method public abstract a(Lcom/vk/cameraui/entities/b;)V
 .end method
 
 .method public abstract a(Ljava/util/List;Lcom/vk/cameraui/CameraUI$States;Lcom/vk/cameraui/CameraUI$d;)V
@@ -207,12 +207,12 @@
 .method public abstract a(ZILandroid/content/Intent;)V
 .end method
 
-.method public abstract a(ZLkotlin/jvm/b/Functions;)V
+.method public abstract a(ZLkotlin/jvm/b/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -269,10 +269,10 @@
 .method public abstract g0()V
 .end method
 
-.method public abstract getBroadcastFriends()Lcom/vk/cameraui/widgets/friends/BroadcastFriends1;
+.method public abstract getBroadcastFriends()Lcom/vk/cameraui/widgets/friends/b;
 .end method
 
-.method public abstract getCamera1View()Lcom/vk/camera/Camera1View;
+.method public abstract getCamera1View()Lcom/vk/camera/c;
 .end method
 
 .method public abstract getLiveNameText()Ljava/lang/String;
@@ -281,7 +281,7 @@
 .method public abstract getLockedOrientation()I
 .end method
 
-.method public abstract getPositions()Lcom/vk/cameraui/CameraUIPositions;
+.method public abstract getPositions()Lcom/vk/cameraui/e;
 .end method
 
 .method public abstract getSceneHeight()F
@@ -304,7 +304,7 @@
     .end annotation
 .end method
 
-.method public abstract getStickersState()Lcom/vk/attachpicker/stickers/StickersState;
+.method public abstract getStickersState()Lcom/vk/attachpicker/stickers/m0;
 .end method
 
 .method public abstract getUnLockedOrientation()I
@@ -322,26 +322,26 @@
 .method public abstract requestFocus()Z
 .end method
 
-.method public abstract setBroadcast(Lcom/vk/libvideo/live/views/broadcast/BroadcastContract1;)V
+.method public abstract setBroadcast(Lcom/vk/libvideo/live/views/broadcast/c;)V
 .end method
 
 .method public abstract setCameraGridVisible(Z)V
 .end method
 
-.method public abstract setCustomQrListener(Lkotlin/jvm/b/Functions2;)V
+.method public abstract setCustomQrListener(Lkotlin/jvm/b/b;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/google/zxing/client/result/ParsedResult;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 .end method
 
-.method public abstract setDrawingState(Lcom/vk/attachpicker/drawing/DrawingState;)V
+.method public abstract setDrawingState(Lcom/vk/attachpicker/drawing/d;)V
 .end method
 
 .method public abstract setGalleryAvailable(Z)V

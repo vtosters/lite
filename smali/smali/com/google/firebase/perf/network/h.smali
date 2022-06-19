@@ -3,11 +3,11 @@
 .source "com.google.firebase:firebase-perf@@19.0.2"
 
 # interfaces
-.implements Lokhttp3/Callback;
+.implements Lokhttp3/f;
 
 
 # instance fields
-.field private final a:Lokhttp3/Callback;
+.field private final a:Lokhttp3/f;
 
 .field private final b:Lcom/google/android/gms/internal/firebase-perf/zzam;
 
@@ -17,14 +17,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lokhttp3/Callback;Lcom/google/firebase/perf/internal/f;Lcom/google/android/gms/internal/firebase-perf/zzaz;J)V
+.method public constructor <init>(Lokhttp3/f;Lcom/google/firebase/perf/internal/f;Lcom/google/android/gms/internal/firebase-perf/zzaz;J)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/google/firebase/perf/network/h;->a:Lokhttp3/Callback;
+    iput-object p1, p0, Lcom/google/firebase/perf/network/h;->a:Lokhttp3/f;
 
     .line 3
     invoke-static {p2}, Lcom/google/android/gms/internal/firebase-perf/zzam;->zzb(Lcom/google/firebase/perf/internal/f;)Lcom/google/android/gms/internal/firebase-perf/zzam;
@@ -44,18 +44,18 @@
 
 
 # virtual methods
-.method public final a(Lokhttp3/Call;Ljava/io/IOException;)V
+.method public final a(Lokhttp3/e;Ljava/io/IOException;)V
     .locals 3
 
     .line 1
-    invoke-interface {p1}, Lokhttp3/Call;->m0()Lokhttp3/Request;
+    invoke-interface {p1}, Lokhttp3/e;->m0()Lokhttp3/z;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {v0}, Lokhttp3/Request;->g()Lokhttp3/HttpUrl;
+    invoke-virtual {v0}, Lokhttp3/z;->g()Lokhttp3/t;
 
     move-result-object v1
 
@@ -64,7 +64,7 @@
     .line 3
     iget-object v2, p0, Lcom/google/firebase/perf/network/h;->b:Lcom/google/android/gms/internal/firebase-perf/zzam;
 
-    invoke-virtual {v1}, Lokhttp3/HttpUrl;->q()Ljava/net/URL;
+    invoke-virtual {v1}, Lokhttp3/t;->q()Ljava/net/URL;
 
     move-result-object v1
 
@@ -76,7 +76,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {v0}, Lokhttp3/Request;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lokhttp3/z;->e()Ljava/lang/String;
 
     move-result-object v1
 
@@ -85,7 +85,7 @@
     .line 5
     iget-object v1, p0, Lcom/google/firebase/perf/network/h;->b:Lcom/google/android/gms/internal/firebase-perf/zzam;
 
-    invoke-virtual {v0}, Lokhttp3/Request;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lokhttp3/z;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -116,14 +116,14 @@
     invoke-static {v0}, Lcom/google/firebase/perf/network/g;->a(Lcom/google/android/gms/internal/firebase-perf/zzam;)V
 
     .line 9
-    iget-object v0, p0, Lcom/google/firebase/perf/network/h;->a:Lokhttp3/Callback;
+    iget-object v0, p0, Lcom/google/firebase/perf/network/h;->a:Lokhttp3/f;
 
-    invoke-interface {v0, p1, p2}, Lokhttp3/Callback;->a(Lokhttp3/Call;Ljava/io/IOException;)V
+    invoke-interface {v0, p1, p2}, Lokhttp3/f;->a(Lokhttp3/e;Ljava/io/IOException;)V
 
     return-void
 .end method
 
-.method public final a(Lokhttp3/Call;Lokhttp3/Response;)V
+.method public final a(Lokhttp3/e;Lokhttp3/b0;)V
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -145,12 +145,12 @@
 
     move-object v1, p2
 
-    invoke-static/range {v1 .. v6}, Lcom/google/firebase/perf/network/FirebasePerfOkHttpClient;->a(Lokhttp3/Response;Lcom/google/android/gms/internal/firebase-perf/zzam;JJ)V
+    invoke-static/range {v1 .. v6}, Lcom/google/firebase/perf/network/FirebasePerfOkHttpClient;->a(Lokhttp3/b0;Lcom/google/android/gms/internal/firebase-perf/zzam;JJ)V
 
     .line 12
-    iget-object v0, p0, Lcom/google/firebase/perf/network/h;->a:Lokhttp3/Callback;
+    iget-object v0, p0, Lcom/google/firebase/perf/network/h;->a:Lokhttp3/f;
 
-    invoke-interface {v0, p1, p2}, Lokhttp3/Callback;->a(Lokhttp3/Call;Lokhttp3/Response;)V
+    invoke-interface {v0, p1, p2}, Lokhttp3/f;->a(Lokhttp3/e;Lokhttp3/b0;)V
 
     return-void
 .end method

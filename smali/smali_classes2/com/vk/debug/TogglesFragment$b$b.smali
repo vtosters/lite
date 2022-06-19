@@ -50,7 +50,7 @@
 
     const-string v1, "switchView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -64,7 +64,7 @@
 
     const-string v2, "item"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, v0, v1}, Lcom/vk/debug/TogglesFragment$b;->a(Lcom/vk/debug/TogglesFragment$b;Landroid/app/Activity;Lcom/vk/toggle/FeatureManager$b;)V
 

@@ -3,7 +3,7 @@
 .source "BaseAuthPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -68,7 +68,7 @@
     .locals 8
 
     .line 2
-    new-instance v7, Lcom/vk/auth/api/commands/ValidatePhoneCommand;
+    new-instance v7, Lcom/vk/auth/api/commands/j;
 
     iget-object v1, p0, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;->$sid:Ljava/lang/String;
 
@@ -76,31 +76,31 @@
 
     iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;->this$0:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/main/AuthModel;->c()I
+    invoke-interface {v0}, Lcom/vk/auth/main/f;->c()I
 
     move-result v4
 
     iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;->this$0:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/main/AuthModel;->b()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/auth/main/f;->b()Ljava/lang/String;
 
     move-result-object v5
 
     iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;->this$0:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/main/AuthModel;->d()Z
+    invoke-interface {v0}, Lcom/vk/auth/main/f;->d()Z
 
     move-result v6
 
@@ -108,17 +108,17 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/auth/api/commands/ValidatePhoneCommand;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Z)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/auth/api/commands/j;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Z)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;->this$0:Lcom/vk/auth/base/BaseAuthPresenter;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
 
     move-result-object v1
 
-    invoke-interface {v1, v7}, Lcom/vk/auth/main/AuthModel;->a(Lcom/vk/auth/api/commands/ValidatePhoneCommand;)Lio/reactivex/Observable;
+    invoke-interface {v1, v7}, Lcom/vk/auth/main/f;->a(Lcom/vk/auth/api/commands/j;)Lc/a/m;
 
     move-result-object v1
 
@@ -127,7 +127,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6$a;-><init>(Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;)V
 
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {v1, v2}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object v1
 
@@ -136,7 +136,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6$b;-><init>(Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;)V
 
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {v1, v2}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
 
     move-result-object v1
 
@@ -145,7 +145,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6$c;-><init>(Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;)V
 
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {v1, v2}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
 
     move-result-object v1
 
@@ -154,7 +154,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6$d;-><init>(Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;)V
 
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
+    invoke-virtual {v1, v2}, Lc/a/m;->e(Lc/a/z/a;)Lc/a/m;
 
     move-result-object v1
 
@@ -169,16 +169,16 @@
     invoke-direct {v3, p0}, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6$f;-><init>(Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;)V
 
     .line 11
-    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v1
 
     const-string v2, "signUpModel.validatePhon\u2026k_auth_sign_up_flood)) })"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
-    invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method

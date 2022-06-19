@@ -40,14 +40,14 @@
     iput v0, p0, Lcom/vk/core/dialogs/alert/ButtonBarLayout;->d:I
 
     .line 5
-    sget-object v0, Lb/h/z/R3;->ButtonBarLayout:[I
+    sget-object v0, Lb/h/z/m;->ButtonBarLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 6
-    sget p2, Lb/h/z/R3;->ButtonBarLayout_allowStacking:I
+    sget p2, Lb/h/z/m;->ButtonBarLayout_allowStacking:I
 
     const/4 v0, 0x1
 
@@ -139,7 +139,7 @@
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setGravity(I)V
 
     .line 3
-    sget v0, Lb/h/z/R;->spacer:I
+    sget v0, Lb/h/z/g;->spacer:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 

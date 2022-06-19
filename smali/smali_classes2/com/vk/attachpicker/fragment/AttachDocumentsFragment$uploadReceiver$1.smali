@@ -47,7 +47,7 @@
 
     const-string v0, "com.vkontakte.android.UPLOAD_DONE"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -90,13 +90,13 @@
     .line 6
     iget-object p2, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$uploadReceiver$1;->a:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;
 
-    invoke-static {p2}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/AttachPickerAdapter;
+    invoke-static {p2}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/a;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2, p1}, Lcom/vk/lists/SimpleAdapter;->c(Ljava/lang/Object;)V
+    invoke-virtual {p2, p1}, Lcom/vk/lists/i0;->c(Ljava/lang/Object;)V
 
     .line 7
     :cond_0
@@ -114,7 +114,7 @@
 
     const-string p2, "com.vkontakte.android.UPLOAD_FAILED"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -129,7 +129,7 @@
     const/4 v1, 0x0
 
     .line 9
-    invoke-static {p1, p2, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, p2, v0, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     :cond_2
     :goto_0

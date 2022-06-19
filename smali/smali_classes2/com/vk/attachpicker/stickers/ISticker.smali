@@ -104,7 +104,7 @@
 .method public abstract getCenterY()F
 .end method
 
-.method public abstract getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
+.method public abstract getCommons()Lcom/vk/attachpicker/stickers/a0;
 .end method
 
 .method public abstract getFillPoints()[Landroid/graphics/PointF;
@@ -113,12 +113,12 @@
 .method public abstract getInEditMode()Z
 .end method
 
-.method public abstract getInvalidator()Lkotlin/jvm/b/Functions;
+.method public abstract getInvalidator()Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -175,12 +175,12 @@
 .method public abstract setInEditMode(Z)V
 .end method
 
-.method public abstract setInvalidator(Lkotlin/jvm/b/Functions;)V
+.method public abstract setInvalidator(Lkotlin/jvm/b/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation

@@ -1,16 +1,16 @@
 .class public final Lcom/vk/im/engine/internal/upload/ImageUploader;
-.super Lcom/vk/im/engine/internal/upload/GenericUploader;
+.super Lcom/vk/im/engine/internal/upload/c;
 .source "ImageUploader.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/internal/upload/GenericUploader<",
+        "Lcom/vk/im/engine/internal/upload/c<",
         "Lcom/vk/im/engine/models/attaches/AttachImage;",
-        "Lcom/vk/im/engine/models/attaches/h/ImageUploadModels2;",
-        "Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;",
-        "Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;",
+        "Lcom/vk/im/engine/models/attaches/h/h;",
+        "Lcom/vk/im/engine/models/attaches/h/e;",
+        "Lcom/vk/im/engine/models/attaches/h/g;",
         ">;"
     }
 .end annotation
@@ -19,11 +19,11 @@
 # instance fields
 .field private h:Landroid/net/Uri;
 
-.field private final i:Lkotlin/jvm/b/Functions;
+.field private final i:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lcom/vk/im/engine/j/FileConverter;",
+            "Lkotlin/jvm/b/a<",
+            "Lcom/vk/im/engine/j/b;",
             ">;"
         }
     .end annotation
@@ -31,14 +31,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/attaches/AttachImage;)V
+.method public constructor <init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/attaches/AttachImage;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/GenericUploader;-><init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/attaches/Attach;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/c;-><init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/attaches/Attach;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->c()Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->c()Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object p2
 
@@ -61,67 +61,67 @@
     iput-object p2, p0, Lcom/vk/im/engine/internal/upload/ImageUploader;->h:Landroid/net/Uri;
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImConfig;->F()Lkotlin/jvm/b/Functions;
+    invoke-virtual {p1}, Lcom/vk/im/engine/ImConfig;->F()Lkotlin/jvm/b/a;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/upload/ImageUploader;->i:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/upload/ImageUploader;->i:Lkotlin/jvm/b/a;
 
     return-void
 
     .line 4
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/upload/ImageUploader;Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/HttpPostCall;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/upload/ImageUploader;Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/c;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/HttpPostCall;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/c;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/HttpPostCall;
+.method private final a(Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/c;
     .locals 2
 
     .line 27
-    new-instance v0, Lcom/vk/api/internal/HttpPostCall$a;
+    new-instance v0, Lcom/vk/api/internal/c$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/HttpPostCall$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/c$a;-><init>()V
 
     .line 28
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall$a;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/c$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/c$a;
 
     const-string p1, "photo"
 
     const-string v1, "image.jpg"
 
     .line 29
-    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall$a;
+    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/api/internal/c$a;->a(Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;)Lcom/vk/api/internal/c$a;
 
     const/4 p1, 0x1
 
     .line 30
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Z)Lcom/vk/api/internal/HttpPostCall$a;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/c$a;->a(Z)Lcom/vk/api/internal/c$a;
 
     .line 31
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
@@ -129,19 +129,19 @@
 
     move-result-wide p1
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/api/internal/HttpPostCall$a;->a(J)Lcom/vk/api/internal/HttpPostCall$a;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/api/internal/c$a;->a(J)Lcom/vk/api/internal/c$a;
 
     .line 32
-    sget-object p1, Lcom/vk/im/engine/internal/upload/Uploader1;->b:Lcom/vk/im/engine/internal/upload/Uploader$a;
+    sget-object p1, Lcom/vk/im/engine/internal/upload/f;->b:Lcom/vk/im/engine/internal/upload/f$a;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/upload/Uploader$a;->a()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/upload/f$a;->a()I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(I)Lcom/vk/api/internal/HttpPostCall$a;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/c$a;->a(I)Lcom/vk/api/internal/c$a;
 
     .line 33
-    invoke-virtual {v0}, Lcom/vk/api/internal/HttpPostCall$a;->e()Lcom/vk/api/internal/HttpPostCall;
+    invoke-virtual {v0}, Lcom/vk/api/internal/c$a;->e()Lcom/vk/api/internal/c;
 
     move-result-object p1
 
@@ -150,11 +150,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;)Lcom/vk/im/engine/models/attaches/Attach;
+.method public a(Lcom/vk/im/engine/models/attaches/h/g;)Lcom/vk/im/engine/models/attaches/Attach;
     .locals 5
 
     .line 18
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->c()Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->c()Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object v0
 
@@ -165,28 +165,28 @@
     move-result-object v0
 
     .line 19
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/g;->c()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachImage;->c(I)V
 
     .line 20
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/g;->a()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachImage;->a(Ljava/lang/String;)V
 
     .line 21
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;->b()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/g;->b()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachImage;->b(I)V
 
     .line 22
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;->d()Lcom/vk/im/engine/models/ImageList;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/g;->d()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object p1
 
@@ -257,51 +257,51 @@
     return-object v0
 .end method
 
-.method public a(Lcom/vk/im/engine/models/attaches/h/ImageUploadModels2;Landroid/net/Uri;)Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;
+.method public a(Lcom/vk/im/engine/models/attaches/h/h;Landroid/net/Uri;)Lcom/vk/im/engine/models/attaches/h/e;
     .locals 2
 
     .line 5
-    new-instance v0, Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;
+    new-instance v0, Lcom/vk/im/engine/internal/upload/b;
 
     new-instance v1, Lcom/vk/im/engine/internal/upload/ImageUploader$upload$uploadHelper$1;
 
     invoke-direct {v1, p0, p2}, Lcom/vk/im/engine/internal/upload/ImageUploader$upload$uploadHelper$1;-><init>(Lcom/vk/im/engine/internal/upload/ImageUploader;Landroid/net/Uri;)V
 
-    sget-object p2, Lcom/vk/im/engine/internal/api_parsers/ImageUploadParser;->a:Lcom/vk/im/engine/internal/api_parsers/ImageUploadParser;
+    sget-object p2, Lcom/vk/im/engine/internal/g/m;->a:Lcom/vk/im/engine/internal/g/m;
 
-    invoke-direct {v0, v1, p2}, Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;-><init>(Lkotlin/jvm/b/Functions2;Lcom/vk/api/sdk/VKApiResponseParser;)V
+    invoke-direct {v0, v1, p2}, Lcom/vk/im/engine/internal/upload/b;-><init>(Lkotlin/jvm/b/b;Lcom/vk/api/sdk/h;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p2}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object p2
 
     const-string v1, "env.apiManager"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels2;->a()Lcom/vk/im/engine/models/upload/UploadServer;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p2, p1, p0}, Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;->a(Lcom/vk/api/sdk/VKApiManager;Lcom/vk/im/engine/models/upload/UploadServer;Lcom/vk/api/sdk/VKApiProgressListener;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/h;->a()Lcom/vk/im/engine/models/upload/a;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;
+    invoke-virtual {v0, p2, p1, p0}, Lcom/vk/im/engine/internal/upload/b;->a(Lcom/vk/api/sdk/VKApiManager;Lcom/vk/im/engine/models/upload/a;Lcom/vk/api/sdk/g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/vk/im/engine/models/attaches/h/e;
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;)Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;
+.method public a(Lcom/vk/im/engine/models/attaches/h/e;)Lcom/vk/im/engine/models/attaches/h/g;
     .locals 10
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/e;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -324,75 +324,75 @@
     if-nez v0, :cond_1
 
     .line 8
-    new-instance v0, Lcom/vk/api/internal/MethodCall$a;
+    new-instance v0, Lcom/vk/api/internal/k$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/k$a;-><init>()V
 
     const-string v2, "photos.saveMessagesPhoto"
 
     .line 9
-    invoke-virtual {v0, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v2}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/e;->c()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "server"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v3, v2}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/e;->b()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "photo"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v3, v2}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 12
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/e;->a()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v2, "hash"
 
-    invoke-virtual {v0, v2, p1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v2, p1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 13
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
 
     .line 14
-    sget-object p1, Lcom/vk/im/engine/internal/upload/Uploader1;->b:Lcom/vk/im/engine/internal/upload/Uploader$a;
+    sget-object p1, Lcom/vk/im/engine/internal/upload/f;->b:Lcom/vk/im/engine/internal/upload/f$a;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/upload/Uploader$a;->i()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/upload/f$a;->i()I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/MethodCall$a;->a(I)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/k$a;->a(I)Lcom/vk/api/internal/k$a;
 
     .line 15
-    invoke-virtual {v0}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
+    invoke-virtual {v0}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
 
     move-result-object p1
 
     .line 16
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/im/engine/internal/api_parsers/ImageUploadParser2;->a:Lcom/vk/im/engine/internal/api_parsers/ImageUploadParser2;
+    sget-object v1, Lcom/vk/im/engine/internal/g/g0;->a:Lcom/vk/im/engine/internal/g/g0;
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/VKMethodCall;Lcom/vk/api/sdk/VKApiResponseParser;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/l;Lcom/vk/api/sdk/h;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/h/g;
 
     return-object p1
 
@@ -420,7 +420,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;-><init>(ILjava/lang/String;ZLjava/lang/String;Landroid/os/Bundle;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;-><init>(ILjava/lang/String;ZLjava/lang/String;Landroid/os/Bundle;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     throw p1
 .end method
@@ -429,9 +429,9 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/h/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;)Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/models/attaches/h/e;)Lcom/vk/im/engine/models/attaches/h/g;
 
     move-result-object p1
 
@@ -442,9 +442,9 @@
     .locals 0
 
     .line 3
-    check-cast p1, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels2;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/h/h;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/models/attaches/h/ImageUploadModels2;Landroid/net/Uri;)Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/models/attaches/h/h;Landroid/net/Uri;)Lcom/vk/im/engine/models/attaches/h/e;
 
     move-result-object p1
 
@@ -464,51 +464,51 @@
     .locals 5
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/upload/ImageUploader;->i:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/upload/ImageUploader;->i:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/j/FileConverter;
+    check-cast v0, Lcom/vk/im/engine/j/b;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/engine/ImEnvironment;->getContext()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/im/engine/d;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     const-string v2, "env.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     iget-object v2, p0, Lcom/vk/im/engine/internal/upload/ImageUploader;->h:Landroid/net/Uri;
 
     const-string v3, "fileUri"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/im/engine/ImEnvironment;->s0()Lcom/vk/im/engine/j/TmpFileCache;
+    invoke-interface {v3}, Lcom/vk/im/engine/d;->s0()Lcom/vk/im/engine/j/i;
 
     move-result-object v3
 
     const-string v4, "jpg"
 
-    invoke-interface {v3, v4}, Lcom/vk/im/engine/j/TmpFileCache;->a(Ljava/lang/String;)Ljava/io/File;
+    invoke-interface {v3, v4}, Lcom/vk/im/engine/j/i;->a(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v3
 
     .line 6
-    invoke-interface {v0, v1, v2, v3, p0}, Lcom/vk/im/engine/j/FileConverter;->a(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;Lcom/vk/im/engine/j/ProgressListener;)Landroid/net/Uri;
+    invoke-interface {v0, v1, v2, v3, p0}, Lcom/vk/im/engine/j/b;->a(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;Lcom/vk/im/engine/j/f;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -519,9 +519,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/h/g;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/models/attaches/h/ImageUploadModels;)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/models/attaches/h/g;)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object p1
 
@@ -537,45 +537,45 @@
     return-object v0
 .end method
 
-.method public f()Lcom/vk/im/engine/models/attaches/h/ImageUploadModels2;
+.method public f()Lcom/vk/im/engine/models/attaches/h/h;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/api/internal/MethodCall$a;
+    new-instance v0, Lcom/vk/api/internal/k$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/k$a;-><init>()V
 
     const-string v1, "photos.getMessagesUploadServer"
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     const/4 v1, 0x1
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
+    invoke-virtual {v0}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {v1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v1
 
-    sget-object v2, Lcom/vk/im/engine/internal/api_parsers/ImageUploadParser1;->a:Lcom/vk/im/engine/internal/api_parsers/ImageUploadParser1;
+    sget-object v2, Lcom/vk/im/engine/internal/g/h0;->a:Lcom/vk/im/engine/internal/g/h0;
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/VKMethodCall;Lcom/vk/api/sdk/VKApiResponseParser;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, v2}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/l;Lcom/vk/api/sdk/h;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/attaches/h/ImageUploadModels2;
+    check-cast v0, Lcom/vk/im/engine/models/attaches/h/h;
 
     return-object v0
 .end method
@@ -584,7 +584,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/ImageUploader;->f()Lcom/vk/im/engine/models/attaches/h/ImageUploadModels2;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/ImageUploader;->f()Lcom/vk/im/engine/models/attaches/h/h;
 
     move-result-object v0
 
@@ -595,33 +595,33 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/upload/ImageUploader;->i:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/upload/ImageUploader;->i:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/j/FileConverter;
+    check-cast v0, Lcom/vk/im/engine/j/b;
 
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/engine/ImEnvironment;->getContext()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/im/engine/d;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     const-string v2, "env.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/im/engine/internal/upload/ImageUploader;->h:Landroid/net/Uri;
 
     const-string v3, "fileUri"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/engine/j/FileConverter;->a(Landroid/content/Context;Landroid/net/Uri;)Z
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/engine/j/b;->a(Landroid/content/Context;Landroid/net/Uri;)Z
 
     move-result v0
 

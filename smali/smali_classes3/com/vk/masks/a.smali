@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vk/masks/a;->a:Lcom/vk/dto/masks/Mask;
 
-    invoke-static {v0}, Lcom/vk/masks/MasksStorage;->h(Lcom/vk/dto/masks/Mask;)V
+    invoke-static {v0}, Lcom/vk/masks/d;->h(Lcom/vk/dto/masks/Mask;)V
 
     return-void
 .end method

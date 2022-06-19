@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$i;->a:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
 
-    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->c()F
+    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/a;->c()F
 
     move-result v1
 
@@ -53,11 +53,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$i;->a:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
 
-    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->d()F
+    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/a;->d()F
 
     move-result v1
 
@@ -68,7 +68,7 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 

@@ -3,7 +3,7 @@
 .source "DialogsComponentsViewHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/components/holders/DialogsComponentsViewHolder$showDynamicModalModalBottomSheet$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -62,13 +62,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder$showDynamicModalModalBottomSheet$1;->$adapter:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-    sget-object v1, Lcom/vtosters/lite/bridges/VkAuthBridge;->INSTANCE:Lcom/vtosters/lite/bridges/VkAuthBridge;
+    sget-object v1, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/bridges/VkAuthBridge;->b()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/bridges/h;->b()I
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vk/profile/ui/photos/album_list/PhotoAlbumsUtils;->a(I)Lcom/vk/dto/photo/PhotoAlbum;
+    invoke-static {v1}, Lcom/vk/profile/ui/photos/album_list/a;->a(I)Lcom/vk/dto/photo/PhotoAlbum;
 
     move-result-object v1
 

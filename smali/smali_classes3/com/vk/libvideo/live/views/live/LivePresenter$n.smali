@@ -3,7 +3,7 @@
 .source "LivePresenter.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/error/ErrorContract;
+.implements Lcom/vk/libvideo/live/views/error/a;
 
 
 # annotations

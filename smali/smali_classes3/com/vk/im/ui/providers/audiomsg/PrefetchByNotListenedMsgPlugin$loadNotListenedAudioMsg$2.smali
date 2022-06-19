@@ -3,12 +3,12 @@
 .source "PrefetchByNotListenedMsgPlugin.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Lio/reactivex/Single;
+    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->a(Lcom/vk/im/engine/utils/collection/d;)Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,57 +57,57 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/EntityIntMap;)Ljava/util/List;
+.method public final a(Lcom/vk/im/engine/models/a;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
+            "Lcom/vk/audiomsg/player/d;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/EntityIntMap;->l()Ljava/util/Collection;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/a;->l()Ljava/util/Collection;
 
     move-result-object p1
 
     const-string v0, "msgs.values()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 3
     const-class v0, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/lang/Class;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/lang/Class;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 4
     sget-object v0, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2$1;->a:Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2$1;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 5
     sget-object v0, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2$2;->a:Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2$2;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 6
-    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
 
     move-result-object p1
 
@@ -118,9 +118,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/EntityIntMap;
+    check-cast p1, Lcom/vk/im/engine/models/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2;->a(Lcom/vk/im/engine/models/EntityIntMap;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2;->a(Lcom/vk/im/engine/models/a;)Ljava/util/List;
 
     move-result-object p1
 

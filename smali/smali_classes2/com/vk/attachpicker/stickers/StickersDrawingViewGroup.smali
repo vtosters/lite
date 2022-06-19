@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
-.implements Lcom/vk/crop/q/MoveGestureDetector$a;
-.implements Lcom/vk/crop/q/RotationGestureDetector$a;
+.implements Lcom/vk/crop/q/a$a;
+.implements Lcom/vk/crop/q/b$a;
 .implements Landroid/view/GestureDetector$OnGestureListener;
 
 
@@ -64,11 +64,11 @@
 
 .field private O:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$p;
 
-.field private P:Lcom/vk/crop/q/MoveGestureDetector;
+.field private P:Lcom/vk/crop/q/a;
 
 .field private Q:Landroid/view/ScaleGestureDetector;
 
-.field private R:Lcom/vk/crop/q/RotationGestureDetector;
+.field private R:Lcom/vk/crop/q/b;
 
 .field private S:Landroid/view/View$OnTouchListener;
 
@@ -92,7 +92,7 @@
 
 .field private c0:Landroid/graphics/PointF;
 
-.field private final d:Lcom/vk/attachpicker/stickers/AnimationChoreographer;
+.field private final d:Lcom/vk/attachpicker/stickers/r;
 
 .field private d0:Z
 
@@ -100,7 +100,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/attachpicker/stickers/RemoveArea;",
+            "Lcom/vk/attachpicker/stickers/h0;",
             ">;"
         }
     .end annotation
@@ -108,7 +108,7 @@
 
 .field private e0:Z
 
-.field private f:Lcom/vk/attachpicker/stickers/StickersState;
+.field private f:Lcom/vk/attachpicker/stickers/m0;
 
 .field private f0:Z
 
@@ -170,11 +170,11 @@
     iput-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->c:Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;
 
     .line 5
-    new-instance v0, Lcom/vk/attachpicker/stickers/AnimationChoreographer1;
+    new-instance v0, Lcom/vk/attachpicker/stickers/s;
 
-    invoke-direct {v0, p0}, Lcom/vk/attachpicker/stickers/AnimationChoreographer1;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p0}, Lcom/vk/attachpicker/stickers/s;-><init>(Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/AnimationChoreographer;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/r;
 
     .line 6
     new-instance v0, Ljava/util/ArrayList;
@@ -184,11 +184,11 @@
     iput-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->e:Ljava/util/ArrayList;
 
     .line 7
-    new-instance v0, Lcom/vk/attachpicker/stickers/StickersState;
+    new-instance v0, Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/stickers/StickersState;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/stickers/m0;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     const/4 v0, -0x1
 
@@ -266,11 +266,11 @@
     iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->c:Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;
 
     .line 23
-    new-instance p2, Lcom/vk/attachpicker/stickers/AnimationChoreographer1;
+    new-instance p2, Lcom/vk/attachpicker/stickers/s;
 
-    invoke-direct {p2, p0}, Lcom/vk/attachpicker/stickers/AnimationChoreographer1;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p0}, Lcom/vk/attachpicker/stickers/s;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/AnimationChoreographer;
+    iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/r;
 
     .line 24
     new-instance p2, Ljava/util/ArrayList;
@@ -280,11 +280,11 @@
     iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->e:Ljava/util/ArrayList;
 
     .line 25
-    new-instance p2, Lcom/vk/attachpicker/stickers/StickersState;
+    new-instance p2, Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-direct {p2}, Lcom/vk/attachpicker/stickers/StickersState;-><init>()V
+    invoke-direct {p2}, Lcom/vk/attachpicker/stickers/m0;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     const/4 p2, -0x1
 
@@ -362,11 +362,11 @@
     iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->c:Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;
 
     .line 41
-    new-instance p2, Lcom/vk/attachpicker/stickers/AnimationChoreographer1;
+    new-instance p2, Lcom/vk/attachpicker/stickers/s;
 
-    invoke-direct {p2, p0}, Lcom/vk/attachpicker/stickers/AnimationChoreographer1;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p0}, Lcom/vk/attachpicker/stickers/s;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/AnimationChoreographer;
+    iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/r;
 
     .line 42
     new-instance p2, Ljava/util/ArrayList;
@@ -376,11 +376,11 @@
     iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->e:Ljava/util/ArrayList;
 
     .line 43
-    new-instance p2, Lcom/vk/attachpicker/stickers/StickersState;
+    new-instance p2, Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-direct {p2}, Lcom/vk/attachpicker/stickers/StickersState;-><init>()V
+    invoke-direct {p2}, Lcom/vk/attachpicker/stickers/m0;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     const/4 p2, -0x1
 
@@ -430,11 +430,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;)Lcom/vk/attachpicker/stickers/StickersState;
+.method static synthetic a(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;)Lcom/vk/attachpicker/stickers/m0;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object p0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     return-object p0
 .end method
@@ -443,11 +443,11 @@
     .locals 1
 
     .line 4
-    new-instance v0, Lcom/vk/crop/q/MoveGestureDetector;
+    new-instance v0, Lcom/vk/crop/q/a;
 
-    invoke-direct {v0, p0}, Lcom/vk/crop/q/MoveGestureDetector;-><init>(Lcom/vk/crop/q/MoveGestureDetector$a;)V
+    invoke-direct {v0, p0}, Lcom/vk/crop/q/a;-><init>(Lcom/vk/crop/q/a$a;)V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->P:Lcom/vk/crop/q/MoveGestureDetector;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->P:Lcom/vk/crop/q/a;
 
     .line 5
     new-instance v0, Landroid/view/ScaleGestureDetector;
@@ -464,11 +464,11 @@
     invoke-virtual {p1, v0}, Landroid/view/ScaleGestureDetector;->setQuickScaleEnabled(Z)V
 
     .line 7
-    new-instance p1, Lcom/vk/crop/q/RotationGestureDetector;
+    new-instance p1, Lcom/vk/crop/q/b;
 
-    invoke-direct {p1, p0}, Lcom/vk/crop/q/RotationGestureDetector;-><init>(Lcom/vk/crop/q/RotationGestureDetector$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/crop/q/b;-><init>(Lcom/vk/crop/q/b$a;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->R:Lcom/vk/crop/q/RotationGestureDetector;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->R:Lcom/vk/crop/q/b;
 
     return-void
 .end method
@@ -554,48 +554,48 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/attachpicker/stickers/VideoViewSticker;)V
+.method static synthetic a(Lcom/vk/attachpicker/stickers/s0;)V
     .locals 1
 
     .line 49
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->n()Z
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/s0;->n()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 50
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->q()V
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/s0;->q()V
 
     goto :goto_0
 
     .line 51
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->o()V
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/s0;->o()V
 
     :goto_0
     return-void
 .end method
 
-.method private a(Lcom/vk/common/g/VoidF1;)V
+.method private a(Lcom/vk/common/g/g;)V
     .locals 3
-    .param p1    # Lcom/vk/common/g/VoidF1;
+    .param p1    # Lcom/vk/common/g/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/common/g/VoidF1<",
-            "Lcom/vk/attachpicker/stickers/VideoViewSticker;",
+            "Lcom/vk/common/g/g<",
+            "Lcom/vk/attachpicker/stickers/s0;",
             ">;)V"
         }
     .end annotation
 
     .line 59
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -618,15 +618,15 @@
     check-cast v1, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 60
-    instance-of v2, v1, Lcom/vk/attachpicker/stickers/VideoViewSticker;
+    instance-of v2, v1, Lcom/vk/attachpicker/stickers/s0;
 
     if-eqz v2, :cond_0
 
     .line 61
-    check-cast v1, Lcom/vk/attachpicker/stickers/VideoViewSticker;
+    check-cast v1, Lcom/vk/attachpicker/stickers/s0;
 
     .line 62
-    invoke-interface {p1, v1}, Lcom/vk/common/g/VoidF1;->a(Ljava/lang/Object;)V
+    invoke-interface {p1, v1}, Lcom/vk/common/g/g;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -634,11 +634,11 @@
     return-void
 .end method
 
-.method static synthetic a(ZLcom/vk/attachpicker/stickers/VideoViewSticker;)V
+.method static synthetic a(ZLcom/vk/attachpicker/stickers/s0;)V
     .locals 0
 
     .line 52
-    invoke-virtual {p1, p0}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->setNeedRequestAudioFocus(Z)V
+    invoke-virtual {p1, p0}, Lcom/vk/attachpicker/stickers/s0;->setNeedRequestAudioFocus(Z)V
 
     return-void
 .end method
@@ -696,7 +696,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/common/l/OnViewGesturesListener;->a()V
+    invoke-interface {v0}, Lcom/vk/common/l/a;->a()V
 
     :cond_0
     return-void
@@ -713,7 +713,7 @@
     .line 2
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    invoke-interface {v0, v1}, Lcom/vk/common/l/OnViewGesturesListener;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
+    invoke-interface {v0, v1}, Lcom/vk/common/l/a;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
 
     :cond_0
     return-void
@@ -759,9 +759,9 @@
     move-result v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/AnimationChoreographer;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/r;
 
-    invoke-interface {v1, v0}, Lcom/vk/attachpicker/stickers/AnimationChoreographer;->b(Z)V
+    invoke-interface {v1, v0}, Lcom/vk/attachpicker/stickers/r;->b(Z)V
 
     if-nez v0, :cond_0
 
@@ -790,7 +790,7 @@
 
     move-result-object v3
 
-    instance-of v3, v3, Lcom/vk/attachpicker/stickers/AnimateSticker;
+    instance-of v3, v3, Lcom/vk/attachpicker/stickers/q;
 
     if-eqz v3, :cond_1
 
@@ -799,9 +799,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/attachpicker/stickers/AnimateSticker;
+    check-cast v3, Lcom/vk/attachpicker/stickers/q;
 
-    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/AnimateSticker;->o()I
+    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/q;->o()I
 
     move-result v3
 
@@ -816,13 +816,13 @@
 
     .line 7
     :cond_2
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/AnimationChoreographer;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/r;
 
     add-int/lit8 v0, v0, -0x6
 
     int-to-long v2, v0
 
-    invoke-interface {v1, v2, v3}, Lcom/vk/attachpicker/stickers/AnimationChoreographer;->a(J)V
+    invoke-interface {v1, v2, v3}, Lcom/vk/attachpicker/stickers/r;->a(J)V
 
     return-void
 .end method
@@ -919,7 +919,7 @@
     .line 38
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->C:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$m;
 
-    invoke-interface {v0}, Lcom/vk/common/l/OnViewGesturesListener;->e()V
+    invoke-interface {v0}, Lcom/vk/common/l/a;->e()V
 
     .line 39
     :cond_0
@@ -988,12 +988,12 @@
     .locals 1
 
     .line 32
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     if-eqz v0, :cond_0
 
     .line 33
-    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/stickers/StickersState;->b(II)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/stickers/m0;->b(II)V
 
     .line 34
     :cond_0
@@ -1006,12 +1006,12 @@
     .locals 1
 
     .line 29
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     if-eqz v0, :cond_0
 
     .line 30
-    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/stickers/StickersState;->a(Landroid/graphics/Matrix;Landroid/graphics/Matrix;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/stickers/m0;->a(Landroid/graphics/Matrix;Landroid/graphics/Matrix;)V
 
     .line 31
     :cond_0
@@ -1028,22 +1028,22 @@
     .end param
 
     .line 22
-    invoke-static {}, Lcom/vk/stories/clickable/StickersArrangersKt;->b()Lkotlin/jvm/b/Functions4;
+    invoke-static {}, Lcom/vk/stories/clickable/StickersArrangersKt;->b()Lkotlin/jvm/b/d;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
+.method public a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
     .locals 2
     .param p1    # Lcom/vk/attachpicker/stickers/ISticker;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lkotlin/jvm/b/Functions4;
+    .param p2    # Lkotlin/jvm/b/d;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -1051,7 +1051,7 @@
         value = {
             "(",
             "Lcom/vk/attachpicker/stickers/ISticker;",
-            "Lkotlin/jvm/b/Functions4<",
+            "Lkotlin/jvm/b/d<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
             "Lcom/vk/attachpicker/stickers/ISticker;",
@@ -1065,22 +1065,22 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/stickers/e;-><init>(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;)V
 
-    invoke-interface {p1, v0}, Lcom/vk/attachpicker/stickers/ISticker;->setInvalidator(Lkotlin/jvm/b/Functions;)V
+    invoke-interface {p1, v0}, Lcom/vk/attachpicker/stickers/ISticker;->setInvalidator(Lkotlin/jvm/b/a;)V
 
     .line 24
-    instance-of v0, p1, Lcom/vk/attachpicker/stickers/VideoViewSticker;
+    instance-of v0, p1, Lcom/vk/attachpicker/stickers/s0;
 
     if-eqz v0, :cond_0
 
     .line 25
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/attachpicker/stickers/VideoViewSticker;
+    check-cast v0, Lcom/vk/attachpicker/stickers/s0;
 
     .line 26
     iget-boolean v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d0:Z
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->setMute(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/s0;->setMute(Z)V
 
     .line 27
     :cond_0
@@ -1090,7 +1090,7 @@
 
     new-instance v1, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;-><init>(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;-><init>(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
@@ -1100,7 +1100,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/attachpicker/stickers/RemoveArea;)V
+.method public a(Lcom/vk/attachpicker/stickers/h0;)V
     .locals 1
 
     .line 8
@@ -1148,15 +1148,15 @@
     const-string p1, "Passing view stickers in bucket not supported yet"
 
     .line 17
-    invoke-static {p1}, Lcom/vk/core/util/DebugUtils;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/vk/core/util/q;->a(Ljava/lang/String;)V
 
     return-void
 
     .line 18
     :cond_1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/StickersState;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/m0;->a(Ljava/util/List;)V
 
     .line 19
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1209,9 +1209,9 @@
     .locals 4
 
     .line 56
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1315,14 +1315,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/attachpicker/stickers/RemoveArea;
+    check-cast v1, Lcom/vk/attachpicker/stickers/h0;
 
     .line 13
     iget-object v2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a:Landroid/graphics/Rect;
 
     iget-object v4, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->b:Landroid/graphics/Rect;
 
-    invoke-virtual {v1, v2, v4}, Lcom/vk/attachpicker/stickers/RemoveArea;->a(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    invoke-virtual {v1, v2, v4}, Lcom/vk/attachpicker/stickers/h0;->a(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
     .line 14
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->b:Landroid/graphics/Rect;
@@ -1348,9 +1348,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/StickersState;->b(Lcom/vk/attachpicker/stickers/ISticker;)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/m0;->b(Lcom/vk/attachpicker/stickers/ISticker;)V
 
     .line 3
     instance-of v0, p1, Landroid/view/View;
@@ -1378,11 +1378,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->t()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->t()I
 
     move-result v0
 
@@ -1403,19 +1403,19 @@
     return v0
 .end method
 
-.method public synthetic c()Lkotlin/Unit;
+.method public synthetic c()Lkotlin/m;
     .locals 1
 
     .line 1
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
 
     .line 2
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
 
-.method public synthetic d()Lkotlin/Unit;
+.method public synthetic d()Lkotlin/m;
     .locals 1
 
     .line 1
@@ -1430,7 +1430,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     const/4 v1, 0x2
 
@@ -1439,7 +1439,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/attachpicker/stickers/StickersState;->b(Landroid/graphics/Canvas;ZI)V
+    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/attachpicker/stickers/m0;->b(Landroid/graphics/Canvas;ZI)V
 
     .line 3
     :cond_0
@@ -1452,17 +1452,17 @@
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     if-eqz v0, :cond_4
 
     .line 6
-    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/attachpicker/stickers/StickersState;->a(Landroid/graphics/Canvas;ZI)V
+    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/attachpicker/stickers/m0;->a(Landroid/graphics/Canvas;ZI)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v0, v0, Lcom/vk/attachpicker/stickers/ISticker3;
+    instance-of v0, v0, Lcom/vk/attachpicker/stickers/z;
 
     if-nez v0, :cond_2
 
@@ -1477,9 +1477,9 @@
 
     .line 9
     :cond_2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->t()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->t()I
 
     move-result v0
 
@@ -1488,15 +1488,15 @@
     if-le v0, v1, :cond_3
 
     .line 10
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0, p1, v2}, Lcom/vk/attachpicker/stickers/StickersState;->b(Landroid/graphics/Canvas;Z)V
+    invoke-virtual {v0, p1, v2}, Lcom/vk/attachpicker/stickers/m0;->b(Landroid/graphics/Canvas;Z)V
 
     .line 11
     :cond_3
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v0, v0, Lcom/vk/attachpicker/stickers/ISticker3;
+    instance-of v0, v0, Lcom/vk/attachpicker/stickers/z;
 
     if-eqz v0, :cond_4
 
@@ -1519,7 +1519,7 @@
     .line 1
     sget-object v0, Lcom/vk/attachpicker/stickers/a;->a:Lcom/vk/attachpicker/stickers/a;
 
-    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/VoidF1;)V
+    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/g;)V
 
     return-void
 .end method
@@ -1530,7 +1530,7 @@
     .line 1
     sget-object v0, Lcom/vk/attachpicker/stickers/b;->a:Lcom/vk/attachpicker/stickers/b;
 
-    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/VoidF1;)V
+    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/g;)V
 
     return-void
 .end method
@@ -1541,21 +1541,21 @@
     .line 1
     sget-object v0, Lcom/vk/attachpicker/stickers/g;->a:Lcom/vk/attachpicker/stickers/g;
 
-    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/VoidF1;)V
+    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/g;)V
 
     return-void
 .end method
 
-.method public getAnimationChoreographer()Lcom/vk/attachpicker/stickers/AnimationChoreographer;
+.method public getAnimationChoreographer()Lcom/vk/attachpicker/stickers/r;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/AnimationChoreographer;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/r;
 
     return-object v0
 .end method
 
-.method public getClickableCounter()Lcom/vk/attachpicker/stickers/StickersCounter;
+.method public getClickableCounter()Lcom/vk/attachpicker/stickers/l0;
     .locals 12
 
     .line 1
@@ -1685,9 +1685,9 @@
 
     .line 12
     :cond_7
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1716,7 +1716,7 @@
     check-cast v2, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 13
-    instance-of v11, v2, Lcom/vk/stories/clickable/stickers/StoryTimerSticker;
+    instance-of v11, v2, Lcom/vk/stories/clickable/stickers/i;
 
     if-eqz v11, :cond_9
 
@@ -1736,7 +1736,7 @@
 
     .line 15
     :cond_a
-    instance-of v2, v2, Lcom/vk/stories/clickable/stickers/StoryPollSticker;
+    instance-of v2, v2, Lcom/vk/stories/clickable/stickers/e;
 
     if-eqz v2, :cond_8
 
@@ -1746,7 +1746,7 @@
 
     .line 16
     :cond_b
-    new-instance v11, Lcom/vk/attachpicker/stickers/StickersCounter;
+    new-instance v11, Lcom/vk/attachpicker/stickers/l0;
 
     move-object v0, v11
 
@@ -1760,7 +1760,7 @@
 
     move v9, v10
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/attachpicker/stickers/StickersCounter;-><init>(Ljava/util/Set;IIIIIIII)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/attachpicker/stickers/l0;-><init>(Ljava/util/Set;IIIIIIII)V
 
     return-object v11
 .end method
@@ -1776,9 +1776,9 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 2
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -1801,15 +1801,15 @@
     check-cast v2, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 3
-    instance-of v3, v2, Lcom/vk/attachpicker/stickers/text/MakerOfClickableStickers;
+    instance-of v3, v2, Lcom/vk/attachpicker/stickers/text/c;
 
     if-eqz v3, :cond_0
 
     .line 4
-    check-cast v2, Lcom/vk/attachpicker/stickers/text/MakerOfClickableStickers;
+    check-cast v2, Lcom/vk/attachpicker/stickers/text/c;
 
     .line 5
-    invoke-interface {v2}, Lcom/vk/attachpicker/stickers/text/MakerOfClickableStickers;->getClickableStickers()Ljava/util/List;
+    invoke-interface {v2}, Lcom/vk/attachpicker/stickers/text/c;->getClickableStickers()Ljava/util/List;
 
     move-result-object v2
 
@@ -1861,9 +1861,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1892,11 +1892,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->t()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->t()I
 
     move-result v0
 
@@ -1909,22 +1909,22 @@
     return v0
 .end method
 
-.method public getStickersState()Lcom/vk/attachpicker/stickers/StickersState;
+.method public getStickersState()Lcom/vk/attachpicker/stickers/m0;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     return-object v0
 .end method
 
-.method public getStickersStateCopy()Lcom/vk/attachpicker/stickers/StickersState;
+.method public getStickersStateCopy()Lcom/vk/attachpicker/stickers/m0;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->d()Lcom/vk/attachpicker/stickers/StickersState;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->d()Lcom/vk/attachpicker/stickers/m0;
 
     move-result-object v0
 
@@ -1937,7 +1937,7 @@
     .line 1
     sget-object v0, Lcom/vk/attachpicker/stickers/p;->a:Lcom/vk/attachpicker/stickers/p;
 
-    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/VoidF1;)V
+    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/g;)V
 
     return-void
 .end method
@@ -1949,9 +1949,9 @@
     invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->j()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->c()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->c()V
 
     return-void
 .end method
@@ -1975,16 +1975,16 @@
     move-result-object v2
 
     .line 3
-    instance-of v3, v2, Lcom/vk/attachpicker/stickers/CameraVideoViewSticker;
+    instance-of v3, v2, Lcom/vk/attachpicker/stickers/x;
 
     if-eqz v3, :cond_0
 
     .line 4
     move-object v3, v2
 
-    check-cast v3, Lcom/vk/attachpicker/stickers/CameraVideoViewSticker;
+    check-cast v3, Lcom/vk/attachpicker/stickers/x;
 
-    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/CameraVideoViewSticker;->u()V
+    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/x;->u()V
 
     .line 5
     :cond_0
@@ -2008,11 +2008,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/AnimationChoreographer;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d:Lcom/vk/attachpicker/stickers/r;
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/AnimationChoreographer;->a(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/r;->a(Z)V
 
     return-void
 .end method
@@ -2158,7 +2158,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->C:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$m;
 
-    invoke-interface {v0}, Lcom/vk/common/l/OnViewGesturesListener;->e()V
+    invoke-interface {v0}, Lcom/vk/common/l/a;->e()V
 
     .line 5
     :cond_0
@@ -2312,9 +2312,9 @@
 
     if-eqz v2, :cond_2c
 
-    iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v2}, Lcom/vk/attachpicker/stickers/StickersState;->t()I
+    invoke-virtual {v2}, Lcom/vk/attachpicker/stickers/m0;->t()I
 
     move-result v2
 
@@ -2328,7 +2328,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static/range {p0 .. p0}, Lcom/vk/attachpicker/util/Utils;->a(Landroid/view/View;)I
+    invoke-static/range {p0 .. p0}, Lcom/vk/attachpicker/util/f;->a(Landroid/view/View;)I
 
     move-result v2
 
@@ -2345,7 +2345,7 @@
 
     if-eqz v4, :cond_3
 
-    invoke-static/range {p0 .. p0}, Lcom/vk/attachpicker/util/Utils;->b(Landroid/view/View;)I
+    invoke-static/range {p0 .. p0}, Lcom/vk/attachpicker/util/f;->b(Landroid/view/View;)I
 
     move-result v4
 
@@ -2410,20 +2410,20 @@
     if-nez v12, :cond_9
 
     .line 11
-    iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     if-eqz v2, :cond_8
 
-    invoke-virtual {v2}, Lcom/vk/attachpicker/stickers/StickersState;->t()I
+    invoke-virtual {v2}, Lcom/vk/attachpicker/stickers/m0;->t()I
 
     move-result v2
 
     if-lez v2, :cond_8
 
     .line 12
-    iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v2}, Lcom/vk/attachpicker/stickers/StickersState;->t()I
+    invoke-virtual {v2}, Lcom/vk/attachpicker/stickers/m0;->t()I
 
     move-result v2
 
@@ -2441,9 +2441,9 @@
 
     .line 14
     :cond_5
-    iget-object v4, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v4, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v4, v2}, Lcom/vk/attachpicker/stickers/StickersState;->b(I)Lcom/vk/attachpicker/stickers/ISticker;
+    invoke-virtual {v4, v2}, Lcom/vk/attachpicker/stickers/m0;->b(I)Lcom/vk/attachpicker/stickers/ISticker;
 
     move-result-object v4
 
@@ -2485,9 +2485,9 @@
     iput-boolean v3, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->h0:Z
 
     .line 19
-    iget-object v4, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v4, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v4, v2}, Lcom/vk/attachpicker/stickers/StickersState;->a(I)V
+    invoke-virtual {v4, v2}, Lcom/vk/attachpicker/stickers/m0;->a(I)V
 
     .line 20
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->invalidate()V
@@ -2754,7 +2754,7 @@
     .line 47
     iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v4, v2, Lcom/vk/attachpicker/stickers/text/TextSticker;
+    instance-of v4, v2, Lcom/vk/attachpicker/stickers/text/h;
 
     if-eqz v4, :cond_10
 
@@ -2763,9 +2763,9 @@
     if-eqz v4, :cond_10
 
     .line 48
-    check-cast v2, Lcom/vk/attachpicker/stickers/text/TextSticker;
+    check-cast v2, Lcom/vk/attachpicker/stickers/text/h;
 
-    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$n;->a(Lcom/vk/attachpicker/stickers/text/TextSticker;)V
+    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$n;->a(Lcom/vk/attachpicker/stickers/text/h;)V
 
     goto/16 :goto_9
 
@@ -2811,7 +2811,7 @@
     :cond_12
     iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/StoryQuestionSticker;
+    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/h;
 
     if-eqz v4, :cond_13
 
@@ -2820,9 +2820,9 @@
     if-eqz v4, :cond_13
 
     .line 54
-    check-cast v2, Lcom/vk/stories/clickable/stickers/StoryQuestionSticker;
+    check-cast v2, Lcom/vk/stories/clickable/stickers/h;
 
-    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$l;->a(Lcom/vk/stories/clickable/stickers/StoryQuestionSticker;)V
+    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$l;->a(Lcom/vk/stories/clickable/stickers/h;)V
 
     goto/16 :goto_9
 
@@ -2830,7 +2830,7 @@
     :cond_13
     iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/StoryMusicSticker1;
+    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/d;
 
     if-eqz v4, :cond_14
 
@@ -2839,9 +2839,9 @@
     if-eqz v4, :cond_14
 
     .line 56
-    check-cast v2, Lcom/vk/stories/clickable/stickers/StoryMusicSticker1;
+    check-cast v2, Lcom/vk/stories/clickable/stickers/d;
 
-    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$i;->a(Lcom/vk/stories/clickable/stickers/StoryMusicSticker1;)V
+    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$i;->a(Lcom/vk/stories/clickable/stickers/d;)V
 
     goto :goto_9
 
@@ -2849,7 +2849,7 @@
     :cond_14
     iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;
+    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/a;
 
     if-eqz v4, :cond_15
 
@@ -2858,9 +2858,9 @@
     if-eqz v4, :cond_15
 
     .line 58
-    check-cast v2, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;
+    check-cast v2, Lcom/vk/stories/clickable/stickers/a;
 
-    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$e;->a(Lcom/vk/stories/clickable/stickers/StoryGeoSticker;)V
+    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$e;->a(Lcom/vk/stories/clickable/stickers/a;)V
 
     goto :goto_9
 
@@ -2868,7 +2868,7 @@
     :cond_15
     iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;
+    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/b;
 
     if-eqz v4, :cond_16
 
@@ -2877,9 +2877,9 @@
     if-eqz v4, :cond_16
 
     .line 60
-    check-cast v2, Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;
+    check-cast v2, Lcom/vk/stories/clickable/stickers/b;
 
-    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$g;->a(Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;)V
+    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$g;->a(Lcom/vk/stories/clickable/stickers/b;)V
 
     goto :goto_9
 
@@ -2887,7 +2887,7 @@
     :cond_16
     iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/StoryTimerSticker;
+    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/i;
 
     if-eqz v4, :cond_17
 
@@ -2896,9 +2896,9 @@
     if-eqz v4, :cond_17
 
     .line 62
-    check-cast v2, Lcom/vk/stories/clickable/stickers/StoryTimerSticker;
+    check-cast v2, Lcom/vk/stories/clickable/stickers/i;
 
-    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$o;->a(Lcom/vk/stories/clickable/stickers/StoryTimerSticker;)V
+    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$o;->a(Lcom/vk/stories/clickable/stickers/i;)V
 
     goto :goto_9
 
@@ -2906,7 +2906,7 @@
     :cond_17
     iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v4, v2, Lcom/vk/attachpicker/stickers/StoryPhotoSticker;
+    instance-of v4, v2, Lcom/vk/attachpicker/stickers/o0;
 
     if-eqz v4, :cond_18
 
@@ -2915,9 +2915,9 @@
     if-eqz v4, :cond_18
 
     .line 64
-    check-cast v2, Lcom/vk/attachpicker/stickers/StoryPhotoSticker;
+    check-cast v2, Lcom/vk/attachpicker/stickers/o0;
 
-    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$j;->a(Lcom/vk/attachpicker/stickers/StoryPhotoSticker;)V
+    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$j;->a(Lcom/vk/attachpicker/stickers/o0;)V
 
     goto :goto_9
 
@@ -2925,16 +2925,16 @@
     :cond_18
     iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->T:Lcom/vk/attachpicker/stickers/ISticker;
 
-    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/StoryPollSticker;
+    instance-of v4, v2, Lcom/vk/stories/clickable/stickers/e;
 
     if-eqz v4, :cond_19
 
     .line 66
     iget-object v4, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->N:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$k;
 
-    check-cast v2, Lcom/vk/stories/clickable/stickers/StoryPollSticker;
+    check-cast v2, Lcom/vk/stories/clickable/stickers/e;
 
-    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$k;->a(Lcom/vk/stories/clickable/stickers/StoryPollSticker;)V
+    invoke-interface {v4, v2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$k;->a(Lcom/vk/stories/clickable/stickers/e;)V
 
     goto :goto_9
 
@@ -3083,9 +3083,9 @@
 
     .line 85
     :goto_c
-    iget-object v12, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v12, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v12}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
+    invoke-virtual {v12}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
 
     move-result-object v12
 
@@ -3096,9 +3096,9 @@
     if-ge v8, v12, :cond_29
 
     .line 86
-    iget-object v12, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v12, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v12, v8}, Lcom/vk/attachpicker/stickers/StickersState;->b(I)Lcom/vk/attachpicker/stickers/ISticker;
+    invoke-virtual {v12, v8}, Lcom/vk/attachpicker/stickers/m0;->b(I)Lcom/vk/attachpicker/stickers/ISticker;
 
     move-result-object v14
 
@@ -3171,7 +3171,7 @@
     move/from16 v20, v11
 
     .line 91
-    invoke-static/range {v12 .. v20}, Lcom/vk/core/util/MathUtils;->a(Landroid/graphics/PointF;FFFFFFFF)Z
+    invoke-static/range {v12 .. v20}, Lcom/vk/core/util/o0;->a(Landroid/graphics/PointF;FFFFFFFF)Z
 
     move-result v3
 
@@ -3216,7 +3216,7 @@
     move/from16 v19, v11
 
     .line 92
-    invoke-static/range {v12 .. v20}, Lcom/vk/core/util/MathUtils;->a(Landroid/graphics/PointF;FFFFFFFF)Z
+    invoke-static/range {v12 .. v20}, Lcom/vk/core/util/o0;->a(Landroid/graphics/PointF;FFFFFFFF)Z
 
     move-result v3
 
@@ -3246,7 +3246,7 @@
     iget v3, v3, Landroid/graphics/PointF;->y:F
 
     .line 94
-    invoke-static {v2, v4, v7, v3}, Lcom/vk/core/util/MathUtils;->a(FFFF)F
+    invoke-static {v2, v4, v7, v3}, Lcom/vk/core/util/o0;->a(FFFF)F
 
     move-result v3
 
@@ -3257,7 +3257,7 @@
     iget v7, v7, Landroid/graphics/PointF;->y:F
 
     .line 95
-    invoke-static {v5, v6, v11, v7}, Lcom/vk/core/util/MathUtils;->a(FFFF)F
+    invoke-static {v5, v6, v11, v7}, Lcom/vk/core/util/o0;->a(FFFF)F
 
     move-result v7
 
@@ -3321,9 +3321,9 @@
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->invalidate()V
 
     .line 101
-    iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v2, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v2, v1}, Lcom/vk/attachpicker/stickers/StickersState;->a(I)V
+    invoke-virtual {v2, v1}, Lcom/vk/attachpicker/stickers/m0;->a(I)V
 
     .line 102
     :cond_2a
@@ -3352,11 +3352,11 @@
     iput v1, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a0:I
 
     .line 105
-    iget-object v1, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->P:Lcom/vk/crop/q/MoveGestureDetector;
+    iget-object v1, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->P:Lcom/vk/crop/q/a;
 
     move-object/from16 v2, p1
 
-    invoke-virtual {v1, v2}, Lcom/vk/crop/q/MoveGestureDetector;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v1, v2}, Lcom/vk/crop/q/a;->a(Landroid/view/MotionEvent;)Z
 
     .line 106
     iget-object v1, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->Q:Landroid/view/ScaleGestureDetector;
@@ -3364,9 +3364,9 @@
     invoke-virtual {v1, v2}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     .line 107
-    iget-object v1, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->R:Lcom/vk/crop/q/RotationGestureDetector;
+    iget-object v1, v0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->R:Lcom/vk/crop/q/b;
 
-    invoke-virtual {v1, v2}, Lcom/vk/crop/q/RotationGestureDetector;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v1, v2}, Lcom/vk/crop/q/b;->a(Landroid/view/MotionEvent;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3419,9 +3419,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->P:Lcom/vk/crop/q/MoveGestureDetector;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->P:Lcom/vk/crop/q/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/crop/q/MoveGestureDetector;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/crop/q/a;->a(I)V
 
     return-void
 .end method
@@ -3434,7 +3434,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/attachpicker/stickers/f;-><init>(Z)V
 
-    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/VoidF1;)V
+    invoke-direct {p0, v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/common/g/g;)V
 
     return-void
 .end method
@@ -3625,9 +3625,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->t()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->t()I
 
     move-result v0
 
@@ -3637,9 +3637,9 @@
     if-ltz v0, :cond_2
 
     .line 2
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v1, v0}, Lcom/vk/attachpicker/stickers/StickersState;->b(I)Lcom/vk/attachpicker/stickers/ISticker;
+    invoke-virtual {v1, v0}, Lcom/vk/attachpicker/stickers/m0;->b(I)Lcom/vk/attachpicker/stickers/ISticker;
 
     move-result-object v1
 
@@ -3680,9 +3680,9 @@
     return-void
 .end method
 
-.method public setStickersState(Lcom/vk/attachpicker/stickers/StickersState;)V
+.method public setStickersState(Lcom/vk/attachpicker/stickers/m0;)V
     .locals 2
-    .param p1    # Lcom/vk/attachpicker/stickers/StickersState;
+    .param p1    # Lcom/vk/attachpicker/stickers/m0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -3691,10 +3691,10 @@
     invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->j()V
 
     .line 2
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -3721,7 +3721,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/attachpicker/stickers/d;-><init>(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/ISticker;->setInvalidator(Lkotlin/jvm/b/Functions;)V
+    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/ISticker;->setInvalidator(Lkotlin/jvm/b/a;)V
 
     .line 5
     instance-of v1, v0, Landroid/view/View;
@@ -3814,9 +3814,9 @@
     iput-boolean p1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d0:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/StickersState;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f:Lcom/vk/attachpicker/stickers/m0;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -3839,14 +3839,14 @@
     check-cast v1, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 3
-    instance-of v2, v1, Lcom/vk/attachpicker/stickers/VideoViewSticker;
+    instance-of v2, v1, Lcom/vk/attachpicker/stickers/s0;
 
     if-eqz v2, :cond_0
 
     .line 4
-    check-cast v1, Lcom/vk/attachpicker/stickers/VideoViewSticker;
+    check-cast v1, Lcom/vk/attachpicker/stickers/s0;
 
-    invoke-virtual {v1, p1}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->setMute(Z)V
+    invoke-virtual {v1, p1}, Lcom/vk/attachpicker/stickers/s0;->setMute(Z)V
 
     goto :goto_0
 

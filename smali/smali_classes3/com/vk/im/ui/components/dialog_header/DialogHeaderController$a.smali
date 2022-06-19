@@ -3,7 +3,7 @@
 .source "DialogHeaderController.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
+.implements Lcom/vk/im/ui/components/dialog_header/actions/c;
 
 
 # annotations
@@ -61,11 +61,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$a;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;->a(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_header/a;->a(Lcom/vk/im/engine/models/messages/Msg;)V
 
     return-void
 .end method
@@ -85,31 +85,31 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$a;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
 
     move-result-object v1
 
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$a;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->d(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/navigation/ActivityLauncher;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->d(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/navigation/a;
 
     move-result-object v2
 
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$a;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/p/ImBridge11;->a(Ljava/util/Collection;)Landroid/os/Bundle;
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/p/e;->a(Ljava/util/Collection;)Landroid/os/Bundle;
 
     move-result-object v3
 
@@ -119,7 +119,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/im/ui/p/ImBridge$b1;->a(Lcom/vk/im/ui/p/ImBridge11;Lcom/vk/navigation/ActivityLauncher;Landroid/os/Bundle;ZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/im/ui/p/e$b;->a(Lcom/vk/im/ui/p/e;Lcom/vk/navigation/a;Landroid/os/Bundle;ZILjava/lang/Object;)V
 
     return-void
 .end method

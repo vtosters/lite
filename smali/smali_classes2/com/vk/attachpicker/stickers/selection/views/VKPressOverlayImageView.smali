@@ -77,11 +77,11 @@
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setPressed(Z)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    check-cast v0, Lcom/facebook/drawee/generic/a;
 
     const/4 v1, 0x0
 
@@ -92,12 +92,12 @@
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/views/VKPressOverlayImageView;->R:Landroid/graphics/PorterDuffColorFilter;
 
     :cond_0
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Landroid/graphics/ColorFilter;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->a(Landroid/graphics/ColorFilter;)V
 
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method

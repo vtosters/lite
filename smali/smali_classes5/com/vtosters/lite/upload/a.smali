@@ -11,11 +11,11 @@
 
 .field private final synthetic b:Landroid/content/Context;
 
-.field private final synthetic c:Lcom/vtosters/lite/upload/UploadUtils$c;
+.field private final synthetic c:Lcom/vtosters/lite/upload/k$c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/List;Landroid/content/Context;Lcom/vtosters/lite/upload/UploadUtils$c;)V
+.method public synthetic constructor <init>(Ljava/util/List;Landroid/content/Context;Lcom/vtosters/lite/upload/k$c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,7 +24,7 @@
 
     iput-object p2, p0, Lcom/vtosters/lite/upload/a;->b:Landroid/content/Context;
 
-    iput-object p3, p0, Lcom/vtosters/lite/upload/a;->c:Lcom/vtosters/lite/upload/UploadUtils$c;
+    iput-object p3, p0, Lcom/vtosters/lite/upload/a;->c:Lcom/vtosters/lite/upload/k$c;
 
     return-void
 .end method
@@ -38,9 +38,9 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/upload/a;->b:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/vtosters/lite/upload/a;->c:Lcom/vtosters/lite/upload/UploadUtils$c;
+    iget-object v2, p0, Lcom/vtosters/lite/upload/a;->c:Lcom/vtosters/lite/upload/k$c;
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/upload/UploadUtils;->a(Ljava/util/List;Landroid/content/Context;Lcom/vtosters/lite/upload/UploadUtils$c;)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/upload/k;->a(Ljava/util/List;Landroid/content/Context;Lcom/vtosters/lite/upload/k$c;)V
 
     return-void
 .end method

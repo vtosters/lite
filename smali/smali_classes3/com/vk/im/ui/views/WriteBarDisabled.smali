@@ -54,20 +54,20 @@
 
     move-result-object p1
 
-    sget p2, Lcom/vk/im/ui/R13;->vkim_write_bar_disabled:I
+    sget p2, Lcom/vk/im/ui/j;->vkim_write_bar_disabled:I
 
     const/4 p3, 0x1
 
     invoke-virtual {p1, p2, p0, p3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 6
-    sget p1, Lcom/vk/im/ui/R11;->text:I
+    sget p1, Lcom/vk/im/ui/h;->text:I
 
     const/4 p2, 0x2
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -76,9 +76,9 @@
     iput-object p1, p0, Lcom/vk/im/ui/views/WriteBarDisabled;->a:Landroid/widget/TextView;
 
     .line 7
-    sget p1, Lcom/vk/im/ui/R11;->icon:I
+    sget p1, Lcom/vk/im/ui/h;->icon:I
 
-    invoke-static {p0, p1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -90,7 +90,7 @@
     invoke-virtual {p0, p3}, Landroid/widget/FrameLayout;->setClickable(Z)V
 
     .line 9
-    sget p1, Lcom/vk/im/ui/R5;->background_content:I
+    sget p1, Lcom/vk/im/ui/c;->background_content:I
 
     invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;I)V
 
@@ -109,7 +109,7 @@
 
     const-string v1, "getChildAt(0)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -160,7 +160,7 @@
     if-eqz p3, :cond_0
 
     .line 1
-    sget p2, Lcom/vk/im/ui/R12;->ic_error_outline_32:I
+    sget p2, Lcom/vk/im/ui/f;->ic_error_outline_32:I
 
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/vk/im/ui/views/WriteBarDisabled;->b(Ljava/lang/CharSequence;I)V
@@ -180,9 +180,9 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v1, Lcom/vk/im/ui/R5;->accent:I
+    sget v1, Lcom/vk/im/ui/c;->accent:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -240,9 +240,9 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v2, Lcom/vk/im/ui/R5;->text_subhead:I
+    sget v2, Lcom/vk/im/ui/c;->text_subhead:I
 
     invoke-static {v0, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -269,9 +269,9 @@
 
     move-result-object p2
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v0, Lcom/vk/im/ui/R5;->destructive:I
+    sget v0, Lcom/vk/im/ui/c;->destructive:I
 
     invoke-static {p2, v0}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 

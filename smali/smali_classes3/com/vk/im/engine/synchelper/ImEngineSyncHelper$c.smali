@@ -1,11 +1,11 @@
 .class public final Lcom/vk/im/engine/synchelper/ImEngineSyncHelper$c;
-.super Lb/h/n/AppLifecycleDispatcher$a;
+.super Lb/h/n/c$a;
 .source "ImEngineSyncHelper.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->a(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->a(Landroid/content/Context;Lcom/vk/im/engine/a;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lb/h/n/AppLifecycleDispatcher$a;-><init>()V
+    invoke-direct {p0}, Lb/h/n/c$a;-><init>()V
 
     return-void
 .end method

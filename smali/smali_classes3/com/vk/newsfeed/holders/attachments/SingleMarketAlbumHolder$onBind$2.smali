@@ -22,12 +22,12 @@
     return-object v0
 .end method
 
-.method public f()Lkotlin/u/KDeclarationContainer;
+.method public f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/newsfeed/holders/attachments/SingleMarketAlbumHolder;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 

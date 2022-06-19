@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final a:Lorg/chromium/base/ObserverList;
+.field private static final a:Lorg/chromium/base/f;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lorg/chromium/base/ObserverList<",
-            "Lorg/chromium/base/i/MemoryPressureCallback;",
+            "Lorg/chromium/base/f<",
+            "Lorg/chromium/base/i/a;",
             ">;"
         }
     .end annotation
@@ -20,11 +20,11 @@
     .locals 1
 
     .line 1
-    new-instance v0, Lorg/chromium/base/ObserverList;
+    new-instance v0, Lorg/chromium/base/f;
 
-    invoke-direct {v0}, Lorg/chromium/base/ObserverList;-><init>()V
+    invoke-direct {v0}, Lorg/chromium/base/f;-><init>()V
 
-    sput-object v0, Lorg/chromium/base/MemoryPressureListener;->a:Lorg/chromium/base/ObserverList;
+    sput-object v0, Lorg/chromium/base/MemoryPressureListener;->a:Lorg/chromium/base/f;
 
     return-void
 .end method
@@ -38,13 +38,13 @@
     return-void
 .end method
 
-.method public static a(Lorg/chromium/base/i/MemoryPressureCallback;)V
+.method public static a(Lorg/chromium/base/i/a;)V
     .locals 1
 
     .line 1
-    sget-object v0, Lorg/chromium/base/MemoryPressureListener;->a:Lorg/chromium/base/ObserverList;
+    sget-object v0, Lorg/chromium/base/MemoryPressureListener;->a:Lorg/chromium/base/f;
 
-    invoke-virtual {v0, p0}, Lorg/chromium/base/ObserverList;->a(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p0}, Lorg/chromium/base/f;->a(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -57,7 +57,7 @@
     .line 1
     sget-object v0, Lorg/chromium/base/a;->a:Lorg/chromium/base/a;
 
-    invoke-static {v0}, Lorg/chromium/base/MemoryPressureListener;->a(Lorg/chromium/base/i/MemoryPressureCallback;)V
+    invoke-static {v0}, Lorg/chromium/base/MemoryPressureListener;->a(Lorg/chromium/base/i/a;)V
 
     return-void
 .end method

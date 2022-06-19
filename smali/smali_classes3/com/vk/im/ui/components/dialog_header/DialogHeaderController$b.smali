@@ -3,7 +3,7 @@
 .source "DialogHeaderController.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponentCallback;
+.implements Lcom/vk/im/ui/components/dialog_header/c/b;
 
 
 # annotations

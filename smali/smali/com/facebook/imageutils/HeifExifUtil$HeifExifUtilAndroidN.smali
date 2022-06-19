@@ -60,7 +60,7 @@
     const-string v1, "Failed reading Heif Exif orientation -> ignoring"
 
     .line 3
-    invoke-static {v0, v1, p0}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p0}, Lcom/facebook/common/h/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0
 

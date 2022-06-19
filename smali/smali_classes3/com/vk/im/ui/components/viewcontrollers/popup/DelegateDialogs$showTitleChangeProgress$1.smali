@@ -3,12 +3,12 @@
 .source "DelegateDialogs.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->d(Lkotlin/jvm/b/Functions;Z)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->d(Lkotlin/jvm/b/a;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $onCancelListener:Lkotlin/jvm/b/Functions;
+.field final synthetic $onCancelListener:Lkotlin/jvm/b/a;
 
 .field final synthetic this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showTitleChangeProgress$1;->this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showTitleChangeProgress$1;->$onCancelListener:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showTitleChangeProgress$1;->$onCancelListener:Lkotlin/jvm/b/a;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showTitleChangeProgress$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -66,9 +66,9 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showTitleChangeProgress$1;->this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showTitleChangeProgress$1;->$onCancelListener:Lkotlin/jvm/b/Functions;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showTitleChangeProgress$1;->$onCancelListener:Lkotlin/jvm/b/a;
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->c(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lkotlin/jvm/b/Functions;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->c(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

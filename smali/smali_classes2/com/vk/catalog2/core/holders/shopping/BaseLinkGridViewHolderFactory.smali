@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method private final a(Landroid/view/ViewGroup;ILkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+.method private final a(Landroid/view/ViewGroup;ILkotlin/jvm/b/b;)Ljava/lang/Object;
     .locals 1
     .param p2    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -43,7 +43,7 @@
             ">(",
             "Landroid/view/ViewGroup;",
             "I",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
             "+TT;>;)TT;"
@@ -58,7 +58,7 @@
     move-result-object p1
 
     .line 4
-    invoke-interface {p3, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -67,74 +67,74 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/n;
     .locals 2
 
     .line 1
-    sget v0, Lcom/vk/catalog2/core/R7;->catalog_link_grid_item_compact_image_view:I
+    sget v0, Lcom/vk/catalog2/core/r;->catalog_link_grid_item_compact_image_view:I
 
     sget-object v1, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createCompactImageHolder$1;->a:Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createCompactImageHolder$1;
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;ILkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;ILkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;
+    check-cast p1, Lcom/vk/catalog2/core/holders/shopping/n;
 
     return-object p1
 .end method
 
-.method public final a(Landroid/view/ViewGroup;Z)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;
+.method public final a(Landroid/view/ViewGroup;Z)Lcom/vk/catalog2/core/holders/shopping/n;
     .locals 2
 
     .line 2
-    sget v0, Lcom/vk/catalog2/core/R7;->catalog_link_grid_item_detailed_image_view:I
+    sget v0, Lcom/vk/catalog2/core/r;->catalog_link_grid_item_detailed_image_view:I
 
     new-instance v1, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createDetailedImageHolder$1;
 
     invoke-direct {v1, p2}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createDetailedImageHolder$1;-><init>(Z)V
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;ILkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;ILkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;
+    check-cast p1, Lcom/vk/catalog2/core/holders/shopping/n;
 
     return-object p1
 .end method
 
-.method public final b(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory7;
+.method public final b(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/q;
     .locals 2
 
     .line 1
-    sget v0, Lcom/vk/catalog2/core/R7;->catalog_link_grid_item_compact_video_view:I
+    sget v0, Lcom/vk/catalog2/core/r;->catalog_link_grid_item_compact_video_view:I
 
     sget-object v1, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createCompactVideoHolder$1;->a:Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createCompactVideoHolder$1;
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;ILkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;ILkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory7;
+    check-cast p1, Lcom/vk/catalog2/core/holders/shopping/q;
 
     return-object p1
 .end method
 
-.method public final b(Landroid/view/ViewGroup;Z)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory7;
+.method public final b(Landroid/view/ViewGroup;Z)Lcom/vk/catalog2/core/holders/shopping/q;
     .locals 2
 
     .line 2
-    sget v0, Lcom/vk/catalog2/core/R7;->catalog_link_grid_item_detailed_video_view:I
+    sget v0, Lcom/vk/catalog2/core/r;->catalog_link_grid_item_detailed_video_view:I
 
     new-instance v1, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createDetailedVideoHolder$1;
 
     invoke-direct {v1, p2}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createDetailedVideoHolder$1;-><init>(Z)V
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;ILkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;ILkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory7;
+    check-cast p1, Lcom/vk/catalog2/core/holders/shopping/q;
 
     return-object p1
 .end method

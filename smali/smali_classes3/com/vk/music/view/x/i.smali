@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/music/view/x/ControlsHolder;
+.field private final synthetic a:Lcom/vk/music/view/x/p;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/music/view/x/ControlsHolder;)V
+.method public synthetic constructor <init>(Lcom/vk/music/view/x/p;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/view/x/i;->a:Lcom/vk/music/view/x/ControlsHolder;
+    iput-object p1, p0, Lcom/vk/music/view/x/i;->a:Lcom/vk/music/view/x/p;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/music/view/x/i;->a:Lcom/vk/music/view/x/ControlsHolder;
+    iget-object v0, p0, Lcom/vk/music/view/x/i;->a:Lcom/vk/music/view/x/p;
 
-    invoke-virtual {v0}, Lcom/vk/music/view/x/ControlsHolder;->i0()V
+    invoke-virtual {v0}, Lcom/vk/music/view/x/p;->i0()V
 
     return-void
 .end method

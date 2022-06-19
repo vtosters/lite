@@ -3,7 +3,7 @@
 .source "BaseCheckFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/auth/verification/base/BaseCheckFragment$onViewCreated$1;->this$0:Lcom/vk/auth/verification/base/BaseCheckFragment;
 
-    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckFragment;->a(Lcom/vk/auth/verification/base/BaseCheckFragment;)Lcom/vk/auth/verification/base/CheckPresenter;
+    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckFragment;->a(Lcom/vk/auth/verification/base/BaseCheckFragment;)Lcom/vk/auth/verification/base/b;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/auth/verification/base/CheckPresenter;->c()V
+    invoke-interface {p1}, Lcom/vk/auth/verification/base/b;->c()V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckFragment$onViewCreated$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

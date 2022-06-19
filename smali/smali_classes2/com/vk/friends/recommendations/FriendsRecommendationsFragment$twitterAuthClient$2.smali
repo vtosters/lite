@@ -3,7 +3,7 @@
 .source "FriendsRecommendationsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/twitter/sdk/android/core/identity/h;",
         ">;"
     }
 .end annotation
@@ -55,59 +55,59 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
+.method public final invoke()Lcom/twitter/sdk/android/core/identity/h;
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/twitter/sdk/android/core/TwitterConfig$b;
+    new-instance v0, Lcom/twitter/sdk/android/core/p$b;
 
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lcom/twitter/sdk/android/core/TwitterConfig$b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/twitter/sdk/android/core/p$b;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lcom/twitter/sdk/android/core/DefaultLogger;
+    new-instance v1, Lcom/twitter/sdk/android/core/c;
 
     const/4 v2, 0x3
 
-    invoke-direct {v1, v2}, Lcom/twitter/sdk/android/core/DefaultLogger;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/twitter/sdk/android/core/c;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/TwitterConfig$b;->a(Lcom/twitter/sdk/android/core/Logger;)Lcom/twitter/sdk/android/core/TwitterConfig$b;
+    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/p$b;->a(Lcom/twitter/sdk/android/core/g;)Lcom/twitter/sdk/android/core/p$b;
 
     .line 3
     new-instance v1, Lcom/twitter/sdk/android/core/TwitterAuthConfig;
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->B0()Ljava/lang/String;
+    invoke-virtual {v2}, Lb/h/h/d/c;->B0()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/auth/api/VKAccount;->C0()Ljava/lang/String;
+    invoke-virtual {v3}, Lb/h/h/d/c;->C0()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-direct {v1, v2, v3}, Lcom/twitter/sdk/android/core/TwitterAuthConfig;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/TwitterConfig$b;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;)Lcom/twitter/sdk/android/core/TwitterConfig$b;
+    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/p$b;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;)Lcom/twitter/sdk/android/core/p$b;
 
     .line 4
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/TwitterConfig$b;->a()Lcom/twitter/sdk/android/core/TwitterConfig;
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/p$b;->a()Lcom/twitter/sdk/android/core/p;
 
     move-result-object v0
 
     .line 5
-    invoke-static {v0}, Lcom/twitter/sdk/android/core/Twitter;->b(Lcom/twitter/sdk/android/core/TwitterConfig;)V
+    invoke-static {v0}, Lcom/twitter/sdk/android/core/n;->b(Lcom/twitter/sdk/android/core/p;)V
 
     .line 6
-    new-instance v0, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
+    new-instance v0, Lcom/twitter/sdk/android/core/identity/h;
 
-    invoke-direct {v0}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;-><init>()V
+    invoke-direct {v0}, Lcom/twitter/sdk/android/core/identity/h;-><init>()V
 
     return-object v0
 .end method
@@ -116,7 +116,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$twitterAuthClient$2;->invoke()Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
+    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$twitterAuthClient$2;->invoke()Lcom/twitter/sdk/android/core/identity/h;
 
     move-result-object v0
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/orders/MarketBottomPickerDialogHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/adapter/ModalAdapter;
+    value = Lcom/vk/market/orders/MarketBottomPickerDialogHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,22 +20,22 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/vk/core/dialogs/adapter/ModalAdapter$b<",
-        "Lcom/vk/market/orders/MarketBottomPickerDialogHelper1;",
+        "Lcom/vk/market/orders/a;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions;
+.field final synthetic a:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lkotlin/jvm/b/a;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;->a:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;->a:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,31 +46,31 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;->a:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;->a:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;Lcom/vk/market/orders/MarketBottomPickerDialogHelper1;I)V
+.method public a(Landroid/view/View;Lcom/vk/market/orders/a;I)V
     .locals 0
 
     .line 2
-    invoke-virtual {p2}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper1;->a()Z
+    invoke-virtual {p2}, Lcom/vk/market/orders/a;->a()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-virtual {p2}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper1;->c()Lkotlin/jvm/b/Functions;
+    invoke-virtual {p2}, Lcom/vk/market/orders/a;->c()Lkotlin/jvm/b/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     .line 4
     invoke-direct {p0}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;->a()V
@@ -83,9 +83,9 @@
     .locals 0
 
     .line 1
-    check-cast p2, Lcom/vk/market/orders/MarketBottomPickerDialogHelper1;
+    check-cast p2, Lcom/vk/market/orders/a;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;->a(Landroid/view/View;Lcom/vk/market/orders/MarketBottomPickerDialogHelper1;I)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;->a(Landroid/view/View;Lcom/vk/market/orders/a;I)V
 
     return-void
 .end method

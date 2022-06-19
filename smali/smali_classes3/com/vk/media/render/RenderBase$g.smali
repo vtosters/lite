@@ -35,9 +35,9 @@
     invoke-interface {p1, p0}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
     .line 4
-    iget p1, p0, Lb/h/p/f/Workers1;->e:I
+    iget p1, p0, Lb/h/p/f/h;->e:I
 
-    invoke-virtual {p0, p1}, Lb/h/p/f/Workers1;->f(I)V
+    invoke-virtual {p0, p1}, Lb/h/p/f/h;->f(I)V
 
     :cond_0
     return-void

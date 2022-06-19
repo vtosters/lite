@@ -3,12 +3,12 @@
 .source "MsgSearchExtCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd;->b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;
+    value = Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd;->b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/models/messages/Msg;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $dialogsMap:Lcom/vk/im/engine/models/EntityIntMap;
+.field final synthetic $dialogsMap:Lcom/vk/im/engine/models/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/models/EntityIntMap;)V
+.method constructor <init>(Lcom/vk/im/engine/models/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$loadFromCache$3;->$dialogsMap:Lcom/vk/im/engine/models/EntityIntMap;
+    iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$loadFromCache$3;->$dialogsMap:Lcom/vk/im/engine/models/a;
 
     const/4 p1, 0x1
 
@@ -50,19 +50,19 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$loadFromCache$3;->$dialogsMap:Lcom/vk/im/engine/models/EntityIntMap;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$loadFromCache$3;->$dialogsMap:Lcom/vk/im/engine/models/a;
 
-    iget-object v0, v0, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
 
     const-string v1, "dialogsMap.cached"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/Msg;->v1()I
 
     move-result p1
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;I)Z
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;I)Z
 
     move-result p1
 

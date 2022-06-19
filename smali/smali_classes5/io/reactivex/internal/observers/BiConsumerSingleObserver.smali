@@ -3,8 +3,8 @@
 .source "BiConsumerSingleObserver.java"
 
 # interfaces
-.implements Lio/reactivex/SingleObserver;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lc/a/v;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -14,11 +14,11 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         ">;",
-        "Lio/reactivex/SingleObserver<",
+        "Lc/a/v<",
         "TT;>;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -28,10 +28,10 @@
 
 
 # instance fields
-.field final onCallback:Lio/reactivex/functions/BiConsumer;
+.field final onCallback:Lc/a/z/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/BiConsumer<",
+            "Lc/a/z/b<",
             "-TT;-",
             "Ljava/lang/Throwable;",
             ">;"
@@ -41,12 +41,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/functions/BiConsumer;)V
+.method public constructor <init>(Lc/a/z/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/functions/BiConsumer<",
+            "Lc/a/z/b<",
             "-TT;-",
             "Ljava/lang/Throwable;",
             ">;)V"
@@ -57,18 +57,18 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/observers/BiConsumerSingleObserver;->onCallback:Lio/reactivex/functions/BiConsumer;
+    iput-object p1, p0, Lio/reactivex/internal/observers/BiConsumerSingleObserver;->onCallback:Lc/a/z/b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 5
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -88,11 +88,11 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
     .line 7
-    iget-object v0, p0, Lio/reactivex/internal/observers/BiConsumerSingleObserver;->onCallback:Lio/reactivex/functions/BiConsumer;
+    iget-object v0, p0, Lio/reactivex/internal/observers/BiConsumerSingleObserver;->onCallback:Lc/a/z/b;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, p1, v1}, Lio/reactivex/functions/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, v1}, Lc/a/z/b;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -102,10 +102,10 @@
     move-exception p1
 
     .line 8
-    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 9
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -121,11 +121,11 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/observers/BiConsumerSingleObserver;->onCallback:Lio/reactivex/functions/BiConsumer;
+    iget-object v0, p0, Lio/reactivex/internal/observers/BiConsumerSingleObserver;->onCallback:Lc/a/z/b;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1, p1}, Lio/reactivex/functions/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Lc/a/z/b;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -135,7 +135,7 @@
     move-exception v0
 
     .line 3
-    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 4
     new-instance v1, Lio/reactivex/exceptions/CompositeException;
@@ -154,7 +154,7 @@
 
     invoke-direct {v1, v2}, Lio/reactivex/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    invoke-static {v1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

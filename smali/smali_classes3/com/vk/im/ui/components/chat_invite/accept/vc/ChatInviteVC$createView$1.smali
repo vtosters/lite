@@ -3,7 +3,7 @@
 .source "ChatInviteVC.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -52,13 +52,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$createView$1;->this$0:Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->b()Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->b()Lcom/vk/im/ui/components/chat_invite/accept/vc/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;->a()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/a;->a()V
 
     :cond_0
     return-void
@@ -72,7 +72,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$createView$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

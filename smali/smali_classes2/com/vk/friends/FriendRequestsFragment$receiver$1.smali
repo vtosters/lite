@@ -47,7 +47,7 @@
 
     const-string v0, "com.vkontakte.android.ACTION_FRIEND_STATUS_CHANGED"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -72,7 +72,7 @@
     .line 4
     iget-object v1, p0, Lcom/vk/friends/FriendRequestsFragment$receiver$1;->a:Lcom/vk/friends/FriendRequestsFragment;
 
-    invoke-static {v1}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/FriendRequestsAdapter;
+    invoke-static {v1}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/a;
 
     move-result-object v1
 
@@ -82,7 +82,7 @@
 
     invoke-direct {v2, v0}, Lcom/vk/friends/FriendRequestsFragment$receiver$1$onReceive$request$1;-><init>(I)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/lists/SimpleAdapter;->c(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/lists/i0;->c(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -118,13 +118,13 @@
     .line 6
     iget-object p1, p0, Lcom/vk/friends/FriendRequestsFragment$receiver$1;->a:Lcom/vk/friends/FriendRequestsFragment;
 
-    invoke-static {p1}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/FriendRequestsAdapter;
+    invoke-static {p1}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1, v0, v0}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p1, v0, v0}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;Ljava/lang/Object;)V
 
     :cond_3
     return-void

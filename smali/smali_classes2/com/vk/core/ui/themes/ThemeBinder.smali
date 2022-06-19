@@ -24,7 +24,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/core/ui/themes/ThemeTagRuleVisitor;",
+            "Lcom/vk/core/ui/themes/i;",
             ">;"
         }
     .end annotation
@@ -39,12 +39,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/ui/themes/ThemeBinder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/ui/themes/ThemeBinder$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/core/ui/themes/ThemeBinder;->d:Lcom/vk/core/ui/themes/ThemeBinder$a;
 
     .line 1
-    sget v0, Lb/h/z/R;->theme_tag_key:I
+    sget v0, Lb/h/z/g;->theme_tag_key:I
 
     sput v0, Lcom/vk/core/ui/themes/ThemeBinder;->b:I
 
@@ -288,24 +288,24 @@
     .locals 1
 
     .line 100
-    instance-of v0, p1, Lcom/vk/core/drawable/RecoloredDrawable;
+    instance-of v0, p1, Lcom/vk/core/drawable/i;
 
     if-eqz v0, :cond_0
 
     .line 101
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/core/drawable/RecoloredDrawable;
+    check-cast v0, Lcom/vk/core/drawable/i;
 
-    invoke-virtual {v0, p2}, Lcom/vk/core/drawable/RecoloredDrawable;->a(I)V
+    invoke-virtual {v0, p2}, Lcom/vk/core/drawable/i;->a(I)V
 
     return-object p1
 
     .line 102
     :cond_0
-    new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
+    new-instance v0, Lcom/vk/core/drawable/i;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     return-object v0
 .end method
@@ -339,10 +339,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/core/ui/themes/ThemeTagRuleVisitor;
+    check-cast v2, Lcom/vk/core/ui/themes/i;
 
     .line 76
-    invoke-interface {v2, v0, p1}, Lcom/vk/core/ui/themes/ThemeTagRuleVisitor;->a(Landroid/util/SparseIntArray;Landroid/util/AttributeSet;)V
+    invoke-interface {v2, v0, p1}, Lcom/vk/core/ui/themes/i;->a(Landroid/util/SparseIntArray;Landroid/util/AttributeSet;)V
 
     goto :goto_0
 
@@ -355,9 +355,9 @@
     move-result v1
 
     .line 78
-    sget-object v2, Lcom/vk/core/ui/themes/ThemeAttributes;->INSTANCE:Lcom/vk/core/ui/themes/ThemeAttributes;
+    sget-object v2, Lcom/vk/core/ui/themes/g;->b:Lcom/vk/core/ui/themes/g;
 
-    invoke-virtual {v2, v1}, Lcom/vk/core/ui/themes/ThemeAttributes;->a(I)Z
+    invoke-virtual {v2, v1}, Lcom/vk/core/ui/themes/g;->a(I)Z
 
     move-result v2
 
@@ -381,9 +381,9 @@
     move-result v2
 
     .line 81
-    sget-object v3, Lcom/vk/core/ui/themes/ThemeAttributes;->INSTANCE:Lcom/vk/core/ui/themes/ThemeAttributes;
+    sget-object v3, Lcom/vk/core/ui/themes/g;->b:Lcom/vk/core/ui/themes/g;
 
-    invoke-virtual {v3, v2}, Lcom/vk/core/ui/themes/ThemeAttributes;->a(I)Z
+    invoke-virtual {v3, v2}, Lcom/vk/core/ui/themes/g;->a(I)Z
 
     move-result v3
 
@@ -427,9 +427,9 @@
     move-result v1
 
     .line 86
-    sget-object v2, Lcom/vk/core/ui/themes/ThemeAttributes;->INSTANCE:Lcom/vk/core/ui/themes/ThemeAttributes;
+    sget-object v2, Lcom/vk/core/ui/themes/g;->b:Lcom/vk/core/ui/themes/g;
 
-    invoke-virtual {v2, v1}, Lcom/vk/core/ui/themes/ThemeAttributes;->a(I)Z
+    invoke-virtual {v2, v1}, Lcom/vk/core/ui/themes/g;->a(I)Z
 
     move-result v2
 
@@ -453,9 +453,9 @@
     move-result v2
 
     .line 89
-    sget-object v3, Lcom/vk/core/ui/themes/ThemeAttributes;->INSTANCE:Lcom/vk/core/ui/themes/ThemeAttributes;
+    sget-object v3, Lcom/vk/core/ui/themes/g;->b:Lcom/vk/core/ui/themes/g;
 
-    invoke-virtual {v3, v2}, Lcom/vk/core/ui/themes/ThemeAttributes;->a(I)Z
+    invoke-virtual {v3, v2}, Lcom/vk/core/ui/themes/g;->a(I)Z
 
     move-result v3
 
@@ -479,9 +479,9 @@
     move-result v1
 
     .line 92
-    sget-object v2, Lcom/vk/core/ui/themes/ThemeAttributes;->INSTANCE:Lcom/vk/core/ui/themes/ThemeAttributes;
+    sget-object v2, Lcom/vk/core/ui/themes/g;->b:Lcom/vk/core/ui/themes/g;
 
-    invoke-virtual {v2, v1}, Lcom/vk/core/ui/themes/ThemeAttributes;->a(I)Z
+    invoke-virtual {v2, v1}, Lcom/vk/core/ui/themes/g;->a(I)Z
 
     move-result v2
 
@@ -506,9 +506,9 @@
     move-result p1
 
     .line 95
-    sget-object v1, Lcom/vk/core/ui/themes/ThemeAttributes;->INSTANCE:Lcom/vk/core/ui/themes/ThemeAttributes;
+    sget-object v1, Lcom/vk/core/ui/themes/g;->b:Lcom/vk/core/ui/themes/g;
 
-    invoke-virtual {v1, p1}, Lcom/vk/core/ui/themes/ThemeAttributes;->a(I)Z
+    invoke-virtual {v1, p1}, Lcom/vk/core/ui/themes/g;->a(I)Z
 
     move-result v1
 
@@ -635,25 +635,25 @@
     .locals 2
 
     .line 55
-    sget v0, Lb/h/z/R5;->header_background:I
+    sget v0, Lb/h/z/b;->header_background:I
 
     const/4 v1, 0x1
 
     if-ne p2, v0, :cond_0
 
     .line 56
-    invoke-static {p1}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p1}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;)V
 
     goto :goto_0
 
     .line 57
     :cond_0
-    sget v0, Lb/h/z/R5;->header_alternate_background:I
+    sget v0, Lb/h/z/b;->header_alternate_background:I
 
     if-ne p2, v0, :cond_1
 
     .line 58
-    invoke-static {p1}, Lcom/vk/extensions/t/ToolbarExt;->b(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p1}, Lcom/vk/extensions/t/a;->b(Landroidx/appcompat/widget/Toolbar;)V
 
     goto :goto_0
 
@@ -686,7 +686,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/core/ui/themes/ThemeBinder$checkViewNeedColorize$1;-><init>(Lcom/vk/core/ui/themes/ThemeBinder;Landroid/view/View;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     .line 4
     :cond_0
@@ -720,17 +720,17 @@
     const-string v1, "if (WebViewFeature.isFea\u2026         return\n        }"
 
     .line 7
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    instance-of v1, v0, Lcom/vk/webapp/utils/WebClients;
+    instance-of v1, v0, Lcom/vk/webapp/utils/c;
 
     if-eqz v1, :cond_0
 
     .line 9
-    check-cast v0, Lcom/vk/webapp/utils/WebClients;
+    check-cast v0, Lcom/vk/webapp/utils/c;
 
-    invoke-interface {v0}, Lcom/vk/webapp/utils/WebClients;->a()I
+    invoke-interface {v0}, Lcom/vk/webapp/utils/c;->a()I
 
     move-result v0
 
@@ -871,17 +871,17 @@
 
     const-string v5, "view.getItemDecorationAt(it)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    instance-of v5, v4, Lcom/vk/core/ui/themes/Themable;
+    instance-of v5, v4, Lcom/vk/core/ui/themes/f;
 
     if-eqz v5, :cond_1
 
     .line 6
-    check-cast v4, Lcom/vk/core/ui/themes/Themable;
+    check-cast v4, Lcom/vk/core/ui/themes/f;
 
-    invoke-interface {v4}, Lcom/vk/core/ui/themes/Themable;->v()V
+    invoke-interface {v4}, Lcom/vk/core/ui/themes/f;->v()V
 
     const/4 v3, 0x1
 
@@ -916,7 +916,7 @@
     :goto_0
     const-class v1, Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -952,7 +952,7 @@
 
     const-string v1, "scrollableClass.getDeclaredField(\"mScrollCache\")"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -975,7 +975,7 @@
 
     const-string v1, "scrollCacheField.type.ge\u2026eclaredField(\"scrollBar\")"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -1001,7 +1001,7 @@
 
     const-string v4, "scrollBarField.type.getD\u2026e\", Drawable::class.java)"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
@@ -1016,7 +1016,7 @@
 
     const-string v5, "scrollBarField.type.getD\u2026edField(\"mVerticalThumb\")"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     invoke-virtual {v4, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -1041,7 +1041,7 @@
     check-cast v4, Landroid/graphics/drawable/Drawable;
 
     .line 15
-    sget v5, Lb/h/z/R5;->text_primary:I
+    sget v5, Lb/h/z/b;->text_primary:I
 
     invoke-static {v5}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -1057,7 +1057,7 @@
 
     const/4 v6, 0x2
 
-    invoke-static {v4, v5, v3, v6, v3}, Lcom/vk/core/extensions/DrawableExt;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v4, v5, v3, v6, v3}, Lcom/vk/core/extensions/f;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     .line 16
     invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1182,7 +1182,7 @@
     .locals 7
 
     .line 13
-    instance-of v0, p1, Lcom/vk/core/ui/themes/DynamicThemeIgnored;
+    instance-of v0, p1, Lcom/vk/core/ui/themes/c;
 
     if-eqz v0, :cond_0
 
@@ -1190,16 +1190,16 @@
 
     .line 14
     :cond_0
-    instance-of v0, p1, Lcom/vk/core/ui/themes/Themable;
+    instance-of v0, p1, Lcom/vk/core/ui/themes/f;
 
     if-eqz v0, :cond_1
 
     .line 15
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/core/ui/themes/Themable;
+    check-cast v0, Lcom/vk/core/ui/themes/f;
 
-    invoke-interface {v0}, Lcom/vk/core/ui/themes/Themable;->v()V
+    invoke-interface {v0}, Lcom/vk/core/ui/themes/f;->v()V
 
     .line 16
     :cond_1
@@ -1352,7 +1352,7 @@
 
     const-string v4, "view.background"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v3, v5}, Lcom/vk/core/ui/themes/ThemeBinder;->a(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
 
@@ -1385,7 +1385,7 @@
 
     const-string v4, "imageView.drawable"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v3, v5}, Lcom/vk/core/ui/themes/ThemeBinder;->a(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
 
@@ -1636,7 +1636,7 @@
     new-array v1, v1, [I
 
     .line 47
-    sget v3, Lb/h/z/R5;->activity_indicator_tint:I
+    sget v3, Lb/h/z/b;->activity_indicator_tint:I
 
     invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -1672,7 +1672,7 @@
     new-array v0, v0, [I
 
     .line 43
-    sget v1, Lb/h/z/R5;->accent:I
+    sget v1, Lb/h/z/b;->accent:I
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -1685,7 +1685,7 @@
     invoke-virtual {p1, v0}, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->setColorSchemeColors([I)V
 
     .line 44
-    sget v0, Lb/h/z/R5;->modal_card_background:I
+    sget v0, Lb/h/z/b;->modal_card_background:I
 
     invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -1694,7 +1694,7 @@
     invoke-virtual {p1, v0}, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->setProgressBackgroundColorSchemeColor(I)V
 
     .line 45
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -1715,7 +1715,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/ui/themes/ThemeTagRuleVisitor;)V
+.method public final a(Lcom/vk/core/ui/themes/i;)V
     .locals 1
 
     .line 7

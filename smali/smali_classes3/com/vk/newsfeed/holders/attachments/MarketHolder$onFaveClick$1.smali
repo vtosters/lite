@@ -3,7 +3,7 @@
 .source "MarketHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Ljava/lang/Boolean;",
-        "Lb/h/h/f/Favable;",
-        "Lkotlin/Unit;",
+        "Lb/h/h/f/a;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -57,22 +57,22 @@
 
     move-result p1
 
-    check-cast p2, Lb/h/h/f/Favable;
+    check-cast p2, Lb/h/h/f/a;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/holders/attachments/MarketHolder$onFaveClick$1;->a(ZLb/h/h/f/Favable;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/holders/attachments/MarketHolder$onFaveClick$1;->a(ZLb/h/h/f/a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public final a(ZLb/h/h/f/Favable;)V
+.method public final a(ZLb/h/h/f/a;)V
     .locals 3
 
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/MarketHolder$onFaveClick$1;->this$0:Lcom/vk/newsfeed/holders/attachments/MarketHolder;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
     iget-object v2, v0, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     :cond_1
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 

@@ -3,7 +3,7 @@
 .source "SettingsPostingView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/dto/newsfeed/PostTopic;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -52,13 +52,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$showTopicsSelectionDialog$1;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->a(Lcom/vk/dto/newsfeed/PostTopic;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/n;->a(Lcom/vk/dto/newsfeed/PostTopic;)V
 
     :cond_0
     return-void
@@ -72,7 +72,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$showTopicsSelectionDialog$1;->a(Lcom/vk/dto/newsfeed/PostTopic;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

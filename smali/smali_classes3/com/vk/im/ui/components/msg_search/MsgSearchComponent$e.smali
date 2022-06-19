@@ -3,12 +3,12 @@
 .source "MsgSearchComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/SearchMode;ILkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/SearchMode;ILkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lc/a/z/g<",
+        "Lio/reactivex/disposables/b;",
         ">;"
     }
 .end annotation
@@ -58,13 +58,13 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/Disposable;)V
+.method public final a(Lio/reactivex/disposables/b;)V
     .locals 3
 
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$e;->a:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->f(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/MsgSearchReporter;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->f(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/b;
 
     move-result-object p1
 
@@ -82,7 +82,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/MsgSearchReporter;->a(Lcom/vk/im/engine/models/Source;Lcom/vk/im/engine/models/SearchMode;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/b;->a(Lcom/vk/im/engine/models/Source;Lcom/vk/im/engine/models/SearchMode;Ljava/lang/String;)V
 
     .line 2
     iget p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$e;->d:I
@@ -137,9 +137,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/Disposable;
+    check-cast p1, Lio/reactivex/disposables/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$e;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$e;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

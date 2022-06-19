@@ -17,19 +17,19 @@
 
 
 # instance fields
-.field protected final a:Lb/h/p/f/Logger;
+.field protected final a:Lb/h/p/f/e;
 
 .field protected final b:Lcom/vk/media/render/RenderTexture;
 
 .field protected final c:[F
 
-.field protected final d:Lb/h/p/MediaUtils$b;
+.field protected final d:Lb/h/p/c$b;
 
 .field protected final e:Lcom/vk/media/render/RenderBase$e;
 
 .field protected f:[F
 
-.field protected g:Lcom/vk/media/render/RenderVideoCallback;
+.field protected g:Lcom/vk/media/render/f;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -38,7 +38,7 @@
 
 .field protected i:Lcom/vk/media/gles/EglBase;
 
-.field private j:Lcom/vk/media/gles/EglSurface$a;
+.field private j:Lcom/vk/media/gles/a$a;
 
 .field private k:Lcom/vk/media/render/RenderBase$d;
 
@@ -60,20 +60,20 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lb/h/p/f/Logger;
+    new-instance v0, Lb/h/p/f/e;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lb/h/p/f/Logger;-><init>(I)V
+    invoke-direct {v0, v1}, Lb/h/p/f/e;-><init>(I)V
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, p1, v1}, Lcom/vk/media/render/RenderBase;-><init>(Lb/h/p/f/Logger;Landroid/view/TextureView$SurfaceTextureListener;Lcom/vk/media/render/RenderTexture$b;)V
+    invoke-direct {p0, v0, p1, v1}, Lcom/vk/media/render/RenderBase;-><init>(Lb/h/p/f/e;Landroid/view/TextureView$SurfaceTextureListener;Lcom/vk/media/render/RenderTexture$b;)V
 
     return-void
 .end method
 
-.method constructor <init>(Lb/h/p/f/Logger;Landroid/view/TextureView$SurfaceTextureListener;Lcom/vk/media/render/RenderTexture$b;)V
+.method constructor <init>(Lb/h/p/f/e;Landroid/view/TextureView$SurfaceTextureListener;Lcom/vk/media/render/RenderTexture$b;)V
     .locals 2
 
     .line 2
@@ -87,11 +87,11 @@
     iput-object v0, p0, Lcom/vk/media/render/RenderBase;->c:[F
 
     .line 4
-    new-instance v0, Lb/h/p/MediaUtils$b;
+    new-instance v0, Lb/h/p/c$b;
 
-    invoke-direct {v0}, Lb/h/p/MediaUtils$b;-><init>()V
+    invoke-direct {v0}, Lb/h/p/c$b;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iput-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
     .line 5
     new-instance v0, Lcom/vk/media/render/RenderBase$e;
@@ -138,12 +138,12 @@
     iput-object v0, p0, Lcom/vk/media/render/RenderBase;->q:Ljava/lang/Runnable;
 
     .line 11
-    iput-object p1, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/Logger;
+    iput-object p1, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/e;
 
     .line 12
     new-instance v0, Lcom/vk/media/render/RenderTexture;
 
-    invoke-direct {v0, p1}, Lcom/vk/media/render/RenderTexture;-><init>(Lb/h/p/f/Logger;)V
+    invoke-direct {v0, p1}, Lcom/vk/media/render/RenderTexture;-><init>(Lb/h/p/f/e;)V
 
     iput-object v0, p0, Lcom/vk/media/render/RenderBase;->b:Lcom/vk/media/render/RenderTexture;
 
@@ -198,11 +198,11 @@
     const/4 v1, 0x0
 
     :goto_0
-    iget-object v2, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/Logger;
+    iget-object v2, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/e;
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/vk/media/gles/EglBase;-><init>(Landroid/opengl/EGLContext;ILb/h/p/f/Logger;)V
+    invoke-direct {v0, v3, v1, v2}, Lcom/vk/media/gles/EglBase;-><init>(Landroid/opengl/EGLContext;ILb/h/p/f/e;)V
 
     iput-object v0, p0, Lcom/vk/media/render/RenderBase;->i:Lcom/vk/media/gles/EglBase;
 
@@ -247,13 +247,13 @@
     .line 32
     iget-object v0, p0, Lcom/vk/media/render/RenderBase;->e:Lcom/vk/media/render/RenderBase$e;
 
-    new-instance v1, Lcom/vk/media/gles/EglSurface$b;
+    new-instance v1, Lcom/vk/media/gles/a$b;
 
     iget-object v2, p0, Lcom/vk/media/render/RenderBase;->i:Lcom/vk/media/gles/EglBase;
 
-    invoke-direct {v1, v2, p1}, Lcom/vk/media/gles/EglSurface$b;-><init>(Lcom/vk/media/gles/EglBase;Landroid/view/Surface;)V
+    invoke-direct {v1, v2, p1}, Lcom/vk/media/gles/a$b;-><init>(Lcom/vk/media/gles/EglBase;Landroid/view/Surface;)V
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/media/render/RenderBase$e;->a(Landroid/view/Surface;Lcom/vk/media/gles/EglSurface$b;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/media/render/RenderBase$e;->a(Landroid/view/Surface;Lcom/vk/media/gles/a$b;)V
 
     .line 33
     iget-object v0, p0, Lcom/vk/media/render/RenderBase;->e:Lcom/vk/media/render/RenderBase$e;
@@ -271,7 +271,7 @@
     move-exception v0
 
     .line 35
-    iget-object v1, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/Logger;
+    iget-object v1, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/e;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -293,7 +293,7 @@
 
     const-string v2, "RenderBase"
 
-    invoke-virtual {v1, v2, p1, v0}, Lb/h/p/f/Logger;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2, p1, v0}, Lb/h/p/f/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
@@ -340,11 +340,11 @@
     .locals 2
 
     .line 44
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/Logger;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/e;
 
     const-string v1, "RenderBase"
 
-    invoke-virtual {v0, v1, p1}, Lb/h/p/f/Logger;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lb/h/p/f/e;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -420,11 +420,11 @@
     const/4 v1, 0x0
 
     :goto_0
-    iget-object v2, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/Logger;
+    iget-object v2, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/e;
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/vk/media/gles/EglBase;-><init>(Landroid/opengl/EGLContext;ILb/h/p/f/Logger;)V
+    invoke-direct {v0, v3, v1, v2}, Lcom/vk/media/gles/EglBase;-><init>(Landroid/opengl/EGLContext;ILb/h/p/f/e;)V
 
     iput-object v0, p0, Lcom/vk/media/render/RenderBase;->i:Lcom/vk/media/gles/EglBase;
 
@@ -468,17 +468,17 @@
     .locals 2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
-    invoke-virtual {v0}, Lb/h/p/MediaUtils$b;->c()I
+    invoke-virtual {v0}, Lb/h/p/c$b;->c()I
 
     move-result v0
 
     if-ne p1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
-    invoke-virtual {v0}, Lb/h/p/MediaUtils$b;->a()I
+    invoke-virtual {v0}, Lb/h/p/c$b;->a()I
 
     move-result v0
 
@@ -486,14 +486,14 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
-    invoke-virtual {v0, p1}, Lb/h/p/MediaUtils$b;->b(I)V
+    invoke-virtual {v0, p1}, Lb/h/p/c$b;->b(I)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
-    invoke-virtual {v0, p2}, Lb/h/p/MediaUtils$b;->a(I)V
+    invoke-virtual {v0, p2}, Lb/h/p/c$b;->a(I)V
 
     .line 6
     new-instance v0, Ljava/lang/StringBuilder;
@@ -553,54 +553,54 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/EglSurface$a;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/a$a;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/media/gles/EglSurface$a;->c()V
+    invoke-virtual {v0}, Lcom/vk/media/gles/a$a;->c()V
 
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/EglSurface$a;
+    iput-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/a$a;
 
     .line 4
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
-    invoke-virtual {v0}, Lb/h/p/MediaUtils$b;->d()Z
+    invoke-virtual {v0}, Lb/h/p/c$b;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 5
-    new-instance v0, Lcom/vk/media/gles/EglSurface$a;
+    new-instance v0, Lcom/vk/media/gles/a$a;
 
     iget-object v1, p0, Lcom/vk/media/render/RenderBase;->i:Lcom/vk/media/gles/EglBase;
 
-    iget-object v2, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iget-object v2, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
-    invoke-virtual {v2}, Lb/h/p/MediaUtils$b;->c()I
+    invoke-virtual {v2}, Lb/h/p/c$b;->c()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iget-object v3, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
-    invoke-virtual {v3}, Lb/h/p/MediaUtils$b;->a()I
+    invoke-virtual {v3}, Lb/h/p/c$b;->a()I
 
     move-result v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/media/gles/EglSurface$a;-><init>(Lcom/vk/media/gles/EglBase;II)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/media/gles/a$a;-><init>(Lcom/vk/media/gles/EglBase;II)V
 
-    iput-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/EglSurface$a;
+    iput-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/a$a;
 
     .line 6
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/EglSurface$a;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/a$a;
 
-    invoke-virtual {v0}, Lcom/vk/media/gles/EglSurface;->a()V
+    invoke-virtual {v0}, Lcom/vk/media/gles/a;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -625,17 +625,17 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/EglSurface$a;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/a$a;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/media/gles/EglSurface$a;->c()V
+    invoke-virtual {v0}, Lcom/vk/media/gles/a$a;->c()V
 
     .line 3
-    iput-object v1, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/EglSurface$a;
+    iput-object v1, p0, Lcom/vk/media/render/RenderBase;->j:Lcom/vk/media/gles/a$a;
 
     .line 4
     :cond_0
@@ -659,7 +659,7 @@
     .locals 0
 
     .line 47
-    invoke-static {}, Lcom/vk/media/gles/EglUtils;->a()V
+    invoke-static {}, Lcom/vk/media/gles/b;->a()V
 
     return-void
 .end method
@@ -720,13 +720,13 @@
     .line 38
     iget-object v0, p0, Lcom/vk/media/render/RenderBase;->e:Lcom/vk/media/render/RenderBase$e;
 
-    new-instance v1, Lcom/vk/media/gles/EglSurface$b;
+    new-instance v1, Lcom/vk/media/gles/a$b;
 
     iget-object v2, p0, Lcom/vk/media/render/RenderBase;->i:Lcom/vk/media/gles/EglBase;
 
-    invoke-direct {v1, v2, p1}, Lcom/vk/media/gles/EglSurface$b;-><init>(Lcom/vk/media/gles/EglBase;Landroid/graphics/SurfaceTexture;)V
+    invoke-direct {v1, v2, p1}, Lcom/vk/media/gles/a$b;-><init>(Lcom/vk/media/gles/EglBase;Landroid/graphics/SurfaceTexture;)V
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/media/render/RenderBase$e;->a(Landroid/graphics/SurfaceTexture;Lcom/vk/media/gles/EglSurface$b;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/media/render/RenderBase$e;->a(Landroid/graphics/SurfaceTexture;Lcom/vk/media/gles/a$b;)V
 
     .line 39
     iget-object v0, p0, Lcom/vk/media/render/RenderBase;->e:Lcom/vk/media/render/RenderBase$e;
@@ -746,16 +746,16 @@
     move-exception v0
 
     .line 41
-    iget-object v1, p0, Lcom/vk/media/render/RenderBase;->g:Lcom/vk/media/render/RenderVideoCallback;
+    iget-object v1, p0, Lcom/vk/media/render/RenderBase;->g:Lcom/vk/media/render/f;
 
     if-eqz v1, :cond_1
 
     .line 42
-    invoke-interface {v1, v0}, Lcom/vk/media/render/RenderVideoCallback;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Lcom/vk/media/render/f;->a(Ljava/lang/Throwable;)V
 
     .line 43
     :cond_1
-    iget-object v1, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/Logger;
+    iget-object v1, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/e;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -789,7 +789,7 @@
 
     const-string p2, "RenderBase"
 
-    invoke-virtual {v1, p2, p1, v0}, Lb/h/p/f/Logger;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, p2, p1, v0}, Lb/h/p/f/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
     :goto_0
@@ -960,9 +960,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/Logger;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->a:Lb/h/p/f/e;
 
-    invoke-virtual {v0}, Lb/h/p/f/Logger;->a()I
+    invoke-virtual {v0}, Lb/h/p/f/e;->a()I
 
     move-result v0
 
@@ -1009,15 +1009,15 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
-    invoke-virtual {v0}, Lb/h/p/MediaUtils$b;->c()I
+    invoke-virtual {v0}, Lb/h/p/c$b;->c()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
+    iget-object v1, p0, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
 
-    invoke-virtual {v1}, Lb/h/p/MediaUtils$b;->a()I
+    invoke-virtual {v1}, Lb/h/p/c$b;->a()I
 
     move-result v1
 

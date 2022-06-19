@@ -168,7 +168,7 @@
 
     const-string v0, "[event_listener]"
 
-    invoke-static {v0, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return p1
 .end method
@@ -220,7 +220,7 @@
 
     const-string v1, "[event_listener]"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0

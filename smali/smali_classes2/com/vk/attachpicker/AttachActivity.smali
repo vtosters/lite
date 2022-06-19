@@ -3,11 +3,11 @@
 .source "AttachActivity.java"
 
 # interfaces
-.implements Lcom/vk/navigation/ResulterProvider;
-.implements Lcom/vk/attachpicker/SelectionContext$b;
-.implements Lcom/vk/attachpicker/AttachResulter;
+.implements Lcom/vk/navigation/u;
+.implements Lcom/vk/attachpicker/p$b;
+.implements Lcom/vk/attachpicker/j;
 .implements Lcom/vtosters/lite/fragments/location/LocationFragment$a;
-.implements Lb/h/k/IdleTaskHandler2;
+.implements Lb/h/k/b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field private final G:Lcom/vk/attachpicker/SelectionContext;
+.field private final G:Lcom/vk/attachpicker/p;
 
 .field private H:I
 
@@ -31,7 +31,7 @@
 
 .field private L:Landroid/view/View;
 
-.field private M:Lcom/vk/attachpicker/adapter/TabsAdapter;
+.field private M:Lcom/vk/attachpicker/adapter/f;
 
 .field private N:Lcom/vk/attachpicker/widget/ToolbarContainer;
 
@@ -117,7 +117,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/navigation/ActivityResulter;",
+            "Lcom/vk/navigation/c;",
             ">;"
         }
     .end annotation
@@ -131,10 +131,10 @@
 
 .field private final v0:Landroid/view/View$OnClickListener;
 
-.field private final w0:Lb/h/g/l/NotificationListener;
+.field private final w0:Lb/h/g/l/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/NotificationListener<",
+            "Lb/h/g/l/e<",
             "Ljava/lang/Void;",
             ">;"
         }
@@ -152,11 +152,11 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/attachpicker/SelectionContext;
+    new-instance v0, Lcom/vk/attachpicker/p;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/SelectionContext;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/p;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iput-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
     const/4 v0, 0x0
 
@@ -216,7 +216,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/g;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->w0:Lb/h/g/l/NotificationListener;
+    iput-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->w0:Lb/h/g/l/e;
 
     .line 13
     new-instance v0, Lcom/vk/attachpicker/AttachActivity$m;
@@ -255,7 +255,7 @@
     :cond_0
     iget-object v2, p0, Lcom/vk/attachpicker/AttachActivity;->V:Lcom/vk/attachpicker/AttachActivity$v;
 
-    invoke-virtual {v2, v0}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->a(I)Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v2, v0}, Lcom/vk/core/fragments/h;->a(I)Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 
@@ -287,7 +287,7 @@
     if-eqz v1, :cond_0
 
     .line 3
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v2, 0x7f080a38
 
@@ -297,13 +297,13 @@
 
     invoke-direct {v4, p0}, Lcom/vk/attachpicker/AttachActivity$a;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(IILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/attachpicker/adapter/f$b;-><init>(IILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 4
     :cond_0
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v2, 0x7f120aba
 
@@ -313,12 +313,12 @@
 
     const v4, 0x7f0808e0
 
-    invoke-direct {v1, v4, v2, v3}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(IILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v4, v2, v3}, Lcom/vk/attachpicker/adapter/f$b;-><init>(IILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 5
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v2, 0x7f0808f4
 
@@ -328,7 +328,7 @@
 
     invoke-direct {v5, p0}, Lcom/vk/attachpicker/AttachActivity$c;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v2, v3, v5}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(IILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v2, v3, v5}, Lcom/vk/attachpicker/adapter/f$b;-><init>(IILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -338,7 +338,7 @@
     if-eqz v1, :cond_1
 
     .line 7
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v2, 0x7f0808c7
 
@@ -348,7 +348,7 @@
 
     invoke-direct {v5, p0}, Lcom/vk/attachpicker/AttachActivity$d;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v2, v3, v5}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(IILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v2, v3, v5}, Lcom/vk/attachpicker/adapter/f$b;-><init>(IILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -365,7 +365,7 @@
     if-eqz v1, :cond_2
 
     .line 9
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v3, 0x7f0802eb
 
@@ -375,7 +375,7 @@
 
     invoke-direct {v6, p0}, Lcom/vk/attachpicker/AttachActivity$e;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v2, v3, v5, v6}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(ZIILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v2, v3, v5, v6}, Lcom/vk/attachpicker/adapter/f$b;-><init>(ZIILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -386,7 +386,7 @@
     if-eqz v1, :cond_3
 
     .line 11
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v3, 0x7f0808e4
 
@@ -396,19 +396,19 @@
 
     invoke-direct {v6, p0}, Lcom/vk/attachpicker/AttachActivity$f;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v2, v3, v5, v6}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(ZIILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v2, v3, v5, v6}, Lcom/vk/attachpicker/adapter/f$b;-><init>(ZIILcom/vk/common/g/a;)V
 
     const/4 v3, 0x0
 
     .line 12
-    iput-boolean v3, v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;->e:Z
+    iput-boolean v3, v1, Lcom/vk/attachpicker/adapter/f$b;->e:Z
 
     .line 13
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 14
     :cond_3
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v3, 0x7f0802b5
 
@@ -418,7 +418,7 @@
 
     invoke-direct {v6, p0}, Lcom/vk/attachpicker/AttachActivity$g;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v2, v3, v5, v6}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(ZIILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v2, v3, v5, v6}, Lcom/vk/attachpicker/adapter/f$b;-><init>(ZIILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -428,7 +428,7 @@
     if-eqz v1, :cond_4
 
     .line 16
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v2, 0x7f0809b0
 
@@ -438,7 +438,7 @@
 
     invoke-direct {v5, p0}, Lcom/vk/attachpicker/AttachActivity$h;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v2, v3, v5}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(IILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v2, v3, v5}, Lcom/vk/attachpicker/adapter/f$b;-><init>(IILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -449,7 +449,7 @@
     if-eqz v1, :cond_5
 
     .line 18
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v2, 0x7f080231
 
@@ -459,13 +459,13 @@
 
     invoke-direct {v5, p0}, Lcom/vk/attachpicker/AttachActivity$i;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v2, v3, v5}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(IILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v2, v3, v5}, Lcom/vk/attachpicker/adapter/f$b;-><init>(IILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 19
     :cond_5
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v2, 0x7f120abc
 
@@ -473,12 +473,12 @@
 
     invoke-direct {v3, p0}, Lcom/vk/attachpicker/AttachActivity$j;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v4, v2, v3}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(IILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v4, v2, v3}, Lcom/vk/attachpicker/adapter/f$b;-><init>(IILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 20
-    new-instance v1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    new-instance v1, Lcom/vk/attachpicker/adapter/f$b;
 
     const v2, 0x7f080a65
 
@@ -488,14 +488,14 @@
 
     invoke-direct {v4, p0}, Lcom/vk/attachpicker/AttachActivity$l;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/attachpicker/adapter/TabsAdapter$b;-><init>(IILcom/vk/common/g/F0;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/attachpicker/adapter/f$b;-><init>(IILcom/vk/common/g/a;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 21
-    iget-object v1, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/TabsAdapter;
+    iget-object v1, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/f;
 
-    invoke-virtual {v1, v0}, Lcom/vk/attachpicker/adapter/TabsAdapter;->b(Ljava/util/ArrayList;)V
+    invoke-virtual {v1, v0}, Lcom/vk/attachpicker/adapter/f;->b(Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -510,7 +510,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/Window;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroid/view/Window;I)V
 
     const v0, 0x7f0d0433
 
@@ -680,24 +680,24 @@
     invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 21
-    new-instance v0, Lcom/vk/attachpicker/adapter/TabsAdapter;
+    new-instance v0, Lcom/vk/attachpicker/adapter/f;
 
     new-instance v2, Lcom/vk/attachpicker/AttachActivity$p;
 
     invoke-direct {v2, p0}, Lcom/vk/attachpicker/AttachActivity$p;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-direct {v0, v2}, Lcom/vk/attachpicker/adapter/TabsAdapter;-><init>(Lcom/vk/attachpicker/adapter/TabsAdapter$a;)V
+    invoke-direct {v0, v2}, Lcom/vk/attachpicker/adapter/f;-><init>(Lcom/vk/attachpicker/adapter/f$a;)V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/TabsAdapter;
+    iput-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/f;
 
     .line 22
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/TabsAdapter;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/f;
 
     new-instance v2, Lcom/vk/attachpicker/AttachActivity$q;
 
     invoke-direct {v2, p0}, Lcom/vk/attachpicker/AttachActivity$q;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/adapter/OnItemClickAdapter;->a(Lcom/vk/attachpicker/widget/OnItemClickListener;)V
+    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/adapter/d;->a(Lcom/vk/attachpicker/widget/l;)V
 
     .line 23
     invoke-direct {p0}, Lcom/vk/attachpicker/AttachActivity;->B1()V
@@ -705,7 +705,7 @@
     .line 24
     iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->J:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v2, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/TabsAdapter;
+    iget-object v2, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/f;
 
     invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -829,7 +829,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/attachpicker/d;-><init>(Lcom/vk/attachpicker/AttachActivity;)V
 
-    invoke-static {v0, v1}, Lcom/vk/attachpicker/util/Utils;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {v0, v1}, Lcom/vk/attachpicker/util/f;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -907,10 +907,10 @@
 
     if-eq v0, v1, :cond_1
 
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/TabsAdapter;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/f;
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/TabsAdapter;->j()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/f;->j()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -924,9 +924,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
+    check-cast v0, Lcom/vk/attachpicker/adapter/f$b;
 
-    iget-boolean v0, v0, Lcom/vk/attachpicker/adapter/TabsAdapter$b;->d:Z
+    iget-boolean v0, v0, Lcom/vk/attachpicker/adapter/f$b;->d:Z
 
     if-eqz v0, :cond_0
 
@@ -980,13 +980,13 @@
     move-result v2
 
     .line 4
-    check-cast v1, Lcom/vk/attachpicker/widget/TabView;
+    check-cast v1, Lcom/vk/attachpicker/widget/o;
 
     iget v3, p0, Lcom/vk/attachpicker/AttachActivity;->W:I
 
     iget v4, p0, Lcom/vk/attachpicker/AttachActivity;->X:F
 
-    invoke-virtual {v1, v2, v3, v4}, Lcom/vk/attachpicker/widget/TabView;->a(IIF)V
+    invoke-virtual {v1, v2, v3, v4}, Lcom/vk/attachpicker/widget/o;->a(IIF)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1000,9 +1000,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->g()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->g()I
 
     move-result v0
 
@@ -1013,9 +1013,9 @@
     .line 2
     iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->S:Lcom/vk/attachpicker/widget/AttachCounterView;
 
-    iget-object v2, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v2, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
-    invoke-virtual {v2}, Lcom/vk/attachpicker/SelectionContext;->g()I
+    invoke-virtual {v2}, Lcom/vk/attachpicker/p;->g()I
 
     move-result v2
 
@@ -1031,9 +1031,9 @@
 
     .line 4
     :goto_0
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->g()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->g()I
 
     move-result v0
 
@@ -1241,11 +1241,11 @@
     return p1
 .end method
 
-.method static synthetic b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/SelectionContext;
+.method static synthetic b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/p;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object p0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
     return-object p0
 .end method
@@ -1469,7 +1469,7 @@
     .line 17
     iget v2, p0, Lcom/vk/attachpicker/AttachActivity;->I:I
 
-    invoke-static {v2, v0, v1}, Lcom/vk/attachpicker/util/Utils;->b(IIF)I
+    invoke-static {v2, v0, v1}, Lcom/vk/attachpicker/util/f;->b(IIF)I
 
     move-result v0
 
@@ -1483,7 +1483,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/Window;I)V
+    invoke-static {v1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/Window;I)V
 
     .line 20
     :goto_3
@@ -1494,14 +1494,14 @@
     move-result-object v0
 
     .line 21
-    instance-of v1, v0, Lcom/vtosters/lite/fragments/location/SlideOffsetNotify;
+    instance-of v1, v0, Lcom/vtosters/lite/fragments/location/c;
 
     if-eqz v1, :cond_5
 
     .line 22
-    check-cast v0, Lcom/vtosters/lite/fragments/location/SlideOffsetNotify;
+    check-cast v0, Lcom/vtosters/lite/fragments/location/c;
 
-    invoke-interface {v0, p1}, Lcom/vtosters/lite/fragments/location/SlideOffsetNotify;->a(F)V
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/fragments/location/c;->a(F)V
 
     :cond_5
     return-void
@@ -1539,11 +1539,11 @@
     return-void
 .end method
 
-.method static synthetic f(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/adapter/TabsAdapter;
+.method static synthetic f(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/adapter/f;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/TabsAdapter;
+    iget-object p0, p0, Lcom/vk/attachpicker/AttachActivity;->M:Lcom/vk/attachpicker/adapter/f;
 
     return-object p0
 .end method
@@ -1900,7 +1900,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/navigation/ActivityResulter;)V
+.method public a(Lcom/vk/navigation/c;)V
     .locals 1
 
     .line 21
@@ -1915,7 +1915,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/ActivityResulter;)V
+.method public b(Lcom/vk/navigation/c;)V
     .locals 1
 
     .line 4
@@ -2005,10 +2005,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/ActivityResulter;
+    check-cast v1, Lcom/vk/navigation/c;
 
     .line 4
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/ActivityResulter;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/c;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -2026,18 +2026,18 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->g()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->g()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->a()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->a()V
 
     goto :goto_0
 
@@ -2091,7 +2091,7 @@
 
     .line 2
     :goto_0
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v1
 
@@ -2125,7 +2125,7 @@
     invoke-virtual {p0, p1, p1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
     .line 7
-    invoke-static {p0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/vk/core/util/l0;->a(Landroid/app/Activity;)V
 
     const v0, 0x7f0601c6
 
@@ -2150,7 +2150,7 @@
     iput v0, p0, Lcom/vk/attachpicker/AttachActivity;->H:I
 
     .line 10
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -2164,14 +2164,14 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/SelectionContext;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/p;->a(I)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
     iget v1, p0, Lcom/vk/attachpicker/AttachActivity;->H:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/SelectionContext;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/p;->b(I)V
 
     .line 12
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -2423,13 +2423,13 @@
     invoke-direct {p0, p1, p1}, Lcom/vk/attachpicker/AttachActivity;->a(ZZ)V
 
     .line 35
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->w0:Lb/h/g/l/NotificationListener;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->w0:Lb/h/g/l/e;
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
 
     .line 36
     invoke-static {p0}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroidx/localbroadcastmanager/content/LocalBroadcastManager;
@@ -2447,11 +2447,11 @@
     invoke-virtual {p1, v0, v1}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
     .line 37
-    new-instance p1, Lb/h/k/IdleTaskHandler;
+    new-instance p1, Lb/h/k/a;
 
     const-wide/16 v0, 0x190
 
-    invoke-direct {p1, v0, v1}, Lb/h/k/IdleTaskHandler;-><init>(J)V
+    invoke-direct {p1, v0, v1}, Lb/h/k/a;-><init>(J)V
 
     new-instance v0, Lcom/vk/attachpicker/f;
 
@@ -2459,18 +2459,18 @@
 
     const-wide/16 v1, 0x64
 
-    invoke-virtual {p1, v0, v1, v2}, Lb/h/k/IdleTaskHandler;->a(Ljava/lang/Runnable;J)V
+    invoke-virtual {p1, v0, v1, v2}, Lb/h/k/a;->a(Ljava/lang/Runnable;J)V
 
     .line 38
-    invoke-static {}, Lcom/vk/attachpicker/util/PickerStickers;->p()V
+    invoke-static {}, Lcom/vk/attachpicker/util/d;->p()V
 
     .line 39
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(Landroid/app/Activity;)V
 
     .line 40
-    sget-object p1, Lb/h/k/IdleTaskHandler;->f:Lb/h/k/IdleTaskHandler$a;
+    sget-object p1, Lb/h/k/a;->f:Lb/h/k/a$a;
 
-    invoke-virtual {p1, p0}, Lb/h/k/IdleTaskHandler$a;->a(Lb/h/k/IdleTaskHandler2;)Z
+    invoke-virtual {p1, p0}, Lb/h/k/a$a;->a(Lb/h/k/b;)Z
 
     return-void
 .end method
@@ -2491,13 +2491,13 @@
     invoke-virtual {v0, v1}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 3
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/attachpicker/AttachActivity;->w0:Lb/h/g/l/NotificationListener;
+    iget-object v1, p0, Lcom/vk/attachpicker/AttachActivity;->w0:Lb/h/g/l/e;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->s0:Landroid/content/BroadcastReceiver;
@@ -2510,9 +2510,9 @@
     invoke-virtual {p0, v0}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 6
-    sget-object v0, Lb/h/k/IdleTaskHandler;->f:Lb/h/k/IdleTaskHandler$a;
+    sget-object v0, Lb/h/k/a;->f:Lb/h/k/a$a;
 
-    invoke-virtual {v0, p0}, Lb/h/k/IdleTaskHandler$a;->b(Lb/h/k/IdleTaskHandler2;)Z
+    invoke-virtual {v0, p0}, Lb/h/k/a$a;->b(Lb/h/k/b;)Z
 
     return-void
 .end method
@@ -2590,11 +2590,11 @@
     return v0
 .end method
 
-.method public t()Lcom/vk/attachpicker/SelectionContext;
+.method public t()Lcom/vk/attachpicker/p;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->G:Lcom/vk/attachpicker/p;
 
     return-object v0
 .end method

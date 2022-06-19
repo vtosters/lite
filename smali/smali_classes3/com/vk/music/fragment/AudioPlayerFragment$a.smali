@@ -73,9 +73,9 @@
     .line 2
     iget-object p3, p0, Lcom/vk/music/fragment/AudioPlayerFragment$a;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object p3, p3, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
+    iget-object p3, p3, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
 
-    invoke-virtual {p3}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->getCount()I
+    invoke-virtual {p3}, Lcom/vk/music/view/v/a;->getCount()I
 
     move-result p3
 
@@ -182,14 +182,14 @@
     :cond_2
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$a;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
+    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
 
-    iget-object p1, p1, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->E:Lcom/vk/music/view/x/PlaylistHolder;
+    iget-object p1, p1, Lcom/vk/music/view/v/a;->E:Lcom/vk/music/view/x/s;
 
     if-eqz p1, :cond_3
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/music/view/x/PlaylistHolder;->h0()V
+    invoke-virtual {p1}, Lcom/vk/music/view/x/s;->h0()V
 
     :cond_3
     return-void

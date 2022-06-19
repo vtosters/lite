@@ -44,7 +44,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
 
     return-void
 .end method

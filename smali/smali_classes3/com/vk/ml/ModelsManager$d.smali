@@ -3,12 +3,12 @@
 .source "ModelsManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/BiFunction;
+.implements Lc/a/z/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/MLModelDto1;Lkotlin/jvm/b/Functions;I)V
+    value = Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/b;Lkotlin/jvm/b/a;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/BiFunction<",
+        "Lc/a/z/c<",
         "Ljava/io/File;",
         "Ljava/io/File;",
         "Lkotlin/Pair<",

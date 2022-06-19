@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/utils/TimeChangeReceiver;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/im/ui/utils/TimeChangeReceiver;-><init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,11 +43,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/utils/TimeChangeReceiver$receiver$1;->a:Lcom/vk/im/ui/utils/TimeChangeReceiver;
 
-    invoke-static {p1}, Lcom/vk/im/ui/utils/TimeChangeReceiver;->a(Lcom/vk/im/ui/utils/TimeChangeReceiver;)Lkotlin/jvm/b/Functions;
+    invoke-static {p1}, Lcom/vk/im/ui/utils/TimeChangeReceiver;->a(Lcom/vk/im/ui/utils/TimeChangeReceiver;)Lkotlin/jvm/b/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

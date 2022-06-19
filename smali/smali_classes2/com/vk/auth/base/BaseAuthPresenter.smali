@@ -3,7 +3,7 @@
 .source "BaseAuthPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/auth/base/AuthPresenter;
+.implements Lcom/vk/auth/base/a;
 
 
 # annotations
@@ -17,17 +17,17 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<V::",
-        "Lcom/vk/auth/base/AuthView;",
+        "Lcom/vk/auth/base/b;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/auth/base/AuthPresenter<",
+        "Lcom/vk/auth/base/a<",
         "TV;>;"
     }
 .end annotation
 
 
 # instance fields
-.field private b:Lcom/vk/auth/base/AuthView;
+.field private b:Lcom/vk/auth/base/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TV;"
@@ -37,33 +37,33 @@
 
 .field protected c:Landroid/content/Context;
 
-.field protected d:Lcom/vk/auth/main/AuthModel;
+.field protected d:Lcom/vk/auth/main/f;
 
-.field protected e:Lcom/vk/auth/main/AuthRouter;
+.field protected e:Lcom/vk/auth/main/g;
 
 .field protected f:Lcom/vk/auth/main/AuthStatSender;
 
-.field protected g:Lcom/vk/auth/main/UsersStore;
+.field protected g:Lcom/vk/auth/main/x;
 
-.field protected h:Lcom/vk/auth/main/TrustedHashProvider;
+.field protected h:Lcom/vk/auth/main/v;
 
-.field protected i:Lcom/vk/auth/main/AuthStateTransformer;
+.field protected i:Lcom/vk/auth/main/h;
 
-.field protected j:Lcom/vk/auth/t/CredentialsManager;
+.field protected j:Lcom/vk/auth/t/b;
 
-.field private k:Lcom/vk/auth/main/LibverifyControllerProvider1;
+.field private k:Lcom/vk/auth/main/n;
 
-.field protected l:Lcom/vk/auth/main/SignUpModel;
+.field protected l:Lcom/vk/auth/main/s;
 
-.field protected m:Lcom/vk/auth/main/SignUpRouter;
+.field protected m:Lcom/vk/auth/main/t;
 
-.field protected n:Lcom/vk/auth/main/SignUpStrategy;
+.field protected n:Lcom/vk/auth/main/u;
 
 .field protected o:Lcom/vk/auth/main/SignUpDataHolder;
 
-.field protected p:Lio/reactivex/disposables/CompositeDisposable;
+.field protected p:Lio/reactivex/disposables/a;
 
-.field private q:Lio/reactivex/disposables/CompositeDisposable;
+.field private q:Lio/reactivex/disposables/a;
 
 .field private r:I
 
@@ -78,11 +78,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance v0, Lio/reactivex/disposables/a;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/a;
 
     .line 3
     invoke-direct {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->x()V
@@ -90,7 +90,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/auth/base/BaseAuthPresenter;Lio/reactivex/Observable;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/auth/base/BaseAuthPresenter;Lc/a/m;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p4, :cond_1
@@ -105,7 +105,7 @@
     invoke-direct {p2, p0}, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;)V
 
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lio/reactivex/Observable;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lc/a/m;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
 
     return-void
 
@@ -139,37 +139,37 @@
     if-eqz p3, :cond_1
 
     .line 104
-    iget-object p3, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/SignUpRouter;
+    iget-object p3, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/t;
 
     if-eqz p3, :cond_0
 
-    invoke-interface {p3, p1, p2}, Lcom/vk/auth/main/SignUpRouter;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p3, p1, p2}, Lcom/vk/auth/main/t;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 105
     :cond_1
-    iget-object p3, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/SignUpRouter;
+    iget-object p3, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/t;
 
     if-eqz p3, :cond_2
 
-    invoke-interface {p3, p1, p2}, Lcom/vk/auth/main/SignUpRouter;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p3, p1, p2}, Lcom/vk/auth/main/t;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method private final b(Lcom/vk/auth/api/models/AuthAnswer;)Ljava/lang/String;
+.method private final b(Lcom/vk/auth/api/models/a;)Ljava/lang/String;
     .locals 2
 
     const/4 v0, 0x0
@@ -177,7 +177,7 @@
     if-eqz p1, :cond_0
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/auth/api/models/AuthAnswer;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/auth/api/models/a;->f()Ljava/lang/String;
 
     move-result-object p1
 
@@ -210,7 +210,7 @@
 
     if-eqz p1, :cond_2
 
-    sget p1, Lcom/vk/auth/r/R;->vk_auth_sign_up_flood:I
+    sget p1, Lcom/vk/auth/r/g;->vk_auth_sign_up_flood:I
 
     invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -252,7 +252,7 @@
     if-eqz p1, :cond_2
 
     :goto_1
-    sget p1, Lcom/vk/auth/r/R;->vk_auth_wrong_code:I
+    sget p1, Lcom/vk/auth/r/g;->vk_auth_wrong_code:I
 
     invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -271,7 +271,7 @@
     if-eqz p1, :cond_2
 
     :goto_2
-    sget p1, Lcom/vk/auth/r/R;->vk_auth_external_email_used:I
+    sget p1, Lcom/vk/auth/r/g;->vk_auth_external_email_used:I
 
     invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -297,36 +297,36 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->a()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->a()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->c:Landroid/content/Context;
 
     .line 2
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->b()Lcom/vk/auth/main/AuthModel;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->b()Lcom/vk/auth/main/f;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->d:Lcom/vk/auth/main/AuthModel;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->d:Lcom/vk/auth/main/f;
 
     .line 3
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->c()Lcom/vk/auth/main/AuthRouter;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->c()Lcom/vk/auth/main/g;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->e:Lcom/vk/auth/main/AuthRouter;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->e:Lcom/vk/auth/main/g;
 
     .line 4
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->d()Lcom/vk/auth/main/AuthStatSender;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->d()Lcom/vk/auth/main/AuthStatSender;
 
     move-result-object v0
 
@@ -345,9 +345,9 @@
     iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->f:Lcom/vk/auth/main/AuthStatSender;
 
     .line 5
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->o()Lcom/vk/auth/main/UsersStore;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->o()Lcom/vk/auth/main/x;
 
     move-result-object v0
 
@@ -356,19 +356,19 @@
     goto :goto_1
 
     :cond_1
-    sget-object v0, Lcom/vk/auth/main/UsersStore;->a:Lcom/vk/auth/main/UsersStore$a;
+    sget-object v0, Lcom/vk/auth/main/x;->a:Lcom/vk/auth/main/x$a;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/UsersStore$a;->a()Lcom/vk/auth/main/UsersStore;
+    invoke-virtual {v0}, Lcom/vk/auth/main/x$a;->a()Lcom/vk/auth/main/x;
 
     move-result-object v0
 
     :goto_1
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->g:Lcom/vk/auth/main/UsersStore;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->g:Lcom/vk/auth/main/x;
 
     .line 6
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->n()Lcom/vk/auth/main/TrustedHashProvider;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->n()Lcom/vk/auth/main/v;
 
     move-result-object v0
 
@@ -377,28 +377,28 @@
     goto :goto_2
 
     :cond_2
-    sget-object v0, Lcom/vk/auth/main/TrustedHashProvider;->a:Lcom/vk/auth/main/TrustedHashProvider$a;
+    sget-object v0, Lcom/vk/auth/main/v;->a:Lcom/vk/auth/main/v$a;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/TrustedHashProvider$a;->a()Lcom/vk/auth/main/TrustedHashProvider;
+    invoke-virtual {v0}, Lcom/vk/auth/main/v$a;->a()Lcom/vk/auth/main/v;
 
     move-result-object v0
 
     :goto_2
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->h:Lcom/vk/auth/main/TrustedHashProvider;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->h:Lcom/vk/auth/main/v;
 
     .line 7
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->e()Lcom/vk/auth/main/AuthStateTransformer;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->e()Lcom/vk/auth/main/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->i:Lcom/vk/auth/main/AuthStateTransformer;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->i:Lcom/vk/auth/main/h;
 
     .line 8
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->h()Lcom/vk/auth/t/CredentialsManager;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->h()Lcom/vk/auth/t/b;
 
     move-result-object v0
 
@@ -407,55 +407,55 @@
     goto :goto_3
 
     :cond_3
-    sget-object v0, Lcom/vk/auth/t/CredentialsManager;->a:Lcom/vk/auth/t/CredentialsManager$a;
+    sget-object v0, Lcom/vk/auth/t/b;->a:Lcom/vk/auth/t/b$a;
 
-    invoke-virtual {v0}, Lcom/vk/auth/t/CredentialsManager$a;->a()Lcom/vk/auth/t/CredentialsManager;
+    invoke-virtual {v0}, Lcom/vk/auth/t/b$a;->a()Lcom/vk/auth/t/b;
 
     move-result-object v0
 
     :goto_3
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->j:Lcom/vk/auth/t/CredentialsManager;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->j:Lcom/vk/auth/t/b;
 
     .line 9
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->i()Lcom/vk/auth/main/LibverifyControllerProvider1;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->i()Lcom/vk/auth/main/n;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->k:Lcom/vk/auth/main/LibverifyControllerProvider1;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->k:Lcom/vk/auth/main/n;
 
     .line 10
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->k()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->k()Lcom/vk/auth/main/s;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/SignUpModel;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/s;
 
     .line 11
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->l()Lcom/vk/auth/main/SignUpRouter;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->l()Lcom/vk/auth/main/t;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/SignUpRouter;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/t;
 
     .line 12
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->m()Lcom/vk/auth/main/SignUpStrategy;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->m()Lcom/vk/auth/main/u;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->n:Lcom/vk/auth/main/SignUpStrategy;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->n:Lcom/vk/auth/main/u;
 
     .line 13
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->j()Lcom/vk/auth/main/SignUpDataHolder;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->j()Lcom/vk/auth/main/SignUpDataHolder;
 
     move-result-object v0
 
@@ -484,14 +484,14 @@
 
     const-string v0, "appContext.getString(stringRes)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     :cond_0
     const-string p1, "appContext"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -513,12 +513,12 @@
     return-void
 .end method
 
-.method protected final a(Lio/reactivex/Observable;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
+.method protected final a(Lc/a/m;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/auth/api/models/AuthResult;",
             ">;",
             "Lcom/vk/auth/base/BaseAuthPresenter<",
@@ -531,7 +531,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/base/BaseAuthPresenter$f;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -540,7 +540,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/base/BaseAuthPresenter$g;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -549,15 +549,15 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/base/BaseAuthPresenter$h;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/a;)Lc/a/m;
 
     move-result-object p1
 
     .line 44
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Observer;)V
+    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/r;)V
 
     .line 45
-    invoke-virtual {p0, p2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p0, p2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -570,16 +570,16 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p0}, Lcom/vk/auth/base/AuthPresenter;->a()Lcom/vk/auth/main/AuthStatSender$Screen;
+    invoke-interface {p0}, Lcom/vk/auth/base/a;->a()Lcom/vk/auth/main/AuthStatSender$Screen;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lcom/vk/auth/main/AuthStatSender;->d(Lcom/vk/auth/main/AuthStatSender$Screen;)V
 
     .line 48
-    sget-object v0, Lcom/vk/auth/main/AuthCallbackAdapter;->INSTANCE:Lcom/vk/auth/main/AuthCallbackAdapter;
+    sget-object v0, Lcom/vk/auth/main/c;->b:Lcom/vk/auth/main/c;
 
-    invoke-virtual {v0, p1}, Lcom/vk/auth/main/AuthCallbackAdapter;->a(Lcom/vk/auth/api/models/AuthResult;)V
+    invoke-virtual {v0, p1}, Lcom/vk/auth/main/c;->a(Lcom/vk/auth/api/models/AuthResult;)V
 
     return-void
 
@@ -587,34 +587,34 @@
     const-string p1, "statSender"
 
     .line 49
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method protected a(Lcom/vk/auth/api/models/AuthAnswer;)V
+.method protected a(Lcom/vk/auth/api/models/a;)V
     .locals 1
 
     .line 103
-    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz p1, :cond_0
 
-    sget v0, Lcom/vk/auth/r/R;->vk_auth_sign_up_invalid_session:I
+    sget v0, Lcom/vk/auth/r/g;->vk_auth_sign_up_invalid_session:I
 
     invoke-virtual {p0, v0}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/auth/base/AuthView;)V
+.method public a(Lcom/vk/auth/base/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -626,14 +626,14 @@
     invoke-direct {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->x()V
 
     .line 17
-    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance v0, Lio/reactivex/disposables/a;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/a;
 
     .line 18
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     return-void
 .end method
@@ -677,25 +677,25 @@
     if-eqz v4, :cond_3
 
     .line 27
-    iget-object v5, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/SignUpModel;
+    iget-object v5, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/s;
 
     const-string v6, "signUpModel"
 
     if-eqz v5, :cond_2
 
-    invoke-interface {v5}, Lcom/vk/auth/main/AuthModel;->c()I
+    invoke-interface {v5}, Lcom/vk/auth/main/f;->c()I
 
     move-result v5
 
-    iget-object v7, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/SignUpModel;
+    iget-object v7, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/s;
 
     if-eqz v7, :cond_1
 
-    invoke-interface {v7}, Lcom/vk/auth/main/AuthModel;->b()Ljava/lang/String;
+    invoke-interface {v7}, Lcom/vk/auth/main/f;->b()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {p1, v5, v7}, Lcom/vk/auth/main/SignUpDataHolder;->a(ILjava/lang/String;)Lcom/vk/auth/api/commands/SignUpCommand;
+    invoke-virtual {p1, v5, v7}, Lcom/vk/auth/main/SignUpDataHolder;->a(ILjava/lang/String;)Lcom/vk/auth/api/commands/i;
 
     move-result-object p1
 
@@ -705,11 +705,11 @@
     invoke-direct {v5, p0, v0, v4}, Lcom/vk/auth/base/BaseAuthPresenter$a;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 29
-    iget-object v4, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/SignUpModel;
+    iget-object v4, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/s;
 
     if-eqz v4, :cond_0
 
-    invoke-interface {v4, p1}, Lcom/vk/auth/main/SignUpModel;->a(Lcom/vk/auth/api/commands/SignUpCommand;)Lio/reactivex/Observable;
+    invoke-interface {v4, p1}, Lcom/vk/auth/main/s;->a(Lcom/vk/auth/api/commands/i;)Lc/a/m;
 
     move-result-object p1
 
@@ -718,7 +718,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/auth/base/BaseAuthPresenter$b;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;)V
 
-    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -727,7 +727,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/auth/base/BaseAuthPresenter$c;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;)V
 
-    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v1}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -736,7 +736,7 @@
 
     invoke-direct {v1, p0, v0, v2}, Lcom/vk/auth/base/BaseAuthPresenter$d;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
@@ -745,45 +745,45 @@
 
     invoke-direct {v0, p0, v3}, Lcom/vk/auth/base/BaseAuthPresenter$e;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;Landroid/net/Uri;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
     const-string v0, "signUpModel.signUp(signU\u2026      }\n                }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 34
-    invoke-virtual {p0, p1, v5}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lio/reactivex/Observable;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
+    invoke-virtual {p0, p1, v5}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lc/a/m;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
 
     return-void
 
     .line 35
     :cond_0
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 36
     :cond_1
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_2
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 37
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 38
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -792,7 +792,7 @@
     .locals 7
 
     .line 20
-    sget-object v0, Lcom/vk/auth/AuthHelper;->INSTANCE:Lcom/vk/auth/AuthHelper;
+    sget-object v0, Lcom/vk/auth/b;->a:Lcom/vk/auth/b;
 
     iget-object v1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->c:Landroid/content/Context;
 
@@ -800,19 +800,19 @@
 
     if-eqz v1, :cond_4
 
-    iget-object v3, p0, Lcom/vk/auth/base/BaseAuthPresenter;->d:Lcom/vk/auth/main/AuthModel;
+    iget-object v3, p0, Lcom/vk/auth/base/BaseAuthPresenter;->d:Lcom/vk/auth/main/f;
 
     if-eqz v3, :cond_3
 
-    iget-object v4, p0, Lcom/vk/auth/base/BaseAuthPresenter;->g:Lcom/vk/auth/main/UsersStore;
+    iget-object v4, p0, Lcom/vk/auth/base/BaseAuthPresenter;->g:Lcom/vk/auth/main/x;
 
     if-eqz v4, :cond_2
 
-    iget-object v5, p0, Lcom/vk/auth/base/BaseAuthPresenter;->h:Lcom/vk/auth/main/TrustedHashProvider;
+    iget-object v5, p0, Lcom/vk/auth/base/BaseAuthPresenter;->h:Lcom/vk/auth/main/v;
 
     if-eqz v5, :cond_1
 
-    iget-object v6, p0, Lcom/vk/auth/base/BaseAuthPresenter;->i:Lcom/vk/auth/main/AuthStateTransformer;
+    iget-object v6, p0, Lcom/vk/auth/base/BaseAuthPresenter;->i:Lcom/vk/auth/main/h;
 
     if-eqz v6, :cond_0
 
@@ -820,7 +820,7 @@
 
     move-object v3, p1
 
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/auth/AuthHelper;->a(Landroid/content/Context;Lcom/vk/auth/main/AuthModel;Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/main/UsersStore;Lcom/vk/auth/main/TrustedHashProvider;Lcom/vk/auth/main/AuthStateTransformer;)Lio/reactivex/Observable;
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/auth/b;->a(Landroid/content/Context;Lcom/vk/auth/main/f;Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/main/x;Lcom/vk/auth/main/v;Lcom/vk/auth/main/h;)Lc/a/m;
 
     move-result-object p1
 
@@ -829,7 +829,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lio/reactivex/Observable;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lc/a/m;Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
 
     return-void
 
@@ -837,44 +837,44 @@
     const-string p1, "authStateTransformer"
 
     .line 22
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_1
     const-string p1, "trustedHashProvider"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_2
     const-string p1, "usersStore"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_3
     const-string p1, "authModel"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
     const-string p1, "appContext"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
-.method protected a(Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/api/models/AuthAnswer;)V
+.method protected a(Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/api/models/a;)V
     .locals 10
 
     .line 93
-    invoke-direct {p0, p2}, Lcom/vk/auth/base/BaseAuthPresenter;->b(Lcom/vk/auth/api/models/AuthAnswer;)Ljava/lang/String;
+    invoke-direct {p0, p2}, Lcom/vk/auth/base/BaseAuthPresenter;->b(Lcom/vk/auth/api/models/a;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -884,7 +884,7 @@
 
     .line 94
     :cond_0
-    invoke-virtual {p2}, Lcom/vk/auth/api/models/AuthAnswer;->e()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/auth/api/models/a;->e()Ljava/lang/String;
 
     move-result-object p1
 
@@ -897,7 +897,7 @@
     if-eqz p1, :cond_1
 
     .line 95
-    invoke-virtual {p2}, Lcom/vk/auth/api/models/AuthAnswer;->e()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/auth/api/models/a;->e()Ljava/lang/String;
 
     move-result-object p1
 
@@ -913,7 +913,7 @@
 
     .line 96
     :cond_2
-    sget p1, Lcom/vk/auth/r/R;->vk_auth_log_in_network_error:I
+    sget p1, Lcom/vk/auth/r/g;->vk_auth_log_in_network_error:I
 
     invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -923,25 +923,25 @@
     move-object v2, p1
 
     .line 97
-    invoke-virtual {p2}, Lcom/vk/auth/api/models/AuthAnswer;->f()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/auth/api/models/a;->f()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "facebook_email_used"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_4
 
-    invoke-virtual {p2}, Lcom/vk/auth/api/models/AuthAnswer;->f()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/auth/api/models/a;->f()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "facebook_email_already_registered"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -951,29 +951,29 @@
 
     .line 98
     :cond_3
-    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1, v2}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
+    invoke-interface {p1, v2}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
 
     goto :goto_3
 
     .line 99
     :cond_4
     :goto_2
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v0, :cond_5
 
-    sget p1, Lcom/vk/auth/r/R;->vk_auth_error:I
+    sget p1, Lcom/vk/auth/r/g;->vk_auth_error:I
 
     invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 100
-    sget p1, Lcom/vk/auth/r/R;->ok:I
+    sget p1, Lcom/vk/auth/r/g;->ok:I
 
     invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -982,7 +982,7 @@
     .line 101
     new-instance v4, Lcom/vk/auth/base/BaseAuthPresenter$onIncorrectLoginData$1;
 
-    invoke-direct {v4, p0, p2}, Lcom/vk/auth/base/BaseAuthPresenter$onIncorrectLoginData$1;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;Lcom/vk/auth/api/models/AuthAnswer;)V
+    invoke-direct {v4, p0, p2}, Lcom/vk/auth/base/BaseAuthPresenter$onIncorrectLoginData$1;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;Lcom/vk/auth/api/models/a;)V
 
     const/4 v5, 0x0
 
@@ -995,108 +995,108 @@
     const/4 v9, 0x0
 
     .line 102
-    invoke-static/range {v0 .. v9}, Lcom/vk/auth/base/AuthView$a;->a(Lcom/vk/auth/base/AuthView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v9}, Lcom/vk/auth/base/b$a;->a(Lcom/vk/auth/base/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     :cond_5
     :goto_3
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/AuthModel;)V
+.method protected final a(Lcom/vk/auth/main/f;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->d:Lcom/vk/auth/main/AuthModel;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->d:Lcom/vk/auth/main/f;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/AuthRouter;)V
+.method protected final a(Lcom/vk/auth/main/g;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->e:Lcom/vk/auth/main/AuthRouter;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->e:Lcom/vk/auth/main/g;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/AuthStateTransformer;)V
+.method protected final a(Lcom/vk/auth/main/h;)V
     .locals 0
 
     .line 8
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->i:Lcom/vk/auth/main/AuthStateTransformer;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->i:Lcom/vk/auth/main/h;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/LibverifyControllerProvider1;)V
+.method protected final a(Lcom/vk/auth/main/n;)V
     .locals 0
 
     .line 10
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->k:Lcom/vk/auth/main/LibverifyControllerProvider1;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->k:Lcom/vk/auth/main/n;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/SignUpModel;)V
+.method protected final a(Lcom/vk/auth/main/s;)V
     .locals 0
 
     .line 11
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/SignUpModel;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/s;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/SignUpRouter;)V
+.method protected final a(Lcom/vk/auth/main/t;)V
     .locals 0
 
     .line 12
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/SignUpRouter;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/t;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/SignUpStrategy;)V
+.method protected final a(Lcom/vk/auth/main/u;)V
     .locals 0
 
     .line 13
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->n:Lcom/vk/auth/main/SignUpStrategy;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->n:Lcom/vk/auth/main/u;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/TrustedHashProvider;)V
+.method protected final a(Lcom/vk/auth/main/v;)V
     .locals 0
 
     .line 7
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->h:Lcom/vk/auth/main/TrustedHashProvider;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->h:Lcom/vk/auth/main/v;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/UsersStore;)V
+.method protected final a(Lcom/vk/auth/main/x;)V
     .locals 0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->g:Lcom/vk/auth/main/UsersStore;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->g:Lcom/vk/auth/main/x;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/t/CredentialsManager;)V
+.method protected final a(Lcom/vk/auth/t/b;)V
     .locals 0
 
     .line 9
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->j:Lcom/vk/auth/t/CredentialsManager;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->j:Lcom/vk/auth/t/b;
 
     return-void
 .end method
 
-.method protected final a(Lio/reactivex/disposables/CompositeDisposable;)V
+.method protected final a(Lio/reactivex/disposables/a;)V
     .locals 0
 
     .line 14
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/a;
 
     return-void
 .end method
@@ -1105,7 +1105,7 @@
     .locals 3
 
     .line 19
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->e:Lcom/vk/auth/main/AuthRouter;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->e:Lcom/vk/auth/main/g;
 
     const/4 v1, 0x0
 
@@ -1113,14 +1113,14 @@
 
     const/4 v2, 0x2
 
-    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/auth/main/AuthRouter$a;->a(Lcom/vk/auth/main/AuthRouter;Ljava/lang/String;Lcom/vk/auth/main/RestoreReason2;ILjava/lang/Object;)V
+    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/auth/main/g$a;->a(Lcom/vk/auth/main/g;Ljava/lang/String;Lcom/vk/auth/main/p;ILjava/lang/Object;)V
 
     return-void
 
     :cond_0
     const-string p1, "authRouter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1133,7 +1133,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p0}, Lcom/vk/auth/base/AuthPresenter;->a()Lcom/vk/auth/main/AuthStatSender$Screen;
+    invoke-interface {p0}, Lcom/vk/auth/base/a;->a()Lcom/vk/auth/main/AuthStatSender$Screen;
 
     move-result-object v1
 
@@ -1144,20 +1144,20 @@
     :cond_0
     const-string p1, "statSender"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method protected final a(Lio/reactivex/disposables/Disposable;)Z
+.method protected final a(Lio/reactivex/disposables/b;)Z
     .locals 1
 
     .line 15
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     move-result p1
 
@@ -1242,13 +1242,13 @@
     if-eqz v6, :cond_2
 
     .line 55
-    iget-object v1, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v1, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1, v6}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
+    invoke-interface {v1, v6}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
 
-    sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v7, Lkotlin/m;->a:Lkotlin/m;
 
     :cond_1
     if-eqz v7, :cond_2
@@ -1257,29 +1257,29 @@
 
     .line 56
     :cond_2
-    iget-object v1, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v1, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v1, :cond_19
 
-    sget v2, Lcom/vk/auth/r/R;->vk_auth_load_network_error:I
+    sget v2, Lcom/vk/auth/r/g;->vk_auth_load_network_error:I
 
     invoke-virtual {v0, v2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lcom/vk/auth/base/AuthView;->e(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/vk/auth/base/b;->e(Ljava/lang/String;)V
 
-    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
 
     goto/16 :goto_a
 
     .line 57
     :cond_3
-    iget-object v5, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v5, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v5, :cond_19
 
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_error:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_error:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1291,7 +1291,7 @@
 
     .line 58
     :cond_4
-    sget v2, Lcom/vk/auth/r/R;->vk_auth_sign_up_unallowable_password:I
+    sget v2, Lcom/vk/auth/r/g;->vk_auth_sign_up_unallowable_password:I
 
     invoke-virtual {v0, v2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1301,7 +1301,7 @@
     move-object v7, v6
 
     .line 59
-    sget v2, Lcom/vk/auth/r/R;->ok:I
+    sget v2, Lcom/vk/auth/r/g;->ok:I
 
     invoke-virtual {v0, v2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1324,17 +1324,17 @@
     move-object v6, v1
 
     .line 60
-    invoke-static/range {v5 .. v14}, Lcom/vk/auth/base/AuthView$a;->a(Lcom/vk/auth/base/AuthView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v5 .. v14}, Lcom/vk/auth/base/b$a;->a(Lcom/vk/auth/base/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     goto/16 :goto_a
 
     .line 61
     :cond_5
-    iget-object v15, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v15, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v15, :cond_19
 
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_error:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_error:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1346,7 +1346,7 @@
 
     .line 62
     :cond_6
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_wrong_code:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_wrong_code:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1356,7 +1356,7 @@
     move-object/from16 v17, v6
 
     .line 63
-    sget v1, Lcom/vk/auth/r/R;->ok:I
+    sget v1, Lcom/vk/auth/r/g;->ok:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1381,13 +1381,13 @@
     move-object/from16 v19, v1
 
     .line 64
-    invoke-static/range {v15 .. v24}, Lcom/vk/auth/base/AuthView$a;->a(Lcom/vk/auth/base/AuthView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v15 .. v24}, Lcom/vk/auth/base/b$a;->a(Lcom/vk/auth/base/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     goto/16 :goto_a
 
     .line 65
     :cond_7
-    iget-object v1, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v1, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v1, :cond_19
 
@@ -1396,24 +1396,24 @@
     goto :goto_3
 
     :cond_8
-    sget v2, Lcom/vk/auth/r/R;->vk_auth_sign_up_flood:I
+    sget v2, Lcom/vk/auth/r/g;->vk_auth_sign_up_flood:I
 
     invoke-virtual {v0, v2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
     move-result-object v6
 
     :goto_3
-    invoke-interface {v1, v6}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
+    invoke-interface {v1, v6}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
 
     goto/16 :goto_a
 
     .line 66
     :cond_9
-    iget-object v7, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v7, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v7, :cond_19
 
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_error:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_error:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1425,7 +1425,7 @@
 
     .line 67
     :cond_a
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_sign_up_invalid_session:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_sign_up_invalid_session:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1435,7 +1435,7 @@
     move-object v9, v6
 
     .line 68
-    sget v1, Lcom/vk/auth/r/R;->ok:I
+    sget v1, Lcom/vk/auth/r/g;->ok:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1456,27 +1456,27 @@
     const/16 v16, 0x0
 
     .line 69
-    invoke-static/range {v7 .. v16}, Lcom/vk/auth/base/AuthView$a;->a(Lcom/vk/auth/base/AuthView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v7 .. v16}, Lcom/vk/auth/base/b$a;->a(Lcom/vk/auth/base/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     goto/16 :goto_a
 
     .line 70
     :cond_b
-    iget-object v1, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v1, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v1, :cond_19
 
-    invoke-interface {v1, v2}, Lcom/vk/auth/base/AuthView;->g(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/vk/auth/base/b;->g(Ljava/lang/String;)V
 
     goto/16 :goto_a
 
     .line 71
     :cond_c
-    iget-object v5, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v5, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v5, :cond_19
 
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_error:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_error:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1488,7 +1488,7 @@
 
     .line 72
     :cond_d
-    sget v2, Lcom/vk/auth/r/R;->vk_auth_sign_up_invalid_phone:I
+    sget v2, Lcom/vk/auth/r/g;->vk_auth_sign_up_invalid_phone:I
 
     invoke-virtual {v0, v2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1498,7 +1498,7 @@
     move-object v7, v6
 
     .line 73
-    sget v2, Lcom/vk/auth/r/R;->ok:I
+    sget v2, Lcom/vk/auth/r/g;->ok:I
 
     invoke-virtual {v0, v2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1521,7 +1521,7 @@
     move-object v6, v1
 
     .line 74
-    invoke-static/range {v5 .. v14}, Lcom/vk/auth/base/AuthView$a;->a(Lcom/vk/auth/base/AuthView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v5 .. v14}, Lcom/vk/auth/base/b$a;->a(Lcom/vk/auth/base/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     goto/16 :goto_a
 
@@ -1558,11 +1558,11 @@
 
     .line 78
     :cond_10
-    iget-object v9, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v9, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v9, :cond_19
 
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_error:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_error:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1574,7 +1574,7 @@
 
     .line 79
     :cond_11
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_sign_up_invalid_name:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_sign_up_invalid_name:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1584,7 +1584,7 @@
     move-object v11, v6
 
     .line 80
-    sget v1, Lcom/vk/auth/r/R;->ok:I
+    sget v1, Lcom/vk/auth/r/g;->ok:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1605,7 +1605,7 @@
     const/16 v18, 0x0
 
     .line 81
-    invoke-static/range {v9 .. v18}, Lcom/vk/auth/base/AuthView$a;->a(Lcom/vk/auth/base/AuthView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v9 .. v18}, Lcom/vk/auth/base/b$a;->a(Lcom/vk/auth/base/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     goto/16 :goto_a
 
@@ -1622,11 +1622,11 @@
     if-ne v8, v4, :cond_14
 
     .line 83
-    iget-object v9, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v9, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v9, :cond_19
 
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_error:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_error:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1638,7 +1638,7 @@
 
     .line 84
     :cond_13
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_sign_up_invalid_phone_format:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_sign_up_invalid_phone_format:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1648,7 +1648,7 @@
     move-object v11, v6
 
     .line 85
-    sget v1, Lcom/vk/auth/r/R;->ok:I
+    sget v1, Lcom/vk/auth/r/g;->ok:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1669,7 +1669,7 @@
     const/16 v18, 0x0
 
     .line 86
-    invoke-static/range {v9 .. v18}, Lcom/vk/auth/base/AuthView$a;->a(Lcom/vk/auth/base/AuthView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v9 .. v18}, Lcom/vk/auth/base/b$a;->a(Lcom/vk/auth/base/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     goto :goto_a
 
@@ -1686,11 +1686,11 @@
     if-ne v2, v4, :cond_16
 
     .line 88
-    iget-object v7, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v7, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v7, :cond_19
 
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_error:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_error:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1702,7 +1702,7 @@
 
     .line 89
     :cond_15
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_sign_up_enter_birthday_too_young:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_sign_up_enter_birthday_too_young:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1712,7 +1712,7 @@
     move-object v9, v6
 
     .line 90
-    sget v1, Lcom/vk/auth/r/R;->ok:I
+    sget v1, Lcom/vk/auth/r/g;->ok:I
 
     invoke-virtual {v0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
@@ -1733,13 +1733,13 @@
     const/16 v16, 0x0
 
     .line 91
-    invoke-static/range {v7 .. v16}, Lcom/vk/auth/base/AuthView$a;->a(Lcom/vk/auth/base/AuthView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v7 .. v16}, Lcom/vk/auth/base/b$a;->a(Lcom/vk/auth/base/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     goto :goto_a
 
     .line 92
     :cond_16
-    iget-object v2, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v2, v0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v2, :cond_19
 
@@ -1755,7 +1755,7 @@
     const-string v1, ""
 
     :goto_9
-    invoke-interface {v2, v1}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
+    invoke-interface {v2, v1}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
 
     goto :goto_a
 
@@ -1771,14 +1771,14 @@
     .locals 0
 
     .line 5
-    sget-object p1, Lcom/vk/auth/main/AuthCallbackAdapter;->INSTANCE:Lcom/vk/auth/main/AuthCallbackAdapter;
+    sget-object p1, Lcom/vk/auth/main/c;->b:Lcom/vk/auth/main/c;
 
-    invoke-virtual {p1}, Lcom/vk/auth/main/AuthCallbackAdapter;->a()V
+    invoke-virtual {p1}, Lcom/vk/auth/main/c;->a()V
 
     return-void
 .end method
 
-.method protected final b(Lcom/vk/auth/base/AuthView;)V
+.method protected final b(Lcom/vk/auth/base/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1787,7 +1787,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     return-void
 .end method
@@ -1801,24 +1801,24 @@
     return-void
 .end method
 
-.method protected final b(Lio/reactivex/disposables/CompositeDisposable;)V
+.method protected final b(Lio/reactivex/disposables/a;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/a;
 
     return-void
 .end method
 
-.method protected final b(Lio/reactivex/disposables/Disposable;)Z
+.method protected final b(Lio/reactivex/disposables/b;)Z
     .locals 1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     move-result p1
 
@@ -1827,7 +1827,7 @@
     :cond_0
     const-string p1, "onDetachDisposables"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1846,25 +1846,25 @@
     if-lez p1, :cond_0
 
     .line 3
-    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x1
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->k(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->k(Z)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x0
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->k(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->k(Z)V
 
     :cond_1
     :goto_0
@@ -1883,25 +1883,25 @@
     if-lez p1, :cond_0
 
     .line 3
-    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x1
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->m(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->m(Z)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x0
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->m(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->m(Z)V
 
     :cond_1
     :goto_0
@@ -1912,11 +1912,11 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1935,18 +1935,18 @@
     :cond_0
     const-string v0, "appContext"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected final f()Lcom/vk/auth/main/AuthModel;
+.method protected final f()Lcom/vk/auth/main/f;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->d:Lcom/vk/auth/main/AuthModel;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->d:Lcom/vk/auth/main/f;
 
     if-eqz v0, :cond_0
 
@@ -1955,18 +1955,18 @@
     :cond_0
     const-string v0, "authModel"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected final g()Lcom/vk/auth/main/AuthRouter;
+.method protected final g()Lcom/vk/auth/main/g;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->e:Lcom/vk/auth/main/AuthRouter;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->e:Lcom/vk/auth/main/g;
 
     if-eqz v0, :cond_0
 
@@ -1975,18 +1975,18 @@
     :cond_0
     const-string v0, "authRouter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected final h()Lcom/vk/auth/main/AuthStateTransformer;
+.method protected final h()Lcom/vk/auth/main/h;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->i:Lcom/vk/auth/main/AuthStateTransformer;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->i:Lcom/vk/auth/main/h;
 
     if-eqz v0, :cond_0
 
@@ -1995,18 +1995,18 @@
     :cond_0
     const-string v0, "authStateTransformer"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected final i()Lcom/vk/auth/t/CredentialsManager;
+.method protected final i()Lcom/vk/auth/t/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->j:Lcom/vk/auth/t/CredentialsManager;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->j:Lcom/vk/auth/t/b;
 
     if-eqz v0, :cond_0
 
@@ -2015,36 +2015,36 @@
     :cond_0
     const-string v0, "credentialsManager"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected final j()Lcom/vk/auth/main/LibverifyControllerProvider1;
+.method protected final j()Lcom/vk/auth/main/n;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->k:Lcom/vk/auth/main/LibverifyControllerProvider1;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->k:Lcom/vk/auth/main/n;
 
     return-object v0
 .end method
 
-.method protected final k()Lio/reactivex/disposables/CompositeDisposable;
+.method protected final k()Lio/reactivex/disposables/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/a;
 
     return-object v0
 .end method
 
-.method protected final l()Lio/reactivex/disposables/CompositeDisposable;
+.method protected final l()Lio/reactivex/disposables/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/a;
 
     if-eqz v0, :cond_0
 
@@ -2053,7 +2053,7 @@
     :cond_0
     const-string v0, "onDetachDisposables"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2082,18 +2082,18 @@
     :cond_0
     const-string v0, "signUpData"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected final o()Lcom/vk/auth/main/SignUpModel;
+.method protected final o()Lcom/vk/auth/main/s;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/SignUpModel;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->l:Lcom/vk/auth/main/s;
 
     if-eqz v0, :cond_0
 
@@ -2102,7 +2102,7 @@
     :cond_0
     const-string v0, "signUpModel"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2113,16 +2113,16 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->p:Lio/reactivex/disposables/a;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
 
     .line 2
-    iput-object v1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iput-object v1, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     return-void
 
@@ -2130,7 +2130,7 @@
     const-string v0, "onDetachDisposables"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -2147,9 +2147,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->q:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
 
     return-void
 .end method
@@ -2169,11 +2169,11 @@
     return-void
 .end method
 
-.method protected final p()Lcom/vk/auth/main/SignUpRouter;
+.method protected final p()Lcom/vk/auth/main/t;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/SignUpRouter;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->m:Lcom/vk/auth/main/t;
 
     if-eqz v0, :cond_0
 
@@ -2182,18 +2182,18 @@
     :cond_0
     const-string v0, "signUpRouter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected final q()Lcom/vk/auth/main/SignUpStrategy;
+.method protected final q()Lcom/vk/auth/main/u;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->n:Lcom/vk/auth/main/SignUpStrategy;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->n:Lcom/vk/auth/main/u;
 
     if-eqz v0, :cond_0
 
@@ -2202,7 +2202,7 @@
     :cond_0
     const-string v0, "signUpStrategy"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2222,18 +2222,18 @@
     :cond_0
     const-string v0, "statSender"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected final s()Lcom/vk/auth/main/TrustedHashProvider;
+.method protected final s()Lcom/vk/auth/main/v;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->h:Lcom/vk/auth/main/TrustedHashProvider;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->h:Lcom/vk/auth/main/v;
 
     if-eqz v0, :cond_0
 
@@ -2242,7 +2242,7 @@
     :cond_0
     const-string v0, "trustedHashProvider"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2258,11 +2258,11 @@
     return v0
 .end method
 
-.method protected final u()Lcom/vk/auth/main/UsersStore;
+.method protected final u()Lcom/vk/auth/main/x;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->g:Lcom/vk/auth/main/UsersStore;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->g:Lcom/vk/auth/main/x;
 
     if-eqz v0, :cond_0
 
@@ -2271,14 +2271,14 @@
     :cond_0
     const-string v0, "usersStore"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected final v()Lcom/vk/auth/base/AuthView;
+.method protected final v()Lcom/vk/auth/base/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2287,7 +2287,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     return-object v0
 .end method
@@ -2296,17 +2296,17 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/AuthView;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter;->b:Lcom/vk/auth/base/b;
 
     if-eqz v0, :cond_0
 
-    sget v1, Lcom/vk/auth/r/R;->vk_auth_load_network_error:I
+    sget v1, Lcom/vk/auth/r/g;->vk_auth_load_network_error:I
 
     invoke-virtual {p0, v1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/auth/base/AuthView;->e(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/auth/base/b;->e(Ljava/lang/String;)V
 
     :cond_0
     return-void

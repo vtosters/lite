@@ -3,7 +3,7 @@
 .source "FacebookAuthPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/auth/main/AuthModel$b;
+.implements Lcom/vk/auth/main/f$b;
 
 
 # annotations
@@ -46,7 +46,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter$b;->a:Lcom/vk/auth/base/FacebookAuthPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object v0
 
@@ -54,13 +54,13 @@
 
     iget-object v1, p0, Lcom/vk/auth/base/FacebookAuthPresenter$b;->a:Lcom/vk/auth/base/FacebookAuthPresenter;
 
-    sget v2, Lcom/vk/auth/r/R;->vk_auth_error:I
+    sget v2, Lcom/vk/auth/r/g;->vk_auth_error:I
 
     invoke-virtual {v1, v2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
 
     :cond_0
     return-void

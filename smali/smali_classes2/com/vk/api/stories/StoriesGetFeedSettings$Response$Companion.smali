@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -214,7 +214,7 @@
 
     sget-object v3, Lcom/vk/api/stories/StoriesGetFeedSettings$Response$Companion$parse$groups$1$1;->a:Lcom/vk/api/stories/StoriesGetFeedSettings$Response$Companion$parse$groups$1$1;
 
-    invoke-direct {v1, p1, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v1, p1, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
 
     .line 17
     :cond_9

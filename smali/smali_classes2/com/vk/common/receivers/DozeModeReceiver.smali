@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/common/receivers/DozeModeReceiver$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/common/receivers/DozeModeReceiver$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/common/receivers/DozeModeReceiver;->a:Lcom/vk/common/receivers/DozeModeReceiver$a;
 
@@ -39,7 +39,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -63,7 +63,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/core/util/Prefs;->a(Z)V
+    invoke-static {p1}, Lcom/vk/core/util/r0;->a(Z)V
 
     return-void
 .end method
@@ -99,7 +99,7 @@
     :goto_0
     const-string p2, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -109,9 +109,9 @@
 
     .line 2
     :cond_1
-    sget-object p1, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
+    sget-object p1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/DeviceState;->u()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/v;->u()Z
 
     move-result p1
 

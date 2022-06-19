@@ -1,5 +1,5 @@
 .class public final Lcom/vk/navigation/NavigationDelegateBottom;
-.super Lcom/vk/navigation/VKNavigationDelegate;
+.super Lcom/vk/navigation/y;
 .source "NavigationDelegateBottom.kt"
 
 # interfaces
@@ -7,7 +7,7 @@
 .implements Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView$b;
 .implements Lcom/vk/cameraui/CameraUI$b;
 .implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;
-.implements Lcom/vk/core/fragments/FragmentNavigationListener;
+.implements Lcom/vk/core/fragments/g;
 
 
 # annotations
@@ -25,21 +25,21 @@
         "<T:",
         "Landroid/app/Activity;",
         ":",
-        "Lcom/vk/core/fragments/FragmentManagerImplProvider;",
+        "Lcom/vk/core/fragments/e;",
         ">",
-        "Lcom/vk/navigation/VKNavigationDelegate<",
+        "Lcom/vk/navigation/y<",
         "TT;>;",
         "Lcom/vk/core/view/FitSystemWindowsFrameLayout$e;",
         "Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView$b;",
         "Lcom/vk/cameraui/CameraUI$b;",
         "Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;",
-        "Lcom/vk/core/fragments/FragmentNavigationListener;"
+        "Lcom/vk/core/fragments/g;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic d0:[Lkotlin/u/KProperty5;
+.field static final synthetic d0:[Lkotlin/u/j;
 
 .field private static final e0:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -61,7 +61,7 @@
 
 .field private final C:I
 
-.field private final D:Lkotlin/Lazy2;
+.field private final D:Lkotlin/e;
 
 .field private E:Landroid/view/View;
 
@@ -95,7 +95,7 @@
     .end annotation
 .end field
 
-.field private final R:Lcom/vk/attachpicker/util/OrientationLocker;
+.field private final R:Lcom/vk/attachpicker/util/c;
 
 .field private S:I
 
@@ -109,7 +109,7 @@
 
 .field private X:Lcom/vk/navigation/NavigationDelegateBottom$c;
 
-.field private Y:Lio/reactivex/disposables/CompositeDisposable;
+.field private Y:Lio/reactivex/disposables/a;
 
 .field private Z:Z
 
@@ -119,7 +119,7 @@
 
 .field private final c0:Ljava/lang/Runnable;
 
-.field private g:Lcom/vk/music/player/PlayerModel;
+.field private g:Lcom/vk/music/player/d;
 
 .field private final h:Lcom/vk/navigation/NavigationDelegateBottom$b;
     .annotation system Ldalvik/annotation/Signature;
@@ -137,13 +137,13 @@
 
     const/4 v0, 0x1
 
-    new-array v1, v0, [Lkotlin/u/KProperty5;
+    new-array v1, v0, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v3, Lcom/vk/navigation/NavigationDelegateBottom;
 
-    invoke-static {v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -151,30 +151,30 @@
 
     const-string v5, "getSmallPlayerSize()I"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    sput-object v1, Lcom/vk/navigation/NavigationDelegateBottom;->d0:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/navigation/NavigationDelegateBottom;->d0:[Lkotlin/u/j;
 
     new-instance v1, Lcom/vk/navigation/NavigationDelegateBottom$a;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Lcom/vk/navigation/NavigationDelegateBottom$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, v2}, Lcom/vk/navigation/NavigationDelegateBottom$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/4 v1, 0x7
 
     new-array v1, v1, [Lkotlin/Pair;
 
     .line 1
-    sget-object v2, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object v2, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/Feed2049;->d()Ljava/lang/Class;
+    invoke-virtual {v2}, Lcom/vk/newsfeed/e;->d()Ljava/lang/Class;
 
     move-result-object v2
 
@@ -184,16 +184,16 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
     aput-object v2, v1, v3
 
     .line 2
-    sget-object v2, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object v2, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/Feed2049;->e()Ljava/lang/Class;
+    invoke-virtual {v2}, Lcom/vk/newsfeed/e;->e()Ljava/lang/Class;
 
     move-result-object v2
 
@@ -203,14 +203,14 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
     aput-object v2, v1, v0
 
     .line 3
-    const-class v0, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment;
+    const-class v0, Lcom/vtosters/lite/fragments/t2/c/b;
 
     const v2, 0x7f0a0d14
 
@@ -218,7 +218,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -227,9 +227,9 @@
     aput-object v0, v1, v3
 
     .line 4
-    sget-object v0, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object v0, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/Feed2049;->g()Ljava/lang/Class;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/e;->g()Ljava/lang/Class;
 
     move-result-object v0
 
@@ -239,7 +239,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -248,9 +248,9 @@
     aput-object v0, v1, v4
 
     .line 5
-    sget-object v0, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object v0, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/Feed2049;->b()Ljava/lang/Class;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/e;->b()Ljava/lang/Class;
 
     move-result-object v0
 
@@ -260,7 +260,7 @@
 
     move-result-object v4
 
-    invoke-static {v0, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -269,9 +269,9 @@
     aput-object v0, v1, v4
 
     .line 6
-    const-class v0, Lcom/vk/im/ui/fragments/InstallVKMeFragment;
+    const-class v0, Lcom/vk/im/ui/fragments/d;
 
-    invoke-static {v0, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -282,7 +282,7 @@
     .line 7
     const-class v0, Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {v0, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -309,20 +309,20 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/navigation/VKNavigationDelegate;-><init>(Landroid/app/Activity;Z)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/navigation/y;-><init>(Landroid/app/Activity;Z)V
 
     .line 2
-    sget-object p2, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
+    sget-object p2, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
 
-    invoke-virtual {p2}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
-
-    move-result-object p2
-
-    invoke-interface {p2}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+    invoke-virtual {p2}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/PlayerModel;
+    invoke-interface {p2}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/d;
 
     .line 3
     new-instance p2, Lcom/vk/navigation/NavigationDelegateBottom$b;
@@ -334,9 +334,9 @@
     .line 4
     move-object p2, p1
 
-    check-cast p2, Lcom/vk/core/fragments/FragmentManagerImplProvider;
+    check-cast p2, Lcom/vk/core/fragments/e;
 
-    invoke-interface {p2}, Lcom/vk/core/fragments/FragmentManagerImplProvider;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-interface {p2}, Lcom/vk/core/fragments/e;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object p2
 
@@ -384,7 +384,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {v3, v2, v5, v4, v5}, Lcom/vk/core/fragments/FragmentEntry;-><init>(Ljava/lang/Class;Landroid/os/Bundle;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v3, v2, v5, v4, v5}, Lcom/vk/core/fragments/FragmentEntry;-><init>(Ljava/lang/Class;Landroid/os/Bundle;ILkotlin/jvm/internal/i;)V
 
     invoke-interface {v1, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -396,7 +396,7 @@
     .line 10
     new-instance v2, Lcom/vk/core/fragments/FragmentNavigationController;
 
-    invoke-direct {v2, p2, v1, p0, v0}, Lcom/vk/core/fragments/FragmentNavigationController;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;Ljava/util/List;Lcom/vk/core/fragments/FragmentNavigationListener;I)V
+    invoke-direct {v2, p2, v1, p0, v0}, Lcom/vk/core/fragments/FragmentNavigationController;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;Ljava/util/List;Lcom/vk/core/fragments/g;I)V
 
     iput-object v2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->B:Lcom/vk/core/fragments/FragmentNavigationController;
 
@@ -418,11 +418,11 @@
 
     invoke-direct {p2, p1}, Lcom/vk/navigation/NavigationDelegateBottom$smallPlayerSize$2;-><init>(Landroid/app/Activity;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->D:Lkotlin/Lazy2;
+    iput-object p2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->D:Lkotlin/e;
 
     const/4 p2, 0x1
 
@@ -442,18 +442,18 @@
     iput-object p2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->Q:Lcom/vk/navigation/NavigationDelegateBottom$o;
 
     .line 16
-    new-instance p1, Lcom/vk/attachpicker/util/OrientationLocker;
+    new-instance p1, Lcom/vk/attachpicker/util/c;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/util/OrientationLocker;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/util/c;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/OrientationLocker;
+    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/c;
 
     .line 17
-    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance p1, Lio/reactivex/disposables/a;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->Y:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->Y:Lio/reactivex/disposables/a;
 
     .line 18
     new-instance p1, Lcom/vk/navigation/NavigationDelegateBottom$receiver$1;
@@ -513,7 +513,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -572,15 +572,15 @@
 .method private final C()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->D:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->D:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/navigation/NavigationDelegateBottom;->d0:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/navigation/NavigationDelegateBottom;->d0:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -713,7 +713,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -731,9 +731,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/PlayerModel;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/d;
 
-    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->Q()Lcom/vk/music/player/PlayState;
+    invoke-interface {v0}, Lcom/vk/music/player/d;->Q()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -884,7 +884,7 @@
 
     if-eqz v1, :cond_6
 
-    invoke-interface {v1}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {v1}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v1
 
@@ -910,7 +910,7 @@
     :cond_5
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->OTHER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v0}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -935,7 +935,7 @@
 
     if-eqz v1, :cond_9
 
-    invoke-interface {v1}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {v1}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v1
 
@@ -950,7 +950,7 @@
     :cond_8
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->OTHER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v0}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1032,9 +1032,9 @@
     invoke-virtual {v1, v2}, Lcom/vk/metrics/eventtracking/Event$a;->a(Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event$a;
 
     .line 4
-    sget-object v2, Lcom/vk/core/ui/v/UiTracker;->INSTANCE:Lcom/vk/core/ui/v/UiTracker;
+    sget-object v2, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
 
-    invoke-virtual {v2}, Lcom/vk/core/ui/v/UiTracker;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/core/ui/v/a;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1136,13 +1136,13 @@
     .line 108
     sget-object v0, Lcom/vk/navigation/NavigationDelegateBottom;->e0:Ljava/util/Map;
 
-    sget-object v1, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
+    sget-object v1, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/navigation/Navigator$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
+    invoke-virtual {v1, v2}, Lcom/vk/navigation/o$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
 
     move-result-object v1
 
@@ -1250,13 +1250,13 @@
 
     .line 102
     :pswitch_1
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->g()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->g()Z
 
     move-result p1
 
@@ -1265,7 +1265,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->k()I
+    invoke-static {}, Lcom/vtosters/lite/w;->k()I
 
     move-result p1
 
@@ -1275,7 +1275,7 @@
 
     .line 103
     :pswitch_2
-    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->j()I
+    invoke-static {}, Lcom/vtosters/lite/w;->j()I
 
     move-result v0
 
@@ -1283,26 +1283,26 @@
 
     .line 104
     :pswitch_3
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->g()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->g()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->g()I
+    invoke-static {}, Lcom/vtosters/lite/w;->g()I
 
     move-result v0
 
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->k()I
+    invoke-static {}, Lcom/vtosters/lite/w;->k()I
 
     move-result v0
 
@@ -1310,7 +1310,7 @@
 
     .line 105
     :pswitch_4
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
@@ -1319,7 +1319,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->b()I
+    invoke-static {}, Lcom/vtosters/lite/w;->b()I
 
     move-result v0
 
@@ -1330,7 +1330,7 @@
     int-to-long v0, v0
 
     .line 106
-    invoke-static {v0, v1}, Lcom/vk/core/util/StringUtils;->a(J)Ljava/lang/CharSequence;
+    invoke-static {v0, v1}, Lcom/vk/core/util/b1;->a(J)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -1396,7 +1396,7 @@
 
     if-nez p1, :cond_2
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
@@ -1423,7 +1423,7 @@
     iput-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->O:Lcom/vk/music/player/PlayState;
 
     .line 89
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -1491,7 +1491,7 @@
     .line 94
     :cond_2
     :goto_1
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -1625,11 +1625,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/navigation/NavigationDelegateBottom;Lcom/vk/music/player/PlayerModel;)V
+.method public static final synthetic a(Lcom/vk/navigation/NavigationDelegateBottom;Lcom/vk/music/player/d;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/PlayerModel;
+    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/d;
 
     return-void
 .end method
@@ -1666,26 +1666,26 @@
 
     .line 60
     :try_start_0
-    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge1;->a()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/p/a;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 61
-    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->i()Lcom/vk/im/ui/p/ImBridge14;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->i()Lcom/vk/im/ui/p/f;
 
     move-result-object v0
 
@@ -1693,7 +1693,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/ImBridge14;->a(Landroid/content/Context;)V
+    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/f;->a(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1721,9 +1721,9 @@
 
     .line 64
     :pswitch_0
-    sget-object p1, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object p1, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/Feed2049;->d()Ljava/lang/Class;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/e;->d()Ljava/lang/Class;
 
     move-result-object p1
 
@@ -1733,32 +1733,32 @@
 
     .line 65
     :pswitch_1
-    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
+    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImEngine;->g()Lcom/vk/im/engine/ImConfig;
+    invoke-virtual {p1}, Lcom/vk/im/engine/a;->g()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImConfig;->r()Lcom/vk/im/engine/models/ImExperiments;
+    invoke-virtual {p1}, Lcom/vk/im/engine/ImConfig;->r()Lcom/vk/im/engine/models/e;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/ImExperiments;->d()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/models/e;->d()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
     .line 66
-    const-class p1, Lcom/vk/im/ui/fragments/InstallVKMeFragment;
+    const-class p1, Lcom/vk/im/ui/fragments/d;
 
     goto :goto_0
 
     .line 67
     :cond_1
-    const-class p1, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment;
+    const-class p1, Lcom/vtosters/lite/fragments/t2/c/b;
 
     :goto_0
     const-string v0, "messages"
@@ -1767,16 +1767,16 @@
 
     .line 68
     :pswitch_2
-    sget-object p1, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object p1, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/Feed2049;->b()Ljava/lang/Class;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/e;->b()Ljava/lang/Class;
 
     move-result-object p1
 
     .line 69
-    sget-object v0, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object v0, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/Feed2049;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/e;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1791,16 +1791,16 @@
 
     .line 71
     :pswitch_3
-    sget-object p1, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object p1, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/Feed2049;->e()Ljava/lang/Class;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/e;->e()Ljava/lang/Class;
 
     move-result-object p1
 
     .line 72
-    sget-object v0, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object v0, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/Feed2049;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/e;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1808,16 +1808,16 @@
 
     .line 73
     :pswitch_4
-    sget-object p1, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object p1, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/Feed2049;->g()Ljava/lang/Class;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/e;->g()Ljava/lang/Class;
 
     move-result-object p1
 
     .line 74
-    sget-object v0, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object v0, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/Feed2049;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/e;->h()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1846,13 +1846,13 @@
     if-eqz v3, :cond_3
 
     .line 77
-    instance-of p1, v2, Lcom/vk/navigation/ScrolledToTop;
+    instance-of p1, v2, Lcom/vk/navigation/v;
 
     if-eqz p1, :cond_4
 
-    check-cast v2, Lcom/vk/navigation/ScrolledToTop;
+    check-cast v2, Lcom/vk/navigation/v;
 
-    invoke-interface {v2}, Lcom/vk/navigation/ScrolledToTop;->F()Z
+    invoke-interface {v2}, Lcom/vk/navigation/v;->F()Z
 
     goto :goto_2
 
@@ -1862,14 +1862,14 @@
     const/4 v3, 0x0
 
     .line 78
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/menu/MenuUtils;->a(Ljava/lang/String;IILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/menu/c;->a(Ljava/lang/String;IILjava/lang/Object;)V
 
     .line 79
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->B:Lcom/vk/core/fragments/FragmentNavigationController;
 
     new-instance v1, Lcom/vk/core/fragments/FragmentEntry;
 
-    invoke-direct {v1, p1, v3, v2, v3}, Lcom/vk/core/fragments/FragmentEntry;-><init>(Ljava/lang/Class;Landroid/os/Bundle;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, p1, v3, v2, v3}, Lcom/vk/core/fragments/FragmentEntry;-><init>(Ljava/lang/Class;Landroid/os/Bundle;ILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v0, v1, p2}, Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentEntry;Z)V
 
@@ -1967,7 +1967,7 @@
 
     move-result-object p2
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -2011,7 +2011,7 @@
     check-cast v0, Landroid/widget/FrameLayout;
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/vk/navigation/VKNavigationDelegate;->a(Landroid/widget/FrameLayout;)V
+    invoke-virtual {p0, v0}, Lcom/vk/navigation/y;->a(Landroid/widget/FrameLayout;)V
 
     const v3, 0x7f0a019b
 
@@ -2023,7 +2023,7 @@
     const-string v4, "bottomNavContent"
 
     .line 6
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v2}, Landroid/view/View;->setFitsSystemWindows(Z)V
 
@@ -2074,7 +2074,7 @@
 
     const-string v4, "activity.intent"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x2
 
@@ -2177,7 +2177,7 @@
 
     const-string v1, "activity.window"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/Window;->getStatusBarColor()I
 
@@ -2300,11 +2300,11 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v1, 0x40c00000    # 6.0f
 
-    invoke-static {v2, v1}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v2, v1}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result v1
 
@@ -2342,11 +2342,11 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v1, 0x3f000000    # 0.5f
 
-    invoke-static {v2, v1}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v2, v1}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result v1
 
@@ -2392,7 +2392,7 @@
     if-eqz v0, :cond_8
 
     .line 41
-    instance-of v1, p1, Lcom/vk/navigation/b0/FragmentWithSystemTopBar;
+    instance-of v1, p1, Lcom/vk/navigation/b0/i;
 
     const/4 v2, 0x0
 
@@ -2406,14 +2406,14 @@
     move-object v1, p1
 
     :goto_0
-    check-cast v1, Lcom/vk/navigation/b0/FragmentWithSystemTopBar;
+    check-cast v1, Lcom/vk/navigation/b0/i;
 
     const/4 v3, 0x1
 
     if-eqz v1, :cond_2
 
     .line 42
-    invoke-interface {v1}, Lcom/vk/navigation/b0/FragmentWithSystemTopBar;->i4()Z
+    invoke-interface {v1}, Lcom/vk/navigation/b0/i;->i4()Z
 
     move-result v1
 
@@ -2439,9 +2439,9 @@
 
     const-string v3, "activity.window"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    instance-of v3, p1, Lcom/vk/navigation/b0/FragmentWithCustomStatusBar;
+    instance-of v3, p1, Lcom/vk/navigation/b0/g;
 
     if-eqz v3, :cond_3
 
@@ -2457,9 +2457,9 @@
 
     move-object v3, p1
 
-    check-cast v3, Lcom/vk/navigation/b0/FragmentWithCustomStatusBar;
+    check-cast v3, Lcom/vk/navigation/b0/g;
 
-    invoke-interface {v3}, Lcom/vk/navigation/b0/FragmentWithCustomStatusBar;->R3()I
+    invoke-interface {v3}, Lcom/vk/navigation/b0/g;->R3()I
 
     move-result v3
 
@@ -2474,7 +2474,7 @@
     invoke-virtual {v1, v3}, Landroid/view/Window;->setStatusBarColor(I)V
 
     .line 46
-    instance-of v1, p1, Lcom/vk/navigation/b0/FragmentWithCustomNavigationBar;
+    instance-of v1, p1, Lcom/vk/navigation/b0/e;
 
     if-eqz v1, :cond_4
 
@@ -2489,9 +2489,9 @@
 
     move-object v3, p1
 
-    check-cast v3, Lcom/vk/navigation/b0/FragmentWithCustomNavigationBar;
+    check-cast v3, Lcom/vk/navigation/b0/e;
 
-    invoke-interface {v3}, Lcom/vk/navigation/b0/FragmentWithCustomNavigationBar;->v4()I
+    invoke-interface {v3}, Lcom/vk/navigation/b0/e;->v4()I
 
     move-result v3
 
@@ -2531,15 +2531,15 @@
     if-eqz v2, :cond_7
 
     .line 50
-    instance-of v1, p1, Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
+    instance-of v1, p1, Lcom/vk/navigation/b0/a;
 
     if-eqz v1, :cond_6
 
     move-object v1, p1
 
-    check-cast v1, Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
+    check-cast v1, Lcom/vk/navigation/b0/a;
 
-    invoke-interface {v1}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar;->E3()Z
+    invoke-interface {v1}, Lcom/vk/navigation/b0/a;->E3()Z
 
     move-result v1
 
@@ -2552,7 +2552,7 @@
 
     .line 51
     :goto_4
-    invoke-static {p1, v2, v1}, Lcom/vk/core/extensions/FragmentExt;->a(Landroidx/fragment/app/Fragment;Landroid/view/View;Z)V
+    invoke-static {p1, v2, v1}, Lcom/vk/core/extensions/j;->a(Landroidx/fragment/app/Fragment;Landroid/view/View;Z)V
 
     .line 52
     :cond_7
@@ -2611,13 +2611,13 @@
 
     const-string v2, "activity.window"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v1
 
-    invoke-static {v0, v1, p1}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;Landroid/view/View;Z)V
+    invoke-static {v0, v1, p1}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;Landroid/view/View;Z)V
 
     return-void
 .end method
@@ -2635,7 +2635,7 @@
     .locals 4
 
     .line 2
-    instance-of v0, p1, Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+    instance-of v0, p1, Lcom/vk/navigation/b0/k;
 
     const/4 v1, 0x1
 
@@ -2660,13 +2660,13 @@
     iput-boolean v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->M:Z
 
     .line 3
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    instance-of v0, p1, Lcom/vk/navigation/b0/FragmentWithMiniAudioPlayer;
+    instance-of v0, p1, Lcom/vk/navigation/b0/h;
 
     if-eqz v0, :cond_2
 
@@ -2688,7 +2688,7 @@
 
     .line 4
     :goto_1
-    instance-of v3, p1, Lcom/vk/navigation/b0/FragmentWithBottomPanel;
+    instance-of v3, p1, Lcom/vk/navigation/b0/d;
 
     if-eqz v3, :cond_3
 
@@ -2711,7 +2711,7 @@
 
     .line 5
     :goto_2
-    instance-of p1, p1, Lcom/vk/navigation/b0/FragmentWithoutBottomBarShadow;
+    instance-of p1, p1, Lcom/vk/navigation/b0/j;
 
     .line 6
     iget-boolean v3, p0, Lcom/vk/navigation/NavigationDelegateBottom;->M:Z
@@ -2791,11 +2791,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic f(Lcom/vk/navigation/NavigationDelegateBottom;)Lcom/vk/music/player/PlayerModel;
+.method public static final synthetic f(Lcom/vk/navigation/NavigationDelegateBottom;)Lcom/vk/music/player/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/PlayerModel;
+    iget-object p0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/d;
 
     return-object p0
 .end method
@@ -2878,7 +2878,7 @@
     .locals 1
 
     .line 2
-    instance-of v0, p1, Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+    instance-of v0, p1, Lcom/vk/navigation/b0/k;
 
     if-nez v0, :cond_0
 
@@ -2964,7 +2964,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vk/navigation/b0/FragmentWithoutStatusBar;
+    instance-of v0, v0, Lcom/vk/navigation/b0/m;
 
     if-eqz v0, :cond_3
 
@@ -2975,10 +2975,10 @@
 
     if-eqz v0, :cond_2
 
-    check-cast v0, Lcom/vk/navigation/b0/FragmentWithoutStatusBar;
+    check-cast v0, Lcom/vk/navigation/b0/m;
 
     .line 7
-    invoke-interface {v0}, Lcom/vk/navigation/b0/FragmentWithoutStatusBar;->q4()Z
+    invoke-interface {v0}, Lcom/vk/navigation/b0/m;->q4()Z
 
     move-result v0
 
@@ -3012,7 +3012,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -3119,10 +3119,10 @@
     .locals 4
 
     .line 32
-    invoke-super {p0, p1}, Lcom/vk/navigation/VKNavigationDelegate;->a(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/navigation/y;->a(Landroid/os/Bundle;)V
 
     .line 33
-    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->Y:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->Y:Lio/reactivex/disposables/a;
 
     sget-object v0, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
 
@@ -3134,11 +3134,11 @@
 
     const/4 v3, 0x2
 
-    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -3166,11 +3166,11 @@
 
     move-result-object v3
 
-    new-instance v0, Lcom/vk/cameraui/builder/CameraBuilder;
+    new-instance v0, Lcom/vk/cameraui/builder/a;
 
     const-string v4, ""
 
-    invoke-direct {v0, v4, v4}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v4, v4}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/cameraui/builder/CameraParams$b;->a()Lcom/vk/cameraui/builder/CameraParams;
 
@@ -3188,7 +3188,7 @@
 
     move-object v7, p0
 
-    invoke-static/range {v2 .. v10}, Lcom/vk/cameraui/CameraUI$a;->a(Lcom/vk/cameraui/CameraUI$a;Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Lcom/vk/cameraui/BaseCameraUIView;
+    invoke-static/range {v2 .. v10}, Lcom/vk/cameraui/CameraUI$a;->a(Lcom/vk/cameraui/CameraUI$a;Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/b;ILjava/lang/Object;)Lcom/vk/cameraui/BaseCameraUIView;
 
     move-result-object v0
 
@@ -3252,10 +3252,10 @@
     invoke-direct {v4, p0}, Lcom/vk/navigation/NavigationDelegateBottom$l;-><init>(Lcom/vk/navigation/NavigationDelegateBottom;)V
 
     .line 17
-    iget-object v5, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object v5, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/c;
 
     .line 18
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/vk/navigation/NavigationDelegateBottom$d;-><init>(Landroid/content/Context;Lcom/vk/navigation/NavigationDelegateBottom$d$a;Lcom/vk/navigation/NavigationDelegateBottom$d$b;Lcom/vk/attachpicker/util/OrientationLocker;)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/vk/navigation/NavigationDelegateBottom$d;-><init>(Landroid/content/Context;Lcom/vk/navigation/NavigationDelegateBottom$d$a;Lcom/vk/navigation/NavigationDelegateBottom$d$b;Lcom/vk/attachpicker/util/c;)V
 
     const/4 v2, 0x2
 
@@ -3291,7 +3291,7 @@
 
     if-eqz v5, :cond_1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v4
 
@@ -3325,12 +3325,12 @@
 
     .line 29
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
@@ -3348,16 +3348,16 @@
 
     .line 31
     :goto_0
-    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/d;
 
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->h:Lcom/vk/navigation/NavigationDelegateBottom$b;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;Z)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;Z)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/core/fragments/FragmentImpl;ZLkotlin/jvm/b/Functions;)V
+.method public a(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/core/fragments/FragmentImpl;ZLkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -3365,8 +3365,8 @@
             "Lcom/vk/core/fragments/FragmentImpl;",
             "Lcom/vk/core/fragments/FragmentImpl;",
             "Z",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -3393,17 +3393,17 @@
 
     .line 121
     :cond_1
-    invoke-interface {p4}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p4}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     .line 122
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->c()Landroid/app/Activity;
 
     move-result-object p4
 
-    invoke-static {p4}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
+    invoke-static {p4}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
 
     .line 123
-    instance-of p4, p2, Lcom/vk/navigation/b0/FragmentWithCustomOrientation;
+    instance-of p4, p2, Lcom/vk/navigation/b0/f;
 
     if-eqz p4, :cond_2
 
@@ -3414,9 +3414,9 @@
 
     move-object v0, p2
 
-    check-cast v0, Lcom/vk/navigation/b0/FragmentWithCustomOrientation;
+    check-cast v0, Lcom/vk/navigation/b0/f;
 
-    invoke-interface {v0}, Lcom/vk/navigation/b0/FragmentWithCustomOrientation;->B2()I
+    invoke-interface {v0}, Lcom/vk/navigation/b0/f;->B2()I
 
     move-result v0
 
@@ -3444,11 +3444,11 @@
 
     .line 127
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->i()Lcom/vk/core/ui/v/UiTrackingListeners2;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->i()Lcom/vk/core/ui/v/e;
 
     move-result-object p4
 
-    invoke-interface {p4, p1, p2, p3}, Lcom/vk/core/ui/v/UiTrackingListeners3;->a(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;Z)V
+    invoke-interface {p4, p1, p2, p3}, Lcom/vk/core/ui/v/d;->a(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;Z)V
 
     .line 128
     invoke-direct {p0}, Lcom/vk/navigation/NavigationDelegateBottom;->J()V
@@ -3456,18 +3456,18 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/core/fragments/BaseFragment1;Landroidx/appcompat/widget/Toolbar;)V
+.method public a(Lcom/vk/core/fragments/b;Landroidx/appcompat/widget/Toolbar;)V
     .locals 1
 
     .line 51
-    invoke-static {p1}, Lcom/vtosters/lite/m0/ToolbarHelper;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 52
-    instance-of v0, p1, Lcom/vtosters/lite/fragments/q2/CommentsPostListFragment;
+    instance-of v0, p1, Lcom/vtosters/lite/fragments/q2/c;
 
     if-eqz v0, :cond_0
 
@@ -3490,18 +3490,18 @@
     :cond_1
     const p1, 0x7f080376
 
-    invoke-static {p2, p1}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, p1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method public a(Lcom/vk/navigation/Dismissed;)V
+.method public a(Lcom/vk/navigation/g;)V
     .locals 2
 
     .line 129
-    invoke-super {p0, p1}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/Dismissed;)V
+    invoke-super {p0, p1}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/g;)V
 
     .line 130
     instance-of v0, p1, Landroid/app/Dialog;
@@ -3516,19 +3516,19 @@
     if-eqz p1, :cond_1
 
     .line 131
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->i()Lcom/vk/core/ui/v/UiTrackingListeners2;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->i()Lcom/vk/core/ui/v/e;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/core/ui/v/UiTrackingListeners;->a(Landroid/app/Dialog;Z)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/core/ui/v/c;->a(Landroid/app/Dialog;Z)V
 
     :cond_1
     return-void
 .end method
 
-.method public a(Lme/grishka/appkit/fragments/AppKitFragment;Landroidx/appcompat/widget/Toolbar;)V
+.method public a(Ld/a/a/a/h;Landroidx/appcompat/widget/Toolbar;)V
     .locals 1
 
     .line 47
@@ -3539,7 +3539,7 @@
     if-eqz v0, :cond_0
 
     .line 48
-    invoke-virtual {p1}, Lme/grishka/appkit/fragments/AppKitFragment;->P4()Z
+    invoke-virtual {p1}, Ld/a/a/a/h;->P4()Z
 
     move-result v0
 
@@ -3559,13 +3559,13 @@
 
     if-nez v0, :cond_2
 
-    invoke-virtual {p1}, Lme/grishka/appkit/fragments/AppKitFragment;->P4()Z
+    invoke-virtual {p1}, Ld/a/a/a/h;->P4()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p1}, Lme/grishka/appkit/fragments/AppKitFragment;->R4()Z
+    invoke-virtual {p1}, Ld/a/a/a/h;->R4()Z
 
     move-result p1
 
@@ -3575,7 +3575,7 @@
     const p1, 0x7f080376
 
     .line 50
-    invoke-static {p2, p1}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, p1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     :cond_2
     return-void
@@ -3614,7 +3614,7 @@
 
     const-string v1, "activity.intent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -3629,7 +3629,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -3708,14 +3708,14 @@
     move-result-object p1
 
     .line 135
-    instance-of p2, p1, Lcom/vk/navigation/FragmentWithPrimaryTab;
+    instance-of p2, p1, Lcom/vk/navigation/i;
 
     if-eqz p2, :cond_0
 
     .line 136
-    check-cast p1, Lcom/vk/navigation/FragmentWithPrimaryTab;
+    check-cast p1, Lcom/vk/navigation/i;
 
-    invoke-interface {p1}, Lcom/vk/navigation/FragmentWithPrimaryTab;->l4()V
+    invoke-interface {p1}, Lcom/vk/navigation/i;->l4()V
 
     :cond_0
     return-void
@@ -3758,7 +3758,7 @@
     iput-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->a0:Ljava/lang/String;
 
     .line 46
-    invoke-super {p0, p1}, Lcom/vk/navigation/VKNavigationDelegate;->a(Ljava/lang/String;)V
+    invoke-super {p0, p1}, Lcom/vk/navigation/y;->a(Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -3768,13 +3768,13 @@
     .locals 2
 
     .line 81
-    sget-object v0, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
+    sget-object v0, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
 
     move-result-object v0
 
@@ -3835,9 +3835,9 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lcom/vk/stories/util/StoriesUtil;->INSTANCE:Lcom/vk/stories/util/StoriesUtil;
+    sget-object v0, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/util/StoriesUtil;->a(Landroid/view/KeyEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/stories/util/k;->a(Landroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -3845,9 +3845,9 @@
 
     .line 36
     :cond_1
-    sget-object v0, Lcom/vk/stories/util/StoriesUtil;->INSTANCE:Lcom/vk/stories/util/StoriesUtil;
+    sget-object v0, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/util/StoriesUtil;->a(Landroid/view/KeyEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/stories/util/k;->a(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -3907,13 +3907,13 @@
     .locals 2
 
     .line 84
-    sget-object v0, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
+    sget-object v0, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
 
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
 
     move-result-object v0
 
@@ -3995,7 +3995,7 @@
     .locals 1
 
     .line 33
-    invoke-super {p0}, Lcom/vk/navigation/VKNavigationDelegate;->b()V
+    invoke-super {p0}, Lcom/vk/navigation/y;->b()V
 
     const/4 v0, 0x0
 
@@ -4067,11 +4067,11 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/Dismissed;)V
+.method public b(Lcom/vk/navigation/g;)V
     .locals 2
 
     .line 63
-    invoke-super {p0, p1}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/Dismissed;)V
+    invoke-super {p0, p1}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/g;)V
 
     .line 64
     instance-of v0, p1, Landroid/app/Dialog;
@@ -4086,13 +4086,13 @@
     if-eqz p1, :cond_1
 
     .line 65
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->i()Lcom/vk/core/ui/v/UiTrackingListeners2;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->i()Lcom/vk/core/ui/v/e;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/core/ui/v/UiTrackingListeners;->a(Landroid/app/Dialog;Z)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/core/ui/v/c;->a(Landroid/app/Dialog;Z)V
 
     :cond_1
     return-void
@@ -4169,9 +4169,9 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
+    sget-object v3, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
 
-    invoke-virtual {v3}, Lcom/vk/navigation/Navigator$b;->a()Ljava/lang/Class;
+    invoke-virtual {v3}, Lcom/vk/navigation/o$b;->a()Ljava/lang/Class;
 
     move-result-object v3
 
@@ -4304,7 +4304,7 @@
     .locals 0
 
     .line 8
-    invoke-super {p0, p1}, Lcom/vk/navigation/VKNavigationDelegate;->e(I)V
+    invoke-super {p0, p1}, Lcom/vk/navigation/y;->e(I)V
 
     const/4 p1, 0x1
 
@@ -4356,7 +4356,7 @@
 
     const-string v1, "activity.intent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -4463,7 +4463,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -4503,7 +4503,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/navigation/VKNavigationDelegate;->m()V
+    invoke-super {p0}, Lcom/vk/navigation/y;->m()V
 
     .line 2
     sget-object v0, Lcom/vk/discover/DiscoverDataProvider;->d:Lcom/vk/discover/DiscoverDataProvider;
@@ -4511,16 +4511,16 @@
     invoke-virtual {v0}, Lcom/vk/discover/DiscoverDataProvider;->b()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/PlayerModel;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->g:Lcom/vk/music/player/d;
 
     iget-object v1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->h:Lcom/vk/navigation/NavigationDelegateBottom$b;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->Y:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->Y:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
 
     .line 5
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->T:Lcom/vk/cameraui/BaseCameraUIView;
@@ -4552,7 +4552,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {v0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -4602,13 +4602,13 @@
     if-ne p1, v2, :cond_1
 
     .line 3
-    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/c;
 
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->c()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/OrientationLocker;->a(Landroid/app/Activity;)V
+    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/c;->a(Landroid/app/Activity;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->T:Lcom/vk/cameraui/BaseCameraUIView;
@@ -4635,13 +4635,13 @@
     if-nez v3, :cond_4
 
     .line 6
-    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/c;
 
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->c()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/OrientationLocker;->a(Landroid/app/Activity;)V
+    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/c;->a(Landroid/app/Activity;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->T:Lcom/vk/cameraui/BaseCameraUIView;
@@ -4665,18 +4665,18 @@
     if-eqz v0, :cond_6
 
     .line 9
-    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->R:Lcom/vk/attachpicker/util/c;
 
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->c()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/OrientationLocker;->b(Landroid/app/Activity;)V
+    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/c;->b(Landroid/app/Activity;)V
 
     .line 10
-    sget-object p1, Lcom/vtosters/lite/bridges/VkAuthBridge;->INSTANCE:Lcom/vtosters/lite/bridges/VkAuthBridge;
+    sget-object p1, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/bridges/VkAuthBridge;->a()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/bridges/h;->a()Z
 
     move-result p1
 
@@ -4687,7 +4687,7 @@
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p1}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object p1
 
@@ -4816,7 +4816,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
 
     .line 7
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateBottom;->d()Lcom/vk/core/fragments/FragmentImpl;
@@ -4935,7 +4935,7 @@
     invoke-virtual {v1, v2, v0}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
     .line 9
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -4972,19 +4972,19 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/discover/FragmentWithDiscoverCache;
+    instance-of v1, v0, Lcom/vk/discover/l;
 
     if-nez v1, :cond_1
 
     move-object v0, v3
 
     :cond_1
-    check-cast v0, Lcom/vk/discover/FragmentWithDiscoverCache;
+    check-cast v0, Lcom/vk/discover/l;
 
     if-eqz v0, :cond_2
 
     .line 13
-    invoke-interface {v0}, Lcom/vk/discover/FragmentWithDiscoverCache;->t4()Z
+    invoke-interface {v0}, Lcom/vk/discover/l;->t4()Z
 
     move-result v0
 
@@ -4994,14 +4994,14 @@
     :cond_2
     sget-object v0, Lcom/vk/discover/DiscoverDataProvider;->d:Lcom/vk/discover/DiscoverDataProvider;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->b(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->b(Ljava/lang/Runnable;)V
 
     .line 15
     sget-object v0, Lcom/vk/discover/DiscoverDataProvider;->d:Lcom/vk/discover/DiscoverDataProvider;
 
     const-wide/16 v1, 0x7d0
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/ViewUtils;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     .line 16
     :cond_3
@@ -5053,14 +5053,14 @@
     move-result-object v0
 
     .line 22
-    instance-of v1, v0, Lcom/vk/navigation/FragmentWithPrimaryTab;
+    instance-of v1, v0, Lcom/vk/navigation/i;
 
     if-eqz v1, :cond_7
 
     .line 23
-    check-cast v0, Lcom/vk/navigation/FragmentWithPrimaryTab;
+    check-cast v0, Lcom/vk/navigation/i;
 
-    invoke-interface {v0}, Lcom/vk/navigation/FragmentWithPrimaryTab;->l4()V
+    invoke-interface {v0}, Lcom/vk/navigation/i;->l4()V
 
     :cond_7
     return-void
@@ -5070,7 +5070,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/navigation/VKNavigationDelegate;->r()V
+    invoke-super {p0}, Lcom/vk/navigation/y;->r()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->T:Lcom/vk/cameraui/BaseCameraUIView;
@@ -5112,7 +5112,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/navigation/VKNavigationDelegate;->t()V
+    invoke-super {p0}, Lcom/vk/navigation/y;->t()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->T:Lcom/vk/cameraui/BaseCameraUIView;
@@ -5189,7 +5189,7 @@
     goto :goto_4
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
@@ -5260,7 +5260,7 @@
 
     const-string v6, "activity.resources"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -5271,9 +5271,9 @@
     if-ne v5, v1, :cond_7
 
     .line 7
-    sget-object v5, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
+    sget-object v5, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
 
-    invoke-virtual {v5}, Lcom/vk/newsfeed/Feed2049;->d()Ljava/lang/Class;
+    invoke-virtual {v5}, Lcom/vk/newsfeed/e;->d()Ljava/lang/Class;
 
     move-result-object v5
 
@@ -5289,7 +5289,7 @@
 
     .line 8
     :cond_7
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v3
 
@@ -5318,7 +5318,7 @@
 
     .line 9
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 .end method

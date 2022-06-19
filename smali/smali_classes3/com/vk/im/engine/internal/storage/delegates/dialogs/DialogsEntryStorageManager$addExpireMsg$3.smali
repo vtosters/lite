@@ -3,7 +3,7 @@
 .source "DialogsEntryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
-        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/engine/internal/storage/models/a;",
+        "Lcom/vk/im/engine/internal/storage/models/a;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+.method public final a(Lcom/vk/im/engine/internal/storage/models/a;)Lcom/vk/im/engine/internal/storage/models/a;
     .locals 37
 
     move-object/from16 v0, p0
@@ -87,7 +87,7 @@
     move-result v5
 
     .line 4
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->k()Ljava/util/List;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/internal/storage/models/a;->k()Ljava/util/List;
 
     move-result-object v6
 
@@ -118,7 +118,7 @@
     if-ne v1, v4, :cond_2
 
     .line 6
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->k()Ljava/util/List;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/internal/storage/models/a;->k()Ljava/util/List;
 
     move-result-object v1
 
@@ -195,7 +195,7 @@
     move-object/from16 v3, p1
 
     .line 7
-    invoke-static/range {v3 .. v36}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;IIIIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/messages/DraftMsg;ZLcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/DialogThemeName;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLcom/vk/im/engine/models/MsgRequestStatus;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    invoke-static/range {v3 .. v36}, Lcom/vk/im/engine/internal/storage/models/a;->a(Lcom/vk/im/engine/internal/storage/models/a;IIIIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/messages/DraftMsg;ZLcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/f;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLcom/vk/im/engine/models/MsgRequestStatus;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/a;
 
     move-result-object v1
 
@@ -212,9 +212,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$addExpireMsg$3;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$addExpireMsg$3;->a(Lcom/vk/im/engine/internal/storage/models/a;)Lcom/vk/im/engine/internal/storage/models/a;
 
     move-result-object p1
 

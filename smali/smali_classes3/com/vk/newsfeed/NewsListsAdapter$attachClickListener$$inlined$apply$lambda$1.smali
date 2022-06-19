@@ -3,7 +3,7 @@
 .source "NewsListsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -62,11 +62,11 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/newsfeed/NewsListsAdapter2;
+    check-cast p1, Lcom/vk/newsfeed/r;
 
     if-eqz p1, :cond_0
 
@@ -80,7 +80,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/newsfeed/NewsListsAdapter$attachClickListener$$inlined$apply$lambda$1;->this$0:Lcom/vk/newsfeed/NewsListsAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsListsAdapter2;->b()Lcom/vtosters/lite/NewsfeedList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object v2
 
@@ -95,7 +95,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsListsAdapter2;->b()Lcom/vtosters/lite/NewsfeedList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object p1
 
@@ -105,7 +105,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -125,7 +125,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/NewsListsAdapter$attachClickListener$$inlined$apply$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

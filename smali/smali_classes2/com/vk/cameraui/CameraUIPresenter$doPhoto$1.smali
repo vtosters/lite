@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIPresenter$doPhoto$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -66,20 +66,20 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUI$e;->getStickersState()Lcom/vk/attachpicker/stickers/StickersState;
+    invoke-interface {v0}, Lcom/vk/cameraui/CameraUI$e;->getStickersState()Lcom/vk/attachpicker/stickers/m0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->r()Z
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->r()Z
 
     move-result v0
 
     .line 3
     iget-object v1, p0, Lcom/vk/cameraui/CameraUIPresenter$doPhoto$1;->this$0:Lcom/vk/cameraui/CameraUIPresenter;
 
-    sget-object v2, Lcom/vk/cameraui/entities/StoryRawData3;->n:Lcom/vk/cameraui/entities/StoryRawData$a;
+    sget-object v2, Lcom/vk/cameraui/entities/d;->n:Lcom/vk/cameraui/entities/d$a;
 
-    invoke-virtual {v2, v0}, Lcom/vk/cameraui/entities/StoryRawData$a;->a(Z)Lcom/vk/cameraui/entities/StoryRawData3;
+    invoke-virtual {v2, v0}, Lcom/vk/cameraui/entities/d$a;->a(Z)Lcom/vk/cameraui/entities/d;
 
     move-result-object v0
 

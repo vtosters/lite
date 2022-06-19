@@ -23,14 +23,14 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/fragments/t2/c/DialogsSelectionFragment$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/t2/c/c$a;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/fragments/t2/c/DialogsSelectionFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/t2/c/c$a;-><init>()V
 
     const/16 v1, 0x66
 
     .line 2
-    invoke-virtual {v0, p0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/app/Activity;I)V
+    invoke-virtual {v0, p0, v1}, Lcom/vk/navigation/o;->a(Landroid/app/Activity;I)V
 
     return-void
 .end method
@@ -64,11 +64,11 @@
     move-result v2
 
     .line 3
-    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
     move-object v1, p0
 
     .line 5
-    invoke-interface/range {v0 .. v6}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;ILjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface/range {v0 .. v6}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;ILjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     :cond_1

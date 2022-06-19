@@ -42,7 +42,7 @@
     .line 2
     iget-object v0, p0, Lokhttp3/internal/connection/RouteException;->firstException:Ljava/io/IOException;
 
-    invoke-static {v0, p1}, Lokhttp3/f0/Util;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lokhttp3/f0/c;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 3
     iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->lastException:Ljava/io/IOException;

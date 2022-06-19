@@ -3,7 +3,7 @@
 .source "FriendsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vtosters/lite/fragments/friends/FriendsTab;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vtosters/lite/fragments/friends/e;",
         ">;"
     }
 .end annotation
@@ -55,16 +55,16 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vtosters/lite/fragments/friends/FriendsTab;
+.method public final invoke()Lcom/vtosters/lite/fragments/friends/e;
     .locals 9
 
     .line 2
-    new-instance v8, Lcom/vtosters/lite/fragments/friends/FriendsTab;
+    new-instance v8, Lcom/vtosters/lite/fragments/friends/e;
 
     .line 3
-    new-instance v1, Lcom/vtosters/lite/fragments/gifts/BirthdaysFragment;
+    new-instance v1, Lcom/vtosters/lite/fragments/gifts/d;
 
-    invoke-direct {v1}, Lcom/vtosters/lite/fragments/gifts/BirthdaysFragment;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/gifts/d;-><init>()V
 
     const v2, 0x7f12015b
 
@@ -81,7 +81,7 @@
     move-object v0, v8
 
     .line 4
-    invoke-direct/range {v0 .. v7}, Lcom/vtosters/lite/fragments/friends/FriendsTab;-><init>(Lcom/vk/core/fragments/FragmentImpl;IILkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vtosters/lite/fragments/friends/e;-><init>(Lcom/vk/core/fragments/FragmentImpl;IILkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
 
     return-object v8
 .end method
@@ -90,7 +90,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$birthdaysTab$1;->invoke()Lcom/vtosters/lite/fragments/friends/FriendsTab;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$birthdaysTab$1;->invoke()Lcom/vtosters/lite/fragments/friends/e;
 
     move-result-object v0
 

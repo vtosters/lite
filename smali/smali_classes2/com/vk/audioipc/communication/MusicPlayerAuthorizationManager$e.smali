@@ -3,12 +3,12 @@
 .source "MusicPlayerAuthorizationManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(I)Lio/reactivex/Single;
+    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(I)Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/util/List<",
         "+",
         "Ljava/lang/String;",
@@ -62,11 +62,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$e;->a:Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;
 
-    invoke-static {p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;)Lcom/vk/audioipc/core/AudioPlayerProvider;
+    invoke-static {p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;)Lcom/vk/audioipc/core/f;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/audioipc/core/AudioPlayerProvider;->b()V
+    invoke-interface {p1}, Lcom/vk/audioipc/core/f;->b()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "BaseAttachPickerFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/PaginationHelper$o;
+.implements Lcom/vk/lists/t$o;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/lists/PaginationHelper$o<",
+        "Lcom/vk/lists/t$o<",
         "Lcom/vk/api/base/VkPaginationList<",
         "TT;>;>;"
     }
@@ -49,14 +49,14 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+.method public a(ILcom/vk/lists/t;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/api/base/VkPaginationList<",
             "TT;>;>;"
         }
@@ -67,21 +67,21 @@
 
     iget-object v0, v0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2;->this$0:Lcom/vk/attachpicker/base/BaseAttachPickerFragment;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->c(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->c(ILcom/vk/lists/t;)Lc/a/m;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
+.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             "Z)",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/api/base/VkPaginationList<",
             "TT;>;>;"
         }
@@ -104,7 +104,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p0, v0, p1}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;->a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;->a(ILcom/vk/lists/t;)Lc/a/m;
 
     move-result-object p1
 
@@ -157,27 +157,27 @@
     :cond_1
     invoke-direct {p1, p2, v1, v0}, Lcom/vk/api/base/VkPaginationList;-><init>(Ljava/util/ArrayList;IZ)V
 
-    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "Observable.just(VkPagina\u2026 < localItemsTotalCount))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
 .end method
 
-.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/api/base/VkPaginationList<",
             "TT;>;>;Z",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")V"
         }
     .end annotation
@@ -191,21 +191,21 @@
 
     new-instance v1, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;
 
-    invoke-direct {v1, p0, p3, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;-><init>(Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;Lcom/vk/lists/PaginationHelper;Z)V
+    invoke-direct {v1, p0, p3, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;-><init>(Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;Lcom/vk/lists/t;Z)V
 
     .line 5
-    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
+    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
 
     move-result-object p2
 
     .line 6
-    invoke-virtual {p1, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, p1}, Lcom/vk/core/fragments/b;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     :cond_0
     return-void

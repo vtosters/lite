@@ -74,16 +74,16 @@
     if-eqz v0, :cond_1
 
     .line 4
-    new-instance v10, Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;
+    new-instance v10, Lcom/vk/music/subscription/b;
 
     iget-object v1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;->b:Ljava/lang/String;
 
-    invoke-direct {v10, v1}, Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;-><init>(Ljava/lang/String;)V
+    invoke-direct {v10, v1}, Lcom/vk/music/subscription/b;-><init>(Ljava/lang/String;)V
 
     .line 5
     iget-object v1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;
 
-    invoke-static {v1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/MusicStatsTracker;
+    invoke-static {v1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/d;
 
     move-result-object v1
 
@@ -91,7 +91,7 @@
 
     iget-object v3, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;->c:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-    invoke-interface {v1, v2, v3}, Lcom/vk/music/stats/MusicStatsTracker;->a(Ljava/lang/String;Lcom/vk/music/stats/MusicStatsRefer;)V
+    invoke-interface {v1, v2, v3}, Lcom/vk/music/stats/d;->a(Ljava/lang/String;Lcom/vk/music/stats/c;)V
 
     .line 6
     sget-object v11, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$1$onDismiss$1;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$1$onDismiss$1;
@@ -136,20 +136,20 @@
 
     move-object v6, v13
 
-    invoke-direct/range {v1 .. v9}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;-><init>(Landroidx/appcompat/app/AppCompatActivity;Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet$b;)V
+    invoke-direct/range {v1 .. v9}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;-><init>(Landroidx/appcompat/app/AppCompatActivity;Lcom/vk/music/subscription/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;Lcom/vk/core/dialogs/bottomsheet/k/a$b;)V
 
     .line 13
-    new-instance v1, Lcom/vk/music/notifications/MusicBuySubscriptionTabletManager;
+    new-instance v1, Lcom/vk/music/notifications/c;
 
-    invoke-direct {v1, v10, v11, v12, v13}, Lcom/vk/music/notifications/MusicBuySubscriptionTabletManager;-><init>(Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;)V
+    invoke-direct {v1, v10, v11, v12, v13}, Lcom/vk/music/notifications/c;-><init>(Lcom/vk/music/subscription/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;)V
 
     .line 14
-    new-instance v2, Lcom/vk/music/notifications/MusicBuySubscriptionCompositeManager;
+    new-instance v2, Lcom/vk/music/notifications/a;
 
-    invoke-direct {v2, v14, v1}, Lcom/vk/music/notifications/MusicBuySubscriptionCompositeManager;-><init>(Lcom/vk/music/notifications/MusicBuySubscriptionPageManager;Lcom/vk/music/notifications/MusicBuySubscriptionPageManager;)V
+    invoke-direct {v2, v14, v1}, Lcom/vk/music/notifications/a;-><init>(Lcom/vk/music/notifications/b;Lcom/vk/music/notifications/b;)V
 
     .line 15
-    invoke-virtual {v2, v0}, Lcom/vk/music/notifications/MusicBuySubscriptionCompositeManager;->a(Landroidx/appcompat/app/AppCompatActivity;)V
+    invoke-virtual {v2, v0}, Lcom/vk/music/notifications/a;->a(Landroidx/appcompat/app/AppCompatActivity;)V
 
     :cond_1
     return-void

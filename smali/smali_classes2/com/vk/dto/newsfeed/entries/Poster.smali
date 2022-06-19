@@ -60,7 +60,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/Poster$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/Poster$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/entries/Poster;->F:Lcom/vk/dto/newsfeed/entries/Poster$b;
 
@@ -137,7 +137,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIIILcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Lcom/vk/dto/newsfeed/entries/Poster$Constants;ZLcom/vk/dto/newsfeed/Owner;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IIIILcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Lcom/vk/dto/newsfeed/entries/Poster$Constants;ZLcom/vk/dto/newsfeed/Owner;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
     .locals 15
 
     move/from16 v0, p12

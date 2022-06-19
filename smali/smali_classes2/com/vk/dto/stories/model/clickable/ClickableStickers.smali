@@ -3,7 +3,7 @@
 .source "ClickableSticker.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/core/serialize/a;
 
 
 # annotations
@@ -27,17 +27,17 @@
     .end annotation
 .end field
 
-.field static final synthetic h:[Lkotlin/u/KProperty5;
+.field static final synthetic h:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
-.field private final b:Lkotlin/Lazy2;
+.field private final b:Lkotlin/e;
 
-.field private final c:Lkotlin/Lazy2;
+.field private final c:Lkotlin/e;
 
-.field private final d:Lkotlin/Lazy2;
+.field private final d:Lkotlin/e;
 
 .field private final e:I
 
@@ -60,13 +60,13 @@
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/dto/stories/model/clickable/ClickableStickers;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -74,9 +74,9 @@
 
     const-string v4, "getHasQuestionSticker()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
@@ -86,7 +86,7 @@
 
     const-class v2, Lcom/vk/dto/stories/model/clickable/ClickableStickers;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -94,9 +94,9 @@
 
     const-string v4, "getHasMusicSticker()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x1
 
@@ -106,7 +106,7 @@
 
     const-class v2, Lcom/vk/dto/stories/model/clickable/ClickableStickers;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -114,9 +114,9 @@
 
     const-string v4, "getHasReplySticker()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x2
 
@@ -126,7 +126,7 @@
 
     const-class v2, Lcom/vk/dto/stories/model/clickable/ClickableStickers;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -134,21 +134,21 @@
 
     const-string v4, "getHasAppSticker()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/dto/stories/model/clickable/ClickableStickers$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/clickable/ClickableStickers$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/clickable/ClickableStickers$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->B:Lcom/vk/dto/stories/model/clickable/ClickableStickers$b;
 
@@ -188,44 +188,44 @@
 
     invoke-direct {p1, p0}, Lcom/vk/dto/stories/model/clickable/ClickableStickers$hasQuestionSticker$2;-><init>(Lcom/vk/dto/stories/model/clickable/ClickableStickers;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->a:Lkotlin/e;
 
     .line 3
     new-instance p1, Lcom/vk/dto/stories/model/clickable/ClickableStickers$hasMusicSticker$2;
 
     invoke-direct {p1, p0}, Lcom/vk/dto/stories/model/clickable/ClickableStickers$hasMusicSticker$2;-><init>(Lcom/vk/dto/stories/model/clickable/ClickableStickers;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->b:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->b:Lkotlin/e;
 
     .line 4
     new-instance p1, Lcom/vk/dto/stories/model/clickable/ClickableStickers$hasReplySticker$2;
 
     invoke-direct {p1, p0}, Lcom/vk/dto/stories/model/clickable/ClickableStickers$hasReplySticker$2;-><init>(Lcom/vk/dto/stories/model/clickable/ClickableStickers;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->c:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->c:Lkotlin/e;
 
     .line 5
     new-instance p1, Lcom/vk/dto/stories/model/clickable/ClickableStickers$hasAppSticker$2;
 
     invoke-direct {p1, p0}, Lcom/vk/dto/stories/model/clickable/ClickableStickers$hasAppSticker$2;-><init>(Lcom/vk/dto/stories/model/clickable/ClickableStickers;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->d:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->d:Lkotlin/e;
 
     return-void
 .end method
@@ -274,7 +274,7 @@
 
     .line 11
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -481,7 +481,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->g:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -711,15 +711,15 @@
 .method public final w1()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->d:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->d:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/j;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -735,15 +735,15 @@
 .method public final x1()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->b:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -759,15 +759,15 @@
 .method public final y1()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -783,15 +783,15 @@
 .method public final z1()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->c:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->c:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/dto/stories/model/clickable/ClickableStickers;->h:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

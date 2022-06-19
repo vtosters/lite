@@ -74,7 +74,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-static {p0, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {p0, p1, p2}, Lio/reactivex/internal/util/b;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     move-result-wide v0
 

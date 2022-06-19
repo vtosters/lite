@@ -3,7 +3,7 @@
 .source "SinglePhotoHolder.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/ImageViewer$a;
+.implements Lcom/vk/bridges/p$a;
 
 
 # annotations
@@ -51,7 +51,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;II)Ljava/lang/String;
+    invoke-static {p0, p1, p2}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;II)Ljava/lang/String;
 
     move-result-object p1
 
@@ -62,7 +62,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/bridges/ImageViewer$a$a;->b(Lcom/vk/bridges/ImageViewer$a;I)V
+    invoke-static {p0, p1}, Lcom/vk/bridges/p$a$a;->b(Lcom/vk/bridges/p$a;I)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     .locals 1
 
     .line 3
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->g(Lcom/vk/bridges/ImageViewer$a;)Z
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->g(Lcom/vk/bridges/p$a;)Z
 
     move-result v0
 
@@ -103,7 +103,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->c(Lcom/vk/bridges/ImageViewer$a;)Ljava/lang/Integer;
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->c(Lcom/vk/bridges/p$a;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/SinglePhotoHolder$a;->b:Lcom/vk/newsfeed/holders/attachments/SinglePhotoHolder;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -148,7 +148,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->f(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->f(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
@@ -157,7 +157,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->h(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->h(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
@@ -166,16 +166,16 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->d(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->d(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
 
-.method public g()Lcom/vk/bridges/ImageViewer$c;
+.method public g()Lcom/vk/bridges/p$c;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$c;
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$c;
 
     move-result-object v0
 
@@ -190,7 +190,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/newsfeed/holders/attachments/SinglePhotoHolder;->a(Lcom/vk/newsfeed/holders/attachments/SinglePhotoHolder;Lcom/vk/bridges/ImageViewer$d;)V
+    invoke-static {v0, v1}, Lcom/vk/newsfeed/holders/attachments/SinglePhotoHolder;->a(Lcom/vk/newsfeed/holders/attachments/SinglePhotoHolder;Lcom/vk/bridges/p$d;)V
 
     const/4 v0, -0x1
 

@@ -38,11 +38,11 @@
 
 .field private final j:Landroid/view/View;
 
-.field private final k:Lio/reactivex/disposables/CompositeDisposable;
+.field private final k:Lio/reactivex/disposables/a;
 
 .field private final l:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
 
-.field private final m:Lb/h/g/o/BetterBounceInterpolator;
+.field private final m:Lb/h/g/o/a;
 
 .field private final n:J
 
@@ -65,7 +65,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/high16 v0, 0x42300000    # 44.0f
 
@@ -103,7 +103,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_wave_container:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_wave_container:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     const-string v0, "view.findViewById(R.id.vkim_wave_container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -120,7 +120,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_cancel_container:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_cancel_container:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -128,14 +128,14 @@
 
     const-string v0, "view.findViewById(R.id.vkim_cancel_container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->b:Landroid/view/View;
 
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_audio_send:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_audio_send:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -143,14 +143,14 @@
 
     const-string v0, "view.findViewById(R.id.vkim_audio_send)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->c:Landroid/view/View;
 
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_play_pause:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_play_pause:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -158,14 +158,14 @@
 
     const-string v0, "view.findViewById(R.id.vkim_play_pause)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->d:Landroid/view/View;
 
     .line 6
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_voice_record_hold:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_voice_record_hold:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -173,14 +173,14 @@
 
     const-string v0, "view.findViewById(R.id.vkim_voice_record_hold)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->e:Landroid/view/View;
 
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_cancel_label:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_cancel_label:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -188,14 +188,14 @@
 
     const-string v0, "view.findViewById(R.id.vkim_cancel_label)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->f:Landroid/view/View;
 
     .line 8
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_cancel:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_cancel:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -203,7 +203,7 @@
 
     const-string v0, "view.findViewById(R.id.vkim_cancel)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -212,7 +212,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_cancel_arrow_img:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_cancel_arrow_img:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -220,7 +220,7 @@
 
     const-string v0, "view.findViewById(R.id.vkim_cancel_arrow_img)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -229,7 +229,7 @@
     .line 10
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_cancel_container_border:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_cancel_container_border:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -237,14 +237,14 @@
 
     const-string v0, "view.findViewById(R.id.v\u2026_cancel_container_border)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->i:Landroid/view/View;
 
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->s:Landroid/view/View;
 
-    sget v0, Lcom/vk/im/ui/R11;->vkim_cancel_mic_image:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_cancel_mic_image:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -252,16 +252,16 @@
 
     const-string v0, "view.findViewById(R.id.vkim_cancel_mic_image)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->j:Landroid/view/View;
 
     .line 12
-    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance p1, Lio/reactivex/disposables/a;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
     .line 13
     new-instance p1, Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
@@ -271,15 +271,15 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->l:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
 
     .line 14
-    new-instance p1, Lb/h/g/o/BetterBounceInterpolator;
+    new-instance p1, Lb/h/g/o/a;
 
     const/4 v0, 0x2
 
     const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
 
-    invoke-direct {p1, v0, v1, v2}, Lb/h/g/o/BetterBounceInterpolator;-><init>(ID)V
+    invoke-direct {p1, v0, v1, v2}, Lb/h/g/o/a;-><init>(ID)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->m:Lb/h/g/o/BetterBounceInterpolator;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->m:Lb/h/g/o/a;
 
     const-wide/16 v0, 0x82
 
@@ -428,14 +428,14 @@
     invoke-virtual {v2, v1}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     .line 7
-    iget-object v3, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->m:Lb/h/g/o/BetterBounceInterpolator;
+    iget-object v3, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->m:Lb/h/g/o/a;
 
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     .line 8
-    iget-object v3, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v3, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v2, v3}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v2, v3}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     .line 9
     :cond_1
@@ -478,14 +478,14 @@
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     .line 14
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->m:Lb/h/g/o/BetterBounceInterpolator;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->m:Lb/h/g/o/a;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     .line 15
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     :cond_2
     return-void
@@ -565,15 +565,15 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator$animateButtonsLayout$1$2;-><init>(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/Functions;)Landroid/animation/ValueAnimator;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/a;)Landroid/animation/ValueAnimator;
 
     .line 8
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     .line 9
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lio/reactivex/disposables/a;)V
 
     return-void
 .end method
@@ -613,9 +613,9 @@
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     return-void
 .end method
@@ -751,9 +751,9 @@
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     .line 10
     :cond_1
@@ -779,9 +779,9 @@
 
     if-eqz p1, :cond_2
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     :cond_2
     return-void
@@ -821,9 +821,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     .line 5
     :cond_1
@@ -855,9 +855,9 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     :cond_2
     return-void
@@ -905,9 +905,9 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator$animateHandFree$1$1;-><init>(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator1;
+    new-instance v2, Lcom/vk/im/ui/components/msg_send/recording/a;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/msg_send/recording/a;-><init>(Lkotlin/jvm/b/a;)V
 
     invoke-virtual {v0, v2}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
@@ -915,9 +915,9 @@
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     .line 10
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     .line 11
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->e:Landroid/view/View;
@@ -948,9 +948,9 @@
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     .line 13
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     :cond_0
     return-void
@@ -1068,9 +1068,9 @@
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     .line 20
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     .line 21
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->e:Landroid/view/View;
@@ -1094,9 +1094,9 @@
     if-eqz v0, :cond_0
 
     .line 22
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     .line 23
     :cond_0
@@ -1126,9 +1126,9 @@
     if-eqz v0, :cond_1
 
     .line 25
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
 
     :cond_1
     return-void
@@ -1176,9 +1176,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordAnimator;->k:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "AttachmentsPostingViewController.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces1;
+.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/e;
 
 
 # annotations
@@ -120,7 +120,7 @@
 
     const/16 v2, 0x2719
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     :cond_3
     return-void

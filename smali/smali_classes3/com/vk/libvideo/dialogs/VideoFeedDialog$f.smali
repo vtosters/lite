@@ -74,11 +74,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$f;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->r(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/lists/PaginatedRecyclerAdapter;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->r(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/lists/s;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/PaginatedRecyclerAdapter;->w()Z
+    invoke-virtual {p1}, Lcom/vk/lists/s;->w()Z
 
     move-result p1
 
@@ -86,11 +86,11 @@
 
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$f;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/VideoDiscoverController;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/n;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/VideoDiscoverController;->a()Z
+    invoke-virtual {p1}, Lcom/vk/libvideo/n;->a()Z
 
     move-result p1
 
@@ -116,11 +116,11 @@
     .line 5
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$f;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/v/DiscoverAdapter;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/v/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v0
 
@@ -154,11 +154,11 @@
     .line 7
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$f;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/VideoDiscoverController;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/n;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/VideoDiscoverController;->c()V
+    invoke-virtual {p1}, Lcom/vk/libvideo/n;->c()V
 
     :cond_0
     return-void

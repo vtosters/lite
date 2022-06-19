@@ -43,11 +43,11 @@
     .line 1
     iget-object p2, p0, Lcom/vk/cameraui/widgets/TabsRecycler$a;->a:Lcom/vk/cameraui/widgets/TabsRecycler;
 
-    invoke-virtual {p2}, Lcom/vk/cameraui/widgets/TabsRecycler;->getTabSnapHelper()Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
+    invoke-virtual {p2}, Lcom/vk/cameraui/widgets/TabsRecycler;->getTabSnapHelper()Lcom/vk/cameraui/widgets/a;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/vk/cameraui/widgets/TabLinearSnapHelper;->a(I)Z
+    invoke-virtual {p2, p1}, Lcom/vk/cameraui/widgets/a;->a(I)Z
 
     const/4 p1, 0x1
 

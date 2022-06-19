@@ -3,7 +3,7 @@
 .source "BaseViewerScreen.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/attachpicker/screen/BaseViewerScreen$onAnimateIn$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen$onAnimateIn$1;->this$0:Lcom/vk/attachpicker/screen/BaseViewerScreen;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->K()Lcom/vk/attachpicker/util/OrientationLocker;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->K()Lcom/vk/attachpicker/util/c;
 
     move-result-object v0
 
@@ -83,7 +83,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/util/OrientationLocker;->a(Landroid/app/Activity;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/util/c;->a(Landroid/app/Activity;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen$onAnimateIn$1;->this$0:Lcom/vk/attachpicker/screen/BaseViewerScreen;

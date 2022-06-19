@@ -1,14 +1,14 @@
 .class public final Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
-.super Lcom/vk/core/fragments/BaseMvpFragment;
+.super Lcom/vk/core/fragments/c;
 .source "MusicPlaylistFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/IdClickListener;
-.implements Lcom/vk/navigation/b0/FragmentWithMiniAudioPlayer;
-.implements Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
-.implements Lcom/vk/music/playlist/modern/MusicPlaylistContract3;
-.implements Lcom/vk/music/playlist/modern/MusicPlaylistContract;
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/k;
+.implements Lcom/vk/navigation/b0/h;
+.implements Lcom/vk/navigation/b0/a;
+.implements Lcom/vk/music/playlist/modern/e;
+.implements Lcom/vk/music/playlist/modern/a;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # annotations
@@ -21,17 +21,17 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/BaseMvpFragment<",
-        "Lcom/vk/music/playlist/modern/MusicPlaylistContract4;",
+        "Lcom/vk/core/fragments/c<",
+        "Lcom/vk/music/playlist/modern/d;",
         ">;",
-        "Lcom/vk/core/ui/IdClickListener<",
+        "Lcom/vk/core/ui/k<",
         "Lcom/vk/dto/music/MusicTrack;",
         ">;",
-        "Lcom/vk/navigation/b0/FragmentWithMiniAudioPlayer;",
-        "Lcom/vk/navigation/b0/FragmentWhiteStatusBar;",
-        "Lcom/vk/music/playlist/modern/MusicPlaylistContract3;",
-        "Lcom/vk/music/playlist/modern/MusicPlaylistContract;",
-        "Lcom/vk/core/ui/themes/Themable;"
+        "Lcom/vk/navigation/b0/h;",
+        "Lcom/vk/navigation/b0/a;",
+        "Lcom/vk/music/playlist/modern/e;",
+        "Lcom/vk/music/playlist/modern/a;",
+        "Lcom/vk/core/ui/themes/f;"
     }
 .end annotation
 
@@ -39,11 +39,11 @@
 # instance fields
 .field private G:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
-.field private H:Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;
+.field private H:Lcom/vk/music/playlist/modern/h/f;
 
-.field private I:Lcom/vk/lists/PaginationHelper;
+.field private I:Lcom/vk/lists/t;
 
-.field private final J:Lcom/vk/music/view/SmallPlayerHelper;
+.field private final J:Lcom/vk/music/view/t;
 
 .field private K:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -51,11 +51,11 @@
 
 .field private M:Z
 
-.field private N:Lkotlin/jvm/b/Functions;
+.field private N:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -63,32 +63,32 @@
 
 .field private O:Lcom/vk/core/ui/TabletUiHelper;
 
-.field private final P:Lcom/vk/music/player/PlayerModel;
+.field private final P:Lcom/vk/music/player/d;
 
 .field private final Q:Lcom/vk/music/common/BoomModel;
 
-.field private final R:Lcom/vk/music/l/ModernMusicTrackModel;
+.field private final R:Lcom/vk/music/l/a;
 
-.field private S:Lcom/vk/music/playlist/ModernPlaylistModel;
+.field private S:Lcom/vk/music/playlist/b;
 
-.field private final T:Lcom/vk/music/common/MusicAppStateCacheHelper;
+.field private final T:Lcom/vk/music/common/d;
 
-.field private final U:Lcom/vk/music/stats/MusicStatsTracker;
+.field private final U:Lcom/vk/music/stats/d;
 
-.field private final V:Lkotlin/jvm/b/Functions;
+.field private final V:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Lcom/vk/dto/music/Playlist;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private W:Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
+.field private W:Lcom/vk/music/ui/track/b/f;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper<",
+            "Lcom/vk/music/ui/track/b/f<",
             "Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;",
             ">;"
         }
@@ -97,10 +97,10 @@
 
 .field private final X:Landroid/os/Handler;
 
-.field private Y:Lcom/vk/lists/PaginatedRecyclerAdapter;
+.field private Y:Lcom/vk/lists/s;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/lists/PaginatedRecyclerAdapter<",
+            "Lcom/vk/lists/s<",
             "Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;",
             ">;"
         }
@@ -118,7 +118,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -127,10 +127,10 @@
     .locals 4
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/music/view/SmallPlayerHelper;
+    new-instance v0, Lcom/vk/music/view/t;
 
     const/4 v1, 0x0
 
@@ -138,63 +138,63 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/music/view/SmallPlayerHelper;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/music/view/t;-><init>(ZILkotlin/jvm/internal/i;)V
 
-    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->J:Lcom/vk/music/view/SmallPlayerHelper;
+    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->J:Lcom/vk/music/view/t;
 
     .line 3
-    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
+    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->P:Lcom/vk/music/player/PlayerModel;
+    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->P:Lcom/vk/music/player/d;
 
     .line 4
-    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
+    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->a()Lcom/vk/music/common/BoomModel;
+    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->a()Lcom/vk/music/common/BoomModel;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->Q:Lcom/vk/music/common/BoomModel;
 
     .line 5
-    invoke-static {}, Lcom/vk/music/common/Music$e;->a()Lcom/vk/music/l/ModernMusicTrackModel;
+    invoke-static {}, Lcom/vk/music/common/c$e;->a()Lcom/vk/music/l/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->R:Lcom/vk/music/l/ModernMusicTrackModel;
+    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->R:Lcom/vk/music/l/a;
 
     .line 6
-    sget-object v0, Lcom/vk/music/common/Music;->INSTANCE:Lcom/vk/music/common/Music;
+    sget-object v0, Lcom/vk/music/common/c;->e:Lcom/vk/music/common/c;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/Music;->d()Lcom/vk/music/common/MusicAppStateCacheHelper;
+    invoke-virtual {v0}, Lcom/vk/music/common/c;->d()Lcom/vk/music/common/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->T:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->T:Lcom/vk/music/common/d;
 
     .line 7
-    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
+    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->h()Lcom/vk/music/stats/MusicStatsTracker;
+    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->h()Lcom/vk/music/stats/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->U:Lcom/vk/music/stats/MusicStatsTracker;
+    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->U:Lcom/vk/music/stats/d;
 
     .line 8
     new-instance v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$playlistProvider$1;
 
     invoke-direct {v0, p0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$playlistProvider$1;-><init>(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)V
 
-    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->V:Lkotlin/jvm/b/Functions;
+    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->V:Lkotlin/jvm/b/a;
 
     .line 9
     new-instance v0, Landroid/os/Handler;
@@ -254,11 +254,11 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->S:Lcom/vk/music/playlist/ModernPlaylistModel;
+    iget-object v1, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->S:Lcom/vk/music/playlist/b;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/ModernPlaylistModel;->b()I
+    invoke-virtual {v1}, Lcom/vk/music/playlist/b;->b()I
 
     move-result v1
 
@@ -277,7 +277,7 @@
     const-string v0, "playlistModel"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -297,13 +297,13 @@
     .locals 2
 
     .line 47
-    sget-object v0, Lcom/vk/music/ui/common/MusicUI1;->INSTANCE:Lcom/vk/music/ui/common/MusicUI1;
+    sget-object v0, Lcom/vk/music/ui/common/m;->a:Lcom/vk/music/ui/common/m;
 
     new-instance v1, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$showUnfollowDialog$1;
 
     invoke-direct {v1, p0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$showUnfollowDialog$1;-><init>(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)V
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/music/ui/common/MusicUI1;->a(Landroid/content/Context;Lcom/vk/dto/music/Playlist;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/music/ui/common/m;->a(Landroid/content/Context;Lcom/vk/dto/music/Playlist;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -326,38 +326,38 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;Lkotlin/jvm/b/Functions;)V
+.method public static final synthetic a(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;Lkotlin/jvm/b/a;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->N:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->N:Lkotlin/jvm/b/a;
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lkotlin/jvm/b/Functions;
+.method public static final synthetic b(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lkotlin/jvm/b/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->N:Lkotlin/jvm/b/Functions;
+    iget-object p0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->N:Lkotlin/jvm/b/a;
 
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginationHelper;
+.method public static final synthetic c(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/t;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->I:Lcom/vk/lists/PaginationHelper;
+    iget-object p0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->I:Lcom/vk/lists/t;
 
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginatedRecyclerAdapter;
+.method public static final synthetic d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/s;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->Y:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object p0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->Y:Lcom/vk/lists/s;
 
     return-object p0
 .end method
@@ -425,23 +425,23 @@
     invoke-virtual {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;->A1()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v0, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->s()V
+    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/d;->s()V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->I:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->I:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
 
     :cond_1
     return-void
@@ -499,34 +499,34 @@
     if-eqz v6, :cond_9
 
     .line 14
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_9
 
-    invoke-virtual {v1, v6}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->c(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-virtual {v1, v6}, Lcom/vk/music/playlist/modern/d;->c(Lcom/vk/dto/music/MusicTrack;)V
 
     goto/16 :goto_3
 
     .line 15
     :sswitch_0
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->e()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->e()Lcom/vk/dto/music/Playlist;
 
     move-result-object v13
 
     :cond_0
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
@@ -535,22 +535,22 @@
     if-eqz v1, :cond_9
 
     .line 16
-    invoke-static {v13}, Lcom/vk/music/playlist/PlaylistsExt;->c(Lcom/vk/dto/music/Playlist;)Z
+    invoke-static {v13}, Lcom/vk/music/playlist/e;->c(Lcom/vk/dto/music/Playlist;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 17
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_9
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->r()V
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->r()V
 
     goto/16 :goto_3
 
@@ -562,19 +562,19 @@
 
     .line 19
     :sswitch_1
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v2, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v2}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->e()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v2}, Lcom/vk/music/playlist/modern/d;->e()Lcom/vk/dto/music/Playlist;
 
     move-result-object v13
 
@@ -584,7 +584,7 @@
     if-eqz v13, :cond_9
 
     .line 20
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     .line 21
     invoke-virtual {v13}, Lcom/vk/dto/music/Playlist;->u1()Z
@@ -600,17 +600,17 @@
 
     move-result-object v3
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v1
 
-    invoke-virtual {v2, v3, v13, v1}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Lcom/vk/dto/music/Playlist;Lcom/vk/music/stats/MusicStatsRefer;)V
+    invoke-virtual {v2, v3, v13, v1}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Lcom/vk/dto/music/Playlist;Lcom/vk/music/stats/c;)V
 
     goto/16 :goto_3
 
     .line 23
     :cond_3
-    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
+    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
 
     move-result-object v4
 
@@ -620,7 +620,7 @@
 
     const-string v1, "requireActivity()"
 
-    invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v6, v13, Lcom/vk/dto/music/Playlist;->b:I
 
@@ -636,25 +636,25 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v4 .. v12}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v4 .. v12}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     goto/16 :goto_3
 
     .line 24
     :sswitch_2
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v2, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v2, :cond_4
 
-    invoke-virtual {v2}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->e()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v2}, Lcom/vk/music/playlist/modern/d;->e()Lcom/vk/dto/music/Playlist;
 
     move-result-object v2
 
@@ -675,10 +675,10 @@
     if-eqz v9, :cond_9
 
     .line 25
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     .line 26
-    const-class v3, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModelImpl;
+    const-class v3, Lcom/vk/music/bottomsheets/playlist/b;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -686,20 +686,20 @@
 
     const-string v4, "PlaylistBottomSheetModel\u2026pl::class.java.simpleName"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3, v2}, Lcom/vk/music/common/Music$e;->a(Ljava/lang/String;Lcom/vk/dto/music/Playlist;)Lcom/vk/music/playlist/ModernPlaylistModel;
+    invoke-static {v3, v2}, Lcom/vk/music/common/c$e;->a(Ljava/lang/String;Lcom/vk/dto/music/Playlist;)Lcom/vk/music/playlist/b;
 
     move-result-object v6
 
     .line 27
-    new-instance v10, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModelImpl;
+    new-instance v10, Lcom/vk/music/bottomsheets/playlist/b;
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v4
 
-    iget-object v7, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->P:Lcom/vk/music/player/PlayerModel;
+    iget-object v7, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->P:Lcom/vk/music/player/d;
 
     iget-object v8, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->Q:Lcom/vk/music/common/BoomModel;
 
@@ -707,46 +707,46 @@
 
     move-object v5, v2
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModelImpl;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/dto/music/Playlist;Lcom/vk/music/playlist/ModernPlaylistModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/music/bottomsheets/playlist/b;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/dto/music/Playlist;Lcom/vk/music/playlist/b;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;)V
 
     .line 28
     new-instance v1, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;
 
-    invoke-direct {v1, v2, v10}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;-><init>(Lcom/vk/dto/music/Playlist;Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModel;)V
+    invoke-direct {v1, v2, v10}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;-><init>(Lcom/vk/dto/music/Playlist;Lcom/vk/music/bottomsheets/playlist/a;)V
 
     .line 29
     invoke-virtual {v1}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;->a()Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;
 
     .line 30
-    invoke-static {v1, v9, v13, v12, v13}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;->a(Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/MusicAction$a;ILjava/lang/Object;)V
+    invoke-static {v1, v9, v13, v12, v13}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;->a(Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/a$a;ILjava/lang/Object;)V
 
     goto/16 :goto_3
 
     .line 31
     :sswitch_3
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_9
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->q()V
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->q()V
 
     goto/16 :goto_3
 
     .line 32
     :sswitch_4
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_9
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->r()V
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->r()V
 
     goto/16 :goto_3
 
@@ -758,20 +758,20 @@
 
     .line 34
     :sswitch_6
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_5
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->e()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->e()Lcom/vk/dto/music/Playlist;
 
     move-result-object v13
 
     :cond_5
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
@@ -780,7 +780,7 @@
     if-eqz v1, :cond_9
 
     .line 35
-    invoke-static {v13}, Lcom/vk/music/playlist/PlaylistsExt;->g(Lcom/vk/dto/music/Playlist;)Z
+    invoke-static {v13}, Lcom/vk/music/playlist/e;->g(Lcom/vk/dto/music/Playlist;)Z
 
     move-result v2
 
@@ -793,21 +793,21 @@
 
     .line 37
     :cond_6
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_9
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->r()V
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->r()V
 
     goto/16 :goto_3
 
     .line 38
     :sswitch_7
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
@@ -820,57 +820,57 @@
     if-eqz v1, :cond_9
 
     .line 39
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v2, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v2, :cond_9
 
-    invoke-virtual {v2, v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->b(Landroid/content/Context;)V
+    invoke-virtual {v2, v1}, Lcom/vk/music/playlist/modern/d;->b(Landroid/content/Context;)V
 
     goto/16 :goto_3
 
     .line 40
     :sswitch_8
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_9
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, v2}, Lcom/vk/music/playlist/modern/d;->a(Landroid/content/Context;)V
 
     goto :goto_3
 
     .line 41
     :sswitch_9
-    iget-object v1, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->I:Lcom/vk/lists/PaginationHelper;
+    iget-object v1, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->I:Lcom/vk/lists/t;
 
     if-eqz v1, :cond_9
 
-    invoke-virtual {v1}, Lcom/vk/lists/PaginationHelper;->h()V
+    invoke-virtual {v1}, Lcom/vk/lists/t;->h()V
 
     goto :goto_3
 
     .line 42
     :sswitch_a
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v1
 
@@ -882,15 +882,15 @@
     move-object v2, v13
 
     :goto_1
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_8
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->e()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->e()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
@@ -902,7 +902,7 @@
     move-object v14, v13
 
     :goto_2
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v15
 
@@ -915,11 +915,11 @@
     .line 43
     new-instance v11, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
 
-    iget-object v3, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->R:Lcom/vk/music/l/ModernMusicTrackModel;
+    iget-object v3, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->R:Lcom/vk/music/l/a;
 
     iget-object v4, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->Q:Lcom/vk/music/common/BoomModel;
 
-    iget-object v5, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->P:Lcom/vk/music/player/PlayerModel;
+    iget-object v5, v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->P:Lcom/vk/music/player/d;
 
     const/4 v7, 0x0
 
@@ -939,7 +939,7 @@
 
     move-object/from16 v11, v16
 
-    invoke-direct/range {v1 .. v11}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v11}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Ljava/lang/Object;Lkotlin/jvm/b/b;ZZILkotlin/jvm/internal/i;)V
 
     .line 44
     invoke-virtual {v12, v14}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lcom/vk/dto/music/Playlist;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
@@ -947,7 +947,7 @@
     const/4 v1, 0x2
 
     .line 45
-    invoke-static {v12, v15, v13, v1, v13}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/MusicAction$a;ILjava/lang/Object;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
+    invoke-static {v12, v15, v13, v1, v13}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/a$a;ILjava/lang/Object;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
 
     goto :goto_3
 
@@ -1002,34 +1002,34 @@
     .end annotation
 
     .line 11
-    new-instance p2, Lcom/vk/music/fragment/EditPlaylistFragment$b;
+    new-instance p2, Lcom/vk/music/fragment/c$b;
 
-    invoke-direct {p2}, Lcom/vk/music/fragment/EditPlaylistFragment$b;-><init>()V
+    invoke-direct {p2}, Lcom/vk/music/fragment/c$b;-><init>()V
 
     .line 12
-    invoke-virtual {p2, p1}, Lcom/vk/music/fragment/EditPlaylistFragment$b;->a(Lcom/vk/dto/music/Playlist;)Lcom/vk/music/fragment/EditPlaylistFragment$b;
+    invoke-virtual {p2, p1}, Lcom/vk/music/fragment/c$b;->a(Lcom/vk/dto/music/Playlist;)Lcom/vk/music/fragment/c$b;
 
     .line 13
-    invoke-virtual {p2, p0}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {p2, p0}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/playlist/modern/PlaylistScreenData;Lcom/vk/music/player/PlayerModel;)V
+.method public a(Lcom/vk/music/playlist/modern/g;Lcom/vk/music/player/d;)V
     .locals 2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/f;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/music/ui/common/MusicViewHolder;->a(Ljava/lang/Object;I)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/music/ui/common/o;->a(Ljava/lang/Object;I)V
 
     .line 7
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->b()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->b()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
@@ -1046,7 +1046,7 @@
 
     new-instance v1, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$g;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$g;-><init>(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;Lcom/vk/music/playlist/modern/PlaylistScreenData;Lcom/vk/music/player/PlayerModel;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$g;-><init>(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;Lcom/vk/music/playlist/modern/g;Lcom/vk/music/player/d;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -1058,7 +1058,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/PlaylistScreenData;Lcom/vk/music/player/PlayerModel;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/g;Lcom/vk/music/player/d;)V
 
     :cond_2
     :goto_0
@@ -1101,13 +1101,13 @@
     return-void
 .end method
 
-.method public b(Lio/reactivex/disposables/Disposable;)V
+.method public b(Lio/reactivex/disposables/b;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
 
     :cond_0
     return-void
@@ -1142,7 +1142,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
@@ -1150,7 +1150,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$c;-><init>(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)V
 
-    invoke-static {p1, v0}, Lcom/vk/promo/music/MusicPromoHelper;->a(Landroid/content/Context;Ljava/lang/Runnable;)V
+    invoke-static {p1, v0}, Lcom/vk/promo/music/a;->a(Landroid/content/Context;Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -1189,9 +1189,9 @@
     if-ne p2, v0, :cond_2
 
     .line 3
-    iget-object p2, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->T:Lcom/vk/music/common/MusicAppStateCacheHelper;
+    iget-object p2, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->T:Lcom/vk/music/common/d;
 
-    invoke-static {p3, p1, p2}, Lcom/vk/music/attach/AttachMusicActivity;->a(Landroid/content/Intent;Ljava/lang/String;Lcom/vk/music/common/MusicAppStateCacheHelper;)Ljava/util/ArrayList;
+    invoke-static {p3, p1, p2}, Lcom/vk/music/attach/AttachMusicActivity;->a(Landroid/content/Intent;Ljava/lang/String;Lcom/vk/music/common/d;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -1204,15 +1204,15 @@
     if-eqz p1, :cond_2
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast p2, Lcom/vk/music/playlist/modern/d;
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p2, p1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->a(Ljava/util/List;)V
+    invoke-virtual {p2, p1}, Lcom/vk/music/playlist/modern/d;->a(Ljava/util/List;)V
 
     :cond_2
     :goto_0
@@ -1223,7 +1223,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/View;)V
 
     return-void
 .end method
@@ -1242,11 +1242,11 @@
     invoke-virtual {v0}, Lcom/vk/core/ui/TabletUiHelper;->a()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/f;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/playlist/modern/h/f;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 4
     :cond_0
@@ -1274,7 +1274,7 @@
     const-string p1, "tabletHelper"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1285,7 +1285,7 @@
     .locals 13
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -1296,7 +1296,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v0, v1}, Lcom/vk/core/util/BundleExt;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
+    invoke-static {p1, v0, v1}, Lcom/vk/core/util/n;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
 
     move-result p1
 
@@ -1309,7 +1309,7 @@
 
     const/4 v2, -0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/BundleExt;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/n;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
 
     move-result v0
 
@@ -1358,16 +1358,16 @@
 
     .line 6
     :goto_1
-    const-class v3, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    const-class v3, Lcom/vk/music/playlist/modern/d;
 
-    invoke-static {v3, p1, v0, v1, v6}, Lcom/vk/music/common/Music$e;->a(Ljava/lang/Class;IILjava/lang/String;Lcom/vk/dto/music/Playlist;)Lcom/vk/music/playlist/ModernPlaylistModel;
+    invoke-static {v3, p1, v0, v1, v6}, Lcom/vk/music/common/c$e;->a(Ljava/lang/Class;IILjava/lang/String;Lcom/vk/dto/music/Playlist;)Lcom/vk/music/playlist/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->S:Lcom/vk/music/playlist/ModernPlaylistModel;
+    iput-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->S:Lcom/vk/music/playlist/b;
 
     .line 7
-    new-instance v0, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    new-instance v0, Lcom/vk/music/playlist/modern/d;
 
     .line 8
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -1393,10 +1393,10 @@
 
     .line 9
     :goto_2
-    iget-object v9, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->P:Lcom/vk/music/player/PlayerModel;
+    iget-object v9, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->P:Lcom/vk/music/player/d;
 
     .line 10
-    iget-object v10, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->S:Lcom/vk/music/playlist/ModernPlaylistModel;
+    iget-object v10, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->S:Lcom/vk/music/playlist/b;
 
     if-eqz v10, :cond_3
 
@@ -1404,7 +1404,7 @@
     iget-object v11, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->Q:Lcom/vk/music/common/BoomModel;
 
     .line 12
-    iget-object v12, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->U:Lcom/vk/music/stats/MusicStatsTracker;
+    iget-object v12, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->U:Lcom/vk/music/stats/d;
 
     move-object v4, v0
 
@@ -1413,15 +1413,15 @@
     move-object v8, p0
 
     .line 13
-    invoke-direct/range {v4 .. v12}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;-><init>(Lcom/vk/music/playlist/modern/MusicPlaylistContract3;Lcom/vk/dto/music/Playlist;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/playlist/modern/MusicPlaylistContract;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/playlist/ModernPlaylistModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/stats/MusicStatsTracker;)V
+    invoke-direct/range {v4 .. v12}, Lcom/vk/music/playlist/modern/d;-><init>(Lcom/vk/music/playlist/modern/e;Lcom/vk/dto/music/Playlist;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/playlist/modern/a;Lcom/vk/music/player/d;Lcom/vk/music/playlist/b;Lcom/vk/music/common/BoomModel;Lcom/vk/music/stats/d;)V
 
     .line 14
-    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
+    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
 
     const-string v0, "playlist_detail_group"
 
     .line 15
-    invoke-static {p1, v0}, Lcom/vk/profile/e/ProfileTracker1;->b(ILjava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/profile/e/f;->b(ILjava/lang/String;)V
 
     return-void
 
@@ -1429,7 +1429,7 @@
     const-string p1, "playlistModel"
 
     .line 16
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -1440,7 +1440,7 @@
     move-object/from16 v6, p0
 
     .line 1
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -1481,7 +1481,7 @@
     move-result-object v14
 
     .line 4
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v0
 
@@ -1489,22 +1489,22 @@
 
     if-eqz v0, :cond_8
 
-    check-cast v0, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v0, Lcom/vk/music/playlist/modern/d;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->a()Lcom/vk/music/playlist/ModernPlaylistModel;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/d;->a()Lcom/vk/music/playlist/b;
 
     move-result-object v3
 
     .line 5
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    check-cast v0, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v0, Lcom/vk/music/playlist/modern/d;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->r0()Lcom/vk/music/player/PlayerModel;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/d;->r0()Lcom/vk/music/player/d;
 
     move-result-object v23
 
@@ -1515,7 +1515,7 @@
     iget-boolean v1, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->M:Z
 
     .line 8
-    iget-object v2, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->V:Lkotlin/jvm/b/Functions;
+    iget-object v2, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->V:Lkotlin/jvm/b/a;
 
     move-object v0, v8
 
@@ -1524,7 +1524,7 @@
     move-object/from16 v5, p0
 
     .line 9
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/Functions;Lcom/vk/music/playlist/ModernPlaylistModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/core/ui/IdClickListener;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/a;Lcom/vk/music/playlist/b;Lcom/vk/music/player/d;Lcom/vk/core/ui/k;)V
 
     .line 10
     invoke-virtual {v8}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->l()V
@@ -1532,7 +1532,7 @@
     iput-object v8, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->G:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
     .line 11
-    new-instance v0, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
+    new-instance v0, Lcom/vk/music/ui/track/b/f;
 
     .line 12
     iget-object v1, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->G:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
@@ -1555,23 +1555,23 @@
     move-object/from16 v18, v1
 
     .line 14
-    invoke-direct/range {v16 .. v22}, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;-><init>(Lcom/vk/music/player/PlayerModel;Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions1;Landroid/os/Handler;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v16 .. v22}, Lcom/vk/music/ui/track/b/f;-><init>(Lcom/vk/music/player/d;Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/c;Landroid/os/Handler;ILkotlin/jvm/internal/i;)V
 
-    iput-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->W:Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
+    iput-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->W:Lcom/vk/music/ui/track/b/f;
 
     .line 15
-    new-instance v0, Lcom/vk/lists/PaginatedRecyclerAdapter;
+    new-instance v0, Lcom/vk/lists/s;
 
     iget-object v9, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->G:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
     .line 16
-    sget-object v10, Lcom/vk/lists/FooterErrorViewProvider;->a:Lcom/vk/lists/FooterErrorViewProvider;
+    sget-object v10, Lcom/vk/lists/k;->a:Lcom/vk/lists/k;
 
     .line 17
-    sget-object v11, Lcom/vk/lists/FooterLoadingViewProvider;->a:Lcom/vk/lists/FooterLoadingViewProvider;
+    sget-object v11, Lcom/vk/lists/l;->a:Lcom/vk/lists/l;
 
     .line 18
-    sget-object v12, Lcom/vk/lists/FooterEmptyViewProvider;->a:Lcom/vk/lists/FooterEmptyViewProvider;
+    sget-object v12, Lcom/vk/lists/j;->a:Lcom/vk/lists/j;
 
     .line 19
     new-instance v13, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$e;
@@ -1581,14 +1581,14 @@
     move-object v8, v0
 
     .line 20
-    invoke-direct/range {v8 .. v13}, Lcom/vk/lists/PaginatedRecyclerAdapter;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lcom/vk/lists/FooterErrorViewProvider;Lcom/vk/lists/FooterLoadingViewProvider;Lcom/vk/lists/FooterEmptyViewProvider;Lcom/vk/lists/OnRetryClickListener;)V
+    invoke-direct/range {v8 .. v13}, Lcom/vk/lists/s;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lcom/vk/lists/k;Lcom/vk/lists/l;Lcom/vk/lists/j;Lcom/vk/lists/r;)V
 
-    iput-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->Y:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iput-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->Y:Lcom/vk/lists/s;
 
     const-string v0, "v"
 
     .line 21
-    invoke-static {v14, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v9, 0x7f0a0898
 
@@ -1604,7 +1604,7 @@
 
     move-object v8, v14
 
-    invoke-static/range {v8 .. v13}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v8 .. v13}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1618,9 +1618,9 @@
     if-eqz v0, :cond_1
 
     .line 23
-    new-instance v0, Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistTabletToolbarHolder;
+    new-instance v0, Lcom/vk/music/playlist/modern/holders/toolbar/a;
 
-    invoke-direct {v0, v14, v6}, Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistTabletToolbarHolder;-><init>(Landroid/view/View;Lcom/vk/core/ui/IdClickListener;)V
+    invoke-direct {v0, v14, v6}, Lcom/vk/music/playlist/modern/holders/toolbar/a;-><init>(Landroid/view/View;Lcom/vk/core/ui/k;)V
 
     goto :goto_1
 
@@ -1628,7 +1628,7 @@
     :cond_1
     new-instance v8, Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistPhoneToolbarHolder;
 
-    iget-object v3, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->V:Lkotlin/jvm/b/Functions;
+    iget-object v3, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->V:Lkotlin/jvm/b/a;
 
     move-object v0, v8
 
@@ -1638,18 +1638,18 @@
 
     move-object/from16 v5, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistPhoneToolbarHolder;-><init>(Landroid/view/View;Lcom/vk/music/player/PlayerModel;Lkotlin/jvm/b/Functions;Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/IdClickListener;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistPhoneToolbarHolder;-><init>(Landroid/view/View;Lcom/vk/music/player/d;Lkotlin/jvm/b/a;Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/k;)V
 
     .line 25
     :goto_1
-    iput-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;
+    iput-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/f;
 
     .line 26
-    iget-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;
+    iget-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/f;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/music/ui/common/MusicViewHolder;->e0()V
+    invoke-virtual {v0}, Lcom/vk/music/ui/common/o;->e0()V
 
     :cond_2
     const v9, 0x7f0a0d03
@@ -1667,7 +1667,7 @@
 
     move-object v8, v14
 
-    invoke-static/range {v8 .. v13}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v8 .. v13}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1682,7 +1682,7 @@
 
     const-string v1, "v.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0701b5
 
@@ -1691,119 +1691,119 @@
     move-result v0
 
     .line 29
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/lists/PaginationHelper$o;
+    check-cast v2, Lcom/vk/lists/t$o;
 
-    invoke-static {v2}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-static {v2}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
 
     move-result-object v2
 
     const/16 v3, 0x21
 
     .line 30
-    invoke-virtual {v2, v3}, Lcom/vk/lists/PaginationHelper$k;->b(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v2, v3}, Lcom/vk/lists/t$k;->b(I)Lcom/vk/lists/t$k;
 
     const/16 v4, 0x64
 
     .line 31
-    invoke-virtual {v2, v4}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v2, v4}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
 
     .line 32
-    new-instance v4, Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;
+    new-instance v4, Lcom/vk/catalog2/core/util/c$b;
 
     invoke-virtual {v14}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5}, Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v5}, Lcom/vk/catalog2/core/util/c$b;-><init>(Landroid/content/Context;)V
 
     const/4 v1, 0x1
 
     .line 33
-    invoke-virtual {v4, v1}, Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;->a(Z)Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;
+    invoke-virtual {v4, v1}, Lcom/vk/catalog2/core/util/c$b;->a(Z)Lcom/vk/catalog2/core/util/c$b;
 
     const v5, 0x7f1207f0
 
     const/16 v8, 0x68
 
     .line 34
-    invoke-virtual {v4, v8, v5}, Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;->a(II)Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;
+    invoke-virtual {v4, v8, v5}, Lcom/vk/catalog2/core/util/c$b;->a(II)Lcom/vk/catalog2/core/util/c$b;
 
     const v5, 0x7f1207e6
 
     const/16 v9, 0xf
 
     .line 35
-    invoke-virtual {v4, v9, v5}, Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;->a(II)Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;
+    invoke-virtual {v4, v9, v5}, Lcom/vk/catalog2/core/util/c$b;->a(II)Lcom/vk/catalog2/core/util/c$b;
 
     .line 36
-    invoke-virtual {v4, v8, v7}, Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;->a(IZ)Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;
+    invoke-virtual {v4, v8, v7}, Lcom/vk/catalog2/core/util/c$b;->a(IZ)Lcom/vk/catalog2/core/util/c$b;
 
     .line 37
-    invoke-virtual {v4, v9, v7}, Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;->a(IZ)Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;
+    invoke-virtual {v4, v9, v7}, Lcom/vk/catalog2/core/util/c$b;->a(IZ)Lcom/vk/catalog2/core/util/c$b;
 
     .line 38
-    invoke-virtual {v4}, Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration$b;->a()Lcom/vk/catalog2/core/util/CatalogErrorViewConfiguration;
+    invoke-virtual {v4}, Lcom/vk/catalog2/core/util/c$b;->a()Lcom/vk/catalog2/core/util/c;
 
     move-result-object v4
 
     .line 39
-    invoke-virtual {v2, v4}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/ErrorViewConfiguration;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v2, v4}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/i;)Lcom/vk/lists/t$k;
 
     .line 40
-    invoke-virtual {v2, v3}, Lcom/vk/lists/PaginationHelper$k;->d(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v2, v3}, Lcom/vk/lists/t$k;->d(I)Lcom/vk/lists/t$k;
 
     .line 41
     new-instance v3, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$f;
 
     invoke-direct {v3, v0, v6}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$f;-><init>(ILcom/vk/music/playlist/modern/MusicPlaylistFragment;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PreloadCallback;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v2, v3}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/y;)Lcom/vk/lists/t$k;
 
     .line 42
     iget-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->G:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
-    invoke-virtual {v2, v0}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PaginationHelper$l;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v2, v0}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/t$l;)Lcom/vk/lists/t$k;
 
     .line 43
     iget-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->Z:Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;
 
-    invoke-virtual {v2, v0}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PaginationHelper$q;)Lcom/vk/lists/PaginationHelper;
+    invoke-virtual {v2, v0}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/t$q;)Lcom/vk/lists/t;
 
     move-result-object v0
 
-    iput-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->I:Lcom/vk/lists/PaginationHelper;
+    iput-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->I:Lcom/vk/lists/t;
 
     .line 44
-    iget-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->W:Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
+    iget-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->W:Lcom/vk/music/ui/track/b/f;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;->b()V
+    invoke-virtual {v0}, Lcom/vk/music/ui/track/b/f;->b()V
 
     .line 45
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    iget-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->J:Lcom/vk/music/view/SmallPlayerHelper;
+    iget-object v0, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->J:Lcom/vk/music/view/t;
 
     const-string v2, "view"
 
-    invoke-static {v14, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v2, v6, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->M:Z
 
     xor-int/2addr v1, v2
 
-    invoke-virtual {v0, v14, v1}, Lcom/vk/music/view/SmallPlayerHelper;->a(Landroid/view/View;Z)Landroid/view/View;
+    invoke-virtual {v0, v14, v1}, Lcom/vk/music/view/t;->a(Landroid/view/View;Z)Landroid/view/View;
 
     move-result-object v14
 
@@ -1811,9 +1811,9 @@
     const-string v0, "contentView"
 
     .line 46
-    invoke-static {v14, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/vk/promo/music/MusicPromoHelper;->b()Z
+    invoke-static {}, Lcom/vk/promo/music/a;->b()Z
 
     move-result v0
 
@@ -1830,25 +1830,25 @@
     const-string v0, "playingDrawableHelper"
 
     .line 47
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v15
 
     .line 48
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v15
 
     .line 49
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v15
 
     .line 50
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v15
 .end method
@@ -1857,7 +1857,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->G:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
@@ -1868,31 +1868,31 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->J:Lcom/vk/music/view/SmallPlayerHelper;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->J:Lcom/vk/music/view/t;
 
-    invoke-virtual {v0}, Lcom/vk/music/view/SmallPlayerHelper;->f()V
+    invoke-virtual {v0}, Lcom/vk/music/view/t;->f()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/f;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/music/ui/common/MusicViewHolder;->f0()V
+    invoke-virtual {v0}, Lcom/vk/music/ui/common/o;->f0()V
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->W:Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->W:Lcom/vk/music/ui/track/b/f;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;->a()V
+    invoke-virtual {v0}, Lcom/vk/music/ui/track/b/f;->a()V
 
     return-void
 
     :cond_2
     const-string v0, "playingDrawableHelper"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1903,11 +1903,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/f;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;->h0()V
+    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/h/f;->h0()V
 
     :cond_0
     return-void
@@ -1917,7 +1917,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/MenuItem;)Z
+    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/MenuItem;)Z
 
     move-result p1
 
@@ -1928,20 +1928,20 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/MusicPlaylistToolbarViewHolder;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->H:Lcom/vk/music/playlist/modern/h/f;
 
-    instance-of v1, v0, Lcom/vk/core/ui/themes/Themable;
+    instance-of v1, v0, Lcom/vk/core/ui/themes/f;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vk/core/ui/themes/Themable;
+    check-cast v0, Lcom/vk/core/ui/themes/f;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/core/ui/themes/Themable;->v()V
+    invoke-interface {v0}, Lcom/vk/core/ui/themes/f;->v()V
 
     :cond_1
     return-void

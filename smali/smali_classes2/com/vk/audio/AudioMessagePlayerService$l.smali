@@ -62,13 +62,13 @@
     .line 3
     iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService$l;->a:Lcom/vk/audio/AudioMessagePlayerService;
 
-    invoke-static {v0}, Lcom/vk/audio/AudioMessagePlayerService;->k(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/core/concurrent/DispatchQueue;
+    invoke-static {v0}, Lcom/vk/audio/AudioMessagePlayerService;->k(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/core/concurrent/b;
 
     move-result-object v0
 
     const-wide/16 v1, 0x64
 
-    invoke-virtual {v0, p0, v1, v2}, Lcom/vk/core/concurrent/DispatchQueue;->a(Ljava/lang/Runnable;J)V
+    invoke-virtual {v0, p0, v1, v2}, Lcom/vk/core/concurrent/b;->a(Ljava/lang/Runnable;J)V
 
     :cond_0
     return-void

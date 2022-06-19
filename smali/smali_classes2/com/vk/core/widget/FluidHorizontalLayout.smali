@@ -229,7 +229,7 @@
     .locals 1
 
     .line 4
-    sget p1, Lb/h/g/R5;->FluidHorizontalLayout_android_gravity:I
+    sget p1, Lb/h/g/f;->FluidHorizontalLayout_android_gravity:I
 
     const/4 v0, 0x0
 
@@ -240,7 +240,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/core/widget/FluidHorizontalLayout;->setGravity(I)V
 
     .line 5
-    sget p1, Lb/h/g/R5;->FluidHorizontalLayout_vk_order:I
+    sget p1, Lb/h/g/f;->FluidHorizontalLayout_vk_order:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -255,7 +255,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lb/h/g/R5;->FluidHorizontalLayout:[I
+    sget-object v0, Lb/h/g/f;->FluidHorizontalLayout:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

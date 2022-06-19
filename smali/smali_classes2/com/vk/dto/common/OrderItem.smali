@@ -3,7 +3,7 @@
 .source "OrderItem.kt"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/ServerKeys;
+.implements Lcom/vk/dto/common/data/h;
 
 
 # annotations
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/common/OrderItem$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/common/OrderItem$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/common/OrderItem;->CREATOR:Lcom/vk/dto/common/OrderItem$a;
 
@@ -167,7 +167,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
@@ -202,7 +202,7 @@
 
     move-object v3, v0
 
-    invoke-direct/range {v3 .. v11}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v11}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     iput-object v0, p2, Lcom/vk/dto/common/Good;->b0:Lcom/vk/dto/newsfeed/Owner;
 

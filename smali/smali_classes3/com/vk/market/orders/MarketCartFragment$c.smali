@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->size()I
 
     move-result v0
 
@@ -73,7 +73,7 @@
 
     const-string v1, "recyclerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 

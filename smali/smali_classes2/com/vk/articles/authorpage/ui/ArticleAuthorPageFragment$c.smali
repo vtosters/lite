@@ -49,7 +49,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/AbstractPaginatedView;->getErrorView()Lcom/vk/lists/AbstractErrorView;
+    invoke-virtual {v0}, Lcom/vk/lists/AbstractPaginatedView;->getErrorView()Lcom/vk/lists/a;
 
     move-result-object v0
 
@@ -159,7 +159,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$c;->a:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-virtual {v0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    invoke-virtual {v0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
 
     move-result-object v0
 
@@ -167,41 +167,41 @@
 
     if-eqz v0, :cond_9
 
-    invoke-interface {v0}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->U0()Lcom/vk/dto/articles/ArticleAuthor;
+    invoke-interface {v0}, Lcom/vk/articles/authorpage/a;->U0()Lcom/vk/dto/articles/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_8
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/dto/articles/ArticleAuthor;->f()Z
+    invoke-virtual {v0}, Lcom/vk/dto/articles/a;->f()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/dto/articles/ArticleAuthor;->i()Z
+    invoke-virtual {v0}, Lcom/vk/dto/articles/a;->i()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/dto/articles/ArticleAuthor;->h()Z
+    invoke-virtual {v0}, Lcom/vk/dto/articles/a;->h()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/dto/articles/ArticleAuthor;->b()I
+    invoke-virtual {v0}, Lcom/vk/dto/articles/a;->b()I
 
     move-result v3
 
-    invoke-interface {v2, v3}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
+    invoke-interface {v2, v3}, Lcom/vk/bridges/f;->b(I)Z
 
     move-result v2
 
@@ -216,7 +216,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/dto/articles/ArticleAuthor;->b()I
+    invoke-virtual {v0}, Lcom/vk/dto/articles/a;->b()I
 
     move-result v2
 
@@ -230,7 +230,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {v0}, Lcom/vk/dto/articles/ArticleAuthor;->h()Z
+    invoke-virtual {v0}, Lcom/vk/dto/articles/a;->h()Z
 
     move-result v0
 
@@ -278,15 +278,15 @@
     if-eqz v1, :cond_7
 
     .line 6
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/dto/articles/ArticleAuthor;->b()I
+    invoke-virtual {v0}, Lcom/vk/dto/articles/a;->b()I
 
     move-result v3
 
-    invoke-interface {v2, v3}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
+    invoke-interface {v2, v3}, Lcom/vk/bridges/f;->b(I)Z
 
     move-result v2
 
@@ -298,7 +298,7 @@
 
     .line 7
     :cond_5
-    invoke-virtual {v0}, Lcom/vk/dto/articles/ArticleAuthor;->b()I
+    invoke-virtual {v0}, Lcom/vk/dto/articles/a;->b()I
 
     move-result v0
 
@@ -321,12 +321,12 @@
 
     .line 9
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method

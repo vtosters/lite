@@ -1,11 +1,11 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$a;
-.super Lcom/vk/music/player/PlayerListener$a;
+.super Lcom/vk/music/player/c$a;
 .source "AudioPlaylistHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/stats/MusicStatsTracker;Lcom/vk/music/playlist/ModernPlaylistModel;)V
+    value = Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/player/d;Lcom/vk/music/stats/d;Lcom/vk/music/playlist/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,20 +30,20 @@
     .line 1
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$a;->a:Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;
 
-    invoke-direct {p0}, Lcom/vk/music/player/PlayerListener$a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/player/c$a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
+.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$a;->a:Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 

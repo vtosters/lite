@@ -172,7 +172,7 @@
     const/16 v26, 0x0
 
     .line 26
-    invoke-direct/range {v0 .. v26}, Lcom/vk/im/engine/models/dialogs/BubbleColors;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v26}, Lcom/vk/im/engine/models/dialogs/BubbleColors;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIILkotlin/jvm/internal/i;)V
 
     return-object v27
 .end method

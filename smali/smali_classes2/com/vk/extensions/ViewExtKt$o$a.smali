@@ -45,11 +45,11 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
+    sget-object v0, Lb/h/k/c;->b:Lb/h/k/c;
 
     iget-object v1, p0, Lcom/vk/extensions/ViewExtKt$o$a;->a:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lb/h/k/c;->a(Ljava/lang/Runnable;)V
 
     .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V

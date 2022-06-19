@@ -3,12 +3,12 @@
 .source "QrScannerUi.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/cameraui/QrScannerUi;->a(Lcom/vk/camera/Camera1View;)V
+    value = Lcom/vk/cameraui/QrScannerUi;->a(Lcom/vk/camera/c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,29 +19,29 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "[",
         "Lcom/google/zxing/ResultPoint;",
-        "Lcom/vk/media/camera/qrcode/CameraQRUtils$e;",
-        "Lkotlin/Unit;",
+        "Lcom/vk/media/camera/qrcode/b$e;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $camera1View:Lcom/vk/camera/Camera1View;
+.field final synthetic $camera1View:Lcom/vk/camera/c;
 
 .field final synthetic this$0:Lcom/vk/cameraui/QrScannerUi;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/cameraui/QrScannerUi;Lcom/vk/camera/Camera1View;)V
+.method constructor <init>(Lcom/vk/cameraui/QrScannerUi;Lcom/vk/camera/c;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;->this$0:Lcom/vk/cameraui/QrScannerUi;
 
-    iput-object p2, p0, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;->$camera1View:Lcom/vk/camera/Camera1View;
+    iput-object p2, p0, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;->$camera1View:Lcom/vk/camera/c;
 
     const/4 p1, 0x2
 
@@ -58,24 +58,24 @@
     .line 1
     check-cast p1, [Lcom/google/zxing/ResultPoint;
 
-    check-cast p2, Lcom/vk/media/camera/qrcode/CameraQRUtils$e;
+    check-cast p2, Lcom/vk/media/camera/qrcode/b$e;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;->a([Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/CameraQRUtils$e;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;->a([Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/b$e;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public final a([Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/CameraQRUtils$e;)V
+.method public final a([Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/b$e;)V
     .locals 2
 
     .line 2
     iget-object v0, p0, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;->this$0:Lcom/vk/cameraui/QrScannerUi;
 
-    iget-object v1, p0, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;->$camera1View:Lcom/vk/camera/Camera1View;
+    iget-object v1, p0, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;->$camera1View:Lcom/vk/camera/c;
 
-    invoke-static {v0, v1, p1, p2}, Lcom/vk/cameraui/QrScannerUi;->a(Lcom/vk/cameraui/QrScannerUi;Lcom/vk/camera/Camera1View;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/CameraQRUtils$e;)V
+    invoke-static {v0, v1, p1, p2}, Lcom/vk/cameraui/QrScannerUi;->a(Lcom/vk/cameraui/QrScannerUi;Lcom/vk/camera/c;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/b$e;)V
 
     return-void
 .end method

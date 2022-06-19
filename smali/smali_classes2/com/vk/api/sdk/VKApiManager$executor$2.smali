@@ -3,7 +3,7 @@
 .source "VKApiManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/api/sdk/okhttp/OkHttpExecutor;",
         ">;"
     }
@@ -51,7 +51,7 @@
     .line 2
     new-instance v0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;
 
-    new-instance v1, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
+    new-instance v1, Lcom/vk/api/sdk/okhttp/b;
 
     iget-object v2, p0, Lcom/vk/api/sdk/VKApiManager$executor$2;->this$0:Lcom/vk/api/sdk/VKApiManager;
 
@@ -59,9 +59,9 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;-><init>(Lcom/vk/api/sdk/VKApiConfig;)V
+    invoke-direct {v1, v2}, Lcom/vk/api/sdk/okhttp/b;-><init>(Lcom/vk/api/sdk/VKApiConfig;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;-><init>(Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;-><init>(Lcom/vk/api/sdk/okhttp/b;)V
 
     return-object v0
 .end method

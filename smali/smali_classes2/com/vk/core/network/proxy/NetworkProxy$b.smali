@@ -17,19 +17,19 @@
 # instance fields
 .field private final a:Z
 
-.field private final b:Lokhttp3/Response;
+.field private final b:Lokhttp3/b0;
 
 .field private final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lokhttp3/Response;Z)V
+.method public constructor <init>(Lokhttp3/b0;Z)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/core/network/proxy/NetworkProxy$b;->b:Lokhttp3/Response;
+    iput-object p1, p0, Lcom/vk/core/network/proxy/NetworkProxy$b;->b:Lokhttp3/b0;
 
     iput-boolean p2, p0, Lcom/vk/core/network/proxy/NetworkProxy$b;->c:Z
 
@@ -38,11 +38,11 @@
 
 
 # virtual methods
-.method public final a()Lokhttp3/Response;
+.method public final a()Lokhttp3/b0;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/network/proxy/NetworkProxy$b;->b:Lokhttp3/Response;
+    iget-object v0, p0, Lcom/vk/core/network/proxy/NetworkProxy$b;->b:Lokhttp3/b0;
 
     return-object v0
 .end method
@@ -55,7 +55,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/core/network/proxy/NetworkProxy$b;->b:Lokhttp3/Response;
+    iget-object v0, p0, Lcom/vk/core/network/proxy/NetworkProxy$b;->b:Lokhttp3/b0;
 
     if-nez v0, :cond_0
 
@@ -78,11 +78,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/network/proxy/NetworkProxy$b;->b:Lokhttp3/Response;
+    iget-object v0, p0, Lcom/vk/core/network/proxy/NetworkProxy$b;->b:Lokhttp3/b0;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lokhttp3/Response;->h()Z
+    invoke-virtual {v0}, Lokhttp3/b0;->h()Z
 
     move-result v0
 

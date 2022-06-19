@@ -210,7 +210,7 @@
     .line 15
     sget-object v0, Lcom/vk/attachpicker/widget/ColorSelectorView$b;->F:Landroid/graphics/Paint;
 
-    invoke-static {}, Lcom/vk/attachpicker/Picker;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/vk/attachpicker/o;->a()Landroid/content/Context;
 
     move-result-object v1
 
@@ -414,7 +414,7 @@
 
     const/high16 v5, 0x40200000    # 2.5f
 
-    invoke-static {v0, v5}, Lcom/vk/core/util/AnimationUtils;->a(Landroid/animation/Animator;F)Landroid/animation/Animator;
+    invoke-static {v0, v5}, Lcom/vk/core/util/h;->a(Landroid/animation/Animator;F)Landroid/animation/Animator;
 
     invoke-virtual {v0, v6, v7}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
@@ -433,7 +433,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5}, Lcom/vk/core/util/AnimationUtils;->a(Landroid/animation/Animator;F)Landroid/animation/Animator;
+    invoke-static {v0, v5}, Lcom/vk/core/util/h;->a(Landroid/animation/Animator;F)Landroid/animation/Animator;
 
     invoke-virtual {v0, v6, v7}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
@@ -456,7 +456,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/AnimationUtils;->f(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {v0}, Lcom/vk/core/util/h;->f(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     aput-object v0, p2, v4
 
@@ -486,7 +486,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/AnimationUtils;->h(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {p1}, Lcom/vk/core/util/h;->h(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     aput-object p1, v1, v9
 
@@ -501,7 +501,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/AnimationUtils;->h(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {p1}, Lcom/vk/core/util/h;->h(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     invoke-virtual {p1, v6, v7}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
@@ -524,11 +524,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/AnimationUtils;->h(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {p1}, Lcom/vk/core/util/h;->h(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     const/16 v0, 0x78
 
-    invoke-static {p1, v0}, Lcom/vk/core/util/AnimationUtils;->a(Landroid/animation/Animator;I)Landroid/animation/Animator;
+    invoke-static {p1, v0}, Lcom/vk/core/util/h;->a(Landroid/animation/Animator;I)Landroid/animation/Animator;
 
     move-result-object p1
 
@@ -727,7 +727,7 @@
 
     iget v3, p0, Lcom/vk/attachpicker/widget/ColorSelectorView$b;->d:I
 
-    invoke-static {v3}, Lcom/vk/core/util/ColorUtils;->a(I)I
+    invoke-static {v3}, Lcom/vk/core/util/p;->a(I)I
 
     move-result v3
 

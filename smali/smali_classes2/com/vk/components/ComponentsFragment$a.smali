@@ -1,5 +1,5 @@
 .class public final Lcom/vk/components/ComponentsFragment$a;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "ComponentsFragment.kt"
 
 
@@ -21,7 +21,7 @@
     .line 1
     const-class v0, Lcom/vk/components/ComponentsFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method

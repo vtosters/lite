@@ -105,7 +105,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iput-boolean p2, p0, Lorg/webrtc/videoengine/RenderView;->_opaque:Z
@@ -217,7 +217,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -268,7 +268,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -361,7 +361,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/RenderView;->_attached:Ljava/lang/Boolean;
@@ -431,7 +431,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     :goto_0
@@ -527,7 +527,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/RenderView;->_nativeRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
@@ -573,7 +573,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iput-boolean p1, p0, Lorg/webrtc/videoengine/RenderView;->_renderingEnabled:Z
@@ -607,7 +607,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/RenderView;->_nativeRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
@@ -645,7 +645,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-lez p1, :cond_0
 
@@ -677,7 +677,7 @@
 
     const-string v1, "onAttachedToWindow"
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-super {p0}, Lorg/webrtc/videoengine/GLTextureView;->onAttachedToWindow()V
@@ -698,7 +698,7 @@
 
     const-string v1, "onDetachedFromWindow"
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -795,7 +795,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2
     const/4 v0, 0x1
@@ -921,7 +921,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iput p2, p0, Lorg/webrtc/videoengine/RenderView;->_viewWidth:I
@@ -952,7 +952,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
@@ -1000,7 +1000,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-super {p0, p1, p2, p3}, Lorg/webrtc/videoengine/GLTextureView;->onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
@@ -1056,7 +1056,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1114,7 +1114,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lorg/webrtc/videoengine/RenderView;->_surfaceTextureListener:Landroid/view/TextureView$SurfaceTextureListener;

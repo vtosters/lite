@@ -3,7 +3,7 @@
 .source "DbMigration.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/internal/storage/structure/DbMigration;
+.implements Lcom/vk/im/engine/internal/storage/structure/a;
 
 
 # static fields
@@ -15,8 +15,8 @@
         value = {
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/Integer;",
-            "Lkotlin/jvm/b/Functions2<",
-            "Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;",
+            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/im/engine/internal/storage/structure/a$a;",
             "Ljava/lang/Boolean;",
             ">;>;"
         }
@@ -55,7 +55,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$1;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -74,7 +74,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$2;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -93,7 +93,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$3;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -112,7 +112,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$4;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -131,7 +131,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$5;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -150,7 +150,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$6;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -169,7 +169,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$7;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -188,7 +188,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$8;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -207,7 +207,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$9;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -226,7 +226,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$10;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -245,7 +245,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$11;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -264,7 +264,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$MIGRATION$12;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;)V
 
-    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -300,7 +300,7 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+.method private final a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
     .locals 7
 
     .line 4
@@ -345,9 +345,9 @@
     move-result-object p2
 
     .line 9
-    sget-object v0, Lcom/vk/core/sqlite/SqlUtils;->INSTANCE:Lcom/vk/core/sqlite/SqlUtils;
+    sget-object v0, Lcom/vk/core/sqlite/b;->a:Lcom/vk/core/sqlite/b;
 
-    invoke-virtual {v0, p2}, Lcom/vk/core/sqlite/SqlUtils;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p2}, Lcom/vk/core/sqlite/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -433,7 +433,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/a$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
@@ -445,11 +445,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->c(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->c(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
@@ -465,15 +465,15 @@
     return p0
 .end method
 
-.method private final b(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)V
+.method private final b(Lcom/vk/im/engine/internal/storage/structure/a$a;)V
     .locals 8
 
     .line 3
-    sget-object v0, Lcom/vk/core/sqlite/SqlUtils;->INSTANCE:Lcom/vk/core/sqlite/SqlUtils;
+    sget-object v0, Lcom/vk/core/sqlite/b;->a:Lcom/vk/core/sqlite/b;
 
     const-string v1, "\n            UPDATE messages\n            SET phase_id = 0, attach = NULL, nested = NULL\n            WHERE nested IS NOT NULL;\n\n            UPDATE dialogs\n            SET phase_id = 0,\n                pinned_msg_visible = 0,\n                pinned_msg_exists = 0,\n                pinned_msg_vk_id = NULL,\n                pinned_msg_cnv_msg_id = NULL,\n                pinned_msg_from_type = NULL,\n                pinned_msg_from_id = NULL,\n                pinned_msg_time = NULL,\n                pinned_msg_title = NULL,\n                pinned_msg_body = NULL,\n                pinned_msg_attaches = NULL,\n                pinned_msg_nested = NULL\n            WHERE pinned_msg_nested IS NOT NULL;\n            "
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/sqlite/SqlUtils;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/vk/core/sqlite/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -559,7 +559,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 9
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/a$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
@@ -571,33 +571,33 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic b(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->d(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->d(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic c(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->e(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->e(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final c(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final c(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/a$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
@@ -610,46 +610,46 @@
     return p1
 .end method
 
-.method public static final synthetic d(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic d(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->f(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->f(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final d(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final d(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 1
 
     const/16 v0, 0x12
 
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
 
     const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public static final synthetic e(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic e(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->g(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->g(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final e(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final e(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/a$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
@@ -662,126 +662,126 @@
     return p1
 .end method
 
-.method public static final synthetic f(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic f(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->h(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->h(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final f(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final f(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->b(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->b(Lcom/vk/im/engine/internal/storage/structure/a$a;)V
 
     const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public static final synthetic g(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic g(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->i(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->i(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final g(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final g(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 1
 
     const/4 v0, 0x2
 
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
 
     const/16 v0, 0xf
 
     .line 3
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
 
     const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public static final synthetic h(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic h(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->j(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->j(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final h(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final h(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 1
 
     const/16 v0, 0x12
 
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
 
     .line 3
-    sget-object v0, Lcom/vk/im/engine/internal/storage/structure/DbMigrationTo263;->INSTANCE:Lcom/vk/im/engine/internal/storage/structure/DbMigrationTo263;
+    sget-object v0, Lcom/vk/im/engine/internal/storage/structure/b;->a:Lcom/vk/im/engine/internal/storage/structure/b;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationTo263;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/structure/b;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public static final synthetic i(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic i(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->k(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->k(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final i(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final i(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 1
 
     const/16 v0, 0x1c
 
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
 
     const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public static final synthetic j(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic j(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->l(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->l(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final j(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final j(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 2
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/a$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -790,7 +790,7 @@
     invoke-virtual {v0, v1}, Lio/requery/android/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/a$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
@@ -803,46 +803,46 @@
     return p1
 .end method
 
-.method public static final synthetic k(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic k(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->m(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->m(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final k(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final k(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 1
 
     const/16 v0, 0x19
 
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
 
     const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public static final synthetic l(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method public static final synthetic l(Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->n(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->n(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final l(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final l(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 2
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/a$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -851,7 +851,7 @@
     invoke-virtual {v0, v1}, Lio/requery/android/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/a$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
@@ -864,31 +864,31 @@
     return p1
 .end method
 
-.method private final m(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final m(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 1
 
     const/4 v0, 0x2
 
     .line 1
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
 
     const/16 v0, 0xf
 
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
 
     const/4 p1, 0x0
 
     return p1
 .end method
 
-.method private final n(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)Z
+.method private final n(Lcom/vk/im/engine/internal/storage/structure/a$a;)Z
     .locals 1
 
     const/16 v0, 0x12
 
     .line 1
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;I)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;I)V
 
     const/4 p1, 0x0
 
@@ -897,7 +897,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)V
+.method public a(Lcom/vk/im/engine/internal/storage/structure/a$a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -906,15 +906,15 @@
     .end annotation
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/structure/a$a;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$migrate$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$migrate$1;-><init>(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)V
+    invoke-direct {v1, p1}, Lcom/vk/im/engine/internal/storage/structure/DbMigrationImpl$migrate$1;-><init>(Lcom/vk/im/engine/internal/storage/structure/a$a;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 .end method

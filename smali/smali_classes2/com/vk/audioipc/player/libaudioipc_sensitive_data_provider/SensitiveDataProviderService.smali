@@ -3,28 +3,28 @@
 .source "SensetiveDataManagerService.kt"
 
 # interfaces
-.implements Lcom/vk/audioipc/core/ActionHandler;
+.implements Lcom/vk/audioipc/core/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/app/Service;",
-        "Lcom/vk/audioipc/core/ActionHandler<",
-        "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveCmd;",
+        "Lcom/vk/audioipc/core/a<",
+        "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/a;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataSerializerManager;
+.field private final a:Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/d;
 
 .field private final b:Lcom/vk/audioipc/core/communication/ActionReceiver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/audioipc/core/communication/ActionReceiver<",
-            "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveCmd;",
+            "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/a;",
             ">;"
         }
     .end annotation
@@ -39,29 +39,29 @@
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataSerializerManager;
+    new-instance v0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/d;
 
-    invoke-direct {v0}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataSerializerManager;-><init>()V
+    invoke-direct {v0}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/d;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a:Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataSerializerManager;
+    iput-object v0, p0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a:Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/d;
 
     .line 3
     new-instance v0, Lcom/vk/audioipc/core/communication/ActionReceiver;
 
-    iget-object v1, p0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a:Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataSerializerManager;
+    iget-object v1, p0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a:Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/d;
 
-    invoke-direct {v0, p0, v1}, Lcom/vk/audioipc/core/communication/ActionReceiver;-><init>(Lcom/vk/audioipc/core/ActionHandler;Lcom/vk/audioipc/core/SerializeManager;)V
+    invoke-direct {v0, p0, v1}, Lcom/vk/audioipc/core/communication/ActionReceiver;-><init>(Lcom/vk/audioipc/core/a;Lcom/vk/audioipc/core/m;)V
 
     iput-object v0, p0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->b:Lcom/vk/audioipc/core/communication/ActionReceiver;
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/RequestSensitiveInfoCmd;)V
+.method private final a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/b;)V
     .locals 13
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/RequestSensitiveInfoCmd;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/b;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -81,20 +81,20 @@
 
     .line 5
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->e()Lcom/vk/dto/account/AudioAdConfig;
+    invoke-interface {v1}, Lcom/vk/bridges/f;->e()Lcom/vk/dto/account/AudioAdConfig;
 
     move-result-object v1
 
@@ -118,17 +118,17 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {v2}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object v2
 
     sget-object v3, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService$handleCmd$typeAllow$1;->a:Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService$handleCmd$typeAllow$1;
 
-    invoke-static {v2, v3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v2, v3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v2
 
-    invoke-static {v2}, Lkotlin/sequences/m;->m(Lkotlin/sequences/Sequence;)Ljava/util/List;
+    invoke-static {v2}, Lkotlin/sequences/m;->m(Lkotlin/sequences/j;)Ljava/util/List;
 
     move-result-object v11
 
@@ -142,66 +142,66 @@
     move-result-object v12
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->i()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->i()Z
 
     move-result v5
 
     .line 13
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->b()I
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->b()I
 
     move-result v6
 
     .line 14
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->y()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->y()Z
 
     move-result v7
 
     .line 15
-    new-instance v0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/AnswerSensitiveInfoCmd;
+    new-instance v0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/a;
 
     .line 16
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->M1()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vk/bridges/f;->M1()Ljava/lang/String;
 
     move-result-object v3
 
     .line 17
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->N1()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vk/bridges/f;->N1()Ljava/lang/String;
 
     move-result-object v4
 
     move-object v2, v0
 
     .line 18
-    invoke-direct/range {v2 .. v12}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/AnswerSensitiveInfoCmd;-><init>(Ljava/lang/String;Ljava/lang/String;ZIZZIILjava/util/List;Ljava/util/List;)V
+    invoke-direct/range {v2 .. v12}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/a;-><init>(Ljava/lang/String;Ljava/lang/String;ZIZZIILjava/util/List;Ljava/util/List;)V
 
     .line 19
-    new-instance v1, Lcom/vk/audioipc/core/communication/ActionSender;
+    new-instance v1, Lcom/vk/audioipc/core/communication/a;
 
-    invoke-virtual {p1}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/RequestSensitiveInfoCmd;->a()Landroid/os/Messenger;
+    invoke-virtual {p1}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/b;->a()Landroid/os/Messenger;
 
     move-result-object p1
 
-    iget-object v2, p0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a:Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataSerializerManager;
+    iget-object v2, p0, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a:Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/d;
 
-    invoke-direct {v1, p1, v2}, Lcom/vk/audioipc/core/communication/ActionSender;-><init>(Landroid/os/Messenger;Lcom/vk/audioipc/core/SerializeManager;)V
+    invoke-direct {v1, p1, v2}, Lcom/vk/audioipc/core/communication/a;-><init>(Landroid/os/Messenger;Lcom/vk/audioipc/core/m;)V
 
     .line 20
-    invoke-virtual {v1}, Lcom/vk/audioipc/core/communication/ActionSender;->a()Z
+    invoke-virtual {v1}, Lcom/vk/audioipc/core/communication/a;->a()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
     .line 21
-    invoke-virtual {v1, v0}, Lcom/vk/audioipc/core/communication/ActionSender;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lcom/vk/audioipc/core/communication/a;->a(Ljava/lang/Object;)V
 
     :cond_1
     return-void
@@ -209,7 +209,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveCmd;)V
+.method public a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/a;)V
     .locals 3
 
     const/4 v0, 0x2
@@ -230,13 +230,13 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 3
-    instance-of v0, p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/RequestSensitiveInfoCmd;
+    instance-of v0, p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/b;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/RequestSensitiveInfoCmd;
+    check-cast p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/b;
 
-    invoke-direct {p0, p1}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/RequestSensitiveInfoCmd;)V
+    invoke-direct {p0, p1}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/b;)V
 
     :cond_0
     return-void
@@ -246,9 +246,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveCmd;
+    check-cast p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveCmd;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/a;)V
 
     return-void
 .end method

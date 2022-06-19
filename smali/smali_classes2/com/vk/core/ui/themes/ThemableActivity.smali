@@ -3,7 +3,7 @@
 .source "ThemableActivity.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # instance fields
@@ -77,7 +77,7 @@
     const-string v0, "layout_inflater"
 
     .line 1
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -142,7 +142,7 @@
 
     const-string v2, "LayoutInflater.from(baseContext)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1, p1}, Lcom/vk/core/ui/VKLayoutInflater;-><init>(Landroid/view/LayoutInflater;Landroid/content/Context;)V
 
@@ -159,7 +159,7 @@
     :cond_3
     const-string p1, "vkLayoutInflater"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -186,7 +186,7 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v3, Lcom/vk/core/ui/VKUILayoutFactory;
+    new-instance v3, Lcom/vk/core/ui/t;
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getDelegate()Landroidx/appcompat/app/AppCompatDelegate;
 
@@ -196,7 +196,7 @@
 
     if-eqz v5, :cond_0
 
-    invoke-direct {v3, v4, v5}, Lcom/vk/core/ui/VKUILayoutFactory;-><init>(Landroidx/appcompat/app/AppCompatDelegate;Lcom/vk/core/ui/VKLayoutInflater;)V
+    invoke-direct {v3, v4, v5}, Lcom/vk/core/ui/t;-><init>(Landroidx/appcompat/app/AppCompatDelegate;Lcom/vk/core/ui/VKLayoutInflater;)V
 
     invoke-virtual {v0, v3}, Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
 
@@ -207,12 +207,12 @@
 
     .line 3
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

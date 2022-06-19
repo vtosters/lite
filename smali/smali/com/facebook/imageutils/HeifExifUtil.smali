@@ -35,7 +35,7 @@
     const-string v0, "Trying to read Heif Exif information before Android N -> ignoring"
 
     .line 3
-    invoke-static {p0, v0}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/facebook/common/h/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 

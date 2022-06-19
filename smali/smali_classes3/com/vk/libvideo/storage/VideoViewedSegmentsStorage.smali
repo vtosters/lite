@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final c:Lkotlin/Lazy2;
+.field private static final c:Lkotlin/e;
 
 .field public static final d:Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage$c;
 
@@ -44,18 +44,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;->d:Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage$c;
 
     .line 1
     sget-object v0, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage$Companion$instance$2;->a:Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage$Companion$instance$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;->c:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;->c:Lkotlin/e;
 
     return-void
 .end method
@@ -74,11 +74,11 @@
     iput-object v0, p0, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
     .line 3
-    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
+    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
 
     const-string v1, "video_viewed_segments"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
 
     move-result-object v0
 
@@ -90,12 +90,12 @@
     sget-object v2, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage$b;->a:Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage$b;
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 6
@@ -113,11 +113,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic d()Lkotlin/Lazy2;
+.method public static final synthetic d()Lkotlin/e;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;->c:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;->c:Lkotlin/e;
 
     return-object v0
 .end method
@@ -126,7 +126,7 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
+    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
 
     invoke-virtual {p0}, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;->b()Ljava/util/List;
 
@@ -134,7 +134,7 @@
 
     const-string v2, "video_viewed_segments"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method
@@ -243,7 +243,7 @@
 
     const-string v1, "data.values"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lkotlin/collections/l;->s(Ljava/lang/Iterable;)Ljava/util/List;
 

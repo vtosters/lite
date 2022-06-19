@@ -3,12 +3,12 @@
 .source "FaveController.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Z)V
+    value = Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -30,16 +30,16 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions2;
+.field final synthetic a:Lkotlin/jvm/b/b;
 
 .field final synthetic b:Lcom/vk/dto/newsfeed/Owner;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions2;Lcom/vk/dto/newsfeed/Owner;)V
+.method constructor <init>(Lkotlin/jvm/b/b;Lcom/vk/dto/newsfeed/Owner;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/fave/FaveController$p;->a:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/fave/FaveController$p;->a:Lkotlin/jvm/b/b;
 
     iput-object p2, p0, Lcom/vk/fave/FaveController$p;->b:Lcom/vk/dto/newsfeed/Owner;
 
@@ -54,10 +54,10 @@
     .locals 1
 
     .line 1
-    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/fave/FaveController$p;->a:Lkotlin/jvm/b/Functions2;
+    iget-object p1, p0, Lcom/vk/fave/FaveController$p;->a:Lkotlin/jvm/b/b;
 
     if-eqz p1, :cond_0
 
@@ -71,11 +71,11 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_0
     return-void

@@ -3,12 +3,12 @@
 .source "MusicPlaylistScreenAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/PlaylistScreenData;Lcom/vk/music/player/PlayerModel;)V
+    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/g;Lcom/vk/music/player/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/ViewGroup;",
         "Lcom/vk/music/ui/common/MusicActionBtnViewHolder;",
         ">;"
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $playlistScreenData:Lcom/vk/music/playlist/modern/PlaylistScreenData;
+.field final synthetic $playlistScreenData:Lcom/vk/music/playlist/modern/g;
 
 .field final synthetic this$0:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
+.method constructor <init>(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;Lcom/vk/music/playlist/modern/g;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$onPlaylistLoaded$1;->this$0:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
-    iput-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$onPlaylistLoaded$1;->$playlistScreenData:Lcom/vk/music/playlist/modern/PlaylistScreenData;
+    iput-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$onPlaylistLoaded$1;->$playlistScreenData:Lcom/vk/music/playlist/modern/g;
 
     const/4 p1, 0x1
 
@@ -56,9 +56,9 @@
     .line 1
     new-instance v10, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;
 
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$onPlaylistLoaded$1;->$playlistScreenData:Lcom/vk/music/playlist/modern/PlaylistScreenData;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$onPlaylistLoaded$1;->$playlistScreenData:Lcom/vk/music/playlist/modern/g;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->b()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/g;->b()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
@@ -66,7 +66,7 @@
 
     iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$onPlaylistLoaded$1;->this$0:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/core/ui/IdClickListener;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/core/ui/k;
 
     move-result-object v4
 
@@ -86,7 +86,7 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;-><init>(ILandroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/ui/IdClickListener;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;-><init>(ILandroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/ui/k;IIIILkotlin/jvm/internal/i;)V
 
     return-object v10
 .end method

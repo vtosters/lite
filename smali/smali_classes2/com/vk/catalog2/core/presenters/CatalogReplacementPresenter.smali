@@ -4,34 +4,34 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/catalog2/core/CatalogParser;
+.field private final a:Lcom/vk/catalog2/core/h;
 
-.field private final b:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+.field private final b:Lcom/vk/catalog2/core/w/a;
 
-.field private final c:Lcom/vk/catalog2/core/CatalogResponseTransformer;
+.field private final c:Lcom/vk/catalog2/core/i;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/catalog2/core/CatalogParser;Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/CatalogResponseTransformer;)V
+.method public constructor <init>(Lcom/vk/catalog2/core/h;Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/i;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a:Lcom/vk/catalog2/core/CatalogParser;
+    iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a:Lcom/vk/catalog2/core/h;
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->b:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    iput-object p2, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->b:Lcom/vk/catalog2/core/w/a;
 
-    iput-object p3, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->c:Lcom/vk/catalog2/core/CatalogResponseTransformer;
+    iput-object p3, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->c:Lcom/vk/catalog2/core/i;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;)Lcom/vk/catalog2/core/CatalogResponseTransformer;
+.method public static final synthetic a(Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;)Lcom/vk/catalog2/core/i;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->c:Lcom/vk/catalog2/core/CatalogResponseTransformer;
+    iget-object p0, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->c:Lcom/vk/catalog2/core/i;
 
     return-object p0
 .end method
@@ -129,13 +129,13 @@
     check-cast v5, Lcom/vk/catalog2/core/api/dto/CatalogBlock;
 
     .line 30
-    iget-object v6, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->c:Lcom/vk/catalog2/core/CatalogResponseTransformer;
+    iget-object v6, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->c:Lcom/vk/catalog2/core/i;
 
     invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/replacement/CatalogReplacementResponse;->t1()Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;
 
     move-result-object v7
 
-    invoke-interface {v6, v5, v7}, Lcom/vk/catalog2/core/CatalogResponseTransformer;->a(Lcom/vk/catalog2/core/api/dto/CatalogBlock;Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;)Ljava/util/List;
+    invoke-interface {v6, v5, v7}, Lcom/vk/catalog2/core/i;->a(Lcom/vk/catalog2/core/api/dto/CatalogBlock;Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;)Ljava/util/List;
 
     move-result-object v5
 
@@ -152,7 +152,7 @@
 
     .line 33
     :cond_2
-    new-instance v1, Lcom/vk/catalog2/core/w/e/CatalogCommand8;
+    new-instance v1, Lcom/vk/catalog2/core/w/e/e;
 
     .line 34
     new-instance v2, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleBlocksReplacement$event$1;
@@ -165,10 +165,10 @@
     invoke-direct {v3, p0, v0, p1}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleBlocksReplacement$event$2;-><init>(Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Ljava/util/HashMap;Lcom/vk/catalog2/core/api/dto/replacement/CatalogReplacementResponse;)V
 
     .line 36
-    invoke-direct {v1, v2, v3}, Lcom/vk/catalog2/core/w/e/CatalogCommand8;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/catalog2/core/w/e/e;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;)V
 
     .line 37
-    iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->b:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->b:Lcom/vk/catalog2/core/w/a;
 
     const/4 v0, 0x0
 
@@ -176,7 +176,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p1, v1, v0, v2, v3}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a(Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/w/e/CatalogCommand6;ZILjava/lang/Object;)V
+    invoke-static {p1, v1, v0, v2, v3}, Lcom/vk/catalog2/core/w/a;->a(Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/w/e/b;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -384,7 +384,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -447,26 +447,26 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Ljava/lang/String;)Lio/reactivex/disposables/Disposable;
+.method public final a(Landroid/content/Context;Ljava/lang/String;)Lio/reactivex/disposables/b;
     .locals 11
 
     .line 12
-    new-instance v0, Lcom/vk/catalog2/core/api/CatalogReplaceBlocks;
+    new-instance v0, Lcom/vk/catalog2/core/api/d;
 
-    iget-object v1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a:Lcom/vk/catalog2/core/CatalogParser;
+    iget-object v1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a:Lcom/vk/catalog2/core/h;
 
     invoke-static {p2}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
 
-    invoke-direct {v0, v1, p2}, Lcom/vk/catalog2/core/api/CatalogReplaceBlocks;-><init>(Lcom/vk/catalog2/core/CatalogParser;Ljava/util/List;)V
+    invoke-direct {v0, v1, p2}, Lcom/vk/catalog2/core/api/d;-><init>(Lcom/vk/catalog2/core/h;Ljava/util/List;)V
 
     const/4 p2, 0x0
 
     const/4 v1, 0x1
 
     .line 13
-    invoke-static {v0, p2, v1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, p2, v1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v2
 
@@ -485,7 +485,7 @@
     move-object v3, p1
 
     .line 14
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -498,33 +498,33 @@
     sget-object v0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$b;->a:Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$b;
 
     .line 17
-    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string p2, "CatalogReplaceBlocks(par\u2026ror() }\n                )"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public final a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/disposables/Disposable;
+.method public final a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/disposables/b;
     .locals 11
 
     .line 4
-    new-instance v0, Lcom/vk/catalog2/core/api/CatalogReplaceSections;
+    new-instance v0, Lcom/vk/catalog2/core/api/e;
 
-    iget-object v1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a:Lcom/vk/catalog2/core/CatalogParser;
+    iget-object v1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a:Lcom/vk/catalog2/core/h;
 
-    invoke-direct {v0, v1, p3}, Lcom/vk/catalog2/core/api/CatalogReplaceSections;-><init>(Lcom/vk/catalog2/core/CatalogParser;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p3}, Lcom/vk/catalog2/core/api/e;-><init>(Lcom/vk/catalog2/core/h;Ljava/lang/String;)V
 
     const/4 p3, 0x0
 
     const/4 v1, 0x1
 
     .line 5
-    invoke-static {v0, p3, v1, p3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, p3, v1, p3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v2
 
@@ -543,7 +543,7 @@
     move-object v3, p1
 
     .line 6
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -556,13 +556,13 @@
     sget-object p2, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$d;->a:Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$d;
 
     .line 9
-    invoke-virtual {p1, p3, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, p3, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string p2, "CatalogReplaceSections(p\u2026stError() }\n            )"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -573,7 +573,7 @@
     .end annotation
 
     .line 10
-    new-instance v0, Lcom/vk/catalog2/core/w/e/CatalogCommand8;
+    new-instance v0, Lcom/vk/catalog2/core/w/e/e;
 
     new-instance v1, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleSectionReplacement$event$1;
 
@@ -583,10 +583,10 @@
 
     invoke-direct {p1, p0, p2, p3}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleSectionReplacement$event$2;-><init>(Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Lcom/vk/catalog2/core/api/dto/CatalogSection;Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;)V
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand8;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/w/e/e;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;)V
 
     .line 11
-    iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->b:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->b:Lcom/vk/catalog2/core/w/a;
 
     const/4 p2, 0x0
 
@@ -594,7 +594,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v0, p2, p3, v1}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a(Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/w/e/CatalogCommand6;ZILjava/lang/Object;)V
+    invoke-static {p1, v0, p2, p3, v1}, Lcom/vk/catalog2/core/w/a;->a(Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/w/e/b;ZILjava/lang/Object;)V
 
     return-void
 .end method

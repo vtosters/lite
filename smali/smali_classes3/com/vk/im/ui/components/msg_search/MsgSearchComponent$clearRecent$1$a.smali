@@ -3,7 +3,7 @@
 .source "MsgSearchComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lkotlin/Unit;",
+        "Lc/a/z/g<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/Unit;)V
+.method public final a(Lkotlin/m;)V
     .locals 1
 
     .line 1
@@ -90,9 +90,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$clearRecent$1$a;->a(Lkotlin/Unit;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$clearRecent$1$a;->a(Lkotlin/m;)V
 
     return-void
 .end method

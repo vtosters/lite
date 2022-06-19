@@ -3,8 +3,8 @@
 .source "FrescoImageView.kt"
 
 # interfaces
-.implements Lcom/vk/imageloader/view/WithColorFilter;
-.implements Lcom/facebook/drawee/controller/ControllerListener;
+.implements Lcom/vk/imageloader/view/d;
+.implements Lcom/facebook/drawee/controller/c;
 
 
 # annotations
@@ -17,9 +17,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/view/View;",
-        "Lcom/vk/imageloader/view/WithColorFilter;",
-        "Lcom/facebook/drawee/controller/ControllerListener<",
-        "Lcom/facebook/x/g/ImageInfo;",
+        "Lcom/vk/imageloader/view/d;",
+        "Lcom/facebook/drawee/controller/c<",
+        "Lcom/facebook/x/g/f;",
         ">;"
     }
 .end annotation
@@ -60,11 +60,11 @@
 
 .field private J:Z
 
-.field private K:Lcom/vk/im/ui/views/Corners;
+.field private K:Lcom/vk/im/ui/views/c;
 
 .field private L:I
 
-.field private M:Lcom/facebook/imagepipeline/request/Postprocessor;
+.field private M:Lcom/facebook/imagepipeline/request/c;
 
 .field private N:Lcom/vk/core/util/measure/ScaleType;
 
@@ -92,19 +92,19 @@
     .end annotation
 .end field
 
-.field private final a:Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
+.field private final a:Lcom/facebook/x/i/a;
 
-.field private final b:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+.field private final b:Lcom/facebook/u/b/a/e;
 
 .field private final c:Lcom/facebook/drawee/generic/RoundingParams;
 
-.field private final d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+.field private final d:Lcom/facebook/drawee/generic/a;
 
-.field private final e:Lcom/facebook/drawee/view/DraweeHolder;
+.field private final e:Lcom/facebook/drawee/view/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/drawee/view/DraweeHolder<",
-            "Lcom/facebook/drawee/generic/GenericDraweeHierarchy;",
+            "Lcom/facebook/drawee/view/b<",
+            "Lcom/facebook/drawee/generic/a;",
             ">;"
         }
     .end annotation
@@ -112,9 +112,9 @@
 
 .field private final f:[Lcom/facebook/imagepipeline/request/ImageRequest;
 
-.field private final g:Lcom/vk/core/util/measure/MeasureImageUtils$a;
+.field private final g:Lcom/vk/core/util/measure/a$a;
 
-.field private final h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+.field private final h:Lcom/vk/core/util/measure/a$b;
 
 
 # direct methods
@@ -133,7 +133,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/FrescoImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/FrescoImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -153,7 +153,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/FrescoImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/FrescoImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -165,24 +165,24 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
-    new-instance v0, Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
+    new-instance v0, Lcom/facebook/x/i/a;
 
     const/4 v1, 0x2
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lcom/facebook/x/i/a;-><init>(II)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->a:Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
+    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->a:Lcom/facebook/x/i/a;
 
     .line 4
     sget-object v0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/e;
 
     .line 5
     new-instance v0, Lcom/facebook/drawee/generic/RoundingParams;
@@ -196,34 +196,34 @@
     iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->c:Lcom/facebook/drawee/generic/RoundingParams;
 
     .line 6
-    new-instance v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
+    new-instance v0, Lcom/facebook/drawee/generic/b;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    invoke-direct {v0, v3}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;-><init>(Landroid/content/res/Resources;)V
+    invoke-direct {v0, v3}, Lcom/facebook/drawee/generic/b;-><init>(Landroid/content/res/Resources;)V
 
     .line 7
     iget-object v3, p0, Lcom/vk/im/ui/views/FrescoImageView;->c:Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-virtual {v0, v3}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
+    invoke-virtual {v0, v3}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/b;
 
     .line 8
-    invoke-virtual {v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a()Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    invoke-virtual {v0}, Lcom/facebook/drawee/generic/b;->a()Lcom/facebook/drawee/generic/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-static {v0, p1}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeHierarchy;Landroid/content/Context;)Lcom/facebook/drawee/view/DraweeHolder;
+    invoke-static {v0, p1}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/b;Landroid/content/Context;)Lcom/facebook/drawee/view/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
     new-array v0, v1, [Lcom/facebook/imagepipeline/request/ImageRequest;
 
@@ -239,18 +239,18 @@
     iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->f:[Lcom/facebook/imagepipeline/request/ImageRequest;
 
     .line 11
-    new-instance v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;
+    new-instance v0, Lcom/vk/core/util/measure/a$a;
 
-    invoke-direct {v0}, Lcom/vk/core/util/measure/MeasureImageUtils$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/util/measure/a$a;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->g:Lcom/vk/core/util/measure/MeasureImageUtils$a;
+    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->g:Lcom/vk/core/util/measure/a$a;
 
     .line 12
-    new-instance v0, Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    new-instance v0, Lcom/vk/core/util/measure/a$b;
 
-    invoke-direct {v0}, Lcom/vk/core/util/measure/MeasureImageUtils$b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/util/measure/a$b;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/a$b;
 
     .line 13
     new-instance v0, Ljava/util/ArrayList;
@@ -273,7 +273,7 @@
     iput-boolean v2, p0, Lcom/vk/im/ui/views/FrescoImageView;->E:Z
 
     .line 17
-    new-instance v0, Lcom/vk/im/ui/views/Corners;
+    new-instance v0, Lcom/vk/im/ui/views/c;
 
     const/4 v5, 0x0
 
@@ -289,18 +289,18 @@
 
     move-object v4, v0
 
-    invoke-direct/range {v4 .. v10}, Lcom/vk/im/ui/views/Corners;-><init>(IIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v4 .. v10}, Lcom/vk/im/ui/views/c;-><init>(IIIIILkotlin/jvm/internal/i;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iput-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
     .line 18
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
     const-string v1, "draweeHolder"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -310,7 +310,7 @@
 
     .line 19
     :cond_0
-    sget-object v0, Lcom/vk/im/ui/R2;->FrescoImageView:[I
+    sget-object v0, Lcom/vk/im/ui/o;->FrescoImageView:[I
 
     invoke-virtual {p1, p2, v0, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -319,7 +319,7 @@
     const-string p2, "ta"
 
     .line 20
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/views/FrescoImageView;->setupAttrsStyle(Landroid/content/res/TypedArray;)V
 
@@ -329,7 +329,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -352,7 +352,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/Image;IILcom/vk/core/util/measure/ScaleType;)Lcom/facebook/imagepipeline/common/ResizeOptions;
+.method private final a(Lcom/vk/im/engine/models/Image;IILcom/vk/core/util/measure/ScaleType;)Lcom/facebook/imagepipeline/common/d;
     .locals 3
 
     .line 46
@@ -479,15 +479,15 @@
     if-lez p3, :cond_4
 
     .line 57
-    new-instance v1, Lcom/facebook/imagepipeline/common/ResizeOptions;
+    new-instance v1, Lcom/facebook/imagepipeline/common/d;
 
-    invoke-direct {v1, p1, p3}, Lcom/facebook/imagepipeline/common/ResizeOptions;-><init>(II)V
+    invoke-direct {v1, p1, p3}, Lcom/facebook/imagepipeline/common/d;-><init>(II)V
 
     :cond_4
     return-object v1
 .end method
 
-.method private final a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Lcom/facebook/imagepipeline/request/ImageRequest;Lcom/facebook/imagepipeline/request/ImageRequest;Lcom/facebook/imagepipeline/request/ImageRequest;)Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+.method private final a(Lcom/facebook/u/b/a/e;Lcom/facebook/imagepipeline/request/ImageRequest;Lcom/facebook/imagepipeline/request/ImageRequest;Lcom/facebook/imagepipeline/request/ImageRequest;)Lcom/facebook/u/b/a/e;
     .locals 2
 
     const/4 v0, 0x1
@@ -539,7 +539,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -577,7 +577,7 @@
     .end annotation
 
     .line 66
-    invoke-static {p1}, Lcom/vk/im/engine/models/ImageList1;->b(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
+    invoke-static {p1}, Lcom/vk/im/engine/models/g;->b(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
 
     move-result-object v0
 
@@ -934,15 +934,15 @@
 
     .line 36
     :goto_0
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     const-string p2, "hierarchy"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->c:Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     return-void
 
@@ -1068,11 +1068,11 @@
     .line 36
     iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->N:Lcom/vk/core/util/measure/ScaleType;
 
-    invoke-direct {p0, p1, p2, p3, v1}, Lcom/vk/im/ui/views/FrescoImageView;->a(Lcom/vk/im/engine/models/Image;IILcom/vk/core/util/measure/ScaleType;)Lcom/facebook/imagepipeline/common/ResizeOptions;
+    invoke-direct {p0, p1, p2, p3, v1}, Lcom/vk/im/ui/views/FrescoImageView;->a(Lcom/vk/im/engine/models/Image;IILcom/vk/core/util/measure/ScaleType;)Lcom/facebook/imagepipeline/common/d;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v0, p1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     return-object v0
 .end method
@@ -1102,7 +1102,7 @@
     if-eqz p1, :cond_1
 
     .line 40
-    invoke-static {p1}, Lcom/vk/im/engine/models/ImageList1;->a(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
+    invoke-static {p1}, Lcom/vk/im/engine/models/g;->a(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
 
     move-result-object p2
 
@@ -1158,47 +1158,47 @@
     if-nez v1, :cond_2
 
     .line 5
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/facebook/drawee/view/DraweeHolder;->a()Lcom/facebook/u/e/DraweeController;
+    invoke-virtual {p1}, Lcom/facebook/drawee/view/b;->a()Lcom/facebook/u/e/a;
 
     move-result-object p1
 
     .line 6
-    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/e;
 
     .line 7
     invoke-virtual {p2}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast p2, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    check-cast p2, Lcom/facebook/u/b/a/e;
 
     .line 8
-    invoke-virtual {p2, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p2, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast p2, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    check-cast p2, Lcom/facebook/u/b/a/e;
 
     .line 9
-    invoke-virtual {p2, p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/ControllerListener;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p2, p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/c;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast p2, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    check-cast p2, Lcom/facebook/u/b/a/e;
 
     .line 10
     invoke-virtual {p2, v3}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     .line 11
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/e;
 
-    invoke-virtual {p2}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/AbstractDraweeController;
+    invoke-virtual {p2}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/a;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeController;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/a;)V
 
     return-void
 
@@ -1228,9 +1228,9 @@
     if-eqz v0, :cond_4
 
     .line 14
-    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->M:Lcom/facebook/imagepipeline/request/Postprocessor;
+    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->M:Lcom/facebook/imagepipeline/request/c;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     if-eqz v0, :cond_4
 
@@ -1270,9 +1270,9 @@
     if-eqz v1, :cond_6
 
     .line 18
-    iget-object v4, p0, Lcom/vk/im/ui/views/FrescoImageView;->M:Lcom/facebook/imagepipeline/request/Postprocessor;
+    iget-object v4, p0, Lcom/vk/im/ui/views/FrescoImageView;->M:Lcom/facebook/imagepipeline/request/c;
 
-    invoke-virtual {v1, v4}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v1, v4}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     if-eqz v1, :cond_6
 
@@ -1314,17 +1314,17 @@
     if-eqz p1, :cond_8
 
     .line 24
-    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->M:Lcom/facebook/imagepipeline/request/Postprocessor;
+    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->M:Lcom/facebook/imagepipeline/request/c;
 
     if-eqz p2, :cond_7
 
     goto :goto_5
 
     :cond_7
-    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->a:Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
+    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->a:Lcom/facebook/x/i/a;
 
     :goto_5
-    invoke-virtual {p1, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p1, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     if-eqz p1, :cond_8
 
@@ -1347,54 +1347,54 @@
 
     .line 27
     :goto_6
-    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Lcom/facebook/drawee/view/DraweeHolder;->a()Lcom/facebook/u/e/DraweeController;
+    invoke-virtual {p2}, Lcom/facebook/drawee/view/b;->a()Lcom/facebook/u/e/a;
 
     move-result-object p2
 
     .line 28
-    iget-object v4, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    iget-object v4, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/e;
 
     .line 29
     invoke-virtual {v4}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v4, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    check-cast v4, Lcom/facebook/u/b/a/e;
 
     .line 30
-    invoke-virtual {v4, p2}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {v4, p2}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     const-string p2, "controllerBuilder\n      \u2026Controller(oldController)"
 
-    invoke-static {v4, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v4, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    check-cast v4, Lcom/facebook/u/b/a/e;
 
     .line 31
-    invoke-direct {p0, v4, v0, v1, p1}, Lcom/vk/im/ui/views/FrescoImageView;->a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Lcom/facebook/imagepipeline/request/ImageRequest;Lcom/facebook/imagepipeline/request/ImageRequest;Lcom/facebook/imagepipeline/request/ImageRequest;)Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    invoke-direct {p0, v4, v0, v1, p1}, Lcom/vk/im/ui/views/FrescoImageView;->a(Lcom/facebook/u/b/a/e;Lcom/facebook/imagepipeline/request/ImageRequest;Lcom/facebook/imagepipeline/request/ImageRequest;Lcom/facebook/imagepipeline/request/ImageRequest;)Lcom/facebook/u/b/a/e;
 
     .line 32
-    invoke-virtual {v4, p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/ControllerListener;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {v4, p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/c;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v4, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    check-cast v4, Lcom/facebook/u/b/a/e;
 
     .line 33
     invoke-virtual {v4, v3}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     .line 34
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->b:Lcom/facebook/u/b/a/e;
 
-    invoke-virtual {p2}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/AbstractDraweeController;
+    invoke-virtual {p2}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/a;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeController;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/a;)V
 
     return-void
 .end method
@@ -1412,9 +1412,9 @@
     .end annotation
 
     .line 11
-    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->INSTANCE:Lcom/vk/core/util/MediaLoadingInfo;
+    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->c()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/p0;->c()Z
 
     move-result v0
 
@@ -1445,9 +1445,9 @@
     iput-boolean v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->J:Z
 
     .line 2
-    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/views/Corners;->g()V
+    invoke-virtual {v1}, Lcom/vk/im/ui/views/c;->g()V
 
     .line 3
     iput v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->L:I
@@ -1481,9 +1481,9 @@
 
     .line 8
     :cond_1
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/Corners;->f()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/c;->f()Z
 
     move-result p1
 
@@ -1520,15 +1520,15 @@
     invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/RoundingParams;->a(Z)Lcom/facebook/drawee/generic/RoundingParams;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     const-string v1, "hierarchy"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->c:Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     return-void
 .end method
@@ -1547,36 +1547,36 @@
     iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->c:Lcom/facebook/drawee/generic/RoundingParams;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/views/Corners;->c()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/views/c;->c()I
 
     move-result v1
 
     int-to-float v1, v1
 
     .line 4
-    iget-object v2, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object v2, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/views/Corners;->d()I
+    invoke-virtual {v2}, Lcom/vk/im/ui/views/c;->d()I
 
     move-result v2
 
     int-to-float v2, v2
 
     .line 5
-    iget-object v3, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object v3, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/views/Corners;->b()I
+    invoke-virtual {v3}, Lcom/vk/im/ui/views/c;->b()I
 
     move-result v3
 
     int-to-float v3, v3
 
     .line 6
-    iget-object v4, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object v4, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/views/Corners;->a()I
+    invoke-virtual {v4}, Lcom/vk/im/ui/views/c;->a()I
 
     move-result v4
 
@@ -1586,18 +1586,18 @@
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/facebook/drawee/generic/RoundingParams;->a(FFFF)Lcom/facebook/drawee/generic/RoundingParams;
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->c:Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -1608,7 +1608,7 @@
     .locals 4
 
     .line 1
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_android_maxWidth:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_android_maxWidth:I
 
     const v1, 0x7fffffff
 
@@ -1620,7 +1620,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/FrescoImageView;->setMaximumWidth(I)V
 
     .line 3
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_android_maxHeight:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_android_maxHeight:I
 
     .line 4
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -1630,7 +1630,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/FrescoImageView;->setMaximumHeight(I)V
 
     .line 5
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_isCircle:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_isCircle:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -1641,7 +1641,7 @@
     if-eqz v0, :cond_0
 
     .line 6
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_isCircle:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_isCircle:I
 
     .line 7
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -1652,7 +1652,7 @@
 
     .line 8
     :cond_0
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_cornerRadius:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_cornerRadius:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -1663,7 +1663,7 @@
     if-eqz v0, :cond_1
 
     .line 9
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_cornerRadius:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_cornerRadius:I
 
     const/4 v3, 0x0
 
@@ -1683,7 +1683,7 @@
 
     .line 12
     :cond_1
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_scaleType:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_scaleType:I
 
     .line 13
     sget-object v1, Lcom/vk/core/util/measure/ScaleType;->CENTER_INSIDE:Lcom/vk/core/util/measure/ScaleType;
@@ -1705,7 +1705,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/FrescoImageView;->setScaleType(Lcom/vk/core/util/measure/ScaleType;)V
 
     .line 16
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_aspectRatio:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_aspectRatio:I
 
     const/high16 v1, -0x40800000    # -1.0f
 
@@ -1717,7 +1717,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/FrescoImageView;->setAspectRatio(F)V
 
     .line 18
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_placeholderDrawable:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_placeholderDrawable:I
 
     .line 19
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1727,7 +1727,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/FrescoImageView;->setPlaceholder(Landroid/graphics/drawable/Drawable;)V
 
     .line 20
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_emptyPlaceholder:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_emptyPlaceholder:I
 
     .line 21
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1737,7 +1737,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/FrescoImageView;->setErrorImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 22
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_bgFillDrawable:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_bgFillDrawable:I
 
     .line 23
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1747,7 +1747,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/FrescoImageView;->setBgFillDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 24
-    sget v0, Lcom/vk/im/ui/R2;->FrescoImageView_vkim_fadeDuration:I
+    sget v0, Lcom/vk/im/ui/o;->FrescoImageView_vkim_fadeDuration:I
 
     const/16 v1, 0x12c
 
@@ -1783,15 +1783,15 @@
     invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/RoundingParams;->a(Z)Lcom/facebook/drawee/generic/RoundingParams;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     const-string v0, "hierarchy"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->c:Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     return-void
 .end method
@@ -1816,9 +1816,9 @@
     invoke-direct {p0}, Lcom/vk/im/ui/views/FrescoImageView;->c()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/views/Corners;->a(II)Lcom/vk/im/ui/views/Corners;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/views/c;->a(II)Lcom/vk/im/ui/views/c;
 
     const/4 p1, 0x1
 
@@ -1838,9 +1838,9 @@
     invoke-direct {p0}, Lcom/vk/im/ui/views/FrescoImageView;->c()V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/im/ui/views/Corners;->a(IIII)Lcom/vk/im/ui/views/Corners;
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/im/ui/views/c;->a(IIII)Lcom/vk/im/ui/views/c;
 
     const/4 p1, 0x1
 
@@ -1867,13 +1867,13 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Lcom/facebook/x/g/ImageInfo;)V
+.method public a(Ljava/lang/String;Lcom/facebook/x/g/f;)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Lcom/facebook/x/g/ImageInfo;Landroid/graphics/drawable/Animatable;)V
+.method public a(Ljava/lang/String;Lcom/facebook/x/g/f;Landroid/graphics/drawable/Animatable;)V
     .locals 0
 
     .line 58
@@ -1896,9 +1896,9 @@
     .locals 0
 
     .line 2
-    check-cast p2, Lcom/facebook/x/g/ImageInfo;
+    check-cast p2, Lcom/facebook/x/g/f;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/im/ui/views/FrescoImageView;->a(Ljava/lang/String;Lcom/facebook/x/g/ImageInfo;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/ui/views/FrescoImageView;->a(Ljava/lang/String;Lcom/facebook/x/g/f;)V
 
     return-void
 .end method
@@ -1907,9 +1907,9 @@
     .locals 0
 
     .line 1
-    check-cast p2, Lcom/facebook/x/g/ImageInfo;
+    check-cast p2, Lcom/facebook/x/g/f;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/im/ui/views/FrescoImageView;->a(Ljava/lang/String;Lcom/facebook/x/g/ImageInfo;Landroid/graphics/drawable/Animatable;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/im/ui/views/FrescoImageView;->a(Ljava/lang/String;Lcom/facebook/x/g/f;Landroid/graphics/drawable/Animatable;)V
 
     return-void
 .end method
@@ -2061,19 +2061,19 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     const-string v1, "hierarchy"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/facebook/drawee/generic/a;->a()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     const-string v1, "hierarchy.topLevelDrawable"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getColorFilter()Landroid/graphics/ColorFilter;
 
@@ -2082,11 +2082,11 @@
     return-object v0
 .end method
 
-.method public final getCorners()Lcom/vk/im/ui/views/Corners;
+.method public final getCorners()Lcom/vk/im/ui/views/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
     return-object v0
 .end method
@@ -2095,13 +2095,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     const-string v1, "hierarchy"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->b()I
+    invoke-virtual {v0}, Lcom/facebook/drawee/generic/a;->b()I
 
     move-result v0
 
@@ -2110,11 +2110,11 @@
     return-wide v0
 .end method
 
-.method public final getHierarchy()Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+.method public final getHierarchy()Lcom/facebook/drawee/generic/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     return-object v0
 .end method
@@ -2153,9 +2153,9 @@
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->f()V
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->f()V
 
     return-void
 .end method
@@ -2167,9 +2167,9 @@
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->g()V
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->g()V
 
     return-void
 .end method
@@ -2181,9 +2181,9 @@
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/a$b;
 
-    iget v1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$b;->c:I
+    iget v1, v0, Lcom/vk/core/util/measure/a$b;->c:I
 
     const/4 v2, 0x1
 
@@ -2191,7 +2191,7 @@
 
     if-lez v1, :cond_0
 
-    iget v0, v0, Lcom/vk/core/util/measure/MeasureImageUtils$b;->d:I
+    iget v0, v0, Lcom/vk/core/util/measure/a$b;->d:I
 
     if-lez v0, :cond_0
 
@@ -2204,13 +2204,13 @@
 
     .line 3
     :goto_0
-    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/a$b;
 
-    iget v4, v1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->c:I
+    iget v4, v1, Lcom/vk/core/util/measure/a$b;->c:I
 
     if-nez v4, :cond_1
 
-    iget v1, v1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->d:I
+    iget v1, v1, Lcom/vk/core/util/measure/a$b;->d:I
 
     if-nez v1, :cond_1
 
@@ -2241,11 +2241,11 @@
 
     .line 5
     :cond_2
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/a$b;
 
-    iget v1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$b;->a:I
+    iget v1, v0, Lcom/vk/core/util/measure/a$b;->a:I
 
-    iget v0, v0, Lcom/vk/core/util/measure/MeasureImageUtils$b;->b:I
+    iget v0, v0, Lcom/vk/core/util/measure/a$b;->b:I
 
     invoke-direct {p0, v1, v0}, Lcom/vk/im/ui/views/FrescoImageView;->b(II)V
 
@@ -2259,11 +2259,11 @@
     if-eqz v0, :cond_4
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/a$b;
 
-    iget v1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$b;->c:I
+    iget v1, v0, Lcom/vk/core/util/measure/a$b;->c:I
 
-    iget v0, v0, Lcom/vk/core/util/measure/MeasureImageUtils$b;->d:I
+    iget v0, v0, Lcom/vk/core/util/measure/a$b;->d:I
 
     invoke-direct {p0, v1, v0}, Lcom/vk/im/ui/views/FrescoImageView;->c(II)V
 
@@ -2272,9 +2272,9 @@
     iput-boolean v3, p0, Lcom/vk/im/ui/views/FrescoImageView;->E:Z
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/a$b;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/measure/MeasureImageUtils$b;->a()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/measure/a$b;->a()Z
 
     move-result v0
 
@@ -2289,13 +2289,13 @@
 
     .line 12
     :cond_5
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
     const-string v1, "draweeHolder"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -2314,9 +2314,9 @@
     invoke-super {p0}, Landroid/view/View;->onFinishTemporaryDetach()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->f()V
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->f()V
 
     return-void
 .end method
@@ -2367,19 +2367,19 @@
     add-int/2addr p3, v0
 
     .line 7
-    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/a$b;
 
-    iget v2, v1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->c:I
+    iget v2, v1, Lcom/vk/core/util/measure/a$b;->c:I
 
     .line 8
-    iget v3, v1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->d:I
+    iget v3, v1, Lcom/vk/core/util/measure/a$b;->d:I
 
     .line 9
     iget-object v4, p0, Lcom/vk/im/ui/views/FrescoImageView;->P:Landroid/graphics/drawable/Drawable;
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/core/util/measure/MeasureImageUtils$b;->a()Z
+    invoke-virtual {v1}, Lcom/vk/core/util/measure/a$b;->a()Z
 
     move-result v1
 
@@ -2394,9 +2394,9 @@
 
     .line 11
     :cond_0
-    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/Corners;
+    iget-object v1, p0, Lcom/vk/im/ui/views/FrescoImageView;->K:Lcom/vk/im/ui/views/c;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/views/Corners;->f()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/views/c;->f()Z
 
     move-result v1
 
@@ -2454,13 +2454,13 @@
 
     .line 17
     :cond_4
-    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
     const-string p3, "draweeHolder"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p2}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
@@ -2524,9 +2524,9 @@
     if-gt v3, v5, :cond_7
 
     .line 9
-    sget-object v8, Lcom/vk/core/util/MediaLoadingInfo;->INSTANCE:Lcom/vk/core/util/MediaLoadingInfo;
+    sget-object v8, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
 
-    invoke-virtual {v8}, Lcom/vk/core/util/MediaLoadingInfo;->c()Z
+    invoke-virtual {v8}, Lcom/vk/core/util/p0;->c()Z
 
     move-result v8
 
@@ -2534,7 +2534,7 @@
 
     iget-object v8, p0, Lcom/vk/im/ui/views/FrescoImageView;->Q:Ljava/util/List;
 
-    invoke-static {v8}, Lcom/vk/im/engine/models/ImageList1;->a(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
+    invoke-static {v8}, Lcom/vk/im/engine/models/g;->a(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
 
     move-result-object v8
 
@@ -2545,7 +2545,7 @@
     :cond_0
     iget-object v8, p0, Lcom/vk/im/ui/views/FrescoImageView;->R:Ljava/util/List;
 
-    invoke-static {v8}, Lcom/vk/im/engine/models/ImageList1;->a(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
+    invoke-static {v8}, Lcom/vk/im/engine/models/g;->a(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
 
     move-result-object v8
 
@@ -2572,7 +2572,7 @@
 
     .line 11
     :goto_0
-    iget-object v9, p0, Lcom/vk/im/ui/views/FrescoImageView;->g:Lcom/vk/core/util/measure/MeasureImageUtils$a;
+    iget-object v9, p0, Lcom/vk/im/ui/views/FrescoImageView;->g:Lcom/vk/core/util/measure/a$a;
 
     const/4 v10, 0x0
 
@@ -2596,7 +2596,7 @@
     const/16 v11, 0xc8
 
     :cond_4
-    iput v11, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->a:I
+    iput v11, v9, Lcom/vk/core/util/measure/a$a;->a:I
 
     if-eqz v8, :cond_5
 
@@ -2611,51 +2611,51 @@
     const/16 v10, 0xc8
 
     :cond_6
-    iput v10, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->b:I
+    iput v10, v9, Lcom/vk/core/util/measure/a$a;->b:I
 
     .line 14
-    iput p1, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->c:I
+    iput p1, v9, Lcom/vk/core/util/measure/a$a;->c:I
 
     .line 15
-    iput p2, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->d:I
+    iput p2, v9, Lcom/vk/core/util/measure/a$a;->d:I
 
     .line 16
-    iput v2, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->e:I
+    iput v2, v9, Lcom/vk/core/util/measure/a$a;->e:I
 
     .line 17
-    iput v3, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->f:I
+    iput v3, v9, Lcom/vk/core/util/measure/a$a;->f:I
 
     .line 18
-    iput v4, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->g:I
+    iput v4, v9, Lcom/vk/core/util/measure/a$a;->g:I
 
     .line 19
-    iput v5, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->h:I
+    iput v5, v9, Lcom/vk/core/util/measure/a$a;->h:I
 
     .line 20
-    iput v0, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->i:I
+    iput v0, v9, Lcom/vk/core/util/measure/a$a;->i:I
 
     .line 21
-    iput v1, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->j:I
+    iput v1, v9, Lcom/vk/core/util/measure/a$a;->j:I
 
     .line 22
-    iput-object v6, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->k:Lcom/vk/core/util/measure/ScaleType;
+    iput-object v6, v9, Lcom/vk/core/util/measure/a$a;->k:Lcom/vk/core/util/measure/ScaleType;
 
     .line 23
-    iput v7, v9, Lcom/vk/core/util/measure/MeasureImageUtils$a;->l:F
+    iput v7, v9, Lcom/vk/core/util/measure/a$a;->l:F
 
     .line 24
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->g:Lcom/vk/core/util/measure/MeasureImageUtils$a;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->g:Lcom/vk/core/util/measure/a$a;
 
-    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    iget-object p2, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/a$b;
 
-    invoke-static {p1, p2}, Lcom/vk/core/util/measure/MeasureImageUtils;->a(Lcom/vk/core/util/measure/MeasureImageUtils$a;Lcom/vk/core/util/measure/MeasureImageUtils$b;)V
+    invoke-static {p1, p2}, Lcom/vk/core/util/measure/a;->a(Lcom/vk/core/util/measure/a$a;Lcom/vk/core/util/measure/a$b;)V
 
     .line 25
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/MeasureImageUtils$b;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->h:Lcom/vk/core/util/measure/a$b;
 
-    iget p2, p1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->a:I
+    iget p2, p1, Lcom/vk/core/util/measure/a$b;->a:I
 
-    iget p1, p1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->b:I
+    iget p1, p1, Lcom/vk/core/util/measure/a$b;->b:I
 
     invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
 
@@ -2689,9 +2689,9 @@
     invoke-super {p0}, Landroid/view/View;->onStartTemporaryDetach()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->g()V
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->g()V
 
     return-void
 .end method
@@ -2735,9 +2735,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->b(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -2765,7 +2765,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -2787,7 +2787,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -2806,19 +2806,19 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     const-string v1, "hierarchy"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/facebook/drawee/generic/a;->a()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     const-string v1, "hierarchy.topLevelDrawable"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
@@ -2842,23 +2842,23 @@
     return-void
 .end method
 
-.method public final setCornerRadius(Lcom/vk/im/ui/views/Corners;)V
+.method public final setCornerRadius(Lcom/vk/im/ui/views/c;)V
     .locals 3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/Corners;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/c;->c()I
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/Corners;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/c;->d()I
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/Corners;->a()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/c;->a()I
 
     move-result v2
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/Corners;->b()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/c;->b()I
 
     move-result p1
 
@@ -2871,9 +2871,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->c(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->c(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -2882,13 +2882,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
     const-string v1, "hierarchy"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->a(I)V
 
     return-void
 .end method
@@ -3063,9 +3063,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->b(I)V
 
     return-void
 .end method
@@ -3074,18 +3074,18 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
-.method public final setPostProcessor(Lcom/facebook/imagepipeline/request/Postprocessor;)V
+.method public final setPostProcessor(Lcom/facebook/imagepipeline/request/c;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->M:Lcom/facebook/imagepipeline/request/Postprocessor;
+    iput-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->M:Lcom/facebook/imagepipeline/request/c;
 
     return-void
 .end method
@@ -3214,97 +3214,97 @@
 
     .line 3
     :pswitch_0
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->INSTANCE:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->i:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     goto :goto_1
 
     .line 4
     :pswitch_1
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->l:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->l:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     goto :goto_1
 
     .line 5
     :pswitch_2
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->k:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->k:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     goto :goto_1
 
     .line 6
     :pswitch_3
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->j:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->j:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     goto :goto_1
 
     .line 7
     :pswitch_4
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->n:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->n:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     goto :goto_1
 
     .line 8
     :pswitch_5
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     goto :goto_1
 
     .line 9
     :pswitch_6
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     goto :goto_1
 
     .line 10
     :goto_0
-    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    iget-object p1, p0, Lcom/vk/im/ui/views/FrescoImageView;->d:Lcom/facebook/drawee/generic/a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->INSTANCE:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->i:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     :goto_1
     const/4 p1, 0x1
@@ -3350,13 +3350,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/DraweeHolder;
+    iget-object v0, p0, Lcom/vk/im/ui/views/FrescoImageView;->e:Lcom/facebook/drawee/view/b;
 
     const-string v1, "draweeHolder"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 

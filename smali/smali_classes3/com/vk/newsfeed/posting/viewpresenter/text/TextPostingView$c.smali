@@ -46,13 +46,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView$c;->a:Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/p;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts3;->a(Landroid/text/Editable;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/p;->a(Landroid/text/Editable;)V
 
     :cond_0
     return-void
@@ -64,13 +64,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView$c;->a:Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/p;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/newsfeed/posting/PostingContracts3;->a(Ljava/lang/CharSequence;III)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/newsfeed/posting/p;->a(Ljava/lang/CharSequence;III)V
 
     :cond_0
     return-void
@@ -82,13 +82,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView$c;->a:Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/p;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/newsfeed/posting/PostingContracts3;->onTextChanged(Ljava/lang/CharSequence;III)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/newsfeed/posting/p;->onTextChanged(Ljava/lang/CharSequence;III)V
 
     :cond_0
     return-void

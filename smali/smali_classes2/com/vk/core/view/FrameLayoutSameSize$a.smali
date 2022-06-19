@@ -40,14 +40,14 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 2
-    sget-object v0, Lb/h/z/R3;->FrameLayoutSameSize:[I
+    sget-object v0, Lb/h/z/m;->FrameLayoutSameSize:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 3
-    sget p2, Lb/h/z/R3;->FrameLayoutSameSize_layout_same_size_as:I
+    sget p2, Lb/h/z/m;->FrameLayoutSameSize_layout_same_size_as:I
 
     const/4 v0, 0x0
 

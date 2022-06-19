@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public a(Lcom/squareup/picasso/Request;)Lcom/squareup/picasso/Request;
+.method public a(Lcom/squareup/picasso/q;)Lcom/squareup/picasso/q;
     .locals 0
 
     return-object p1

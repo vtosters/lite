@@ -1,5 +1,5 @@
 .class Lcom/vk/libvideo/live/views/chat/ChatPresenter$f;
-.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
+.super Lc/a/c0/a;
 .source "ChatPresenter.java"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
-        "Lcom/vk/api/video/VideoCommentLike$a;",
+        "Lc/a/c0/a<",
+        "Lcom/vk/api/video/c$a;",
         ">;"
     }
 .end annotation
@@ -37,14 +37,14 @@
 
     iput p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter$f;->b:I
 
-    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
+    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/api/video/VideoCommentLike$a;)V
+.method public a(Lcom/vk/api/video/c$a;)V
     .locals 0
 
     return-void
@@ -61,7 +61,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     .line 3
     instance-of v0, p1, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
@@ -71,23 +71,23 @@
     .line 4
     iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter$f;->c:Lcom/vk/libvideo/live/views/chat/ChatPresenter;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)Lcom/vk/libvideo/live/views/chat/c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     check-cast p1, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-static {v0, p1}, Lcom/vk/api/base/f;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-static {p1}, Lcom/vk/libvideo/live/base/ErrorDisplayHelper;->a(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/libvideo/live/base/e;->a(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -101,12 +101,12 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     .line 3
-    sget v0, Lcom/vk/libvideo/R11;->live_comment_like_ok:I
+    sget v0, Lcom/vk/libvideo/j;->live_comment_like_ok:I
 
-    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter$f;->c:Lcom/vk/libvideo/live/views/chat/ChatPresenter;
@@ -136,9 +136,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/video/VideoCommentLike$a;
+    check-cast p1, Lcom/vk/api/video/c$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$f;->a(Lcom/vk/api/video/VideoCommentLike$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$f;->a(Lcom/vk/api/video/c$a;)V
 
     return-void
 .end method

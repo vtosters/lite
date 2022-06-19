@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ChangePasswordActivity$e;->a(Lcom/vk/api/account/AccountChangePassword$a;)V
+    value = Lcom/vtosters/lite/ChangePasswordActivity$e;->a(Lcom/vk/api/account/b$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

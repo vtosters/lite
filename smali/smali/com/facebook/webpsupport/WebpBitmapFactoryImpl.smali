@@ -3,20 +3,20 @@
 .source "WebpBitmapFactoryImpl.java"
 
 # interfaces
-.implements Lcom/facebook/common/k/WebpBitmapFactory;
+.implements Lcom/facebook/common/k/b;
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/DoNotStrip;
+.annotation build Lcom/facebook/common/internal/d;
 .end annotation
 
 
 # static fields
 .field public static final a:Z
 
-.field private static b:Lcom/facebook/common/k/WebpBitmapFactory$a;
+.field private static b:Lcom/facebook/common/k/b$a;
 
-.field private static c:Lcom/facebook/common/k/BitmapCreator;
+.field private static c:Lcom/facebook/common/k/a;
 
 
 # direct methods
@@ -146,14 +146,14 @@
     .locals 2
 
     .line 18
-    sget-object v0, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->b:Lcom/facebook/common/k/WebpBitmapFactory$a;
+    sget-object v0, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->b:Lcom/facebook/common/k/b$a;
 
     if-eqz v0, :cond_0
 
     const-string v1, "decoding_failure"
 
     .line 19
-    invoke-interface {v0, p0, v1}, Lcom/facebook/common/k/WebpBitmapFactory$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p0, v1}, Lcom/facebook/common/k/b$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -222,7 +222,7 @@
 
 .method private static createBitmap(IILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -250,11 +250,11 @@
 
     .line 4
     :cond_0
-    sget-object p2, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->c:Lcom/facebook/common/k/BitmapCreator;
+    sget-object p2, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->c:Lcom/facebook/common/k/a;
 
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-interface {p2, p0, p1, v0}, Lcom/facebook/common/k/BitmapCreator;->a(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    invoke-interface {p2, p0, p1, v0}, Lcom/facebook/common/k/a;->a(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
@@ -263,7 +263,7 @@
 
 .method private static getInTempStorageFromOptions(Landroid/graphics/BitmapFactory$Options;)[B
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -285,7 +285,7 @@
 
 .method private static getScaleFromOptions(Landroid/graphics/BitmapFactory$Options;)F
     .locals 3
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -336,7 +336,7 @@
 
 .method public static hookDecodeByteArray([BII)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     const/4 v0, 0x0
@@ -351,18 +351,18 @@
 
 .method public static hookDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 7
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
     invoke-static {}, Lcom/facebook/imagepipeline/nativecode/StaticWebpNativeLoader;->ensure()V
 
     .line 2
-    sget-boolean v0, Lcom/facebook/common/k/WebpSupportStatus;->a:Z
+    sget-boolean v0, Lcom/facebook/common/k/c;->a:Z
 
     if-eqz v0, :cond_1
 
-    invoke-static {p0, p1, p2}, Lcom/facebook/common/k/WebpSupportStatus;->b([BII)Z
+    invoke-static {p0, p1, p2}, Lcom/facebook/common/k/c;->b([BII)Z
 
     move-result v0
 
@@ -424,7 +424,7 @@
 
 .method public static hookDecodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     const/4 v0, 0x0
@@ -439,7 +439,7 @@
 
 .method public static hookDecodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     const/4 v0, 0x0
@@ -506,7 +506,7 @@
 
 .method public static hookDecodeFileDescriptor(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     const/4 v0, 0x0
@@ -521,7 +521,7 @@
 
 .method public static hookDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 6
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -558,13 +558,13 @@
     move-result-object v4
 
     .line 5
-    sget-boolean v5, Lcom/facebook/common/k/WebpSupportStatus;->a:Z
+    sget-boolean v5, Lcom/facebook/common/k/c;->a:Z
 
     if-eqz v5, :cond_1
 
     const/16 v5, 0x14
 
-    invoke-static {v4, v0, v5}, Lcom/facebook/common/k/WebpSupportStatus;->b([BII)Z
+    invoke-static {v4, v0, v5}, Lcom/facebook/common/k/c;->b([BII)Z
 
     move-result v0
 
@@ -663,7 +663,7 @@
 
 .method public static hookDecodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     const/4 v0, 0x0
@@ -678,7 +678,7 @@
 
 .method public static hookDecodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -785,7 +785,7 @@
 
 .method public static hookDecodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     if-nez p4, :cond_0
@@ -852,7 +852,7 @@
 
 .method public static hookDecodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     const/4 v0, 0x0
@@ -867,7 +867,7 @@
 
 .method public static hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 3
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -884,7 +884,7 @@
     move-result-object v0
 
     .line 4
-    sget-boolean v1, Lcom/facebook/common/k/WebpSupportStatus;->a:Z
+    sget-boolean v1, Lcom/facebook/common/k/c;->a:Z
 
     if-eqz v1, :cond_1
 
@@ -892,7 +892,7 @@
 
     const/16 v2, 0x14
 
-    invoke-static {v0, v1, v2}, Lcom/facebook/common/k/WebpSupportStatus;->b([BII)Z
+    invoke-static {v0, v1, v2}, Lcom/facebook/common/k/c;->b([BII)Z
 
     move-result v0
 
@@ -948,23 +948,23 @@
 .end method
 
 .method private static native nativeDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;F[B)Landroid/graphics/Bitmap;
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private static native nativeDecodeStream(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;F[B)Landroid/graphics/Bitmap;
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private static native nativeSeek(Ljava/io/FileDescriptor;JZ)J
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private static originalDecodeByteArray([BII)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 2
@@ -977,7 +977,7 @@
 
 .method private static originalDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -990,7 +990,7 @@
 
 .method private static originalDecodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 2
@@ -1003,7 +1003,7 @@
 
 .method private static originalDecodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -1016,7 +1016,7 @@
 
 .method private static originalDecodeFileDescriptor(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 2
@@ -1029,7 +1029,7 @@
 
 .method private static originalDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -1042,7 +1042,7 @@
 
 .method private static originalDecodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 2
@@ -1055,7 +1055,7 @@
 
 .method private static originalDecodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -1068,7 +1068,7 @@
 
 .method private static originalDecodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -1081,7 +1081,7 @@
 
 .method private static originalDecodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 2
@@ -1094,7 +1094,7 @@
 
 .method private static originalDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -1107,7 +1107,7 @@
 
 .method private static setBitmapSize(Landroid/graphics/BitmapFactory$Options;II)V
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -1124,7 +1124,7 @@
 
 .method private static setOutDimensions(Landroid/graphics/BitmapFactory$Options;II)Z
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -1152,7 +1152,7 @@
 
 .method private static setPaddingDefaultValues(Landroid/graphics/Rect;)V
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -1183,7 +1183,7 @@
         }
     .end annotation
 
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -1219,20 +1219,20 @@
     return-object p1
 .end method
 
-.method public a(Lcom/facebook/common/k/BitmapCreator;)V
+.method public a(Lcom/facebook/common/k/a;)V
     .locals 0
 
     .line 1
-    sput-object p1, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->c:Lcom/facebook/common/k/BitmapCreator;
+    sput-object p1, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->c:Lcom/facebook/common/k/a;
 
     return-void
 .end method
 
-.method public a(Lcom/facebook/common/k/WebpBitmapFactory$a;)V
+.method public a(Lcom/facebook/common/k/b$a;)V
     .locals 0
 
     .line 16
-    sput-object p1, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->b:Lcom/facebook/common/k/WebpBitmapFactory$a;
+    sput-object p1, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->b:Lcom/facebook/common/k/b$a;
 
     return-void
 .end method

@@ -85,30 +85,30 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/AdvertisementInfo;)V
+    invoke-virtual {v0, v3}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/a;)V
 
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$g;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$g;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/Player;->n()Lcom/vk/music/player/TrackInfo;
+    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/u;->n()Lcom/vk/music/player/e;
 
     move-result-object v1
 
     const-string v4, "player.trackInfo"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/vk/music/player/TrackInfo;->f()Lcom/vk/music/player/PlayerTrack;
+    invoke-virtual {v1}, Lcom/vk/music/player/e;->f()Lcom/vk/music/player/PlayerTrack;
 
     move-result-object v1
 
@@ -118,12 +118,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/audio/player/Player;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/audio/player/u;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
@@ -234,7 +234,7 @@
 
     const/4 v13, 0x0
 
-    invoke-static/range {v5 .. v13}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v5 .. v13}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -249,12 +249,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/AdvertisementInfo;)V
+    invoke-virtual {v1, v3}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/a;)V
 
     .line 9
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$g;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v1
 
@@ -288,7 +288,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v1, v2, v3, v4}, Lcom/vtosters/lite/audio/player/Player;->a(Ljava/util/Collection;ILcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-virtual {v1, v2, v3, v4}, Lcom/vtosters/lite/audio/player/u;->a(Ljava/util/Collection;ILcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     .line 10
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$g;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
@@ -333,16 +333,16 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/AdvertisementInfo;)V
+    invoke-virtual {v0, v3}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/a;)V
 
     .line 16
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$g;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->c()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->c()Ljava/util/List;
 
     move-result-object v0
 
@@ -365,7 +365,7 @@
     .line 17
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$g;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v1
 
@@ -373,7 +373,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0, v2}, Lcom/vtosters/lite/audio/player/Player;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vtosters/lite/audio/player/u;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -390,11 +390,11 @@
     .line 19
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$g;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->C()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->C()Z
 
     move-result v0
 
@@ -409,7 +409,7 @@
 
     new-instance v1, Lcom/vk/audioipc/core/exception/PlayerException;
 
-    invoke-direct {v1, v3, v4, v3}, Lcom/vk/audioipc/core/exception/PlayerException;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, v3, v4, v3}, Lcom/vk/audioipc/core/exception/PlayerException;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Ljava/lang/Throwable;)V
 

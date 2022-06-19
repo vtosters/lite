@@ -3,7 +3,7 @@
 .source "RecorderBase.java"
 
 # interfaces
-.implements Lb/h/p/d/DecoderBase$a;
+.implements Lb/h/p/d/a$a;
 
 
 # annotations

@@ -154,7 +154,7 @@
     return p0
 .end method
 
-.method public static b(ILcom/crashlytics/android/core/ByteString;)I
+.method public static b(ILcom/crashlytics/android/core/d;)I
     .locals 0
 
     .line 8
@@ -162,7 +162,7 @@
 
     move-result p0
 
-    invoke-static {p1}, Lcom/crashlytics/android/core/CodedOutputStream;->c(Lcom/crashlytics/android/core/ByteString;)I
+    invoke-static {p1}, Lcom/crashlytics/android/core/CodedOutputStream;->c(Lcom/crashlytics/android/core/d;)I
 
     move-result p1
 
@@ -196,11 +196,11 @@
     return p0
 .end method
 
-.method public static c(Lcom/crashlytics/android/core/ByteString;)I
+.method public static c(Lcom/crashlytics/android/core/d;)I
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/crashlytics/android/core/ByteString;->b()I
+    invoke-virtual {p0}, Lcom/crashlytics/android/core/d;->b()I
 
     move-result v0
 
@@ -209,7 +209,7 @@
     move-result v0
 
     .line 2
-    invoke-virtual {p0}, Lcom/crashlytics/android/core/ByteString;->b()I
+    invoke-virtual {p0}, Lcom/crashlytics/android/core/d;->b()I
 
     move-result p0
 
@@ -505,7 +505,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p0, v0}, Lcom/crashlytics/android/core/WireFormat;->a(II)I
+    invoke-static {p0, v0}, Lcom/crashlytics/android/core/v0;->a(II)I
 
     move-result p0
 
@@ -663,7 +663,7 @@
     return-void
 .end method
 
-.method public a(ILcom/crashlytics/android/core/ByteString;)V
+.method public a(ILcom/crashlytics/android/core/d;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -677,7 +677,7 @@
     invoke-virtual {p0, p1, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->c(II)V
 
     .line 10
-    invoke-virtual {p0, p2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Lcom/crashlytics/android/core/ByteString;)V
+    invoke-virtual {p0, p2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Lcom/crashlytics/android/core/d;)V
 
     return-void
 .end method
@@ -744,7 +744,7 @@
     goto :goto_0
 .end method
 
-.method public a(Lcom/crashlytics/android/core/ByteString;)V
+.method public a(Lcom/crashlytics/android/core/d;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -753,19 +753,19 @@
     .end annotation
 
     .line 15
-    invoke-virtual {p1}, Lcom/crashlytics/android/core/ByteString;->b()I
+    invoke-virtual {p1}, Lcom/crashlytics/android/core/d;->b()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
     .line 16
-    invoke-virtual {p0, p1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(Lcom/crashlytics/android/core/ByteString;)V
+    invoke-virtual {p0, p1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(Lcom/crashlytics/android/core/d;)V
 
     return-void
 .end method
 
-.method public a(Lcom/crashlytics/android/core/ByteString;II)V
+.method public a(Lcom/crashlytics/android/core/d;II)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -785,7 +785,7 @@
     .line 37
     iget-object v0, p0, Lcom/crashlytics/android/core/CodedOutputStream;->a:[B
 
-    invoke-virtual {p1, v0, p2, v1, p3}, Lcom/crashlytics/android/core/ByteString;->a([BIII)V
+    invoke-virtual {p1, v0, p2, v1, p3}, Lcom/crashlytics/android/core/d;->a([BIII)V
 
     .line 38
     iget p1, p0, Lcom/crashlytics/android/core/CodedOutputStream;->c:I
@@ -802,7 +802,7 @@
     .line 39
     iget-object v2, p0, Lcom/crashlytics/android/core/CodedOutputStream;->a:[B
 
-    invoke-virtual {p1, v2, p2, v1, v0}, Lcom/crashlytics/android/core/ByteString;->a([BIII)V
+    invoke-virtual {p1, v2, p2, v1, v0}, Lcom/crashlytics/android/core/d;->a([BIII)V
 
     add-int/2addr p2, v0
 
@@ -826,7 +826,7 @@
     .line 43
     iget-object v0, p0, Lcom/crashlytics/android/core/CodedOutputStream;->a:[B
 
-    invoke-virtual {p1, v0, p2, v1, p3}, Lcom/crashlytics/android/core/ByteString;->a([BIII)V
+    invoke-virtual {p1, v0, p2, v1, p3}, Lcom/crashlytics/android/core/d;->a([BIII)V
 
     .line 44
     iput p3, p0, Lcom/crashlytics/android/core/CodedOutputStream;->c:I
@@ -835,7 +835,7 @@
 
     .line 45
     :cond_1
-    invoke-virtual {p1}, Lcom/crashlytics/android/core/ByteString;->a()Ljava/io/InputStream;
+    invoke-virtual {p1}, Lcom/crashlytics/android/core/d;->a()Ljava/io/InputStream;
 
     move-result-object p1
 
@@ -1059,7 +1059,7 @@
     return-void
 .end method
 
-.method public b(Lcom/crashlytics/android/core/ByteString;)V
+.method public b(Lcom/crashlytics/android/core/d;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1068,13 +1068,13 @@
     .end annotation
 
     .line 9
-    invoke-virtual {p1}, Lcom/crashlytics/android/core/ByteString;->b()I
+    invoke-virtual {p1}, Lcom/crashlytics/android/core/d;->b()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, v1, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Lcom/crashlytics/android/core/ByteString;II)V
+    invoke-virtual {p0, p1, v1, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Lcom/crashlytics/android/core/d;II)V
 
     return-void
 .end method
@@ -1104,7 +1104,7 @@
     .end annotation
 
     .line 4
-    invoke-static {p1, p2}, Lcom/crashlytics/android/core/WireFormat;->a(II)I
+    invoke-static {p1, p2}, Lcom/crashlytics/android/core/v0;->a(II)I
 
     move-result p1
 

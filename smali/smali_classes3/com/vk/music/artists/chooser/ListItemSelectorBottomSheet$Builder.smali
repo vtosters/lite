@@ -33,21 +33,21 @@
     .end annotation
 .end field
 
-.field private b:Lkotlin/jvm/b/Functions2;
+.field private b:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private c:Lkotlin/jvm/b/Functions;
+.field private c:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+",
             "Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet<",
             "TT;>;>;"
@@ -57,13 +57,13 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
+.method public constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+",
             "Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet<",
             "TT;>;>;)V"
@@ -73,7 +73,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->c:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->c:Lkotlin/jvm/b/a;
 
     .line 2
     invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
@@ -85,7 +85,7 @@
     .line 3
     sget-object p1, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder$onClickListener$1;->a:Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder$onClickListener$1;
 
-    iput-object p1, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->b:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->b:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -146,14 +146,14 @@
     return-object p0
 .end method
 
-.method public final a(Lkotlin/jvm/b/Functions2;)Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;
+.method public final a(Lkotlin/jvm/b/b;)Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)",
             "Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder<",
             "TT;>;"
@@ -161,7 +161,7 @@
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->b:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->b:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -177,7 +177,7 @@
     const-string v0, "fragmentManager"
 
     .line 4
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->a(Landroidx/fragment/app/FragmentManager;)Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;
 
@@ -188,9 +188,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->c:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->c:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -214,9 +214,9 @@
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->b:Lkotlin/jvm/b/Functions2;
+    iget-object v1, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->b:Lkotlin/jvm/b/b;
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->a(Lkotlin/jvm/b/b;)V
 
     .line 7
     sget-object v1, Lcom/vk/music/artists/chooser/MusicArtistSelector;->e:Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;

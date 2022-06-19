@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/bridges/VkVideoBridge;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Lcom/vk/navigation/ModalDialogCallback;)V
+    value = Lcom/vtosters/lite/bridges/VkVideoBridge;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Lcom/vk/navigation/k;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/api/video/VideoSetActionButton;
+    new-instance v0, Lcom/vk/api/video/m0;
 
     iget-object v1, p0, Lcom/vtosters/lite/bridges/VkVideoBridge$b;->a:Lcom/vk/dto/common/VideoFile;
 
@@ -65,14 +65,14 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/video/VideoSetActionButton;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/video/m0;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
     invoke-direct {p1, p0}, Lcom/vtosters/lite/bridges/VkVideoBridge$b$b;-><init>(Lcom/vtosters/lite/bridges/VkVideoBridge$b;)V
 
     .line 5
-    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method

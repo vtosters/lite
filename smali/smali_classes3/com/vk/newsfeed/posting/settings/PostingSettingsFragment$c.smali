@@ -40,18 +40,18 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$c;->a:Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1, p2}, Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;->i(Z)V
+    invoke-interface {p1, p2}, Lcom/vk/newsfeed/posting/settings/a;->i(Z)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 

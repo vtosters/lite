@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ValidationActivity$a$a;->a(Lcom/vk/dto/common/data/Purchase1;)V
+    value = Lcom/vtosters/lite/ValidationActivity$a$a;->a(Lcom/vk/dto/common/data/e;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/vtosters/lite/data/PurchasesManager$o<",
-        "Lcom/vk/dto/common/data/Purchase1;",
+        "Lcom/vk/dto/common/data/e;",
         ">;"
     }
 .end annotation
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/dto/common/data/Purchase1;)V
+.method public a(Lcom/vk/dto/common/data/e;)V
     .locals 2
 
     .line 2
@@ -59,11 +59,11 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/ValidationActivity$a;->d:Lcom/vtosters/lite/ValidationActivity;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ValidationActivity;->b(Lcom/vtosters/lite/ValidationActivity;)Lcom/vk/bridges/AuthBridge3;
+    invoke-static {v0}, Lcom/vtosters/lite/ValidationActivity;->b(Lcom/vtosters/lite/ValidationActivity;)Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->M1()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/bridges/f;->M1()Ljava/lang/String;
 
     move-result-object v0
 
@@ -103,14 +103,14 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/data/Purchase1;
+    check-cast p1, Lcom/vk/dto/common/data/e;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ValidationActivity$a$a$a;->b(Lcom/vk/dto/common/data/Purchase1;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ValidationActivity$a$a$a;->b(Lcom/vk/dto/common/data/e;)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/dto/common/data/Purchase1;)V
+.method public b(Lcom/vk/dto/common/data/e;)V
     .locals 2
 
     .line 2
@@ -125,11 +125,11 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/ValidationActivity$a;->d:Lcom/vtosters/lite/ValidationActivity;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ValidationActivity;->b(Lcom/vtosters/lite/ValidationActivity;)Lcom/vk/bridges/AuthBridge3;
+    invoke-static {v0}, Lcom/vtosters/lite/ValidationActivity;->b(Lcom/vtosters/lite/ValidationActivity;)Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->M1()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/bridges/f;->M1()Ljava/lang/String;
 
     move-result-object v0
 
@@ -169,9 +169,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/data/Purchase1;
+    check-cast p1, Lcom/vk/dto/common/data/e;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ValidationActivity$a$a$a;->a(Lcom/vk/dto/common/data/Purchase1;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ValidationActivity$a$a$a;->a(Lcom/vk/dto/common/data/e;)V
 
     return-void
 .end method

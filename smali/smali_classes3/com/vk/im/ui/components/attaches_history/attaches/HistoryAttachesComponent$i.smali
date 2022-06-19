@@ -3,7 +3,7 @@
 .source "HistoryAttachesComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/ui/components/attaches_history/attaches/l/ListWithDiff;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/ui/components/attaches_history/attaches/l/b;",
         ">;"
     }
 .end annotation
@@ -46,25 +46,25 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/attaches_history/attaches/l/ListWithDiff;)V
+.method public final a(Lcom/vk/im/ui/components/attaches_history/attaches/l/b;)V
     .locals 2
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/attaches_history/attaches/l/ListWithDiff;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/attaches_history/attaches/l/b;->a()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/attaches_history/attaches/l/ListWithDiff;->b()Landroidx/recyclerview/widget/DiffUtil$DiffResult;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/attaches_history/attaches/l/b;->b()Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
     move-result-object p1
 
     .line 1
     iget-object v1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$i;->a:Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
+    invoke-static {v1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
 
     move-result-object v1
 
-    invoke-interface {v1, v0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;->a(Ljava/util/List;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
+    invoke-interface {v1, v0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;->a(Ljava/util/List;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
 
     return-void
 .end method
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/attaches_history/attaches/l/ListWithDiff;
+    check-cast p1, Lcom/vk/im/ui/components/attaches_history/attaches/l/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$i;->a(Lcom/vk/im/ui/components/attaches_history/attaches/l/ListWithDiff;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$i;->a(Lcom/vk/im/ui/components/attaches_history/attaches/l/b;)V
 
     return-void
 .end method

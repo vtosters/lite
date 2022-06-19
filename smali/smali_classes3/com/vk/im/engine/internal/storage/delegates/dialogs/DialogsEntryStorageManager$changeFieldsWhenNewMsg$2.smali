@@ -3,7 +3,7 @@
 .source "DialogsEntryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/engine/internal/storage/models/a;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)V
+.method public final a(Lcom/vk/im/engine/internal/storage/models/a;)V
     .locals 3
 
     const/4 v0, 0x5
@@ -54,7 +54,7 @@
     new-array v0, v0, [Ljava/lang/String;
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->z()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/a;->z()I
 
     move-result v1
 
@@ -66,7 +66,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->g()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/a;->g()I
 
     move-result v1
 
@@ -78,7 +78,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->h()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/a;->h()I
 
     move-result v1
 
@@ -90,7 +90,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->n()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/a;->n()I
 
     move-result v1
 
@@ -102,7 +102,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->getId()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/a;->getId()I
 
     move-result p1
 
@@ -117,11 +117,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$changeFieldsWhenNewMsg$2;->this$0:Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
-    invoke-static {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    invoke-static {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/b;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
@@ -136,11 +136,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$changeFieldsWhenNewMsg$2;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$changeFieldsWhenNewMsg$2;->a(Lcom/vk/im/engine/internal/storage/models/a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

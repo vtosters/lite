@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stickers/SpecialEvents$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stickers/SpecialEvents$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/stickers/SpecialEvents;->c:Lcom/vk/dto/stickers/SpecialEvents$b;
 
@@ -78,7 +78,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/stickers/SpecialEvents;-><init>(Ljava/util/ArrayList;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/stickers/SpecialEvents;-><init>(Ljava/util/ArrayList;JILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -104,7 +104,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/ArrayList;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/util/ArrayList;JILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x1

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyUnreadVc;
-.super Lcom/vk/im/ui/q/h/LazyVc;
+.super Lcom/vk/im/ui/q/h/a;
 .source "EmptyUnreadVc.kt"
 
 
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/q/h/LazyVc;-><init>(ILandroid/view/View;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/q/h/a;-><init>(ILandroid/view/View;)V
 
     iput-object p3, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyUnreadVc;->h:Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyUnreadVc$a;
 
@@ -46,7 +46,7 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->b()Z
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->b()Z
 
     move-result v0
 
@@ -87,13 +87,13 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 4
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -120,7 +120,7 @@
     .locals 3
 
     .line 2
-    sget v0, Lcom/vk/im/ui/R11;->label:I
+    sget v0, Lcom/vk/im/ui/h;->label:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -128,7 +128,7 @@
 
     const-string v1, "view.findViewById(R.id.label)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/im/ui/views/msg/MsgRequestCountLabelView;
 
@@ -145,13 +145,13 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyUnreadVc$onInflate$1;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyUnreadVc;)V
 
-    invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyUnreadVc;->e()V
 
     .line 5
-    sget v0, Lcom/vk/im/ui/R11;->dialogs_empty_switch_to_all:I
+    sget v0, Lcom/vk/im/ui/h;->dialogs_empty_switch_to_all:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -159,7 +159,7 @@
 
     const-string v0, "view.findViewById(R.id.d\u2026logs_empty_switch_to_all)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyUnreadVc;->f:Landroid/view/View;
 
@@ -172,14 +172,14 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyUnreadVc$onInflate$2;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyUnreadVc;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 
     :cond_0
     const-string p1, "switchView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -187,7 +187,7 @@
     const-string p1, "labelView"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -198,10 +198,10 @@
     if-eqz p1, :cond_0
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->d()V
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->d()V
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->c()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->c()Landroid/view/View;
 
     move-result-object p1
 
@@ -211,14 +211,14 @@
 
     .line 10
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->b()Z
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->b()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
     .line 11
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->c()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->c()Landroid/view/View;
 
     move-result-object p1
 

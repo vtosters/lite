@@ -3,7 +3,7 @@
 .source "VkCatalogConfiguration.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "OrderExtended.kt"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/ServerKeys;
+.implements Lcom/vk/dto/common/data/h;
 
 
 # annotations
@@ -72,7 +72,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/common/OrderExtended$CREATOR;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/common/OrderExtended$CREATOR;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/common/OrderExtended;->CREATOR:Lcom/vk/dto/common/OrderExtended$CREATOR;
 
@@ -293,7 +293,7 @@
 
     const-string v2, "getString(DISPLAY_ORDER_ID)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/dto/common/OrderExtended;->d:Ljava/lang/String;
 

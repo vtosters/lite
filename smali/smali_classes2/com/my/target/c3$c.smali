@@ -2,12 +2,12 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/my/target/AdFactory$d;
+.implements Lcom/my/target/a1$d;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/my/target/InstreamAdFactory;
+    value = Lcom/my/target/c3;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

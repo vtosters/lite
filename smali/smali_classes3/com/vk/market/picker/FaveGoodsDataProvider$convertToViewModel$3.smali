@@ -3,12 +3,12 @@
 .source "GoodsDataProviders.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/picker/FaveGoodsDataProvider;->a(Lcom/vk/fave/entities/FaveResponseEntries1;)Ljava/util/List;
+    value = Lcom/vk/market/picker/FaveGoodsDataProvider;->a(Lcom/vk/fave/entities/c;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/dto/common/Good;",
-        "Lcom/vk/market/picker/FaveGoodViewModel;",
+        "Lcom/vk/market/picker/b;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/Good;)Lcom/vk/market/picker/FaveGoodViewModel;
+.method public final a(Lcom/vk/dto/common/Good;)Lcom/vk/market/picker/b;
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/market/picker/GoodsDataProviders;->a(Lcom/vk/dto/common/Good;)Lcom/vk/market/picker/FaveGoodViewModel;
+    invoke-static {p1}, Lcom/vk/market/picker/e;->a(Lcom/vk/dto/common/Good;)Lcom/vk/market/picker/b;
 
     move-result-object p1
 
@@ -75,14 +75,14 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 2
 
-    const-class v0, Lcom/vk/market/picker/GoodsDataProviders;
+    const-class v0, Lcom/vk/market/picker/e;
 
     const-string v1, "app_armUpload"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/common/Good;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/picker/FaveGoodsDataProvider$convertToViewModel$3;->a(Lcom/vk/dto/common/Good;)Lcom/vk/market/picker/FaveGoodViewModel;
+    invoke-virtual {p0, p1}, Lcom/vk/market/picker/FaveGoodsDataProvider$convertToViewModel$3;->a(Lcom/vk/dto/common/Good;)Lcom/vk/market/picker/b;
 
     move-result-object p1
 

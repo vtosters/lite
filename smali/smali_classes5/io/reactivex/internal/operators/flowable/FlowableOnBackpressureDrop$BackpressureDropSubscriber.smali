@@ -3,8 +3,8 @@
 .source "FlowableOnBackpressureDrop.java"
 
 # interfaces
-.implements Lio/reactivex/FlowableSubscriber;
-.implements Le/b/Subscription;
+.implements Lc/a/h;
+.implements Le/b/d;
 
 
 # annotations
@@ -23,9 +23,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicLong;",
-        "Lio/reactivex/FlowableSubscriber<",
+        "Lc/a/h<",
         "TT;>;",
-        "Le/b/Subscription;"
+        "Le/b/d;"
     }
 .end annotation
 
@@ -37,36 +37,36 @@
 # instance fields
 .field done:Z
 
-.field final downstream:Le/b/Subscriber;
+.field final downstream:Le/b/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field final onDrop:Lio/reactivex/functions/Consumer;
+.field final onDrop:Lc/a/z/g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/Consumer<",
+            "Lc/a/z/g<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field upstream:Le/b/Subscription;
+.field upstream:Le/b/d;
 
 
 # direct methods
-.method constructor <init>(Le/b/Subscriber;Lio/reactivex/functions/Consumer;)V
+.method constructor <init>(Le/b/c;Lc/a/z/g;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;",
-            "Lio/reactivex/functions/Consumer<",
+            "Lc/a/z/g<",
             "-TT;>;)V"
         }
     .end annotation
@@ -75,10 +75,10 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/Subscriber;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/c;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->onDrop:Lio/reactivex/functions/Consumer;
+    iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->onDrop:Lc/a/z/g;
 
     return-void
 .end method
@@ -96,36 +96,36 @@
     if-eqz v0, :cond_0
 
     .line 10
-    invoke-static {p0, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {p0, p1, p2}, Lio/reactivex/internal/util/b;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     :cond_0
     return-void
 .end method
 
-.method public a(Le/b/Subscription;)V
+.method public a(Le/b/d;)V
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->upstream:Le/b/Subscription;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->upstream:Le/b/d;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Le/b/Subscription;Le/b/Subscription;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Le/b/d;Le/b/d;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->upstream:Le/b/Subscription;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->upstream:Le/b/d;
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/Subscriber;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/c;
 
-    invoke-interface {v0, p0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
+    invoke-interface {v0, p0}, Le/b/c;->a(Le/b/d;)V
 
     const-wide v0, 0x7fffffffffffffffL
 
     .line 4
-    invoke-interface {p1, v0, v1}, Le/b/Subscription;->a(J)V
+    invoke-interface {p1, v0, v1}, Le/b/d;->a(J)V
 
     :cond_0
     return-void
@@ -140,7 +140,7 @@
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -151,9 +151,9 @@
     iput-boolean v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->done:Z
 
     .line 8
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/Subscriber;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/c;
 
-    invoke-interface {v0, p1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -175,9 +175,9 @@
     iput-boolean v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->done:Z
 
     .line 11
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/Subscriber;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/c;
 
-    invoke-interface {v0}, Le/b/Subscriber;->b()V
+    invoke-interface {v0}, Le/b/c;->b()V
 
     return-void
 .end method
@@ -210,23 +210,23 @@
     if-eqz v4, :cond_1
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/Subscriber;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->downstream:Le/b/c;
 
-    invoke-interface {v0, p1}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Le/b/c;->b(Ljava/lang/Object;)V
 
     const-wide/16 v0, 0x1
 
     .line 4
-    invoke-static {p0, v0, v1}, Lio/reactivex/internal/util/BackpressureHelper;->c(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {p0, v0, v1}, Lio/reactivex/internal/util/b;->c(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     goto :goto_0
 
     .line 5
     :cond_1
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->onDrop:Lio/reactivex/functions/Consumer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->onDrop:Lc/a/z/g;
 
-    invoke-interface {v0, p1}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -236,7 +236,7 @@
     move-exception p1
 
     .line 6
-    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 7
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->cancel()V
@@ -252,9 +252,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->upstream:Le/b/Subscription;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;->upstream:Le/b/d;
 
-    invoke-interface {v0}, Le/b/Subscription;->cancel()V
+    invoke-interface {v0}, Le/b/d;->cancel()V
 
     return-void
 .end method

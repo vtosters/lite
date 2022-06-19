@@ -3,7 +3,7 @@
 .source "LocationComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -52,13 +52,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$m;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->f(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->f(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a(Z)V
 
     return-void
 .end method

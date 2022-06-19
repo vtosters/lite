@@ -40,18 +40,18 @@
     .line 1
     iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$e;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
+    check-cast p1, Lcom/vk/music/podcasts/episode/b;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->q()Lcom/vk/dto/podcast/PodcastPage;
+    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/b;->q()Lcom/vk/dto/podcast/PodcastPage;
 
     move-result-object v1
 
@@ -64,7 +64,7 @@
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-virtual {p1, v1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->c(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-virtual {p1, v1}, Lcom/vk/music/podcasts/episode/b;->c(Lcom/vk/dto/music/MusicTrack;)V
 
     const/4 p1, 0x1
 

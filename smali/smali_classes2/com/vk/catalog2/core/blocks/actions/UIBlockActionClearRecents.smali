@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/blocks/actions/UIBlockActionClearRecents$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/blocks/actions/UIBlockActionClearRecents$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/blocks/actions/UIBlockActionClearRecents$a;
@@ -63,7 +63,7 @@
     invoke-direct {p0, p1}, Lcom/vk/catalog2/core/blocks/actions/UIBlockAction;-><init>(Lcom/vk/core/serialize/Serializer;)V
 
     .line 4
-    invoke-static {p1}, Lcom/vk/core/extensions/SerializerExt;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vk/core/extensions/w;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
 
     move-result-object p1
 
@@ -181,7 +181,7 @@
 
     iget-object v0, p0, Lcom/vk/catalog2/core/blocks/actions/UIBlockActionClearRecents;->D:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/c;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v8
 
@@ -220,7 +220,7 @@
 
     iget-object p1, p1, Lcom/vk/catalog2/core/blocks/actions/UIBlockActionClearRecents;->D:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -312,7 +312,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 

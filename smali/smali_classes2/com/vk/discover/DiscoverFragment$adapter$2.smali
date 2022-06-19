@@ -3,7 +3,7 @@
 .source "DiscoverFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/discover/DiscoverAdapter;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/discover/b;",
         ">;"
     }
 .end annotation
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/discover/DiscoverAdapter;
+.method public final invoke()Lcom/vk/discover/b;
     .locals 5
 
     .line 2
-    new-instance v0, Lcom/vk/discover/DiscoverAdapter;
+    new-instance v0, Lcom/vk/discover/b;
 
     .line 3
     iget-object v1, p0, Lcom/vk/discover/DiscoverFragment$adapter$2;->this$0:Lcom/vk/discover/DiscoverFragment;
@@ -57,11 +57,11 @@
     .line 4
     sget-object v2, Lcom/vk/discover/DiscoverUiConfig;->g:Lcom/vk/discover/DiscoverUiConfig$a;
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/auth/api/VKAccount;->q()I
+    invoke-virtual {v3}, Lb/h/h/d/c;->q()I
 
     move-result v3
 
@@ -72,7 +72,7 @@
     .line 5
     iget-object v3, p0, Lcom/vk/discover/DiscoverFragment$adapter$2;->this$0:Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {v3}, Lcom/vk/discover/DiscoverFragment;->h(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/music/player/PlayerModel;
+    invoke-static {v3}, Lcom/vk/discover/DiscoverFragment;->h(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/music/player/d;
 
     move-result-object v3
 
@@ -84,7 +84,7 @@
     move-result v4
 
     .line 7
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/discover/DiscoverAdapter;-><init>(Lcom/vk/discover/holders/BasePostHolder$a;Lcom/vk/discover/DiscoverUiConfig;Lcom/vk/music/player/PlayerModel;Z)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/discover/b;-><init>(Lcom/vk/discover/holders/e$a;Lcom/vk/discover/DiscoverUiConfig;Lcom/vk/music/player/d;Z)V
 
     .line 8
     new-instance v1, Lcom/vk/discover/DiscoverFragment$d;
@@ -93,7 +93,7 @@
 
     invoke-direct {v1, v2}, Lcom/vk/discover/DiscoverFragment$d;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/discover/DiscoverAdapter;->a(Lcom/vk/newsfeed/adapters/RecyclerViewObserver;)V
+    invoke-virtual {v0, v1}, Lcom/vk/discover/b;->a(Lcom/vk/newsfeed/adapters/g;)V
 
     return-object v0
 .end method
@@ -102,7 +102,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/discover/DiscoverFragment$adapter$2;->invoke()Lcom/vk/discover/DiscoverAdapter;
+    invoke-virtual {p0}, Lcom/vk/discover/DiscoverFragment$adapter$2;->invoke()Lcom/vk/discover/b;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "MediaSessionCompat.java"
 
 # interfaces
-.implements Landroid/support/v4/media/session/MediaSessionCompatApi21$a;
+.implements Landroid/support/v4/media/session/d$a;
 
 
 # annotations
@@ -115,7 +115,7 @@
     move-result-object p1
 
     .line 5
-    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->F()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->F()Landroid/support/v4/media/session/b;
 
     move-result-object v0
 

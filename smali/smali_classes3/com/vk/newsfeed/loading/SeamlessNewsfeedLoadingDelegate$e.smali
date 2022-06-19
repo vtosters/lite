@@ -3,12 +3,12 @@
 .source "SeamlessNewsfeedLoadingDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(ILio/reactivex/Observable;Z)Lio/reactivex/Observable;
+    value = Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(ILc/a/m;Z)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "[",
         "Ljava/lang/Object;",
         "TR;>;"
@@ -140,9 +140,9 @@
     invoke-direct {v7, v2}, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;-><init>(Ljava/lang/String;)V
 
     .line 6
-    sget-object v2, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v2, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v2, v3, v4}, Lcom/vk/newsfeed/controllers/NewsfeedController;->a(J)Z
+    invoke-virtual {v2, v3, v4}, Lcom/vk/newsfeed/controllers/a;->a(J)Z
 
     move-result v2
 
@@ -168,9 +168,9 @@
     if-eqz v6, :cond_5
 
     .line 8
-    sget-object v3, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v3, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v3}, Lcom/vk/newsfeed/controllers/NewsfeedController;->j()Z
+    invoke-virtual {v3}, Lcom/vk/newsfeed/controllers/a;->j()Z
 
     move-result v3
 
@@ -205,9 +205,9 @@
 
     .line 14
     :cond_4
-    sget-object v3, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v3, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v3}, Lcom/vk/newsfeed/controllers/NewsfeedController;->i()V
+    invoke-virtual {v3}, Lcom/vk/newsfeed/controllers/a;->i()V
 
     .line 15
     :cond_5

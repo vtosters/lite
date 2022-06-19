@@ -63,11 +63,11 @@
     return-object p0
 .end method
 
-.method protected b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/Dismissable;
+.method protected b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/w;
     .locals 7
 
     .line 1
-    sget-object v0, Lcom/vk/common/view/j/ActionBottomSheetDialog;->c:Lcom/vk/common/view/j/ActionBottomSheetDialog$a;
+    sget-object v0, Lcom/vk/common/view/j/a;->c:Lcom/vk/common/view/j/a$a;
 
     iget-object v1, p0, Lcom/vk/hints/HintsManager$b;->e:Lcom/vk/hints/HintsManager$a;
 
@@ -85,7 +85,7 @@
 
     iget-object v6, p0, Lcom/vk/hints/HintsManager$b;->d:Lcom/vk/hints/HintsManager$a;
 
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/common/view/j/ActionBottomSheetDialog$a;->a(Lcom/vk/hints/HintsManager$a;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Lcom/vk/hints/HintsManager$a;)Lcom/vk/common/view/j/ActionBottomSheetDialog;
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/common/view/j/a$a;->a(Lcom/vk/hints/HintsManager$a;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Lcom/vk/hints/HintsManager$a;)Lcom/vk/common/view/j/a;
 
     move-result-object p2
 

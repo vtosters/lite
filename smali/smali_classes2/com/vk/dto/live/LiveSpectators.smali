@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/live/LiveSpectators;
-.super Lcom/vk/dto/common/Model;
+.super Lcom/vk/dto/common/e;
 .source "LiveSpectators.java"
 
 # interfaces
@@ -64,7 +64,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     .line 2
     new-instance v0, Ljava/util/ArrayList;
@@ -87,7 +87,7 @@
     .locals 2
 
     .line 33
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     .line 34
     new-instance v0, Ljava/util/ArrayList;
@@ -129,7 +129,7 @@
 
     const-class v1, Lcom/vk/dto/user/UserProfile;
 
-    invoke-static {p1, v0, v1}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
+    invoke-static {p1, v0, v1}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -144,7 +144,7 @@
     .end annotation
 
     .line 4
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     .line 5
     new-instance v0, Ljava/util/ArrayList;
@@ -561,7 +561,7 @@
     .line 4
     iget-object p2, p0, Lcom/vk/dto/live/LiveSpectators;->e:Ljava/util/List;
 
-    invoke-static {p1, p2}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;)V
+    invoke-static {p1, p2}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;)V
 
     return-void
 .end method

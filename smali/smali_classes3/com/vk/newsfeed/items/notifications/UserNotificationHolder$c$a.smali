@@ -3,7 +3,7 @@
 .source "UserNotificationHolder.kt"
 
 # interfaces
-.implements Lcom/vk/api/base/ApiCallback;
+.implements Lcom/vk/api/base/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/ApiCallback<",
+        "Lcom/vk/api/base/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }

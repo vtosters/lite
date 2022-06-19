@@ -25,10 +25,10 @@
     .end annotation
 .end field
 
-.field public static final I:Lcom/vk/dto/common/data/JsonParser;
+.field public static final I:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/music/Section;",
             ">;"
         }
@@ -156,7 +156,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/music/Section$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/music/Section;->I:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/music/Section;->I:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -517,33 +517,33 @@
     iput-object v0, p0, Lcom/vk/dto/music/Section;->g:Ljava/util/ArrayList;
 
     .line 27
-    sget-object v0, Lcom/vk/dto/music/CustomImage;->f:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v0, Lcom/vk/dto/music/CustomImage;->f:Lcom/vk/dto/common/data/c;
 
     const-string v1, "items"
 
-    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
+    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/dto/music/Section;->E:Ljava/util/ArrayList;
 
     .line 28
-    sget-object v0, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v0, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/c;
 
     const-string v1, "audios"
 
-    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
+    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/dto/music/Section;->h:Ljava/util/ArrayList;
 
     .line 29
-    sget-object v0, Lcom/vk/dto/music/SearchSuggestion;->f:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v0, Lcom/vk/dto/music/SearchSuggestion;->f:Lcom/vk/dto/common/data/c;
 
     const-string v1, "suggestions"
 
-    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
+    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -577,11 +577,11 @@
     iput v0, p0, Lcom/vk/dto/music/Section;->H:I
 
     .line 33
-    sget-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/c;
 
     const-string v1, "videos"
 
-    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
+    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -749,7 +749,7 @@
 
     const-string v1, "playlists"
 
-    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
+    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "PodcastEpisodeFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;->a(ILkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;->a(ILkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions;
+.field final synthetic a:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lkotlin/jvm/b/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$d;->a:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$d;->a:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,9 +55,9 @@
     invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->b(Z)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$d;->a:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$d;->a:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     const p1, 0x7f12055c
 
@@ -68,7 +68,7 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method

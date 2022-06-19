@@ -3,7 +3,7 @@
 .source "Contact.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/models/Profile;
+.implements Lcom/vk/im/engine/models/j;
 
 
 # annotations
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field static final synthetic F:[Lkotlin/u/KProperty5;
+.field static final synthetic F:[Lkotlin/u/j;
 
 
 # instance fields
@@ -37,7 +37,7 @@
 
 .field private final E:Ljava/lang/Integer;
 
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
 .field private final b:I
 
@@ -60,13 +60,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/engine/models/contacts/Contact;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -74,21 +74,21 @@
 
     const-string v4, "getNameForSort()Ljava/lang/String;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/engine/models/contacts/Contact;->F:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/engine/models/contacts/Contact;->F:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/im/engine/models/contacts/Contact$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/contacts/Contact$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/contacts/Contact$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/contacts/Contact$a;
@@ -132,7 +132,7 @@
 
     move/from16 v11, p9
 
-    invoke-direct/range {v0 .. v14}, Lcom/vk/im/engine/models/contacts/Contact;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/im/engine/models/contacts/Contact;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -168,7 +168,7 @@
 
     move/from16 v11, p10
 
-    invoke-direct/range {v0 .. v14}, Lcom/vk/im/engine/models/contacts/Contact;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/im/engine/models/contacts/Contact;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -204,7 +204,7 @@
 
     move/from16 v11, p11
 
-    invoke-direct/range {v0 .. v14}, Lcom/vk/im/engine/models/contacts/Contact;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/im/engine/models/contacts/Contact;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -242,16 +242,16 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/engine/models/contacts/Contact$nameForSort$2;-><init>(Lcom/vk/im/engine/models/contacts/Contact;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/models/contacts/Contact;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/engine/models/contacts/Contact;->a:Lkotlin/e;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/i;)V
     .locals 15
 
     move/from16 v0, p13
@@ -399,36 +399,36 @@
 
     .line 17
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
     .line 18
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
     .line 19
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
     .line 20
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
     .line 21
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 1
@@ -440,15 +440,15 @@
 .method private final C1()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/engine/models/contacts/Contact;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/engine/models/contacts/Contact;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/engine/models/contacts/Contact;->F:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/engine/models/contacts/Contact;->F:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -651,7 +651,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->e(Lcom/vk/im/engine/models/Profile;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->e(Lcom/vk/im/engine/models/j;)Z
 
     move-result v0
 
@@ -682,7 +682,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->j(Lcom/vk/im/engine/models/Profile;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->j(Lcom/vk/im/engine/models/j;)Z
 
     move-result v0
 
@@ -693,7 +693,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->l(Lcom/vk/im/engine/models/Profile;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->l(Lcom/vk/im/engine/models/j;)Z
 
     move-result v0
 
@@ -704,7 +704,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->k(Lcom/vk/im/engine/models/Profile;)Lcom/vk/im/engine/models/users/UserSex;
+    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->k(Lcom/vk/im/engine/models/j;)Lcom/vk/im/engine/models/users/UserSex;
 
     move-result-object v0
 
@@ -758,7 +758,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/Profile$b;->c(Lcom/vk/im/engine/models/Profile;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/j$b;->c(Lcom/vk/im/engine/models/j;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -843,7 +843,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/Profile$b;->b(Lcom/vk/im/engine/models/Profile;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/j$b;->b(Lcom/vk/im/engine/models/j;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -854,7 +854,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->d(Lcom/vk/im/engine/models/Profile;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->d(Lcom/vk/im/engine/models/j;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -865,7 +865,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/Profile$b;->a(Lcom/vk/im/engine/models/Profile;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/j$b;->a(Lcom/vk/im/engine/models/j;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -876,7 +876,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->b(Lcom/vk/im/engine/models/Profile;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->b(Lcom/vk/im/engine/models/j;)Z
 
     move-result v0
 
@@ -887,7 +887,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->i(Lcom/vk/im/engine/models/Profile;)Lcom/vk/dto/user/OnlineInfo;
+    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->i(Lcom/vk/im/engine/models/j;)Lcom/vk/dto/user/OnlineInfo;
 
     move-result-object v0
 
@@ -919,7 +919,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/contacts/Contact;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -929,7 +929,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/contacts/Contact;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -939,7 +939,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/contacts/Contact;->e:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -949,7 +949,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/contacts/Contact;->f:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -967,7 +967,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/contacts/Contact;->h:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -977,7 +977,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/contacts/Contact;->B:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -987,7 +987,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/contacts/Contact;->C:Ljava/lang/Boolean;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1003,7 +1003,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/contacts/Contact;->E:Ljava/lang/Integer;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1027,7 +1027,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->c(Lcom/vk/im/engine/models/Profile;)I
+    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->c(Lcom/vk/im/engine/models/j;)I
 
     move-result v0
 
@@ -1038,7 +1038,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->a(Lcom/vk/im/engine/models/Profile;)Lcom/vk/im/engine/models/ImageList;
+    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->a(Lcom/vk/im/engine/models/j;)Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v0
 

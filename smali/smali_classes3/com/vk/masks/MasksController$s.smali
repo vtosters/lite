@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController;->b(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
+    value = Lcom/vk/masks/MasksController;->b(Lcom/vk/dto/masks/Mask;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "Lcom/vk/dto/masks/Mask;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -85,13 +85,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/masks/MasksController$s;->b:Lcom/vk/masks/MasksController;
 
-    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/MasksStorage;
+    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/d;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/masks/MasksController$s;->a:Lcom/vk/dto/masks/Mask;
 
-    invoke-virtual {v0, v1}, Lcom/vk/masks/MasksStorage;->f(Lcom/vk/dto/masks/Mask;)V
+    invoke-virtual {v0, v1}, Lcom/vk/masks/d;->f(Lcom/vk/dto/masks/Mask;)V
 
     .line 3
     :cond_1

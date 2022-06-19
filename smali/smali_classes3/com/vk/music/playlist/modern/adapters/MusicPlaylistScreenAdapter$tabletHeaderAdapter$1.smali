@@ -3,12 +3,12 @@
 .source "MusicPlaylistScreenAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/Functions;Lcom/vk/music/playlist/ModernPlaylistModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/core/ui/IdClickListener;)V
+    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/a;Lcom/vk/music/playlist/b;Lcom/vk/music/player/d;Lcom/vk/core/ui/k;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;",
+        "Lcom/vk/music/playlist/modern/holders/header/a;",
         ">;"
     }
 .end annotation
@@ -46,27 +46,27 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/holders/header/a;
     .locals 7
 
     .line 1
-    new-instance v6, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;
+    new-instance v6, Lcom/vk/music/playlist/modern/holders/header/a;
 
     iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$tabletHeaderAdapter$1;->this$0:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->b(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/music/player/PlayerModel;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->b(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/music/player/d;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$tabletHeaderAdapter$1;->this$0:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
-    invoke-static {v3}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->c(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lkotlin/jvm/b/Functions;
+    invoke-static {v3}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->c(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lkotlin/jvm/b/a;
 
     move-result-object v4
 
     iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$tabletHeaderAdapter$1;->this$0:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/core/ui/IdClickListener;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/core/ui/k;
 
     move-result-object v5
 
@@ -74,7 +74,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/playlist/modern/h/OnConfigChangedListener1;Lkotlin/jvm/b/Functions;Lcom/vk/core/ui/IdClickListener;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/header/a;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/player/d;Lcom/vk/music/playlist/modern/h/h;Lkotlin/jvm/b/a;Lcom/vk/core/ui/k;)V
 
     return-object v6
 .end method
@@ -85,7 +85,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$tabletHeaderAdapter$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;
+    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$tabletHeaderAdapter$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/holders/header/a;
 
     move-result-object p1
 

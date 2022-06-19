@@ -36,11 +36,11 @@
 
 .field private I:I
 
-.field private J:Lkotlin/jvm/b/Functions;
+.field private J:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -65,27 +65,27 @@
 
 .field private O:Ljava/lang/CharSequence;
 
-.field private P:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.field private P:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
 .field private Q:Ljava/lang/CharSequence;
 
 .field private R:Landroid/graphics/drawable/Drawable;
 
-.field private S:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.field private S:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
 .field private T:Ljava/lang/CharSequence;
 
-.field private U:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.field private U:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
 .field private V:Z
 
 .field private W:Ljava/lang/CharSequence;
 
-.field private X:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.field private X:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
 .field private Y:Ljava/lang/CharSequence;
 
-.field private Z:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.field private Z:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
 .field private a:Z
 
@@ -93,7 +93,7 @@
 
 .field private b:Z
 
-.field private b0:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
+.field private b0:Lcom/vk/core/dialogs/bottomsheet/h$d;
 
 .field private c:Z
 
@@ -101,17 +101,17 @@
 
 .field private d:Z
 
-.field private d0:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;
+.field private d0:Lcom/vk/core/dialogs/bottomsheet/h$f;
 
 .field private e:Landroid/view/View;
 
-.field private e0:Lkotlin/jvm/b/Functions2;
+.field private e0:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -123,7 +123,7 @@
 
 .field private g:Ljava/lang/Integer;
 
-.field private g0:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
+.field private g0:Lcom/vk/core/dialogs/bottomsheet/b;
 
 .field private h:Z
 
@@ -139,13 +139,13 @@
 
 .field private k:I
 
-.field private k0:Lkotlin/jvm/b/Functions2;
+.field private k0:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -187,13 +187,13 @@
 
 .field private y:Ljava/lang/CharSequence;
 
-.field private z:Lkotlin/jvm/b/Functions2;
+.field private z:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -246,7 +246,7 @@
     .line 12
     sget-object v2, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params$onViewCreated$1;->a:Lcom/vk/core/dialogs/bottomsheet/ModalController$Params$onViewCreated$1;
 
-    iput-object v2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->k0:Lkotlin/jvm/b/Functions2;
+    iput-object v2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->k0:Lkotlin/jvm/b/b;
 
     .line 13
     iput-boolean v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->l0:Z
@@ -486,19 +486,19 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->c(Lcom/vk/core/dialogs/bottomsheet/ModalController;Landroid/view/View;)V
 
     .line 29
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->k0:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->k0:Lkotlin/jvm/b/b;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lkotlin/jvm/b/b;)V
 
     .line 30
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->d0:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->d0:Lcom/vk/core/dialogs/bottomsheet/h$f;
 
-    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;)V
+    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/h$f;)V
 
     .line 31
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->g0:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->g0:Lcom/vk/core/dialogs/bottomsheet/b;
 
-    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)V
+    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/b;)V
 
     .line 32
     iget-boolean v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->K:Z
@@ -536,9 +536,9 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->m(Lcom/vk/core/dialogs/bottomsheet/ModalController;Z)V
 
     .line 39
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->e0:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->e0:Lkotlin/jvm/b/b;
 
-    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lkotlin/jvm/b/b;)V
 
     .line 40
     iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->Q:Ljava/lang/CharSequence;
@@ -569,7 +569,7 @@
     :goto_1
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->S:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->S:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     if-eqz v0, :cond_2
 
@@ -579,9 +579,9 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->d(Lcom/vk/core/dialogs/bottomsheet/ModalController;Ljava/lang/CharSequence;)V
 
     .line 42
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->S:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->S:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
-    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->c(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->c(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/h$e;)V
 
     .line 43
     :cond_2
@@ -614,7 +614,7 @@
     :goto_3
     if-nez v0, :cond_5
 
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->U:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->U:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     if-eqz v0, :cond_5
 
@@ -624,9 +624,9 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->f(Lcom/vk/core/dialogs/bottomsheet/ModalController;Ljava/lang/CharSequence;)V
 
     .line 46
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->U:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->U:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
-    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->e(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->e(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/h$e;)V
 
     .line 47
     iget-boolean v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->V:Z
@@ -690,9 +690,9 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;I)V
 
     .line 59
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->J:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->J:Lkotlin/jvm/b/a;
 
-    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lkotlin/jvm/b/Functions;)V
+    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lkotlin/jvm/b/a;)V
 
     .line 60
     iget-boolean v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->N:Z
@@ -724,7 +724,7 @@
     :goto_5
     if-nez v0, :cond_8
 
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->P:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->P:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     if-eqz v0, :cond_8
 
@@ -734,9 +734,9 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->b(Lcom/vk/core/dialogs/bottomsheet/ModalController;Ljava/lang/CharSequence;)V
 
     .line 63
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->P:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->P:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
-    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->a(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/h$e;)V
 
     .line 64
     :cond_8
@@ -764,7 +764,7 @@
     :goto_7
     if-nez v0, :cond_b
 
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->X:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->X:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     if-eqz v0, :cond_b
 
@@ -774,9 +774,9 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->c(Lcom/vk/core/dialogs/bottomsheet/ModalController;Ljava/lang/CharSequence;)V
 
     .line 66
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->X:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->X:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
-    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->b(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->b(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/h$e;)V
 
     .line 67
     :cond_b
@@ -796,7 +796,7 @@
     :cond_d
     if-nez v1, :cond_e
 
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->Z:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->Z:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     if-eqz v0, :cond_e
 
@@ -806,9 +806,9 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->e(Lcom/vk/core/dialogs/bottomsheet/ModalController;Ljava/lang/CharSequence;)V
 
     .line 69
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->Z:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->Z:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
-    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->d(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+    invoke-static {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalController;->d(Lcom/vk/core/dialogs/bottomsheet/ModalController;Lcom/vk/core/dialogs/bottomsheet/h$e;)V
 
     .line 70
     iget-boolean v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->a0:Z
@@ -819,38 +819,38 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/b;)V
     .locals 0
 
     .line 17
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->g0:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->g0:Lcom/vk/core/dialogs/bottomsheet/b;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/h$d;)V
     .locals 0
 
     .line 13
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->b0:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->b0:Lcom/vk/core/dialogs/bottomsheet/h$d;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/h$e;)V
     .locals 0
 
     .line 12
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->P:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->P:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/h$f;)V
     .locals 0
 
     .line 15
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->d0:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->d0:Lcom/vk/core/dialogs/bottomsheet/h$f;
 
     return-void
 .end method
@@ -891,38 +891,38 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/Functions;)V
+.method public final a(Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 9
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->J:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->J:Lkotlin/jvm/b/a;
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/Functions2;)V
+.method public final a(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 7
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->z:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->z:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -972,11 +972,11 @@
     return-void
 .end method
 
-.method public final b(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+.method public final b(Lcom/vk/core/dialogs/bottomsheet/h$e;)V
     .locals 0
 
     .line 7
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->X:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->X:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-void
 .end method
@@ -999,21 +999,21 @@
     return-void
 .end method
 
-.method public final b(Lkotlin/jvm/b/Functions2;)V
+.method public final b(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 8
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->e0:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->e0:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -1063,11 +1063,11 @@
     return-void
 .end method
 
-.method public final c(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+.method public final c(Lcom/vk/core/dialogs/bottomsheet/h$e;)V
     .locals 0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->S:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->S:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-void
 .end method
@@ -1081,21 +1081,21 @@
     return-void
 .end method
 
-.method public final c(Lkotlin/jvm/b/Functions2;)V
+.method public final c(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 7
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->k0:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->k0:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -1145,11 +1145,11 @@
     return-void
 .end method
 
-.method public final d(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+.method public final d(Lcom/vk/core/dialogs/bottomsheet/h$e;)V
     .locals 0
 
     .line 7
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->Z:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->Z:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-void
 .end method
@@ -1190,11 +1190,11 @@
     return-void
 .end method
 
-.method public final e(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)V
+.method public final e(Lcom/vk/core/dialogs/bottomsheet/h$e;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->U:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->U:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-void
 .end method
@@ -1316,11 +1316,11 @@
     return-void
 .end method
 
-.method public final i()Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
+.method public final i()Lcom/vk/core/dialogs/bottomsheet/b;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->g0:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->g0:Lcom/vk/core/dialogs/bottomsheet/b;
 
     return-object v0
 .end method
@@ -1451,20 +1451,20 @@
     return-void
 .end method
 
-.method public final p()Lkotlin/jvm/b/Functions2;
+.method public final p()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->z:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->z:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
@@ -1514,11 +1514,11 @@
     return v0
 .end method
 
-.method public final s()Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.method public final s()Lcom/vk/core/dialogs/bottomsheet/h$e;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->X:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->X:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-object v0
 .end method
@@ -1550,11 +1550,11 @@
     return-void
 .end method
 
-.method public final u()Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
+.method public final u()Lcom/vk/core/dialogs/bottomsheet/h$d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->b0:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->b0:Lcom/vk/core/dialogs/bottomsheet/h$d;
 
     return-object v0
 .end method
@@ -1568,20 +1568,20 @@
     return-object v0
 .end method
 
-.method public final w()Lkotlin/jvm/b/Functions2;
+.method public final w()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->e0:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->e0:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
@@ -1595,11 +1595,11 @@
     return-object v0
 .end method
 
-.method public final y()Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.method public final y()Lcom/vk/core/dialogs/bottomsheet/h$e;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->S:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalController$Params;->S:Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     return-object v0
 .end method

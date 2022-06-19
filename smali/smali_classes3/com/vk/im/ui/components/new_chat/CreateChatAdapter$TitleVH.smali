@@ -25,7 +25,7 @@
 
 .field private e:Landroid/text/TextWatcher;
 
-.field private f:Lcom/vk/im/ui/components/new_chat/VcCallback;
+.field private f:Lcom/vk/im/ui/components/new_chat/f;
 
 
 # direct methods
@@ -48,7 +48,7 @@
     iput-boolean v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->b:Z
 
     .line 4
-    sget v0, Lcom/vk/im/ui/R11;->vkim_title:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_title:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -59,7 +59,7 @@
     iput-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->c:Landroid/widget/EditText;
 
     .line 5
-    sget v0, Lcom/vk/im/ui/R11;->vkim_avatar:I
+    sget v0, Lcom/vk/im/ui/h;->vkim_avatar:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -74,7 +74,7 @@
 
     const-string v0, "title"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/widget/EditText;->getContext()Landroid/content/Context;
 
@@ -83,13 +83,13 @@
     .line 7
     iget-object v9, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->c:Landroid/widget/EditText;
 
-    invoke-static {v9, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/core/drawable/VkUiDrawableHelper;->INSTANCE:Lcom/vk/core/drawable/VkUiDrawableHelper;
+    sget-object v1, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -105,7 +105,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v8}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static/range {v1 .. v8}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
     .line 8
     iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->d:Lcom/vk/im/ui/views/avatars/AvatarView;
 
-    sget v1, Lcom/vk/im/ui/R12;->ic_camera_outline_placeholder:I
+    sget v1, Lcom/vk/im/ui/f;->ic_camera_outline_placeholder:I
 
     invoke-static {p1, v1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -127,13 +127,13 @@
 
     const-string v1, "avatar"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$1;
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$1;-><init>(Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;Landroid/content/Context;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -147,11 +147,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;)Lcom/vk/im/ui/components/new_chat/VcCallback;
+.method public static final synthetic b(Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;)Lcom/vk/im/ui/components/new_chat/f;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->f:Lcom/vk/im/ui/components/new_chat/VcCallback;
+    iget-object p0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->f:Lcom/vk/im/ui/components/new_chat/f;
 
     if-eqz p0, :cond_0
 
@@ -160,7 +160,7 @@
     :cond_0
     const-string p0, "callback"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -169,11 +169,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/new_chat/Model;Lcom/vk/im/ui/components/new_chat/VcCallback;)V
+.method public final a(Lcom/vk/im/ui/components/new_chat/e;Lcom/vk/im/ui/components/new_chat/f;)V
     .locals 7
 
     .line 2
-    iput-object p2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->f:Lcom/vk/im/ui/components/new_chat/VcCallback;
+    iput-object p2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->f:Lcom/vk/im/ui/components/new_chat/f;
 
     .line 3
     iget-boolean v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->b:Z
@@ -188,11 +188,11 @@
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->c:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
 
     .line 6
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/Model;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/e;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -220,7 +220,7 @@
 
     sget-object v1, Lcom/vk/im/engine/models/ImageList;->b:Lcom/vk/im/engine/models/ImageList$b;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/Model;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/e;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -250,9 +250,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v2, Lcom/vk/im/ui/R12;->ic_camera_outline_placeholder:I
+    sget v2, Lcom/vk/im/ui/f;->ic_camera_outline_placeholder:I
 
     invoke-static {v1, v2}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -263,7 +263,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->c:Landroid/widget/EditText;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/Model;->e()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/e;->e()Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -279,7 +279,7 @@
     .line 12
     new-instance v0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$a;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$a;-><init>(Lcom/vk/im/ui/components/new_chat/Model;Lcom/vk/im/ui/components/new_chat/VcCallback;)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$a;-><init>(Lcom/vk/im/ui/components/new_chat/e;Lcom/vk/im/ui/components/new_chat/f;)V
 
     iput-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->e:Landroid/text/TextWatcher;
 

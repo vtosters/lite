@@ -3,12 +3,12 @@
 .source "MarketCartCheckoutContract.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;-><init>(Landroid/content/Context;Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;I)V
+    value = Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;-><init>(Landroid/content/Context;Lcom/vk/market/orders/checkout/n;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/market/orders/checkout/DeliveryInfo12;",
+        "Lc/a/z/g<",
+        "Lcom/vk/market/orders/checkout/e;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
+.method public final a(Lcom/vk/market/orders/checkout/e;)V
     .locals 7
 
     .line 1
@@ -54,7 +54,7 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -68,7 +68,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;Lcom/vk/market/orders/checkout/DeliveryInfo12;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;Lcom/vk/market/orders/checkout/e;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -77,9 +77,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo12;
+    check-cast p1, Lcom/vk/market/orders/checkout/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$a;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
+    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$a;->a(Lcom/vk/market/orders/checkout/e;)V
 
     return-void
 .end method

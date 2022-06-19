@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Ljava/lang/String;ZLcom/vk/mediastore/a/VideoCache$b;)V
+    value = Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Ljava/lang/String;ZLcom/vk/mediastore/a/c$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 
 .field final synthetic b:Ljava/lang/String;
 
-.field final synthetic c:Lcom/vk/mediastore/a/VideoCache$b;
+.field final synthetic c:Lcom/vk/mediastore/a/c$b;
 
 .field final synthetic d:Z
 
@@ -30,14 +30,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Ljava/lang/String;Lcom/vk/mediastore/a/VideoCache$b;ZLcom/vk/mediastore/legacy/ProxyVideoCache$f;)V
+.method constructor <init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Ljava/lang/String;Lcom/vk/mediastore/a/c$b;ZLcom/vk/mediastore/legacy/ProxyVideoCache$f;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->a:Lcom/vk/mediastore/legacy/ProxyVideoCache;
 
     iput-object p2, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->c:Lcom/vk/mediastore/a/VideoCache$b;
+    iput-object p3, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->c:Lcom/vk/mediastore/a/c$b;
 
     iput-boolean p4, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->d:Z
 
@@ -57,13 +57,13 @@
     :try_start_0
     iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->a:Lcom/vk/mediastore/legacy/ProxyVideoCache;
 
-    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/HttpProxyCacheServer;
+    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/f;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/danikula/videocache/HttpProxyCacheServer;->b(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Lcom/danikula/videocache/f;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -72,24 +72,24 @@
     .line 2
     iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->a:Lcom/vk/mediastore/legacy/ProxyVideoCache;
 
-    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/HttpProxyCacheServer;
+    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/f;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/danikula/videocache/HttpProxyCacheServer;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/danikula/videocache/f;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->c:Lcom/vk/mediastore/a/VideoCache$b;
+    iget-object v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->c:Lcom/vk/mediastore/a/c$b;
 
     if-eqz v1, :cond_0
 
     iget-object v2, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;->b:Ljava/lang/String;
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/mediastore/a/VideoCache$b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/mediastore/a/c$b;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -129,7 +129,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -165,7 +165,7 @@
     .line 8
     :cond_4
     :try_start_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 

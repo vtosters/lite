@@ -3,17 +3,17 @@
 .source "AwakeTimeSinceBootClock.java"
 
 # interfaces
-.implements Lcom/facebook/common/time/MonotonicClock;
+.implements Lcom/facebook/common/time/b;
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/DoNotStrip;
+.annotation build Lcom/facebook/common/internal/d;
 .end annotation
 
 
 # static fields
 .field private static final INSTANCE:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end field
 
@@ -43,7 +43,7 @@
 
 .method public static get()Lcom/facebook/common/time/AwakeTimeSinceBootClock;
     .locals 1
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -56,7 +56,7 @@
 # virtual methods
 .method public now()J
     .locals 2
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1

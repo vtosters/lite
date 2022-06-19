@@ -3,7 +3,7 @@
 .source "AppsFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -56,9 +56,9 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v2, Lcom/vk/core/drawable/VkUiDrawableHelper;->INSTANCE:Lcom/vk/core/drawable/VkUiDrawableHelper;
+    sget-object v2, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
 
     .line 2
     iget-object v1, p0, Lcom/vk/apps/AppsFragment$CarouselBannerViewHolder$CarouselAppBannerHolder$a;->a:Lcom/vk/apps/AppsFragment$CarouselBannerViewHolder$CarouselAppBannerHolder;
@@ -95,7 +95,7 @@
     move-object v10, p1
 
     .line 4
-    invoke-static/range {v2 .. v12}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;IIZIIFLandroid/content/Context;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/drawable/RippleDrawable;
+    invoke-static/range {v2 .. v12}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;IIZIIFLandroid/content/Context;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "UsersMergeTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Landroid/util/SparseArray;
+    value = Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;->b(Lcom/vk/im/engine/d;)Landroid/util/SparseArray;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/models/users/User;",
         "Lcom/vk/im/engine/internal/storage/models/UserStorageModel;",
         ">;"
@@ -66,7 +66,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Ljava/lang/Integer;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Ljava/lang/Integer;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -180,7 +180,7 @@
     move-object/from16 v3, p1
 
     .line 7
-    invoke-direct/range {v2 .. v32}, Lcom/vk/im/engine/internal/storage/models/UserStorageModel;-><init>(Lcom/vk/im/engine/models/users/User;ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/users/UserSex;Lcom/vk/im/engine/models/ImageList;ZZZZLcom/vk/dto/user/OnlineInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZILjava/lang/String;ZZJJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v32}, Lcom/vk/im/engine/internal/storage/models/UserStorageModel;-><init>(Lcom/vk/im/engine/models/users/User;ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/users/UserSex;Lcom/vk/im/engine/models/ImageList;ZZZZLcom/vk/dto/user/OnlineInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZILjava/lang/String;ZZJJILkotlin/jvm/internal/i;)V
 
     return-object v33
 .end method

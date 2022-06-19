@@ -3,12 +3,12 @@
 .source "TaskExecutor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/TaskExecutor;-><init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/core/util/TimeProvider;Lcom/vk/im/engine/internal/TaskExecutor$d;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lcom/vk/im/log/ImLogger;)V
+    value = Lcom/vk/im/engine/internal/TaskExecutor;-><init>(Lcom/vk/im/engine/d;Lcom/vk/core/util/h1;Lcom/vk/im/engine/internal/TaskExecutor$d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lcom/vk/im/log/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/util/concurrent/ScheduledExecutorService;",
         ">;"
     }
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic $scheduledExecutorFactory:Lkotlin/jvm/b/Functions;
+.field final synthetic $scheduledExecutorFactory:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lkotlin/jvm/b/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor$scheduledExecutor$2;->$scheduledExecutorFactory:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor$scheduledExecutor$2;->$scheduledExecutorFactory:Lkotlin/jvm/b/a;
 
     const/4 p1, 0x0
 
@@ -60,9 +60,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor$scheduledExecutor$2;->$scheduledExecutorFactory:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor$scheduledExecutor$2;->$scheduledExecutorFactory:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 

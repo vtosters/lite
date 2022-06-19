@@ -4,11 +4,11 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract1;
+.implements Lcom/vk/newsfeed/items/posting/floating/b;
 
 
 # instance fields
-.field private a:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+.field private a:Lcom/vk/newsfeed/items/posting/floating/a;
 
 .field private final b:Landroid/text/TextPaint;
 
@@ -216,21 +216,21 @@
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView$setSwipeable$1;-><init>(Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->d(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
+    invoke-virtual {v0, v1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->d(Lkotlin/jvm/b/b;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
 
     .line 8
     new-instance v1, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView$setSwipeable$2;
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView$setSwipeable$2;-><init>(Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->b(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
+    invoke-virtual {v0, v1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->b(Lkotlin/jvm/b/b;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
 
     .line 9
     new-instance v1, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView$setSwipeable$3;
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView$setSwipeable$3;-><init>(Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->a(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
+    invoke-virtual {v0, v1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->a(Lkotlin/jvm/b/b;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
 
     const/high16 v1, 0x3e800000    # 0.25f
 
@@ -293,22 +293,22 @@
     return-void
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/BaseContract;
+.method public bridge synthetic getPresenter()Lb/h/r/a;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->getPresenter()Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->getPresenter()Lcom/vk/newsfeed/items/posting/floating/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+.method public getPresenter()Lcom/vk/newsfeed/items/posting/floating/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->a:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iget-object v0, p0, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->a:Lcom/vk/newsfeed/items/posting/floating/a;
 
     return-object v0
 .end method
@@ -347,26 +347,26 @@
 
     if-ne p1, v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->getPresenter()Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->getPresenter()Lcom/vk/newsfeed/items/posting/floating/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;->w()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/items/posting/floating/a;->w()V
 
     goto :goto_2
 
     .line 3
     :cond_2
     :goto_1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->getPresenter()Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->getPresenter()Lcom/vk/newsfeed/items/posting/floating/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;->r1()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/items/posting/floating/a;->r1()V
 
     :cond_3
     :goto_2
@@ -456,22 +456,22 @@
     return-void
 .end method
 
-.method public bridge synthetic setPresenter(Lb/h/r/BaseContract;)V
+.method public bridge synthetic setPresenter(Lb/h/r/a;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    check-cast p1, Lcom/vk/newsfeed/items/posting/floating/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->setPresenter(Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->setPresenter(Lcom/vk/newsfeed/items/posting/floating/a;)V
 
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;)V
+.method public setPresenter(Lcom/vk/newsfeed/items/posting/floating/a;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->a:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iput-object p1, p0, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->a:Lcom/vk/newsfeed/items/posting/floating/a;
 
     return-void
 .end method

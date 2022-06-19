@@ -3,12 +3,12 @@
 .source "MarketCartContract.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/orders/MarketCartContract$Presenter;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+    value = Lcom/vk/market/orders/MarketCartContract$Presenter;->a(Lc/a/m;ZLcom/vk/lists/t;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/common/Good;",
         ">;>;"
@@ -33,18 +33,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/market/orders/MarketCartContract$Presenter;
 
-.field final synthetic b:Lcom/vk/lists/PaginationHelper;
+.field final synthetic b:Lcom/vk/lists/t;
 
 .field final synthetic c:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/market/orders/MarketCartContract$Presenter;Lcom/vk/lists/PaginationHelper;Z)V
+.method constructor <init>(Lcom/vk/market/orders/MarketCartContract$Presenter;Lcom/vk/lists/t;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$f;->a:Lcom/vk/market/orders/MarketCartContract$Presenter;
 
-    iput-object p2, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$f;->b:Lcom/vk/lists/PaginationHelper;
+    iput-object p2, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$f;->b:Lcom/vk/lists/t;
 
     iput-boolean p3, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$f;->c:Z
 
@@ -71,13 +71,13 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$f;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v1, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$f;->b:Lcom/vk/lists/t;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/lists/PaginationHelper;->a()I
+    invoke-virtual {v1}, Lcom/vk/lists/t;->a()I
 
     move-result v1
 
@@ -103,7 +103,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$f;->a:Lcom/vk/market/orders/MarketCartContract$Presenter;
 
-    invoke-static {v0}, Lcom/vk/market/orders/MarketCartContract$Presenter;->b(Lcom/vk/market/orders/MarketCartContract$Presenter;)Lcom/vk/market/orders/MarketCartContract;
+    invoke-static {v0}, Lcom/vk/market/orders/MarketCartContract$Presenter;->b(Lcom/vk/market/orders/MarketCartContract$Presenter;)Lcom/vk/market/orders/c;
 
     move-result-object v0
 
@@ -111,10 +111,10 @@
 
     xor-int/2addr v2, v3
 
-    invoke-interface {v0, p1, v1, v2}, Lcom/vk/market/orders/MarketCartContract;->d(Lcom/vk/dto/common/data/VKList;ZZ)V
+    invoke-interface {v0, p1, v1, v2}, Lcom/vk/market/orders/c;->d(Lcom/vk/dto/common/data/VKList;ZZ)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$f;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$f;->b:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_2
 
@@ -122,7 +122,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/PaginationHelper;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/t;->a(I)V
 
     :cond_2
     return-void

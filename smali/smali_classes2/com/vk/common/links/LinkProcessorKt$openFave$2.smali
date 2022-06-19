@@ -3,7 +3,7 @@
 .source "LinkProcessor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     invoke-virtual {p0}, Lcom/vk/common/links/LinkProcessorKt$openFave$2;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -67,7 +67,7 @@
 
     const-string v1, "bookmarks_pages"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -90,7 +90,7 @@
     .line 6
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$openFave$2;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -100,7 +100,7 @@
 
     const-string v1, "user"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -123,7 +123,7 @@
     .line 12
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$openFave$2;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -133,7 +133,7 @@
 
     const-string v1, "group"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -156,7 +156,7 @@
     .line 18
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$openFave$2;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -178,7 +178,7 @@
     .line 23
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$openFave$2;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     :goto_0
     return-void

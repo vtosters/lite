@@ -3,12 +3,12 @@
 .source "DiscoverDataProvider.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/DiscoverDataProvider;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
+    value = Lcom/vk/discover/DiscoverDataProvider;->a(Lc/a/m;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -59,14 +59,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/discover/DiscoverCategoriesContainer;)Lio/reactivex/Observable;
+.method public final a(Lcom/vk/discover/DiscoverCategoriesContainer;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/discover/DiscoverCategoriesContainer;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lkotlin/Pair<",
             "Lcom/vk/discover/DiscoverCategoriesContainer;",
             "Ljava/lang/Object;",
@@ -92,7 +92,7 @@
     .line 2
     sget-object v1, Lcom/vk/discover/DiscoverDataProvider;->d:Lcom/vk/discover/DiscoverDataProvider;
 
-    invoke-static {v1, v0, p1}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lcom/vk/dto/discover/DiscoverCategory;Lcom/vk/discover/DiscoverCategoriesContainer;)Lio/reactivex/Observable;
+    invoke-static {v1, v0, p1}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lcom/vk/dto/discover/DiscoverCategory;Lcom/vk/discover/DiscoverCategoriesContainer;)Lc/a/m;
 
     move-result-object p1
 
@@ -105,7 +105,7 @@
     .line 1
     check-cast p1, Lcom/vk/discover/DiscoverCategoriesContainer;
 
-    invoke-virtual {p0, p1}, Lcom/vk/discover/DiscoverDataProvider$p;->a(Lcom/vk/discover/DiscoverCategoriesContainer;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/discover/DiscoverDataProvider$p;->a(Lcom/vk/discover/DiscoverCategoriesContainer;)Lc/a/m;
 
     move-result-object p1
 

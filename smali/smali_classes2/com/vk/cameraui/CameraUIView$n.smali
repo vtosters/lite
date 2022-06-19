@@ -3,7 +3,7 @@
 .source "CameraUIView.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
 
 
 # annotations

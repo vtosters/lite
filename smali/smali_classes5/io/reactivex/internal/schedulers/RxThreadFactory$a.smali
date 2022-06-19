@@ -3,7 +3,7 @@
 .source "RxThreadFactory.java"
 
 # interfaces
-.implements Lio/reactivex/internal/schedulers/NonBlockingThread;
+.implements Lio/reactivex/internal/schedulers/g;
 
 
 # annotations

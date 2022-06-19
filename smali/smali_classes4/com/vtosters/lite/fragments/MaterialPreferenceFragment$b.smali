@@ -3,7 +3,7 @@
 .source "MaterialPreferenceFragment.java"
 
 # interfaces
-.implements Lme/grishka/appkit/views/DividerItemDecoration$a;
+.implements Lme/grishka/appkit/views/a$a;
 
 
 # annotations

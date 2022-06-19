@@ -50,7 +50,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vk/camera/BaseCameraView;->i()Z
+    invoke-static {}, Lcom/vk/camera/b;->i()Z
 
     move-result v0
 

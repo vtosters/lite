@@ -25,7 +25,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lorg/tensorflow/lite/Delegate;",
+            "Lorg/tensorflow/lite/a;",
             ">;"
         }
     .end annotation
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method constructor <init>(Ljava/nio/ByteBuffer;Lorg/tensorflow/lite/Interpreter$a;)V
+.method constructor <init>(Ljava/nio/ByteBuffer;Lorg/tensorflow/lite/b$a;)V
     .locals 6
 
     .line 1
@@ -107,7 +107,7 @@
     move-object v5, p2
 
     .line 9
-    invoke-direct/range {v0 .. v5}, Lorg/tensorflow/lite/NativeInterpreterWrapper;->a(JJLorg/tensorflow/lite/Interpreter$a;)V
+    invoke-direct/range {v0 .. v5}, Lorg/tensorflow/lite/NativeInterpreterWrapper;->a(JJLorg/tensorflow/lite/b$a;)V
 
     return-void
 
@@ -122,15 +122,15 @@
     throw p1
 .end method
 
-.method private a(JJLorg/tensorflow/lite/Interpreter$a;)V
+.method private a(JJLorg/tensorflow/lite/b$a;)V
     .locals 6
 
     if-nez p5, :cond_0
 
     .line 1
-    new-instance p5, Lorg/tensorflow/lite/Interpreter$a;
+    new-instance p5, Lorg/tensorflow/lite/b$a;
 
-    invoke-direct {p5}, Lorg/tensorflow/lite/Interpreter$a;-><init>()V
+    invoke-direct {p5}, Lorg/tensorflow/lite/b$a;-><init>()V
 
     .line 2
     :cond_0
@@ -140,7 +140,7 @@
     iput-wide p3, p0, Lorg/tensorflow/lite/NativeInterpreterWrapper;->c:J
 
     .line 4
-    iget v0, p5, Lorg/tensorflow/lite/Interpreter$a;->a:I
+    iget v0, p5, Lorg/tensorflow/lite/b$a;->a:I
 
     invoke-static {p3, p4, p1, p2, v0}, Lorg/tensorflow/lite/NativeInterpreterWrapper;->createInterpreter(JJI)J
 
@@ -171,7 +171,7 @@
     iput-object p3, p0, Lorg/tensorflow/lite/NativeInterpreterWrapper;->f:[Lorg/tensorflow/lite/Tensor;
 
     .line 7
-    iget-boolean p3, p5, Lorg/tensorflow/lite/Interpreter$a;->b:Z
+    iget-boolean p3, p5, Lorg/tensorflow/lite/b$a;->b:Z
 
     if-eqz p3, :cond_1
 
@@ -180,7 +180,7 @@
 
     .line 9
     :cond_1
-    iget-boolean p3, p5, Lorg/tensorflow/lite/Interpreter$a;->c:Z
+    iget-boolean p3, p5, Lorg/tensorflow/lite/b$a;->c:Z
 
     if-eqz p3, :cond_2
 
@@ -189,7 +189,7 @@
 
     .line 11
     :cond_2
-    iget-object p3, p5, Lorg/tensorflow/lite/Interpreter$a;->d:Ljava/util/List;
+    iget-object p3, p5, Lorg/tensorflow/lite/b$a;->d:Ljava/util/List;
 
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -206,12 +206,12 @@
 
     move-result-object p4
 
-    check-cast p4, Lorg/tensorflow/lite/Delegate;
+    check-cast p4, Lorg/tensorflow/lite/a;
 
     .line 12
     iget-wide v0, p0, Lorg/tensorflow/lite/NativeInterpreterWrapper;->b:J
 
-    invoke-interface {p4}, Lorg/tensorflow/lite/Delegate;->a()J
+    invoke-interface {p4}, Lorg/tensorflow/lite/a;->a()J
 
     move-result-wide v4
 

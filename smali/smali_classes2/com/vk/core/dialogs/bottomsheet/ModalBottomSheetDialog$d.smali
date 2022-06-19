@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog$d;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;
 
-    invoke-static {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->i(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+    invoke-static {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;->i(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetDialog;)Lcom/vk/core/dialogs/bottomsheet/h$e;
 
     move-result-object p1
 
@@ -48,7 +48,7 @@
 
     const/4 v0, -0x1
 
-    invoke-interface {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;->a(I)V
+    invoke-interface {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/h$e;->a(I)V
 
     .line 2
     :cond_0

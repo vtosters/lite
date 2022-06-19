@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/crashlytics/android/core/CrashPromptDialog;
+.field final synthetic a:Lcom/crashlytics/android/core/h;
 
 
 # direct methods
-.method constructor <init>(Lcom/crashlytics/android/core/CrashlyticsController$c0;Lcom/crashlytics/android/core/CrashPromptDialog;)V
+.method constructor <init>(Lcom/crashlytics/android/core/CrashlyticsController$c0;Lcom/crashlytics/android/core/h;)V
     .locals 0
 
     .line 1
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0$b;->a:Lcom/crashlytics/android/core/CrashPromptDialog;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0$b;->a:Lcom/crashlytics/android/core/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,9 +39,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0$b;->a:Lcom/crashlytics/android/core/CrashPromptDialog;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0$b;->a:Lcom/crashlytics/android/core/h;
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/CrashPromptDialog;->c()V
+    invoke-virtual {v0}, Lcom/crashlytics/android/core/h;->c()V
 
     return-void
 .end method

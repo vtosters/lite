@@ -3,7 +3,7 @@
 .source "DiscoverDataProvider.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -61,7 +61,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
+    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
 
     invoke-virtual {p1}, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache;->toArray()[Ljava/lang/String;
 
@@ -75,7 +75,7 @@
 
     check-cast p1, [Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/cache/SerializerCache;->a([Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/j/a;->a([Ljava/lang/String;)V
 
     return-void
 .end method
@@ -88,7 +88,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$b$a;->a(Lcom/vk/discover/DiscoverDataProvider$TemporaryCache;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

@@ -26,38 +26,38 @@
 
 .field private final d:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-.field private final e:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+.field private final e:Lcom/vk/im/ui/components/dialog_header/c/a;
 
 .field private f:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$Screen;
 
 .field private g:Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;
 
-.field private final h:Lcom/vk/im/ui/p/ImBridge8;
+.field private final h:Lcom/vk/im/ui/p/b;
 
-.field private final i:Lcom/vk/bridges/StoriesBridge;
+.field private final i:Lcom/vk/bridges/d0;
 
-.field private final j:Lcom/vk/navigation/ActivityLauncher;
+.field private final j:Lcom/vk/navigation/a;
 
-.field private final k:Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+.field private final k:Lcom/vk/im/ui/components/dialog_header/a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/bridges/StoriesBridge;Lcom/vk/navigation/ActivityLauncher;Lcom/vk/im/ui/themes/DialogThemeBinder;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;)V
+.method public constructor <init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/bridges/d0;Lcom/vk/navigation/a;Lcom/vk/im/ui/themes/DialogThemeBinder;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/components/dialog_header/a;)V
     .locals 6
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->h:Lcom/vk/im/ui/p/ImBridge8;
+    iput-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->h:Lcom/vk/im/ui/p/b;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->i:Lcom/vk/bridges/StoriesBridge;
+    iput-object p3, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->i:Lcom/vk/bridges/d0;
 
-    iput-object p4, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->j:Lcom/vk/navigation/ActivityLauncher;
+    iput-object p4, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->j:Lcom/vk/navigation/a;
 
-    iput-object p7, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->k:Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+    iput-object p7, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->k:Lcom/vk/im/ui/components/dialog_header/a;
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImEngine;->d()Lcom/vk/im/engine/ImConfig;
+    invoke-virtual {p1}, Lcom/vk/im/engine/a;->d()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p2
 
@@ -68,9 +68,9 @@
     iput-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a:Landroid/content/Context;
 
     .line 3
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->j:Lcom/vk/navigation/ActivityLauncher;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->j:Lcom/vk/navigation/a;
 
-    invoke-interface {p2}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
+    invoke-interface {p2}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
 
     move-result-object p2
 
@@ -79,11 +79,11 @@
     .line 4
     new-instance p2, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->h:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->h:Lcom/vk/im/ui/p/b;
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->i:Lcom/vk/bridges/StoriesBridge;
+    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->i:Lcom/vk/bridges/d0;
 
-    iget-object v4, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->j:Lcom/vk/navigation/ActivityLauncher;
+    iget-object v4, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->j:Lcom/vk/navigation/a;
 
     move-object v0, p2
 
@@ -91,7 +91,7 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;-><init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/bridges/StoriesBridge;Lcom/vk/navigation/ActivityLauncher;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;-><init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/bridges/d0;Lcom/vk/navigation/a;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
@@ -100,16 +100,16 @@
 
     iget-object p3, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a:Landroid/content/Context;
 
-    invoke-direct {p2, p3, p1, p5}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
+    invoke-direct {p2, p3, p1, p5}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->d:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
     .line 6
-    new-instance p1, Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    new-instance p1, Lcom/vk/im/ui/components/dialog_header/c/a;
 
-    invoke-direct {p1}, Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;-><init>()V
+    invoke-direct {p1}, Lcom/vk/im/ui/components/dialog_header/c/a;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/a;
 
     .line 7
     sget-object p1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$Screen;->INFO:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$Screen;
@@ -117,11 +117,11 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->f:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$Screen;
 
     .line 8
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {p1}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object p1
 
@@ -132,12 +132,12 @@
 
     invoke-direct {p3, p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;-><init>(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->a(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponentCallback;)V
+    invoke-virtual {p2, p3}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->a(Lcom/vk/im/ui/components/dialog_header/info/b;)V
 
     .line 10
     iget-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    invoke-virtual {p1}, Lcom/vk/bridges/AuthBridge1;->d()Z
+    invoke-virtual {p1}, Lcom/vk/bridges/a;->d()Z
 
     move-result p3
 
@@ -146,11 +146,11 @@
     .line 11
     iget-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    invoke-virtual {p1}, Lcom/vk/bridges/AuthBridge1;->q()Z
+    invoke-virtual {p1}, Lcom/vk/bridges/a;->q()Z
 
     move-result p3
 
-    invoke-virtual {p1}, Lcom/vk/bridges/AuthBridge1;->t()Z
+    invoke-virtual {p1}, Lcom/vk/bridges/a;->t()Z
 
     move-result p1
 
@@ -180,7 +180,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$a;-><init>(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/c;)V
 
     .line 14
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->d:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
@@ -200,22 +200,22 @@
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Ljava/lang/Integer;)V
 
     .line 15
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/a;
 
     new-instance p2, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$b;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$b;-><init>(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;->a(Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponentCallback;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_header/c/a;->a(Lcom/vk/im/ui/components/dialog_header/c/b;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->k:Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->k:Lcom/vk/im/ui/components/dialog_header/a;
 
     return-object p0
 .end method
@@ -229,29 +229,29 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/ImBridge8;
+.method public static final synthetic c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->h:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->h:Lcom/vk/im/ui/p/b;
 
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/navigation/ActivityLauncher;
+.method public static final synthetic d(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/navigation/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->j:Lcom/vk/navigation/ActivityLauncher;
+    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->j:Lcom/vk/navigation/a;
 
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/bridges/StoriesBridge;
+.method public static final synthetic e(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/bridges/d0;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->i:Lcom/vk/bridges/StoriesBridge;
+    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->i:Lcom/vk/bridges/d0;
 
     return-object p0
 .end method
@@ -327,32 +327,32 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->a(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponentCallback;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->a(Lcom/vk/im/ui/components/dialog_header/info/b;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
 
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->d:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/c;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->d:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;->a(Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponentCallback;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/c/a;->a(Lcom/vk/im/ui/components/dialog_header/c/b;)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
 
     return-void
 .end method
@@ -396,12 +396,12 @@
     .line 11
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->d:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/q/c;->a(Landroid/content/res/Configuration;)V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/q/c;->a(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
@@ -416,7 +416,7 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->d:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e:Lcom/vk/im/ui/components/dialog_header/c/a;
 
     move-object v0, v6
 
@@ -424,7 +424,7 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;-><init>(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;-><init>(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/c/a;Landroid/view/View;Landroid/os/Bundle;)V
 
     iput-object v6, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->g:Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;
 
@@ -436,13 +436,13 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;)V
+.method public final a(Lcom/vk/im/ui/components/common/b;)V
     .locals 1
 
     .line 14
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->a(Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->a(Lcom/vk/im/ui/components/common/b;)V
 
     return-void
 .end method
@@ -467,9 +467,9 @@
     if-eqz v0, :cond_0
 
     .line 18
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->k:Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->k:Lcom/vk/im/ui/components/dialog_header/a;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;->S1()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/dialog_header/a;->S1()V
 
     .line 19
     invoke-virtual {p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->g()V
@@ -742,9 +742,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->k:Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->k:Lcom/vk/im/ui/components/dialog_header/a;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;->T1()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/a;->T1()V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->g()V

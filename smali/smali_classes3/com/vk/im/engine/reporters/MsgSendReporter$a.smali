@@ -102,7 +102,7 @@
 
     const/16 v28, 0x0
 
-    invoke-direct/range {v0 .. v28}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;-><init>(IJJJLjava/lang/String;ZZJJJJLjava/lang/String;ILcom/vk/im/engine/models/ImBgSyncState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v28}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;-><init>(IJJJLjava/lang/String;ZZJJJJLjava/lang/String;ILcom/vk/im/engine/models/ImBgSyncState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -194,7 +194,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IJJJLjava/lang/String;ZZJJJJLjava/lang/String;ILcom/vk/im/engine/models/ImBgSyncState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IJJJLjava/lang/String;ZZJJJJLjava/lang/String;ILcom/vk/im/engine/models/ImBgSyncState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;IILkotlin/jvm/internal/i;)V
     .locals 27
 
     move/from16 v0, p27
@@ -499,7 +499,7 @@
     return-wide v0
 .end method
 
-.method public final a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Lcom/vk/metrics/eventtracking/Event;
+.method public final a(Ljava/util/List;Lkotlin/jvm/b/b;)Lcom/vk/metrics/eventtracking/Event;
     .locals 8
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -513,7 +513,7 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -542,7 +542,7 @@
     const-string v2, "CRUCIAL.IM.MSG_SEND"
 
     .line 11
-    invoke-interface {p2, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -1062,7 +1062,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->e:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1116,7 +1116,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->l:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1132,7 +1132,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->n:Lcom/vk/im/engine/models/ImBgSyncState;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1142,7 +1142,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->o:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1152,7 +1152,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->p:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1162,7 +1162,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->q:Ljava/lang/Throwable;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1172,7 +1172,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->r:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

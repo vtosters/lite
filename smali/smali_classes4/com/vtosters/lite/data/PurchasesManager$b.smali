@@ -3,12 +3,12 @@
 .source "PurchasesManager.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Predicate;
+.implements Lc/a/z/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/data/PurchasesManager;->m()Lio/reactivex/Single;
+    value = Lcom/vtosters/lite/data/PurchasesManager;->m()Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Predicate<",
+        "Lc/a/z/l<",
         "Ljava/lang/Boolean;",
         ">;"
     }

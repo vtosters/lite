@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Action;
+.implements Lc/a/z/a;
 
 
 # static fields

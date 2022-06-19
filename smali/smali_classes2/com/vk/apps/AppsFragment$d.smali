@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/apps/AppsFragment$d;
-.super Lcom/vk/common/i/RecyclerItem;
+.super Lcom/vk/common/i/b;
 .source "AppsFragment.kt"
 
 
@@ -28,7 +28,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/common/i/RecyclerItem;-><init>()V
+    invoke-direct {p0}, Lcom/vk/common/i/b;-><init>()V
 
     const/4 p1, 0x1
 
@@ -53,11 +53,11 @@
     .locals 2
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/common/i/RecyclerItem;->b()I
+    invoke-virtual {p0}, Lcom/vk/common/i/b;->b()I
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/vk/common/i/RecyclerItem;->b()I
+    invoke-virtual {p1}, Lcom/vk/common/i/b;->b()I
 
     move-result v1
 
@@ -69,7 +69,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$d;->a(Lcom/vk/common/i/RecyclerItem;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$d;->a(Lcom/vk/common/i/b;)Z
 
     move-result p1
 
@@ -86,24 +86,24 @@
     return p1
 .end method
 
-.method protected abstract a(Lcom/vk/common/i/RecyclerItem;)Z
+.method protected abstract a(Lcom/vk/common/i/b;)Z
 .end method
 
 .method public final b(Lcom/vk/apps/AppsFragment$d;)Z
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/i/RecyclerItem;->b()I
+    invoke-virtual {p0}, Lcom/vk/common/i/b;->b()I
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/vk/common/i/RecyclerItem;->b()I
+    invoke-virtual {p1}, Lcom/vk/common/i/b;->b()I
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$d;->b(Lcom/vk/common/i/RecyclerItem;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$d;->b(Lcom/vk/common/i/b;)Z
 
     move-result p1
 
@@ -120,5 +120,5 @@
     return p1
 .end method
 
-.method protected abstract b(Lcom/vk/common/i/RecyclerItem;)Z
+.method protected abstract b(Lcom/vk/common/i/b;)Z
 .end method

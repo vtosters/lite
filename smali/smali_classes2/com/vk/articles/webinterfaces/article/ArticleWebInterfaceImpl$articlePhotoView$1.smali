@@ -3,7 +3,7 @@
 .source "ArticleWebInterfaceImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl$articlePhotoView$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -91,7 +91,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v3, v2}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
+    invoke-static {v3, v2}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
 
     move-result-object v2
 
@@ -120,9 +120,9 @@
 
     move-object v5, v2
 
-    check-cast v5, Lkotlin/collections/Iterators1;
+    check-cast v5, Lkotlin/collections/a0;
 
-    invoke-virtual {v5}, Lkotlin/collections/Iterators1;->a()I
+    invoke-virtual {v5}, Lkotlin/collections/a0;->a()I
 
     move-result v5
 
@@ -200,7 +200,7 @@
 
     iget-object v3, p0, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl$articlePhotoView$1;->this$0:Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;
 
-    invoke-static {v3}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;->c(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-static {v3}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;->c(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;)Lcom/vk/bridges/p$d;
 
     move-result-object v3
 
@@ -212,7 +212,7 @@
     :cond_2
     iget-object v3, p0, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl$articlePhotoView$1;->this$0:Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;
 
-    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
+    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
 
     move-result-object v4
 
@@ -220,11 +220,11 @@
 
     invoke-direct {v5, p0, v0, v1}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl$articlePhotoView$1$a;-><init>(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl$articlePhotoView$1;ILjava/util/List;)V
 
-    invoke-interface {v4, v0, v1, v2, v5}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-interface {v4, v0, v1, v2, v5}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;->a(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;Lcom/vk/bridges/ImageViewer$d;)V
+    invoke-static {v3, v0}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;->a(Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;Lcom/vk/bridges/p$d;)V
 
     :cond_3
     :goto_2

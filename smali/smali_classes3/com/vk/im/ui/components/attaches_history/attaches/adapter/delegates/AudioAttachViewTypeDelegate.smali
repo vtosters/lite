@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate;
-.super Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate;
+.super Lcom/vk/im/ui/views/adapter_delegate/f;
 .source "AudioAttachViewTypeDelegate.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate<",
+        "Lcom/vk/im/ui/views/adapter_delegate/f<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
         ">;"
     }
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachCallback;
+.field private a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/a;
 
 
 # direct methods
@@ -28,30 +28,30 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/views/adapter_delegate/f;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachCallback;
+.method public final a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/a;
 
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
+.method public a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/views/adapter_delegate/d;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
+            "Lcom/vk/im/ui/views/adapter_delegate/d<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
             ">;"
         }
@@ -60,7 +60,7 @@
     .line 4
     new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;
 
-    sget v1, Lcom/vk/im/ui/R13;->vkim_history_attach_audio:I
+    sget v1, Lcom/vk/im/ui/j;->vkim_history_attach_audio:I
 
     const/4 v2, 0x0
 
@@ -77,16 +77,16 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachCallback;)V
+.method public final a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/a;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachCallback;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/a;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)Z
+.method public a(Lcom/vk/im/ui/views/adapter_delegate/c;)Z
     .locals 0
 
     .line 3

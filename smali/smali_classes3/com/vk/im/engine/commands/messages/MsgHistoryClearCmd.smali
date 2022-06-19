@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;
-.super Lcom/vk/im/engine/i/BaseImEngineCmd;
+.super Lcom/vk/im/engine/i/a;
 .source "MsgHistoryClearCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lcom/vk/im/engine/i/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -26,7 +26,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->b:I
 
@@ -35,7 +35,7 @@
     iput-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->d:Ljava/lang/Object;
 
     .line 2
-    sget-object p1, Lcom/vk/im/engine/internal/f/AssertUtils;->INSTANCE:Lcom/vk/im/engine/internal/f/AssertUtils;
+    sget-object p1, Lcom/vk/im/engine/internal/f/b;->a:Lcom/vk/im/engine/internal/f/b;
 
     iget p2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->b:I
 
@@ -45,13 +45,13 @@
 
     iget p3, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->b:I
 
-    invoke-static {p3}, Lcom/vk/im/engine/internal/Validation;->b(I)Z
+    invoke-static {p3}, Lcom/vk/im/engine/internal/e;->b(I)Z
 
     move-result p3
 
     const-string v0, "dialogId"
 
-    invoke-virtual {p1, v0, p2, p3}, Lcom/vk/im/engine/internal/f/AssertUtils;->a(Ljava/lang/String;Ljava/lang/Object;Z)V
+    invoke-virtual {p1, v0, p2, p3}, Lcom/vk/im/engine/internal/f/b;->a(Ljava/lang/String;Ljava/lang/Object;Z)V
 
     return-void
 .end method
@@ -67,39 +67,39 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
+.method public a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
     .locals 4
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
 
     move-result-object v0
 
     const-string v1, "env.jobManager"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->b:I
 
     const-string v2, "clear msg history"
 
-    invoke-static {v0, v2, v1}, Lcom/vk/im/engine/utils/extensions/InstantJobExtKt;->a(Lcom/vk/instantjobs/InstantJobManager;Ljava/lang/String;I)V
+    invoke-static {v0, v2, v1}, Lcom/vk/im/engine/utils/extensions/InstantJobExtKt;->a(Lcom/vk/instantjobs/b;Ljava/lang/String;I)V
 
     .line 4
-    new-instance v0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesDeleteConversationApiCmd;
+    new-instance v0, Lcom/vk/im/engine/internal/api_commands/messages/h;
 
     iget v1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->b:I
 
     iget-boolean v2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->c:Z
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesDeleteConversationApiCmd;-><init>(IZ)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/internal/api_commands/messages/h;-><init>(IZ)V
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -110,63 +110,63 @@
     move-result v0
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
     new-instance v2, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;
 
-    invoke-direct {v2, p0, v0, p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;-><init>(Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;ILcom/vk/im/engine/ImEnvironment;)V
+    invoke-direct {v2, p0, v0, p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;-><init>(Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;ILcom/vk/im/engine/d;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     .line 7
-    new-instance v0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;
+    new-instance v0, Lcom/vk/im/engine/commands/messages/j$a;
 
-    invoke-direct {v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/engine/commands/messages/j$a;-><init>()V
 
     .line 8
     iget v1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;->a(I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/messages/j$a;->a(I)Lcom/vk/im/engine/commands/messages/j$a;
 
     .line 9
-    sget-object v1, Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode4;->INSTANCE:Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode4;
+    sget-object v1, Lcom/vk/im/engine/commands/messages/s;->c:Lcom/vk/im/engine/commands/messages/s;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;->a(Lcom/vk/im/engine/commands/messages/MsgHistoryLoadMode3;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/messages/j$a;->a(Lcom/vk/im/engine/commands/messages/r;)Lcom/vk/im/engine/commands/messages/j$a;
 
     const/4 v1, 0x1
 
     .line 10
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;->b(I)Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/messages/j$a;->b(I)Lcom/vk/im/engine/commands/messages/j$a;
 
     .line 11
     sget-object v2, Lcom/vk/im/engine/models/Source;->NETWORK:Lcom/vk/im/engine/models/Source;
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;->a(Lcom/vk/im/engine/models/Source;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;
+    invoke-virtual {v0, v2}, Lcom/vk/im/engine/commands/messages/j$a;->a(Lcom/vk/im/engine/models/Source;)Lcom/vk/im/engine/commands/messages/j$a;
 
     .line 12
     iget-boolean v2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->c:Z
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;->a(Z)Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;
+    invoke-virtual {v0, v2}, Lcom/vk/im/engine/commands/messages/j$a;->a(Z)Lcom/vk/im/engine/commands/messages/j$a;
 
     .line 13
     iget-object v2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->d:Ljava/lang/Object;
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;->a(Ljava/lang/Object;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;
+    invoke-virtual {v0, v2}, Lcom/vk/im/engine/commands/messages/j$a;->a(Ljava/lang/Object;)Lcom/vk/im/engine/commands/messages/j$a;
 
     .line 14
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;->a()Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/j$a;->a()Lcom/vk/im/engine/commands/messages/j;
 
     move-result-object v0
 
     .line 15
-    new-instance v2, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmd;
+    new-instance v2, Lcom/vk/im/engine/commands/messages/l;
 
-    invoke-direct {v2, v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmd;-><init>(Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;)V
+    invoke-direct {v2, v0}, Lcom/vk/im/engine/commands/messages/l;-><init>(Lcom/vk/im/engine/commands/messages/j;)V
 
     .line 16
-    invoke-interface {p1, p0, v2}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v2}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     .line 17
     new-instance v0, Lcom/vk/im/engine/events/OnCacheInvalidateEvent;
@@ -177,7 +177,7 @@
 
     invoke-direct {v0, v2, v3}, Lcom/vk/im/engine/events/OnCacheInvalidateEvent;-><init>(Ljava/lang/Object;Lcom/vk/im/engine/events/OnCacheInvalidateEvent$Reason;)V
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
 
     .line 18
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -187,11 +187,11 @@
     return-object p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
 
     move-result-object p1
 
@@ -245,7 +245,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->d:Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

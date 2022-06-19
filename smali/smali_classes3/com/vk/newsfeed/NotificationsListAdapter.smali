@@ -32,13 +32,13 @@
 
 .field private b:Ljava/lang/Integer;
 
-.field private c:Lkotlin/jvm/b/Functions2;
+.field private c:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -111,9 +111,9 @@
 
     .line 6
     :goto_1
-    iget-object v2, p0, Lcom/vk/newsfeed/NotificationsListAdapter;->c:Lkotlin/jvm/b/Functions2;
+    iget-object v2, p0, Lcom/vk/newsfeed/NotificationsListAdapter;->c:Lkotlin/jvm/b/b;
 
-    invoke-virtual {p1, p2, v0, v1, v2}, Lcom/vk/newsfeed/NotificationsListAdapter$ItemViewHolder;->a(IIZLkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p1, p2, v0, v1, v2}, Lcom/vk/newsfeed/NotificationsListAdapter$ItemViewHolder;->a(IIZLkotlin/jvm/b/b;)V
 
     :cond_2
     return-void
@@ -125,7 +125,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/NotificationsListAdapter;->b:Ljava/lang/Integer;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -143,23 +143,23 @@
     return-void
 .end method
 
-.method public final e(Lkotlin/jvm/b/Functions2;)V
+.method public final e(Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NotificationsListAdapter;->c:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/newsfeed/NotificationsListAdapter;->c:Lkotlin/jvm/b/b;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -168,7 +168,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/newsfeed/NotificationsListAdapter;->c:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/newsfeed/NotificationsListAdapter;->c:Lkotlin/jvm/b/b;
 
     .line 3
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V

@@ -3,7 +3,7 @@
 .source "StorageTriggerFactoryImpl.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/internal/storage/StorageTrigger;
+.implements Lcom/vk/im/engine/internal/storage/d;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/im/engine/internal/storage/StorageTrigger<",
-        "Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;",
+        "Lcom/vk/im/engine/internal/storage/d<",
+        "Lcom/vk/im/engine/internal/storage/models/b;",
         ">;"
     }
 .end annotation
@@ -50,8 +50,8 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement<",
-            "Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/f<",
+            "Lcom/vk/im/engine/internal/storage/models/b;",
             ">;>;)V"
         }
     .end annotation
@@ -78,16 +78,16 @@
     move-result-object v1
 
     .line 3
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/f;
 
     .line 4
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/b;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;->b()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/b;->b()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     move-result-object v1
 

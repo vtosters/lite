@@ -3,7 +3,7 @@
 .source "BaseAuthPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/auth/t/CredentialsManager;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/auth/t/b;",
         ">;"
     }
 .end annotation
@@ -45,13 +45,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/auth/t/CredentialsManager;
+.method public final invoke()Lcom/vk/auth/t/b;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$3;->this$0:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->i()Lcom/vk/auth/t/CredentialsManager;
+    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->i()Lcom/vk/auth/t/b;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$3;->invoke()Lcom/vk/auth/t/CredentialsManager;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$3;->invoke()Lcom/vk/auth/t/b;
 
     move-result-object v0
 

@@ -3,12 +3,12 @@
 .source "MusicPlayerAuthorizationManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(I)Lio/reactivex/Single;
+    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(I)Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/SingleSource<",
+        "Lc/a/x<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,15 +49,15 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/Unit;)Lio/reactivex/Single;
+.method public final a(Lkotlin/m;)Lc/a/t;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ")",
-            "Lio/reactivex/Single<",
-            "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;",
+            "Lc/a/t<",
+            "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;",
             ">;"
         }
     .end annotation
@@ -65,7 +65,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$b;->a:Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;
 
-    invoke-virtual {p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->b()Lio/reactivex/Single;
+    invoke-virtual {p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->b()Lc/a/t;
 
     move-result-object p1
 
@@ -76,9 +76,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$b;->a(Lkotlin/Unit;)Lio/reactivex/Single;
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$b;->a(Lkotlin/m;)Lc/a/t;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "AccountStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+    value = Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/im/engine/models/account/BusinessNotifyConfig;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/im/engine/models/account/a;",
         ">;"
     }
 .end annotation
@@ -47,12 +47,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
     return-object v0
 .end method
 
-.method public final invoke()Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+.method public final invoke()Lcom/vk/im/engine/models/account/a;
     .locals 1
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
@@ -75,7 +75,7 @@
     check-cast v0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;
 
     .line 2
-    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;)Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;)Lcom/vk/im/engine/models/account/a;
 
     move-result-object v0
 
@@ -86,7 +86,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$businessNotifyConfigMemCacheHelper$1;->invoke()Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$businessNotifyConfigMemCacheHelper$1;->invoke()Lcom/vk/im/engine/models/account/a;
 
     move-result-object v0
 

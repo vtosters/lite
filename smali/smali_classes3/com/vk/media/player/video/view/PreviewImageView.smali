@@ -3,7 +3,7 @@
 .source "PreviewImageView.kt"
 
 # interfaces
-.implements Lcom/vk/media/player/video/MatrixProvider;
+.implements Lcom/vk/media/player/video/f;
 
 
 # instance fields

@@ -20,32 +20,32 @@
 # instance fields
 .field private final a:Landroid/os/Handler;
 
-.field private final b:Lkotlin/jvm/b/Functions;
+.field private final b:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Long;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final c:Lkotlin/jvm/b/Functions;
+.field private final c:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lkotlin/jvm/b/Functions2;
+.field private final d:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/Long;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -53,22 +53,22 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Landroid/os/Handler;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/os/Handler;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Long;",
             ">;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Long;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -78,11 +78,11 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->a:Landroid/os/Handler;
 
-    iput-object p2, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->b:Lkotlin/jvm/b/a;
 
-    iput-object p3, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->c:Lkotlin/jvm/b/Functions;
+    iput-object p3, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->c:Lkotlin/jvm/b/a;
 
-    iput-object p4, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->d:Lkotlin/jvm/b/Functions2;
+    iput-object p4, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->d:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -98,23 +98,23 @@
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->b()I
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->b()I
 
     move-result v1
 
     .line 4
-    iget-object v2, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->b:Lkotlin/jvm/b/Functions;
+    iget-object v2, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->b:Lkotlin/jvm/b/a;
 
-    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -138,22 +138,22 @@
     if-ltz v8, :cond_0
 
     .line 6
-    iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->c:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->c:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
     .line 7
     :cond_0
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->i()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->i()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 8
-    iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->d:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->d:Lkotlin/jvm/b/b;
 
     sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -165,7 +165,7 @@
 
     move-result-object v6
 
-    invoke-interface {v0, v6}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v6}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 9
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$d;->a:Landroid/os/Handler;

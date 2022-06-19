@@ -3,12 +3,12 @@
 .source "AppsFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/BiFunction;
+.implements Lc/a/z/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/apps/AppsFragment$s;->a()Lio/reactivex/Observable;
+    value = Lcom/vk/apps/AppsFragment$s;->a()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,14 +26,14 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/BiFunction<",
+        "Lc/a/z/c<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/apps/AppsSection;",
         ">;",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/apps/AppActivities;",
         ">;",
-        "Lcom/vk/dto/apps/AppsEntity;",
+        "Lcom/vk/dto/apps/a;",
         ">;"
     }
 .end annotation
@@ -66,7 +66,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKList;)Lcom/vk/dto/apps/AppsEntity;
+.method public final a(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKList;)Lcom/vk/dto/apps/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -77,14 +77,14 @@
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/apps/AppActivities;",
             ">;)",
-            "Lcom/vk/dto/apps/AppsEntity;"
+            "Lcom/vk/dto/apps/a;"
         }
     .end annotation
 
     .line 2
-    new-instance v0, Lcom/vk/dto/apps/AppsEntity;
+    new-instance v0, Lcom/vk/dto/apps/a;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/dto/apps/AppsEntity;-><init>(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKList;)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/dto/apps/a;-><init>(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKList;)V
 
     return-object v0
 .end method
@@ -97,7 +97,7 @@
 
     check-cast p2, Lcom/vk/dto/common/data/VKList;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/apps/AppsFragment$s$a;->a(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKList;)Lcom/vk/dto/apps/AppsEntity;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/apps/AppsFragment$s$a;->a(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKList;)Lcom/vk/dto/apps/a;
 
     move-result-object p1
 

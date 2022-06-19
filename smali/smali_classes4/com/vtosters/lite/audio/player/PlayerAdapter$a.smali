@@ -3,12 +3,12 @@
 .source "PlayerAdapter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/audio/player/PlayerAdapter;-><init>(Lcom/vtosters/lite/audio/player/Player;)V
+    value = Lcom/vtosters/lite/audio/player/PlayerAdapter;-><init>(Lcom/vtosters/lite/audio/player/u;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/music/g/MusicEvents12;",
+        "Lc/a/z/g<",
+        "Lcom/vk/music/g/f;",
         ">;"
     }
 .end annotation
@@ -46,15 +46,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/music/g/MusicEvents12;)V
+.method public final a(Lcom/vk/music/g/f;)V
     .locals 2
 
     .line 1
-    instance-of v0, p1, Lcom/vk/music/g/MusicEvents10;
+    instance-of v0, p1, Lcom/vk/music/g/d;
 
     if-nez v0, :cond_0
 
-    instance-of v0, p1, Lcom/vk/music/g/MusicEvents;
+    instance-of v0, p1, Lcom/vk/music/g/g;
 
     if-eqz v0, :cond_1
 
@@ -62,7 +62,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$a;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    iget-object p1, p1, Lcom/vk/music/g/MusicEvents12;->a:Lcom/vk/dto/music/MusicTrack;
+    iget-object p1, p1, Lcom/vk/music/g/f;->a:Lcom/vk/dto/music/MusicTrack;
 
     invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->j0()I
 
@@ -78,9 +78,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/music/g/MusicEvents12;
+    check-cast p1, Lcom/vk/music/g/f;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/audio/player/PlayerAdapter$a;->a(Lcom/vk/music/g/MusicEvents12;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/audio/player/PlayerAdapter$a;->a(Lcom/vk/music/g/f;)V
 
     return-void
 .end method

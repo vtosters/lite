@@ -3,7 +3,7 @@
 .source "MsgFwdTimeFormatter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/text/SimpleDateFormat;",
         ">;"
     }
@@ -68,7 +68,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/formatters/MsgFwdTimeFormatter$dfThisYear$2;->$context:Landroid/content/Context;
 
-    sget v2, Lcom/vk/im/ui/R4;->vkim_msg_list_fwd_time_this_year:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_msg_list_fwd_time_this_year:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

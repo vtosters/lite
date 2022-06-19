@@ -3,12 +3,12 @@
 .source "MusicTrackHeaderAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/MusicViewHolder;
+    value = Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/o;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "TT;",
         "Lcom/vk/dto/music/MusicTrack;",
         ">;"
@@ -58,11 +58,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$onCreateViewHolder$extractor$1;->this$0:Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;
 
-    invoke-static {v0}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->c(Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;
+    invoke-static {v0}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->c(Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;)Lcom/vk/music/bottomsheets/track/b;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;->a(Ljava/lang/Object;)Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {v0, p1}, Lcom/vk/music/bottomsheets/track/b;->a(Ljava/lang/Object;)Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p1
 

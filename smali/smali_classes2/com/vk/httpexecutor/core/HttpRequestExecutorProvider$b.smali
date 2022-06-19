@@ -19,11 +19,11 @@
 
 .field private final b:Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;
 
-.field private final c:Lcom/vk/httpexecutor/core/CompatHttpRequestExecutor;
+.field private final c:Lcom/vk/httpexecutor/core/a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;Lcom/vk/httpexecutor/core/CompatHttpRequestExecutor;)V
+.method public constructor <init>(Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;Lcom/vk/httpexecutor/core/a;)V
     .locals 0
 
     .line 1
@@ -33,18 +33,18 @@
 
     iput-object p2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->b:Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;
 
-    iput-object p3, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/CompatHttpRequestExecutor;
+    iput-object p3, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/httpexecutor/core/CompatHttpRequestExecutor;
+.method public final a()Lcom/vk/httpexecutor/core/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/CompatHttpRequestExecutor;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/a;
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
 
     iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->a:Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -74,17 +74,17 @@
 
     iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->b:Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/CompatHttpRequestExecutor;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/a;
 
-    iget-object p1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/CompatHttpRequestExecutor;
+    iget-object p1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/a;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -143,7 +143,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/CompatHttpRequestExecutor;
+    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/a;
 
     if-eqz v2, :cond_2
 
@@ -184,7 +184,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/CompatHttpRequestExecutor;
+    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$b;->c:Lcom/vk/httpexecutor/core/a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

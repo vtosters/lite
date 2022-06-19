@@ -21,7 +21,7 @@
 
 .field retryCount:I
 
-.field service:Landroid/support/v4/app/INotificationSideChannel;
+.field service:Landroid/support/v4/app/a;
 
 .field taskQueue:Ljava/util/ArrayDeque;
     .annotation system Ldalvik/annotation/Signature;

@@ -3,7 +3,7 @@
 .source "ActionLinksSnippetPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet;
+.implements Lcom/vk/libvideo/live/views/actionlinkssnippet/a;
 
 
 # annotations
@@ -16,11 +16,11 @@
 
 
 # instance fields
-.field private a:Lio/reactivex/disposables/Disposable;
+.field private a:Lio/reactivex/disposables/b;
 
 .field private b:Z
 
-.field private c:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.field private c:Lcom/vk/core/dialogs/bottomsheet/e;
 
 .field private d:Z
 
@@ -28,7 +28,7 @@
 
 .field private f:I
 
-.field private g:Lcom/vk/core/util/TimeoutLock;
+.field private g:Lcom/vk/core/util/j1;
 
 .field private final h:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -45,7 +45,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;",
+            "Lcom/vk/libvideo/live/views/actionlinkssnippet/b;",
             ">;"
         }
     .end annotation
@@ -78,7 +78,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -113,13 +113,13 @@
     iput-boolean p1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->b:Z
 
     .line 3
-    new-instance p1, Lcom/vk/core/util/TimeoutLock;
+    new-instance p1, Lcom/vk/core/util/j1;
 
     const-wide/16 p2, 0x3e8
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/core/util/j1;-><init>(J)V
 
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->g:Lcom/vk/core/util/TimeoutLock;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->g:Lcom/vk/core/util/j1;
 
     .line 4
     new-instance p1, Ljava/util/LinkedHashMap;
@@ -191,7 +191,7 @@
     invoke-virtual {v4, v0}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->setItems(Ljava/util/List;)V
 
     .line 3
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     iget-object v2, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->j:Landroid/content/Context;
 
@@ -201,7 +201,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-direct {v0, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     const/4 v5, 0x1
 
@@ -214,29 +214,29 @@
     move-object v3, v0
 
     .line 4
-    invoke-static/range {v3 .. v8}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static/range {v3 .. v8}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const-string v1, "ALPRESENTER"
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object v0
 
     .line 6
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->c:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->c:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 8
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -257,9 +257,9 @@
     if-eqz p2, :cond_0
 
     .line 32
-    sget-object p2, Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;->INSTANCE:Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;
+    sget-object p2, Lcom/vk/libvideo/bottomsheet/a;->a:Lcom/vk/libvideo/bottomsheet/a;
 
-    invoke-virtual {p2, p1}, Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-virtual {p2, p1}, Lcom/vk/libvideo/bottomsheet/a;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p2
 
@@ -277,7 +277,7 @@
     invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;-><init>()V
 
     .line 34
-    sget v1, Lcom/vk/libvideo/R9;->actions_popup_item:I
+    sget v1, Lcom/vk/libvideo/h;->actions_popup_item:I
 
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -285,7 +285,7 @@
 
     const-string v2, "LayoutInflater.from(themedContext)"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, p2}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(ILandroid/view/LayoutInflater;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
@@ -294,7 +294,7 @@
 
     invoke-direct {p2}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$d;-><init>()V
 
-    invoke-virtual {v0, p2}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, p2}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 36
     new-instance p2, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$e;
@@ -311,11 +311,11 @@
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.method public static final synthetic a(Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;)Lcom/vk/core/dialogs/bottomsheet/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->c:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->c:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-object p0
 .end method
@@ -329,7 +329,7 @@
     move-result p1
 
     .line 39
-    sget v0, Lcom/vk/libvideo/R;->live_action_link_goto:I
+    sget v0, Lcom/vk/libvideo/g;->live_action_link_goto:I
 
     if-ne p1, v0, :cond_0
 
@@ -339,7 +339,7 @@
 
     .line 40
     :cond_0
-    sget v0, Lcom/vk/libvideo/R;->live_action_link_change:I
+    sget v0, Lcom/vk/libvideo/g;->live_action_link_change:I
 
     if-ne p1, v0, :cond_1
 
@@ -349,7 +349,7 @@
 
     .line 41
     :cond_1
-    sget v0, Lcom/vk/libvideo/R;->live_action_link_delete:I
+    sget v0, Lcom/vk/libvideo/g;->live_action_link_delete:I
 
     if-ne p1, v0, :cond_2
 
@@ -360,11 +360,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+.method public static final synthetic a(Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;Lcom/vk/core/dialogs/bottomsheet/e;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->c:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->c:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 .end method
@@ -391,7 +391,7 @@
     .line 2
     iget-object v1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->j:Landroid/content/Context;
 
-    sget v2, Lcom/vk/libvideo/R11;->live_broadcast_delete_link_titile:I
+    sget v2, Lcom/vk/libvideo/j;->live_broadcast_delete_link_titile:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -400,7 +400,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 3
-    sget v1, Lcom/vk/libvideo/R11;->live_yes:I
+    sget v1, Lcom/vk/libvideo/j;->live_yes:I
 
     new-instance v2, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$b;
 
@@ -409,7 +409,7 @@
     invoke-virtual {v0, v1, v2}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 4
-    sget v1, Lcom/vk/libvideo/R11;->cancel:I
+    sget v1, Lcom/vk/libvideo/j;->cancel:I
 
     sget-object v2, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$c;->a:Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$c;
 
@@ -491,14 +491,14 @@
 
     const-string v2, "poll"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
 
     move-result-object v0
 
@@ -514,11 +514,11 @@
 
     iget v2, v2, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/libvideo/a0/h/LiveVideoController;->i(II)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/libvideo/a0/h/f;->i(II)Lc/a/m;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/reactivex/Observable;->j()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0}, Lc/a/m;->j()Lio/reactivex/disposables/b;
 
     .line 5
     invoke-virtual {p0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->v()V
@@ -527,7 +527,7 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
 
     move-result-object v1
 
@@ -543,14 +543,14 @@
 
     iget v3, v3, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/libvideo/a0/h/LiveVideoController;->i(II)Lio/reactivex/Observable;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/libvideo/a0/h/f;->i(II)Lc/a/m;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lio/reactivex/Observable;->j()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v1}, Lc/a/m;->j()Lio/reactivex/disposables/b;
 
     .line 7
-    invoke-static {}, Lcom/vk/bridges/ActionLinksBridge;->a()Lcom/vk/bridges/ActionLinksBridge1;
+    invoke-static {}, Lcom/vk/bridges/c;->a()Lcom/vk/bridges/b;
 
     move-result-object v1
 
@@ -560,7 +560,7 @@
 
     move-result-object v0
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/ActionLinksBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -617,7 +617,7 @@
 
     .line 23
     :goto_1
-    invoke-static {}, Lcom/vk/bridges/ActionLinksBridge;->a()Lcom/vk/bridges/ActionLinksBridge1;
+    invoke-static {}, Lcom/vk/bridges/c;->a()Lcom/vk/bridges/b;
 
     move-result-object v1
 
@@ -663,7 +663,7 @@
     const/4 v11, 0x0
 
     .line 31
-    invoke-interface/range {v1 .. v11}, Lcom/vk/bridges/ActionLinksBridge1;->a(Landroid/content/Context;Lcom/vk/dto/actionlinks/ActionLink;ILjava/lang/String;ZZZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-interface/range {v1 .. v11}, Lcom/vk/bridges/b;->a(Landroid/content/Context;Lcom/vk/dto/actionlinks/ActionLink;ILjava/lang/String;ZZZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnDismissListener;)V
 
     return-void
 .end method
@@ -709,10 +709,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;
+    check-cast v1, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;
 
     .line 17
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;->setActionButtonClickCount(I)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;->setActionButtonClickCount(I)V
 
     goto :goto_0
 
@@ -746,7 +746,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -802,7 +802,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;)V
+.method public a(Lcom/vk/libvideo/live/views/actionlinkssnippet/b;)V
     .locals 1
 
     .line 18
@@ -813,11 +813,11 @@
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -846,10 +846,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;
+    check-cast v0, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;
 
     .line 7
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;->b()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;->b()V
 
     goto :goto_0
 
@@ -913,17 +913,17 @@
     .locals 4
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->m()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->m()Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 5
     :cond_0
-    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
 
     move-result-object v0
 
@@ -943,7 +943,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/libvideo/a0/h/LiveVideoController;->a(IILjava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/libvideo/a0/h/f;->a(IILjava/lang/String;)Lc/a/m;
 
     move-result-object v0
 
@@ -952,11 +952,11 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$f;-><init>(Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;Lcom/vk/dto/actionlinks/ActionLink;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v1, Lio/reactivex/disposables/Disposable;
+    check-cast v1, Lio/reactivex/disposables/b;
 
-    invoke-virtual {p0, v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p0, v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method
@@ -981,9 +981,9 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->g:Lcom/vk/core/util/TimeoutLock;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->g:Lcom/vk/core/util/j1;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/j1;->a()Z
 
     move-result v0
 
@@ -1084,7 +1084,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet$a;->a(Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet;)Z
+    invoke-static {p0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/a$a;->a(Lcom/vk/libvideo/live/views/actionlinkssnippet/a;)Z
 
     move-result v0
 
@@ -1127,11 +1127,11 @@
     return v0
 .end method
 
-.method public m()Lio/reactivex/disposables/Disposable;
+.method public m()Lio/reactivex/disposables/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a:Lio/reactivex/disposables/b;
 
     return-object v0
 .end method
@@ -1187,7 +1187,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;",
+            "Lcom/vk/libvideo/live/views/actionlinkssnippet/b;",
             ">;"
         }
     .end annotation
@@ -1219,10 +1219,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;
+    check-cast v1, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;
 
     .line 2
-    invoke-interface {v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;->g()V
+    invoke-interface {v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;->g()V
 
     goto :goto_0
 
@@ -1251,10 +1251,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;
+    check-cast v1, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;
 
     .line 2
-    invoke-interface {v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;->c()V
+    invoke-interface {v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;->c()V
 
     goto :goto_0
 
@@ -1331,13 +1331,13 @@
     move-result v0
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/ActionLinksBridge;->a()Lcom/vk/bridges/ActionLinksBridge1;
+    invoke-static {}, Lcom/vk/bridges/c;->a()Lcom/vk/bridges/b;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->j:Landroid/content/Context;
 
-    invoke-interface {v2, v3, v1, v0}, Lcom/vk/bridges/ActionLinksBridge1;->a(Landroid/content/Context;II)V
+    invoke-interface {v2, v3, v1, v0}, Lcom/vk/bridges/b;->a(Landroid/content/Context;II)V
 
     :cond_1
     return-void
@@ -1347,17 +1347,17 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->m()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->m()Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 2
     :cond_0
-    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
 
     move-result-object v0
 
@@ -1373,7 +1373,7 @@
 
     iget v2, v2, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/libvideo/a0/h/LiveVideoController;->e(II)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/libvideo/a0/h/f;->e(II)Lc/a/m;
 
     move-result-object v0
 
@@ -1382,11 +1382,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$g;-><init>(Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v1, Lio/reactivex/disposables/Disposable;
+    check-cast v1, Lio/reactivex/disposables/b;
 
-    invoke-virtual {p0, v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p0, v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

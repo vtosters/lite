@@ -9,8 +9,8 @@
         value = {
             "Ljava/util/HashMap<",
             "Lcom/vk/catalog2/core/holders/shopping/CellStyleType;",
-            "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3<",
-            "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;",
+            "Lcom/vk/catalog2/core/holders/shopping/o<",
+            "Lcom/vk/catalog2/core/holders/shopping/n;",
             ">;>;"
         }
     .end annotation
@@ -21,8 +21,8 @@
         value = {
             "Ljava/util/HashMap<",
             "Lcom/vk/catalog2/core/holders/shopping/CellStyleType;",
-            "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3<",
-            "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory7;",
+            "Lcom/vk/catalog2/core/holders/shopping/o<",
+            "Lcom/vk/catalog2/core/holders/shopping/q;",
             ">;>;"
         }
     .end annotation
@@ -53,15 +53,15 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;
+.method private final a(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/o;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/catalog2/core/holders/shopping/CellStyleType;",
             ")",
-            "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3<",
-            "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;",
+            "Lcom/vk/catalog2/core/holders/shopping/o<",
+            "Lcom/vk/catalog2/core/holders/shopping/n;",
             ">;"
         }
     .end annotation
@@ -73,7 +73,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;
+    check-cast v0, Lcom/vk/catalog2/core/holders/shopping/o;
 
     if-nez v0, :cond_3
 
@@ -122,11 +122,11 @@
 
     .line 19
     :goto_0
-    new-instance v2, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;
+    new-instance v2, Lcom/vk/catalog2/core/holders/shopping/o;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v3, v0, v1, v3}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;-><init>(Landroidx/core/util/Pools$SimplePool;Lkotlin/jvm/b/Functions2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v2, v3, v0, v1, v3}, Lcom/vk/catalog2/core/holders/shopping/o;-><init>(Landroidx/core/util/Pools$SimplePool;Lkotlin/jvm/b/b;ILkotlin/jvm/internal/i;)V
 
     .line 20
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory;->a:Ljava/util/HashMap;
@@ -139,15 +139,15 @@
     return-object v0
 .end method
 
-.method private final b(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;
+.method private final b(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/o;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/catalog2/core/holders/shopping/CellStyleType;",
             ")",
-            "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3<",
-            "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory7;",
+            "Lcom/vk/catalog2/core/holders/shopping/o<",
+            "Lcom/vk/catalog2/core/holders/shopping/q;",
             ">;"
         }
     .end annotation
@@ -159,7 +159,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;
+    check-cast v0, Lcom/vk/catalog2/core/holders/shopping/o;
 
     if-nez v0, :cond_3
 
@@ -208,11 +208,11 @@
 
     .line 6
     :goto_0
-    new-instance v2, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;
+    new-instance v2, Lcom/vk/catalog2/core/holders/shopping/o;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v3, v0, v1, v3}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;-><init>(Landroidx/core/util/Pools$SimplePool;Lkotlin/jvm/b/Functions2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v2, v3, v0, v1, v3}, Lcom/vk/catalog2/core/holders/shopping/o;-><init>(Landroidx/core/util/Pools$SimplePool;Lkotlin/jvm/b/b;ILkotlin/jvm/internal/i;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory;->b:Ljava/util/HashMap;
@@ -252,32 +252,32 @@
     .end annotation
 
     .line 1
-    invoke-static {p4}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p4}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p4
 
     sget-object v0, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory$makeAdapter$contentOwnerIndex$1;->a:Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory$makeAdapter$contentOwnerIndex$1;
 
-    invoke-static {p4, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p4, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p4
 
-    invoke-static {p4}, Lkotlin/collections/c0;->a(Lkotlin/sequences/Sequence;)Ljava/util/Map;
+    invoke-static {p4}, Lkotlin/collections/c0;->a(Lkotlin/sequences/j;)Ljava/util/Map;
 
     move-result-object p4
 
     .line 2
-    invoke-static {p5}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p5}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p5
 
     sget-object v0, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory$makeAdapter$videoIndex$1;->a:Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory$makeAdapter$videoIndex$1;
 
-    invoke-static {p5, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p5, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p5
 
-    invoke-static {p5}, Lkotlin/collections/c0;->a(Lkotlin/sequences/Sequence;)Ljava/util/Map;
+    invoke-static {p5}, Lkotlin/collections/c0;->a(Lkotlin/sequences/j;)Ljava/util/Map;
 
     move-result-object p5
 
@@ -363,7 +363,7 @@
     const/4 v0, 0x1
 
     .line 9
-    new-instance v5, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory2;
+    new-instance v5, Lcom/vk/catalog2/core/holders/shopping/p;
 
     invoke-virtual {v3}, Lcom/vk/dto/tags/Target;->b()I
 
@@ -379,13 +379,13 @@
 
     check-cast v3, Lcom/vk/catalog2/core/blocks/ContentOwner;
 
-    invoke-direct {v5, p1, v1, v4, v3}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory2;-><init>(Ljava/lang/String;Lcom/vk/dto/tags/TagLink;Lcom/vk/dto/common/VideoFile;Lcom/vk/catalog2/core/blocks/ContentOwner;)V
+    invoke-direct {v5, p1, v1, v4, v3}, Lcom/vk/catalog2/core/holders/shopping/p;-><init>(Ljava/lang/String;Lcom/vk/dto/tags/TagLink;Lcom/vk/dto/common/VideoFile;Lcom/vk/catalog2/core/blocks/ContentOwner;)V
 
     goto :goto_2
 
     .line 10
     :cond_1
-    new-instance v5, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory4;
+    new-instance v5, Lcom/vk/catalog2/core/holders/shopping/m;
 
     invoke-virtual {v3}, Lcom/vk/dto/tags/Target;->b()I
 
@@ -401,7 +401,7 @@
 
     check-cast v3, Lcom/vk/catalog2/core/blocks/ContentOwner;
 
-    invoke-direct {v5, p1, v1, v3}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory4;-><init>(Ljava/lang/String;Lcom/vk/dto/tags/TagLink;Lcom/vk/catalog2/core/blocks/ContentOwner;)V
+    invoke-direct {v5, p1, v1, v3}, Lcom/vk/catalog2/core/holders/shopping/m;-><init>(Ljava/lang/String;Lcom/vk/dto/tags/TagLink;Lcom/vk/catalog2/core/blocks/ContentOwner;)V
 
     goto :goto_2
 
@@ -424,9 +424,9 @@
 
     check-cast v3, Lcom/vk/catalog2/core/blocks/ContentOwner;
 
-    new-instance v5, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory4;
+    new-instance v5, Lcom/vk/catalog2/core/holders/shopping/m;
 
-    invoke-direct {v5, p1, v1, v3}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory4;-><init>(Ljava/lang/String;Lcom/vk/dto/tags/TagLink;Lcom/vk/catalog2/core/blocks/ContentOwner;)V
+    invoke-direct {v5, p1, v1, v3}, Lcom/vk/catalog2/core/holders/shopping/m;-><init>(Ljava/lang/String;Lcom/vk/dto/tags/TagLink;Lcom/vk/catalog2/core/blocks/ContentOwner;)V
 
     .line 12
     :goto_2
@@ -436,13 +436,13 @@
 
     .line 13
     :cond_4
-    new-instance p1, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory5;
+    new-instance p1, Lcom/vk/catalog2/core/holders/shopping/c;
 
-    invoke-direct {p0, p7}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory;->a(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;
+    invoke-direct {p0, p7}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory;->a(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/o;
 
     move-result-object v4
 
-    invoke-direct {p0, p7}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory;->b(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;
+    invoke-direct {p0, p7}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory;->b(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/o;
 
     move-result-object v5
 
@@ -454,7 +454,7 @@
 
     move v6, p8
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory5;-><init>(Lcom/vk/catalog2/core/api/dto/layout/GridLayout;Ljava/util/List;Ljava/lang/String;Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory6;Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory6;I)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/shopping/c;-><init>(Lcom/vk/catalog2/core/api/dto/layout/GridLayout;Ljava/util/List;Ljava/lang/String;Lcom/vk/catalog2/core/holders/shopping/u;Lcom/vk/catalog2/core/holders/shopping/u;I)V
 
     return-object p1
 .end method

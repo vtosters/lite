@@ -3,7 +3,7 @@
 .source "MusicPlaylistFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/OnRetryClickListener;
+.implements Lcom/vk/lists/r;
 
 
 # annotations
@@ -40,17 +40,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$e;->a:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->b(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lkotlin/jvm/b/Functions;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->b(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lkotlin/jvm/b/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/m;
 
     :cond_0
     return-void

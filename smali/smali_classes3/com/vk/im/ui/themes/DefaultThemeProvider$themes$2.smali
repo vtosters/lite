@@ -3,7 +3,7 @@
 .source "DefaultThemeProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/util/Map<",
-        "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
+        "Lcom/vk/im/engine/models/dialogs/f;",
         "+",
         "Lcom/vk/im/engine/models/dialogs/DialogTheme;",
         ">;>;"
@@ -65,14 +65,14 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
+            "Lcom/vk/im/engine/models/dialogs/f;",
             "Lcom/vk/im/engine/models/dialogs/DialogTheme;",
             ">;"
         }
     .end annotation
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;->INSTANCE:Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;
+    sget-object v0, Lcom/vk/im/engine/models/dialogs/f$b;->d:Lcom/vk/im/engine/models/dialogs/f$b;
 
     iget-object v1, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider$themes$2;->this$0:Lcom/vk/im/ui/themes/DefaultThemeProvider;
 
@@ -80,7 +80,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 

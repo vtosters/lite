@@ -3,12 +3,12 @@
 .source "LazyStoriesHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/holders/LazyStoriesHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/DiscoverAdapter;Z)V
+    value = Lcom/vk/discover/holders/LazyStoriesHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/b;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Float;",
         ">;"
     }
@@ -61,7 +61,7 @@
     const/high16 v0, 0x40800000    # 4.0f
 
     .line 2
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 

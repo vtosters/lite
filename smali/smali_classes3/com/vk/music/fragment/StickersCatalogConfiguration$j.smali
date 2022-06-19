@@ -3,7 +3,7 @@
 .source "StickersCatalogConfiguration.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/api/gifts/GiftGetByStickerId$a;",
+        "Lc/a/z/g<",
+        "Lb/h/c/k/a$a;",
         ">;"
     }
 .end annotation
@@ -50,15 +50,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/gifts/GiftGetByStickerId$a;)V
+.method public final a(Lb/h/c/k/a$a;)V
     .locals 7
 
     .line 1
-    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
+    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stickers/bridge/StickersBridge;->c()Lcom/vk/stickers/bridge/StickersBridge3;
+    invoke-interface {v0}, Lcom/vk/stickers/bridge/k;->c()Lcom/vk/stickers/bridge/m;
 
     move-result-object v1
 
@@ -71,17 +71,17 @@
 
     move-result-object v3
 
-    iget-object v4, p1, Lcom/vk/api/gifts/GiftGetByStickerId$a;->b:Lcom/vk/dto/gift/CatalogedGift;
+    iget-object v4, p1, Lb/h/c/k/a$a;->b:Lcom/vk/dto/gift/CatalogedGift;
 
     const-string v0, "it.gift"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget v5, p1, Lcom/vk/api/gifts/GiftGetByStickerId$a;->a:I
+    iget v5, p1, Lb/h/c/k/a$a;->a:I
 
     const-string v6, "stickers_store"
 
-    invoke-interface/range {v1 .. v6}, Lcom/vk/stickers/bridge/StickersBridge3;->a(Landroid/content/Context;Ljava/util/Collection;Lcom/vk/dto/gift/CatalogedGift;ILjava/lang/String;)V
+    invoke-interface/range {v1 .. v6}, Lcom/vk/stickers/bridge/m;->a(Landroid/content/Context;Ljava/util/Collection;Lcom/vk/dto/gift/CatalogedGift;ILjava/lang/String;)V
 
     return-void
 .end method
@@ -90,9 +90,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/gifts/GiftGetByStickerId$a;
+    check-cast p1, Lb/h/c/k/a$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/fragment/StickersCatalogConfiguration$j;->a(Lcom/vk/api/gifts/GiftGetByStickerId$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/fragment/StickersCatalogConfiguration$j;->a(Lb/h/c/k/a$a;)V
 
     return-void
 .end method

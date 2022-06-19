@@ -3,7 +3,7 @@
 .source "IdentityListAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -58,7 +58,7 @@
 
     iget-object p1, p1, Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder;->a:Lcom/vk/identity/adapters/IdentityListAdapter;
 
-    invoke-static {p1}, Lcom/vk/identity/adapters/IdentityListAdapter;->a(Lcom/vk/identity/adapters/IdentityListAdapter;)Lkotlin/jvm/b/Functions2;
+    invoke-static {p1}, Lcom/vk/identity/adapters/IdentityListAdapter;->a(Lcom/vk/identity/adapters/IdentityListAdapter;)Lkotlin/jvm/b/b;
 
     move-result-object p1
 
@@ -66,7 +66,7 @@
 
     iget-object v0, v0, Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder;->a:Lcom/vk/identity/adapters/IdentityListAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -82,13 +82,13 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/identity/b/IdentityAdapterItem6;
+    check-cast v0, Lcom/vk/identity/b/d;
 
-    invoke-virtual {v0}, Lcom/vk/identity/b/IdentityAdapterItem6;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/identity/b/d;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -110,7 +110,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder$$special$$inlined$let$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

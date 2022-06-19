@@ -1,13 +1,13 @@
 .class public final Lcom/vk/libvideo/dialogs/VideoFeedDialog;
-.super Lcom/vk/libvideo/dialogs/AnimationFeedDialog;
+.super Lcom/vk/libvideo/dialogs/c;
 .source "VideoFeedDialog.kt"
 
 # interfaces
-.implements Lcom/vk/libvideo/b0/VideoSessionController$a;
+.implements Lcom/vk/libvideo/b0/a$a;
 .implements Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;
-.implements Lcom/vk/libvideo/ui/VideoListItemView$a;
-.implements Lcom/vk/libvideo/VideoDiscoverController$a;
-.implements Lcom/vk/libvideo/ui/VideoViewCallback;
+.implements Lcom/vk/libvideo/ui/e$a;
+.implements Lcom/vk/libvideo/n$a;
+.implements Lcom/vk/libvideo/ui/h;
 
 
 # annotations
@@ -26,27 +26,27 @@
 # instance fields
 .field private final H:Lcom/vk/libvideo/dialogs/VideoFeedDialog$l;
 
-.field private final I:Lcom/vk/core/utils/OrientationListener$c;
+.field private final I:Lcom/vk/core/utils/e$c;
 
 .field private final J:Ljava/lang/Runnable;
 
-.field private final K:Lcom/vk/lists/OnRetryClickListener;
+.field private final K:Lcom/vk/lists/r;
 
-.field private final L:Lcom/vk/libvideo/v/DiscoverAdapter;
+.field private final L:Lcom/vk/libvideo/v/a;
 
-.field private final M:Lcom/vk/lists/PaginatedRecyclerAdapter;
+.field private final M:Lcom/vk/lists/s;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/lists/PaginatedRecyclerAdapter<",
-            "Lcom/vk/libvideo/v/DiscoverAdapter;",
+            "Lcom/vk/lists/s<",
+            "Lcom/vk/libvideo/v/a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final N:Lcom/vk/libvideo/VideoDiscoverController;
+.field private final N:Lcom/vk/libvideo/n;
 
-.field private final O:Lcom/vk/libvideo/b0/VideoSessionController;
+.field private final O:Lcom/vk/libvideo/b0/a;
 
 .field private final P:Landroidx/appcompat/widget/Toolbar;
 
@@ -68,13 +68,13 @@
 
 .field private Y:Lcom/vk/libvideo/dialogs/VideoFeedDialog$e;
 
-.field private Z:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
+.field private Z:Lcom/vk/libvideo/dialogs/d;
 
 .field private final a0:Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;
 
-.field private final b0:Lcom/vk/core/utils/OrientationListener;
+.field private final b0:Lcom/vk/core/utils/e;
 
-.field private final c0:Lcom/vk/libvideo/c0/VideoSnapHelper;
+.field private final c0:Lcom/vk/libvideo/c0/a;
 
 .field private d0:Z
 
@@ -99,18 +99,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/libvideo/dialogs/AnimationDialogCallback;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/libvideo/dialogs/b;)V
     .locals 7
 
     .line 1
-    sget v0, Lcom/vk/libvideo/R2;->VideoFullScreenDialog:I
+    sget v0, Lcom/vk/libvideo/k;->VideoFullScreenDialog:I
 
-    invoke-direct {p0, p1, p4, v0}, Lcom/vk/libvideo/dialogs/AnimationFeedDialog;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/dialogs/AnimationDialogCallback;I)V
+    invoke-direct {p0, p1, p4, v0}, Lcom/vk/libvideo/dialogs/c;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/dialogs/b;I)V
 
     iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->j0:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
@@ -126,7 +126,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$n;-><init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)V
 
-    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->I:Lcom/vk/core/utils/OrientationListener$c;
+    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->I:Lcom/vk/core/utils/e$c;
 
     .line 4
     new-instance p2, Lcom/vk/libvideo/dialogs/VideoFeedDialog$o;
@@ -140,50 +140,50 @@
 
     invoke-direct {p2, p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$m;-><init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)V
 
-    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->K:Lcom/vk/lists/OnRetryClickListener;
+    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->K:Lcom/vk/lists/r;
 
     .line 6
-    new-instance p2, Lcom/vk/libvideo/v/DiscoverAdapter;
+    new-instance p2, Lcom/vk/libvideo/v/a;
 
     new-instance p4, Lcom/vk/libvideo/dialogs/VideoFeedDialog$d;
 
     invoke-direct {p4, p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$d;-><init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)V
 
-    invoke-direct {p2, p4, p0, p3}, Lcom/vk/libvideo/v/DiscoverAdapter;-><init>(Landroid/view/View$OnClickListener;Lcom/vk/libvideo/ui/VideoViewCallback;Ljava/lang/String;)V
+    invoke-direct {p2, p4, p0, p3}, Lcom/vk/libvideo/v/a;-><init>(Landroid/view/View$OnClickListener;Lcom/vk/libvideo/ui/h;Ljava/lang/String;)V
 
-    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/DiscoverAdapter;
+    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/a;
 
     .line 7
-    new-instance p2, Lcom/vk/lists/PaginatedRecyclerAdapter;
+    new-instance p2, Lcom/vk/lists/s;
 
-    iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/DiscoverAdapter;
+    iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/a;
 
-    new-instance v2, Lcom/vk/libvideo/ui/VideoFooterErrorViewProvider;
+    new-instance v2, Lcom/vk/libvideo/ui/a;
 
-    invoke-direct {v2}, Lcom/vk/libvideo/ui/VideoFooterErrorViewProvider;-><init>()V
+    invoke-direct {v2}, Lcom/vk/libvideo/ui/a;-><init>()V
 
     .line 8
-    new-instance v3, Lcom/vk/libvideo/ui/VideoFooterLoadingViewProvider;
+    new-instance v3, Lcom/vk/libvideo/ui/b;
 
-    invoke-direct {v3}, Lcom/vk/libvideo/ui/VideoFooterLoadingViewProvider;-><init>()V
+    invoke-direct {v3}, Lcom/vk/libvideo/ui/b;-><init>()V
 
-    iget-object v5, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->K:Lcom/vk/lists/OnRetryClickListener;
+    iget-object v5, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->K:Lcom/vk/lists/r;
 
     const/4 v4, 0x0
 
     move-object v0, p2
 
     .line 9
-    invoke-direct/range {v0 .. v5}, Lcom/vk/lists/PaginatedRecyclerAdapter;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lcom/vk/lists/FooterErrorViewProvider;Lcom/vk/lists/FooterLoadingViewProvider;Lcom/vk/lists/FooterEmptyViewProvider;Lcom/vk/lists/OnRetryClickListener;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/lists/s;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lcom/vk/lists/k;Lcom/vk/lists/l;Lcom/vk/lists/j;Lcom/vk/lists/r;)V
 
-    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/s;
 
     .line 10
-    new-instance p2, Lcom/vk/libvideo/b0/VideoSessionController;
+    new-instance p2, Lcom/vk/libvideo/b0/a;
 
-    invoke-direct {p2, p0}, Lcom/vk/libvideo/b0/VideoSessionController;-><init>(Lcom/vk/libvideo/b0/VideoSessionController$a;)V
+    invoke-direct {p2, p0}, Lcom/vk/libvideo/b0/a;-><init>(Lcom/vk/libvideo/b0/a$a;)V
 
-    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/VideoSessionController;
+    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/a;
 
     .line 11
     new-instance p2, Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -214,18 +214,18 @@
     iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a0:Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;
 
     .line 15
-    new-instance p2, Lcom/vk/core/utils/OrientationListener;
+    new-instance p2, Lcom/vk/core/utils/e;
 
-    invoke-direct {p2, p1}, Lcom/vk/core/utils/OrientationListener;-><init>(Landroid/app/Activity;)V
+    invoke-direct {p2, p1}, Lcom/vk/core/utils/e;-><init>(Landroid/app/Activity;)V
 
-    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/OrientationListener;
+    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/e;
 
     .line 16
-    new-instance p2, Lcom/vk/libvideo/c0/VideoSnapHelper;
+    new-instance p2, Lcom/vk/libvideo/c0/a;
 
-    invoke-direct {p2}, Lcom/vk/libvideo/c0/VideoSnapHelper;-><init>()V
+    invoke-direct {p2}, Lcom/vk/libvideo/c0/a;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->c0:Lcom/vk/libvideo/c0/VideoSnapHelper;
+    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->c0:Lcom/vk/libvideo/c0/a;
 
     const/4 p2, 0x1
 
@@ -238,16 +238,16 @@
     invoke-direct {p4}, Ljava/util/LinkedHashSet;-><init>()V
 
     .line 19
-    iget-object p4, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/VideoSessionController;
+    iget-object p4, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/a;
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v0
 
-    invoke-virtual {p4, v0}, Lcom/vk/libvideo/b0/VideoSessionController;->a(Landroid/view/View;)V
+    invoke-virtual {p4, v0}, Lcom/vk/libvideo/b0/a;->a(Landroid/view/View;)V
 
     .line 20
-    new-instance p4, Lcom/vk/libvideo/VideoDiscoverController;
+    new-instance p4, Lcom/vk/libvideo/n;
 
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->j0:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
@@ -255,7 +255,7 @@
 
     move-result-object v3
 
-    iget-object v5, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object v5, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/s;
 
     move-object v1, p4
 
@@ -265,12 +265,12 @@
 
     move-object v6, p0
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/libvideo/VideoDiscoverController;-><init>(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/lists/PaginatedRecyclerAdapter;Lcom/vk/libvideo/VideoDiscoverController$a;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/libvideo/n;-><init>(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/lists/s;Lcom/vk/libvideo/n$a;)V
 
-    iput-object p4, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/VideoDiscoverController;
+    iput-object p4, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/n;
 
     .line 21
-    iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/VideoDiscoverController;
+    iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/n;
 
     iget-object p4, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->j0:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
@@ -284,26 +284,26 @@
 
     const-string v0, "Collections.singletonLis\u2026File>(autoPlay.videoFile)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p3, p4}, Lcom/vk/libvideo/VideoDiscoverController;->a(Ljava/util/List;)V
+    invoke-virtual {p3, p4}, Lcom/vk/libvideo/n;->a(Ljava/util/List;)V
 
     .line 22
-    iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/VideoDiscoverController;
+    iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/n;
 
-    invoke-virtual {p3, p2}, Lcom/vk/libvideo/VideoDiscoverController;->b(Z)V
+    invoke-virtual {p3, p2}, Lcom/vk/libvideo/n;->b(Z)V
 
     .line 23
-    iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/VideoDiscoverController;
+    iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/n;
 
-    invoke-virtual {p3}, Lcom/vk/libvideo/VideoDiscoverController;->c()V
+    invoke-virtual {p3}, Lcom/vk/libvideo/n;->c()V
 
     .line 24
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p3
 
-    sget p4, Lcom/vk/libvideo/R;->more_video:I
+    sget p4, Lcom/vk/libvideo/g;->more_video:I
 
     invoke-virtual {p3, p4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -311,7 +311,7 @@
 
     const-string p4, "content.findViewById(R.id.more_video)"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Lcom/vk/core/view/OverlayTextView;
 
@@ -332,11 +332,11 @@
     invoke-virtual {p3, p4}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
     .line 27
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p3
 
-    sget p4, Lcom/vk/libvideo/R;->video_next:I
+    sget p4, Lcom/vk/libvideo/g;->video_next:I
 
     invoke-virtual {p3, p4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -344,7 +344,7 @@
 
     const-string p4, "content.findViewById(R.id.video_next)"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Lcom/vk/libvideo/ui/VideoNextView;
 
@@ -374,11 +374,11 @@
     invoke-virtual {p3, p4}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
     .line 31
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p3
 
-    sget p4, Lcom/vk/libvideo/R;->toolbar:I
+    sget p4, Lcom/vk/libvideo/g;->toolbar:I
 
     invoke-virtual {p3, p4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -386,7 +386,7 @@
 
     const-string p4, "content.findViewById(R.id.toolbar)"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroidx/appcompat/widget/Toolbar;
 
@@ -395,14 +395,14 @@
     .line 32
     iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->P:Landroidx/appcompat/widget/Toolbar;
 
-    sget p4, Lcom/vk/libvideo/R7;->ic_cancel_24:I
+    sget p4, Lcom/vk/libvideo/e;->ic_cancel_24:I
 
     invoke-virtual {p3, p4}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(I)V
 
     .line 33
     iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->P:Landroidx/appcompat/widget/Toolbar;
 
-    sget p4, Lcom/vk/libvideo/R2;->VideoDialogToolbarTitleBig:I
+    sget p4, Lcom/vk/libvideo/k;->VideoDialogToolbarTitleBig:I
 
     invoke-virtual {p3, p1, p4}, Landroidx/appcompat/widget/Toolbar;->setTitleTextAppearance(Landroid/content/Context;I)V
 
@@ -418,24 +418,24 @@
     .line 35
     iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->P:Landroidx/appcompat/widget/Toolbar;
 
-    sget p4, Lcom/vk/libvideo/R11;->video_title:I
+    sget p4, Lcom/vk/libvideo/j;->video_title:I
 
     invoke-virtual {p3, p4}, Landroidx/appcompat/widget/Toolbar;->setTitle(I)V
 
     .line 36
     new-instance p3, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;
 
-    iget-object p4, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/DiscoverAdapter;
+    iget-object p4, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/a;
 
-    new-instance v0, Lcom/vk/libvideo/autoplay/j/ScreenTopPlayStrategy;
+    new-instance v0, Lcom/vk/libvideo/autoplay/j/c;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p2, v2}, Lcom/vk/libvideo/autoplay/j/ScreenTopPlayStrategy;-><init>(FILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1, p2, v2}, Lcom/vk/libvideo/autoplay/j/c;-><init>(FILkotlin/jvm/internal/i;)V
 
-    invoke-direct {p3, p0, p1, p4, v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;-><init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Landroid/content/Context;Lcom/vk/libvideo/autoplay/AutoPlayProvider;Lcom/vk/libvideo/autoplay/j/OnScreenPlayStrategy;)V
+    invoke-direct {p3, p0, p1, p4, v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;-><init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Landroid/content/Context;Lcom/vk/libvideo/autoplay/b;Lcom/vk/libvideo/autoplay/j/a;)V
 
     iput-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->U:Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;
 
@@ -452,7 +452,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p3, p2, v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-virtual {p3, p2, v0}, Lcom/vk/libvideo/autoplay/g;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     .line 38
     iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->j0:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
@@ -468,7 +468,7 @@
 
     iget-object p3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->j0:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    invoke-virtual {p2, p3}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->f(Lcom/vk/libvideo/autoplay/AutoPlay;)V
+    invoke-virtual {p2, p3}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->f(Lcom/vk/libvideo/autoplay/a;)V
 
     .line 40
     :cond_0
@@ -478,7 +478,7 @@
 
     const-string p2, "LifecycleHandler.install(activity)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->T:Lcom/vk/core/widget/LifecycleHandler;
 
@@ -487,10 +487,10 @@
 
     iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->H:Lcom/vk/libvideo/dialogs/VideoFeedDialog$l;
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/widget/LifecycleHandler;->a(Lcom/vk/core/widget/LifecycleListener;)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/widget/LifecycleHandler;->a(Lcom/vk/core/widget/a;)V
 
     .line 42
-    sget p1, Lcom/vk/libvideo/R;->drag_view:I
+    sget p1, Lcom/vk/libvideo/g;->drag_view:I
 
     invoke-virtual {p0, p1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -498,7 +498,7 @@
 
     const-string p2, "findViewById(R.id.drag_view)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -527,12 +527,12 @@
 
     invoke-direct {p2, p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$2;-><init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/RecyclerViewExt;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/i;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
 
     .line 46
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->R:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance p2, Lcom/vk/libvideo/w/VideoFeedItemDecoration;
+    new-instance p2, Lcom/vk/libvideo/w/a;
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
@@ -540,9 +540,9 @@
 
     const-string v0, "context"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
@@ -552,9 +552,9 @@
 
     const-string v2, "content.systemWindowInsets"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, p3, v1}, Lcom/vk/libvideo/w/VideoFeedItemDecoration;-><init>(Landroid/content/Context;Landroid/graphics/Rect;)V
+    invoke-direct {p2, p3, v1}, Lcom/vk/libvideo/w/a;-><init>(Landroid/content/Context;Landroid/graphics/Rect;)V
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -568,29 +568,29 @@
     .line 48
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->R:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/s;
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 49
-    iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->c0:Lcom/vk/libvideo/c0/VideoSnapHelper;
+    iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->c0:Lcom/vk/libvideo/c0/a;
 
     iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->R:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1, p2}, Lcom/vk/libvideo/c0/VideoSnapHelper;->attachToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p1, p2}, Lcom/vk/libvideo/c0/a;->attachToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 50
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->R:Landroidx/recyclerview/widget/RecyclerView;
 
-    sget-object p2, Lcom/vk/core/util/ViewUtils1;->INSTANCE:Lcom/vk/core/util/ViewUtils1;
+    sget-object p2, Lcom/vk/core/util/n1;->a:Lcom/vk/core/util/n1;
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/core/util/ViewUtils1;->a(Landroid/content/Context;)I
+    invoke-virtual {p2, p3}, Lcom/vk/core/util/n1;->a(Landroid/content/Context;)I
 
     move-result p2
 
@@ -606,17 +606,17 @@
     if-eqz p1, :cond_1
 
     .line 52
-    iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/VideoSessionController;
+    iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/a;
 
-    invoke-virtual {p2, p1}, Lcom/vk/libvideo/b0/VideoSessionController;->a(Lcom/vk/libvideo/VideoTracker;)V
+    invoke-virtual {p2, p1}, Lcom/vk/libvideo/b0/a;->a(Lcom/vk/libvideo/VideoTracker;)V
 
     .line 53
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p1
 
-    sget p2, Lcom/vk/libvideo/R;->scrim:I
+    sget p2, Lcom/vk/libvideo/g;->scrim:I
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -624,19 +624,19 @@
 
     const-string p2, "content.findViewById<View>(R.id.scrim)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->V:Landroid/view/View;
 
     .line 54
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p1
 
     invoke-virtual {p1, p4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->setTouchSlop(I)V
 
     .line 55
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p1
 
@@ -644,7 +644,7 @@
 
     move-result-object p2
 
-    sget p3, Lcom/vk/libvideo/R3;->video_feed_background:I
+    sget p3, Lcom/vk/libvideo/c;->video_feed_background:I
 
     invoke-static {p2, p3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -653,7 +653,7 @@
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
     .line 56
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p1
 
@@ -664,7 +664,7 @@
     invoke-virtual {p1, p2, p3}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 57
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p1
 
@@ -675,7 +675,7 @@
     invoke-virtual {p1, p2, p3}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 58
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p1
 
@@ -686,7 +686,7 @@
     invoke-virtual {p1, p2, p3}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 59
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p1
 
@@ -697,41 +697,41 @@
     invoke-virtual {p1, p2, p3}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 60
-    iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/OrientationListener;
+    iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/e;
 
-    iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->I:Lcom/vk/core/utils/OrientationListener$c;
+    iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->I:Lcom/vk/core/utils/e$c;
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/utils/OrientationListener;->a(Lcom/vk/core/utils/OrientationListener$c;)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/utils/e;->a(Lcom/vk/core/utils/e$c;)V
 
     .line 61
-    iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/OrientationListener;
+    iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/e;
 
     invoke-virtual {p1}, Landroid/view/OrientationEventListener;->enable()V
 
     .line 62
-    iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/OrientationListener;
+    iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/e;
 
-    invoke-virtual {p1}, Lcom/vk/core/utils/OrientationListener;->e()V
+    invoke-virtual {p1}, Lcom/vk/core/utils/e;->e()V
 
     .line 63
-    invoke-static {}, Lcom/vk/bridges/AudioBridge;->a()Lcom/vk/bridges/AudioBridge1;
+    invoke-static {}, Lcom/vk/bridges/e;->a()Lcom/vk/bridges/d;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/AudioBridge1;->b()V
+    invoke-interface {p1}, Lcom/vk/bridges/d;->b()V
 
     return-void
 .end method
 
-.method private final N()Lcom/vk/libvideo/ui/VideoListItemView;
+.method private final N()Lcom/vk/libvideo/ui/e;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b(Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0, v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b(Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/ui/e;
 
     move-result-object v0
 
@@ -742,7 +742,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/d;
 
     if-eqz v0, :cond_0
 
@@ -761,9 +761,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/DiscoverAdapter;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/a;
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->size()I
 
     move-result v0
 
@@ -771,29 +771,29 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/DiscoverAdapter;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/a;
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->size()I
 
     move-result v2
 
     sub-int/2addr v2, v1
 
-    invoke-virtual {v0, v2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/libvideo/v/DiscoverItem;
+    check-cast v0, Lcom/vk/libvideo/v/c;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/v/DiscoverItem;->a()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vk/libvideo/v/c;->a()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -821,17 +821,17 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/s;
 
-    invoke-virtual {v2}, Lcom/vk/lists/PaginatedRecyclerAdapter;->w()Z
+    invoke-virtual {v2}, Lcom/vk/lists/s;->w()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/DiscoverAdapter;
+    iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/a;
 
-    invoke-virtual {v2}, Lcom/vk/lists/SimpleAdapter;->size()I
+    invoke-virtual {v2}, Lcom/vk/lists/i0;->size()I
 
     move-result v2
 
@@ -848,12 +848,12 @@
 
     if-eqz v0, :cond_1
 
-    sget v0, Lcom/vk/libvideo/R11;->video_title:I
+    sget v0, Lcom/vk/libvideo/j;->video_title:I
 
     goto :goto_1
 
     :cond_1
-    sget v0, Lcom/vk/libvideo/R11;->video_more_videos_title:I
+    sget v0, Lcom/vk/libvideo/j;->video_more_videos_title:I
 
     :goto_1
     invoke-virtual {v2, v0}, Landroidx/appcompat/widget/Toolbar;->setTitle(I)V
@@ -864,22 +864,22 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/ui/VideoListItemView;
+.method public static final synthetic a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/ui/e;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b(Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b(Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/ui/e;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/v/DiscoverAdapter;
+.method public static final synthetic a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/v/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/DiscoverAdapter;
+    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/a;
 
     return-object p0
 .end method
@@ -911,20 +911,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/dialogs/BaseAnimationDialog;)V
+.method public static final synthetic a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/dialogs/d;)V
     .locals 0
 
     .line 9
-    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
+    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/d;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/ui/VideoListItemView;)V
+.method public static final synthetic a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/ui/e;)V
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/ui/VideoListItemView;)V
+    invoke-direct {p0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/ui/e;)V
 
     return-void
 .end method
@@ -947,7 +947,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/libvideo/ui/VideoListItemView;)V
+.method private final a(Lcom/vk/libvideo/ui/e;)V
     .locals 2
 
     .line 33
@@ -958,17 +958,17 @@
     if-eqz v0, :cond_1
 
     .line 34
-    invoke-virtual {p1}, Lcom/vk/libvideo/ui/VideoListItemView;->getHeaderView()Lcom/vk/libvideo/ui/VideoHeaderView;
+    invoke-virtual {p1}, Lcom/vk/libvideo/ui/e;->getHeaderView()Lcom/vk/libvideo/ui/c;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v0}, Lcom/vk/libvideo/ui/VideoHeaderView;->a(Lcom/vk/dto/common/VideoFile;)V
+    invoke-virtual {v1, v0}, Lcom/vk/libvideo/ui/c;->a(Lcom/vk/dto/common/VideoFile;)V
 
     .line 35
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/libvideo/ui/VideoListItemView;->getFooterPanel()Lcom/vk/libvideo/ui/VideoBottomPanelView;
+    invoke-virtual {p1}, Lcom/vk/libvideo/ui/e;->getFooterPanel()Lcom/vk/libvideo/ui/VideoBottomPanelView;
 
     move-result-object v1
 
@@ -982,7 +982,7 @@
     const/4 v1, 0x1
 
     .line 36
-    invoke-virtual {p1, v1, v0}, Lcom/vk/libvideo/ui/VideoListItemView;->a(ZZ)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/libvideo/ui/e;->a(ZZ)V
 
     .line 37
     invoke-virtual {p1, v0}, Lcom/vk/libvideo/ui/VideoView;->setLandscape(Z)V
@@ -995,16 +995,16 @@
     .line 39
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->U:Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->g()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->g()V
 
     .line 40
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->s()Z
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->s()Z
 
     move-result v0
 
@@ -1017,19 +1017,19 @@
 
     .line 42
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/ui/VideoView;->e(Lcom/vk/libvideo/autoplay/AutoPlay;)V
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/ui/VideoView;->e(Lcom/vk/libvideo/autoplay/a;)V
 
     :goto_0
     return-void
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -1077,7 +1077,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -1096,30 +1096,30 @@
 
     .line 18
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
     .line 19
-    iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/VideoSessionController;
+    iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/a;
 
     const/4 v4, 0x0
 
-    invoke-virtual {v2, v4}, Lcom/vk/libvideo/b0/VideoSessionController;->a(Landroid/view/View;)V
+    invoke-virtual {v2, v4}, Lcom/vk/libvideo/b0/a;->a(Landroid/view/View;)V
 
     .line 20
     iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a0:Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;
 
-    invoke-direct {p0, v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b(Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0, v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b(Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/ui/e;
 
     move-result-object v4
 
-    invoke-virtual {v2, v4}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->a(Lcom/vk/libvideo/ui/VideoListItemView;)V
+    invoke-virtual {v2, v4}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->a(Lcom/vk/libvideo/ui/e;)V
 
     .line 21
-    new-instance v2, Lcom/vk/libvideo/dialogs/VideoDialog;
+    new-instance v2, Lcom/vk/libvideo/dialogs/f;
 
     if-eqz v1, :cond_3
 
@@ -1132,7 +1132,7 @@
     iget-object v7, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a0:Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;
 
     .line 24
-    iget-object v8, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/OrientationListener;
+    iget-object v8, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/e;
 
     .line 25
     invoke-virtual {v6}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->b()Z
@@ -1162,19 +1162,19 @@
     move-object v4, v2
 
     .line 26
-    invoke-direct/range {v4 .. v9}, Lcom/vk/libvideo/dialogs/VideoDialog;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/libvideo/dialogs/AnimationDialogCallback;Lcom/vk/core/utils/OrientationListener;Z)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/libvideo/dialogs/f;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/libvideo/dialogs/b;Lcom/vk/core/utils/e;Z)V
 
     .line 27
-    invoke-virtual {v2, p1}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->e(Z)V
+    invoke-virtual {v2, p1}, Lcom/vk/libvideo/dialogs/d;->e(Z)V
 
     .line 28
-    invoke-virtual {v2, p2}, Lcom/vk/libvideo/dialogs/VideoDialog;->f(Z)V
+    invoke-virtual {v2, p2}, Lcom/vk/libvideo/dialogs/f;->f(Z)V
 
     .line 29
-    invoke-virtual {v2}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->show()V
+    invoke-virtual {v2}, Lcom/vk/libvideo/dialogs/d;->show()V
 
     .line 30
-    iput-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
+    iput-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/d;
 
     .line 31
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->X:Lcom/vk/libvideo/bottomsheet/ModalDialogsController;
@@ -1207,7 +1207,7 @@
     return-object p0
 .end method
 
-.method private final b(Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/ui/VideoListItemView;
+.method private final b(Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/ui/e;
     .locals 9
 
     .line 3
@@ -1262,9 +1262,9 @@
     invoke-static {v3}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 6
-    new-instance v3, Lkotlin/t/Ranges1;
+    new-instance v3, Lkotlin/t/d;
 
-    invoke-direct {v3, v0, v1}, Lkotlin/t/Ranges1;-><init>(II)V
+    invoke-direct {v3, v0, v1}, Lkotlin/t/d;-><init>(II)V
 
     .line 7
     new-instance v0, Ljava/util/ArrayList;
@@ -1291,9 +1291,9 @@
 
     move-object v3, v1
 
-    check-cast v3, Lkotlin/collections/Iterators1;
+    check-cast v3, Lkotlin/collections/a0;
 
-    invoke-virtual {v3}, Lkotlin/collections/Iterators1;->a()I
+    invoke-virtual {v3}, Lkotlin/collections/a0;->a()I
 
     move-result v3
 
@@ -1351,14 +1351,14 @@
     invoke-static {v4}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 12
-    instance-of v4, v1, Lcom/vk/libvideo/ui/VideoListContainerView;
+    instance-of v4, v1, Lcom/vk/libvideo/ui/d;
 
     if-nez v4, :cond_2
 
     move-object v1, v3
 
     :cond_2
-    check-cast v1, Lcom/vk/libvideo/ui/VideoListContainerView;
+    check-cast v1, Lcom/vk/libvideo/ui/d;
 
     if-eqz v1, :cond_1
 
@@ -1373,7 +1373,7 @@
 
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcom/vk/libvideo/ui/VideoListContainerView;->getItem()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v1}, Lcom/vk/libvideo/ui/d;->getItem()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v7
 
@@ -1392,18 +1392,18 @@
     invoke-static {v3}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 14
-    invoke-virtual {v1}, Lcom/vk/libvideo/ui/VideoListContainerView;->getItem()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v1}, Lcom/vk/libvideo/ui/d;->getItem()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     .line 15
-    invoke-virtual {v1}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v1}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object p1
 
@@ -1458,11 +1458,11 @@
     return-void
 .end method
 
-.method public static final synthetic e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/VideoDiscoverController;
+.method public static final synthetic e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/n;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/VideoDiscoverController;
+    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/n;
 
     return-object p0
 .end method
@@ -1789,11 +1789,11 @@
     return-void
 .end method
 
-.method public static final synthetic i(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/core/utils/OrientationListener;
+.method public static final synthetic i(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/core/utils/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/OrientationListener;
+    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/e;
 
     return-object p0
 .end method
@@ -1825,20 +1825,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/VideoSnapHelper;
+.method public static final synthetic m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->c0:Lcom/vk/libvideo/c0/VideoSnapHelper;
+    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->c0:Lcom/vk/libvideo/c0/a;
 
     return-object p0
 .end method
 
-.method public static final synthetic n(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
+.method public static final synthetic n(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/dialogs/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
+    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/d;
 
     return-object p0
 .end method
@@ -1852,31 +1852,31 @@
     return-object p0
 .end method
 
-.method public static final synthetic p(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/b0/VideoSessionController;
+.method public static final synthetic p(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/b0/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/VideoSessionController;
+    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/a;
 
     return-object p0
 .end method
 
-.method public static final synthetic q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/VideoListItemView;
+.method public static final synthetic q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/e;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/e;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic r(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/lists/PaginatedRecyclerAdapter;
+.method public static final synthetic r(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/lists/s;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object p0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M:Lcom/vk/lists/s;
 
     return-object p0
 .end method
@@ -1926,7 +1926,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/e;
 
     move-result-object v0
 
@@ -1962,7 +1962,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/e;
 
     move-result-object v0
 
@@ -1975,7 +1975,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoListItemView;->getHeaderView()Lcom/vk/libvideo/ui/VideoHeaderView;
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/e;->getHeaderView()Lcom/vk/libvideo/ui/c;
 
     move-result-object v3
 
@@ -1994,7 +1994,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoListItemView;->getFooterPanel()Lcom/vk/libvideo/ui/VideoBottomPanelView;
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/e;->getFooterPanel()Lcom/vk/libvideo/ui/VideoBottomPanelView;
 
     move-result-object v4
 
@@ -2166,9 +2166,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/DiscoverAdapter;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/a;
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->size()I
 
     move-result v0
 
@@ -2199,9 +2199,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/DiscoverAdapter;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->L:Lcom/vk/libvideo/v/a;
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->size()I
 
     move-result v0
 
@@ -2230,13 +2230,13 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/VideoSessionController;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/a;
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/libvideo/b0/VideoSessionController;->a(ZZ)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/libvideo/b0/a;->a(ZZ)V
 
     return-void
 .end method
@@ -2245,7 +2245,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0}, Lcom/vk/libvideo/dialogs/AnimationFeedDialog;->J()V
+    invoke-super {p0}, Lcom/vk/libvideo/dialogs/c;->J()V
 
     const/4 v0, 0x1
 
@@ -2255,14 +2255,14 @@
     .line 3
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->U:Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->g()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->g()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/VideoDiscoverController;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/n;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/VideoDiscoverController;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/n;->b(Z)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->J:Ljava/lang/Runnable;
@@ -2285,29 +2285,29 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->U:Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->h()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->h()V
 
     .line 3
-    invoke-super {p0}, Lcom/vk/libvideo/dialogs/AnimationFeedDialog;->L()V
+    invoke-super {p0}, Lcom/vk/libvideo/dialogs/c;->L()V
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/AudioBridge;->a()Lcom/vk/bridges/AudioBridge1;
+    invoke-static {}, Lcom/vk/bridges/e;->a()Lcom/vk/bridges/d;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AudioBridge1;->c()V
+    invoke-interface {v0}, Lcom/vk/bridges/d;->c()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/VideoSessionController;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/a;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/b0/VideoSessionController;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/b0/a;->a(Landroid/view/View;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/VideoSessionController;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/b0/VideoSessionController;->a(Lcom/vk/libvideo/VideoTracker;)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/b0/a;->a(Lcom/vk/libvideo/VideoTracker;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->R:Landroidx/recyclerview/widget/RecyclerView;
@@ -2321,7 +2321,7 @@
 
     iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->H:Lcom/vk/libvideo/dialogs/VideoFeedDialog$l;
 
-    invoke-virtual {v0, v2}, Lcom/vk/core/widget/LifecycleHandler;->b(Lcom/vk/core/widget/LifecycleListener;)V
+    invoke-virtual {v0, v2}, Lcom/vk/core/widget/LifecycleHandler;->b(Lcom/vk/core/widget/a;)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->R:Landroidx/recyclerview/widget/RecyclerView;
@@ -2329,28 +2329,28 @@
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/OrientationListener;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/e;
 
-    iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->I:Lcom/vk/core/utils/OrientationListener$c;
+    iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->I:Lcom/vk/core/utils/e$c;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/utils/OrientationListener;->b(Lcom/vk/core/utils/OrientationListener$c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/utils/e;->b(Lcom/vk/core/utils/e$c;)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/OrientationListener;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/e;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/utils/OrientationListener;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/utils/e;->a(I)V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/OrientationListener;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b0:Lcom/vk/core/utils/e;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->disable()V
 
     return-void
 .end method
 
-.method public M()Lcom/vk/libvideo/autoplay/AutoPlay;
+.method public M()Lcom/vk/libvideo/autoplay/a;
     .locals 1
 
     .line 1
@@ -2372,13 +2372,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->R()F
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->R()F
 
     move-result v0
 
@@ -2391,7 +2391,7 @@
     return v0
 .end method
 
-.method public final a(Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/z/VideoItemHolder;
+.method public final a(Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/z/a;
     .locals 5
 
     .line 43
@@ -2420,7 +2420,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-static {v3, v0}, Lcom/vk/extensions/RecyclerViewExt;->a(Landroidx/recyclerview/widget/RecyclerView;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+    invoke-static {v3, v0}, Lcom/vk/extensions/i;->a(Landroidx/recyclerview/widget/RecyclerView;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object v3
 
@@ -2430,19 +2430,19 @@
     move-object v3, v2
 
     :goto_1
-    instance-of v4, v3, Lcom/vk/libvideo/z/VideoItemHolder;
+    instance-of v4, v3, Lcom/vk/libvideo/z/a;
 
     if-nez v4, :cond_1
 
     move-object v3, v2
 
     :cond_1
-    check-cast v3, Lcom/vk/libvideo/z/VideoItemHolder;
+    check-cast v3, Lcom/vk/libvideo/z/a;
 
     if-eqz v3, :cond_2
 
     .line 46
-    invoke-virtual {v3}, Lcom/vk/libvideo/z/VideoItemHolder;->c0()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v3}, Lcom/vk/libvideo/z/a;->c0()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v4
 
@@ -2465,7 +2465,7 @@
     .locals 3
 
     .line 14
-    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/e;
 
     move-result-object v0
 
@@ -2475,7 +2475,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoListItemView;->q()Z
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/e;->q()Z
 
     move-result v0
 
@@ -2496,13 +2496,13 @@
     .locals 1
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/libvideo/autoplay/AutoPlay;->a(F)V
+    invoke-interface {v0, p1}, Lcom/vk/libvideo/autoplay/a;->a(F)V
 
     :cond_0
     return-void
@@ -2512,13 +2512,13 @@
     .locals 1
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/libvideo/autoplay/AutoPlay;->a(I)V
+    invoke-interface {v0, p1}, Lcom/vk/libvideo/autoplay/a;->a(I)V
 
     :cond_0
     return-void
@@ -2540,9 +2540,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v3, Lcom/vk/libvideo/R8;->carousel_top_scrim_height:I
+    sget v3, Lcom/vk/libvideo/d;->carousel_top_scrim_height:I
 
     invoke-static {v1, v3}, Lcom/vk/core/util/ContextExtKt;->b(Landroid/content/Context;I)I
 
@@ -2565,15 +2565,15 @@
     .line 11
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->R:Landroidx/recyclerview/widget/RecyclerView;
 
-    sget-object v1, Lcom/vk/core/util/ViewUtils1;->INSTANCE:Lcom/vk/core/util/ViewUtils1;
+    sget-object v1, Lcom/vk/core/util/n1;->a:Lcom/vk/core/util/n1;
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3}, Lcom/vk/core/util/ViewUtils1;->a(Landroid/content/Context;)I
+    invoke-virtual {v1, v3}, Lcom/vk/core/util/n1;->a(Landroid/content/Context;)I
 
     move-result v1
 
@@ -2601,11 +2601,11 @@
     .locals 2
 
     .line 17
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/VideoSessionController;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->O:Lcom/vk/libvideo/b0/a;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/libvideo/b0/VideoSessionController;->a(ZZ)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/libvideo/b0/a;->a(ZZ)V
 
     return-void
 .end method
@@ -2620,7 +2620,7 @@
     .locals 1
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/e;
 
     move-result-object v0
 
@@ -2662,7 +2662,7 @@
     .locals 2
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
@@ -2670,20 +2670,20 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->b()Z
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->b()Z
 
     move-result v0
 
     if-eq v0, v1, :cond_2
 
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->q()Z
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->q()Z
 
     move-result v0
 
@@ -2705,7 +2705,7 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->Z:Lcom/vk/libvideo/dialogs/d;
 
     if-eqz v0, :cond_0
 
@@ -2724,7 +2724,7 @@
     .locals 2
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/e;
 
     move-result-object v0
 
@@ -2771,11 +2771,11 @@
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->stopScroll()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/VideoDiscoverController;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/n;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/VideoDiscoverController;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/n;->b(Z)V
 
     .line 4
     invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->G()Z
@@ -2783,7 +2783,7 @@
     move-result v0
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->p()Lcom/vk/libvideo/dialogs/AnimationDialogCallback;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->p()Lcom/vk/libvideo/dialogs/b;
 
     move-result-object v2
 
@@ -2800,10 +2800,10 @@
 
     :cond_1
     :goto_0
-    invoke-interface {v2, v1}, Lcom/vk/libvideo/dialogs/AnimationDialogCallback;->i(Z)V
+    invoke-interface {v2, v1}, Lcom/vk/libvideo/dialogs/b;->i(Z)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
@@ -2823,7 +2823,7 @@
     invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p1
 
@@ -2831,7 +2831,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/libvideo/R3;->video_feed_background:I
+    sget v1, Lcom/vk/libvideo/c;->video_feed_background:I
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -2840,7 +2840,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object p1
 
@@ -2859,9 +2859,9 @@
     move-result v1
 
     .line 12
-    new-instance v2, Lkotlin/t/Ranges1;
+    new-instance v2, Lkotlin/t/d;
 
-    invoke-direct {v2, v0, v1}, Lkotlin/t/Ranges1;-><init>(II)V
+    invoke-direct {v2, v0, v1}, Lkotlin/t/d;-><init>(II)V
 
     .line 13
     new-instance v0, Ljava/util/ArrayList;
@@ -2883,9 +2883,9 @@
 
     move-object v2, v1
 
-    check-cast v2, Lkotlin/collections/Iterators1;
+    check-cast v2, Lkotlin/collections/a0;
 
-    invoke-virtual {v2}, Lkotlin/collections/Iterators1;->a()I
+    invoke-virtual {v2}, Lkotlin/collections/a0;->a()I
 
     move-result v2
 
@@ -2923,31 +2923,31 @@
     check-cast v1, Landroid/view/View;
 
     .line 18
-    instance-of v2, v1, Lcom/vk/libvideo/ui/VideoListContainerView;
+    instance-of v2, v1, Lcom/vk/libvideo/ui/d;
 
     if-eqz v2, :cond_6
 
     .line 19
     move-object v2, v1
 
-    check-cast v2, Lcom/vk/libvideo/ui/VideoListContainerView;
+    check-cast v2, Lcom/vk/libvideo/ui/d;
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getItem()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getItem()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
     .line 20
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getHeaderView()Lcom/vk/libvideo/ui/VideoHeaderView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getHeaderView()Lcom/vk/libvideo/ui/c;
 
     move-result-object v3
 
@@ -2956,11 +2956,11 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 21
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getFooterView()Lcom/vk/libvideo/ui/VideoBottomPanelView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getFooterView()Lcom/vk/libvideo/ui/VideoBottomPanelView;
 
     move-result-object v3
 
@@ -2969,11 +2969,11 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 22
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v3
 
@@ -2986,11 +2986,11 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 23
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v3
 
@@ -3003,11 +3003,11 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 24
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v3
 
@@ -3020,7 +3020,7 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 25
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v1
 
@@ -3031,7 +3031,7 @@
     if-eqz v1, :cond_4
 
     .line 26
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v3
 
@@ -3041,11 +3041,11 @@
 
     .line 27
     :cond_4
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v3
 
@@ -3058,11 +3058,11 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 28
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v3
 
@@ -3075,11 +3075,11 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 29
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v3
 
@@ -3092,11 +3092,11 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 30
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v3
 
@@ -3109,11 +3109,11 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 31
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v3
 
@@ -3126,11 +3126,11 @@
     invoke-virtual {v1, v3, v4}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->b(Landroid/view/View;Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 32
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v2
 
@@ -3146,7 +3146,7 @@
 
     .line 33
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v2
 
@@ -3158,7 +3158,7 @@
 
     .line 34
     :cond_6
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v2
 
@@ -3176,7 +3176,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/libvideo/R3;->video_feed_background:I
+    sget v1, Lcom/vk/libvideo/c;->video_feed_background:I
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -3185,7 +3185,7 @@
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
 
     .line 36
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object p1
 
@@ -3201,7 +3201,7 @@
     .locals 2
 
     .line 37
-    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/e;
 
     move-result-object v0
 
@@ -3228,19 +3228,19 @@
     .locals 3
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->getDuration()I
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->getDuration()I
 
     move-result v1
 
     mul-int/lit16 v1, v1, 0x3e8
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->getPosition()I
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->getPosition()I
 
     move-result v2
 
@@ -3250,7 +3250,7 @@
 
     if-gt v1, v2, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->getPosition()I
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->getPosition()I
 
     move-result v0
 
@@ -3269,13 +3269,13 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/AnimationFeedDialog;->F()Z
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/c;->F()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v0
 
@@ -3285,7 +3285,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {p0}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v0
 
@@ -3294,11 +3294,11 @@
     invoke-virtual {v0, v1}, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->a(Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$InsetStrategy;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/VideoDiscoverController;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N:Lcom/vk/libvideo/n;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/VideoDiscoverController;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/n;->b(Z)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->U:Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;
@@ -3324,11 +3324,11 @@
     return-object v0
 .end method
 
-.method protected t()Lcom/vk/media/player/video/MatrixProvider;
+.method protected t()Lcom/vk/media/player/video/f;
     .locals 1
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/e;
 
     move-result-object v0
 
@@ -3351,7 +3351,7 @@
     .locals 1
 
     .line 2
-    sget v0, Lcom/vk/libvideo/R9;->video_feed:I
+    sget v0, Lcom/vk/libvideo/h;->video_feed:I
 
     return v0
 .end method
@@ -3364,12 +3364,12 @@
     move/from16 v1, p1
 
     .line 3
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v2
 
     .line 4
-    invoke-direct {v0, v2}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b(Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {v0, v2}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->b(Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/ui/e;
 
     move-result-object v3
 
@@ -3405,7 +3405,7 @@
     .line 8
     iget-object v6, v0, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->X:Lcom/vk/libvideo/bottomsheet/ModalDialogsController;
 
-    invoke-virtual {v6, v3}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController;->a(Lcom/vk/navigation/ModalDialogCallback;)V
+    invoke-virtual {v6, v3}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController;->a(Lcom/vk/navigation/k;)V
 
     if-eqz v2, :cond_1b
 
@@ -3447,7 +3447,7 @@
 
     const-string v10, "context"
 
-    invoke-static {v9, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v9}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -3460,7 +3460,7 @@
     if-eqz v12, :cond_1d
 
     .line 13
-    sget v9, Lcom/vk/libvideo/R;->video_action_link_view:I
+    sget v9, Lcom/vk/libvideo/g;->video_action_link_view:I
 
     if-ne v1, v9, :cond_2
 
@@ -3472,7 +3472,7 @@
 
     .line 14
     :cond_2
-    sget v9, Lcom/vk/libvideo/R;->more:I
+    sget v9, Lcom/vk/libvideo/g;->more:I
 
     if-ne v1, v9, :cond_3
 
@@ -3484,7 +3484,7 @@
 
     .line 15
     :cond_3
-    sget v9, Lcom/vk/libvideo/R;->profile:I
+    sget v9, Lcom/vk/libvideo/g;->profile:I
 
     if-ne v1, v9, :cond_4
 
@@ -3494,7 +3494,7 @@
 
     .line 16
     :cond_4
-    sget v9, Lcom/vk/libvideo/R;->subscribe:I
+    sget v9, Lcom/vk/libvideo/g;->subscribe:I
 
     if-ne v1, v9, :cond_6
 
@@ -3522,7 +3522,7 @@
 
     .line 21
     :cond_6
-    sget v9, Lcom/vk/libvideo/R;->add:I
+    sget v9, Lcom/vk/libvideo/g;->add:I
 
     if-ne v1, v9, :cond_8
 
@@ -3548,7 +3548,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v1}, Lcom/vk/libvideo/VideoFileController;->a(Landroid/content/Context;)V
 
@@ -3556,11 +3556,11 @@
 
     .line 25
     :cond_8
-    sget v9, Lcom/vk/libvideo/R;->remove:I
+    sget v9, Lcom/vk/libvideo/g;->remove:I
 
     if-ne v1, v9, :cond_a
 
-    instance-of v1, v3, Lcom/vk/libvideo/ui/VideoListItemView;
+    instance-of v1, v3, Lcom/vk/libvideo/ui/e;
 
     if-nez v1, :cond_9
 
@@ -3569,13 +3569,13 @@
     :cond_9
     if-eqz v3, :cond_1d
 
-    invoke-virtual {v3, v8}, Lcom/vk/libvideo/ui/VideoListItemView;->a(Lcom/vk/dto/common/VideoFile;)V
+    invoke-virtual {v3, v8}, Lcom/vk/libvideo/ui/e;->a(Lcom/vk/dto/common/VideoFile;)V
 
     goto/16 :goto_6
 
     .line 26
     :cond_a
-    sget v5, Lcom/vk/libvideo/R;->video_copy_link:I
+    sget v5, Lcom/vk/libvideo/g;->video_copy_link:I
 
     if-ne v1, v5, :cond_b
 
@@ -3583,7 +3583,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v1}, Lcom/vk/libvideo/VideoFileController;->b(Landroid/content/Context;)V
 
@@ -3591,7 +3591,7 @@
 
     .line 27
     :cond_b
-    sget v5, Lcom/vk/libvideo/R;->video_report:I
+    sget v5, Lcom/vk/libvideo/g;->video_report:I
 
     if-ne v1, v5, :cond_c
 
@@ -3603,7 +3603,7 @@
 
     .line 28
     :cond_c
-    sget v5, Lcom/vk/libvideo/R;->video_album_add:I
+    sget v5, Lcom/vk/libvideo/g;->video_album_add:I
 
     if-ne v1, v5, :cond_d
 
@@ -3615,7 +3615,7 @@
 
     .line 29
     :cond_d
-    sget v5, Lcom/vk/libvideo/R;->video_open_in_browser:I
+    sget v5, Lcom/vk/libvideo/g;->video_open_in_browser:I
 
     if-ne v1, v5, :cond_e
 
@@ -3625,7 +3625,7 @@
 
     .line 30
     :cond_e
-    sget v5, Lcom/vk/libvideo/R;->video_playback_speed:I
+    sget v5, Lcom/vk/libvideo/g;->video_playback_speed:I
 
     if-ne v1, v5, :cond_10
 
@@ -3649,7 +3649,7 @@
 
     .line 31
     :cond_10
-    sget v5, Lcom/vk/libvideo/R;->video_settings:I
+    sget v5, Lcom/vk/libvideo/g;->video_settings:I
 
     if-ne v1, v5, :cond_14
 
@@ -3745,7 +3745,7 @@
 
     .line 38
     :cond_14
-    sget v5, Lcom/vk/libvideo/R;->video_subtitles:I
+    sget v5, Lcom/vk/libvideo/g;->video_subtitles:I
 
     if-ne v1, v5, :cond_15
 
@@ -3768,7 +3768,7 @@
 
     .line 40
     :cond_15
-    sget v5, Lcom/vk/libvideo/R;->video_quality:I
+    sget v5, Lcom/vk/libvideo/g;->video_quality:I
 
     if-ne v1, v5, :cond_17
 
@@ -3811,7 +3811,7 @@
 
     .line 44
     :cond_17
-    sget v5, Lcom/vk/libvideo/R;->video_subtitles_off:I
+    sget v5, Lcom/vk/libvideo/g;->video_subtitles_off:I
 
     if-ne v1, v5, :cond_18
 
@@ -3823,7 +3823,7 @@
 
     .line 45
     :cond_18
-    sget v5, Lcom/vk/libvideo/R;->video_toggle_fave:I
+    sget v5, Lcom/vk/libvideo/g;->video_toggle_fave:I
 
     if-ne v1, v5, :cond_19
 
@@ -3866,7 +3866,7 @@
 
     .line 50
     :cond_1c
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v5
 
@@ -3875,11 +3875,11 @@
     return-void
 .end method
 
-.method protected w()Lcom/vk/media/player/video/MatrixProvider;
+.method protected w()Lcom/vk/media/player/video/f;
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-direct {p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->N()Lcom/vk/libvideo/ui/e;
 
     move-result-object v0
 

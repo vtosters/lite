@@ -3,7 +3,7 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/engine/events/OnImEngineInvalidateEvent;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/engine/events/y;",
         ">;"
     }
 .end annotation
@@ -56,21 +56,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/OnImEngineInvalidateEvent;)V
+.method public final a(Lcom/vk/im/engine/events/y;)V
     .locals 1
 
     .line 1
     sget-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->j:Lcom/vtosters/lite/im/ImEngineProvider;
 
-    invoke-static {p1}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vtosters/lite/im/ImEngineProvider;)Lcom/vk/im/engine/ImEngine;
+    invoke-static {p1}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vtosters/lite/im/ImEngineProvider;)Lcom/vk/im/engine/a;
 
     move-result-object p1
 
-    new-instance v0, Lcom/vk/im/engine/i/d/BotBtnDisableAllLoadersCmd;
+    new-instance v0, Lcom/vk/im/engine/i/d/a;
 
-    invoke-direct {v0}, Lcom/vk/im/engine/i/d/BotBtnDisableAllLoadersCmd;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/engine/i/d/a;-><init>()V
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
 
     return-void
 .end method
@@ -79,9 +79,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/OnImEngineInvalidateEvent;
+    check-cast p1, Lcom/vk/im/engine/events/y;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$c;->a(Lcom/vk/im/engine/events/OnImEngineInvalidateEvent;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$c;->a(Lcom/vk/im/engine/events/y;)V
 
     return-void
 .end method

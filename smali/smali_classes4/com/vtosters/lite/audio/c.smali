@@ -36,7 +36,7 @@
 .method public final run()V
     .locals 0
 
-    invoke-static {}, Lcom/vtosters/lite/audio/AudioStateListener;->l()V
+    invoke-static {}, Lcom/vtosters/lite/audio/d;->l()V
 
     return-void
 .end method

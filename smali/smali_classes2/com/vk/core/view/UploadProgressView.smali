@@ -436,7 +436,7 @@
     .locals 2
 
     .line 22
-    sget p1, Lb/h/z/R3;->UploadProgressView_android_maxWidth:I
+    sget p1, Lb/h/z/m;->UploadProgressView_android_maxWidth:I
 
     const v0, 0x7fffffff
 
@@ -447,7 +447,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/core/view/UploadProgressView;->setMaximumWidth(I)V
 
     .line 23
-    sget p1, Lb/h/z/R3;->UploadProgressView_android_maxHeight:I
+    sget p1, Lb/h/z/m;->UploadProgressView_android_maxHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -456,7 +456,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/core/view/UploadProgressView;->setMaximumHeight(I)V
 
     .line 24
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_progressMin:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_progressMin:I
 
     const/4 v0, 0x3
 
@@ -467,7 +467,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/core/view/UploadProgressView;->setProgressMin(I)V
 
     .line 25
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_progressMax:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_progressMax:I
 
     const/4 v0, 0x0
 
@@ -478,7 +478,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/core/view/UploadProgressView;->setProgressMax(I)V
 
     .line 26
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_progressValue:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_progressValue:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -487,7 +487,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/core/view/UploadProgressView;->setProgressValue(I)V
 
     .line 27
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_layerColor:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_layerColor:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -496,7 +496,7 @@
     if-eqz p1, :cond_0
 
     .line 28
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_layerColor:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_layerColor:I
 
     sget v1, Lcom/vk/core/view/UploadProgressView;->R:I
 
@@ -508,7 +508,7 @@
 
     .line 29
     :cond_0
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_lineColor:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_lineColor:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -517,7 +517,7 @@
     if-eqz p1, :cond_1
 
     .line 30
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_lineColor:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_lineColor:I
 
     sget v1, Lcom/vk/core/view/UploadProgressView;->S:I
 
@@ -529,7 +529,7 @@
 
     .line 31
     :cond_1
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_lineWidth:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_lineWidth:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -538,7 +538,7 @@
     if-eqz p1, :cond_2
 
     .line 32
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_lineWidth:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_lineWidth:I
 
     const/4 v1, 0x2
 
@@ -556,7 +556,7 @@
 
     .line 35
     :cond_2
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_lineDownScaleThreshold:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_lineDownScaleThreshold:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -565,7 +565,7 @@
     if-eqz p1, :cond_3
 
     .line 36
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_lineDownScaleThreshold:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_lineDownScaleThreshold:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -575,7 +575,7 @@
 
     .line 37
     :cond_3
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_cancelIcon:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_cancelIcon:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -584,7 +584,7 @@
     if-eqz p1, :cond_4
 
     .line 38
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_cancelIcon:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_cancelIcon:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -594,7 +594,7 @@
 
     .line 39
     :cond_4
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_cancelIconTintColor:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_cancelIconTintColor:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -603,7 +603,7 @@
     if-eqz p1, :cond_5
 
     .line 40
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_cancelIconTintColor:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_cancelIconTintColor:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -613,7 +613,7 @@
 
     .line 41
     :cond_5
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_cancelIconVisible:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_cancelIconVisible:I
 
     .line 42
     invoke-virtual {p0}, Lcom/vk/core/view/UploadProgressView;->getCancelIcon()Landroid/graphics/drawable/Drawable;
@@ -638,7 +638,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/core/view/UploadProgressView;->setCancelIconVisible(Z)V
 
     .line 44
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_progressMovement:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_progressMovement:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -647,7 +647,7 @@
     if-eqz p1, :cond_7
 
     .line 45
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_progressMovement:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_progressMovement:I
 
     iget-boolean v1, p0, Lcom/vk/core/view/UploadProgressView;->F:Z
 
@@ -659,7 +659,7 @@
 
     .line 46
     :cond_7
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_lineRounded:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_lineRounded:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -668,7 +668,7 @@
     if-eqz p1, :cond_8
 
     .line 47
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_lineRounded:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_lineRounded:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -678,7 +678,7 @@
 
     .line 48
     :cond_8
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_cancelIconSize:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_cancelIconSize:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -687,7 +687,7 @@
     if-eqz p1, :cond_9
 
     .line 49
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_cancelIconSize:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_cancelIconSize:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -699,7 +699,7 @@
 
     .line 50
     :cond_9
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_progressRadius:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_progressRadius:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -708,7 +708,7 @@
     if-eqz p1, :cond_a
 
     .line 51
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_progressRadius:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_progressRadius:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -720,7 +720,7 @@
 
     .line 52
     :cond_a
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_progressInverse:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_progressInverse:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -729,7 +729,7 @@
     if-eqz p1, :cond_b
 
     .line 53
-    sget p1, Lb/h/z/R3;->UploadProgressView_upload_progressInverse:I
+    sget p1, Lb/h/z/m;->UploadProgressView_upload_progressInverse:I
 
     iget-boolean v0, p0, Lcom/vk/core/view/UploadProgressView;->G:Z
 
@@ -884,7 +884,7 @@
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 19
-    sget-object v0, Lb/h/z/R3;->UploadProgressView:[I
+    sget-object v0, Lb/h/z/m;->UploadProgressView:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -1555,12 +1555,12 @@
     move-result v5
 
     .line 7
-    invoke-static {p1, v2, v4, v0}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
+    invoke-static {p1, v2, v4, v0}, Lcom/vk/core/utils/d;->a(IIII)I
 
     move-result v6
 
     .line 8
-    invoke-static {p2, v3, v5, v1}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
+    invoke-static {p2, v3, v5, v1}, Lcom/vk/core/utils/d;->a(IIII)I
 
     move-result v7
 
@@ -1614,14 +1614,14 @@
     const/4 v7, 0x0
 
     .line 14
-    invoke-static {p1, v2, v4, v7, v0}, Lcom/vk/core/utils/MeasureUtils;->a(IIIII)I
+    invoke-static {p1, v2, v4, v7, v0}, Lcom/vk/core/utils/d;->a(IIIII)I
 
     move-result p1
 
     add-int/2addr v1, v6
 
     .line 15
-    invoke-static {p2, v3, v5, v7, v1}, Lcom/vk/core/utils/MeasureUtils;->a(IIIII)I
+    invoke-static {p2, v3, v5, v7, v1}, Lcom/vk/core/utils/d;->a(IIIII)I
 
     move-result p2
 

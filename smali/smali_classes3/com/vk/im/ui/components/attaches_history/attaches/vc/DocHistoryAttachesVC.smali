@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final synthetic o:[Lkotlin/u/KProperty5;
+.field static final synthetic o:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final i:Lkotlin/Lazy2;
+.field private final i:Lkotlin/e;
 
 .field private final j:Ljava/lang/String;
 
@@ -16,7 +16,7 @@
 
 .field private final l:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
-.field private final m:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
+.field private final m:Lcom/vk/im/ui/views/adapter_delegate/a;
 
 .field private final n:Landroid/content/Context;
 
@@ -27,13 +27,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -41,20 +41,20 @@
 
     const-string v4, "getPopupVc()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->o:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->o:[Lkotlin/u/j;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/attaches_history/attaches/DocAttachesComponent;I)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/attaches_history/attaches/c;I)V
     .locals 0
 
     .line 1
@@ -67,16 +67,16 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC$popupVc$2;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->i:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->i:Lkotlin/e;
 
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->n:Landroid/content/Context;
 
-    sget p3, Lcom/vk/im/ui/R4;->vkim_history_attaches_empty_list_doc:I
+    sget p3, Lcom/vk/im/ui/m;->vkim_history_attaches_empty_list_doc:I
 
     invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -84,14 +84,14 @@
 
     const-string p3, "context.getString(R.stri\u2026_attaches_empty_list_doc)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->j:Ljava/lang/String;
 
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->n:Landroid/content/Context;
 
-    sget p3, Lcom/vk/im/ui/R4;->vkim_history_attaches_tab_doc:I
+    sget p3, Lcom/vk/im/ui/m;->vkim_history_attaches_tab_doc:I
 
     invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -99,7 +99,7 @@
 
     const-string p3, "context.getString(R.stri\u2026history_attaches_tab_doc)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->k:Ljava/lang/String;
 
@@ -113,21 +113,21 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->l:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     .line 6
-    new-instance p1, Lcom/vk/im/ui/components/attaches_history/attaches/k/DocAttachAdapter;
+    new-instance p1, Lcom/vk/im/ui/components/attaches_history/attaches/k/c;
 
     iget-object p3, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->n:Landroid/content/Context;
 
-    invoke-direct {p1, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/k/DocAttachAdapter;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/k/c;-><init>(Landroid/content/Context;)V
 
     .line 7
     new-instance p3, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC$$special$$inlined$apply$lambda$1;
 
-    invoke-direct {p3, p0, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;Lcom/vk/im/ui/components/attaches_history/attaches/DocAttachesComponent;)V
+    invoke-direct {p3, p0, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;Lcom/vk/im/ui/components/attaches_history/attaches/c;)V
 
-    invoke-virtual {p1, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/k/DocAttachAdapter;->a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachCallback;)V
+    invoke-virtual {p1, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/k/c;->a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/c;)V
 
     .line 8
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->m:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->m:Lcom/vk/im/ui/views/adapter_delegate/a;
 
     return-void
 .end method
@@ -155,15 +155,15 @@
 .method private final h()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->i:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->i:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->o:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->o:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -190,11 +190,11 @@
     return-void
 .end method
 
-.method protected b()Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
+.method protected b()Lcom/vk/im/ui/views/adapter_delegate/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->m:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/DocHistoryAttachesVC;->m:Lcom/vk/im/ui/views/adapter_delegate/a;
 
     return-object v0
 .end method

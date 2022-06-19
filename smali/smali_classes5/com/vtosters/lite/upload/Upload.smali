@@ -20,7 +20,7 @@
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
             "Ljava/lang/Integer;",
-            "Lcom/vtosters/lite/upload/UploadTask<",
+            "Lcom/vtosters/lite/upload/j<",
             "*>;>;"
         }
     .end annotation
@@ -96,17 +96,17 @@
     return v0
 .end method
 
-.method public static final a(Lcom/vtosters/lite/upload/UploadTask;Lkotlin/jvm/b/Functions2;)I
+.method public static final a(Lcom/vtosters/lite/upload/j;Lkotlin/jvm/b/b;)I
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/UploadTask<",
+            "Lcom/vtosters/lite/upload/j<",
             "*>;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vtosters/lite/upload/UploadNotification$b;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)I"
         }
     .end annotation
@@ -114,71 +114,71 @@
     if-eqz p1, :cond_0
 
     .line 1
-    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
+    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
 
-    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
+    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
 
     move-result-object v0
 
     .line 2
     new-instance v1, Lcom/vtosters/lite/upload/Upload$a;
 
-    invoke-direct {v1, p0}, Lcom/vtosters/lite/upload/Upload$a;-><init>(Lcom/vtosters/lite/upload/UploadTask;)V
+    invoke-direct {v1, p0}, Lcom/vtosters/lite/upload/Upload$a;-><init>(Lcom/vtosters/lite/upload/j;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
     .line 4
     new-instance v1, Lcom/vtosters/lite/upload/Upload$b;
 
-    invoke-direct {v1, p1}, Lcom/vtosters/lite/upload/Upload$b;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/upload/Upload$b;-><init>(Lkotlin/jvm/b/b;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
+    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
 
     move-result-object p1
 
     .line 6
-    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     .line 7
     :cond_0
-    sget-object p1, Lcom/vk/instantjobs/InstantJobManager;->h:Lcom/vk/instantjobs/InstantJobManager$a;
+    sget-object p1, Lcom/vk/instantjobs/b;->h:Lcom/vk/instantjobs/b$a;
 
-    invoke-virtual {p1}, Lcom/vk/instantjobs/InstantJobManager$a;->c()Lcom/vk/instantjobs/InstantJobManager;
+    invoke-virtual {p1}, Lcom/vk/instantjobs/b$a;->c()Lcom/vk/instantjobs/b;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Lcom/vk/instantjobs/InstantJobManager;->a(Lcom/vk/instantjobs/InstantJob;)V
+    invoke-virtual {p1, p0}, Lcom/vk/instantjobs/b;->a(Lcom/vk/instantjobs/InstantJob;)V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vtosters/lite/upload/UploadTask;->m()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static final a(Lcom/vtosters/lite/upload/UploadTask;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
+.method public static final a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/UploadTask<",
+            "Lcom/vtosters/lite/upload/j<",
             "*>;",
             "Lcom/vtosters/lite/upload/UploadNotification$a;",
             ")",
@@ -189,7 +189,7 @@
     .line 11
     sget-object v0, Lcom/vtosters/lite/upload/Upload;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/upload/UploadTask;->m()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result p0
 
@@ -210,9 +210,9 @@
     .locals 2
 
     .line 9
-    sget-object v0, Lcom/vk/instantjobs/InstantJobManager;->h:Lcom/vk/instantjobs/InstantJobManager$a;
+    sget-object v0, Lcom/vk/instantjobs/b;->h:Lcom/vk/instantjobs/b$a;
 
-    invoke-virtual {v0}, Lcom/vk/instantjobs/InstantJobManager$a;->c()Lcom/vk/instantjobs/InstantJobManager;
+    invoke-virtual {v0}, Lcom/vk/instantjobs/b$a;->c()Lcom/vk/instantjobs/b;
 
     move-result-object v0
 
@@ -220,17 +220,17 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/upload/Upload$cancel$1;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/InstantJobManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/b;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public static final b(Lcom/vtosters/lite/upload/UploadTask;)Lcom/vtosters/lite/upload/UploadNotification$a;
+.method public static final b(Lcom/vtosters/lite/upload/j;)Lcom/vtosters/lite/upload/UploadNotification$a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/UploadTask<",
+            "Lcom/vtosters/lite/upload/j<",
             "*>;)",
             "Lcom/vtosters/lite/upload/UploadNotification$a;"
         }
@@ -239,7 +239,7 @@
     .line 3
     sget-object v0, Lcom/vtosters/lite/upload/Upload;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/upload/UploadTask;->m()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result p0
 
@@ -287,16 +287,16 @@
 
     const-string v0, "Upload.failedTasks.remove(id)!!"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p0, Lcom/vtosters/lite/upload/UploadTask;
+    check-cast p0, Lcom/vtosters/lite/upload/j;
 
-    invoke-static {p0}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
+    invoke-static {p0}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p0, 0x0
 
@@ -307,27 +307,27 @@
     return-void
 .end method
 
-.method public static final c(Lcom/vtosters/lite/upload/UploadTask;)I
+.method public static final c(Lcom/vtosters/lite/upload/j;)I
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/UploadTask<",
+            "Lcom/vtosters/lite/upload/j<",
             "*>;)I"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/instantjobs/InstantJobManager;->h:Lcom/vk/instantjobs/InstantJobManager$a;
+    sget-object v0, Lcom/vk/instantjobs/b;->h:Lcom/vk/instantjobs/b$a;
 
-    invoke-virtual {v0}, Lcom/vk/instantjobs/InstantJobManager$a;->c()Lcom/vk/instantjobs/InstantJobManager;
+    invoke-virtual {v0}, Lcom/vk/instantjobs/b$a;->c()Lcom/vk/instantjobs/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/vk/instantjobs/InstantJobManager;->a(Lcom/vk/instantjobs/InstantJob;)V
+    invoke-virtual {v0, p0}, Lcom/vk/instantjobs/b;->a(Lcom/vk/instantjobs/InstantJob;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vtosters/lite/upload/UploadTask;->m()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result p0
 
@@ -336,12 +336,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/upload/UploadTask;)V
+.method public final a(Lcom/vtosters/lite/upload/j;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/UploadTask<",
+            "Lcom/vtosters/lite/upload/j<",
             "*>;)V"
         }
     .end annotation
@@ -353,12 +353,12 @@
     .line 12
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadTask;->t()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/j;->t()V
 
     .line 13
     sget-object v0, Lcom/vtosters/lite/upload/Upload;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadTask;->m()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result v1
 
@@ -392,7 +392,7 @@
     .line 16
     sget-object v1, Lcom/vtosters/lite/upload/Upload;->b:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadTask;->m()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result v2
 

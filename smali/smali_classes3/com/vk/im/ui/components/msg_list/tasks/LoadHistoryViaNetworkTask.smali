@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;
-.super Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;
+.super Lcom/vk/im/ui/utils/ui_queue_task/c;
 .source "LoadHistoryViaNetworkTask.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask<",
-        "Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;",
+        "Lcom/vk/im/ui/utils/ui_queue_task/c<",
+        "Lcom/vk/im/ui/components/msg_list/k/a;",
         ">;"
     }
 .end annotation
@@ -18,7 +18,7 @@
 
 .field private final f:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
-.field private final g:Lcom/vk/im/engine/models/Weight;
+.field private final g:Lcom/vk/im/engine/models/q;
 
 .field private final h:Lcom/vk/im/engine/models/Direction;
 
@@ -26,15 +26,15 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/ui/components/msg_list/MsgListComponent;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;Z)V
+.method public constructor <init>(Lcom/vk/im/ui/components/msg_list/MsgListComponent;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;Z)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/utils/ui_queue_task/c;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->f:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->g:Lcom/vk/im/engine/models/Weight;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->g:Lcom/vk/im/engine/models/q;
 
     iput-object p3, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->h:Lcom/vk/im/engine/models/Direction;
 
@@ -43,11 +43,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;Lcom/vk/im/ui/components/msg_list/k/a;)V
     .locals 0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;->d(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/utils/ui_queue_task/c;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;->c(Ljava/lang/Throwable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/utils/ui_queue_task/c;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -81,11 +81,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->f:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->x()Lcom/vk/im/ui/components/msg_list/MsgListComponentConfig;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->x()Lcom/vk/im/ui/components/msg_list/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_list/MsgListComponentConfig;->i()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_list/d;->i()I
 
     move-result v0
 
@@ -103,9 +103,9 @@
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vk/im/engine/models/History;->expired:Lcom/vk/im/engine/utils/collection/IntArraySet;
+    iget-object v0, v0, Lcom/vk/im/engine/models/d;->expired:Lcom/vk/im/engine/utils/collection/c;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/utils/collection/IntArraySet;->size()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/utils/collection/c;->size()I
 
     move-result v0
 
@@ -120,7 +120,7 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;)V
+.method protected a(Lcom/vk/im/ui/components/msg_list/k/a;)V
     .locals 10
 
     if-nez p1, :cond_0
@@ -144,7 +144,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->j()Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->j()Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
 
     move-result-object v1
 
@@ -157,25 +157,25 @@
     move-object v5, v1
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;->c()Lcom/vk/im/engine/models/messages/MsgHistory;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/a;->c()Lcom/vk/im/engine/models/messages/MsgHistory;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_list/StateHistory;->a(Lcom/vk/im/engine/models/messages/MsgHistory;)V
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;->d()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/a;->d()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_list/StateHistory;->a(Lcom/vk/im/engine/models/ProfilesInfo;)V
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/a;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_list/StateHistory;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_list/StateHistory;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;)V
 
     .line 9
     iget-boolean v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->i:Z
@@ -201,7 +201,7 @@
     const/4 v6, 0x0
 
     .line 13
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;->a()Landroidx/recyclerview/widget/DiffUtil$DiffResult;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/a;->a()Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
     move-result-object v7
 
@@ -212,7 +212,7 @@
     move-object v3, p0
 
     .line 14
-    invoke-static/range {v2 .. v9}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->a(Lcom/vk/im/ui/components/msg_list/MsgListComponent;Ljava/lang/Object;ZLcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;ZLandroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
+    invoke-static/range {v2 .. v9}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->a(Lcom/vk/im/ui/components/msg_list/MsgListComponent;Ljava/lang/Object;ZLcom/vk/im/ui/components/viewcontrollers/msg_list/f;ZLandroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -228,16 +228,16 @@
     .line 2
     sget-object v0, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->v0:Lcom/vk/im/ui/components/msg_list/MsgListComponent$c;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_list/MsgListComponent$c;->a()Lcom/vk/im/log/ImLogger;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_list/MsgListComponent$c;->a()Lcom/vk/im/log/a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->f:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
-    invoke-static {p0, p1}, Lcom/vk/im/engine/internal/causation/CauseProducer1;->a(Ljava/lang/Object;Ljava/lang/Throwable;)Lcom/vk/im/engine/internal/causation/WithCause;
+    invoke-static {p0, p1}, Lcom/vk/im/engine/internal/causation/c;->a(Ljava/lang/Object;Ljava/lang/Throwable;)Lcom/vk/im/engine/internal/causation/e;
 
     move-result-object v1
 
@@ -262,9 +262,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;
+    check-cast p1, Lcom/vk/im/ui/components/msg_list/k/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->a(Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->a(Lcom/vk/im/ui/components/msg_list/k/a;)V
 
     return-void
 .end method
@@ -325,7 +325,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;->d(Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/ui/utils/ui_queue_task/c;->d(Ljava/lang/Object;)V
 
     return-void
 
@@ -349,11 +349,11 @@
     .line 7
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->f:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->A()Lcom/vk/im/engine/ImEngine;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->A()Lcom/vk/im/engine/a;
 
     move-result-object v1
 
-    new-instance v13, Lcom/vk/im/ui/components/msg_list/tasks/LoadOrRefreshHistoryCmd;
+    new-instance v13, Lcom/vk/im/ui/components/msg_list/tasks/f;
 
     .line 8
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->f:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
@@ -363,7 +363,7 @@
     move-result v3
 
     .line 9
-    iget-object v4, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->g:Lcom/vk/im/engine/models/Weight;
+    iget-object v4, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->g:Lcom/vk/im/engine/models/q;
 
     .line 10
     iget-object v5, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->h:Lcom/vk/im/engine/models/Direction;
@@ -378,13 +378,13 @@
     move-result-object v7
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_list/StateHistory;->i()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_list/StateHistory;->i()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     move-result-object v2
 
@@ -393,9 +393,9 @@
     goto :goto_0
 
     :cond_2
-    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
-    invoke-direct {v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;-><init>()V
+    invoke-direct {v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;-><init>()V
 
     :goto_0
     move-object v8, v2
@@ -426,20 +426,20 @@
     move-object v2, v13
 
     .line 18
-    invoke-direct/range {v2 .. v12}, Lcom/vk/im/ui/components/msg_list/tasks/LoadOrRefreshHistoryCmd;-><init>(ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;ILcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;ZLcom/vk/im/engine/models/Source;ILjava/lang/Object;)V
+    invoke-direct/range {v2 .. v12}, Lcom/vk/im/ui/components/msg_list/tasks/f;-><init>(ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;ILcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;ZLcom/vk/im/engine/models/Source;ILjava/lang/Object;)V
 
-    invoke-virtual {v1, p0, v13}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v1, p0, v13}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
     .line 19
     sget-object v1, Lcom/vk/im/engine/concurrent/ImExecutors;->e:Lcom/vk/im/engine/concurrent/ImExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/concurrent/ImExecutors;->c()Lio/reactivex/Scheduler;
+    invoke-virtual {v1}, Lcom/vk/im/engine/concurrent/ImExecutors;->c()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->b(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
@@ -453,12 +453,12 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask$onExecute$2;-><init>(Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask1;
+    new-instance v3, Lcom/vk/im/ui/components/msg_list/tasks/c;
 
-    invoke-direct {v3, v2}, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v3, v2}, Lcom/vk/im/ui/components/msg_list/tasks/c;-><init>(Lkotlin/jvm/b/b;)V
 
     .line 22
-    invoke-virtual {v0, v1, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -483,7 +483,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->g:Lcom/vk/im/engine/models/Weight;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->g:Lcom/vk/im/engine/models/q;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

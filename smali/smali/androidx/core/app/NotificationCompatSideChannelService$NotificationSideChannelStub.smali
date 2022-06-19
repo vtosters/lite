@@ -1,5 +1,5 @@
 .class Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;
-.super Landroid/support/v4/app/INotificationSideChannel$a;
+.super Landroid/support/v4/app/a$a;
 .source "NotificationCompatSideChannelService.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroidx/core/app/NotificationCompatSideChannelService;
 
-    invoke-direct {p0}, Landroid/support/v4/app/INotificationSideChannel$a;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/app/a$a;-><init>()V
 
     return-void
 .end method

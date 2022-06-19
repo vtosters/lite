@@ -4,13 +4,13 @@
 
 
 # static fields
-.field static final synthetic c:[Lkotlin/u/KProperty5;
+.field static final synthetic c:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
-.field private final b:Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;
+.field private final b:Lcom/vk/audiomsg/player/fileloader/impl/b;
 
 
 # direct methods
@@ -19,13 +19,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -33,35 +33,35 @@
 
     const-string v4, "getMainThreadHandler()Landroid/os/Handler;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->c:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->c:[Lkotlin/u/j;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;)V
+.method public constructor <init>(Lcom/vk/audiomsg/player/fileloader/impl/b;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->b:Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->b:Lcom/vk/audiomsg/player/fileloader/impl/b;
 
     .line 2
     sget-object p1, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$mainThreadHandler$2;->a:Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$mainThreadHandler$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a:Lkotlin/e;
 
     return-void
 .end method
@@ -69,15 +69,15 @@
 .method private final a()Landroid/os/Handler;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->c:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->c:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -86,18 +86,18 @@
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;)Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;
+.method public static final synthetic a(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;)Lcom/vk/audiomsg/player/fileloader/impl/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->b:Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;
+    iget-object p0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->b:Lcom/vk/audiomsg/player/fileloader/impl/b;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/net/Uri;Ljava/io/File;Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;)V
+.method public final a(Landroid/net/Uri;Ljava/io/File;Lcom/vk/audiomsg/player/fileloader/impl/c;)V
     .locals 9
 
     .line 2
@@ -122,7 +122,7 @@
 
     move-object v6, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;-><init>(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;Landroid/net/Uri;Ljava/io/File;JLcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;-><init>(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;Landroid/net/Uri;Ljava/io/File;JLcom/vk/audiomsg/player/fileloader/impl/c;)V
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

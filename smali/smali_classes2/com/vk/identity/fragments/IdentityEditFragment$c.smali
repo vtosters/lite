@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/identity/fragments/IdentityEditFragment$c;->a:Lcom/vk/identity/fragments/IdentityEditFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/identity/fragments/IdentityEditContract;
+    check-cast p1, Lcom/vk/identity/fragments/a;
 
     if-eqz p1, :cond_1
 
@@ -78,7 +78,7 @@
     const/4 p2, 0x0
 
     :goto_0
-    invoke-interface {p1, p2}, Lcom/vk/identity/fragments/IdentityEditContract;->a(Lcom/vk/dto/identity/IdentityCard;)V
+    invoke-interface {p1, p2}, Lcom/vk/identity/fragments/a;->a(Lcom/vk/dto/identity/IdentityCard;)V
 
     :cond_1
     return-void

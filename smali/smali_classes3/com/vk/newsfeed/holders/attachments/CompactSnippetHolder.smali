@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder;
-.super Lcom/vk/newsfeed/holders/attachments/CommonHolder;
+.super Lcom/vk/newsfeed/holders/attachments/q;
 .source "CompactSnippetHolder.kt"
 
 # interfaces
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private final M:Lcom/vk/core/util/PriceFormatter;
+.field private final M:Lcom/vk/core/util/s0;
 
 .field private final N:Ljava/lang/StringBuilder;
 
@@ -17,14 +17,14 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/attachments/CommonHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/attachments/q;-><init>(Landroid/view/ViewGroup;)V
 
     .line 2
-    new-instance p1, Lcom/vk/core/util/PriceFormatter;
+    new-instance p1, Lcom/vk/core/util/s0;
 
-    invoke-direct {p1}, Lcom/vk/core/util/PriceFormatter;-><init>()V
+    invoke-direct {p1}, Lcom/vk/core/util/s0;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder;->M:Lcom/vk/core/util/PriceFormatter;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder;->M:Lcom/vk/core/util/s0;
 
     .line 3
     new-instance p1, Ljava/lang/StringBuilder;
@@ -45,7 +45,7 @@
     .locals 8
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/CommonHolder;->s0()Landroid/widget/TextView;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/q;->s0()Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
     if-lez v3, :cond_0
 
     .line 5
-    iget-object v3, p0, Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder;->M:Lcom/vk/core/util/PriceFormatter;
+    iget-object v3, p0, Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder;->M:Lcom/vk/core/util/s0;
 
     invoke-virtual {p1}, Lcom/vk/dto/attachments/Product;->y1()I
 
@@ -80,7 +80,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v4, v5, v6, v1}, Lcom/vk/core/util/PriceFormatter;->a(DLjava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-virtual {v3, v4, v5, v6, v1}, Lcom/vk/core/util/s0;->a(DLjava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 6
     :cond_0
@@ -163,7 +163,7 @@
     .locals 3
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->i0()Lcom/vtosters/lite/data/PostInteract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v0
 
@@ -187,13 +187,13 @@
 
     .line 13
     :cond_0
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     const-string v1, "parent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -213,7 +213,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, v1, v2, p1}, Lcom/vk/common/links/LinkUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-static {v0, v1, v2, p1}, Lcom/vk/common/links/e;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -233,7 +233,7 @@
     .locals 3
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -243,7 +243,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/CommonHolder;->t0()Landroid/widget/TextView;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/q;->t0()Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -269,7 +269,7 @@
     const v0, 0x7f08051f
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/CommonHolder;->s0()Landroid/widget/TextView;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/q;->s0()Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -285,7 +285,7 @@
 
     const-string v2, "Uri.parse(item.link.url)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
@@ -297,13 +297,13 @@
 
     .line 8
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/CommonHolder;->q0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/q;->q0()Landroid/widget/ImageView;
 
     move-result-object v0
 
     const v1, 0x7f04007f
 
-    invoke-static {v0, p1, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;II)V
+    invoke-static {v0, p1, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;II)V
 
     :cond_1
     return-void
@@ -334,9 +334,9 @@
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
-    instance-of v0, p1, Lcom/vk/dto/newsfeed/Likable;
+    instance-of v0, p1, Lcom/vk/dto/newsfeed/c;
 
     const/4 v1, 0x0
 
@@ -345,10 +345,10 @@
     move-object p1, v1
 
     :cond_1
-    check-cast p1, Lcom/vk/dto/newsfeed/Likable;
+    check-cast p1, Lcom/vk/dto/newsfeed/c;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 
@@ -368,13 +368,13 @@
 
     sget-object v3, Lcom/vk/articles/ArticleFragment;->l0:Lcom/vk/articles/ArticleFragment$a;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     const-string v2, "parent"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -382,7 +382,7 @@
 
     const-string v0, "parent.context"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Lcom/vk/dto/attachments/SnippetAttachment;->E1()Lcom/vk/dto/articles/Article;
 
@@ -390,13 +390,13 @@
 
     const-string v0, "snippet.toArticle()"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v7, 0x0
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->s1()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->s1()Ljava/lang/String;
 
     move-result-object v1
 
@@ -436,7 +436,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -446,13 +446,13 @@
     if-eqz v1, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     const-string v1, "parent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -472,7 +472,7 @@
 
     invoke-direct {v2, p0, p1}, Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder$onLongClick$1;-><init>(Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder;Lcom/vk/dto/common/Attachment;)V
 
-    invoke-static {v0, v1, v2}, Lcom/vk/common/links/LinkUtils;->a(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
+    invoke-static {v0, v1, v2}, Lcom/vk/common/links/e;->a(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/a;)V
 
     const/4 p1, 0x1
 

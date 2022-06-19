@@ -27,7 +27,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/MusicActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/MusicActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/MusicActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/MusicActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -92,7 +92,7 @@
 
     move-result-object p3
 
-    sget-object v0, Lcom/vk/music/m/R9;->MusicActionButton:[I
+    sget-object v0, Lcom/vk/music/m/j;->MusicActionButton:[I
 
     invoke-virtual {p3, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -100,7 +100,7 @@
 
     .line 5
     :try_start_0
-    sget p3, Lcom/vk/music/m/R9;->MusicActionButton_mab_textAppearance:I
+    sget p3, Lcom/vk/music/m/j;->MusicActionButton_mab_textAppearance:I
 
     const/4 v0, -0x1
 
@@ -142,9 +142,9 @@
     iput-object v0, p0, Lcom/vk/music/view/MusicActionButton;->b:Landroid/widget/TextView;
 
     .line 9
-    sget p3, Lcom/vk/music/m/R9;->MusicActionButton_mab_icon_tint:I
+    sget p3, Lcom/vk/music/m/j;->MusicActionButton_mab_icon_tint:I
 
-    sget v0, Lcom/vk/music/m/R1;->text_primary:I
+    sget v0, Lcom/vk/music/m/a;->text_primary:I
 
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -162,7 +162,7 @@
     iput-object p3, p0, Lcom/vk/music/view/MusicActionButton;->c:Landroid/content/res/ColorStateList;
 
     .line 11
-    sget p3, Lcom/vk/music/m/R9;->MusicActionButton_mab_icon:I
+    sget p3, Lcom/vk/music/m/j;->MusicActionButton_mab_icon:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -173,13 +173,13 @@
     const-string v0, "it"
 
     .line 12
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p3}, Lcom/vk/music/view/MusicActionButton;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 13
     :cond_2
-    sget p3, Lcom/vk/music/m/R9;->MusicActionButton_mab_text:I
+    sget p3, Lcom/vk/music/m/j;->MusicActionButton_mab_text:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -202,7 +202,7 @@
     :goto_1
     iget-object p2, p0, Lcom/vk/music/view/MusicActionButton;->b:Landroid/widget/TextView;
 
-    sget p3, Lcom/vk/music/m/R5;->music_action_btn_text:I
+    sget p3, Lcom/vk/music/m/e;->music_action_btn_text:I
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setId(I)V
 
@@ -228,7 +228,7 @@
 
     check-cast p2, Landroidx/appcompat/widget/AppCompatImageView;
 
-    sget p3, Lcom/vk/music/m/R5;->music_action_btn_icon:I
+    sget p3, Lcom/vk/music/m/e;->music_action_btn_icon:I
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setId(I)V
 
@@ -271,7 +271,7 @@
 
     move-result-object p2
 
-    sget p3, Lcom/vk/music/m/R;->music_action_button:I
+    sget p3, Lcom/vk/music/m/g;->music_action_button:I
 
     invoke-virtual {p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintSet;->clone(Landroid/content/Context;I)V
 
@@ -289,7 +289,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -334,7 +334,7 @@
 
     const-string v0, "it"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Lcom/vk/music/view/MusicActionButton;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
@@ -353,7 +353,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/music/view/MusicActionButton;->a:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v0}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -389,7 +389,7 @@
 
     const-string v0, "context.getString(textResId)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0, p1}, Lcom/vk/music/view/MusicActionButton;->setText(Ljava/lang/String;)V

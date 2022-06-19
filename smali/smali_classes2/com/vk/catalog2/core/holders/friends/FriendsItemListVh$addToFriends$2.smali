@@ -3,7 +3,7 @@
 .source "FriendsItemListVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/Throwable;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -73,14 +73,14 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 2
 
-    const-class v0, Lcom/vk/api/base/ThrowableExt;
+    const-class v0, Lcom/vk/api/base/j;
 
     const-string v1, "libcatalog2_release"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh$addToFriends$2;->a(Ljava/lang/Throwable;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

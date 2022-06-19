@@ -3,12 +3,12 @@
 .source "MusicPlayerAuthorizationManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->b()Lio/reactivex/Single;
+    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->b()Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;",
+        "Lc/a/z/g<",
+        "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;)V
+.method public final a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;)V
     .locals 2
 
     .line 1
@@ -54,9 +54,9 @@
 
     const-string v1, "sensitiveData"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;)V
+    invoke-static {v0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;)V
 
     return-void
 .end method
@@ -65,9 +65,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;
+    check-cast p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$f;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$f;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;)V
 
     return-void
 .end method

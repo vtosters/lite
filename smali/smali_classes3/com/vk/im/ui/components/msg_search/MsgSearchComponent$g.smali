@@ -3,12 +3,12 @@
 .source "MsgSearchComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/SearchMode;ILkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/SearchMode;ILkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/im/ui/components/msg_search/MsgSearchState;",
         ">;"
     }
@@ -32,18 +32,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-.field final synthetic b:Lkotlin/jvm/b/Functions;
+.field final synthetic b:Lkotlin/jvm/b/a;
 
 .field final synthetic c:Lcom/vk/im/engine/models/Source;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;Lkotlin/jvm/b/Functions;Lcom/vk/im/engine/models/Source;)V
+.method constructor <init>(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;Lkotlin/jvm/b/a;Lcom/vk/im/engine/models/Source;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$g;->a:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$g;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$g;->b:Lkotlin/jvm/b/a;
 
     iput-object p3, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$g;->c:Lcom/vk/im/engine/models/Source;
 
@@ -58,15 +58,15 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$g;->b:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$g;->b:Lkotlin/jvm/b/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/m;
 
     .line 2
     :cond_0
@@ -129,7 +129,7 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchState;->a(Lcom/vk/im/ui/components/msg_search/MsgSearchState;)V
 

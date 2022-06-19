@@ -1,5 +1,5 @@
 .class final Lcom/vtosters/lite/audio/player/PlayerAdapter$b;
-.super Lcom/vk/audioipc/core/q/BaseAudioPlayerListener;
+.super Lcom/vk/audioipc/core/q/a;
 .source "PlayerAdapter.kt"
 
 
@@ -30,14 +30,14 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$b;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-direct {p0}, Lcom/vk/audioipc/core/q/BaseAudioPlayerListener;-><init>()V
+    invoke-direct {p0}, Lcom/vk/audioipc/core/q/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/audioipc/core/AudioPlayer;F)V
+.method public a(Lcom/vk/audioipc/core/d;F)V
     .locals 0
 
     .line 1
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audioipc/core/AudioPlayer;ILcom/vk/dto/music/MusicTrack;F)V
+.method public a(Lcom/vk/audioipc/core/d;ILcom/vk/dto/music/MusicTrack;F)V
     .locals 0
 
     .line 15
@@ -67,7 +67,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audioipc/core/AudioPlayer;ILcom/vk/dto/music/MusicTrack;FF)V
+.method public a(Lcom/vk/audioipc/core/d;ILcom/vk/dto/music/MusicTrack;FF)V
     .locals 0
 
     .line 16
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audioipc/core/AudioPlayer;ILcom/vk/dto/music/MusicTrack;Z)V
+.method public a(Lcom/vk/audioipc/core/d;ILcom/vk/dto/music/MusicTrack;Z)V
     .locals 0
 
     .line 7
@@ -101,7 +101,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/audioipc/core/PlayerState;->u1()Lcom/vk/music/player/AdvertisementInfo;
+    invoke-virtual {p1}, Lcom/vk/audioipc/core/PlayerState;->u1()Lcom/vk/music/player/a;
 
     move-result-object p1
 
@@ -160,7 +160,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audioipc/core/AudioPlayer;Lcom/vk/music/player/LoopMode;)V
+.method public a(Lcom/vk/audioipc/core/d;Lcom/vk/music/player/LoopMode;)V
     .locals 0
 
     .line 4
@@ -175,7 +175,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audioipc/core/AudioPlayer;Lcom/vk/music/player/AdvertisementInfo;)V
+.method public a(Lcom/vk/audioipc/core/d;Lcom/vk/music/player/a;)V
     .locals 1
 
     .line 5
@@ -196,12 +196,12 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/AdvertisementInfo;)V
+    invoke-virtual {p1, p2}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/a;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/audioipc/core/AudioPlayer;Ljava/lang/Throwable;)V
+.method public a(Lcom/vk/audioipc/core/d;Ljava/lang/Throwable;)V
     .locals 0
 
     .line 2
@@ -214,12 +214,12 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audioipc/core/AudioPlayer;Ljava/util/List;)V
+.method public a(Lcom/vk/audioipc/core/d;Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/audioipc/core/AudioPlayer;",
+            "Lcom/vk/audioipc/core/d;",
             "Ljava/util/List<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;)V"
@@ -238,7 +238,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audioipc/core/AudioPlayer;Z)V
+.method public a(Lcom/vk/audioipc/core/d;Z)V
     .locals 0
 
     .line 3
@@ -253,7 +253,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/audioipc/core/AudioPlayer;F)V
+.method public b(Lcom/vk/audioipc/core/d;F)V
     .locals 0
 
     .line 1
@@ -268,7 +268,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/audioipc/core/AudioPlayer;ILcom/vk/dto/music/MusicTrack;)V
+.method public b(Lcom/vk/audioipc/core/d;ILcom/vk/dto/music/MusicTrack;)V
     .locals 0
 
     .line 4
@@ -303,12 +303,12 @@
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/AdvertisementInfo;)V
+    invoke-virtual {p1, p2}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/a;)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/audioipc/core/AudioPlayer;Lcom/vk/music/player/AdvertisementInfo;)V
+.method public b(Lcom/vk/audioipc/core/d;Lcom/vk/music/player/a;)V
     .locals 1
 
     .line 2
@@ -329,12 +329,12 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/AdvertisementInfo;)V
+    invoke-virtual {p1, p2}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/a;)V
 
     return-void
 .end method
 
-.method public c(Lcom/vk/audioipc/core/AudioPlayer;ILcom/vk/dto/music/MusicTrack;)V
+.method public c(Lcom/vk/audioipc/core/d;ILcom/vk/dto/music/MusicTrack;)V
     .locals 0
 
     .line 1
@@ -357,7 +357,7 @@
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/AdvertisementInfo;)V
+    invoke-virtual {p1, p2}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/music/player/a;)V
 
     return-void
 .end method

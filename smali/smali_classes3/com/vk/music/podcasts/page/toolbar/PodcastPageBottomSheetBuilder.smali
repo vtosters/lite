@@ -28,18 +28,18 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/Functions2;)Lcom/vk/music/bottomsheets/AutoDismissListener;
+.method private final a(Lkotlin/jvm/b/b;)Lcom/vk/music/bottomsheets/AutoDismissListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)",
             "Lcom/vk/music/bottomsheets/AutoDismissListener<",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -47,12 +47,12 @@
     .line 19
     new-instance v0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$b;
 
-    invoke-direct {v0, p1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$b;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$b;-><init>(Lkotlin/jvm/b/b;)V
 
     .line 20
     new-instance p1, Lcom/vk/music/bottomsheets/AutoDismissListener;
 
-    invoke-direct {p1, v0}, Lcom/vk/music/bottomsheets/AutoDismissListener;-><init>(Lcom/vk/music/bottomsheets/a/MusicAction$a;)V
+    invoke-direct {p1, v0}, Lcom/vk/music/bottomsheets/AutoDismissListener;-><init>(Lcom/vk/music/bottomsheets/a/a$a;)V
 
     return-object p1
 .end method
@@ -63,7 +63,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/music/bottomsheets/a/MusicAction;",
+            "Lcom/vk/music/bottomsheets/a/a;",
             ">;"
         }
     .end annotation
@@ -81,7 +81,7 @@
     if-nez v2, :cond_0
 
     .line 16
-    new-instance v2, Lcom/vk/music/bottomsheets/a/MusicAction;
+    new-instance v2, Lcom/vk/music/bottomsheets/a/a;
 
     const v4, 0x7f0a0871
 
@@ -101,13 +101,13 @@
 
     move-object v3, v2
 
-    invoke-direct/range {v3 .. v11}, Lcom/vk/music/bottomsheets/a/MusicAction;-><init>(IIIIIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v11}, Lcom/vk/music/bottomsheets/a/a;-><init>(IIIIIZILkotlin/jvm/internal/i;)V
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 17
     :cond_0
-    new-instance v2, Lcom/vk/music/bottomsheets/a/MusicAction;
+    new-instance v2, Lcom/vk/music/bottomsheets/a/a;
 
     const v13, 0x7f0a0878
 
@@ -127,12 +127,12 @@
 
     move-object v12, v2
 
-    invoke-direct/range {v12 .. v20}, Lcom/vk/music/bottomsheets/a/MusicAction;-><init>(IIIIIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v12 .. v20}, Lcom/vk/music/bottomsheets/a/a;-><init>(IIIIIZILkotlin/jvm/internal/i;)V
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 18
-    new-instance v2, Lcom/vk/music/bottomsheets/a/MusicAction;
+    new-instance v2, Lcom/vk/music/bottomsheets/a/a;
 
     const v4, 0x7f0a086e
 
@@ -152,7 +152,7 @@
 
     move-object v3, v2
 
-    invoke-direct/range {v3 .. v11}, Lcom/vk/music/bottomsheets/a/MusicAction;-><init>(IIIIIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v11}, Lcom/vk/music/bottomsheets/a/a;-><init>(IIIIIZILkotlin/jvm/internal/i;)V
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -161,30 +161,30 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.method public final a(Landroid/content/Context;Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)",
-            "Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;"
+            "Lcom/vk/core/dialogs/bottomsheet/e;"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder;->a(Lkotlin/jvm/b/Functions2;)Lcom/vk/music/bottomsheets/AutoDismissListener;
+    invoke-direct {p0, p2}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder;->a(Lkotlin/jvm/b/b;)Lcom/vk/music/bottomsheets/AutoDismissListener;
 
     move-result-object p2
 
     .line 2
-    new-instance v0, Lcom/vk/lists/MergedAdapter;
+    new-instance v0, Lcom/vk/lists/p;
 
-    invoke-direct {v0}, Lcom/vk/lists/MergedAdapter;-><init>()V
+    invoke-direct {v0}, Lcom/vk/lists/p;-><init>()V
 
     .line 3
     iget-object v1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder;->a:Lcom/vk/dto/podcast/PodcastInfo;
@@ -196,7 +196,7 @@
 
     invoke-direct {v2, v1, p2}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$a;-><init>(Lcom/vk/dto/podcast/PodcastInfo;Lcom/vk/music/bottomsheets/AutoDismissListener;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v2}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 5
     :cond_0
@@ -205,34 +205,34 @@
     move-result-object v1
 
     .line 6
-    new-instance v2, Lcom/vk/music/bottomsheets/a/MusicBottomSheetActionAdapter;
+    new-instance v2, Lcom/vk/music/bottomsheets/a/b;
 
-    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
 
-    invoke-direct {v2, v3, p2}, Lcom/vk/music/bottomsheets/a/MusicBottomSheetActionAdapter;-><init>(Ljava/lang/Object;Lcom/vk/music/bottomsheets/a/MusicAction$a;)V
+    invoke-direct {v2, v3, p2}, Lcom/vk/music/bottomsheets/a/b;-><init>(Ljava/lang/Object;Lcom/vk/music/bottomsheets/a/a$a;)V
 
     .line 7
-    invoke-virtual {v2, v1}, Lcom/vk/music/ui/common/MusicAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v2, v1}, Lcom/vk/music/ui/common/b;->setItems(Ljava/util/List;)V
 
     .line 8
-    invoke-virtual {v0, v2}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v2}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 9
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
-    invoke-direct {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x1
 
     const/4 v2, 0x0
 
     .line 10
-    invoke-virtual {v1, v0, p1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZ)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v1, v0, p1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZ)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 11
     sget-object p1, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$dialog$1;->a:Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$dialog$1;
 
-    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 12
     const-class p1, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder;
@@ -241,16 +241,16 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object p1
 
     .line 13
     new-instance v0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$1;
 
-    invoke-direct {v0, p1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-direct {v0, p1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/e;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/music/bottomsheets/AutoDismissListener;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p2, v0}, Lcom/vk/music/bottomsheets/AutoDismissListener;->a(Lkotlin/jvm/b/a;)V
 
     return-object p1
 .end method

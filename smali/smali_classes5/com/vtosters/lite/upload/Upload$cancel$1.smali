@@ -3,7 +3,7 @@
 .source "Upload.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/instantjobs/InstantJob;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -50,15 +50,15 @@
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vtosters/lite/upload/UploadTask;
+    instance-of v0, p1, Lcom/vtosters/lite/upload/j;
 
     if-eqz v0, :cond_0
 
     iget v0, p0, Lcom/vtosters/lite/upload/Upload$cancel$1;->$id:I
 
-    check-cast p1, Lcom/vtosters/lite/upload/UploadTask;
+    check-cast p1, Lcom/vtosters/lite/upload/j;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadTask;->m()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result p1
 

@@ -3,7 +3,7 @@
 .source "ContactsListComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Predicate;
+.implements Lc/a/z/l;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Predicate<",
-        "Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;",
+        "Lc/a/z/l<",
+        "Lcom/vk/im/ui/components/contacts/vc/contact/b;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;)Z
+.method public final a(Lcom/vk/im/ui/components/contacts/vc/contact/b;)Z
     .locals 1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;->b()Lcom/vk/im/engine/models/Profile;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/b;->b()Lcom/vk/im/engine/models/j;
 
     move-result-object p1
 
@@ -88,9 +88,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;
+    check-cast p1, Lcom/vk/im/ui/components/contacts/vc/contact/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$h;->a(Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$h;->a(Lcom/vk/im/ui/components/contacts/vc/contact/b;)Z
 
     move-result p1
 

@@ -3,7 +3,7 @@
 .source "MsgPartStoryHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Landroid/graphics/drawable/Drawable;",
         ">;"
     }
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/R12;->vkim_msg_part_transparent_border_bg:I
+    sget v1, Lcom/vk/im/ui/f;->vkim_msg_part_transparent_border_bg:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -70,7 +70,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 

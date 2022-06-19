@@ -3,22 +3,22 @@
 .source "TextPostingView.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/PostingContracts12;
+.implements Lcom/vk/newsfeed/posting/q;
 .implements Landroid/view/View$OnClickListener;
 
 
 # static fields
-.field static final synthetic f:[Lkotlin/u/KProperty5;
+.field static final synthetic f:[Lkotlin/u/j;
 
 
 # instance fields
-.field private a:Lcom/vk/newsfeed/posting/PostingContracts3;
+.field private a:Lcom/vk/newsfeed/posting/p;
 
 .field private b:Lcom/vk/common/view/SelectionChangeEditText;
 
 .field private c:Landroid/content/ClipboardManager;
 
-.field private final d:Lkotlin/Lazy2;
+.field private final d:Lkotlin/e;
 
 .field private final e:Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView$c;
 
@@ -29,13 +29,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -43,15 +43,15 @@
 
     const-string v4, "getPostTextGestureDetector()Landroid/view/GestureDetector;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->f:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->f:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -67,11 +67,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView$postTextGestureDetector$2;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->d:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->d:Lkotlin/e;
 
     .line 3
     new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView$c;
@@ -86,15 +86,15 @@
 .method private final a()Landroid/view/GestureDetector;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->d:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->d:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->f:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->f:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -131,7 +131,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->b:Lcom/vk/common/view/SelectionChangeEditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
 
     return-void
 .end method
@@ -217,7 +217,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->b:Lcom/vk/common/view/SelectionChangeEditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
 
     return-void
 .end method
@@ -285,7 +285,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/p;
 
     move-result-object v1
 
@@ -361,29 +361,29 @@
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/p;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts6;->onStart()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/c;->onStart()V
 
     :cond_2
     return-void
 
     .line 13
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/PostingContracts3;)V
+.method public a(Lcom/vk/newsfeed/posting/p;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->a:Lcom/vk/newsfeed/posting/PostingContracts3;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->a:Lcom/vk/newsfeed/posting/p;
 
     return-void
 .end method
@@ -435,11 +435,11 @@
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/newsfeed/posting/PostingContracts3;
+.method public getPresenter()Lcom/vk/newsfeed/posting/p;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->a:Lcom/vk/newsfeed/posting/PostingContracts3;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->a:Lcom/vk/newsfeed/posting/p;
 
     return-object v0
 .end method
@@ -559,13 +559,13 @@
 
     if-ne p1, v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/p;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts3;->z()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/p;->z()V
 
     :cond_2
     :goto_1
@@ -576,13 +576,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->getPresenter()Lcom/vk/newsfeed/posting/p;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts6;->onStop()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/c;->onStop()V
 
     :cond_0
     const/4 v0, 0x0
@@ -649,7 +649,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 

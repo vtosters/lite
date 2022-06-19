@@ -3,12 +3,12 @@
 .source "PostingAttachLocationFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->b(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->b(ILcom/vk/lists/t;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -37,18 +37,18 @@
 
 .field final synthetic b:I
 
-.field final synthetic c:Lcom/vk/lists/PaginationHelper;
+.field final synthetic c:Lcom/vk/lists/t;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;ILcom/vk/lists/PaginationHelper;)V
+.method constructor <init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;ILcom/vk/lists/t;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;->a:Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;
 
     iput p2, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;->b:I
 
-    iput-object p3, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;->c:Lcom/vk/lists/PaginationHelper;
+    iput-object p3, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;->c:Lcom/vk/lists/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,14 +57,14 @@
 
 
 # virtual methods
-.method public final a(Landroid/location/Location;)Lio/reactivex/Observable;
+.method public final a(Landroid/location/Location;)Lc/a/m;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/location/Location;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;>;"
@@ -93,11 +93,11 @@
     .line 4
     iget v6, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;->b:I
 
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;->c:Lcom/vk/lists/PaginationHelper;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;->c:Lcom/vk/lists/t;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->c()I
+    invoke-virtual {p1}, Lcom/vk/lists/t;->c()I
 
     move-result p1
 
@@ -120,14 +120,14 @@
     move-object v0, v11
 
     .line 5
-    invoke-direct/range {v0 .. v10}, Lcom/vk/api/places/PlacesSearchGeo;-><init>(DDLjava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/api/places/PlacesSearchGeo;-><init>(DDLjava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/i;)V
 
     const/4 p1, 0x1
 
     const/4 v0, 0x0
 
     .line 6
-    invoke-static {v11, v0, p1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v11, v0, p1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -140,7 +140,7 @@
     .line 1
     check-cast p1, Landroid/location/Location;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;->a(Landroid/location/Location;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;->a(Landroid/location/Location;)Lc/a/m;
 
     move-result-object p1
 

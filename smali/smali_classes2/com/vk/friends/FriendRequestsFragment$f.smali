@@ -3,12 +3,12 @@
 .source "FriendRequestsFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/FriendRequestsFragment;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+    value = Lcom/vk/friends/FriendRequestsFragment;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,17 +57,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;)Lcom/vk/friends/FriendRequestsFragment$c;
+.method public final a(Lcom/vk/api/friends/h$b;)Lcom/vk/friends/FriendRequestsFragment$c;
     .locals 8
 
     .line 1
     new-instance v7, Lcom/vk/friends/FriendRequestsFragment$c;
 
-    invoke-virtual {p1}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;->a()Lcom/vk/dto/common/data/VKFromList;
+    invoke-virtual {p1}, Lcom/vk/api/friends/h$b;->a()Lcom/vk/dto/common/data/VKFromList;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/friends/h$b;->b()Ljava/lang/String;
 
     move-result-object v4
 
@@ -81,7 +81,7 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/friends/FriendRequestsFragment$c;-><init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/friends/FriendRequestsFragment$c;-><init>(Lcom/vk/api/friends/l;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     return-object v7
 .end method
@@ -90,9 +90,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;
+    check-cast p1, Lcom/vk/api/friends/h$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/friends/FriendRequestsFragment$f;->a(Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;)Lcom/vk/friends/FriendRequestsFragment$c;
+    invoke-virtual {p0, p1}, Lcom/vk/friends/FriendRequestsFragment$f;->a(Lcom/vk/api/friends/h$b;)Lcom/vk/friends/FriendRequestsFragment$c;
 
     move-result-object p1
 

@@ -44,13 +44,13 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/f;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->g()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->g()V
 
     :cond_0
     return-void

@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController;->e(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
+    value = Lcom/vk/masks/MasksController;->e(Lcom/vk/dto/masks/Mask;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "Ljava/lang/Boolean;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "Ljava/util/List<",
         "Lcom/vk/dto/masks/MasksCatalogItem;",
         ">;>;>;"
@@ -41,14 +41,14 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Boolean;)Lio/reactivex/ObservableSource;
+.method public a(Ljava/lang/Boolean;)Lc/a/p;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Boolean;",
             ")",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "Ljava/util/List<",
             "Lcom/vk/dto/masks/MasksCatalogItem;",
             ">;>;"
@@ -71,11 +71,11 @@
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object p1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
+    sget-object p1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
 
     const-string v0, "masks_catalog"
 
-    invoke-virtual {p1, v0}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
 
     move-result-object p1
 
@@ -87,7 +87,7 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -105,7 +105,7 @@
     .line 1
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$o;->a(Ljava/lang/Boolean;)Lio/reactivex/ObservableSource;
+    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$o;->a(Ljava/lang/Boolean;)Lc/a/p;
 
     move-result-object p1
 

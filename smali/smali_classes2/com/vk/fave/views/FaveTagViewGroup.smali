@@ -33,13 +33,13 @@
 
 .field private final H:Landroid/view/View$OnClickListener;
 
-.field private a:Lkotlin/jvm/b/Functions2;
+.field private a:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/fave/entities/FaveTag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -76,7 +76,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/views/FaveTagViewGroup$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/fave/views/FaveTagViewGroup$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/16 v0, 0xf
 
@@ -105,7 +105,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/fave/views/FaveTagViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/fave/views/FaveTagViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -125,7 +125,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/fave/views/FaveTagViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/fave/views/FaveTagViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -151,7 +151,7 @@
     iput-object p3, p0, Lcom/vk/fave/views/FaveTagViewGroup;->H:Landroid/view/View$OnClickListener;
 
     .line 5
-    sget-object p3, Lcom/vtosters/lite/R;->FaveTagViewGroup:[I
+    sget-object p3, Lcom/vtosters/lite/a0;->FaveTagViewGroup:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -170,7 +170,7 @@
     iput-boolean p2, p0, Lcom/vk/fave/views/FaveTagViewGroup;->c:Z
 
     .line 7
-    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const/16 v0, 0x8
 
@@ -189,7 +189,7 @@
     iput p2, p0, Lcom/vk/fave/views/FaveTagViewGroup;->d:I
 
     .line 10
-    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const/4 v0, 0x1
 
@@ -257,7 +257,7 @@
 
     const-string v3, "getContext().getString(\n\u2026ly_regular)\n            )"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v2, p0, Lcom/vk/fave/views/FaveTagViewGroup;->B:Ljava/lang/String;
 
@@ -343,7 +343,7 @@
     throw p2
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -408,7 +408,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p0, v1, p1}, Lcom/vk/fave/views/FaveTagViewGroup$d;-><init>(Lcom/vk/fave/views/FaveTagViewGroup;Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;)V
 
@@ -528,27 +528,27 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1, p1}, Lcom/vk/fave/views/FaveTagViewGroup$b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-object v0
 .end method
 
-.method public final getClickByTag()Lkotlin/jvm/b/Functions2;
+.method public final getClickByTag()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/fave/entities/FaveTag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagViewGroup;->a:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagViewGroup;->a:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
@@ -599,7 +599,7 @@
     const-string v4, "child"
 
     .line 6
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -808,7 +808,7 @@
     const-string v14, "child"
 
     .line 9
-    invoke-static {v13, v14}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v13, v14}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v13}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -954,7 +954,7 @@
 
     const-string v6, "getChildAt(j)"
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v6, 0x8
 
@@ -1212,21 +1212,21 @@
     return-void
 .end method
 
-.method public final setClickByTag(Lkotlin/jvm/b/Functions2;)V
+.method public final setClickByTag(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/fave/entities/FaveTag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/fave/views/FaveTagViewGroup;->a:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/fave/views/FaveTagViewGroup;->a:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -1278,7 +1278,7 @@
 
     const-string v5, "context"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v3, p0, v4}, Lcom/vk/fave/views/FaveTagViewGroup$c;-><init>(Lcom/vk/fave/views/FaveTagViewGroup;Landroid/content/Context;)V
 

@@ -1,10 +1,10 @@
 .class public final Lcom/vk/identity/fragments/IdentityEditFragment;
-.super Lcom/vk/core/fragments/BaseMvpFragment;
+.super Lcom/vk/core/fragments/c;
 .source "IdentityEditFragment.kt"
 
 # interfaces
-.implements Lcom/vk/identity/fragments/IdentityEditContract1;
-.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/identity/fragments/c;
+.implements Lcom/vk/navigation/b0/k;
 .implements Lcom/vk/identity/adapters/IdentityEditAdapter$c;
 
 
@@ -18,11 +18,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/BaseMvpFragment<",
-        "Lcom/vk/identity/fragments/IdentityEditContract;",
+        "Lcom/vk/core/fragments/c<",
+        "Lcom/vk/identity/fragments/a;",
         ">;",
-        "Lcom/vk/identity/fragments/IdentityEditContract1;",
-        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
+        "Lcom/vk/identity/fragments/c;",
+        "Lcom/vk/navigation/b0/k;",
         "Lcom/vk/identity/adapters/IdentityEditAdapter$c;"
     }
 .end annotation
@@ -74,7 +74,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/identity/fragments/IdentityEditFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/identity/fragments/IdentityEditFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -83,7 +83,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/identity/adapters/IdentityEditAdapter;
@@ -99,7 +99,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/identity/fragments/IdentityEditFragment$countryAdapter$1;-><init>(Lcom/vk/identity/fragments/IdentityEditFragment;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/identity/adapters/IdentityCountryAdapter;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, v1}, Lcom/vk/identity/adapters/IdentityCountryAdapter;-><init>(Lkotlin/jvm/b/b;)V
 
     iput-object v0, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->L:Lcom/vk/identity/adapters/IdentityCountryAdapter;
 
@@ -118,11 +118,11 @@
     iput-object v0, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->T:Ljava/lang/String;
 
     .line 8
-    new-instance v0, Lcom/vk/identity/fragments/IdentityEditContract2;
+    new-instance v0, Lcom/vk/identity/fragments/b;
 
-    invoke-direct {v0, p0}, Lcom/vk/identity/fragments/IdentityEditContract2;-><init>(Lcom/vk/identity/fragments/IdentityEditContract1;)V
+    invoke-direct {v0, p0}, Lcom/vk/identity/fragments/b;-><init>(Lcom/vk/identity/fragments/c;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
+    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
 
     return-void
 .end method
@@ -315,7 +315,7 @@
     const-string v0, "type"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -331,11 +331,11 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/identity/fragments/IdentityEditContract;
+    check-cast v0, Lcom/vk/identity/fragments/a;
 
     if-eqz v0, :cond_3
 
@@ -357,22 +357,22 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/identity/fragments/IdentityEditContract;->a(Ljava/lang/String;Ljava/util/ArrayList;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/identity/fragments/a;->a(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -427,11 +427,11 @@
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/identity/fragments/IdentityEditContract;
+    check-cast v0, Lcom/vk/identity/fragments/a;
 
     if-eqz v0, :cond_6
 
@@ -439,7 +439,7 @@
 
     iget v3, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->U:I
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/vk/identity/fragments/IdentityEditContract;->a(Lcom/vk/dto/identity/IdentityLabel;Ljava/lang/String;I)V
+    invoke-interface {v0, v1, v2, v3}, Lcom/vk/identity/fragments/a;->a(Lcom/vk/dto/identity/IdentityLabel;Ljava/lang/String;I)V
 
     goto :goto_0
 
@@ -453,11 +453,11 @@
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/identity/fragments/IdentityEditContract;
+    check-cast v0, Lcom/vk/identity/fragments/a;
 
     if-eqz v0, :cond_6
 
@@ -465,7 +465,7 @@
 
     iget v3, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->U:I
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/vk/identity/fragments/IdentityEditContract;->b(Lcom/vk/dto/identity/IdentityLabel;Ljava/lang/String;I)V
+    invoke-interface {v0, v1, v2, v3}, Lcom/vk/identity/fragments/a;->b(Lcom/vk/dto/identity/IdentityLabel;Ljava/lang/String;I)V
 
     goto :goto_0
 
@@ -479,11 +479,11 @@
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/identity/fragments/IdentityEditContract;
+    check-cast v0, Lcom/vk/identity/fragments/a;
 
     if-eqz v0, :cond_6
 
@@ -515,17 +515,17 @@
 
     move v6, v7
 
-    invoke-interface/range {v0 .. v6}, Lcom/vk/identity/fragments/IdentityEditContract;->a(Lcom/vk/dto/identity/IdentityLabel;Ljava/lang/String;IILjava/lang/String;I)V
+    invoke-interface/range {v0 .. v6}, Lcom/vk/identity/fragments/a;->a(Lcom/vk/dto/identity/IdentityLabel;Ljava/lang/String;IILjava/lang/String;I)V
 
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
@@ -533,7 +533,7 @@
     const-string v0, "type"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -570,7 +570,7 @@
     const/4 v2, 0x0
 
     .line 4
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
 
     .line 5
     invoke-virtual {v0}, Lcom/vk/lists/AbstractPaginatedView;->a1()V
@@ -635,12 +635,12 @@
     const v2, 0x7f080376
 
     .line 2
-    invoke-static {v0, v2}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {v0, v2}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 3
-    sget-object v2, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v2, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v3
 
@@ -650,7 +650,7 @@
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {v2, v3, v4}, Lcom/vk/identity/IdentityHelper;->c(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Lcom/vk/identity/a;->c(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -664,7 +664,7 @@
     invoke-virtual {v0, v2}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 5
-    invoke-static {p0, v0}, Lcom/vtosters/lite/m0/ToolbarHelper;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v0}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     goto :goto_0
 
@@ -672,12 +672,12 @@
     const-string v0, "type"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -846,13 +846,13 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 10
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -864,12 +864,12 @@
     const-string v0, "type"
 
     .line 11
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -899,22 +899,22 @@
     iput-boolean v1, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->V:Z
 
     .line 5
-    new-instance v1, Lcom/vtosters/lite/fragments/CitySelectFragment$b;
+    new-instance v1, Lcom/vtosters/lite/fragments/b1$b;
 
     if-eqz v0, :cond_1
 
     iget v0, v0, Lcom/vk/dto/common/Country;->a:I
 
-    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/CitySelectFragment$b;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/b1$b;-><init>(I)V
 
     const/16 v0, 0x2eb
 
-    invoke-virtual {v1, p0, v0}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v1, p0, v0}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -948,7 +948,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/identity/adapters/IdentityCountryAdapter;->a(Ljava/lang/Integer;)V
 
     .line 2
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -958,19 +958,19 @@
 
     const-string v3, "activity!!"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     const v1, 0x7f120b13
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v1, 0x1
 
     .line 4
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/bottomsheet/b;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 5
     iget-object v4, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->L:Lcom/vk/identity/adapters/IdentityCountryAdapter;
@@ -985,18 +985,18 @@
 
     move-object v3, v0
 
-    invoke-static/range {v3 .. v8}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static/range {v3 .. v8}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const-string v1, "identity_dialog_country"
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 
     .line 7
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method
@@ -1018,7 +1018,7 @@
     invoke-virtual {v1}, Lcom/vk/identity/adapters/IdentityLabelAdapter;->k()V
 
     .line 4
-    new-instance v6, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v6, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1030,19 +1030,19 @@
 
     const-string v3, "activity!!"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     const v0, 0x7f12058b
 
     .line 5
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v0, 0x1
 
     .line 6
-    invoke-static {v6, v2, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static {v6, v2, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/bottomsheet/b;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v2, 0x0
 
@@ -1055,18 +1055,18 @@
     move-object v0, v6
 
     .line 7
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const-string v0, "identity_dialog_label"
 
     .line 8
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     goto :goto_0
 
     .line 9
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
@@ -1101,11 +1101,11 @@
     if-eqz v0, :cond_0
 
     .line 15
-    sget-object v1, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v1, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
     const-string v2, "identity_dialog_country"
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/IdentityHelper;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/a;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     .line 16
     :cond_0
@@ -1144,11 +1144,11 @@
     if-eqz v0, :cond_0
 
     .line 10
-    sget-object v1, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v1, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
     const-string v2, "identity_dialog_label"
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/IdentityHelper;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/a;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     .line 11
     :cond_0
@@ -1229,7 +1229,7 @@
     :cond_0
     const-string p0, "type"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1260,18 +1260,18 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
     if-nez p1, :cond_1
 
     .line 2
-    sget-object p1, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object p1, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
     iget-object v1, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->X:Ljava/lang/String;
 
@@ -1281,14 +1281,14 @@
 
     move-result v2
 
-    invoke-virtual {p1, v1, v2}, Lcom/vk/identity/IdentityHelper;->a(Ljava/lang/String;Z)V
+    invoke-virtual {p1, v1, v2}, Lcom/vk/identity/a;->a(Ljava/lang/String;Z)V
 
     goto :goto_0
 
     :cond_0
     const-string p1, "type"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -1312,7 +1312,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
@@ -1331,7 +1331,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
@@ -1416,13 +1416,13 @@
     if-eqz p1, :cond_2
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v1
 
@@ -1436,7 +1436,7 @@
     const v1, 0x7f0400d3
 
     :goto_0
-    invoke-static {p1, v2, v1}, Lcom/vk/core/util/DrawableUtils;->b(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v2, v1}, Lcom/vk/core/util/z;->b(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1445,19 +1445,19 @@
     goto :goto_2
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 4
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v1
 
@@ -1471,7 +1471,7 @@
     const v1, 0x7f0400d4
 
     :goto_1
-    invoke-static {p1, v2, v1}, Lcom/vk/core/util/DrawableUtils;->b(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v2, v1}, Lcom/vk/core/util/z;->b(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1480,7 +1480,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -1564,7 +1564,7 @@
     const-string v0, "custom_label"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1597,12 +1597,12 @@
     goto/16 :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
@@ -1610,7 +1610,7 @@
     const-string v0, "country"
 
     .line 2
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1626,12 +1626,12 @@
 
     const-string p1, "country!!.name"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
@@ -1639,7 +1639,7 @@
     const-string v0, "city"
 
     .line 3
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1655,12 +1655,12 @@
 
     const-string p1, "city!!.title"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
@@ -1668,7 +1668,7 @@
     const-string v0, "address"
 
     .line 4
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1682,7 +1682,7 @@
     const-string v0, "postcode"
 
     .line 5
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1696,7 +1696,7 @@
     const-string v0, "phone_number"
 
     .line 6
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1710,7 +1710,7 @@
     const-string v0, "email"
 
     .line 7
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1724,7 +1724,7 @@
     const-string v0, "label"
 
     .line 8
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1812,7 +1812,7 @@
     :cond_0
     const-string p1, "type"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -1855,7 +1855,7 @@
 
     const-string v3, "activity!!"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -1865,7 +1865,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setTitle(I)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
@@ -1879,9 +1879,9 @@
 
     const/4 v5, 0x0
 
-    sget-object v6, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v6, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v7
 
@@ -1891,7 +1891,7 @@
 
     if-eqz v8, :cond_1
 
-    invoke-virtual {v6, v7, v8}, Lcom/vk/identity/IdentityHelper;->d(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v6, v7, v8}, Lcom/vk/identity/a;->d(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1928,23 +1928,23 @@
     const-string v0, "type"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
     .line 9
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method
@@ -2092,7 +2092,7 @@
     :cond_0
     const-string v0, "type"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2117,7 +2117,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/identity/fragments/IdentityEditFragment$onLoadLabelsDone$1;-><init>(Lcom/vk/identity/fragments/IdentityEditFragment;)V
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/identity/adapters/IdentityLabelAdapter;-><init>(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/identity/adapters/IdentityLabelAdapter;-><init>(Ljava/util/List;Lkotlin/jvm/b/b;)V
 
     iput-object v0, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->M:Lcom/vk/identity/adapters/IdentityLabelAdapter;
 
@@ -2218,7 +2218,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -2293,9 +2293,9 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->K:Lcom/vk/identity/adapters/IdentityEditAdapter;
 
-    sget-object v0, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v0, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
 
@@ -2309,11 +2309,11 @@
 
     move-result v1
 
-    invoke-virtual {v0, v2, v3, v1}, Lcom/vk/identity/IdentityHelper;->a(Landroid/content/Context;Ljava/lang/String;Z)Ljava/util/List;
+    invoke-virtual {v0, v2, v3, v1}, Lcom/vk/identity/a;->a(Landroid/content/Context;Ljava/lang/String;Z)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->K:Lcom/vk/identity/adapters/IdentityEditAdapter;
@@ -2328,18 +2328,18 @@
     const-string p1, "type"
 
     .line 12
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 13
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -2374,7 +2374,7 @@
     const-string p2, "view"
 
     .line 3
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
@@ -2382,7 +2382,7 @@
 
     const/4 v0, 0x2
 
-    invoke-static {p1, p3, p2, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, p2, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -2399,7 +2399,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/identity/fragments/IdentityEditFragment$onCreateView$1;-><init>(Lcom/vk/identity/fragments/IdentityEditFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/lists/AbstractPaginatedView;->setOnReloadRetryClickListener(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p2, p3}, Lcom/vk/lists/AbstractPaginatedView;->setOnReloadRetryClickListener(Lkotlin/jvm/b/a;)V
 
     .line 5
     :cond_0
@@ -2431,22 +2431,22 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v1, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
     const-string v2, "identity_dialog_country"
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/IdentityHelper;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/a;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     .line 3
-    sget-object v1, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v1, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
     const-string v2, "identity_dialog_label"
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/IdentityHelper;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/a;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     .line 4
     :cond_0
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
 
     const/4 v0, 0x0
 

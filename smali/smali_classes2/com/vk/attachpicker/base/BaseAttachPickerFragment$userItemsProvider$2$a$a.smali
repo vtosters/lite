@@ -3,12 +3,12 @@
 .source "BaseAttachPickerFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+    value = Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;->a(Lc/a/m;ZLcom/vk/lists/t;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/api/base/VkPaginationList<",
         "TT;>;>;"
     }
@@ -32,18 +32,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;
 
-.field final synthetic b:Lcom/vk/lists/PaginationHelper;
+.field final synthetic b:Lcom/vk/lists/t;
 
 .field final synthetic c:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;Lcom/vk/lists/PaginationHelper;Z)V
+.method constructor <init>(Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;Lcom/vk/lists/t;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->a:Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a;
 
-    iput-object p2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iput-object p2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     iput-boolean p3, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->c:Z
 
@@ -125,11 +125,11 @@
 
     move-result v0
 
-    iget-object v3, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v3, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v3}, Lcom/vk/lists/PaginationHelper;->a()I
+    invoke-virtual {v3}, Lcom/vk/lists/t;->a()I
 
     move-result v3
 
@@ -156,7 +156,7 @@
 
     .line 5
     :goto_2
-    iget-object v3, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v3, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     if-eqz v3, :cond_4
 
@@ -164,7 +164,7 @@
 
     move-result v4
 
-    invoke-virtual {v3, v4}, Lcom/vk/lists/PaginationHelper;->a(I)V
+    invoke-virtual {v3, v4}, Lcom/vk/lists/t;->a(I)V
 
     .line 6
     :cond_4
@@ -223,7 +223,7 @@
 
     iget-object v1, v1, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2;->this$0:Lcom/vk/attachpicker/base/BaseAttachPickerFragment;
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/AttachPickerAdapter;
+    invoke-virtual {v1}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/a;
 
     move-result-object v1
 
@@ -250,7 +250,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v1, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     goto :goto_4
 
@@ -260,12 +260,12 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
+    invoke-virtual {v1, p1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
 
     .line 11
     :cond_8
     :goto_4
-    iget-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     if-eqz p1, :cond_b
 
@@ -278,24 +278,24 @@
 
     iget-object v0, v0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$userItemsProvider$2;->this$0:Lcom/vk/attachpicker/base/BaseAttachPickerFragment;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/AttachPickerAdapter;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v2
 
     :cond_9
-    invoke-virtual {p1, v2}, Lcom/vk/lists/PaginationHelper;->b(I)V
+    invoke-virtual {p1, v2}, Lcom/vk/lists/t;->b(I)V
 
     goto :goto_5
 
     .line 13
     :cond_a
-    invoke-virtual {p1, v2}, Lcom/vk/lists/PaginationHelper;->b(Z)V
+    invoke-virtual {p1, v2}, Lcom/vk/lists/t;->b(Z)V
 
     :cond_b
     :goto_5

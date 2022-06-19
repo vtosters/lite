@@ -3,7 +3,7 @@
 .source "SelectionStickerSearchDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/stories/model/GifItem;",
         ">;"
     }
@@ -68,7 +68,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->e(Landroid/net/Uri;)Lcom/facebook/datasource/DataSource;
+    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->e(Landroid/net/Uri;)Lcom/facebook/datasource/b;
 
     return-void
 .end method

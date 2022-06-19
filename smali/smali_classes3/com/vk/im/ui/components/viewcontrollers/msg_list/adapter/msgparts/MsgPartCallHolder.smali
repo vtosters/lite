@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;
-.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
+.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
 .source "MsgPartCallHolder.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase<",
+        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c<",
         "Lcom/vk/im/engine/models/attaches/AttachCall;",
         ">;"
     }
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder$a;
 
@@ -56,7 +56,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
@@ -80,7 +80,7 @@
 
     const-string v1, "view.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, v0}, Lcom/vk/core/util/DurationFormatter;-><init>(Landroid/content/Context;)V
 
@@ -112,7 +112,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->B:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->B:Lcom/vk/im/engine/models/attaches/Attach;
 
     check-cast p0, Lcom/vk/im/engine/models/attaches/AttachCall;
 
@@ -136,7 +136,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->G:Ljava/lang/StringBuilder;
 
@@ -160,12 +160,12 @@
 
     if-eqz p1, :cond_0
 
-    sget p1, Lcom/vk/im/ui/R12;->vkim_ic_attach_video_call:I
+    sget p1, Lcom/vk/im/ui/f;->vkim_ic_attach_video_call:I
 
     goto :goto_0
 
     :cond_0
-    sget p1, Lcom/vk/im/ui/R12;->vkim_ic_attach_call:I
+    sget p1, Lcom/vk/im/ui/f;->vkim_ic_attach_call:I
 
     :goto_0
     invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setIcon(I)V
@@ -190,14 +190,14 @@
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    sget p2, Lcom/vk/im/ui/R4;->vkim_msg_list_call_error:I
+    sget p2, Lcom/vk/im/ui/m;->vkim_msg_list_call_error:I
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleText(I)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    sget p2, Lcom/vk/im/ui/R3;->VkIm_MsgPart_Call_Failure:I
+    sget p2, Lcom/vk/im/ui/n;->VkIm_MsgPart_Call_Failure:I
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleTextAppearance(I)V
 
@@ -241,7 +241,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    sget p2, Lcom/vk/im/ui/R3;->VkIm_MsgPart_Call_Duration:I
+    sget p2, Lcom/vk/im/ui/n;->VkIm_MsgPart_Call_Duration:I
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleTextAppearance(I)V
 
@@ -253,14 +253,14 @@
     .line 10
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    sget p2, Lcom/vk/im/ui/R4;->vkim_msg_list_call_missed:I
+    sget p2, Lcom/vk/im/ui/m;->vkim_msg_list_call_missed:I
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleText(I)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    sget p2, Lcom/vk/im/ui/R3;->VkIm_MsgPart_Call_Failure:I
+    sget p2, Lcom/vk/im/ui/n;->VkIm_MsgPart_Call_Failure:I
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleTextAppearance(I)V
 
@@ -281,14 +281,14 @@
     .line 13
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    sget p2, Lcom/vk/im/ui/R4;->vkim_msg_list_call_cancelled:I
+    sget p2, Lcom/vk/im/ui/m;->vkim_msg_list_call_cancelled:I
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleText(I)V
 
     .line 14
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    sget p2, Lcom/vk/im/ui/R3;->VkIm_MsgPart_Call_Failure:I
+    sget p2, Lcom/vk/im/ui/n;->VkIm_MsgPart_Call_Failure:I
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleTextAppearance(I)V
 
@@ -309,14 +309,14 @@
     .line 16
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    sget p2, Lcom/vk/im/ui/R4;->vkim_msg_list_call_declined:I
+    sget p2, Lcom/vk/im/ui/m;->vkim_msg_list_call_declined:I
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleText(I)V
 
     .line 17
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    sget p2, Lcom/vk/im/ui/R3;->VkIm_MsgPart_Call_Failure:I
+    sget p2, Lcom/vk/im/ui/n;->VkIm_MsgPart_Call_Failure:I
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleTextAppearance(I)V
 
@@ -325,11 +325,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
+.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
 
     return-object p0
 .end method
@@ -340,12 +340,12 @@
     if-eqz p1, :cond_0
 
     .line 19
-    sget p1, Lcom/vk/im/ui/R4;->vkim_msg_list_call_incoming:I
+    sget p1, Lcom/vk/im/ui/m;->vkim_msg_list_call_incoming:I
 
     goto :goto_0
 
     :cond_0
-    sget p1, Lcom/vk/im/ui/R4;->vkim_msg_list_call_outgoing:I
+    sget p1, Lcom/vk/im/ui/m;->vkim_msg_list_call_outgoing:I
 
     .line 20
     :goto_0
@@ -360,7 +360,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->g:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->g:Lcom/vk/im/engine/models/messages/Msg;
 
     return-object p0
 .end method
@@ -378,32 +378,32 @@
     return-void
 .end method
 
-.method private final c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
+.method private final c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
     .locals 1
 
     .line 2
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->H:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->H:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
 
     .line 3
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->a:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->a:Lcom/vk/im/engine/models/messages/Msg;
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->g:Lcom/vk/im/engine/models/messages/Msg;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->g:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 4
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->b:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->b:Lcom/vk/im/engine/models/messages/NestedMsg;
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
 
     .line 5
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->d:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->d:Lcom/vk/im/engine/models/attaches/Attach;
 
     if-eqz p1, :cond_0
 
     check-cast p1, Lcom/vk/im/engine/models/attaches/AttachCall;
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->B:Lcom/vk/im/engine/models/attaches/Attach;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->B:Lcom/vk/im/engine/models/attaches/Attach;
 
     return-void
 
@@ -421,7 +421,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
 
     return-object p0
 .end method
@@ -438,7 +438,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder$onCreateView$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
@@ -461,21 +461,21 @@
     .line 18
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->H:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
-    invoke-virtual {p0, v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;Lcom/vk/im/engine/models/dialogs/BubbleColors;)V
+    invoke-virtual {p0, v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;Lcom/vk/im/engine/models/dialogs/BubbleColors;)V
 
     return-void
 .end method
 
-.method protected b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
+.method protected b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
     .locals 5
 
     .line 5
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->a:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->a:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz v0, :cond_2
 
     .line 6
-    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->d:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->d:Lcom/vk/im/engine/models/attaches/Attach;
 
     if-eqz v1, :cond_1
 
@@ -486,11 +486,11 @@
 
     move-result-object v2
 
-    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->m:Lcom/vk/im/engine/models/Member;
+    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->m:Lcom/vk/im/engine/models/Member;
 
     const-string v4, "bindArgs.currentMember"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v3}, Lcom/vk/im/engine/models/Member;->e(Lcom/vk/im/engine/models/Member;)Z
 
@@ -502,7 +502,7 @@
     move-result v3
 
     .line 9
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
 
     .line 10
     invoke-direct {p0, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->b(Z)V
@@ -514,7 +514,7 @@
     invoke-direct {p0, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartCallHolder;->a(Z)V
 
     .line 13
-    iget-boolean p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->f:Z
+    iget-boolean p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->f:Z
 
     if-eqz p1, :cond_0
 
@@ -542,7 +542,7 @@
 
     .line 17
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 

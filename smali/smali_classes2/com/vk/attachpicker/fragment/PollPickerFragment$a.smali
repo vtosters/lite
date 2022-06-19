@@ -1,5 +1,5 @@
 .class public final Lcom/vk/attachpicker/fragment/PollPickerFragment$a;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "PollPickerFragment.kt"
 
 
@@ -28,7 +28,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/fragment/PollPickerFragment$a$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/fragment/PollPickerFragment$a$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -39,7 +39,7 @@
     .line 1
     const-class v0, Lcom/vk/attachpicker/fragment/PollPickerFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "ref"
 

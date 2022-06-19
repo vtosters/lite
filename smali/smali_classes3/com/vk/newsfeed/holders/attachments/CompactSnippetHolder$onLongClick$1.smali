@@ -3,7 +3,7 @@
 .source "CompactSnippetHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -66,7 +66,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder$onLongClick$1;->this$0:Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->i0()Lcom/vtosters/lite/data/PostInteract;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v0
 

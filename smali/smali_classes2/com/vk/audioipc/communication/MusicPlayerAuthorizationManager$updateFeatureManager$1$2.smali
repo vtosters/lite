@@ -3,12 +3,12 @@
 .source "MusicPlayerAuthorizationManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1;->a(Lio/reactivex/SingleEmitter;)V
+    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1;->a(Lc/a/u;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $emitter:Lio/reactivex/SingleEmitter;
+.field final synthetic $emitter:Lc/a/u;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/SingleEmitter;)V
+.method constructor <init>(Lc/a/u;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$2;->$emitter:Lio/reactivex/SingleEmitter;
+    iput-object p1, p0, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$2;->$emitter:Lc/a/u;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$2;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -60,13 +60,13 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$2;->$emitter:Lio/reactivex/SingleEmitter;
+    iget-object v0, p0, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$2;->$emitter:Lc/a/u;
 
     new-instance v1, Ljava/lang/Throwable;
 
     invoke-direct {v1}, Ljava/lang/Throwable;-><init>()V
 
-    invoke-interface {v0, v1}, Lio/reactivex/SingleEmitter;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lc/a/u;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method

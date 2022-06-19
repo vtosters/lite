@@ -3,7 +3,7 @@
 .source "FlowableConcatMap.java"
 
 # interfaces
-.implements Lio/reactivex/FlowableSubscriber;
+.implements Lc/a/h;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Lio/reactivex/internal/subscriptions/SubscriptionArbiter;",
-        "Lio/reactivex/FlowableSubscriber<",
+        "Lc/a/h<",
         "TR;>;"
     }
 .end annotation
@@ -69,11 +69,11 @@
 
 
 # virtual methods
-.method public a(Le/b/Subscription;)V
+.method public a(Le/b/d;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->b(Le/b/Subscription;)V
+    invoke-virtual {p0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->b(Le/b/d;)V
 
     return-void
 .end method

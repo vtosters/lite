@@ -3,7 +3,7 @@
 .source "ModelsManager.kt"
 
 # interfaces
-.implements Lcom/vk/ml/model/a/ModelDtoProvider;
+.implements Lcom/vk/ml/model/a/b;
 
 
 # annotations
@@ -32,7 +32,7 @@
         value = {
             "Ljava/util/LinkedList<",
             "Lkotlin/Pair<",
-            "Lcom/vk/ml/MLModelDto1;",
+            "Lcom/vk/ml/b;",
             "Ljava/lang/Integer;",
             ">;>;"
         }
@@ -43,12 +43,12 @@
 
 .field private c:Z
 
-.field private d:Lcom/vk/ml/ModelsStorage;
+.field private d:Lcom/vk/ml/e;
 
-.field private final e:Lio/reactivex/functions/Function;
+.field private final e:Lc/a/z/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             "Ljava/io/File;",
             ">;"
@@ -56,10 +56,10 @@
     .end annotation
 .end field
 
-.field private final f:Lio/reactivex/functions/Predicate;
+.field private final f:Lc/a/z/l;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/Predicate<",
+            "Lc/a/z/l<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;"
         }
@@ -75,7 +75,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/ml/ModelsManager$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/ml/ModelsManager$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     invoke-static {}, Lcom/vk/ml/MLFeatures$MLFeature;->values()[Lcom/vk/ml/MLFeatures$MLFeature;
@@ -105,7 +105,7 @@
     iput-object v0, p0, Lcom/vk/ml/ModelsManager;->a:Ljava/util/LinkedList;
 
     .line 3
-    invoke-static {}, Lb/h/g/m/FileUtils;->n()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/d;->n()Ljava/io/File;
 
     move-result-object v0
 
@@ -116,17 +116,17 @@
 
     invoke-direct {v0, p0}, Lcom/vk/ml/ModelsManager$j;-><init>(Lcom/vk/ml/ModelsManager;)V
 
-    iput-object v0, p0, Lcom/vk/ml/ModelsManager;->e:Lio/reactivex/functions/Function;
+    iput-object v0, p0, Lcom/vk/ml/ModelsManager;->e:Lc/a/z/j;
 
     .line 5
     sget-object v0, Lcom/vk/ml/ModelsManager$h;->a:Lcom/vk/ml/ModelsManager$h;
 
-    iput-object v0, p0, Lcom/vk/ml/ModelsManager;->f:Lio/reactivex/functions/Predicate;
+    iput-object v0, p0, Lcom/vk/ml/ModelsManager;->f:Lc/a/z/l;
 
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;Ljava/io/File;)Lio/reactivex/Observable;
+.method private final a(Ljava/lang/String;Ljava/io/File;)Lc/a/m;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -134,34 +134,34 @@
             "Ljava/lang/String;",
             "Ljava/io/File;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/io/File;",
             ">;"
         }
     .end annotation
 
     .line 55
-    invoke-static {p1, p2}, Lcom/vk/core/network/RxFileDownloader;->a(Ljava/lang/String;Ljava/io/File;)Lio/reactivex/Observable;
+    invoke-static {p1, p2}, Lcom/vk/core/network/RxFileDownloader;->a(Ljava/lang/String;Ljava/io/File;)Lc/a/m;
 
     move-result-object p1
 
     .line 56
-    iget-object p2, p0, Lcom/vk/ml/ModelsManager;->f:Lio/reactivex/functions/Predicate;
+    iget-object p2, p0, Lcom/vk/ml/ModelsManager;->f:Lc/a/z/l;
 
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
 
     move-result-object p1
 
     .line 57
-    iget-object p2, p0, Lcom/vk/ml/ModelsManager;->e:Lio/reactivex/functions/Function;
+    iget-object p2, p0, Lcom/vk/ml/ModelsManager;->e:Lc/a/z/j;
 
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "RxFileDownloader.downloa\u2026    .map(unzipFileMapper)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -193,7 +193,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/ml/MLModelDto1;Lkotlin/jvm/b/Functions;I)V
+.method private final a(Lcom/vk/ml/b;Lkotlin/jvm/b/a;I)V
     .locals 6
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -204,15 +204,15 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/ml/MLModelDto1;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lcom/vk/ml/b;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;I)V"
         }
     .end annotation
 
     .line 36
-    invoke-virtual {p1}, Lcom/vk/ml/MLModelDto1;->a()Lcom/vk/ml/MLFeatures$MLFeature;
+    invoke-virtual {p1}, Lcom/vk/ml/b;->a()Lcom/vk/ml/MLFeatures$MLFeature;
 
     move-result-object v0
 
@@ -221,7 +221,7 @@
     move-result v0
 
     .line 37
-    invoke-virtual {p1}, Lcom/vk/ml/MLModelDto1;->a()Lcom/vk/ml/MLFeatures$MLFeature;
+    invoke-virtual {p1}, Lcom/vk/ml/b;->a()Lcom/vk/ml/MLFeatures$MLFeature;
 
     move-result-object v1
 
@@ -237,12 +237,12 @@
 
     const-string v2, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 38
     new-instance v2, Ljava/io/File;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->n()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/d;->n()Ljava/io/File;
 
     move-result-object v3
 
@@ -265,7 +265,7 @@
     .line 39
     new-instance v3, Ljava/io/File;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->n()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/d;->n()Ljava/io/File;
 
     move-result-object v4
 
@@ -296,20 +296,20 @@
     if-ne p3, v1, :cond_0
 
     .line 40
-    invoke-virtual {p1}, Lcom/vk/ml/MLModelDto1;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/ml/b;->b()Ljava/lang/String;
 
     move-result-object p3
 
-    invoke-direct {p0, p3, v3}, Lcom/vk/ml/ModelsManager;->a(Ljava/lang/String;Ljava/io/File;)Lio/reactivex/Observable;
+    invoke-direct {p0, p3, v3}, Lcom/vk/ml/ModelsManager;->a(Ljava/lang/String;Ljava/io/File;)Lc/a/m;
 
     move-result-object p3
 
     .line 41
     new-instance v1, Lcom/vk/ml/ModelsManager$g;
 
-    invoke-direct {v1, p0, v0, p1}, Lcom/vk/ml/ModelsManager$g;-><init>(Lcom/vk/ml/ModelsManager;ILcom/vk/ml/MLModelDto1;)V
+    invoke-direct {v1, p0, v0, p1}, Lcom/vk/ml/ModelsManager$g;-><init>(Lcom/vk/ml/ModelsManager;ILcom/vk/ml/b;)V
 
-    invoke-virtual {p3, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p3, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
@@ -339,20 +339,20 @@
 
     .line 43
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/ml/MLModelDto1;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/ml/b;->d()Ljava/lang/String;
 
     move-result-object p3
 
-    invoke-direct {p0, p3, v2}, Lcom/vk/ml/ModelsManager;->a(Ljava/lang/String;Ljava/io/File;)Lio/reactivex/Observable;
+    invoke-direct {p0, p3, v2}, Lcom/vk/ml/ModelsManager;->a(Ljava/lang/String;Ljava/io/File;)Lc/a/m;
 
     move-result-object p3
 
     .line 44
     new-instance v1, Lcom/vk/ml/ModelsManager$f;
 
-    invoke-direct {v1, p0, v0, p1}, Lcom/vk/ml/ModelsManager$f;-><init>(Lcom/vk/ml/ModelsManager;ILcom/vk/ml/MLModelDto1;)V
+    invoke-direct {v1, p0, v0, p1}, Lcom/vk/ml/ModelsManager$f;-><init>(Lcom/vk/ml/ModelsManager;ILcom/vk/ml/b;)V
 
-    invoke-virtual {p3, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p3, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
@@ -360,20 +360,20 @@
 
     .line 45
     :cond_2
-    invoke-virtual {p1}, Lcom/vk/ml/MLModelDto1;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/ml/b;->d()Ljava/lang/String;
 
     move-result-object p3
 
-    invoke-direct {p0, p3, v2}, Lcom/vk/ml/ModelsManager;->a(Ljava/lang/String;Ljava/io/File;)Lio/reactivex/Observable;
+    invoke-direct {p0, p3, v2}, Lcom/vk/ml/ModelsManager;->a(Ljava/lang/String;Ljava/io/File;)Lc/a/m;
 
     move-result-object p3
 
     .line 46
-    invoke-virtual {p1}, Lcom/vk/ml/MLModelDto1;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/ml/b;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0, v3}, Lcom/vk/ml/ModelsManager;->a(Ljava/lang/String;Ljava/io/File;)Lio/reactivex/Observable;
+    invoke-direct {p0, v0, v3}, Lcom/vk/ml/ModelsManager;->a(Ljava/lang/String;Ljava/io/File;)Lc/a/m;
 
     move-result-object v0
 
@@ -381,41 +381,41 @@
     sget-object v1, Lcom/vk/ml/ModelsManager$d;->a:Lcom/vk/ml/ModelsManager$d;
 
     .line 48
-    invoke-static {p3, v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Observable;
+    invoke-static {p3, v0, v1}, Lc/a/m;->b(Lc/a/p;Lc/a/p;Lc/a/z/c;)Lc/a/m;
 
     move-result-object p3
 
     .line 49
     new-instance v0, Lcom/vk/ml/ModelsManager$e;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/ml/ModelsManager$e;-><init>(Lcom/vk/ml/ModelsManager;Lcom/vk/ml/MLModelDto1;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/ml/ModelsManager$e;-><init>(Lcom/vk/ml/ModelsManager;Lcom/vk/ml/b;)V
 
-    invoke-virtual {p3, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p3, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
     .line 50
     :goto_0
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object p3
 
-    invoke-virtual {p1, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p3}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 51
     new-instance p3, Lcom/vk/ml/ModelsManager$b;
 
-    invoke-direct {p3, p2}, Lcom/vk/ml/ModelsManager$b;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p3, p2}, Lcom/vk/ml/ModelsManager$b;-><init>(Lkotlin/jvm/b/a;)V
 
     .line 52
     new-instance v0, Lcom/vk/ml/ModelsManager$c;
 
-    invoke-direct {v0, v2, v3, p2}, Lcom/vk/ml/ModelsManager$c;-><init>(Ljava/io/File;Ljava/io/File;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, v2, v3, p2}, Lcom/vk/ml/ModelsManager$c;-><init>(Ljava/io/File;Ljava/io/File;Lkotlin/jvm/b/a;)V
 
     .line 53
-    invoke-virtual {p1, p3, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, p3, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 
@@ -436,17 +436,17 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/ml/MLModelDto1;",
+            "Lcom/vk/ml/b;",
             ">;)V"
         }
     .end annotation
 
     .line 19
-    iget-object v0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/ModelsStorage;
+    iget-object v0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/e;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/ml/ModelsStorage;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/ml/e;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -481,7 +481,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/ml/MLModelDto;
+    check-cast v2, Lcom/vk/ml/c;
 
     .line 21
     instance-of v5, p1, Ljava/util/Collection;
@@ -513,10 +513,10 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/vk/ml/MLModelDto1;
+    check-cast v6, Lcom/vk/ml/b;
 
     .line 23
-    invoke-virtual {v6}, Lcom/vk/ml/MLModelDto1;->a()Lcom/vk/ml/MLFeatures$MLFeature;
+    invoke-virtual {v6}, Lcom/vk/ml/b;->a()Lcom/vk/ml/MLFeatures$MLFeature;
 
     move-result-object v6
 
@@ -524,7 +524,7 @@
 
     move-result v6
 
-    invoke-virtual {v2}, Lcom/vk/ml/MLModelDto;->a()I
+    invoke-virtual {v2}, Lcom/vk/ml/c;->a()I
 
     move-result v7
 
@@ -547,15 +547,15 @@
     if-nez v4, :cond_1
 
     .line 24
-    iget-object v4, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/ModelsStorage;
+    iget-object v4, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/e;
 
     if-eqz v4, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/ml/MLModelDto;->a()I
+    invoke-virtual {v2}, Lcom/vk/ml/c;->a()I
 
     move-result v2
 
-    invoke-virtual {v4, v2, v3}, Lcom/vk/ml/ModelsStorage;->a(IZ)Z
+    invoke-virtual {v4, v2, v3}, Lcom/vk/ml/e;->a(IZ)Z
 
     goto :goto_1
 
@@ -577,7 +577,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/ml/MLModelDto1;
+    check-cast v1, Lcom/vk/ml/b;
 
     .line 26
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -597,14 +597,14 @@
 
     move-object v6, v5
 
-    check-cast v6, Lcom/vk/ml/MLModelDto;
+    check-cast v6, Lcom/vk/ml/c;
 
     .line 27
-    invoke-virtual {v6}, Lcom/vk/ml/MLModelDto;->a()I
+    invoke-virtual {v6}, Lcom/vk/ml/c;->a()I
 
     move-result v6
 
-    invoke-virtual {v1}, Lcom/vk/ml/MLModelDto1;->a()Lcom/vk/ml/MLFeatures$MLFeature;
+    invoke-virtual {v1}, Lcom/vk/ml/b;->a()Lcom/vk/ml/MLFeatures$MLFeature;
 
     move-result-object v7
 
@@ -630,14 +630,14 @@
     const/4 v5, 0x0
 
     :goto_6
-    check-cast v5, Lcom/vk/ml/MLModelDto;
+    check-cast v5, Lcom/vk/ml/c;
 
     .line 28
     new-instance v2, Ljava/io/File;
 
     if-eqz v5, :cond_b
 
-    invoke-virtual {v5}, Lcom/vk/ml/MLModelDto;->d()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/vk/ml/c;->d()Ljava/lang/String;
 
     move-result-object v6
 
@@ -660,7 +660,7 @@
     if-eqz v5, :cond_c
 
     .line 29
-    invoke-virtual {v5}, Lcom/vk/ml/MLModelDto;->e()I
+    invoke-virtual {v5}, Lcom/vk/ml/c;->e()I
 
     move-result v2
 
@@ -673,7 +673,7 @@
     if-eqz v5, :cond_d
 
     .line 30
-    invoke-virtual {v5}, Lcom/vk/ml/MLModelDto;->c()I
+    invoke-virtual {v5}, Lcom/vk/ml/c;->c()I
 
     move-result v5
 
@@ -684,13 +684,13 @@
 
     .line 31
     :goto_9
-    invoke-virtual {v1}, Lcom/vk/ml/MLModelDto1;->e()I
+    invoke-virtual {v1}, Lcom/vk/ml/b;->e()I
 
     move-result v6
 
     if-eq v6, v2, :cond_e
 
-    invoke-virtual {v1}, Lcom/vk/ml/MLModelDto1;->c()I
+    invoke-virtual {v1}, Lcom/vk/ml/b;->c()I
 
     move-result v6
 
@@ -702,7 +702,7 @@
 
     .line 32
     :cond_e
-    invoke-virtual {v1}, Lcom/vk/ml/MLModelDto1;->e()I
+    invoke-virtual {v1}, Lcom/vk/ml/b;->e()I
 
     move-result v6
 
@@ -714,7 +714,7 @@
 
     .line 33
     :cond_f
-    invoke-virtual {v1}, Lcom/vk/ml/MLModelDto1;->c()I
+    invoke-virtual {v1}, Lcom/vk/ml/b;->c()I
 
     move-result v2
 
@@ -752,11 +752,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/ml/ModelsManager;)Lcom/vk/ml/ModelsStorage;
+.method public static final synthetic b(Lcom/vk/ml/ModelsManager;)Lcom/vk/ml/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/ModelsStorage;
+    iget-object p0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/e;
 
     return-object p0
 .end method
@@ -765,7 +765,7 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/d;->b()Ljava/io/File;
 
     move-result-object v0
 
@@ -805,7 +805,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/ml/MLModelDto1;
+    check-cast v1, Lcom/vk/ml/b;
 
     new-instance v2, Lcom/vk/ml/ModelsManager$startDownloads$1;
 
@@ -821,7 +821,7 @@
 
     move-result v0
 
-    invoke-direct {p0, v1, v2, v0}, Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/MLModelDto1;Lkotlin/jvm/b/Functions;I)V
+    invoke-direct {p0, v1, v2, v0}, Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/b;Lkotlin/jvm/b/a;I)V
 
     return-void
 .end method
@@ -837,11 +837,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/ml/MLFeatures$MLFeature;)Lcom/vk/ml/MLModelDto;
+.method public a(Lcom/vk/ml/MLFeatures$MLFeature;)Lcom/vk/ml/c;
     .locals 1
 
     .line 18
-    iget-object v0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/ModelsStorage;
+    iget-object v0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/e;
 
     if-eqz v0, :cond_0
 
@@ -849,7 +849,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/ml/ModelsStorage;->a(I)Lcom/vk/ml/MLModelDto;
+    invoke-virtual {v0, p1}, Lcom/vk/ml/e;->a(I)Lcom/vk/ml/c;
 
     move-result-object p1
 
@@ -866,7 +866,7 @@
     .locals 2
 
     .line 5
-    new-instance v0, Lcom/vk/ml/ModelsStorage;
+    new-instance v0, Lcom/vk/ml/e;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -874,11 +874,11 @@
 
     const-string v1, "context.applicationContext"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/ml/ModelsStorage;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/ml/e;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/ModelsStorage;
+    iput-object v0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/e;
 
     return-void
 .end method
@@ -957,7 +957,7 @@
 
     const-string v3, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -974,14 +974,14 @@
 
     .line 13
     :cond_3
-    new-instance p1, Lcom/vk/ml/GetModelsRequest;
+    new-instance p1, Lcom/vk/ml/a;
 
-    invoke-direct {p1, v1, v0}, Lcom/vk/ml/GetModelsRequest;-><init>(Ljava/util/List;I)V
+    invoke-direct {p1, v1, v0}, Lcom/vk/ml/a;-><init>(Ljava/util/List;I)V
 
     const/4 v1, 0x0
 
     .line 14
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -991,12 +991,12 @@
     invoke-direct {v0, p0}, Lcom/vk/ml/ModelsManager$i;-><init>(Lcom/vk/ml/ModelsManager;)V
 
     .line 16
-    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
+    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
 
     move-result-object v1
 
     .line 17
-    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -1009,7 +1009,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/ModelsStorage;
+    iget-object v0, p0, Lcom/vk/ml/ModelsManager;->d:Lcom/vk/ml/e;
 
     if-eqz v0, :cond_0
 

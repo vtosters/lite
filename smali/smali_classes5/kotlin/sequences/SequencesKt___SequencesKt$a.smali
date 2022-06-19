@@ -4,12 +4,12 @@
 
 # interfaces
 .implements Ljava/lang/Iterable;
-.implements Lkotlin/jvm/internal/t/KMarkers;
+.implements Lkotlin/jvm/internal/t/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/sequences/SequencesKt___SequencesKt;->e(Lkotlin/sequences/Sequence;)Ljava/lang/Iterable;
+    value = Lkotlin/sequences/SequencesKt___SequencesKt;->e(Lkotlin/sequences/j;)Ljava/lang/Iterable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,20 +22,20 @@
         "Ljava/lang/Object;",
         "Ljava/lang/Iterable<",
         "TT;>;",
-        "Lkotlin/jvm/internal/t/KMarkers;"
+        "Lkotlin/jvm/internal/t/a;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lkotlin/sequences/Sequence;
+.field final synthetic a:Lkotlin/sequences/j;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/sequences/Sequence;)V
+.method public constructor <init>(Lkotlin/sequences/j;)V
     .locals 0
 
-    iput-object p1, p0, Lkotlin/sequences/SequencesKt___SequencesKt$a;->a:Lkotlin/sequences/Sequence;
+    iput-object p1, p0, Lkotlin/sequences/SequencesKt___SequencesKt$a;->a:Lkotlin/sequences/j;
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,9 +56,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lkotlin/sequences/SequencesKt___SequencesKt$a;->a:Lkotlin/sequences/Sequence;
+    iget-object v0, p0, Lkotlin/sequences/SequencesKt___SequencesKt$a;->a:Lkotlin/sequences/j;
 
-    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 

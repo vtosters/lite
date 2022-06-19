@@ -22,18 +22,18 @@
 
 
 # instance fields
-.field final upstream:Lio/reactivex/disposables/Disposable;
+.field final upstream:Lio/reactivex/disposables/b;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/disposables/Disposable;)V
+.method constructor <init>(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;->upstream:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;->upstream:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -52,7 +52,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;->upstream:Lio/reactivex/disposables/Disposable;
+    iget-object v1, p0, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;->upstream:Lio/reactivex/disposables/b;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

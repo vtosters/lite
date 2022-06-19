@@ -41,7 +41,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView$d;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/f;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;Lcom/vk/libvideo/live/views/liveswipe/f;)Lcom/vk/libvideo/live/views/liveswipe/f;
 
     return-void
 .end method

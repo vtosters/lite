@@ -3,12 +3,12 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lb/h/g/l/NotificationListener;
+.implements Lb/h/g/l/e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/im/ImEngineProvider;->a(Lb/h/g/l/NotificationCenter;[ILkotlin/jvm/b/Functions2;)V
+    value = Lcom/vtosters/lite/im/ImEngineProvider;->a(Lb/h/g/l/d;[ILkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/h/g/l/NotificationListener<",
+        "Lb/h/g/l/e<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions2;
+.field final synthetic a:Lkotlin/jvm/b/b;
 
 
 # direct methods
-.method constructor <init>(Lb/h/g/l/NotificationCenter;Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(Lb/h/g/l/d;Lkotlin/jvm/b/b;)V
     .locals 0
 
-    iput-object p2, p0, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1;->a:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1;->a:Lkotlin/jvm/b/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,7 +66,7 @@
 
     invoke-direct {p2, p0, p3}, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1$1;-><init>(Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1;Ljava/lang/Object;)V
 
-    invoke-static {p1, v0, v1, p2}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)V
+    invoke-static {p1, v0, v1, p2}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;JLkotlin/jvm/b/a;)V
 
     return-void
 .end method

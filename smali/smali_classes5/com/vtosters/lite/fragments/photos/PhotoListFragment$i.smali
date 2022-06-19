@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/fragments/photos/PhotoListFragment$i;
-.super Lcom/vtosters/lite/api/SimpleListCallback;
+.super Lcom/vtosters/lite/api/m;
 .source "PhotoListFragment.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/api/SimpleListCallback<",
+        "Lcom/vtosters/lite/api/m<",
         "Lcom/vk/dto/photo/Photo;",
         ">;"
     }
@@ -27,13 +27,13 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;Lme/grishka/appkit/fragments/BaseRecyclerFragment;)V
+.method constructor <init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;Ld/a/a/a/i;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$i;->c:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/SimpleListCallback;-><init>(Lme/grishka/appkit/fragments/BaseRecyclerFragment;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/m;-><init>(Ld/a/a/a/i;)V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     .end annotation
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vtosters/lite/api/SimpleListCallback;->a(Lcom/vk/dto/common/data/VKList;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/api/m;->a(Lcom/vk/dto/common/data/VKList;)V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$i;->c:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;

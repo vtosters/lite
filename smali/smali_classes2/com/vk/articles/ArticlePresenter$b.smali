@@ -3,7 +3,7 @@
 .source "ArticlePresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/polls/Poll;",
         ">;"
     }
@@ -65,7 +65,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/articles/ArticlePresenter$b;->a:Lcom/vk/articles/ArticlePresenter;
 
-    invoke-static {v0}, Lcom/vk/articles/ArticlePresenter;->b(Lcom/vk/articles/ArticlePresenter;)Lcom/vk/articles/ArticleContract1;
+    invoke-static {v0}, Lcom/vk/articles/ArticlePresenter;->b(Lcom/vk/articles/ArticlePresenter;)Lcom/vk/articles/b;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
     const-string p1, "pollUpdate"
 
     .line 5
-    invoke-interface {v0, p1, v1}, Lcom/vk/articles/ArticleContract1;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/articles/b;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
 
     .line 6
     :cond_0

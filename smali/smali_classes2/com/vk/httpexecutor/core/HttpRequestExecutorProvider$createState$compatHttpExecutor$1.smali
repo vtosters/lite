@@ -3,7 +3,7 @@
 .source "HttpRequestExecutorProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -66,11 +66,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$createState$compatHttpExecutor$1;->$config:Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;
 
-    invoke-virtual {v0}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->c()Lkotlin/jvm/b/Functions;
+    invoke-virtual {v0}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->c()Lkotlin/jvm/b/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 

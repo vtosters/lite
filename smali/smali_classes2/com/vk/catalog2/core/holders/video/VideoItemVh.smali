@@ -3,7 +3,7 @@
 .source "VideoItemVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+.implements Lcom/vk/catalog2/core/holders/common/n;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -29,7 +29,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
+    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
@@ -69,7 +69,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
@@ -124,7 +124,7 @@
     move-result v1
 
     .line 5
-    sget v4, Lcom/vk/catalog2/core/R10;->menu:I
+    sget v4, Lcom/vk/catalog2/core/q;->menu:I
 
     if-ne v1, v4, :cond_0
 
@@ -160,13 +160,13 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v1 .. v12}, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->a(Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Ljava/lang/Long;ILcom/vk/navigation/ModalDialogCallback;ZLkotlin/jvm/b/Functions;ZILjava/lang/Object;)Lcom/vk/core/util/Dismissable;
+    invoke-static/range {v1 .. v12}, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->a(Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Ljava/lang/Long;ILcom/vk/navigation/k;ZLkotlin/jvm/b/a;ZILjava/lang/Object;)Lcom/vk/core/util/w;
 
     goto :goto_1
 
     .line 6
     :cond_0
-    sget v4, Lcom/vk/catalog2/core/R10;->avatar_hover:I
+    sget v4, Lcom/vk/catalog2/core/q;->avatar_hover:I
 
     if-ne v1, v4, :cond_3
 
@@ -176,7 +176,7 @@
     if-eqz v1, :cond_1
 
     .line 8
-    invoke-static {}, Lcom/vk/bridges/AudioBridge;->a()Lcom/vk/bridges/AudioBridge1;
+    invoke-static {}, Lcom/vk/bridges/e;->a()Lcom/vk/bridges/d;
 
     move-result-object v0
 
@@ -186,9 +186,9 @@
 
     const-string v1, "v.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1, v3}, Lcom/vk/bridges/AudioBridge1;->b(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)V
+    invoke-interface {v0, p1, v3}, Lcom/vk/bridges/d;->b(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)V
 
     goto :goto_1
 
@@ -207,7 +207,7 @@
     move v3, p1
 
     .line 10
-    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
+    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
 
     move-result-object v1
 
@@ -225,13 +225,13 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     goto :goto_1
 
     .line 11
     :cond_3
-    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
+    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
 
     move-result-object v1
 
@@ -245,7 +245,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v1 .. v7}, Lcom/vk/bridges/VideoBridge$a;->b(Lcom/vk/bridges/VideoBridge1;Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lcom/vk/bridges/k0$a;->b(Lcom/vk/bridges/k0;Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 
     :cond_4
     :goto_1

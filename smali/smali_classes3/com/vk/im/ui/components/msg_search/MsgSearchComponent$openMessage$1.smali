@@ -3,7 +3,7 @@
 .source "MsgSearchComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -63,7 +63,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$openMessage$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -100,19 +100,19 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$openMessage$1;->this$0:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->f(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/MsgSearchReporter;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->f(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/b;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$openMessage$1;->this$0:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->d(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
+    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->d(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/a;
 
     move-result-object v1
 
     iget v2, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$openMessage$1;->$pos:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/MsgSearchReporter;->a(Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/b;->a(Lcom/vk/im/ui/components/msg_search/a;I)V
 
     return-void
 .end method

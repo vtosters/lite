@@ -3,12 +3,12 @@
 .source "NewsfeedViewPostCache.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/NewsfeedViewPostCache;->a()Lio/reactivex/disposables/Disposable;
+    value = Lcom/vk/newsfeed/NewsfeedViewPostCache;->a()Lio/reactivex/disposables/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/newsfeed/NewsfeedViewPostCache$SetWrapper;",
         ">;"
     }
@@ -68,7 +68,7 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/newsfeed/NewsfeedViewPostCache$SetWrapper;->a(Lcom/vk/newsfeed/NewsfeedViewPostCache$SetWrapper;)Z
 

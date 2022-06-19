@@ -3,9 +3,9 @@
 .source "FlowableConcatMap.java"
 
 # interfaces
-.implements Lio/reactivex/FlowableSubscriber;
+.implements Lc/a/h;
 .implements Lio/reactivex/internal/operators/flowable/FlowableConcatMap$b;
-.implements Le/b/Subscription;
+.implements Le/b/d;
 
 
 # annotations
@@ -26,11 +26,11 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lio/reactivex/FlowableSubscriber<",
+        "Lc/a/h<",
         "TT;>;",
         "Lio/reactivex/internal/operators/flowable/FlowableConcatMap$b<",
         "TR;>;",
-        "Le/b/Subscription;"
+        "Le/b/d;"
     }
 .end annotation
 
@@ -61,12 +61,12 @@
 
 .field final limit:I
 
-.field final mapper:Lio/reactivex/functions/Function;
+.field final mapper:Lc/a/z/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-TT;+",
-            "Le/b/Publisher<",
+            "Le/b/b<",
             "+TR;>;>;"
         }
     .end annotation
@@ -74,10 +74,10 @@
 
 .field final prefetch:I
 
-.field queue:Lc/a/a0/b/SimpleQueue;
+.field queue:Lc/a/a0/b/k;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/SimpleQueue<",
+            "Lc/a/a0/b/k<",
             "TT;>;"
         }
     .end annotation
@@ -85,18 +85,18 @@
 
 .field sourceMode:I
 
-.field upstream:Le/b/Subscription;
+.field upstream:Le/b/d;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/functions/Function;I)V
+.method constructor <init>(Lc/a/z/j;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-TT;+",
-            "Le/b/Publisher<",
+            "Le/b/b<",
             "+TR;>;>;I)V"
         }
     .end annotation
@@ -105,7 +105,7 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->mapper:Lio/reactivex/functions/Function;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->mapper:Lc/a/z/j;
 
     .line 3
     iput p2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->prefetch:I
@@ -150,35 +150,35 @@
     return-void
 .end method
 
-.method public final a(Le/b/Subscription;)V
+.method public final a(Le/b/d;)V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/Subscription;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/d;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Le/b/Subscription;Le/b/Subscription;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Le/b/d;Le/b/d;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/Subscription;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/d;
 
     .line 3
-    instance-of v0, p1, Lc/a/a0/b/QueueSubscription;
+    instance-of v0, p1, Lc/a/a0/b/h;
 
     if-eqz v0, :cond_1
 
     .line 4
     move-object v0, p1
 
-    check-cast v0, Lc/a/a0/b/QueueSubscription;
+    check-cast v0, Lc/a/a0/b/h;
 
     const/4 v1, 0x7
 
     .line 5
-    invoke-interface {v0, v1}, Lc/a/a0/b/QueueFuseable;->a(I)I
+    invoke-interface {v0, v1}, Lc/a/a0/b/g;->a(I)I
 
     move-result v1
 
@@ -190,7 +190,7 @@
     iput v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->sourceMode:I
 
     .line 7
-    iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/SimpleQueue;
+    iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/k;
 
     .line 8
     iput-boolean v2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->done:Z
@@ -212,7 +212,7 @@
     iput v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->sourceMode:I
 
     .line 12
-    iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/SimpleQueue;
+    iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/k;
 
     .line 13
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->d()V
@@ -222,7 +222,7 @@
 
     int-to-long v0, v0
 
-    invoke-interface {p1, v0, v1}, Le/b/Subscription;->a(J)V
+    invoke-interface {p1, v0, v1}, Le/b/d;->a(J)V
 
     return-void
 
@@ -234,7 +234,7 @@
 
     invoke-direct {v0, v1}, Lio/reactivex/internal/queue/SpscArrayQueue;-><init>(I)V
 
-    iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/SimpleQueue;
+    iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/k;
 
     .line 16
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->d()V
@@ -244,7 +244,7 @@
 
     int-to-long v0, v0
 
-    invoke-interface {p1, v0, v1}, Le/b/Subscription;->a(J)V
+    invoke-interface {p1, v0, v1}, Le/b/d;->a(J)V
 
     :cond_2
     return-void
@@ -280,18 +280,18 @@
     if-eq v0, v1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/SimpleQueue;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/k;
 
-    invoke-interface {v0, p1}, Lc/a/a0/b/SimpleQueue;->offer(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lc/a/a0/b/k;->offer(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/Subscription;
+    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/d;
 
-    invoke-interface {p1}, Le/b/Subscription;->cancel()V
+    invoke-interface {p1}, Le/b/d;->cancel()V
 
     .line 4
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -300,7 +300,7 @@
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, p1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p0, p1}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     return-void
 

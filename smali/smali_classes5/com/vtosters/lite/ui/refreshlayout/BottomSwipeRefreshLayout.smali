@@ -5,8 +5,8 @@
 # interfaces
 .implements Landroidx/core/view/NestedScrollingParent;
 .implements Landroidx/core/view/NestedScrollingChild;
-.implements Lcom/vk/core/ui/ISwipeRefreshLayout;
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/j;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # static fields
@@ -42,7 +42,7 @@
 
 .field private final N:Landroid/view/animation/DecelerateInterpolator;
 
-.field private O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+.field private O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
 .field private P:I
 
@@ -50,7 +50,7 @@
 
 .field private R:F
 
-.field private S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+.field private S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
 .field private T:Landroid/view/animation/Animation;
 
@@ -380,17 +380,17 @@
     invoke-virtual {v0, p1, p2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 21
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/refreshlayout/a;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 22
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->clearAnimation()V
 
     .line 23
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
@@ -425,11 +425,11 @@
     iput-boolean p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->c:Z
 
     .line 30
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, v1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->a(FF)V
+    invoke-virtual {v0, v1, v1}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(FF)V
 
     const/4 v0, 0x0
 
@@ -450,9 +450,9 @@
     invoke-direct {p0, v1, v0}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(ILandroid/view/animation/Animation$AnimationListener;)V
 
     .line 34
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(Z)V
 
     :goto_0
     return-void
@@ -486,18 +486,18 @@
     if-eqz p2, :cond_0
 
     .line 39
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/refreshlayout/a;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 40
     :cond_0
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->clearAnimation()V
 
     .line 41
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     iget-object p2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->h0:Landroid/view/animation/Animation;
 
@@ -510,17 +510,17 @@
     .locals 1
 
     .line 42
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->bringToFront()V
 
     .line 43
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->offsetTopAndBottom(I)V
 
     .line 44
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getTop()I
 
@@ -601,17 +601,17 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 15
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/a;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 16
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->clearAnimation()V
 
     .line 17
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->U:Landroid/view/animation/Animation;
 
@@ -823,11 +823,11 @@
     return p1
 .end method
 
-.method static synthetic b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+.method static synthetic b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     return-object p0
 .end method
@@ -836,11 +836,11 @@
     .locals 12
 
     .line 12
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(Z)V
 
     .line 13
     iget v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->e:F
@@ -987,7 +987,7 @@
 
     .line 23
     :goto_1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
 
@@ -996,7 +996,7 @@
     if-eqz v0, :cond_2
 
     .line 24
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     const/4 v5, 0x0
 
@@ -1009,12 +1009,12 @@
     if-nez v0, :cond_3
 
     .line 26
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-static {v0, v2}, Landroidx/core/view/ViewCompat;->setScaleX(Landroid/view/View;F)V
 
     .line 27
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-static {v0, v2}, Landroidx/core/view/ViewCompat;->setScaleY(Landroid/view/View;F)V
 
@@ -1043,9 +1043,9 @@
 
     .line 32
     :cond_4
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->getAlpha()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->getAlpha()I
 
     move-result p1
 
@@ -1071,30 +1071,30 @@
     mul-float v0, v3, p1
 
     .line 35
-    iget-object v5, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v5, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     invoke-static {p1, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
 
-    invoke-virtual {v5, v7, p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->a(FF)V
+    invoke-virtual {v5, v7, p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(FF)V
 
     .line 36
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->a(F)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(F)V
 
     goto :goto_2
 
     .line 37
     :cond_6
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->getAlpha()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->getAlpha()I
 
     move-result p1
 
@@ -1132,9 +1132,9 @@
     mul-float v3, v3, p1
 
     .line 39
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {p1, v3}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->b(F)V
+    invoke-virtual {p1, v3}, Lcom/vtosters/lite/ui/refreshlayout/b;->b(F)V
 
     .line 40
     iget p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->F:I
@@ -1185,18 +1185,18 @@
     if-eqz p2, :cond_1
 
     .line 47
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/refreshlayout/a;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 48
     :cond_1
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->clearAnimation()V
 
     .line 49
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     iget-object p2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->i0:Landroid/view/animation/Animation;
 
@@ -1210,7 +1210,7 @@
     .locals 3
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     const/4 v1, 0x0
 
@@ -1224,11 +1224,11 @@
     if-lt v0, v1, :cond_0
 
     .line 6
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     const/16 v1, 0xff
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->setAlpha(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/refreshlayout/b;->setAlpha(I)V
 
     .line 7
     :cond_0
@@ -1250,18 +1250,18 @@
     if-eqz p1, :cond_1
 
     .line 9
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/a;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 10
     :cond_1
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->clearAnimation()V
 
     .line 11
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->T:Landroid/view/animation/Animation;
 
@@ -1302,7 +1302,7 @@
     add-int/2addr v0, p1
 
     .line 3
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getTop()I
 
@@ -1332,9 +1332,9 @@
     if-eqz p1, :cond_0
 
     .line 7
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->getAlpha()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->getAlpha()I
 
     move-result p1
 
@@ -1346,7 +1346,7 @@
 
     .line 8
     :cond_0
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getScaleX(Landroid/view/View;)F
 
@@ -1372,18 +1372,18 @@
     if-eqz p2, :cond_1
 
     .line 11
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/refreshlayout/a;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 12
     :cond_1
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->clearAnimation()V
 
     .line 13
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     iget-object p2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->a0:Landroid/view/animation/Animation;
 
@@ -1423,7 +1423,7 @@
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    new-instance v0, Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -1433,42 +1433,42 @@
 
     const/high16 v3, 0x41a00000    # 20.0f
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;-><init>(Landroid/content/Context;IF)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/ui/refreshlayout/a;-><init>(Landroid/content/Context;IF)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iput-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     .line 3
-    new-instance v0, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    new-instance v0, Lcom/vtosters/lite/ui/refreshlayout/b;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p0}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;-><init>(Landroid/content/Context;Landroid/view/View;)V
+    invoke-direct {v0, v1, p0}, Lcom/vtosters/lite/ui/refreshlayout/b;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iput-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {v0, v2}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->a(I)V
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(I)V
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-    iget-object v1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 7
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -1499,7 +1499,7 @@
     move-result-object v1
 
     .line 5
-    iget-object v2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1585,7 +1585,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getMeasuredHeight()I
 
@@ -1598,11 +1598,11 @@
     goto :goto_0
 .end method
 
-.method static synthetic h(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+.method static synthetic h(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     return-object p0
 .end method
@@ -1611,9 +1611,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->getAlpha()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/refreshlayout/b;->getAlpha()I
 
     move-result v0
 
@@ -1632,9 +1632,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->getAlpha()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/refreshlayout/b;->getAlpha()I
 
     move-result v0
 
@@ -1701,12 +1701,12 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->setScaleX(Landroid/view/View;F)V
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->setScaleY(Landroid/view/View;F)V
 
@@ -1718,7 +1718,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -1727,9 +1727,9 @@
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->setAlpha(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->setAlpha(I)V
 
     return-void
 .end method
@@ -1910,7 +1910,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     if-eqz v0, :cond_0
 
@@ -2135,11 +2135,11 @@
     iput-boolean v3, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->J:Z
 
     .line 16
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     const/16 v0, 0x4c
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->setAlpha(I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/refreshlayout/b;->setAlpha(I)V
 
     goto :goto_1
 
@@ -2158,7 +2158,7 @@
 
     move-result v0
 
-    iget-object v4, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v4, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {v4}, Landroid/widget/ImageView;->getTop()I
 
@@ -2291,21 +2291,21 @@
     invoke-virtual {p3, p4, p5, v0, p2}, Landroid/view/View;->layout(IIII)V
 
     .line 12
-    iget-object p2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p2}, Landroid/widget/ImageView;->getMeasuredWidth()I
 
     move-result p2
 
     .line 13
-    iget-object p3, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p3, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p3}, Landroid/widget/ImageView;->getMeasuredHeight()I
 
     move-result p3
 
     .line 14
-    iget-object p4, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p4, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     div-int/lit8 p1, p1, 0x2
 
@@ -2397,7 +2397,7 @@
     invoke-virtual {p1, p2, v1}, Landroid/view/View;->measure(II)V
 
     .line 10
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     iget p2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->d0:I
 
@@ -2457,7 +2457,7 @@
 
     move-result-object p2
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     if-ne p2, v0, :cond_3
 
@@ -2637,7 +2637,7 @@
     if-lez p1, :cond_4
 
     .line 17
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     const/16 v1, 0x8
 
@@ -3191,9 +3191,9 @@
     invoke-direct {p0}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->f()V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->a([I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->a([I)V
 
     return-void
 .end method
@@ -3274,7 +3274,7 @@
     iput-boolean v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->L:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     const/16 v1, 0x8
 
@@ -3344,7 +3344,7 @@
     iput-boolean p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->f0:Z
 
     .line 8
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->invalidate()V
 
@@ -3379,14 +3379,14 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;->setBackgroundColor(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/a;->setBackgroundColor(I)V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(I)V
 
     return-void
 .end method
@@ -3564,21 +3564,21 @@
 
     .line 4
     :goto_0
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->b(I)V
 
     .line 6
-    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->O:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->S:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 

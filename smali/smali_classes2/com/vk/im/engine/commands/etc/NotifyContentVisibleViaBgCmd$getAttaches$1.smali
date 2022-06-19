@@ -3,12 +3,12 @@
 .source "NotifyContentVisibleViaBgCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/util/Collection;
+    value = Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/util/Collection;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/models/messages/WithUserContent;",
         "Ljava/lang/Boolean;",
         ">;"

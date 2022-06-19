@@ -50,11 +50,11 @@
 
     iget-object v2, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$a;->b:Lio/reactivex/internal/schedulers/ExecutorScheduler;
 
-    invoke-virtual {v2, v0}, Lio/reactivex/internal/schedulers/ExecutorScheduler;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v2, v0}, Lio/reactivex/internal/schedulers/ExecutorScheduler;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method

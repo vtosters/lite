@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -39,7 +39,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/vk/im/ui/R13;->vkim_msg_part_sticker:I
+    sget v0, Lcom/vk/im/ui/j;->vkim_msg_part_sticker:I
 
     const/4 v1, 0x0
 
@@ -52,7 +52,7 @@
 
     const-string v0, "view"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartStickerHolder;-><init>(Landroid/view/View;)V
 

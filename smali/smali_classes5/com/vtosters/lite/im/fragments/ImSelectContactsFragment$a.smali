@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment$a;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "ImSelectContactsFragment.kt"
 
 
@@ -21,12 +21,12 @@
     .line 1
     const-class v0, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     const/4 v0, 0x1
 
     .line 2
-    invoke-virtual {p0, v0}, Lcom/vk/navigation/Navigator;->b(Z)Lcom/vk/navigation/Navigator;
+    invoke-virtual {p0, v0}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
 
     .line 3
     invoke-virtual {p0, v0}, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment$a;->c(Z)Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment$a;
@@ -40,9 +40,9 @@
     .locals 2
 
     .line 5
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->U:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->U:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
@@ -53,9 +53,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->J:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->J:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -70,14 +70,14 @@
     .end param
 
     .line 3
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "description"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     if-eqz p2, :cond_0
 
@@ -111,9 +111,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->C:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->C:Ljava/lang/String;
 
     invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/util/Collection;)[I
 
@@ -128,9 +128,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->K:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->K:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -150,9 +150,9 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->D:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->D:Ljava/lang/String;
 
     invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/util/Collection;)[I
 
@@ -167,9 +167,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->d:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->d:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -180,9 +180,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->n0:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->n0:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
@@ -193,9 +193,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->f:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 

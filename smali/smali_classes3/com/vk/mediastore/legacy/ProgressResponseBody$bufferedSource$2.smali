@@ -3,12 +3,12 @@
 .source "ProgressResponseBody.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/mediastore/legacy/ProgressResponseBody;-><init>(Lokhttp3/ResponseBody;Lcom/vk/mediastore/legacy/ProgressResponseBody$a;)V
+    value = Lcom/vk/mediastore/legacy/ProgressResponseBody;-><init>(Lokhttp3/c0;Lcom/vk/mediastore/legacy/ProgressResponseBody$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lokio/BufferedSource;",
+        "Lkotlin/jvm/b/a<",
+        "Lokio/e;",
         ">;"
     }
 .end annotation
@@ -49,36 +49,36 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/mediastore/legacy/ProgressResponseBody$bufferedSource$2;->invoke()Lokio/BufferedSource;
+    invoke-virtual {p0}, Lcom/vk/mediastore/legacy/ProgressResponseBody$bufferedSource$2;->invoke()Lokio/e;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Lokio/BufferedSource;
+.method public final invoke()Lokio/e;
     .locals 3
 
     .line 2
     iget-object v0, p0, Lcom/vk/mediastore/legacy/ProgressResponseBody$bufferedSource$2;->this$0:Lcom/vk/mediastore/legacy/ProgressResponseBody;
 
-    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProgressResponseBody;->b(Lcom/vk/mediastore/legacy/ProgressResponseBody;)Lokhttp3/ResponseBody;
+    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProgressResponseBody;->b(Lcom/vk/mediastore/legacy/ProgressResponseBody;)Lokhttp3/c0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lokhttp3/ResponseBody;->f()Lokio/BufferedSource;
+    invoke-virtual {v1}, Lokhttp3/c0;->f()Lokio/e;
 
     move-result-object v1
 
     const-string v2, "responseBody.source()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/vk/mediastore/legacy/ProgressResponseBody;->a(Lcom/vk/mediastore/legacy/ProgressResponseBody;Lokio/Source;)Lcom/vk/mediastore/legacy/ProgressResponseBody$b;
+    invoke-static {v0, v1}, Lcom/vk/mediastore/legacy/ProgressResponseBody;->a(Lcom/vk/mediastore/legacy/ProgressResponseBody;Lokio/r;)Lcom/vk/mediastore/legacy/ProgressResponseBody$b;
 
     move-result-object v0
 
-    invoke-static {v0}, Lokio/Okio;->a(Lokio/Source;)Lokio/BufferedSource;
+    invoke-static {v0}, Lokio/k;->a(Lokio/r;)Lokio/e;
 
     move-result-object v0
 

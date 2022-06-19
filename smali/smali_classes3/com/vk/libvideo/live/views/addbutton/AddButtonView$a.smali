@@ -41,11 +41,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView$a;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a(Lcom/vk/libvideo/live/views/addbutton/AddButtonView;)Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a(Lcom/vk/libvideo/live/views/addbutton/AddButtonView;)Lcom/vk/libvideo/live/views/addbutton/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;->Z()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/addbutton/a;->Z()V
 
     return-void
 .end method

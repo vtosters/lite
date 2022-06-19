@@ -51,11 +51,11 @@
     new-instance v7, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$ActionLinkOptions;
 
     .line 1
-    sget v4, Lcom/vk/libvideo/R;->live_action_link_goto:I
+    sget v4, Lcom/vk/libvideo/g;->live_action_link_goto:I
 
-    sget v5, Lcom/vk/libvideo/R7;->ic_link_24:I
+    sget v5, Lcom/vk/libvideo/e;->ic_link_24:I
 
-    sget v6, Lcom/vk/libvideo/R11;->live_broadcast_goto_link:I
+    sget v6, Lcom/vk/libvideo/j;->live_broadcast_goto_link:I
 
     const-string v2, "GOTO"
 
@@ -74,11 +74,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$ActionLinkOptions;
 
     .line 2
-    sget v11, Lcom/vk/libvideo/R;->live_action_link_change:I
+    sget v11, Lcom/vk/libvideo/g;->live_action_link_change:I
 
-    sget v12, Lcom/vk/libvideo/R7;->ic_attachment_24:I
+    sget v12, Lcom/vk/libvideo/e;->ic_attachment_24:I
 
-    sget v13, Lcom/vk/libvideo/R11;->live_broadcast_change_link:I
+    sget v13, Lcom/vk/libvideo/j;->live_broadcast_change_link:I
 
     const-string v9, "CHANGE"
 
@@ -97,11 +97,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$ActionLinkOptions;
 
     .line 3
-    sget v6, Lcom/vk/libvideo/R;->live_action_link_delete:I
+    sget v6, Lcom/vk/libvideo/g;->live_action_link_delete:I
 
-    sget v7, Lcom/vk/libvideo/R7;->ic_delete_24:I
+    sget v7, Lcom/vk/libvideo/e;->ic_delete_24:I
 
-    sget v8, Lcom/vk/libvideo/R11;->live_broadcast_delete_link:I
+    sget v8, Lcom/vk/libvideo/j;->live_broadcast_delete_link:I
 
     const-string v4, "DELETE"
 

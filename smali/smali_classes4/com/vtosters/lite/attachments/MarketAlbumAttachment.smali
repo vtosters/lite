@@ -3,8 +3,8 @@
 .source "MarketAlbumAttachment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/attachments/ThumbAttachment;
-.implements Lcom/vk/dto/attachments/ImageAttachment;
+.implements Lcom/vtosters/lite/attachments/c;
+.implements Lcom/vk/dto/attachments/b;
 
 
 # static fields
@@ -212,7 +212,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->d:I
+    sget v0, Lcom/vk/dto/attachments/a;->d:I
 
     return v0
 .end method

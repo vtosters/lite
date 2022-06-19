@@ -56,7 +56,7 @@
     .line 2
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$1;->val$token:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->F()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->F()Landroid/support/v4/media/session/b;
 
     move-result-object v0
 

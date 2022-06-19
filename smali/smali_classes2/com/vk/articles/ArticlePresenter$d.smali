@@ -3,12 +3,12 @@
 .source "ArticlePresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/articles/ArticlePresenter;->a(Lcom/vk/dto/polls/PollInfo;ZLkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/articles/ArticlePresenter;->a(Lcom/vk/dto/polls/PollInfo;ZLkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vtosters/lite/attachments/PollAttachment;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions2;
+.field final synthetic a:Lkotlin/jvm/b/b;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(Lkotlin/jvm/b/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/articles/ArticlePresenter$d;->a:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/articles/ArticlePresenter$d;->a:Lkotlin/jvm/b/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,13 +50,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/ArticlePresenter$d;->a:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/articles/ArticlePresenter$d;->a:Lkotlin/jvm/b/b;
 
     const-string v1, "poll"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "CommonImageViewer.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/ImageViewer$d;
+.implements Lcom/vk/bridges/p$d;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/bridges/ImageViewer$d;
+    value = Lcom/vtosters/lite/bridges/CommonImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/bridges/p$d;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/bridges/ImageViewer$d<",
+        "Lcom/vk/bridges/p$d<",
         "TT;>;"
     }
 .end annotation
@@ -28,25 +28,25 @@
 # instance fields
 .field final synthetic a:Lcom/vk/photoviewer/PhotoViewer;
 
-.field final synthetic b:Lkotlin/jvm/b/Functions2;
+.field final synthetic b:Lkotlin/jvm/b/b;
 
-.field final synthetic c:Lcom/vk/photoviewer/CallbackAdapter;
+.field final synthetic c:Lcom/vk/photoviewer/c;
 
-.field final synthetic d:Lkotlin/jvm/b/Functions2;
+.field final synthetic d:Lkotlin/jvm/b/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/Functions2;Lcom/vk/photoviewer/CallbackAdapter;Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/b;Lcom/vk/photoviewer/c;Lkotlin/jvm/b/b;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->a:Lcom/vk/photoviewer/PhotoViewer;
 
-    iput-object p2, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->b:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->b:Lkotlin/jvm/b/b;
 
-    iput-object p3, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->c:Lcom/vk/photoviewer/CallbackAdapter;
+    iput-object p3, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->c:Lcom/vk/photoviewer/c;
 
-    iput-object p4, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->d:Lkotlin/jvm/b/Functions2;
+    iput-object p4, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->d:Lkotlin/jvm/b/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -98,9 +98,9 @@
     .line 5
     sget-object v5, Lcom/vtosters/lite/bridges/CommonImageViewer;->a:Lcom/vtosters/lite/bridges/CommonImageViewer;
 
-    iget-object v6, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->b:Lkotlin/jvm/b/Functions2;
+    iget-object v6, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->b:Lkotlin/jvm/b/b;
 
-    invoke-interface {v6, v4}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v6, v4}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -118,7 +118,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/photoviewer/PhotoViewer;->a(Ljava/util/List;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->c:Lcom/vk/photoviewer/CallbackAdapter;
+    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->c:Lcom/vk/photoviewer/c;
 
     .line 7
     instance-of v1, v0, Lcom/vk/ui/photoviewer/VkMeCallback;
@@ -127,7 +127,7 @@
 
     check-cast v0, Lcom/vk/ui/photoviewer/VkMeCallback;
 
-    iget-object v1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->d:Lkotlin/jvm/b/Functions2;
+    iget-object v1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->d:Lkotlin/jvm/b/b;
 
     .line 8
     new-instance v3, Ljava/util/ArrayList;
@@ -155,7 +155,7 @@
     move-result-object v2
 
     .line 10
-    invoke-interface {v1, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -177,7 +177,7 @@
 
     check-cast v0, Lcom/vk/ui/photoviewer/VkAppCallback;
 
-    iget-object v1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->b:Lkotlin/jvm/b/Functions2;
+    iget-object v1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$e;->b:Lkotlin/jvm/b/b;
 
     .line 13
     new-instance v3, Ljava/util/ArrayList;
@@ -205,7 +205,7 @@
     move-result-object v2
 
     .line 15
-    invoke-interface {v1, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 

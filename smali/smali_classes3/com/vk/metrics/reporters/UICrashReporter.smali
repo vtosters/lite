@@ -4,10 +4,10 @@
 
 
 # static fields
-.field private static final a:Lkotlin/jvm/b/Functions2;
+.field private static final a:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Landroid/view/View;",
             "Ljava/lang/Boolean;",
             ">;"
@@ -32,7 +32,7 @@
     .line 2
     sget-object v0, Lcom/vk/metrics/reporters/UICrashReporter$findRecyclerAction$1;->a:Lcom/vk/metrics/reporters/UICrashReporter$findRecyclerAction$1;
 
-    sput-object v0, Lcom/vk/metrics/reporters/UICrashReporter;->a:Lkotlin/jvm/b/Functions2;
+    sput-object v0, Lcom/vk/metrics/reporters/UICrashReporter;->a:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -46,13 +46,13 @@
     return-void
 .end method
 
-.method private final a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)Landroid/view/View;
+.method private final a(Landroid/view/View;Lkotlin/jvm/b/b;)Landroid/view/View;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
             "Ljava/lang/Boolean;",
@@ -62,7 +62,7 @@
     .end annotation
 
     .line 39
-    invoke-interface {p2, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
 
     if-eqz v2, :cond_1
 
-    invoke-direct {p0, v2, p2}, Lcom/vk/metrics/reporters/UICrashReporter;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-direct {p0, v2, p2}, Lcom/vk/metrics/reporters/UICrashReporter;->a(Landroid/view/View;Lkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object v2
 
@@ -136,7 +136,7 @@
 
     const-string v0, "this.supportFragmentManager"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->getFragments()Ljava/util/List;
 
@@ -144,7 +144,7 @@
 
     const-string v0, "this.supportFragmentManager.fragments"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 35
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -169,7 +169,7 @@
     const-string v2, "it"
 
     .line 36
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->isVisible()Z
 
@@ -439,7 +439,7 @@
 
     const-string v0, "javaClass.simpleName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -461,7 +461,7 @@
 
     const-string v3, "activity.supportFragmentManager"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroidx/fragment/app/FragmentManager;->getFragments()Ljava/util/List;
 
@@ -469,7 +469,7 @@
 
     const-string v3, "activity.supportFragmentManager.fragments"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     new-instance v4, Ljava/util/ArrayList;
@@ -506,7 +506,7 @@
 
     const-string v6, "it"
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v5, v3}, Lcom/vk/metrics/reporters/UICrashReporter;->a(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -545,9 +545,9 @@
     if-eqz v2, :cond_2
 
     .line 12
-    sget-object v6, Lcom/vk/metrics/reporters/UICrashReporter;->a:Lkotlin/jvm/b/Functions2;
+    sget-object v6, Lcom/vk/metrics/reporters/UICrashReporter;->a:Lkotlin/jvm/b/b;
 
-    invoke-direct {v0, v2, v6}, Lcom/vk/metrics/reporters/UICrashReporter;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-direct {v0, v2, v6}, Lcom/vk/metrics/reporters/UICrashReporter;->a(Landroid/view/View;Lkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object v2
 
@@ -668,7 +668,7 @@
     const-string v7, "]"
 
     .line 19
-    invoke-static/range {v4 .. v12}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v4 .. v12}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -737,7 +737,7 @@
 
     const-string v1, "javaClass.getDeclaredField(\"mState\")"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 

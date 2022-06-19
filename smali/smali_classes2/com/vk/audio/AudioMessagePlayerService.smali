@@ -63,7 +63,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcom/vk/audio/VoiceListener;",
+            "Lcom/vk/audio/i;",
             ">;"
         }
     .end annotation
@@ -98,17 +98,17 @@
 
 .field private S:I
 
-.field private final c:Lcom/vk/bridges/BenchmarkBridge1;
+.field private final c:Lcom/vk/bridges/h;
 
-.field private final d:Lcom/vk/core/concurrent/DispatchQueue;
+.field private final d:Lcom/vk/core/concurrent/b;
 
 .field private final e:Lcom/vk/audio/AudioMessagePlayerService$k;
 
 .field private final f:Lcom/vk/audio/AudioMessagePlayerService$l;
 
-.field private final g:Lcom/vk/core/concurrent/DispatchQueue;
+.field private final g:Lcom/vk/core/concurrent/b;
 
-.field private final h:Lcom/vk/core/concurrent/DispatchQueue;
+.field private final h:Lcom/vk/core/concurrent/b;
 
 
 # direct methods
@@ -132,22 +132,22 @@
     invoke-direct {p0}, Lcom/vk/core/service/BoundService;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/BenchmarkBridge;->a()Lcom/vk/bridges/BenchmarkBridge1;
+    invoke-static {}, Lcom/vk/bridges/i;->a()Lcom/vk/bridges/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->c:Lcom/vk/bridges/BenchmarkBridge1;
+    iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->c:Lcom/vk/bridges/h;
 
     .line 3
-    new-instance v0, Lcom/vk/core/concurrent/DispatchQueue;
+    new-instance v0, Lcom/vk/core/concurrent/b;
 
     const/4 v1, 0x5
 
     const-string v2, "audio_message_player"
 
-    invoke-direct {v0, v2, v1}, Lcom/vk/core/concurrent/DispatchQueue;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/vk/core/concurrent/b;-><init>(Ljava/lang/String;I)V
 
-    iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     .line 4
     new-instance v0, Lcom/vk/audio/AudioMessagePlayerService$k;
@@ -166,22 +166,22 @@
     iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->f:Lcom/vk/audio/AudioMessagePlayerService$l;
 
     .line 6
-    new-instance v0, Lcom/vk/core/concurrent/DispatchQueue;
+    new-instance v0, Lcom/vk/core/concurrent/b;
 
     const-string v3, "fileDecodingQueue"
 
-    invoke-direct {v0, v3, v1}, Lcom/vk/core/concurrent/DispatchQueue;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v1}, Lcom/vk/core/concurrent/b;-><init>(Ljava/lang/String;I)V
 
-    iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/DispatchQueue;
+    iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/b;
 
     .line 7
-    new-instance v0, Lcom/vk/core/concurrent/DispatchQueue;
+    new-instance v0, Lcom/vk/core/concurrent/b;
 
     const-string v3, "playerQueue"
 
-    invoke-direct {v0, v3, v1}, Lcom/vk/core/concurrent/DispatchQueue;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v1}, Lcom/vk/core/concurrent/b;-><init>(Ljava/lang/String;I)V
 
-    iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->h:Lcom/vk/core/concurrent/DispatchQueue;
+    iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->h:Lcom/vk/core/concurrent/b;
 
     .line 8
     new-instance v0, Ljava/util/ArrayList;
@@ -251,7 +251,7 @@
     iput-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->K:Landroid/os/Handler;
 
     .line 17
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const/4 v1, 0x0
 
@@ -540,13 +540,13 @@
     invoke-virtual {v0}, Landroid/media/AudioTrack;->flush()V
 
     .line 35
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/b;
 
     new-instance v1, Lcom/vk/audio/AudioMessagePlayerService$f;
 
     invoke-direct {v1, p0, p1}, Lcom/vk/audio/AudioMessagePlayerService$f;-><init>(Lcom/vk/audio/AudioMessagePlayerService;F)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/DispatchQueue;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/b;->b(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -699,11 +699,11 @@
     .locals 2
 
     .line 18
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->f:Lcom/vk/audio/AudioMessagePlayerService$l;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/DispatchQueue;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/b;->a(Ljava/lang/Runnable;)V
 
     const/4 v0, 0x0
 
@@ -984,7 +984,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/audio/AudioMessageUtils;->a(II)Ljava/io/File;
+    invoke-static {v0, v1}, Lcom/vk/audio/a;->a(II)Ljava/io/File;
 
     move-result-object v0
 
@@ -1007,20 +1007,20 @@
     iput-wide v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->L:J
 
     .line 14
-    iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     iget-object v2, p0, Lcom/vk/audio/AudioMessagePlayerService;->f:Lcom/vk/audio/AudioMessagePlayerService$l;
 
-    invoke-virtual {v1, v2}, Lcom/vk/core/concurrent/DispatchQueue;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Lcom/vk/core/concurrent/b;->b(Ljava/lang/Runnable;)V
 
     .line 15
-    iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     new-instance v2, Lcom/vk/audio/AudioMessagePlayerService$i;
 
     invoke-direct {v2, p0, p1, v0}, Lcom/vk/audio/AudioMessagePlayerService$i;-><init>(Lcom/vk/audio/AudioMessagePlayerService;Lcom/vk/audio/AudioMsgTrackByRecord;Ljava/io/File;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/core/concurrent/DispatchQueue;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Lcom/vk/core/concurrent/b;->b(Ljava/lang/Runnable;)V
 
     goto :goto_1
 
@@ -1072,12 +1072,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/audio/VoiceListener;
+    check-cast v1, Lcom/vk/audio/i;
 
     .line 52
     iget-object v2, p0, Lcom/vk/audio/AudioMessagePlayerService;->N:Lcom/vk/audio/AudioMsgTrackByRecord;
 
-    invoke-interface {v1, p1, v2}, Lcom/vk/audio/VoiceListener;->a(ZLcom/vk/audio/AudioMsgTrackByRecord;)V
+    invoke-interface {v1, p1, v2}, Lcom/vk/audio/i;->a(ZLcom/vk/audio/AudioMsgTrackByRecord;)V
 
     goto :goto_0
 
@@ -1106,13 +1106,13 @@
     new-array v4, v3, [Ljava/lang/Boolean;
 
     .line 19
-    iget-object v5, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v5, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/b;
 
     new-instance v6, Lcom/vk/audio/AudioMessagePlayerService$a;
 
     invoke-direct {v6, p0, v4, p1, v2}, Lcom/vk/audio/AudioMessagePlayerService$a;-><init>(Lcom/vk/audio/AudioMessagePlayerService;[Ljava/lang/Boolean;Ljava/io/File;Ljava/util/concurrent/Semaphore;)V
 
-    invoke-virtual {v5, v6}, Lcom/vk/core/concurrent/DispatchQueue;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v5, v6}, Lcom/vk/core/concurrent/b;->b(Ljava/lang/Runnable;)V
 
     .line 20
     invoke-virtual {v2}, Ljava/util/concurrent/Semaphore;->acquire()V
@@ -1143,11 +1143,11 @@
     invoke-direct {p0}, Lcom/vk/audio/AudioMessagePlayerService;->p()V
 
     .line 24
-    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
+    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/audio/AudioMessageUtils;->c()J
+    invoke-virtual {p1}, Lcom/vk/audio/a;->c()J
 
     move-result-wide v4
 
@@ -1209,13 +1209,13 @@
     invoke-virtual {p1}, Landroid/media/AudioTrack;->play()V
 
     .line 30
-    iget-object p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/b;
 
     new-instance v2, Lcom/vk/audio/AudioMessagePlayerService$c;
 
     invoke-direct {v2, p0}, Lcom/vk/audio/AudioMessagePlayerService$c;-><init>(Lcom/vk/audio/AudioMessagePlayerService;)V
 
-    invoke-virtual {p1, v2}, Lcom/vk/core/concurrent/DispatchQueue;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v2}, Lcom/vk/core/concurrent/b;->b(Ljava/lang/Runnable;)V
 
     .line 31
     iget p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->R:F
@@ -1239,11 +1239,11 @@
     invoke-direct {p0, v3}, Lcom/vk/audio/AudioMessagePlayerService;->b(Z)V
 
     .line 35
-    iget-object p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     iget-object v2, p0, Lcom/vk/audio/AudioMessagePlayerService;->f:Lcom/vk/audio/AudioMessagePlayerService$l;
 
-    invoke-virtual {p1, v2}, Lcom/vk/core/concurrent/DispatchQueue;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v2}, Lcom/vk/core/concurrent/b;->b(Ljava/lang/Runnable;)V
 
     .line 36
     iget-object p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->N:Lcom/vk/audio/AudioMsgTrackByRecord;
@@ -1401,7 +1401,7 @@
 
     .line 8
     :cond_1
-    sget-object v2, Lcom/vk/audio/VoiceIntents;->a:Ljava/lang/String;
+    sget-object v2, Lcom/vk/audio/h;->a:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1468,11 +1468,11 @@
 
     .line 17
     :cond_2
-    iget-object p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->D:Lcom/vk/audio/AudioMessagePlayerService$g;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/concurrent/DispatchQueue;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/concurrent/b;->a(Ljava/lang/Runnable;)V
 
     .line 18
     invoke-direct {p0, v1}, Lcom/vk/audio/AudioMessagePlayerService;->b(Lcom/vk/audio/AudioMsgTrackByRecord;)V
@@ -1496,11 +1496,11 @@
     iput p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->R:F
 
     .line 22
-    iget-object p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object p1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->D:Lcom/vk/audio/AudioMessagePlayerService$g;
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/concurrent/DispatchQueue;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v1}, Lcom/vk/core/concurrent/b;->a(Ljava/lang/Runnable;)V
 
     .line 23
     invoke-direct {p0, v0}, Lcom/vk/audio/AudioMessagePlayerService;->b(Lcom/vk/audio/AudioMsgTrackByRecord;)V
@@ -1518,11 +1518,11 @@
     iput v3, p0, Lcom/vk/audio/AudioMessagePlayerService;->R:F
 
     .line 27
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->D:Lcom/vk/audio/AudioMessagePlayerService$g;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/DispatchQueue;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/b;->a(Ljava/lang/Runnable;)V
 
     .line 28
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1567,7 +1567,7 @@
 
     .line 32
     :cond_5
-    sget-object v2, Lcom/vk/audio/VoiceIntents;->d:Ljava/lang/String;
+    sget-object v2, Lcom/vk/audio/h;->d:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1604,7 +1604,7 @@
 
     .line 38
     :cond_6
-    sget-object v2, Lcom/vk/audio/VoiceIntents;->b:Ljava/lang/String;
+    sget-object v2, Lcom/vk/audio/h;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1628,7 +1628,7 @@
 
     .line 41
     :cond_7
-    sget-object v2, Lcom/vk/audio/VoiceIntents;->c:Ljava/lang/String;
+    sget-object v2, Lcom/vk/audio/h;->c:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1663,7 +1663,7 @@
 
     .line 46
     :cond_9
-    sget-object v2, Lcom/vk/audio/VoiceIntents;->e:Ljava/lang/String;
+    sget-object v2, Lcom/vk/audio/h;->e:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1702,7 +1702,7 @@
 
     .line 52
     :cond_a
-    sget-object v2, Lcom/vk/audio/VoiceIntents;->g:Ljava/lang/String;
+    sget-object v2, Lcom/vk/audio/h;->g:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1737,7 +1737,7 @@
 
     .line 58
     :cond_b
-    sget-object v0, Lcom/vk/audio/VoiceIntents;->f:Ljava/lang/String;
+    sget-object v0, Lcom/vk/audio/h;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1917,13 +1917,13 @@
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->D:Lcom/vk/audio/AudioMessagePlayerService$g;
 
     const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/core/concurrent/DispatchQueue;->a(Ljava/lang/Runnable;J)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/core/concurrent/b;->a(Ljava/lang/Runnable;J)V
 
     return-void
 .end method
@@ -1991,11 +1991,11 @@
     return v0
 .end method
 
-.method static synthetic k(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/core/concurrent/DispatchQueue;
+.method static synthetic k(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/core/concurrent/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object p0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     return-object p0
 .end method
@@ -2009,11 +2009,11 @@
     return-void
 .end method
 
-.method static synthetic l(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/bridges/BenchmarkBridge1;
+.method static synthetic l(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/bridges/h;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/audio/AudioMessagePlayerService;->c:Lcom/vk/bridges/BenchmarkBridge1;
+    iget-object p0, p0, Lcom/vk/audio/AudioMessagePlayerService;->c:Lcom/vk/bridges/h;
 
     return-object p0
 .end method
@@ -2022,13 +2022,13 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/b;
 
     new-instance v1, Lcom/vk/audio/AudioMessagePlayerService$e;
 
     invoke-direct {v1, p0}, Lcom/vk/audio/AudioMessagePlayerService$e;-><init>(Lcom/vk/audio/AudioMessagePlayerService;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/DispatchQueue;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/b;->b(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -2046,13 +2046,13 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->h:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->h:Lcom/vk/core/concurrent/b;
 
     new-instance v1, Lcom/vk/audio/AudioMessagePlayerService$d;
 
     invoke-direct {v1, p0}, Lcom/vk/audio/AudioMessagePlayerService$d;-><init>(Lcom/vk/audio/AudioMessagePlayerService;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/DispatchQueue;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/b;->b(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -2151,11 +2151,11 @@
     invoke-direct {p0}, Lcom/vk/audio/AudioMessagePlayerService;->r()V
 
     .line 14
-    iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     iget-object v2, p0, Lcom/vk/audio/AudioMessagePlayerService;->f:Lcom/vk/audio/AudioMessagePlayerService$l;
 
-    invoke-virtual {v1, v2}, Lcom/vk/core/concurrent/DispatchQueue;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Lcom/vk/core/concurrent/b;->a(Ljava/lang/Runnable;)V
 
     .line 15
     :cond_0
@@ -2209,7 +2209,7 @@
     .locals 4
 
     .line 2
-    invoke-static {p0}, Lcom/vk/audio/AudioMessageUtils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {p0}, Lcom/vk/audio/a;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object v0
 
@@ -2286,12 +2286,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/audio/VoiceListener;
+    check-cast v1, Lcom/vk/audio/i;
 
     .line 3
     iget-object v2, p0, Lcom/vk/audio/AudioMessagePlayerService;->E:Ljava/util/List;
 
-    invoke-interface {v1, v2}, Lcom/vk/audio/VoiceListener;->c(Ljava/util/List;)V
+    invoke-interface {v1, v2}, Lcom/vk/audio/i;->c(Ljava/util/List;)V
 
     goto :goto_0
 
@@ -2391,10 +2391,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/audio/VoiceListener;
+    check-cast v2, Lcom/vk/audio/i;
 
     .line 12
-    invoke-interface {v2, v0}, Lcom/vk/audio/VoiceListener;->a(Lcom/vk/audio/AudioMsgTrackByRecord;)V
+    invoke-interface {v2, v0}, Lcom/vk/audio/i;->a(Lcom/vk/audio/AudioMsgTrackByRecord;)V
 
     goto :goto_1
 
@@ -2415,11 +2415,11 @@
     .locals 2
 
     .line 2
-    sget v0, Lcom/vk/audio/R;->audio_message_play_error:I
+    sget v0, Lcom/vk/audio/d;->audio_message_play_error:I
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZ)V
+    invoke-static {v0, v1}, Lcom/vk/core/util/k1;->a(IZ)V
 
     return-void
 .end method
@@ -2453,7 +2453,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audio/VoiceListener;)V
+.method public a(Lcom/vk/audio/i;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -2482,7 +2482,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/audio/VoiceListener;)V
+.method public b(Lcom/vk/audio/i;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -2542,26 +2542,26 @@
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
     iget-object v1, p0, Lcom/vk/audio/AudioMessagePlayerService;->f:Lcom/vk/audio/AudioMessagePlayerService$l;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/DispatchQueue;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/concurrent/b;->a(Ljava/lang/Runnable;)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->d:Lcom/vk/core/concurrent/b;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/DispatchQueue;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/b;->a()V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->g:Lcom/vk/core/concurrent/b;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/DispatchQueue;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/b;->a()V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->h:Lcom/vk/core/concurrent/DispatchQueue;
+    iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->h:Lcom/vk/core/concurrent/b;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/DispatchQueue;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/b;->a()V
 
     .line 10
     iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService;->F:Ljava/util/Set;

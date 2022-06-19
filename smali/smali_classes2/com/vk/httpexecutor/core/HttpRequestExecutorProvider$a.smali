@@ -23,40 +23,40 @@
 
 .field private final d:Ljava/lang/String;
 
-.field private final e:Lkotlin/jvm/b/Functions;
+.field private final e:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Lcom/vk/httpexecutor/core/HttpRequestExecutorType;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final f:Lkotlin/jvm/b/Functions;
+.field private final f:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final g:Lkotlin/jvm/b/Functions;
+.field private final g:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final h:Lkotlin/jvm/b/Functions;
+.field private final h:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -67,7 +67,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/io/File;Ljava/io/File;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Ljava/util/concurrent/ExecutorService;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/io/File;Ljava/io/File;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -76,17 +76,17 @@
             "Ljava/io/File;",
             "Ljava/io/File;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+",
             "Lcom/vk/httpexecutor/core/HttpRequestExecutorType;",
             ">;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;",
             "Ljava/util/concurrent/ExecutorService;",
@@ -105,13 +105,13 @@
 
     iput-object p4, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->d:Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/Functions;
+    iput-object p5, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/a;
 
-    iput-object p6, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/Functions;
+    iput-object p6, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/a;
 
-    iput-object p7, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/Functions;
+    iput-object p7, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/a;
 
-    iput-object p8, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/Functions;
+    iput-object p8, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/a;
 
     iput-object p9, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->i:Ljava/util/concurrent/ExecutorService;
 
@@ -138,19 +138,19 @@
     return-object v0
 .end method
 
-.method public final c()Lkotlin/jvm/b/Functions;
+.method public final c()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Lcom/vk/httpexecutor/core/HttpRequestExecutorType;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
@@ -164,19 +164,19 @@
     return-object v0
 .end method
 
-.method public final e()Lkotlin/jvm/b/Functions;
+.method public final e()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
@@ -196,7 +196,7 @@
 
     iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->a:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -206,7 +206,7 @@
 
     iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->b:Ljava/io/File;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -216,7 +216,7 @@
 
     iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->c:Ljava/io/File;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -226,47 +226,47 @@
 
     iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/a;
 
-    iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/Functions;
+    iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/Functions;
-
-    iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/Functions;
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/a;
 
-    iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/Functions;
+    iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/a;
 
-    iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/Functions;
+    iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/a;
+
+    iget-object v1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/a;
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -276,7 +276,7 @@
 
     iget-object p1, p1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->i:Ljava/util/concurrent/ExecutorService;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -296,19 +296,19 @@
     return p1
 .end method
 
-.method public final f()Lkotlin/jvm/b/Functions;
+.method public final f()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
@@ -322,19 +322,19 @@
     return-object v0
 .end method
 
-.method public final h()Lkotlin/jvm/b/Functions;
+.method public final h()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
@@ -414,7 +414,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/Functions;
+    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/a;
 
     if-eqz v2, :cond_4
 
@@ -432,7 +432,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/Functions;
+    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/a;
 
     if-eqz v2, :cond_5
 
@@ -450,7 +450,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/Functions;
+    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/a;
 
     if-eqz v2, :cond_6
 
@@ -468,7 +468,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/Functions;
+    iget-object v2, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/a;
 
     if-eqz v2, :cond_7
 
@@ -552,7 +552,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/Functions;
+    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e:Lkotlin/jvm/b/a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -560,7 +560,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/Functions;
+    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f:Lkotlin/jvm/b/a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -568,7 +568,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/Functions;
+    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->g:Lkotlin/jvm/b/a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -576,7 +576,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/Functions;
+    iget-object v1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->h:Lkotlin/jvm/b/a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

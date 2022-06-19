@@ -116,7 +116,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/cameraui/builder/CameraParams$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/cameraui/builder/CameraParams$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/cameraui/builder/CameraParams$a;
@@ -358,7 +358,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/vk/cameraui/CameraUI$States;Ljava/util/List;Lcom/vk/dto/stories/entities/StorySharingInfo;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLcom/vk/dto/stories/model/StoryEntryExtended;ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryAnswer;Lcom/vk/dto/stories/model/web/StoryBox;Lcom/vk/dto/stories/StoryPostInfo;Lcom/vk/dto/polls/Poll;Ljava/lang/Integer;ZZLjava/util/List;ZZLcom/vk/dto/photo/Photo;Ljava/lang/String;Lcom/vk/stories/clickable/models/StoryMusicInfo;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/vk/cameraui/CameraUI$States;Ljava/util/List;Lcom/vk/dto/stories/entities/StorySharingInfo;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLcom/vk/dto/stories/model/StoryEntryExtended;ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryAnswer;Lcom/vk/dto/stories/model/web/StoryBox;Lcom/vk/dto/stories/StoryPostInfo;Lcom/vk/dto/polls/Poll;Ljava/lang/Integer;ZZLjava/util/List;ZZLcom/vk/dto/photo/Photo;Ljava/lang/String;Lcom/vk/stories/clickable/models/StoryMusicInfo;Ljava/lang/String;Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 1

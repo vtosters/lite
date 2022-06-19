@@ -3,7 +3,7 @@
 .source "NewsfeedFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/newsfeed/NewsfeedFragment$bindStoriesResponse$1$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -89,7 +89,7 @@
 
     const-string v2, "activity ?: return@doAfterAnimation"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     new-instance v2, Landroid/graphics/Rect;
@@ -120,11 +120,11 @@
     invoke-virtual {v4, v2}, Lcom/vk/hints/HintsManager$e;->a(Landroid/view/View$OnClickListener;)Lcom/vk/hints/HintsManager$e;
 
     .line 8
-    invoke-virtual {v4, v1}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/Dismissable;
+    invoke-virtual {v4, v1}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/w;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/vk/newsfeed/NewsfeedFragment;->a(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/core/util/Dismissable;)V
+    invoke-static {v3, v0}, Lcom/vk/newsfeed/NewsfeedFragment;->a(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/core/util/w;)V
 
     :cond_0
     return-void

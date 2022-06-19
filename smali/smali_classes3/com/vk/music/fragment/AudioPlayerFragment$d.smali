@@ -1,5 +1,5 @@
 .class Lcom/vk/music/fragment/AudioPlayerFragment$d;
-.super Lcom/vk/music/model/v/MusicTrackModelNotificationCallback;
+.super Lcom/vk/music/model/v/b;
 .source "AudioPlayerFragment.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$d;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    invoke-direct {p0}, Lcom/vk/music/model/v/MusicTrackModelNotificationCallback;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/model/v/b;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/music/common/MusicTrackModel;Lcom/vk/dto/music/MusicTrack;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Z)V
+.method public a(Lcom/vk/music/common/e;Lcom/vk/dto/music/MusicTrack;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Z)V
     .locals 0
     .param p2    # Lcom/vk/dto/music/MusicTrack;
         .annotation build Landroidx/annotation/Nullable;
@@ -53,24 +53,24 @@
     .end param
 
     .line 1
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/music/model/v/MusicTrackModelNotificationCallback;->a(Lcom/vk/music/common/MusicTrackModel;Lcom/vk/dto/music/MusicTrack;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Z)V
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/music/model/v/b;->a(Lcom/vk/music/common/e;Lcom/vk/dto/music/MusicTrack;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Z)V
 
     if-nez p3, :cond_0
 
     .line 2
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$d;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
+    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
 
-    iget-object p2, p1, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
+    iget-object p2, p1, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
 
-    invoke-virtual {p1, p2}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;)V
+    invoke-virtual {p1, p2}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     :cond_0
     return-void
 .end method
 
-.method public b(Lcom/vk/music/common/MusicTrackModel;Lcom/vk/dto/music/MusicTrack;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Z)V
+.method public b(Lcom/vk/music/common/e;Lcom/vk/dto/music/MusicTrack;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Z)V
     .locals 0
     .param p2    # Lcom/vk/dto/music/MusicTrack;
         .annotation build Landroidx/annotation/Nullable;
@@ -82,18 +82,18 @@
     .end param
 
     .line 1
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/music/model/v/MusicTrackModelNotificationCallback;->b(Lcom/vk/music/common/MusicTrackModel;Lcom/vk/dto/music/MusicTrack;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Z)V
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/music/model/v/b;->b(Lcom/vk/music/common/e;Lcom/vk/dto/music/MusicTrack;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Z)V
 
     if-nez p3, :cond_0
 
     .line 2
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$d;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
+    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
 
-    iget-object p2, p1, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
+    iget-object p2, p1, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
 
-    invoke-virtual {p1, p2}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;)V
+    invoke-virtual {p1, p2}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     :cond_0
     return-void

@@ -1,33 +1,33 @@
 .class public final Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;
-.super Lcom/vk/catalog2/core/api/SearchRequestFactory;
+.super Lcom/vk/catalog2/core/api/g;
 .source "CatalogGetAudioSearchRequestFactory.kt"
 
 
 # static fields
-.field static final synthetic h:[Lkotlin/u/KProperty5;
+.field static final synthetic h:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final d:Lkotlin/Lazy2;
+.field private final d:Lkotlin/e;
 
-.field private final e:Lio/reactivex/functions/BiFunction;
+.field private final e:Lc/a/z/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/BiFunction<",
-            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
+            "Lc/a/z/c<",
+            "Lcom/vk/catalog2/core/api/dto/d<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;",
-            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
+            "Lcom/vk/catalog2/core/api/dto/d<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final f:Lcom/vk/music/k/MusicSuggestionModel;
+.field private final f:Lcom/vk/music/k/a;
 
 .field private final g:Ljava/lang/String;
 
@@ -38,13 +38,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -52,44 +52,44 @@
 
     const-string v4, "getHeaderTitle()Ljava/lang/String;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->h:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->h:[Lkotlin/u/j;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/catalog2/core/CatalogParser;Lcom/vk/music/k/MusicSuggestionModel;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/vk/catalog2/core/h;Lcom/vk/music/k/a;Ljava/lang/String;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/api/SearchRequestFactory;-><init>(Lcom/vk/catalog2/core/CatalogParser;)V
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/api/g;-><init>(Lcom/vk/catalog2/core/h;)V
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->f:Lcom/vk/music/k/MusicSuggestionModel;
+    iput-object p2, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->f:Lcom/vk/music/k/a;
 
     iput-object p3, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->g:Ljava/lang/String;
 
     .line 2
     sget-object p1, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory$headerTitle$2;->a:Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory$headerTitle$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->d:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->d:Lkotlin/e;
 
     .line 3
     new-instance p1, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory$a;
 
     invoke-direct {p1, p0}, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory$a;-><init>(Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;)V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->e:Lio/reactivex/functions/BiFunction;
+    iput-object p1, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->e:Lc/a/z/c;
 
     return-void
 .end method
@@ -110,9 +110,9 @@
     new-instance v0, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButtonClearRecent;
 
     .line 3
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    sget v2, Lcom/vk/catalog2/core/R9;->music_button_clear:I
+    sget v2, Lcom/vk/catalog2/core/u;->music_button_clear:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -120,7 +120,7 @@
 
     const-string v2, "AppContextHolder.context\u2026tring.music_button_clear)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-direct {p0, p1}, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->e(Ljava/util/List;)Ljava/util/List;
@@ -235,22 +235,22 @@
     return-object v0
 .end method
 
-.method private final c(Ljava/lang/String;)Lio/reactivex/Single;
+.method private final c(Ljava/lang/String;)Lc/a/t;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lio/reactivex/Single<",
-            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
+            "Lc/a/t<",
+            "Lcom/vk/catalog2/core/api/dto/d<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;>;"
         }
     .end annotation
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/api/SearchRequestFactory;->c()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/api/g;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -267,17 +267,17 @@
 
     .line 3
     :goto_0
-    new-instance v2, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchSection;
+    new-instance v2, Lcom/vk/catalog2/core/api/music/c;
 
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/api/SearchRequestFactory;->a()Lcom/vk/catalog2/core/CatalogParser;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/api/g;->a()Lcom/vk/catalog2/core/h;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/api/SearchRequestFactory;->c()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/api/g;->c()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v2, v3, v0, v4}, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchSection;-><init>(Lcom/vk/catalog2/core/CatalogParser;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v0, v4}, Lcom/vk/catalog2/core/api/music/c;-><init>(Lcom/vk/catalog2/core/h;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -299,50 +299,50 @@
     if-eqz p1, :cond_2
 
     .line 5
-    invoke-static {v2, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->c(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Single;
+    invoke-static {v2, v1, v0, v1}, Lcom/vk/api/base/d;->c(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/t;
 
     move-result-object p1
 
     .line 6
-    iget-object v0, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->f:Lcom/vk/music/k/MusicSuggestionModel;
+    iget-object v0, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->f:Lcom/vk/music/k/a;
 
-    invoke-interface {v0}, Lcom/vk/music/k/MusicSuggestionModel;->a()Lio/reactivex/Single;
+    invoke-interface {v0}, Lcom/vk/music/k/a;->a()Lc/a/t;
 
     move-result-object v0
 
     .line 7
-    iget-object v1, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->e:Lio/reactivex/functions/BiFunction;
+    iget-object v1, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->e:Lc/a/z/c;
 
     .line 8
-    invoke-static {p1, v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/SingleSource;Lio/reactivex/SingleSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Single;
+    invoke-static {p1, v0, v1}, Lc/a/t;->a(Lc/a/x;Lc/a/x;Lc/a/z/c;)Lc/a/t;
 
     move-result-object p1
 
     const-string v0, "Single.zip(\n            \u2026ionFunction\n            )"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 9
     :cond_2
-    invoke-static {v2, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->c(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Single;
+    invoke-static {v2, v1, v0, v1}, Lcom/vk/api/base/d;->c(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/t;
 
     move-result-object p1
 
     .line 10
     :goto_2
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
 
     move-result-object p1
 
     const-string v0, "observable\n             \u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -381,7 +381,7 @@
 
     const-string v0, "headerTitle"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -513,15 +513,15 @@
 .method private final d()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->d:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->d:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->h:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->h:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -640,7 +640,7 @@
 
 
 # virtual methods
-.method public b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Lio/reactivex/Observable;
+.method public b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Lc/a/m;
     .locals 0
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -655,25 +655,25 @@
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
             ")",
-            "Lio/reactivex/Observable<",
-            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
+            "Lc/a/m<",
+            "Lcom/vk/catalog2/core/api/dto/d<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;>;"
         }
     .end annotation
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->c(Ljava/lang/String;)Lio/reactivex/Single;
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;->c(Ljava/lang/String;)Lc/a/t;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lio/reactivex/Single;->c()Lio/reactivex/Observable;
+    invoke-virtual {p1}, Lc/a/t;->c()Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "getCatalogAudioSearchObs\u2026ble(query).toObservable()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

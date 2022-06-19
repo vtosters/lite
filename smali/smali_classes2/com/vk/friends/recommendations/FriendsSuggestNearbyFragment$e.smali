@@ -3,7 +3,7 @@
 .source "FriendsSuggestNearbyFragment.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/VoidF2Int;
+.implements Lcom/vk/common/g/j;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/VoidF2Int<",
+        "Lcom/vk/common/g/j<",
         "Lcom/vk/dto/user/RequestUserProfile;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -57,7 +57,7 @@
 
     const-string p3, "request"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2, p1}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->a(Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;Lcom/vk/dto/user/RequestUserProfile;)V
 

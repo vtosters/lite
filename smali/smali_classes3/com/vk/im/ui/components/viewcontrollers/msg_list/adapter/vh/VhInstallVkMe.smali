@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhInstallVkMe;
-.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;
+.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;
 .source "VhInstallVkMe.kt"
 
 
@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhInstallVkMe$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhInstallVkMe$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhInstallVkMe;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhInstallVkMe$a;
 
@@ -34,21 +34,21 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;-><init>(Landroid/view/View;)V
 
     .line 2
     new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhInstallVkMe$1;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhInstallVkMe$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhInstallVkMe;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
+.method public a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
     .locals 3
 
     .line 1
@@ -56,9 +56,9 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->m()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->m()Z
 
     move-result v1
 
@@ -66,7 +66,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
 
     move-result p1
 

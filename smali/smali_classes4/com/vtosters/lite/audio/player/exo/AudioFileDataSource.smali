@@ -55,7 +55,7 @@
     .line 3
     iget-object v0, p1, Lcom/google/android/exoplayer2/upstream/n;->a:Landroid/net/Uri;
 
-    invoke-static {v0}, Lcom/vtosters/lite/audio/player/exo/AudioCacheHelper;->b(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/exo/a;->b(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -360,7 +360,7 @@
     move-result p3
 
     .line 4
-    invoke-static {p1, p2, p3, v1, v2}, Lcom/vtosters/lite/audio/utils/Utils;->a([BIIJ)V
+    invoke-static {p1, p2, p3, v1, v2}, Lcom/vtosters/lite/audio/utils/e;->a([BIIJ)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 

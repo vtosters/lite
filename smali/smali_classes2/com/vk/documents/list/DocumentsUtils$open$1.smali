@@ -3,12 +3,12 @@
 .source "DocumentsUtils.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/documents/list/DocumentsUtils;->a(IILjava/lang/String;Landroid/content/Context;Lcom/vk/common/links/OpenCallback;)V
+    value = Lcom/vk/documents/list/DocumentsUtils;->a(IILjava/lang/String;Landroid/content/Context;Lcom/vk/common/links/f;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/api/base/Document;",
         ">;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Landroid/app/Activity;
 
-.field final synthetic b:Lcom/vk/common/links/OpenCallback;
+.field final synthetic b:Lcom/vk/common/links/f;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/vk/common/links/OpenCallback;)V
+.method constructor <init>(Landroid/app/Activity;Lcom/vk/common/links/f;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$open$1;->a:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/vk/documents/list/DocumentsUtils$open$1;->b:Lcom/vk/common/links/OpenCallback;
+    iput-object p2, p0, Lcom/vk/documents/list/DocumentsUtils$open$1;->b:Lcom/vk/common/links/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,7 +58,7 @@
 
     const-string v1, "document"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/documents/list/DocumentsUtils$open$1;->a:Landroid/app/Activity;
 
@@ -66,14 +66,14 @@
 
     invoke-direct {v2, p0, p1}, Lcom/vk/documents/list/DocumentsUtils$open$1$1;-><init>(Lcom/vk/documents/list/DocumentsUtils$open$1;Lcom/vk/api/base/Document;)V
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/b;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$open$1;->b:Lcom/vk/common/links/OpenCallback;
+    iget-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$open$1;->b:Lcom/vk/common/links/f;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
 
     :cond_0
     return-void

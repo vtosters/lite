@@ -3,15 +3,15 @@
 .source "AssetsDialogThemesProvider.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/j/DialogThemesProvider;
+.implements Lcom/vk/im/engine/j/a;
 
 
 # static fields
-.field static final synthetic c:[Lkotlin/u/KProperty5;
+.field static final synthetic c:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
 .field private final b:Landroid/content/Context;
 
@@ -22,13 +22,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -36,15 +36,15 @@
 
     const-string v4, "getThemes()Ljava/util/Map;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;->c:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;->c:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -62,11 +62,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider$themes$2;-><init>(Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;->a:Lkotlin/e;
 
     return-void
 .end method
@@ -114,7 +114,7 @@
 
     const-string v2, "context.resources"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
@@ -131,7 +131,7 @@
     .line 3
     new-instance v1, Lorg/json/JSONObject;
 
-    invoke-static {v0}, Lkotlin/io/ReadWrite1;->a(Ljava/io/Reader;)Ljava/lang/String;
+    invoke-static {v0}, Lkotlin/io/l;->a(Ljava/io/Reader;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -156,7 +156,7 @@
 
     const-string v3, "paletteJo.keys()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     :goto_0
@@ -207,7 +207,7 @@
 
     const-string v2, "context.resources"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
@@ -224,7 +224,7 @@
     .line 3
     new-instance v1, Lorg/json/JSONObject;
 
-    invoke-static {v0}, Lkotlin/io/ReadWrite1;->a(Ljava/io/Reader;)Ljava/lang/String;
+    invoke-static {v0}, Lkotlin/io/l;->a(Ljava/io/Reader;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -253,29 +253,29 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
+            "Lcom/vk/im/engine/models/dialogs/f;",
             ">;"
         }
     .end annotation
 
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lcom/vk/im/engine/models/dialogs/DialogThemeName;
+    new-array v0, v0, [Lcom/vk/im/engine/models/dialogs/f;
 
     .line 2
-    sget-object v1, Lcom/vk/im/engine/models/dialogs/DialogThemeName$d;->INSTANCE:Lcom/vk/im/engine/models/dialogs/DialogThemeName$d;
+    sget-object v1, Lcom/vk/im/engine/models/dialogs/f$d;->d:Lcom/vk/im/engine/models/dialogs/f$d;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/vk/im/engine/models/dialogs/DialogThemeName$e;->INSTANCE:Lcom/vk/im/engine/models/dialogs/DialogThemeName$e;
+    sget-object v1, Lcom/vk/im/engine/models/dialogs/f$e;->d:Lcom/vk/im/engine/models/dialogs/f$e;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/vk/im/engine/models/dialogs/DialogThemeName$c;->INSTANCE:Lcom/vk/im/engine/models/dialogs/DialogThemeName$c;
+    sget-object v1, Lcom/vk/im/engine/models/dialogs/f$c;->d:Lcom/vk/im/engine/models/dialogs/f$c;
 
     const/4 v2, 0x2
 
@@ -307,21 +307,21 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
+            "Lcom/vk/im/engine/models/dialogs/f;",
             "Lcom/vk/im/engine/models/dialogs/DialogTheme;",
             ">;"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;->c:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;->c:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

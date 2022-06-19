@@ -36,7 +36,7 @@
 .method public final call()Ljava/lang/Object;
     .locals 1
 
-    invoke-static {}, Lcom/vtosters/lite/fragments/SettingsGeneralFragment;->V4()Ljava/lang/Integer;
+    invoke-static {}, Lcom/vtosters/lite/fragments/z1;->V4()Ljava/lang/Integer;
 
     move-result-object v0
 

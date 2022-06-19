@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/media/player/video/MatrixPositionAnimator;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;ILandroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;IZLcom/vk/media/player/video/MatrixProvider;)V
+    value = Lcom/vk/media/player/video/MatrixPositionAnimator;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;ILandroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;IZLcom/vk/media/player/video/f;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -36,13 +36,13 @@
 
 .field final synthetic f:F
 
-.field final synthetic g:Lcom/vk/media/player/video/MatrixProvider;
+.field final synthetic g:Lcom/vk/media/player/video/f;
 
 .field final synthetic h:F
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/media/player/video/MatrixPositionAnimator$6;Lcom/vk/media/player/video/MatrixPositionAnimator$5;FFFFLcom/vk/media/player/video/MatrixProvider;FFFF)V
+.method constructor <init>(Lcom/vk/media/player/video/MatrixPositionAnimator$6;Lcom/vk/media/player/video/MatrixPositionAnimator$5;FFFFLcom/vk/media/player/video/f;FFFF)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->a:Lcom/vk/media/player/video/MatrixPositionAnimator$6;
@@ -57,7 +57,7 @@
 
     iput p6, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->f:F
 
-    iput-object p7, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/MatrixProvider;
+    iput-object p7, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/f;
 
     iput p8, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->h:F
 
@@ -80,7 +80,7 @@
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -128,7 +128,7 @@
 
     .line 6
     :try_start_0
-    iget-object v2, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/MatrixProvider;
+    iget-object v2, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/f;
 
     check-cast v2, Landroid/view/View;
 
@@ -139,7 +139,7 @@
     .line 7
     :catchall_0
     :try_start_1
-    iget-object v0, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/MatrixProvider;
+    iget-object v0, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/f;
 
     check-cast v0, Landroid/view/View;
 
@@ -149,7 +149,7 @@
 
     .line 8
     :catchall_1
-    iget-object v0, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/MatrixProvider;
+    iget-object v0, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/f;
 
     check-cast v0, Landroid/view/View;
 
@@ -166,7 +166,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/MatrixProvider;
+    iget-object v0, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$a;->g:Lcom/vk/media/player/video/f;
 
     check-cast v0, Landroid/view/View;
 

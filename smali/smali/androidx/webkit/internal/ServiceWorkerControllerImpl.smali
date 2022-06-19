@@ -222,7 +222,7 @@
     invoke-direct {v1, p1}, Landroidx/webkit/internal/ServiceWorkerClientAdapter;-><init>(Landroidx/webkit/ServiceWorkerClientCompat;)V
 
     .line 6
-    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
+    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
 
     move-result-object p1
 

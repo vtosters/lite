@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+.field private final a:Lcom/vk/im/engine/internal/storage/b;
 
 
 # direct methods
@@ -30,25 +30,25 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->b:Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/b;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
     return-void
 .end method
 
-.method private final a(Landroid/database/Cursor;)Lcom/vk/im/engine/models/contacts/AndroidContact;
+.method private final a(Landroid/database/Cursor;)Lcom/vk/im/engine/models/contacts/a;
     .locals 9
 
     const-string v0, "id"
@@ -109,9 +109,9 @@
 
     .line 16
     :goto_0
-    new-instance v2, Lcom/vk/im/engine/models/contacts/AndroidContact;
+    new-instance v2, Lcom/vk/im/engine/models/contacts/a;
 
-    invoke-direct {v2, v1, p1, v0}, Lcom/vk/im/engine/models/contacts/AndroidContact;-><init>(Ljava/lang/String;Ljava/util/Set;I)V
+    invoke-direct {v2, v1, p1, v0}, Lcom/vk/im/engine/models/contacts/a;-><init>(Ljava/lang/String;Ljava/util/Set;I)V
 
     return-object v2
 .end method
@@ -132,15 +132,15 @@
         value = {
             "()",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/contacts/AndroidContact;",
+            "Lcom/vk/im/engine/models/contacts/a;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -183,7 +183,7 @@
     move-result v2
 
     .line 6
-    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/models/contacts/AndroidContact;
+    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/models/contacts/a;
 
     move-result-object v3
 
@@ -238,7 +238,7 @@
     const-string v2, ","
 
     .line 10
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -262,9 +262,9 @@
     move-result-object p1
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -279,7 +279,7 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/models/contacts/AndroidContact;",
+            "Lcom/vk/im/engine/models/contacts/a;",
             ">;)V"
         }
     .end annotation
@@ -295,9 +295,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -307,7 +307,7 @@
 
     invoke-direct {v1, v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager$put$1;-><init>(Ljava/lang/String;Ljava/util/Collection;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 .end method

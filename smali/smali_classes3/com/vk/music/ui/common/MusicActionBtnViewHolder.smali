@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/ui/common/MusicActionBtnViewHolder;
-.super Lcom/vk/music/ui/common/MusicViewHolder;
+.super Lcom/vk/music/ui/common/o;
 .source "MusicActionBtnViewHolder.kt"
 
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/music/ui/common/MusicViewHolder<",
+        "Lcom/vk/music/ui/common/o<",
         "Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;",
         ">;"
     }
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;
@@ -49,14 +49,14 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, v2, v3, v1}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v2, v3, v1}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;-><init>(ZILkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;->e:Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;
 
     return-void
 .end method
 
-.method public constructor <init>(ILandroid/view/View;Ljava/lang/String;Lcom/vk/core/ui/IdClickListener;II)V
+.method public constructor <init>(ILandroid/view/View;Ljava/lang/String;Lcom/vk/core/ui/k;II)V
     .locals 7
     .param p5    # I
         .annotation build Landroidx/annotation/DrawableRes;
@@ -71,13 +71,13 @@
             "(I",
             "Landroid/view/View;",
             "Ljava/lang/String;",
-            "Lcom/vk/core/ui/IdClickListener<",
+            "Lcom/vk/core/ui/k<",
             "*>;II)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/music/ui/common/MusicViewHolder;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lcom/vk/music/ui/common/o;-><init>(Landroid/view/View;)V
 
     iput-object p3, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;->b:Ljava/lang/String;
 
@@ -97,13 +97,13 @@
     const-string p3, "textView"
 
     .line 3
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;
 
-    invoke-direct {p3, p0, p4, p1}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;-><init>(Lcom/vk/music/ui/common/MusicActionBtnViewHolder;Lcom/vk/core/ui/IdClickListener;I)V
+    invoke-direct {p3, p0, p4, p1}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;-><init>(Lcom/vk/music/ui/common/MusicActionBtnViewHolder;Lcom/vk/core/ui/k;I)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 4
     iget p1, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;->d:I
@@ -115,7 +115,7 @@
 
     const p3, 0x7f040022
 
-    invoke-static {p2, p1, p3}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
+    invoke-static {p2, p1, p3}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;->b:Ljava/lang/String;
@@ -235,7 +235,7 @@
     return-void
 .end method
 
-.method public constructor <init>(ILandroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/ui/IdClickListener;III)V
+.method public constructor <init>(ILandroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/ui/k;III)V
     .locals 9
     .param p5    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -254,7 +254,7 @@
             "(I",
             "Landroid/view/ViewGroup;",
             "Ljava/lang/String;",
-            "Lcom/vk/core/ui/IdClickListener<",
+            "Lcom/vk/core/ui/k<",
             "*>;III)V"
         }
     .end annotation
@@ -280,7 +280,7 @@
 
     const-string v0, "LayoutInflater.from(pare\u2026(layoutId, parent, false)"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v2, p0
 
@@ -294,12 +294,12 @@
 
     move/from16 v8, p7
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;-><init>(ILandroid/view/View;Ljava/lang/String;Lcom/vk/core/ui/IdClickListener;II)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;-><init>(ILandroid/view/View;Ljava/lang/String;Lcom/vk/core/ui/k;II)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILandroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/ui/IdClickListener;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ILandroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/ui/k;IIIILkotlin/jvm/internal/i;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x10
@@ -331,7 +331,7 @@
     move/from16 v8, p7
 
     .line 12
-    invoke-direct/range {v1 .. v8}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;-><init>(ILandroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/ui/IdClickListener;III)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder;-><init>(ILandroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/ui/k;III)V
 
     return-void
 .end method
@@ -355,7 +355,7 @@
     const-string v1, "textView"
 
     .line 3
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;->a()Z
 

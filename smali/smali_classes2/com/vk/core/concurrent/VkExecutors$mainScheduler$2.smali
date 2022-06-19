@@ -3,7 +3,7 @@
 .source "VkExecutors.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lio/reactivex/Scheduler;",
+        "Lkotlin/jvm/b/a<",
+        "Lc/a/s;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final invoke()Lio/reactivex/Scheduler;
+.method public final invoke()Lc/a/s;
     .locals 2
 
     .line 2
@@ -65,7 +65,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lio/reactivex/schedulers/AndroidSchedulers;->a(Landroid/os/Looper;Z)Lio/reactivex/Scheduler;
+    invoke-static {v0, v1}, Lc/a/y/c/a;->a(Landroid/os/Looper;Z)Lc/a/s;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/concurrent/VkExecutors$mainScheduler$2;->invoke()Lio/reactivex/Scheduler;
+    invoke-virtual {p0}, Lcom/vk/core/concurrent/VkExecutors$mainScheduler$2;->invoke()Lc/a/s;
 
     move-result-object v0
 

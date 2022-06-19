@@ -3,8 +3,8 @@
 .source "MaybeSubscribeOn.java"
 
 # interfaces
-.implements Lio/reactivex/MaybeObserver;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lc/a/j;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -23,11 +23,11 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         ">;",
-        "Lio/reactivex/MaybeObserver<",
+        "Lc/a/j<",
         "TT;>;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -37,10 +37,10 @@
 
 
 # instance fields
-.field final downstream:Lio/reactivex/MaybeObserver;
+.field final downstream:Lc/a/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/MaybeObserver<",
+            "Lc/a/j<",
             "-TT;>;"
         }
     .end annotation
@@ -50,12 +50,12 @@
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/MaybeObserver;)V
+.method constructor <init>(Lc/a/j;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/MaybeObserver<",
+            "Lc/a/j<",
             "-TT;>;)V"
         }
     .end annotation
@@ -64,7 +64,7 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$SubscribeOnMaybeObserver;->downstream:Lio/reactivex/MaybeObserver;
+    iput-object p1, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$SubscribeOnMaybeObserver;->downstream:Lc/a/j;
 
     .line 3
     new-instance p1, Lio/reactivex/internal/disposables/SequentialDisposable;
@@ -78,11 +78,11 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -96,9 +96,9 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$SubscribeOnMaybeObserver;->downstream:Lio/reactivex/MaybeObserver;
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$SubscribeOnMaybeObserver;->downstream:Lc/a/j;
 
-    invoke-interface {v0, p1}, Lio/reactivex/MaybeObserver;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lc/a/j;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -107,9 +107,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$SubscribeOnMaybeObserver;->downstream:Lio/reactivex/MaybeObserver;
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$SubscribeOnMaybeObserver;->downstream:Lc/a/j;
 
-    invoke-interface {v0, p1}, Lio/reactivex/MaybeObserver;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lc/a/j;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -118,9 +118,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$SubscribeOnMaybeObserver;->downstream:Lio/reactivex/MaybeObserver;
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$SubscribeOnMaybeObserver;->downstream:Lc/a/j;
 
-    invoke-interface {v0}, Lio/reactivex/MaybeObserver;->b()V
+    invoke-interface {v0}, Lc/a/j;->b()V
 
     return-void
 .end method
@@ -133,9 +133,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;)Z
 
     move-result v0
 

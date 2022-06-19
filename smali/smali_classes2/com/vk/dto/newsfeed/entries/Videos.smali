@@ -3,9 +3,9 @@
 .source "Videos.kt"
 
 # interfaces
-.implements Lcom/vk/dto/newsfeed/Likable;
-.implements Lcom/vk/dto/newsfeed/Ownable;
-.implements Lcom/vk/dto/newsfeed/WithAttachments;
+.implements Lcom/vk/dto/newsfeed/c;
+.implements Lcom/vk/dto/newsfeed/d;
+.implements Lcom/vk/dto/newsfeed/h;
 
 
 # annotations
@@ -58,7 +58,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/Videos$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/Videos$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/entries/Videos;->h:Lcom/vk/dto/newsfeed/entries/Videos$b;
 
@@ -104,7 +104,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILcom/vk/dto/newsfeed/Owner;ILjava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ILcom/vk/dto/newsfeed/Owner;ILjava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;ILkotlin/jvm/internal/i;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x10
@@ -423,11 +423,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/dto/newsfeed/Likable;)V
+.method public a(Lcom/vk/dto/newsfeed/c;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/dto/newsfeed/Likable$a;->a(Lcom/vk/dto/newsfeed/Likable;Lcom/vk/dto/newsfeed/Likable;)V
+    invoke-static {p0, p1}, Lcom/vk/dto/newsfeed/c$a;->a(Lcom/vk/dto/newsfeed/c;Lcom/vk/dto/newsfeed/c;)V
 
     return-void
 .end method

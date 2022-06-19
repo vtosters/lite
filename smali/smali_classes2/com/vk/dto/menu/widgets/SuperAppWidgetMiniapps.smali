@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps;->h:Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps$b;
 
@@ -92,7 +92,7 @@
     move-object v2, p2
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/menu/widgets/SuperAppWidget;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/menu/widgets/SuperAppWidget$UpdateOptions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/menu/widgets/SuperAppWidget;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/menu/widgets/SuperAppWidget$UpdateOptions;ILkotlin/jvm/internal/i;)V
 
     iput-object p3, p0, Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps;->e:Ljava/lang/String;
 

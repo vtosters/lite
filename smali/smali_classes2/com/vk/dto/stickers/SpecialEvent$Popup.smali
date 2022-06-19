@@ -70,7 +70,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stickers/SpecialEvent$Popup$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stickers/SpecialEvent$Popup$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/stickers/SpecialEvent$Popup;->g:Lcom/vk/dto/stickers/SpecialEvent$Popup$b;
 

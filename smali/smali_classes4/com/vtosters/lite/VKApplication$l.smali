@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/engine/events/h;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;)V
+.method public final a(Lcom/vk/im/engine/events/h;)V
     .locals 0
 
     .line 1
@@ -69,9 +69,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;
+    check-cast p1, Lcom/vk/im/engine/events/h;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$l;->a(Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$l;->a(Lcom/vk/im/engine/events/h;)V
 
     return-void
 .end method

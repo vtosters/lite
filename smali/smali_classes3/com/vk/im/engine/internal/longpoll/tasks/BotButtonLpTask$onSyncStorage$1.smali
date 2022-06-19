@@ -3,12 +3,12 @@
 .source "BotButtonLpTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/longpoll/tasks/BotButtonLpTask;->b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
+    value = Lcom/vk/im/engine/internal/longpoll/tasks/BotButtonLpTask;->b(Lcom/vk/im/engine/internal/longpoll/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/instantjobs/InstantJob;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -50,27 +50,27 @@
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/im/engine/internal/jobs/msg/BotBtnEventTimeoutJob;
+    instance-of v0, p1, Lcom/vk/im/engine/internal/jobs/msg/a;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vk/im/engine/internal/jobs/msg/BotBtnEventTimeoutJob;
+    check-cast p1, Lcom/vk/im/engine/internal/jobs/msg/a;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/jobs/msg/BotBtnEventTimeoutJob;->l()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/jobs/msg/a;->l()Ljava/lang/String;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/BotButtonLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/BotButtonLpTask;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/longpoll/tasks/BotButtonLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/BotButtonLpTask;)Lcom/vk/im/engine/models/x/BotButtonLpEvent;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/longpoll/tasks/BotButtonLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/BotButtonLpTask;)Lcom/vk/im/engine/models/x/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/x/BotButtonLpEvent;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/x/a;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -3,7 +3,7 @@
 .source "ProductPropertyVariantsHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vtosters/lite/ui/holder/market/properties/e;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
+.method public final a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
     .locals 2
 
     .line 1
@@ -54,9 +54,9 @@
 
     iget-object v1, v0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$onBind$1;->a:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder;
 
-    iget-object v0, v0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$onBind$1;->b:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;
+    iget-object v0, v0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$onBind$1;->b:Lcom/vtosters/lite/ui/holder/market/properties/d;
 
-    invoke-static {v1, v0, p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder;Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
+    invoke-static {v1, v0, p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder;Lcom/vtosters/lite/ui/holder/market/properties/d;Lcom/vtosters/lite/ui/holder/market/properties/e;)V
 
     return-void
 .end method
@@ -65,11 +65,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/market/properties/e;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$onBind$1$entries$1;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$onBind$1$entries$1;->a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

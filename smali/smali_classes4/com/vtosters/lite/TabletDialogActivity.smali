@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/navigation/ResulterProvider;
+.implements Lcom/vk/navigation/u;
 
 
 # annotations
@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/navigation/ActivityResulter;",
+            "Lcom/vk/navigation/c;",
             ">;"
         }
     .end annotation
@@ -63,9 +63,9 @@
 
 .field private W:I
 
-.field protected X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+.field protected X:Lcom/vk/core/view/a;
 
-.field private Y:Lcom/vk/core/util/AndroidBug5497Workaround2;
+.field private Y:Lcom/vk/core/util/d;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -86,7 +86,7 @@
     const/high16 v0, 0x42000000    # 32.0f
 
     .line 3
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -95,7 +95,7 @@
     const/high16 v0, 0x443e0000    # 760.0f
 
     .line 4
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -153,7 +153,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/core/extensions/ActivityExt;->d(Landroid/app/Activity;)Z
+    invoke-static {p0}, Lcom/vk/core/extensions/a;->d(Landroid/app/Activity;)Z
 
     move-result v0
 
@@ -216,7 +216,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/navigation/Navigator;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
+    invoke-static {v0}, Lcom/vk/navigation/o;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
 
     move-result-object v0
 
@@ -335,14 +335,14 @@
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setFinishOnTouchOutside(Z)V
 
     .line 2
-    new-instance v0, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    new-instance v0, Lcom/vk/core/view/a;
 
-    invoke-direct {v0, p0}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/vk/core/view/a;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    iput-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
     const v2, 0x7f0a0480
 
@@ -354,13 +354,13 @@
     if-nez v0, :cond_0
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setClipToPadding(Z)V
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(Landroid/view/View;)V
 
@@ -543,9 +543,9 @@
 
     move-result p1
 
-    iget-object p4, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    iget-object p4, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
-    invoke-virtual {p4}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;->getInsetTop()I
+    invoke-virtual {p4}, Lcom/vk/core/view/a;->getInsetTop()I
 
     move-result p4
 
@@ -598,7 +598,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/navigation/ActivityResulter;)V
+.method public a(Lcom/vk/navigation/c;)V
     .locals 1
 
     .line 24
@@ -613,7 +613,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/ActivityResulter;)V
+.method public b(Lcom/vk/navigation/c;)V
     .locals 1
 
     .line 1
@@ -670,7 +670,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/FragmentManagerImplSimple;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/f;
 
     move-result-object v0
 
@@ -684,7 +684,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/core/fragments/FragmentManagerImplSimple;->b(ILcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/core/fragments/f;->b(ILcom/vk/core/fragments/FragmentImpl;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -694,7 +694,7 @@
     move-exception p1
 
     .line 3
-    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
 
     .line 4
     invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
@@ -870,10 +870,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/ActivityResulter;
+    check-cast v1, Lcom/vk/navigation/c;
 
     .line 4
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/ActivityResulter;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/c;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -989,17 +989,17 @@
     if-nez v0, :cond_0
 
     .line 5
-    new-instance v0, Lcom/vk/core/util/AndroidBug5497Workaround2;
+    new-instance v0, Lcom/vk/core/util/d;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    iget-object v2, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/core/util/AndroidBug5497Workaround2;-><init>(Landroid/view/Window;Landroid/view/View;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/core/util/d;-><init>(Landroid/view/Window;Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->Y:Lcom/vk/core/util/AndroidBug5497Workaround2;
+    iput-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->Y:Lcom/vk/core/util/d;
 
     .line 6
     :cond_0
@@ -1053,12 +1053,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->Y:Lcom/vk/core/util/AndroidBug5497Workaround2;
+    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->Y:Lcom/vk/core/util/d;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/core/util/AndroidBug5497Workaround2;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/util/d;->a()V
 
     .line 3
     :cond_0
@@ -1074,12 +1074,12 @@
     invoke-super {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->Y:Lcom/vk/core/util/AndroidBug5497Workaround2;
+    iget-object v0, p0, Lcom/vtosters/lite/TabletDialogActivity;->Y:Lcom/vk/core/util/d;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/core/util/AndroidBug5497Workaround2;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/util/d;->b()V
 
     :cond_0
     return-void
@@ -1093,7 +1093,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->e()Lcom/vk/core/fragments/j/b/ParentSupportFragment;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/j/b/b;->e()Lcom/vk/core/fragments/j/b/a;
 
     move-result-object v0
 

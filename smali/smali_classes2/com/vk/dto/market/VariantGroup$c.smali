@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -50,20 +50,20 @@
 
     const-string v2, "json.getString(ServerKeys.NAME)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
-    sget-object v2, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
+    sget-object v2, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
 
     sget-object v3, Lcom/vk/dto/market/Variant;->h:Lcom/vk/dto/market/Variant$c;
 
-    invoke-virtual {v3}, Lcom/vk/dto/market/Variant$c;->a()Lcom/vk/dto/common/data/JsonParser;
+    invoke-virtual {v3}, Lcom/vk/dto/market/Variant$c;->a()Lcom/vk/dto/common/data/c;
 
     move-result-object v3
 
     const-string v4, "variants"
 
-    invoke-virtual {v2, p1, v4, v3}, Lcom/vk/dto/common/data/JsonParser$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
+    invoke-virtual {v2, p1, v4, v3}, Lcom/vk/dto/common/data/c$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
 
     move-result-object v2
 

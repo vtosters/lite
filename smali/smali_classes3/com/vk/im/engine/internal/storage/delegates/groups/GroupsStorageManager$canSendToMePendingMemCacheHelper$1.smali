@@ -3,12 +3,12 @@
 .source "GroupsStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+    value = Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/engine/models/groups/a;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;)I
+.method public final a(Lcom/vk/im/engine/models/groups/a;)I
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/groups/a;->c()I
 
     move-result p1
 
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;
+    check-cast p1, Lcom/vk/im/engine/models/groups/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager$canSendToMePendingMemCacheHelper$1;->a(Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;)I
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager$canSendToMePendingMemCacheHelper$1;->a(Lcom/vk/im/engine/models/groups/a;)I
 
     move-result p1
 

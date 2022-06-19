@@ -3,7 +3,7 @@
 .source "RxFileDownloader.java"
 
 # interfaces
-.implements Lio/reactivex/ObservableOnSubscribe;
+.implements Lc/a/o;
 
 
 # annotations
@@ -18,7 +18,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/ObservableOnSubscribe<",
+        "Lc/a/o<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         ">;"
     }
@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/io/File;)Lio/reactivex/Observable;
+.method public static a(Ljava/lang/String;Ljava/io/File;)Lc/a/m;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,7 +55,7 @@
             "Ljava/lang/String;",
             "Ljava/io/File;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;"
         }
@@ -66,7 +66,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/core/network/RxFileDownloader;-><init>(Ljava/lang/String;Ljava/io/File;)V
 
-    invoke-static {v0}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
+    invoke-static {v0}, Lc/a/m;->a(Lc/a/o;)Lc/a/m;
 
     move-result-object p0
 
@@ -77,41 +77,41 @@
     const/4 v2, 0x1
 
     .line 2
-    invoke-virtual {p0, v0, v1, p1, v2}, Lio/reactivex/Observable;->a(JLjava/util/concurrent/TimeUnit;Z)Lio/reactivex/Observable;
+    invoke-virtual {p0, v0, v1, p1, v2}, Lc/a/m;->a(JLjava/util/concurrent/TimeUnit;Z)Lc/a/m;
 
     move-result-object p0
 
     .line 3
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static a(Lokhttp3/Response;)Lio/reactivex/functions/Cancellable;
+.method private static a(Lokhttp3/b0;)Lc/a/z/f;
     .locals 1
 
     .line 31
     new-instance v0, Lcom/vk/core/network/RxFileDownloader$b;
 
-    invoke-direct {v0, p0}, Lcom/vk/core/network/RxFileDownloader$b;-><init>(Lokhttp3/Response;)V
+    invoke-direct {v0, p0}, Lcom/vk/core/network/RxFileDownloader$b;-><init>(Lokhttp3/b0;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public a(Lio/reactivex/ObservableEmitter;)V
+.method public a(Lc/a/n;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/ObservableEmitter<",
+            "Lc/a/n<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;)V"
         }
@@ -127,53 +127,53 @@
     :try_start_0
     iget-object v0, p0, Lcom/vk/core/network/RxFileDownloader;->b:Ljava/io/File;
 
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->e(Ljava/io/File;)V
+    invoke-static {v0}, Lb/h/g/m/d;->e(Ljava/io/File;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/core/network/Network;->l()Lokhttp3/OkHttpClient$b;
+    invoke-static {}, Lcom/vk/core/network/Network;->l()Lokhttp3/x$b;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/core/network/RxFileDownloader$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/core/network/RxFileDownloader$a;-><init>(Lcom/vk/core/network/RxFileDownloader;Lio/reactivex/ObservableEmitter;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/core/network/RxFileDownloader$a;-><init>(Lcom/vk/core/network/RxFileDownloader;Lc/a/n;)V
 
     .line 6
-    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->b(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
+    invoke-virtual {v0, v1}, Lokhttp3/x$b;->b(Lokhttp3/u;)Lokhttp3/x$b;
 
     .line 7
-    invoke-virtual {v0}, Lokhttp3/OkHttpClient$b;->a()Lokhttp3/OkHttpClient;
+    invoke-virtual {v0}, Lokhttp3/x$b;->a()Lokhttp3/x;
 
     move-result-object v0
 
     .line 8
-    new-instance v1, Lokhttp3/Request$a;
+    new-instance v1, Lokhttp3/z$a;
 
-    invoke-direct {v1}, Lokhttp3/Request$a;-><init>()V
+    invoke-direct {v1}, Lokhttp3/z$a;-><init>()V
 
     iget-object v2, p0, Lcom/vk/core/network/RxFileDownloader;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lokhttp3/Request$a;->b(Ljava/lang/String;)Lokhttp3/Request$a;
+    invoke-virtual {v1, v2}, Lokhttp3/z$a;->b(Ljava/lang/String;)Lokhttp3/z$a;
 
-    invoke-virtual {v1}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
+    invoke-virtual {v1}, Lokhttp3/z$a;->a()Lokhttp3/z;
 
     move-result-object v1
 
     .line 9
-    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient;->a(Lokhttp3/Request;)Lokhttp3/Call;
+    invoke-virtual {v0, v1}, Lokhttp3/x;->a(Lokhttp3/z;)Lokhttp3/e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lokhttp3/Call;->execute()Lokhttp3/Response;
+    invoke-interface {v0}, Lokhttp3/e;->execute()Lokhttp3/b0;
 
     move-result-object v0
 
     .line 10
-    invoke-static {v0}, Lcom/vk/core/network/RxFileDownloader;->a(Lokhttp3/Response;)Lio/reactivex/functions/Cancellable;
+    invoke-static {v0}, Lcom/vk/core/network/RxFileDownloader;->a(Lokhttp3/b0;)Lc/a/z/f;
 
     move-result-object v1
 
-    invoke-interface {p1, v1}, Lio/reactivex/ObservableEmitter;->a(Lio/reactivex/functions/Cancellable;)V
+    invoke-interface {p1, v1}, Lc/a/n;->a(Lc/a/z/f;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
@@ -181,7 +181,7 @@
 
     .line 11
     :try_start_1
-    invoke-virtual {v0}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
+    invoke-virtual {v0}, Lokhttp3/b0;->a()Lokhttp3/c0;
 
     move-result-object v2
     :try_end_1
@@ -190,18 +190,18 @@
 
     .line 12
     :try_start_2
-    invoke-virtual {v2}, Lokhttp3/ResponseBody;->d()J
+    invoke-virtual {v2}, Lokhttp3/c0;->d()J
 
     move-result-wide v3
 
     .line 13
-    invoke-virtual {v0}, Lokhttp3/Response;->h()Z
+    invoke-virtual {v0}, Lokhttp3/b0;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {v3, v4}, Lb/h/g/m/FileUtils;->a(J)Z
+    invoke-static {v3, v4}, Lb/h/g/m/d;->a(J)Z
 
     move-result v0
 
@@ -240,11 +240,11 @@
     :goto_0
     iget-object v0, p0, Lcom/vk/core/network/RxFileDownloader;->b:Ljava/io/File;
 
-    invoke-static {v0}, Lokio/Okio;->b(Ljava/io/File;)Lokio/Sink;
+    invoke-static {v0}, Lokio/k;->b(Ljava/io/File;)Lokio/q;
 
     move-result-object v0
 
-    invoke-static {v0}, Lokio/Okio;->a(Lokio/Sink;)Lokio/BufferedSink;
+    invoke-static {v0}, Lokio/k;->a(Lokio/q;)Lokio/d;
 
     move-result-object v0
     :try_end_2
@@ -253,25 +253,25 @@
 
     .line 16
     :try_start_3
-    invoke-virtual {v2}, Lokhttp3/ResponseBody;->f()Lokio/BufferedSource;
+    invoke-virtual {v2}, Lokhttp3/c0;->f()Lokio/e;
 
     move-result-object v3
 
-    invoke-interface {v0, v3}, Lokio/BufferedSink;->a(Lokio/Source;)J
+    invoke-interface {v0, v3}, Lokio/d;->a(Lokio/r;)J
 
     .line 17
-    invoke-interface {v0}, Lokio/Sink;->close()V
+    invoke-interface {v0}, Lokio/q;->close()V
     :try_end_3
     .catch Lcom/vk/core/network/RxFileDownloader$DownloadCancelationException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 18
     :try_start_4
-    invoke-static {v1}, Lokhttp3/f0/Util;->a(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lokhttp3/f0/c;->a(Ljava/io/Closeable;)V
 
     .line 19
     :goto_1
-    invoke-static {v2}, Lokhttp3/f0/Util;->a(Ljava/io/Closeable;)V
+    invoke-static {v2}, Lokhttp3/f0/c;->a(Ljava/io/Closeable;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
@@ -314,19 +314,19 @@
     :try_start_5
     iget-object v0, p0, Lcom/vk/core/network/RxFileDownloader;->b:Ljava/io/File;
 
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
+    invoke-static {v0}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 21
     :try_start_6
-    invoke-static {v1}, Lokhttp3/f0/Util;->a(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lokhttp3/f0/c;->a(Ljava/io/Closeable;)V
 
     goto :goto_1
 
     .line 22
     :goto_3
-    invoke-interface {p1}, Lio/reactivex/ObservableEmitter;->e()Z
+    invoke-interface {p1}, Lc/a/n;->e()Z
 
     move-result v0
 
@@ -339,19 +339,19 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lio/reactivex/Emitter;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, v0}, Lc/a/f;->b(Ljava/lang/Object;)V
 
     .line 24
-    invoke-interface {p1}, Lio/reactivex/Emitter;->b()V
+    invoke-interface {p1}, Lc/a/f;->b()V
 
     goto :goto_5
 
     .line 25
     :goto_4
-    invoke-static {v1}, Lokhttp3/f0/Util;->a(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lokhttp3/f0/c;->a(Ljava/io/Closeable;)V
 
     .line 26
-    invoke-static {v2}, Lokhttp3/f0/Util;->a(Ljava/io/Closeable;)V
+    invoke-static {v2}, Lokhttp3/f0/c;->a(Ljava/io/Closeable;)V
 
     .line 27
     throw v0
@@ -364,17 +364,17 @@
     .line 28
     iget-object v1, p0, Lcom/vk/core/network/RxFileDownloader;->b:Ljava/io/File;
 
-    invoke-static {v1}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
+    invoke-static {v1}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
 
     .line 29
-    invoke-interface {p1}, Lio/reactivex/ObservableEmitter;->e()Z
+    invoke-interface {p1}, Lc/a/n;->e()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
     .line 30
-    invoke-interface {p1, v0}, Lio/reactivex/Emitter;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Lc/a/f;->a(Ljava/lang/Throwable;)V
 
     :cond_2
     :goto_5

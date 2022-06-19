@@ -3,7 +3,7 @@
 .source "NotificationFileLoaderHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/audiomsg/player/fileloader/impl/DefaultFileLoader;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/audiomsg/player/fileloader/impl/a;",
         ">;"
     }
 .end annotation
@@ -55,15 +55,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/audiomsg/player/fileloader/impl/DefaultFileLoader;
+.method public final invoke()Lcom/vk/audiomsg/player/fileloader/impl/a;
     .locals 7
 
     .line 2
-    new-instance v6, Lcom/vk/audiomsg/player/fileloader/impl/DefaultFileLoader;
+    new-instance v6, Lcom/vk/audiomsg/player/fileloader/impl/a;
 
     sget-object v0, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->e:Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;
 
-    invoke-static {v0}, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->b(Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;)Lb/h/j/b/FileLruCacheManager;
+    invoke-static {v0}, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->b(Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;)Lb/h/j/b/a;
 
     move-result-object v1
 
@@ -83,7 +83,7 @@
     move-object v0, v6
 
     .line 4
-    invoke-direct/range {v0 .. v5}, Lcom/vk/audiomsg/player/fileloader/impl/DefaultFileLoader;-><init>(Lb/h/j/a/FileCacheManager;Ljava/util/concurrent/ExecutorService;Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/audiomsg/player/fileloader/impl/a;-><init>(Lb/h/j/a/a;Ljava/util/concurrent/ExecutorService;Lcom/vk/audiomsg/player/fileloader/impl/b;ILkotlin/jvm/internal/i;)V
 
     return-object v6
 .end method
@@ -92,7 +92,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper$fileLoader$2;->invoke()Lcom/vk/audiomsg/player/fileloader/impl/DefaultFileLoader;
+    invoke-virtual {p0}, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper$fileLoader$2;->invoke()Lcom/vk/audiomsg/player/fileloader/impl/a;
 
     move-result-object v0
 

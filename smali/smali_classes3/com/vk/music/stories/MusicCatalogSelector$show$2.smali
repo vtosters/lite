@@ -3,12 +3,12 @@
 .source "MusicCatalogSelector.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/stories/MusicCatalogSelector;->a(Landroidx/appcompat/app/AppCompatActivity;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnCancelListener;)V
+    value = Lcom/vk/music/stories/MusicCatalogSelector;->a(Landroidx/appcompat/app/AppCompatActivity;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnCancelListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/core/dialogs/bottomsheet/k/b/SearchToolbarModalBottomSheetController;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/core/dialogs/bottomsheet/k/b/c;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,29 +46,29 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/k/b/SearchToolbarModalBottomSheetController;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/k/b/c;)V
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/SearchToolbarModalBottomSheetController;->m()Landroid/widget/ImageView;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/c;->m()Landroid/widget/ImageView;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/vk/music/stories/MusicCatalogSelector;->u1()Lcom/vk/core/ui/TalkBackDrawable;
+    invoke-static {}, Lcom/vk/music/stories/MusicCatalogSelector;->u1()Lcom/vk/core/ui/s;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/music/stories/MusicCatalogSelector$show$2;->this$0:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {v0, p1}, Lcom/vk/music/stories/MusicCatalogSelector;->a(Lcom/vk/music/stories/MusicCatalogSelector;Lcom/vk/core/dialogs/bottomsheet/k/b/SearchToolbarModalBottomSheetController;)V
+    invoke-static {v0, p1}, Lcom/vk/music/stories/MusicCatalogSelector;->a(Lcom/vk/music/stories/MusicCatalogSelector;Lcom/vk/core/dialogs/bottomsheet/k/b/c;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/music/stories/MusicCatalogSelector$show$2;->this$0:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/SearchToolbarModalBottomSheetController;->n()Lcom/vk/core/view/search/ModernSearchView;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/c;->n()Lcom/vk/core/view/search/ModernSearchView;
 
     move-result-object v1
 
@@ -80,7 +80,7 @@
     invoke-static {v0}, Lcom/vk/music/stories/MusicCatalogSelector;->h(Lcom/vk/music/stories/MusicCatalogSelector;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/SearchToolbarModalBottomSheetController;->l()Landroid/widget/ImageView;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/c;->l()Landroid/widget/ImageView;
 
     move-result-object p1
 
@@ -95,11 +95,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/k/b/SearchToolbarModalBottomSheetController;
+    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/k/b/c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/stories/MusicCatalogSelector$show$2;->a(Lcom/vk/core/dialogs/bottomsheet/k/b/SearchToolbarModalBottomSheetController;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/stories/MusicCatalogSelector$show$2;->a(Lcom/vk/core/dialogs/bottomsheet/k/b/c;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

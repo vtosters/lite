@@ -3,7 +3,7 @@
 .source "AppStateTracker.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/ActivitiesProvider;
+.implements Lcom/vk/core/ui/themes/a;
 
 
 # annotations
@@ -101,7 +101,7 @@
     const/4 v5, 0x0
 
     :goto_1
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 

@@ -3,12 +3,12 @@
 .source "WidgetDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/utils/WidgetDelegate;->a(ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/im/ui/utils/WidgetDelegate;->a(ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/ui/utils/shortcuts/a;",
         ">;"
     }
 .end annotation
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/im/ui/utils/WidgetDelegate;
 
-.field final synthetic b:Lkotlin/jvm/b/Functions;
+.field final synthetic b:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/utils/WidgetDelegate;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/im/ui/utils/WidgetDelegate;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/utils/WidgetDelegate$b;->a:Lcom/vk/im/ui/utils/WidgetDelegate;
 
-    iput-object p2, p0, Lcom/vk/im/ui/utils/WidgetDelegate$b;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/im/ui/utils/WidgetDelegate$b;->b:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;)V
+.method public final a(Lcom/vk/im/ui/utils/shortcuts/a;)V
     .locals 2
 
     .line 1
@@ -58,13 +58,13 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate;->a(Lcom/vk/im/ui/utils/WidgetDelegate;Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate;->a(Lcom/vk/im/ui/utils/WidgetDelegate;Lcom/vk/im/ui/utils/shortcuts/a;)V
 
-    iget-object p1, p0, Lcom/vk/im/ui/utils/WidgetDelegate$b;->b:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/im/ui/utils/WidgetDelegate$b;->b:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
+    check-cast p1, Lcom/vk/im/ui/utils/shortcuts/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate$b;->a(Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate$b;->a(Lcom/vk/im/ui/utils/shortcuts/a;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "StorageTriggerFactoryImpl.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/internal/storage/StorageTrigger;
+.implements Lcom/vk/im/engine/internal/storage/d;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/im/engine/internal/storage/StorageTrigger<",
-        "Lcom/vk/im/engine/models/account/BusinessNotifyConfig;",
+        "Lcom/vk/im/engine/internal/storage/d<",
+        "Lcom/vk/im/engine/models/account/a;",
         ">;"
     }
 .end annotation
@@ -50,8 +50,8 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement<",
-            "Lcom/vk/im/engine/models/account/BusinessNotifyConfig;",
+            "Lcom/vk/im/engine/internal/storage/models/f<",
+            "Lcom/vk/im/engine/models/account/a;",
             ">;>;)V"
         }
     .end annotation

@@ -44,7 +44,7 @@
 
     iget-object v0, p0, Lcom/vk/fave/views/FaveTagViewGroup$e;->a:Lcom/vk/fave/views/FaveTagViewGroup;
 
-    invoke-virtual {v0}, Lcom/vk/fave/views/FaveTagViewGroup;->getClickByTag()Lkotlin/jvm/b/Functions2;
+    invoke-virtual {v0}, Lcom/vk/fave/views/FaveTagViewGroup;->getClickByTag()Lkotlin/jvm/b/b;
 
     move-result-object v0
 
@@ -56,11 +56,11 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_0
     return-void

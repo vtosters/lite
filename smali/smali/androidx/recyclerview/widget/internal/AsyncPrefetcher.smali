@@ -17,7 +17,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Landroidx/recyclerview/widget/internal/AsyncPrefetcher;-><init>(Landroidx/recyclerview/widget/internal/MainThreadHelper;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p0, v0, v1, v0}, Landroidx/recyclerview/widget/internal/AsyncPrefetcher;-><init>(Landroidx/recyclerview/widget/internal/MainThreadHelper;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -30,14 +30,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, v1}, Landroidx/recyclerview/widget/internal/Prefetcher;-><init>(Landroidx/recyclerview/widget/internal/TaskScheduler;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p0, v0, v1}, Landroidx/recyclerview/widget/internal/Prefetcher;-><init>(Landroidx/recyclerview/widget/internal/TaskScheduler;Lkotlin/jvm/internal/i;)V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/internal/AsyncPrefetcher;->mainThreadHelper:Landroidx/recyclerview/widget/internal/MainThreadHelper;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/internal/MainThreadHelper;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/internal/MainThreadHelper;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -127,7 +127,7 @@
 
     invoke-direct {v4, v0, v1, v2}, Landroidx/recyclerview/widget/internal/AsyncPrefetcher$tryPrefetch$1;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lkotlin/jvm/internal/Ref$BooleanRef;)V
 
-    invoke-virtual {v3, v4}, Landroidx/recyclerview/widget/internal/MainThreadHelper;->runBlockingOnMainThread(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v3, v4}, Landroidx/recyclerview/widget/internal/MainThreadHelper;->runBlockingOnMainThread(Lkotlin/jvm/b/a;)V
 
     .line 6
     iget-boolean v1, v2, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z

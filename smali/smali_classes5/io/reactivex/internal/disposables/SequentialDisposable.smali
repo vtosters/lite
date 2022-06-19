@@ -3,16 +3,16 @@
 .source "SequentialDisposable.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         ">;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -31,7 +31,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lio/reactivex/disposables/Disposable;)V
+.method public constructor <init>(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 2
@@ -45,22 +45,22 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)Z
+.method public a(Lio/reactivex/disposables/b;)Z
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public b(Lio/reactivex/disposables/Disposable;)Z
+.method public b(Lio/reactivex/disposables/b;)Z
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->b(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->b(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
 
     move-result p1
 
@@ -75,9 +75,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;)Z
 
     move-result v0
 

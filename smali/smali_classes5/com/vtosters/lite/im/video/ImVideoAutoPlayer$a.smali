@@ -3,7 +3,7 @@
 .source "ImVideoAutoPlayer.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;
+.implements Lcom/vk/im/ui/q/h/b$b;
 
 
 # annotations
@@ -18,24 +18,24 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/im/engine/models/ImExperimentsProvider;
+.field private final a:Lcom/vk/im/engine/models/f;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/models/ImExperimentsProvider;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/f;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer$a;->a:Lcom/vk/im/engine/models/ImExperimentsProvider;
+    iput-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer$a;->a:Lcom/vk/im/engine/models/f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Landroid/content/Context;Z)Lcom/vk/im/ui/q/h/VideoAutoPlayer;
+.method public bridge synthetic a(Landroid/content/Context;Z)Lcom/vk/im/ui/q/h/b;
     .locals 0
 
     .line 1
@@ -52,13 +52,13 @@
     .line 2
     new-instance p1, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;
 
-    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer$a;->a:Lcom/vk/im/engine/models/ImExperimentsProvider;
+    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer$a;->a:Lcom/vk/im/engine/models/f;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperimentsProvider;->get()Lcom/vk/im/engine/models/ImExperiments;
+    invoke-interface {v0}, Lcom/vk/im/engine/models/f;->get()Lcom/vk/im/engine/models/e;
 
     move-result-object v0
 
-    invoke-direct {p1, p2, v0}, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;-><init>(ZLcom/vk/im/engine/models/ImExperiments;)V
+    invoke-direct {p1, p2, v0}, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;-><init>(ZLcom/vk/im/engine/models/e;)V
 
     return-object p1
 .end method

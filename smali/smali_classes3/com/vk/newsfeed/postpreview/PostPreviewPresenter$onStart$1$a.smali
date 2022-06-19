@@ -3,7 +3,7 @@
 .source "PostPreviewPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/dto/newsfeed/PostPreviewWithInfo;",
+        "Lc/a/z/g<",
+        "Lcom/vk/dto/newsfeed/e;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/newsfeed/PostPreviewWithInfo;)V
+.method public final a(Lcom/vk/dto/newsfeed/e;)V
     .locals 3
 
     .line 1
@@ -56,7 +56,7 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onStart$1$a;->a:Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onStart$1;
 
@@ -64,7 +64,7 @@
 
     iget-boolean v1, v1, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onStart$1;->$isFromGroup:Z
 
-    invoke-static {v0, p1, v2, v1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->a(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;Lcom/vk/dto/newsfeed/PostPreviewWithInfo;ZZ)V
+    invoke-static {v0, p1, v2, v1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->a(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;Lcom/vk/dto/newsfeed/e;ZZ)V
 
     return-void
 .end method
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;
+    check-cast p1, Lcom/vk/dto/newsfeed/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onStart$1$a;->a(Lcom/vk/dto/newsfeed/PostPreviewWithInfo;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onStart$1$a;->a(Lcom/vk/dto/newsfeed/e;)V
 
     return-void
 .end method

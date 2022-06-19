@@ -76,7 +76,7 @@
 
     .line 3
     :cond_1
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(II)I
 
     move-result p1
 

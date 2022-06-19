@@ -3,7 +3,7 @@
 .source "CameraUIView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIView$prepare$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$prepare$1;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->d(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/camera/j/CadreUtils2;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->d(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/camera/j/b;
 
     move-result-object v0
 
@@ -71,18 +71,18 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
+    invoke-static {v1}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/j;
 
     move-result-object v1
 
     sget-object v2, Lcom/vk/cameraui/CameraUIView$prepare$1$1;->a:Lcom/vk/cameraui/CameraUIView$prepare$1$1;
 
-    invoke-static {v1, v2}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v1, v2}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v1
 
     .line 4
-    invoke-interface {v1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
@@ -128,7 +128,7 @@
 
     move-result v4
 
-    invoke-virtual {v0}, Lcom/vk/camera/j/CadreUtils2;->a()F
+    invoke-virtual {v0}, Lcom/vk/camera/j/b;->a()F
 
     move-result v5
 

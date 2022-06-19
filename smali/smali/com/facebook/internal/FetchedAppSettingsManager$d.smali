@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/facebook/internal/FetchedAppSettings;)V
+.method public abstract a(Lcom/facebook/internal/h;)V
 .end method
 
 .method public abstract onError()V

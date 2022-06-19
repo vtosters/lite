@@ -1,12 +1,12 @@
 .class public final Lcom/vk/fave/fragments/holders/FaveTagHolder;
-.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "FaveTagHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/fave/entities/FaveTag;",
         ">;"
     }
@@ -18,23 +18,23 @@
 
 .field private final d:Landroid/view/View;
 
-.field private final e:Lkotlin/jvm/b/Functions2;
+.field private final e:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/fave/entities/FaveTag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final f:Lkotlin/jvm/b/Functions2;
+.field private final f:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/fave/entities/FaveTag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -42,21 +42,21 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/fave/entities/FaveTag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/fave/entities/FaveTag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -64,11 +64,11 @@
     const v0, 0x7f0d01c6
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
-    iput-object p2, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->e:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->e:Lkotlin/jvm/b/b;
 
-    iput-object p3, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->f:Lkotlin/jvm/b/Functions2;
+    iput-object p3, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->f:Lkotlin/jvm/b/b;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -81,7 +81,7 @@
 
     const-string p2, "itemView.findViewById(R.id.tag_name)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -98,7 +98,7 @@
 
     const-string p2, "itemView.findViewById(R.id.tag_holder_delete)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->d:Landroid/view/View;
 
@@ -107,13 +107,13 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/fave/fragments/holders/FaveTagHolder$1;
 
     invoke-direct {p2, p0}, Lcom/vk/fave/fragments/holders/FaveTagHolder$1;-><init>(Lcom/vk/fave/fragments/holders/FaveTagHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->d:Landroid/view/View;
@@ -122,7 +122,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/fave/fragments/holders/FaveTagHolder$2;-><init>(Lcom/vk/fave/fragments/holders/FaveTagHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -131,7 +131,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/fave/entities/FaveTag;
 
@@ -148,7 +148,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->c:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v1
 
@@ -156,7 +156,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, p1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -177,38 +177,38 @@
     return-void
 .end method
 
-.method public final g0()Lkotlin/jvm/b/Functions2;
+.method public final g0()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/fave/entities/FaveTag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->f:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->f:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
 
-.method public final h0()Lkotlin/jvm/b/Functions2;
+.method public final h0()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/fave/entities/FaveTag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->e:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->e:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method

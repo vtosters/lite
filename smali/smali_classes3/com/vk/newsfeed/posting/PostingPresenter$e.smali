@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/PostingPresenter;-><init>(Lcom/vk/newsfeed/posting/PostingContracts2;Lcom/vk/newsfeed/posting/PostingInteractor;)V
+    value = Lcom/vk/newsfeed/posting/PostingPresenter;-><init>(Lcom/vk/newsfeed/posting/k;Lcom/vk/newsfeed/posting/PostingInteractor;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -53,11 +53,11 @@
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$e;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->c(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts1;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->c(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts1;->c(Ljava/util/List;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->c(Ljava/util/List;)V
 
     return-void
 .end method
@@ -70,11 +70,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$e;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->k(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->k(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/p;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts3;->E2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/p;->E2()V
 
     .line 2
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
@@ -111,11 +111,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$e;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->k(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts3;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->k(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/p;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts3;->E2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/p;->E2()V
 
     .line 2
     invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter$e;->a(Ljava/util/List;)V

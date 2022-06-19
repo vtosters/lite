@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/media/camera/CameraManager$c;
+.field private a:Lcom/vk/media/camera/d$c;
 
 .field private b:J
 
@@ -214,7 +214,7 @@
 
     .line 22
     :try_start_0
-    invoke-virtual {p0, p1}, Lcom/vk/media/camera/CameraHolder;->c(I)Lcom/vk/media/camera/CameraManager$c;
+    invoke-virtual {p0, p1}, Lcom/vk/media/camera/CameraHolder;->c(I)Lcom/vk/media/camera/d$c;
 
     move-result-object p1
 
@@ -229,7 +229,7 @@
 
     new-instance v1, Lcom/vk/media/camera/CameraHolder$b;
 
-    invoke-direct {v1, p0, p2, p1}, Lcom/vk/media/camera/CameraHolder$b;-><init>(Lcom/vk/media/camera/CameraHolder;Lcom/vk/media/camera/CameraHolder$d;Lcom/vk/media/camera/CameraManager$c;)V
+    invoke-direct {v1, p0, p2, p1}, Lcom/vk/media/camera/CameraHolder$b;-><init>(Lcom/vk/media/camera/CameraHolder;Lcom/vk/media/camera/CameraHolder$d;Lcom/vk/media/camera/d$c;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -243,7 +243,7 @@
     .locals 2
 
     .line 27
-    iget-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
     if-eqz v0, :cond_1
 
@@ -265,23 +265,23 @@
     if-eqz p1, :cond_0
 
     .line 29
-    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
-    invoke-virtual {p1}, Lcom/vk/media/camera/CameraManager$c;->i()V
+    invoke-virtual {p1}, Lcom/vk/media/camera/d$c;->i()V
 
     goto :goto_0
 
     .line 30
     :cond_0
-    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
-    invoke-virtual {p1}, Lcom/vk/media/camera/CameraManager$c;->h()V
+    invoke-virtual {p1}, Lcom/vk/media/camera/d$c;->h()V
 
     :goto_0
     const/4 p1, 0x0
 
     .line 31
-    iput-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iput-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
     :cond_1
     const/4 p1, -0x1
@@ -385,14 +385,14 @@
 
     .line 3
     :try_start_0
-    invoke-virtual {p0, p1}, Lcom/vk/media/camera/CameraHolder;->c(I)Lcom/vk/media/camera/CameraManager$c;
+    invoke-virtual {p0, p1}, Lcom/vk/media/camera/CameraHolder;->c(I)Lcom/vk/media/camera/d$c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {p2, v0}, Lcom/vk/media/camera/CameraHolder$d;->a(Lcom/vk/media/camera/CameraManager$c;)V
+    invoke-interface {p2, v0}, Lcom/vk/media/camera/CameraHolder$d;->a(Lcom/vk/media/camera/d$c;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -404,14 +404,14 @@
     .line 6
     :cond_0
     :try_start_1
-    invoke-static {}, Lcom/vk/media/camera/CameraManager;->c()Lcom/vk/media/camera/CameraManager;
+    invoke-static {}, Lcom/vk/media/camera/d;->c()Lcom/vk/media/camera/d;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 7
-    invoke-virtual {v1}, Lcom/vk/media/camera/CameraManager;->a()Z
+    invoke-virtual {v1}, Lcom/vk/media/camera/d;->a()Z
 
     move-result v2
 
@@ -422,13 +422,13 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/media/camera/CameraHolder$a;-><init>(Lcom/vk/media/camera/CameraHolder;ILcom/vk/media/camera/CameraHolder$d;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/media/camera/CameraManager;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v0}, Lcom/vk/media/camera/d;->a(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
     .line 9
     :cond_1
-    invoke-interface {p2, v0}, Lcom/vk/media/camera/CameraHolder$d;->a(Lcom/vk/media/camera/CameraManager$c;)V
+    invoke-interface {p2, v0}, Lcom/vk/media/camera/CameraHolder$d;->a(Lcom/vk/media/camera/d$c;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -447,7 +447,7 @@
 
     .line 11
     :try_start_0
-    iget-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -511,17 +511,17 @@
     if-eqz p1, :cond_2
 
     .line 17
-    iget-object v2, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object v2, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
-    invoke-virtual {v2}, Lcom/vk/media/camera/CameraManager$c;->l()V
+    invoke-virtual {v2}, Lcom/vk/media/camera/d$c;->l()V
 
     goto :goto_1
 
     .line 18
     :cond_2
-    iget-object v2, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object v2, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
-    invoke-virtual {v2}, Lcom/vk/media/camera/CameraManager$c;->k()V
+    invoke-virtual {v2}, Lcom/vk/media/camera/d$c;->k()V
 
     .line 19
     :cond_3
@@ -600,7 +600,7 @@
     return v0
 .end method
 
-.method public declared-synchronized b(I)Lcom/vk/media/camera/CameraManager$c;
+.method public declared-synchronized b(I)Lcom/vk/media/camera/d$c;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -617,7 +617,7 @@
     if-nez v0, :cond_2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
     if-eqz v0, :cond_0
 
@@ -632,7 +632,7 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -653,15 +653,15 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 7
-    invoke-static {}, Lcom/vk/media/camera/CameraManager;->c()Lcom/vk/media/camera/CameraManager;
+    invoke-static {}, Lcom/vk/media/camera/d;->c()Lcom/vk/media/camera/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/media/camera/CameraManager;->a(I)Lcom/vk/media/camera/CameraManager$c;
+    invoke-virtual {v0, p1}, Lcom/vk/media/camera/d;->a(I)Lcom/vk/media/camera/d$c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iput-object v0, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
     .line 8
     iput p1, p0, Lcom/vk/media/camera/CameraHolder;->f:I
@@ -671,9 +671,9 @@
 
     .line 9
     :try_start_2
-    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
-    invoke-virtual {p1}, Lcom/vk/media/camera/CameraManager$c;->e()Landroid/hardware/Camera$Parameters;
+    invoke-virtual {p1}, Lcom/vk/media/camera/d$c;->e()Landroid/hardware/Camera$Parameters;
 
     move-result-object p1
 
@@ -703,20 +703,20 @@
     .line 12
     :cond_1
     :try_start_3
-    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
-    invoke-virtual {p1}, Lcom/vk/media/camera/CameraManager$c;->g()V
+    invoke-virtual {p1}, Lcom/vk/media/camera/d$c;->g()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 13
     :try_start_4
-    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
 
     iget-object v0, p0, Lcom/vk/media/camera/CameraHolder;->j:Landroid/hardware/Camera$Parameters;
 
-    invoke-virtual {p1, v0}, Lcom/vk/media/camera/CameraManager$c;->a(Landroid/hardware/Camera$Parameters;)V
+    invoke-virtual {p1, v0}, Lcom/vk/media/camera/d$c;->a(Landroid/hardware/Camera$Parameters;)V
 
     :goto_0
     const/4 p1, 0x1
@@ -742,7 +742,7 @@
     iput-wide v0, p0, Lcom/vk/media/camera/CameraHolder;->b:J
 
     .line 18
-    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/CameraManager$c;
+    iget-object p1, p0, Lcom/vk/media/camera/CameraHolder;->a:Lcom/vk/media/camera/d$c;
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
@@ -870,7 +870,7 @@
     return v0
 .end method
 
-.method public declared-synchronized c(I)Lcom/vk/media/camera/CameraManager$c;
+.method public declared-synchronized c(I)Lcom/vk/media/camera/d$c;
     .locals 3
 
     monitor-enter p0
@@ -883,7 +883,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/vk/media/camera/CameraHolder;->b(I)Lcom/vk/media/camera/CameraManager$c;
+    invoke-virtual {p0, p1}, Lcom/vk/media/camera/CameraHolder;->b(I)Lcom/vk/media/camera/d$c;
 
     move-result-object v0
     :try_end_0

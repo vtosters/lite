@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final synthetic p:[Lkotlin/u/KProperty5;
+.field static final synthetic p:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final i:Lkotlin/Lazy2;
+.field private final i:Lkotlin/e;
 
 .field private final j:Ljava/lang/String;
 
@@ -16,7 +16,7 @@
 
 .field private final l:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
-.field private final m:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
+.field private final m:Lcom/vk/im/ui/views/adapter_delegate/a;
 
 .field private final n:Landroid/content/Context;
 
@@ -29,13 +29,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -43,15 +43,15 @@
 
     const-string v4, "getPopupVc()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->p:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->p:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -71,16 +71,16 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC$popupVc$2;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->i:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->i:Lkotlin/e;
 
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->n:Landroid/content/Context;
 
-    sget p2, Lcom/vk/im/ui/R4;->vkim_history_attaches_empty_list_video:I
+    sget p2, Lcom/vk/im/ui/m;->vkim_history_attaches_empty_list_video:I
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -88,14 +88,14 @@
 
     const-string p2, "context.getString(R.stri\u2026ttaches_empty_list_video)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->j:Ljava/lang/String;
 
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->n:Landroid/content/Context;
 
-    sget p2, Lcom/vk/im/ui/R4;->vkim_history_attaches_tab_video:I
+    sget p2, Lcom/vk/im/ui/m;->vkim_history_attaches_tab_video:I
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -103,7 +103,7 @@
 
     const-string p2, "context.getString(R.stri\u2026story_attaches_tab_video)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->k:Ljava/lang/String;
 
@@ -116,7 +116,7 @@
 
     const-string p2, "context.resources"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -132,19 +132,19 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->l:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     .line 7
-    new-instance p1, Lcom/vk/im/ui/components/attaches_history/attaches/k/VideoAttachAdapter;
+    new-instance p1, Lcom/vk/im/ui/components/attaches_history/attaches/k/f;
 
-    invoke-direct {p1}, Lcom/vk/im/ui/components/attaches_history/attaches/k/VideoAttachAdapter;-><init>()V
+    invoke-direct {p1}, Lcom/vk/im/ui/components/attaches_history/attaches/k/f;-><init>()V
 
     .line 8
     new-instance p2, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC$a;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC$a;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/k/VideoAttachAdapter;->a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachCallback;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/k/f;->a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/g;)V
 
     .line 9
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->m:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->m:Lcom/vk/im/ui/views/adapter_delegate/a;
 
     return-void
 .end method
@@ -233,15 +233,15 @@
 .method private final h()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->i:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->i:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->p:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->p:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -321,7 +321,7 @@
     check-cast v4, Lcom/vk/im/ui/components/attaches_history/attaches/model/video/VideoAttachMenu;
 
     .line 7
-    new-instance v6, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;
+    new-instance v6, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;
 
     iget-object v7, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->n:Landroid/content/Context;
 
@@ -329,7 +329,7 @@
 
     move-result v4
 
-    invoke-direct {v6, v7, v3, v2, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;-><init>(Landroid/content/Context;III)V
+    invoke-direct {v6, v7, v3, v2, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;-><init>(Landroid/content/Context;III)V
 
     invoke-interface {v0, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -359,16 +359,16 @@
 
     invoke-direct {v2, p0, p3, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC$showMenu$1;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;Ljava/util/List;Lcom/vk/im/engine/models/attaches/HistoryAttach;)V
 
-    invoke-virtual {v1, p1, v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v1, p1, v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method protected b()Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
+.method protected b()Lcom/vk/im/ui/views/adapter_delegate/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->m:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;->m:Lcom/vk/im/ui/views/adapter_delegate/a;
 
     return-object v0
 .end method

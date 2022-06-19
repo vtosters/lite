@@ -3,12 +3,12 @@
 .source "Indent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/text/StringsKt__IndentKt;->a(Ljava/lang/String;)Lkotlin/jvm/b/Functions2;
+    value = Lkotlin/text/StringsKt__IndentKt;->a(Ljava/lang/String;)Lkotlin/jvm/b/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/String;",
         "Ljava/lang/String;",
         ">;"

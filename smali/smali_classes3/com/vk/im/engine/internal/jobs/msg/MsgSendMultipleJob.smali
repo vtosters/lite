@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;
-.super Lcom/vk/im/engine/internal/j/ImInstantJob;
+.super Lcom/vk/im/engine/internal/j/a;
 .source "MsgSendMultipleJob.kt"
 
 
@@ -46,7 +46,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/j/ImInstantJob;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/j/a;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;->b:Ljava/util/Set;
 
@@ -78,13 +78,13 @@
     .end annotation
 
     .line 4
-    invoke-static {p3}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p3}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p3
 
     sget-object v0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob$1;->a:Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob$1;
 
-    invoke-static {p3, v0}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p3, v0}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v1
 
@@ -104,7 +104,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v1 .. v9}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -114,7 +114,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/Set;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/util/Set;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x2
@@ -185,31 +185,31 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/ImEnvironment;)V
+.method public a(Lcom/vk/im/engine/d;)V
     .locals 0
 
     .line 13
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->o0()Lcom/vk/im/engine/j/ImJobNotificationFactory;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->o0()Lcom/vk/im/engine/j/d;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/j/ImJobNotificationFactory;->d()V
+    invoke-interface {p1}, Lcom/vk/im/engine/j/d;->d()V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/instantjobs/InstantJob$b;)V
+.method public a(Lcom/vk/im/engine/d;Lcom/vk/instantjobs/InstantJob$b;)V
     .locals 10
 
     .line 2
-    new-instance p2, Lcom/vk/api/internal/MethodCall$a;
+    new-instance p2, Lcom/vk/api/internal/k$a;
 
-    invoke-direct {p2}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
+    invoke-direct {p2}, Lcom/vk/api/internal/k$a;-><init>()V
 
     const-string v0, "messages.send"
 
     .line 3
-    invoke-virtual {p2, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {p2, v0}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 4
     iget-object v1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;->b:Ljava/util/Set;
@@ -230,23 +230,23 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v1 .. v9}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "peer_ids"
 
-    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 5
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;->c:Ljava/lang/String;
 
     const-string v1, "message"
 
-    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->m0()I
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->m0()I
 
     move-result v0
 
@@ -256,51 +256,51 @@
 
     const-string v1, "random_id"
 
-    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
 
     .line 7
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;->d:Ljava/lang/String;
 
     const-string v1, "attachment"
 
-    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 8
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;->e:Ljava/lang/String;
 
     const-string v1, "entrypoint"
 
-    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     const/4 v0, 0x1
 
     .line 9
-    invoke-virtual {p2, v0}, Lcom/vk/api/internal/MethodCall$a;->a(I)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {p2, v0}, Lcom/vk/api/internal/k$a;->a(I)Lcom/vk/api/internal/k$a;
 
     .line 10
-    invoke-virtual {p2, v0}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {p2, v0}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
 
     .line 11
-    invoke-virtual {p2}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
+    invoke-virtual {p2}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
 
     move-result-object p2
 
     .line 12
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKMethodCall;)V
+    invoke-virtual {p1, p2}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/l;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/Map;Landroidx/core/app/NotificationCompat$Builder;)V
+.method public a(Lcom/vk/im/engine/d;Ljava/util/Map;Landroidx/core/app/NotificationCompat$Builder;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             "Ljava/util/Map<",
             "Lcom/vk/instantjobs/InstantJob;",
             "Lcom/vk/instantjobs/InstantJob$a;",
@@ -311,11 +311,11 @@
     .end annotation
 
     .line 14
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->o0()Lcom/vk/im/engine/j/ImJobNotificationFactory;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->o0()Lcom/vk/im/engine/j/d;
 
     move-result-object p1
 
-    invoke-interface {p1, p3}, Lcom/vk/im/engine/j/ImJobNotificationFactory;->a(Landroidx/core/app/NotificationCompat$Builder;)V
+    invoke-interface {p1, p3}, Lcom/vk/im/engine/j/d;->a(Landroidx/core/app/NotificationCompat$Builder;)V
 
     return-void
 .end method
@@ -335,30 +335,30 @@
     return-wide v0
 .end method
 
-.method public b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/String;
+.method public b(Lcom/vk/im/engine/d;)Ljava/lang/String;
     .locals 0
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->o0()Lcom/vk/im/engine/j/ImJobNotificationFactory;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->o0()Lcom/vk/im/engine/j/d;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/j/ImJobNotificationFactory;->b()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/j/d;->b()Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public c(Lcom/vk/im/engine/ImEnvironment;)I
+.method public c(Lcom/vk/im/engine/d;)I
     .locals 0
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->o0()Lcom/vk/im/engine/j/ImJobNotificationFactory;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->o0()Lcom/vk/im/engine/j/d;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/j/ImJobNotificationFactory;->c()I
+    invoke-interface {p1}, Lcom/vk/im/engine/j/d;->c()I
 
     move-result p1
 
@@ -398,7 +398,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;->b:Ljava/util/Set;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -408,7 +408,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -418,7 +418,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -428,7 +428,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/internal/jobs/msg/MsgSendMultipleJob;->e:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

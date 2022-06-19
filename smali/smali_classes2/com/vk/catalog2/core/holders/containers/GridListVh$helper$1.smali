@@ -3,12 +3,12 @@
 .source "GridListVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/containers/GridListVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;ILcom/vk/catalog2/core/CatalogEntryPointParams;I)V
+    value = Lcom/vk/catalog2/core/holders/containers/GridListVh;-><init>(Lcom/vk/catalog2/core/a;ILcom/vk/catalog2/core/e;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Ljava/lang/Integer;",
         "Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;",
         "Lcom/vk/dto/music/MusicTrack;",
@@ -61,7 +61,7 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p2}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object p2
 

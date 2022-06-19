@@ -25,7 +25,7 @@
 
     const-string v1, "MusicLogger::class.java.name"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/music/logger/MusicLogger;->a:Ljava/lang/String;
 
@@ -41,14 +41,14 @@
     return-void
 .end method
 
-.method public static final a()Lkotlin/jvm/b/Functions2;
+.method public static final a()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/Throwable;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -63,25 +63,25 @@
     .locals 2
 
     .line 3
-    new-instance v0, Lkotlin/jvm/internal/SpreadBuilder;
+    new-instance v0, Lkotlin/jvm/internal/q;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
+    invoke-direct {v0, v1}, Lkotlin/jvm/internal/q;-><init>(I)V
 
     const-string v1, "MusicLog : "
 
-    invoke-virtual {v0, v1}, Lkotlin/jvm/internal/SpreadBuilder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lkotlin/jvm/internal/q;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p2}, Lkotlin/jvm/internal/SpreadBuilder;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p2}, Lkotlin/jvm/internal/q;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lkotlin/jvm/internal/SpreadBuilder;->a()I
+    invoke-virtual {v0}, Lkotlin/jvm/internal/q;->a()I
 
     move-result p2
 
     new-array p2, p2, [Ljava/lang/Object;
 
-    invoke-virtual {v0, p2}, Lkotlin/jvm/internal/SpreadBuilder;->a([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v0, p2}, Lkotlin/jvm/internal/q;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p2
 
@@ -90,7 +90,7 @@
     return-void
 .end method
 
-.method public static final a(Lcom/vk/music/g/MusicEvents6;)V
+.method public static final a(Lcom/vk/music/g/b;)V
     .locals 3
 
     const/4 v0, 0x3
@@ -114,7 +114,7 @@
 
     const-string v1, "o.javaClass.simpleName"
 
-    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -156,27 +156,27 @@
     if-eqz v0, :cond_1
 
     .line 5
-    new-instance v0, Lkotlin/jvm/internal/SpreadBuilder;
+    new-instance v0, Lkotlin/jvm/internal/q;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, v1}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
+    invoke-direct {v0, v1}, Lkotlin/jvm/internal/q;-><init>(I)V
 
-    invoke-virtual {v0, p0}, Lkotlin/jvm/internal/SpreadBuilder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lkotlin/jvm/internal/q;->a(Ljava/lang/Object;)V
 
     const-string p0, " request success with result: "
 
-    invoke-virtual {v0, p0}, Lkotlin/jvm/internal/SpreadBuilder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lkotlin/jvm/internal/q;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1}, Lkotlin/jvm/internal/SpreadBuilder;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lkotlin/jvm/internal/q;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lkotlin/jvm/internal/SpreadBuilder;->a()I
+    invoke-virtual {v0}, Lkotlin/jvm/internal/q;->a()I
 
     move-result p0
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Lkotlin/jvm/internal/SpreadBuilder;->a([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lkotlin/jvm/internal/q;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
@@ -210,25 +210,25 @@
 
     sget-object v1, Lcom/vk/music/logger/MusicLogger;->a:Ljava/lang/String;
 
-    new-instance v2, Lkotlin/jvm/internal/SpreadBuilder;
+    new-instance v2, Lkotlin/jvm/internal/q;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
+    invoke-direct {v2, v3}, Lkotlin/jvm/internal/q;-><init>(I)V
 
     const-string v3, "MusicLog : "
 
-    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/q;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v2, p1}, Lkotlin/jvm/internal/SpreadBuilder;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, p1}, Lkotlin/jvm/internal/q;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Lkotlin/jvm/internal/SpreadBuilder;->a()I
+    invoke-virtual {v2}, Lkotlin/jvm/internal/q;->a()I
 
     move-result p1
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    invoke-virtual {v2, p1}, Lkotlin/jvm/internal/SpreadBuilder;->a([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Lkotlin/jvm/internal/q;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
@@ -245,25 +245,25 @@
 
     sget-object v1, Lcom/vk/music/logger/MusicLogger;->a:Ljava/lang/String;
 
-    new-instance v2, Lkotlin/jvm/internal/SpreadBuilder;
+    new-instance v2, Lkotlin/jvm/internal/q;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
+    invoke-direct {v2, v3}, Lkotlin/jvm/internal/q;-><init>(I)V
 
     const-string v3, "MusicLog : "
 
-    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/q;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/SpreadBuilder;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/q;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Lkotlin/jvm/internal/SpreadBuilder;->a()I
+    invoke-virtual {v2}, Lkotlin/jvm/internal/q;->a()I
 
     move-result p0
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/SpreadBuilder;->a([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/q;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
@@ -282,25 +282,25 @@
 
     sget-object v1, Lcom/vk/music/logger/MusicLogger;->a:Ljava/lang/String;
 
-    new-instance v2, Lkotlin/jvm/internal/SpreadBuilder;
+    new-instance v2, Lkotlin/jvm/internal/q;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
+    invoke-direct {v2, v3}, Lkotlin/jvm/internal/q;-><init>(I)V
 
     const-string v3, "MusicLog : "
 
-    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/q;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v2, p1}, Lkotlin/jvm/internal/SpreadBuilder;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, p1}, Lkotlin/jvm/internal/q;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Lkotlin/jvm/internal/SpreadBuilder;->a()I
+    invoke-virtual {v2}, Lkotlin/jvm/internal/q;->a()I
 
     move-result p1
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    invoke-virtual {v2, p1}, Lkotlin/jvm/internal/SpreadBuilder;->a([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Lkotlin/jvm/internal/q;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
@@ -317,25 +317,25 @@
 
     sget-object v1, Lcom/vk/music/logger/MusicLogger;->a:Ljava/lang/String;
 
-    new-instance v2, Lkotlin/jvm/internal/SpreadBuilder;
+    new-instance v2, Lkotlin/jvm/internal/q;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
+    invoke-direct {v2, v3}, Lkotlin/jvm/internal/q;-><init>(I)V
 
     const-string v3, "MusicLog : "
 
-    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/q;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/SpreadBuilder;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/q;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Lkotlin/jvm/internal/SpreadBuilder;->a()I
+    invoke-virtual {v2}, Lkotlin/jvm/internal/q;->a()I
 
     move-result p0
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/SpreadBuilder;->a([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/q;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
@@ -369,25 +369,25 @@
 
     sget-object v1, Lcom/vk/music/logger/MusicLogger;->a:Ljava/lang/String;
 
-    new-instance v2, Lkotlin/jvm/internal/SpreadBuilder;
+    new-instance v2, Lkotlin/jvm/internal/q;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
+    invoke-direct {v2, v3}, Lkotlin/jvm/internal/q;-><init>(I)V
 
     const-string v3, "MusicLog : "
 
-    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/q;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/SpreadBuilder;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/q;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Lkotlin/jvm/internal/SpreadBuilder;->a()I
+    invoke-virtual {v2}, Lkotlin/jvm/internal/q;->a()I
 
     move-result p0
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/SpreadBuilder;->a([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/q;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
@@ -406,25 +406,25 @@
 
     sget-object v1, Lcom/vk/music/logger/MusicLogger;->a:Ljava/lang/String;
 
-    new-instance v2, Lkotlin/jvm/internal/SpreadBuilder;
+    new-instance v2, Lkotlin/jvm/internal/q;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
+    invoke-direct {v2, v3}, Lkotlin/jvm/internal/q;-><init>(I)V
 
     const-string v3, "MusicLog : "
 
-    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/SpreadBuilder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lkotlin/jvm/internal/q;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/SpreadBuilder;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/q;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Lkotlin/jvm/internal/SpreadBuilder;->a()I
+    invoke-virtual {v2}, Lkotlin/jvm/internal/q;->a()I
 
     move-result p0
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/SpreadBuilder;->a([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v2, p0}, Lkotlin/jvm/internal/q;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 

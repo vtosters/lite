@@ -14,7 +14,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/auth/base/BaseAuthPresenter<",
-        "Lcom/vk/auth/enterpassword/EnterPasswordView;",
+        "Lcom/vk/auth/enterpassword/a;",
         ">;"
     }
 .end annotation
@@ -66,11 +66,11 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/enterpassword/EnterPasswordView;
+    check-cast p1, Lcom/vk/auth/enterpassword/a;
 
     if-eqz p1, :cond_0
 
@@ -78,7 +78,7 @@
 
     iget-object v1, p0, Lcom/vk/auth/enterpassword/EnterPasswordPresenter;->u:Ljava/lang/String;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/auth/enterpassword/EnterPasswordView;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/auth/enterpassword/a;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -95,22 +95,22 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Lcom/vk/auth/base/AuthView;)V
+.method public bridge synthetic a(Lcom/vk/auth/base/b;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/auth/enterpassword/EnterPasswordView;
+    check-cast p1, Lcom/vk/auth/enterpassword/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/enterpassword/EnterPasswordPresenter;->a(Lcom/vk/auth/enterpassword/EnterPasswordView;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/enterpassword/EnterPasswordPresenter;->a(Lcom/vk/auth/enterpassword/a;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/auth/enterpassword/EnterPasswordView;)V
+.method public a(Lcom/vk/auth/enterpassword/a;)V
     .locals 0
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/AuthView;)V
+    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/b;)V
 
     const/4 p1, 0x1
 
@@ -158,34 +158,34 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/auth/main/SignUpModel;->m()I
+    invoke-interface {v1}, Lcom/vk/auth/main/s;->m()I
 
     move-result v1
 
     if-ge v0, v1, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/enterpassword/EnterPasswordView;
+    check-cast v0, Lcom/vk/auth/enterpassword/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/auth/main/SignUpModel;->m()I
+    invoke-interface {v1}, Lcom/vk/auth/main/s;->m()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/auth/enterpassword/EnterPasswordView;->b0(I)V
+    invoke-interface {v0, v1}, Lcom/vk/auth/enterpassword/a;->b0(I)V
 
     .line 3
     :cond_0
@@ -199,11 +199,11 @@
 
     new-instance v2, Lcom/vk/auth/enterpassword/EnterPasswordPresenter$PasswordIsTooShortException;
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/auth/main/SignUpModel;->m()I
+    invoke-interface {v3}, Lcom/vk/auth/main/s;->m()I
 
     move-result v3
 
@@ -219,7 +219,7 @@
 
     iget-object v1, p0, Lcom/vk/auth/enterpassword/EnterPasswordPresenter;->u:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -228,15 +228,15 @@
     if-eqz v0, :cond_3
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/enterpassword/EnterPasswordView;
+    check-cast v0, Lcom/vk/auth/enterpassword/a;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lcom/vk/auth/enterpassword/EnterPasswordView;->A3()V
+    invoke-interface {v0}, Lcom/vk/auth/enterpassword/a;->A3()V
 
     .line 6
     :cond_2
@@ -258,13 +258,13 @@
 
     .line 7
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->q()Lcom/vk/auth/main/SignUpStrategy;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->q()Lcom/vk/auth/main/u;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/auth/enterpassword/EnterPasswordPresenter;->t:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p0}, Lcom/vk/auth/main/SignUpStrategy;->b(Ljava/lang/String;Lcom/vk/auth/enterpassword/EnterPasswordPresenter;)V
+    invoke-virtual {v0, v1, p0}, Lcom/vk/auth/main/u;->b(Ljava/lang/String;Lcom/vk/auth/enterpassword/EnterPasswordPresenter;)V
 
     .line 8
     invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->r()Lcom/vk/auth/main/AuthStatSender;

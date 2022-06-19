@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/browser/customtabs/CustomTabsService$1;->newSession(Landroid/support/customtabs/ICustomTabsCallback;)Z
+    value = Landroidx/browser/customtabs/CustomTabsService$1;->newSession(La/a/a/a;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -3,7 +3,7 @@
 .source "NetworkLoaderDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $response:Lokhttp3/Response;
+.field final synthetic $response:Lokhttp3/b0;
 
 
 # direct methods
-.method constructor <init>(Lokhttp3/Response;)V
+.method constructor <init>(Lokhttp3/b0;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$createInputStream$1;->$response:Lokhttp3/Response;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$createInputStream$1;->$response:Lokhttp3/b0;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$createInputStream$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -60,9 +60,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$createInputStream$1;->$response:Lokhttp3/Response;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$createInputStream$1;->$response:Lokhttp3/b0;
 
-    invoke-virtual {v0}, Lokhttp3/Response;->close()V
+    invoke-virtual {v0}, Lokhttp3/b0;->close()V
 
     return-void
 .end method

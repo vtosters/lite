@@ -3,12 +3,12 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/lists/PreloadCallback;
+.implements Lcom/vk/lists/y;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter$preloadCallback$2;->invoke()Lcom/vk/lists/PreloadCallback;
+    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter$preloadCallback$2;->invoke()Lcom/vk/lists/y;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -42,7 +42,7 @@
 
     iget-object v0, v0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$preloadCallback$2;->this$0:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/DiffListDataSet;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/g;
 
     move-result-object v0
 
@@ -50,24 +50,24 @@
 
     iget-object v1, v1, Lcom/vk/newsfeed/presenters/EntriesListPresenter$preloadCallback$2;->this$0:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/newsfeed/presenters/EntriesListPresenter;)Lcom/vk/newsfeed/contracts/EntriesListContract1;
+    invoke-static {v1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/newsfeed/presenters/EntriesListPresenter;)Lcom/vk/newsfeed/contracts/f;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->j(I)I
+    invoke-interface {v1, p1}, Lcom/vk/newsfeed/contracts/f;->j(I)I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->c()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->c()I
 
     move-result v0
 
@@ -77,7 +77,7 @@
     if-ge v1, v0, :cond_0
 
     .line 3
-    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->a(I)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/f0/b;->a(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -90,7 +90,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b()Lcom/vk/dto/newsfeed/entries/Html5Entry;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->b()Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
     move-result-object p1
 
@@ -101,11 +101,11 @@
 
     iget-object v0, v0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$preloadCallback$2;->this$0:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/newsfeed/presenters/EntriesListPresenter;)Lcom/vk/newsfeed/contracts/EntriesListContract1;
+    invoke-static {v0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/newsfeed/presenters/EntriesListPresenter;)Lcom/vk/newsfeed/contracts/f;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->a(Lcom/vk/dto/newsfeed/entries/Html5Entry;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/f;->a(Lcom/vk/dto/newsfeed/entries/Html5Entry;)V
 
     :cond_1
     return-void

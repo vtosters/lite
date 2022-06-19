@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/GameCardActivity$e;
-.super Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;
+.super Lcom/vk/core/fragments/h;
 .source "GameCardActivity.java"
 
 
@@ -30,7 +30,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
+    invoke-direct {p0, p1}, Lcom/vk/core/fragments/h;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
 
     return-void
 .end method
@@ -58,9 +58,9 @@
     .locals 5
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/fragments/GameCardFragment;
+    new-instance v0, Lcom/vtosters/lite/fragments/e1;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/fragments/GameCardFragment;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/e1;-><init>()V
 
     .line 2
     iget-object v1, p0, Lcom/vtosters/lite/GameCardActivity$e;->h:Lcom/vtosters/lite/GameCardActivity;
@@ -78,7 +78,7 @@
     const-string v3, "direct"
 
     .line 3
-    invoke-static {v1, v2, v3}, Lcom/vtosters/lite/utils/Utils;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Lcom/vtosters/lite/utils/l;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -87,7 +87,7 @@
     const-string v4, "catalog"
 
     .line 4
-    invoke-static {v1, v3, v4}, Lcom/vtosters/lite/utils/Utils;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3, v4}, Lcom/vtosters/lite/utils/l;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -104,7 +104,7 @@
 
     check-cast v3, Lcom/vk/dto/common/data/ApiApplication;
 
-    invoke-static {v3, p1, v2, v1}, Lcom/vtosters/lite/fragments/GameCardFragment;->a(Lcom/vk/dto/common/data/ApiApplication;ILjava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-static {v3, p1, v2, v1}, Lcom/vtosters/lite/fragments/e1;->a(Lcom/vk/dto/common/data/ApiApplication;ILjava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -113,7 +113,7 @@
     .line 6
     iget-object p1, p0, Lcom/vtosters/lite/GameCardActivity$e;->h:Lcom/vtosters/lite/GameCardActivity;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/GameCardFragment;->a(Lcom/vtosters/lite/fragments/GameCardFragment$i;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/e1;->a(Lcom/vtosters/lite/fragments/e1$i;)V
 
     return-object v0
 .end method
@@ -141,17 +141,17 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/h;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     if-eqz p3, :cond_0
 
     .line 2
-    check-cast p3, Lcom/vtosters/lite/fragments/GameCardFragment;
+    check-cast p3, Lcom/vtosters/lite/fragments/e1;
 
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/GameCardActivity$e;->h:Lcom/vtosters/lite/GameCardActivity;
 
-    invoke-virtual {p3, p1}, Lcom/vtosters/lite/fragments/GameCardFragment;->a(Lcom/vtosters/lite/fragments/GameCardFragment$i;)V
+    invoke-virtual {p3, p1}, Lcom/vtosters/lite/fragments/e1;->a(Lcom/vtosters/lite/fragments/e1$i;)V
 
     :cond_0
     return-void

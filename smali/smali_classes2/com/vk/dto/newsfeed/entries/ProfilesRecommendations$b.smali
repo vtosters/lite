@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -103,9 +103,9 @@
     if-eqz v12, :cond_0
 
     .line 8
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v2, v12}, Lb/h/c/f/c/RecommendedProfileFactory;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/vk/dto/common/RecommendedProfile;
+    invoke-static {v2, v12}, Lb/h/c/f/c/a;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/vk/dto/common/RecommendedProfile;
 
     move-result-object v12
 
@@ -171,9 +171,9 @@
     .line 12
     new-instance p1, Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v1, p1
 

@@ -39,13 +39,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v0
 
     const/16 v1, 0x4b3
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -69,11 +69,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment$b;->a:Lcom/vk/fave/fragments/FaveAllFragment;
 
-    invoke-static {v0}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    invoke-static {v0}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;->H()Z
+    invoke-virtual {v0}, Lcom/vk/fave/fragments/contracts/a;->H()Z
 
     move-result v0
 
@@ -118,14 +118,14 @@
     move-object v0, v1
 
     :goto_0
-    instance-of v2, v0, Lcom/vk/fave/views/FaveAllEmptyView;
+    instance-of v2, v0, Lcom/vk/fave/views/a;
 
     if-nez v2, :cond_1
 
     move-object v0, v1
 
     :cond_1
-    check-cast v0, Lcom/vk/fave/views/FaveAllEmptyView;
+    check-cast v0, Lcom/vk/fave/views/a;
 
     if-eqz v0, :cond_3
 
@@ -151,7 +151,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/fave/fragments/FaveAllFragment$b;->a:Lcom/vk/fave/fragments/FaveAllFragment;
 
-    invoke-static {v1}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    invoke-static {v1}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/a;
 
     move-result-object v1
 
@@ -171,7 +171,7 @@
 
     .line 5
     :goto_1
-    invoke-virtual {v0, v1}, Lcom/vk/fave/views/FaveAllEmptyView;->setState(Lcom/vk/fave/views/FaveAllEmptyState;)V
+    invoke-virtual {v0, v1}, Lcom/vk/fave/views/a;->setState(Lcom/vk/fave/views/FaveAllEmptyState;)V
 
     .line 6
     :cond_5

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;
-.super Lcom/vk/im/engine/i/BaseImEngineCmd;
+.super Lcom/vk/im/engine/i/a;
 .source "MsgGetByIdCmd.kt"
 
 
@@ -13,8 +13,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
-        "Lcom/vk/im/engine/models/EntityIntMap<",
+        "Lcom/vk/im/engine/i/a<",
+        "Lcom/vk/im/engine/models/a<",
         "Lcom/vk/im/engine/models/messages/Msg;",
         ">;>;"
     }
@@ -24,7 +24,7 @@
 # instance fields
 .field private final b:Lcom/vk/im/engine/models/messages/MsgIdType;
 
-.field private final c:Lcom/vk/im/engine/utils/collection/IntCollection;
+.field private final c:Lcom/vk/im/engine/utils/collection/d;
 
 .field private final d:Lcom/vk/im/engine/models/Source;
 
@@ -38,13 +38,13 @@
     .locals 6
 
     .line 6
-    invoke-static {p2}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
+    invoke-static {p2}, Lcom/vk/im/engine/utils/collection/e;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object v2
 
     const-string p2, "intListOf(msgId)"
 
-    invoke-static {v2, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v0, p0
 
@@ -56,12 +56,12 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/messages/MsgIdType;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/messages/MsgIdType;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x4
@@ -109,15 +109,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b:Lcom/vk/im/engine/models/messages/MsgIdType;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/d;
 
     iput-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->d:Lcom/vk/im/engine/models/Source;
 
@@ -128,7 +128,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x4
@@ -171,126 +171,126 @@
     move-object v2, p2
 
     .line 2
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
     .locals 1
 
     .line 11
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;
 
     move-result-object p1
 
     .line 12
-    new-instance p2, Lcom/vk/im/engine/models/EntityIntMap;
+    new-instance p2, Lcom/vk/im/engine/models/a;
 
-    invoke-interface {p3}, Lcom/vk/im/engine/utils/collection/IntCollection;->size()I
+    invoke-interface {p3}, Lcom/vk/im/engine/utils/collection/d;->size()I
 
     move-result v0
 
-    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
+    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/a;-><init>(I)V
 
     .line 13
     new-instance v0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;-><init>(Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;-><init>(Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;Lcom/vk/im/engine/models/a;)V
 
-    invoke-interface {p3, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Lcom/vk/im/engine/utils/collection/IntCollection$a;)V
+    invoke-interface {p3, v0}, Lcom/vk/im/engine/utils/collection/d;->a(Lcom/vk/im/engine/utils/collection/d$a;)V
 
     .line 14
     new-instance p1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
-    new-instance p3, Lcom/vk/im/engine/models/EntityIntMap;
+    new-instance p3, Lcom/vk/im/engine/models/a;
 
-    invoke-direct {p3}, Lcom/vk/im/engine/models/EntityIntMap;-><init>()V
+    invoke-direct {p3}, Lcom/vk/im/engine/models/a;-><init>()V
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
     .locals 3
 
     .line 15
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
     move-result-object p3
 
     .line 16
     new-instance v0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
-    new-instance v1, Lcom/vk/im/engine/models/EntityIntMap;
+    new-instance v1, Lcom/vk/im/engine/models/a;
 
-    invoke-direct {v1}, Lcom/vk/im/engine/models/EntityIntMap;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/engine/models/a;-><init>()V
 
-    new-instance v2, Lcom/vk/im/engine/models/EntityIntMap;
+    new-instance v2, Lcom/vk/im/engine/models/a;
 
-    invoke-direct {v2}, Lcom/vk/im/engine/models/EntityIntMap;-><init>()V
+    invoke-direct {v2}, Lcom/vk/im/engine/models/a;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
 
     .line 17
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/EntityIntMap;->g()Z
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/a;->g()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 18
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityIntMap;->b()Lcom/vk/im/engine/utils/collection/IntSet;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/a;->b()Lcom/vk/im/engine/utils/collection/h;
 
     move-result-object v0
 
     const-string v1, "cached.msgs.collectMissedExpired()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, p2, v0, p4}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+    invoke-direct {p0, p1, p2, v0, p4}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
     move-result-object v0
 
     .line 19
     :cond_0
-    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/a;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/a;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/engine/models/EntityIntMap;->b(Lcom/vk/im/engine/models/EntityIntMap;)Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p1, p2}, Lcom/vk/im/engine/models/a;->b(Lcom/vk/im/engine/models/a;)Lcom/vk/im/engine/models/a;
 
     .line 20
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->a()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->a()Lcom/vk/im/engine/models/a;
 
     move-result-object p2
 
     .line 21
     new-instance p3, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
-    invoke-direct {p3, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-direct {p3, p1, p2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
 
     return-object p3
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
     .locals 5
 
     .line 22
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -298,11 +298,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->d(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {v0, p2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->d(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/vk/core/extensions/SparseArrayExt1;->h(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {p2}, Lcom/vk/core/extensions/x;->h(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object p2
 
@@ -345,42 +345,42 @@
 
     .line 26
     :cond_1
-    invoke-static {p2}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p2}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p2
 
     .line 27
     sget-object v1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByNetworkByLocalId$realMsgVkIds$1;->a:Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByNetworkByLocalId$realMsgVkIds$1;
 
-    invoke-static {p2, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p2, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p2
 
     .line 28
     sget-object v1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByNetworkByLocalId$realMsgVkIds$2;->a:Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByNetworkByLocalId$realMsgVkIds$2;
 
-    invoke-static {p2, v1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lcom/vk/im/engine/utils/collection/IntCollection;
+    invoke-static {p2, v1}, Lcom/vk/im/engine/utils/collection/e;->a(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lcom/vk/im/engine/utils/collection/d;
 
     move-result-object p2
 
     .line 29
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v1
 
-    new-instance v2, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetByIdApiCmd;
+    new-instance v2, Lcom/vk/im/engine/internal/api_commands/messages/k;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->p0()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->p0()Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "env.languageCode"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v2, p2, p3, v3}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetByIdApiCmd;-><init>(Lcom/vk/im/engine/utils/collection/IntCollection;ZLjava/lang/String;)V
+    invoke-direct {v2, p2, p3, v3}, Lcom/vk/im/engine/internal/api_commands/messages/k;-><init>(Lcom/vk/im/engine/utils/collection/d;ZLjava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -389,13 +389,13 @@
     .line 30
     new-instance p3, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;
 
-    invoke-static {p2}, Lcom/vk/core/extensions/SparseArrayExt1;->h(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {p2}, Lcom/vk/core/extensions/x;->h(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object p2
 
     invoke-direct {p3, p2}, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;-><init>(Ljava/util/List;)V
 
-    invoke-virtual {p3, p1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {p3, p1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -445,7 +445,7 @@
     const-string p3, "realMsgs"
 
     .line 36
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 37
     new-instance p3, Landroid/util/SparseArray;
@@ -489,7 +489,7 @@
 
     .line 42
     :cond_3
-    invoke-static {p2, p3}, Lcom/vk/core/extensions/SparseArrayExt1;->b(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {p2, p3}, Lcom/vk/core/extensions/x;->b(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     move-result-object p2
 
@@ -537,32 +537,32 @@
     :cond_4
     new-instance p1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
-    new-instance v0, Lcom/vk/im/engine/models/EntityIntMap;
+    new-instance v0, Lcom/vk/im/engine/models/a;
 
-    invoke-direct {v0, p2}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {v0, p2}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
 
-    new-instance p2, Lcom/vk/im/engine/models/EntityIntMap;
+    new-instance p2, Lcom/vk/im/engine/models/a;
 
-    invoke-direct {p2, p3}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p2, p3}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
 
-    invoke-direct {p1, v0, p2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-direct {p1, v0, p2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
 
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;
+.method private final b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;
     .locals 1
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     new-instance v0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;
 
-    invoke-direct {v0, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;)V
+    invoke-direct {v0, p2, p3}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -571,7 +571,7 @@
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+.method private final b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
     .locals 1
 
     .line 2
@@ -592,7 +592,7 @@
     if-ne p2, v0, :cond_0
 
     .line 3
-    invoke-direct {p0, p1, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+    invoke-direct {p0, p1, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
     move-result-object p1
 
@@ -607,7 +607,7 @@
 
     .line 4
     :cond_1
-    invoke-direct {p0, p1, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+    invoke-direct {p0, p1, p3, p4}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
     move-result-object p1
 
@@ -615,27 +615,27 @@
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+.method private final b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
     .locals 4
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetByIdApiCmd;
+    new-instance v1, Lcom/vk/im/engine/internal/api_commands/messages/k;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->p0()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->p0()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "env.languageCode"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, p2, p3, v2}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetByIdApiCmd;-><init>(Lcom/vk/im/engine/utils/collection/IntCollection;ZLjava/lang/String;)V
+    invoke-direct {v1, p2, p3, v2}, Lcom/vk/im/engine/internal/api_commands/messages/k;-><init>(Lcom/vk/im/engine/utils/collection/d;ZLjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -644,13 +644,13 @@
     .line 6
     new-instance p3, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;
 
-    invoke-static {p2}, Lcom/vk/core/extensions/SparseArrayExt1;->h(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {p2}, Lcom/vk/core/extensions/x;->h(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object p2
 
     invoke-direct {p3, p2}, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;-><init>(Ljava/util/List;)V
 
-    invoke-virtual {p3, p1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {p3, p1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -659,7 +659,7 @@
     const-string p2, "realMsgs"
 
     .line 7
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     new-instance p2, Landroid/util/SparseArray;
@@ -746,47 +746,47 @@
     :cond_1
     new-instance p1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
-    new-instance v0, Lcom/vk/im/engine/models/EntityIntMap;
+    new-instance v0, Lcom/vk/im/engine/models/a;
 
-    invoke-direct {v0, p2}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {v0, p2}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
 
-    new-instance p2, Lcom/vk/im/engine/models/EntityIntMap;
+    new-instance p2, Lcom/vk/im/engine/models/a;
 
-    invoke-direct {p2, p3}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p2, p3}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
 
-    invoke-direct {p1, v0, p2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-direct {p1, v0, p2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
 
     return-object p1
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityIntMap;
+.method public a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/a;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/d;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    new-instance p1, Lcom/vk/im/engine/models/EntityIntMap;
+    new-instance p1, Lcom/vk/im/engine/models/a;
 
-    invoke-direct {p1}, Lcom/vk/im/engine/models/EntityIntMap;-><init>()V
+    invoke-direct {p1}, Lcom/vk/im/engine/models/a;-><init>()V
 
     return-object p1
 
@@ -817,11 +817,11 @@
     .line 5
     iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b:Lcom/vk/im/engine/models/messages/MsgIdType;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/d;
 
     iget-boolean v2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->e:Z
 
-    invoke-direct {p0, p1, v0, v1, v2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
     move-result-object v0
 
@@ -838,11 +838,11 @@
     :cond_2
     iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b:Lcom/vk/im/engine/models/messages/MsgIdType;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/d;
 
     iget-boolean v2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->e:Z
 
-    invoke-direct {p0, p1, v0, v1, v2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Z)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
     move-result-object v0
 
@@ -852,51 +852,51 @@
     :cond_3
     iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b:Lcom/vk/im/engine/models/messages/MsgIdType;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/d;
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 
     move-result-object v0
 
     .line 8
     :goto_0
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->a()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->a()Lcom/vk/im/engine/models/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/EntityIntMap;->i()Z
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/a;->i()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
     .line 9
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
 
     move-result-object p1
 
     iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->f:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->a()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->a()Lcom/vk/im/engine/models/a;
 
     move-result-object v2
 
-    invoke-virtual {p1, v1, v2}, Lcom/vk/im/engine/internal/EventHelper;->d(Ljava/lang/Object;Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-virtual {p1, v1, v2}, Lcom/vk/im/engine/internal/c;->d(Ljava/lang/Object;Lcom/vk/im/engine/models/a;)V
 
     .line 10
     :cond_4
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;->b()Lcom/vk/im/engine/models/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/a;
 
     move-result-object p1
 
@@ -918,17 +918,17 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b:Lcom/vk/im/engine/models/messages/MsgIdType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/d;
 
-    iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/d;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -938,7 +938,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->d:Lcom/vk/im/engine/models/Source;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -954,7 +954,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->f:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -995,7 +995,7 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/d;
 
     if-eqz v2, :cond_1
 
@@ -1075,7 +1075,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->c:Lcom/vk/im/engine/utils/collection/d;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

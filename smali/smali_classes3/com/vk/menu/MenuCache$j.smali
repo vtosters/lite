@@ -3,7 +3,7 @@
 .source "MenuCache.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -64,7 +64,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/menu/MenuCache;->a(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {v0, v1}, Lcom/vk/menu/MenuCache;->a(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/b;)V
 
     .line 2
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
@@ -74,7 +74,7 @@
     const-string v0, "error"
 
     .line 3
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/log/L;->a(Ljava/lang/Throwable;)V
 

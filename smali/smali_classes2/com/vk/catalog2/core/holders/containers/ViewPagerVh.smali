@@ -3,10 +3,10 @@
 .source "ViewPagerVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
-.implements Lcom/vk/catalog2/core/holders/common/CatalogScrollableViewHolder;
-.implements Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;
-.implements Lcom/vk/catalog2/core/holders/common/CatalogSwitchToSectionListener;
+.implements Lcom/vk/catalog2/core/holders/common/n;
+.implements Lcom/vk/catalog2/core/holders/common/j;
+.implements Lcom/vk/catalog2/core/holders/common/s;
+.implements Lcom/vk/catalog2/core/holders/common/l;
 
 
 # annotations
@@ -20,34 +20,34 @@
 # instance fields
 .field public a:Landroidx/viewpager/widget/ViewPager;
 
-.field private b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+.field private b:Lcom/vk/catalog2/core/ui/d;
 
 .field private c:Ljava/lang/Integer;
 
-.field private final d:Lcom/vk/catalog2/core/CatalogConfiguration;
+.field private final d:Lcom/vk/catalog2/core/a;
 
-.field private final e:Lcom/vk/catalog2/core/CatalogEntryPointParams;
+.field private final e:Lcom/vk/catalog2/core/e;
 
 .field private final f:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;I)V
+.method public constructor <init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;I)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->d:Lcom/vk/catalog2/core/CatalogConfiguration;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->d:Lcom/vk/catalog2/core/a;
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->e:Lcom/vk/catalog2/core/CatalogEntryPointParams;
+    iput-object p2, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->e:Lcom/vk/catalog2/core/e;
 
     iput p3, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->f:I
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -58,7 +58,7 @@
 
     .line 2
     :cond_0
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;I)V
 
     return-void
 .end method
@@ -67,11 +67,11 @@
     .locals 1
 
     .line 11
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/ui/d;->a(I)V
 
     :cond_0
     return-void
@@ -101,11 +101,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;->e()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/d;->e()V
 
     :cond_0
     return-void
@@ -115,7 +115,7 @@
     .locals 1
 
     .line 5
-    sget p3, Lcom/vk/catalog2/core/R7;->catalog_view_pager_layout:I
+    sget p3, Lcom/vk/catalog2/core/r;->catalog_view_pager_layout:I
 
     const/4 v0, 0x0
 
@@ -143,7 +143,7 @@
     const-string p2, "inflater.inflate(R.layou\u2026)\n            }\n        }"
 
     .line 9
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -162,11 +162,11 @@
     .locals 1
 
     .line 25
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;->a()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/d;->a()V
 
     :cond_0
     return-void
@@ -222,7 +222,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -244,15 +244,15 @@
     move-result p1
 
     .line 17
-    new-instance v1, Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    new-instance v1, Lcom/vk/catalog2/core/ui/d;
 
-    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->d:Lcom/vk/catalog2/core/CatalogConfiguration;
+    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->d:Lcom/vk/catalog2/core/a;
 
-    iget-object v3, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->e:Lcom/vk/catalog2/core/CatalogEntryPointParams;
+    iget-object v3, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->e:Lcom/vk/catalog2/core/e;
 
-    invoke-direct {v1, v2, v3, v0}, Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Ljava/util/List;)V
+    invoke-direct {v1, v2, v3, v0}, Lcom/vk/catalog2/core/ui/d;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Ljava/util/List;)V
 
-    iput-object v1, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    iput-object v1, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/d;
 
     .line 18
     iget-object v1, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->a:Landroidx/viewpager/widget/ViewPager;
@@ -260,7 +260,7 @@
     if-eqz v1, :cond_5
 
     .line 19
-    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/d;
 
     invoke-virtual {v1, v2}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -314,7 +314,7 @@
     const-string p1, "viewPager"
 
     .line 24
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -325,7 +325,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -334,7 +334,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
@@ -343,11 +343,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/d;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;->a(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/ui/d;->a(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
@@ -369,7 +369,7 @@
     :cond_0
     const-string p1, "viewPager"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -393,7 +393,7 @@
     :cond_0
     const-string v0, "viewPager"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -404,11 +404,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;->c()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/d;->c()V
 
     :cond_0
     return-void
@@ -418,11 +418,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;->d()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/d;->d()V
 
     :cond_0
     return-void
@@ -432,11 +432,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;->b:Lcom/vk/catalog2/core/ui/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/CatalogPagerTabViewAdapter;->b()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/ui/d;->b()V
 
     :cond_0
     return-void

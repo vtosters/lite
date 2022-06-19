@@ -60,16 +60,16 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/audiofocus/AudioFocusManager$a;
+    check-cast v1, Lcom/vk/audiofocus/a$a;
 
     :try_start_0
     const-string v2, "it"
 
     .line 3
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
-    invoke-interface {v1}, Lcom/vk/audiofocus/AudioFocusManager$a;->a()V
+    invoke-interface {v1}, Lcom/vk/audiofocus/a$a;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

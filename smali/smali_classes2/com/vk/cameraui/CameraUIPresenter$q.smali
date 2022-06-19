@@ -46,13 +46,13 @@
     .line 6
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIPresenter$q;->a:Lcom/vk/cameraui/CameraUIPresenter;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/cameraui/CameraUIPresenter;)Lcom/vk/libvideo/live/views/broadcast/BroadcastContract;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/cameraui/CameraUIPresenter;)Lcom/vk/libvideo/live/views/broadcast/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/libvideo/live/views/broadcast/BroadcastContract;->c(II)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/libvideo/live/views/broadcast/a;->c(II)V
 
     :cond_0
     const/16 p2, 0x320
@@ -131,13 +131,13 @@
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/cameraui/CameraUI$e;->getCamera1View()Lcom/vk/camera/Camera1View;
+    invoke-interface {p1}, Lcom/vk/cameraui/CameraUI$e;->getCamera1View()Lcom/vk/camera/c;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/camera/Camera1View;->t()V
+    invoke-virtual {p1}, Lcom/vk/camera/c;->t()V
 
     goto :goto_0
 
@@ -167,11 +167,11 @@
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {p1}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/cameraui/CameraUIPositions;->b()V
+    invoke-interface {p1}, Lcom/vk/cameraui/e;->b()V
 
     .line 16
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIPresenter$q;->a:Lcom/vk/cameraui/CameraUIPresenter;
@@ -184,13 +184,13 @@
     :pswitch_3
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIPresenter$q;->a:Lcom/vk/cameraui/CameraUIPresenter;
 
-    invoke-static {p1}, Lcom/vk/cameraui/CameraUIPresenter;->b(Lcom/vk/cameraui/CameraUIPresenter;)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1}, Lcom/vk/cameraui/CameraUIPresenter;->b(Lcom/vk/cameraui/CameraUIPresenter;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     :cond_3
     new-array p1, v1, [Ljava/lang/Object;
@@ -317,30 +317,30 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUI$e;->getStickersState()Lcom/vk/attachpicker/stickers/StickersState;
+    invoke-interface {v0}, Lcom/vk/cameraui/CameraUI$e;->getStickersState()Lcom/vk/attachpicker/stickers/m0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->r()Z
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->r()Z
 
     move-result v0
 
     .line 5
     iget-object v1, p0, Lcom/vk/cameraui/CameraUIPresenter$q;->a:Lcom/vk/cameraui/CameraUIPresenter;
 
-    sget-object v2, Lcom/vk/cameraui/entities/StoryRawData3;->n:Lcom/vk/cameraui/entities/StoryRawData$a;
+    sget-object v2, Lcom/vk/cameraui/entities/d;->n:Lcom/vk/cameraui/entities/d$a;
 
     invoke-virtual {v1}, Lcom/vk/cameraui/CameraUIPresenter;->getView()Lcom/vk/cameraui/CameraUI$e;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/cameraui/CameraUI$e;->getCamera1View()Lcom/vk/camera/Camera1View;
+    invoke-interface {v3}, Lcom/vk/cameraui/CameraUI$e;->getCamera1View()Lcom/vk/camera/c;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/vk/camera/Camera1View;->m()Z
+    invoke-virtual {v3}, Lcom/vk/camera/c;->m()Z
 
     move-result v3
 
@@ -350,7 +350,7 @@
     const/4 v3, 0x0
 
     :goto_0
-    invoke-virtual {v2, p1, v3, v0}, Lcom/vk/cameraui/entities/StoryRawData$a;->a(Ljava/io/File;ZZ)Ljava/util/List;
+    invoke-virtual {v2, p1, v3, v0}, Lcom/vk/cameraui/entities/d$a;->a(Ljava/io/File;ZZ)Ljava/util/List;
 
     move-result-object v2
 

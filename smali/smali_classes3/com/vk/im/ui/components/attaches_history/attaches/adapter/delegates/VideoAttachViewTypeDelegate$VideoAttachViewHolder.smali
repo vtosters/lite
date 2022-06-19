@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;
-.super Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
+.super Lcom/vk/im/ui/views/adapter_delegate/d;
 .source "VideoAttachViewTypeDelegate.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
+        "Lcom/vk/im/ui/views/adapter_delegate/d<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
         ">;"
     }
@@ -37,7 +37,7 @@
 
 .field private final g:Lcom/vk/libvideo/ui/VideoRestrictionView;
 
-.field private h:Lio/reactivex/disposables/Disposable;
+.field private h:Lio/reactivex/disposables/b;
 
 .field private final i:Landroid/graphics/drawable/Drawable;
 
@@ -66,10 +66,10 @@
     .line 1
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->n:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate;
 
-    invoke-direct {p0, p2}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lcom/vk/im/ui/views/adapter_delegate/d;-><init>(Landroid/view/View;)V
 
     .line 2
-    sget p1, Lcom/vk/im/ui/R11;->image:I
+    sget p1, Lcom/vk/im/ui/h;->image:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -77,14 +77,14 @@
 
     const-string v0, "view.findViewById(R.id.image)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/FrescoImageView;
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->a:Lcom/vk/im/ui/views/FrescoImageView;
 
     .line 3
-    sget p1, Lcom/vk/im/ui/R11;->duration:I
+    sget p1, Lcom/vk/im/ui/h;->duration:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -92,14 +92,14 @@
 
     const-string v0, "view.findViewById(R.id.duration)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->b:Landroid/widget/TextView;
 
     .line 4
-    sget p1, Lcom/vk/im/ui/R11;->title:I
+    sget p1, Lcom/vk/im/ui/h;->title:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -107,14 +107,14 @@
 
     const-string v0, "view.findViewById(R.id.title)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->c:Landroid/widget/TextView;
 
     .line 5
-    sget p1, Lcom/vk/im/ui/R11;->info:I
+    sget p1, Lcom/vk/im/ui/h;->info:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -122,14 +122,14 @@
 
     const-string v0, "view.findViewById(R.id.info)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->d:Landroid/widget/TextView;
 
     .line 6
-    sget p1, Lcom/vk/im/ui/R11;->subinfo:I
+    sget p1, Lcom/vk/im/ui/h;->subinfo:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -137,14 +137,14 @@
 
     const-string v0, "view.findViewById(R.id.subinfo)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->e:Landroid/widget/TextView;
 
     .line 7
-    sget p1, Lcom/vk/im/ui/R11;->options:I
+    sget p1, Lcom/vk/im/ui/h;->options:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -152,12 +152,12 @@
 
     const-string v0, "view.findViewById(R.id.options)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->f:Landroid/view/View;
 
     .line 8
-    sget p1, Lcom/vk/im/ui/R11;->history_attach_video_restriction:I
+    sget p1, Lcom/vk/im/ui/h;->history_attach_video_restriction:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -165,7 +165,7 @@
 
     const-string v0, "view.findViewById(R.id.h\u2026attach_video_restriction)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/libvideo/ui/VideoRestrictionView;
 
@@ -181,7 +181,7 @@
 
     const-string v1, "view.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x2
 
@@ -200,7 +200,7 @@
 
     move-result-object p1
 
-    sget v0, Lcom/vk/im/ui/R12;->default_placeholder_2:I
+    sget v0, Lcom/vk/im/ui/f;->default_placeholder_2:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -218,7 +218,7 @@
 
     move-result-object v0
 
-    sget v3, Lcom/vk/im/ui/R12;->ic_videos_placeholder:I
+    sget v3, Lcom/vk/im/ui/f;->ic_videos_placeholder:I
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -245,7 +245,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, v0}, Lcom/vk/core/util/DurationFormatter;-><init>(Landroid/content/Context;)V
 
@@ -289,7 +289,7 @@
 
     .line 20
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -344,16 +344,16 @@
     move-object v1, p1
 
     .line 35
-    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View;ZILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;Lio/reactivex/disposables/Disposable;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->h:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->h:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -412,11 +412,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic h(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;)Lio/reactivex/disposables/Disposable;
+.method public static final synthetic h(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;)Lio/reactivex/disposables/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->h:Lio/reactivex/disposables/Disposable;
+    iget-object p0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->h:Lio/reactivex/disposables/b;
 
     return-object p0
 .end method
@@ -483,7 +483,7 @@
 
     const-string v5, "itemView"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -491,7 +491,7 @@
 
     const-string v6, "itemView.context"
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/AttachVideo;->B()Ljava/lang/String;
@@ -512,7 +512,7 @@
     move-object v9, v8
 
     :goto_0
-    sget v10, Lcom/vk/im/ui/R5;->text_secondary:I
+    sget v10, Lcom/vk/im/ui/c;->text_secondary:I
 
     .line 11
     invoke-static {v4, v7, v9, v10}, Lcom/vk/core/utils/MediaFormatter;->a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/String;I)Ljava/lang/CharSequence;
@@ -526,13 +526,13 @@
 
     iget-object v4, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_1
 
@@ -559,7 +559,7 @@
     move-object v6, v8
 
     :goto_2
-    sget v7, Lcom/vk/im/ui/R5;->text_secondary:I
+    sget v7, Lcom/vk/im/ui/c;->text_secondary:I
 
     .line 14
     invoke-static {v4, v5, v6, v7}, Lcom/vk/core/utils/VideoFormatter;->a(Landroid/content/Context;Ljava/util/List;Ljava/util/List;I)Ljava/lang/CharSequence;
@@ -627,7 +627,7 @@
 
     move-result-object v4
 
-    sget v5, Lcom/vk/im/ui/R7;->vkim_history_attaches_video_views:I
+    sget v5, Lcom/vk/im/ui/l;->vkim_history_attaches_video_views:I
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/AttachVideo;->D()I
 
@@ -678,7 +678,7 @@
     const/4 v2, 0x1
 
     :cond_6
-    sget v0, Lcom/vk/im/ui/R5;->icon_tertiary:I
+    sget v0, Lcom/vk/im/ui/c;->icon_tertiary:I
 
     invoke-static {v1, v2, v0}, Lcom/vk/core/utils/VideoFormatter;->a(Landroid/widget/TextView;ZI)V
 
@@ -722,7 +722,7 @@
     throw p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
     .locals 0
 
     .line 3

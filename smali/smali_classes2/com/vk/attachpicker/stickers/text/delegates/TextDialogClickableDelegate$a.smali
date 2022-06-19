@@ -3,12 +3,12 @@
 .source "TextDialogClickableDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;-><init>(Lcom/vk/attachpicker/stickers/text/TextStickerDialog;)V
+    value = Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;-><init>(Lcom/vk/attachpicker/stickers/text/i;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,14 +49,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;)Lio/reactivex/Observable;
+.method public final a(Ljava/lang/CharSequence;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/stories/clickable/models/StoryHashtagSearchResult;",
             ">;"
         }
@@ -95,13 +95,13 @@
     if-eqz v0, :cond_2
 
     .line 4
-    sget-object v0, Lcom/vk/stories/clickable/StoryClickableController;->INSTANCE:Lcom/vk/stories/clickable/StoryClickableController;
+    sget-object v0, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/StoryClickableController;->a(Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/e;->a(Ljava/lang/String;)Lc/a/m;
 
     move-result-object p1
 
@@ -109,11 +109,11 @@
 
     .line 5
     :cond_2
-    sget-object p1, Lcom/vk/stories/clickable/StoryClickableController;->INSTANCE:Lcom/vk/stories/clickable/StoryClickableController;
+    sget-object p1, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
 
     const-string v0, ""
 
-    invoke-virtual {p1, v0}, Lcom/vk/stories/clickable/StoryClickableController;->a(Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lcom/vk/stories/clickable/e;->a(Ljava/lang/String;)Lc/a/m;
 
     move-result-object p1
 
@@ -127,7 +127,7 @@
     .line 1
     check-cast p1, Ljava/lang/CharSequence;
 
-    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$a;->a(Ljava/lang/CharSequence;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$a;->a(Ljava/lang/CharSequence;)Lc/a/m;
 
     move-result-object p1
 

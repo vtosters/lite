@@ -3,12 +3,12 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/im/ImEngineProvider;->a(Landroid/content/Context;Lcom/vk/im/engine/reporters/ImReporters;Lcom/vk/bridges/AuthBridge3;)Lcom/vk/im/engine/ImConfig;
+    value = Lcom/vtosters/lite/im/ImEngineProvider;->a(Landroid/content/Context;Lcom/vk/im/engine/reporters/k;Lcom/vk/bridges/f;)Lcom/vk/im/engine/ImConfig;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -70,9 +70,9 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/AppLangProvider;->INSTANCE:Lcom/vk/core/util/AppLangProvider;
+    sget-object v0, Lcom/vk/core/util/j;->a:Lcom/vk/core/util/j;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/AppLangProvider;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/core/util/j;->a()Ljava/lang/String;
 
     move-result-object v0
 

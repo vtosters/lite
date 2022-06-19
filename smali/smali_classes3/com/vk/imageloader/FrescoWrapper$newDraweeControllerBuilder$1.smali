@@ -3,12 +3,12 @@
 .source "FrescoWrapper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    value = Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/facebook/u/b/a/e;",
         ">;"
     }
 .end annotation
@@ -55,11 +55,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+.method public final invoke()Lcom/facebook/u/b/a/e;
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/facebook/u/b/a/Fresco;->e()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    invoke-static {}, Lcom/facebook/u/b/a/c;->e()Lcom/facebook/u/b/a/e;
 
     move-result-object v0
 
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/imageloader/FrescoWrapper$newDraweeControllerBuilder$1;->invoke()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
+    invoke-virtual {p0}, Lcom/vk/imageloader/FrescoWrapper$newDraweeControllerBuilder$1;->invoke()Lcom/facebook/u/b/a/e;
 
     move-result-object v0
 

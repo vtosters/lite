@@ -29,7 +29,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/facebook/appevents/codeless/internal/ParameterComponent;",
+            "Lcom/facebook/appevents/codeless/internal/a;",
             ">;"
         }
     .end annotation
@@ -52,7 +52,7 @@
             "Lcom/facebook/appevents/codeless/internal/PathComponent;",
             ">;",
             "Ljava/util/List<",
-            "Lcom/facebook/appevents/codeless/internal/ParameterComponent;",
+            "Lcom/facebook/appevents/codeless/internal/a;",
             ">;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -215,9 +215,9 @@
     move-result-object v8
 
     .line 20
-    new-instance v10, Lcom/facebook/appevents/codeless/internal/ParameterComponent;
+    new-instance v10, Lcom/facebook/appevents/codeless/internal/a;
 
-    invoke-direct {v10, v8}, Lcom/facebook/appevents/codeless/internal/ParameterComponent;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v10, v8}, Lcom/facebook/appevents/codeless/internal/a;-><init>(Lorg/json/JSONObject;)V
 
     .line 21
     invoke-interface {v7, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -337,7 +337,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/facebook/appevents/codeless/internal/ParameterComponent;",
+            "Lcom/facebook/appevents/codeless/internal/a;",
             ">;"
         }
     .end annotation

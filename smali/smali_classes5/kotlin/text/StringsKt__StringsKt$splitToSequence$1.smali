@@ -3,12 +3,12 @@
 .source "Strings.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/text/StringsKt__StringsKt;->b(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Lkotlin/sequences/Sequence;
+    value = Lkotlin/text/StringsKt__StringsKt;->b(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Lkotlin/sequences/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lkotlin/t/Ranges1;",
+        "Lkotlin/jvm/b/b<",
+        "Lkotlin/t/d;",
         "Ljava/lang/String;",
         ">;"
     }
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/t/Ranges1;)Ljava/lang/String;
+.method public final a(Lkotlin/t/d;)Ljava/lang/String;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lkotlin/text/StringsKt__StringsKt$splitToSequence$1;->$this_splitToSequence:Ljava/lang/CharSequence;
 
-    invoke-static {v0, p1}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;Lkotlin/t/Ranges1;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;Lkotlin/t/d;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -62,9 +62,9 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lkotlin/t/Ranges1;
+    check-cast p1, Lkotlin/t/d;
 
-    invoke-virtual {p0, p1}, Lkotlin/text/StringsKt__StringsKt$splitToSequence$1;->a(Lkotlin/t/Ranges1;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lkotlin/text/StringsKt__StringsKt$splitToSequence$1;->a(Lkotlin/t/d;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "ImConfig.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/ImConfig;-><init>(Landroid/content/Context;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lcom/vk/im/engine/j/ImJobManagerFactory;Lcom/vk/im/engine/j/ImJobNotificationFactory;Lcom/vk/im/engine/j/TmpFileCache;Lcom/vk/metrics/eventtracking/Tracker;Lcom/vk/im/engine/models/ImExperiments;Lcom/vk/im/engine/j/StickersAnimationLoader;Lcom/vk/im/engine/UserCredentialsProvider;Lkotlin/jvm/b/Functions;Ljava/lang/String;JIJIIJIJJIZJLjava/util/Set;IIIJLcom/vk/im/engine/utils/collection/IntCollection;JJJJJJJJJLkotlin/jvm/b/Functions;JJLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lcom/vk/im/engine/j/WebUrlCacheController;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ZLcom/vk/im/engine/reporters/ImReporters;Lcom/vk/im/log/LogLevel;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/util/List;Ljava/util/List;I)V
+    value = Lcom/vk/im/engine/ImConfig;-><init>(Landroid/content/Context;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lcom/vk/im/engine/j/c;Lcom/vk/im/engine/j/d;Lcom/vk/im/engine/j/i;Lcom/vk/metrics/eventtracking/c;Lcom/vk/im/engine/models/e;Lcom/vk/im/engine/j/g;Lcom/vk/im/engine/UserCredentialsProvider;Lkotlin/jvm/b/a;Ljava/lang/String;JIJIIJIJJIZJLjava/util/Set;IIIJLcom/vk/im/engine/utils/collection/d;JJJJJJJJJLkotlin/jvm/b/a;JJLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lcom/vk/im/engine/j/j;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;ZLcom/vk/im/engine/reporters/k;Lcom/vk/im/log/LogLevel;ILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/util/List;Ljava/util/List;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }

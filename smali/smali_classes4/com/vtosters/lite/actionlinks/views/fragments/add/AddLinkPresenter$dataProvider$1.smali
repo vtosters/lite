@@ -3,7 +3,7 @@
 .source "AddLinkPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/lists/PaginationHelper$o;
+.implements Lcom/vk/lists/t$o;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/lists/PaginationHelper$o<",
+        "Lcom/vk/lists/t$o<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/search/SearchItem;",
         ">;>;"
@@ -50,14 +50,14 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+.method public a(ILcom/vk/lists/t;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/search/SearchItem;",
             ">;>;"
@@ -65,7 +65,7 @@
     .end annotation
 
     .line 11
-    sget-object v0, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->INSTANCE:Lcom/vtosters/lite/actionlinks/b/ActionLinksController;
+    sget-object v0, Lcom/vtosters/lite/actionlinks/b/b;->a:Lcom/vtosters/lite/actionlinks/b/b;
 
     iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
@@ -75,7 +75,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
 
     move-result p2
 
@@ -85,21 +85,21 @@
     const/16 p2, 0xa
 
     :goto_0
-    invoke-virtual {v0, v1, p1, p2}, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->a(Ljava/lang/String;II)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1, p1, p2}, Lcom/vtosters/lite/actionlinks/b/b;->a(Ljava/lang/String;II)Lc/a/m;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
+.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             "Z)",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/search/SearchItem;",
             ">;>;"
@@ -111,32 +111,32 @@
     const/4 p2, 0x1
 
     .line 1
-    invoke-virtual {p1, p2}, Lcom/vk/lists/PaginationHelper;->b(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/lists/t;->b(Z)V
 
     .line 2
     :cond_0
     iget-object p2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->f()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->f()Lio/reactivex/disposables/b;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    invoke-interface {p2}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p2}, Lio/reactivex/disposables/b;->o()V
 
     .line 3
     :cond_1
     iget-object p2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    invoke-virtual {p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/b;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/lists/SimpleAdapter;->clear()V
+    invoke-virtual {p2}, Lcom/vk/lists/i0;->clear()V
 
     .line 4
-    sget-object p2, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->INSTANCE:Lcom/vtosters/lite/actionlinks/b/ActionLinksController;
+    sget-object p2, Lcom/vtosters/lite/actionlinks/b/b;->a:Lcom/vtosters/lite/actionlinks/b/b;
 
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
@@ -148,7 +148,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->c()I
+    invoke-virtual {p1}, Lcom/vk/lists/t;->c()I
 
     move-result p1
 
@@ -158,23 +158,23 @@
     const/16 p1, 0xa
 
     :goto_0
-    invoke-virtual {p2, v0, v1, p1}, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->a(Ljava/lang/String;II)Lio/reactivex/Observable;
+    invoke-virtual {p2, v0, v1, p1}, Lcom/vtosters/lite/actionlinks/b/b;->a(Ljava/lang/String;II)Lc/a/m;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/search/SearchItem;",
             ">;>;Z",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")V"
         }
     .end annotation
@@ -185,34 +185,34 @@
     if-eqz p1, :cond_0
 
     .line 6
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 7
     new-instance v1, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1$onNewData$1;
 
-    invoke-direct {v1, p0, p3, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1$onNewData$1;-><init>(Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1;Lcom/vk/lists/PaginationHelper;Z)V
+    invoke-direct {v1, p0, p3, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1$onNewData$1;-><init>(Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1;Lcom/vk/lists/t;Z)V
 
     .line 8
     sget-object p2, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1$a;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$dataProvider$1$a;
 
     .line 9
-    invoke-virtual {p1, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->b(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->b(Lio/reactivex/disposables/b;)V
 
     return-void
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 

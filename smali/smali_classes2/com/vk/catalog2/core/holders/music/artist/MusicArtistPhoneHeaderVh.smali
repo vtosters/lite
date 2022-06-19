@@ -3,8 +3,8 @@
 .source "MusicArtistPhoneHeaderVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/catalog2/core/holders/common/n;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # annotations
@@ -33,7 +33,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistPhoneHeaderVh$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistPhoneHeaderVh$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -142,7 +142,7 @@
     .locals 5
 
     .line 5
-    sget v0, Lcom/vk/catalog2/core/R7;->catalog_artist_header:I
+    sget v0, Lcom/vk/catalog2/core/r;->catalog_artist_header:I
 
     const/4 v1, 0x0
 
@@ -156,20 +156,20 @@
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
     .line 7
-    sget v0, Lcom/vk/catalog2/core/R10;->collapsing_layout:I
+    sget v0, Lcom/vk/catalog2/core/q;->collapsing_layout:I
 
     const/4 v2, 0x2
 
     const/4 v3, 0x0
 
-    invoke-static {p2, v0, v3, v2, v3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p2, v0, v3, v2, v3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
     .line 8
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v2
 
@@ -181,9 +181,9 @@
 
     const-string v3, "context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v3, Lcom/vk/catalog2/core/R6;->header_text:I
+    sget v3, Lcom/vk/catalog2/core/l;->header_text:I
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -309,7 +309,7 @@
     .line 26
     iget-object v1, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistPhoneHeaderVh;->d:Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;
 
-    invoke-virtual {v1, p1}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
+    invoke-virtual {v1, p1}, Lcom/vk/catalog2/core/y/b;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
     .line 27
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistPhoneHeaderVh;->a:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
@@ -339,7 +339,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v1 .. v9}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -368,12 +368,12 @@
     :goto_1
     if-eqz v1, :cond_3
 
-    sget v1, Lcom/vk/catalog2/core/R3;->music_artist_header_bottom_margin_genre_no:I
+    sget v1, Lcom/vk/catalog2/core/o;->music_artist_header_bottom_margin_genre_no:I
 
     goto :goto_2
 
     :cond_3
-    sget v1, Lcom/vk/catalog2/core/R3;->music_artist_header_bottom_margin_genre:I
+    sget v1, Lcom/vk/catalog2/core/o;->music_artist_header_bottom_margin_genre:I
 
     .line 30
     :goto_2
@@ -383,7 +383,7 @@
 
     const-string v3, "context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2, v1}, Lcom/vk/core/util/ContextExtKt;->b(Landroid/content/Context;I)I
 
@@ -406,7 +406,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -415,7 +415,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
@@ -428,7 +428,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistPhoneHeaderVh$d;-><init>(Lcom/vk/catalog2/core/holders/music/artist/MusicArtistPhoneHeaderVh;)V
 
-    invoke-static {v0}, Lcom/vk/common/g/Functions;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vk/common/g/c;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -452,9 +452,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v2, Lcom/vk/catalog2/core/R6;->header_text:I
+    sget v2, Lcom/vk/catalog2/core/l;->header_text:I
 
     invoke-static {v1, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 

@@ -1,5 +1,5 @@
 .class public final Lorg/chromium/net/impl/CronetUrlRequest;
-.super Lorg/chromium/net/impl/UrlRequestBase;
+.super Lorg/chromium/net/impl/i;
 .source "CronetUrlRequest.java"
 
 
@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field private A:Lorg/chromium/net/impl/CronetMetrics;
+.field private A:Lorg/chromium/net/impl/c;
 
 .field private B:Lorg/chromium/net/impl/CronetUrlRequest$i;
 
@@ -45,7 +45,7 @@
     .end annotation
 .end field
 
-.field private final j:Lorg/chromium/net/impl/VersionSafeCallbacks5;
+.field private final j:Lorg/chromium/net/impl/s;
 
 .field private final k:Ljava/lang/String;
 
@@ -77,11 +77,11 @@
 
 .field private final u:I
 
-.field private final v:Lorg/chromium/net/impl/VersionSafeCallbacks6;
+.field private final v:Lorg/chromium/net/impl/q;
 
 .field private w:Lorg/chromium/net/impl/CronetUploadDataStream;
 
-.field private x:Lorg/chromium/net/impl/UrlResponseInfoImpl;
+.field private x:Lorg/chromium/net/impl/k;
 
 .field private y:I
 
@@ -89,7 +89,7 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/chromium/net/impl/CronetUrlRequestContext;Ljava/lang/String;ILorg/chromium/net/UrlRequest$b;Ljava/util/concurrent/Executor;Ljava/util/Collection;ZZZZIZILorg/chromium/net/RequestFinishedInfo$a;)V
+.method constructor <init>(Lorg/chromium/net/impl/CronetUrlRequestContext;Ljava/lang/String;ILorg/chromium/net/w$b;Ljava/util/concurrent/Executor;Ljava/util/Collection;ZZZZIZILorg/chromium/net/q$a;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -97,12 +97,12 @@
             "Lorg/chromium/net/impl/CronetUrlRequestContext;",
             "Ljava/lang/String;",
             "I",
-            "Lorg/chromium/net/UrlRequest$b;",
+            "Lorg/chromium/net/w$b;",
             "Ljava/util/concurrent/Executor;",
             "Ljava/util/Collection<",
             "Ljava/lang/Object;",
             ">;ZZZZIZI",
-            "Lorg/chromium/net/RequestFinishedInfo$a;",
+            "Lorg/chromium/net/q$a;",
             ")V"
         }
     .end annotation
@@ -118,7 +118,7 @@
     move-object/from16 v4, p14
 
     .line 1
-    invoke-direct {p0}, Lorg/chromium/net/impl/UrlRequestBase;-><init>()V
+    invoke-direct {p0}, Lorg/chromium/net/impl/i;-><init>()V
 
     .line 2
     new-instance v5, Ljava/lang/Object;
@@ -175,11 +175,11 @@
     iput v1, v0, Lorg/chromium/net/impl/CronetUrlRequest;->l:I
 
     .line 10
-    new-instance v1, Lorg/chromium/net/impl/VersionSafeCallbacks5;
+    new-instance v1, Lorg/chromium/net/impl/s;
 
-    invoke-direct {v1, p4}, Lorg/chromium/net/impl/VersionSafeCallbacks5;-><init>(Lorg/chromium/net/UrlRequest$b;)V
+    invoke-direct {v1, p4}, Lorg/chromium/net/impl/s;-><init>(Lorg/chromium/net/w$b;)V
 
-    iput-object v1, v0, Lorg/chromium/net/impl/CronetUrlRequest;->j:Lorg/chromium/net/impl/VersionSafeCallbacks5;
+    iput-object v1, v0, Lorg/chromium/net/impl/CronetUrlRequest;->j:Lorg/chromium/net/impl/s;
 
     .line 11
     iput-object v3, v0, Lorg/chromium/net/impl/CronetUrlRequest;->h:Ljava/util/concurrent/Executor;
@@ -222,13 +222,13 @@
     if-eqz v4, :cond_0
 
     .line 19
-    new-instance v6, Lorg/chromium/net/impl/VersionSafeCallbacks6;
+    new-instance v6, Lorg/chromium/net/impl/q;
 
-    invoke-direct {v6, v4}, Lorg/chromium/net/impl/VersionSafeCallbacks6;-><init>(Lorg/chromium/net/RequestFinishedInfo$a;)V
+    invoke-direct {v6, v4}, Lorg/chromium/net/impl/q;-><init>(Lorg/chromium/net/q$a;)V
 
     .line 20
     :cond_0
-    iput-object v6, v0, Lorg/chromium/net/impl/CronetUrlRequest;->v:Lorg/chromium/net/impl/VersionSafeCallbacks6;
+    iput-object v6, v0, Lorg/chromium/net/impl/CronetUrlRequest;->v:Lorg/chromium/net/impl/q;
 
     return-void
 
@@ -272,7 +272,7 @@
     return-object p0
 .end method
 
-.method private a(ILjava/lang/String;[Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;J)Lorg/chromium/net/impl/UrlResponseInfoImpl;
+.method private a(ILjava/lang/String;[Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;J)Lorg/chromium/net/impl/k;
     .locals 12
 
     move-object v0, p3
@@ -311,7 +311,7 @@
 
     .line 41
     :cond_0
-    new-instance v10, Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    new-instance v10, Lorg/chromium/net/impl/k;
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -335,7 +335,7 @@
 
     move-wide/from16 v8, p7
 
-    invoke-direct/range {v0 .. v9}, Lorg/chromium/net/impl/UrlResponseInfoImpl;-><init>(Ljava/util/List;ILjava/lang/String;Ljava/util/List;ZLjava/lang/String;Ljava/lang/String;J)V
+    invoke-direct/range {v0 .. v9}, Lorg/chromium/net/impl/k;-><init>(Ljava/util/List;ILjava/lang/String;Ljava/util/List;ZLjava/lang/String;Ljava/lang/String;J)V
 
     return-object v10
 .end method
@@ -363,7 +363,7 @@
 
     const-string p1, "Exception in CalledByNative method"
 
-    invoke-static {v1, p1, v2}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, p1, v2}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 44
     invoke-direct {p0, v0}, Lorg/chromium/net/impl/CronetUrlRequest;->a(Lorg/chromium/net/CronetException;)V
@@ -400,7 +400,7 @@
 
     const-string v2, "Exception posting task to executor"
 
-    invoke-static {v0, v2, v1}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v1}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 37
     new-instance v0, Lorg/chromium/net/impl/CronetExceptionImpl;
@@ -625,7 +625,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return p1
 
@@ -702,11 +702,11 @@
     .end packed-switch
 .end method
 
-.method static synthetic d(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/VersionSafeCallbacks6;
+.method static synthetic d(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/q;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->v:Lorg/chromium/net/impl/VersionSafeCallbacks6;
+    iget-object p0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->v:Lorg/chromium/net/impl/q;
 
     return-object p0
 .end method
@@ -768,11 +768,11 @@
     return p0
 .end method
 
-.method static synthetic f(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/UrlResponseInfoImpl;
+.method static synthetic f(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/k;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    iget-object p0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/k;
 
     return-object p0
 .end method
@@ -804,11 +804,11 @@
     return v0
 .end method
 
-.method static synthetic g(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/VersionSafeCallbacks5;
+.method static synthetic g(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/s;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->j:Lorg/chromium/net/impl/VersionSafeCallbacks5;
+    iget-object p0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->j:Lorg/chromium/net/impl/s;
 
     return-object p0
 .end method
@@ -817,12 +817,12 @@
     .locals 8
 
     .line 2
-    iget-object v3, p0, Lorg/chromium/net/impl/CronetUrlRequest;->A:Lorg/chromium/net/impl/CronetMetrics;
+    iget-object v3, p0, Lorg/chromium/net/impl/CronetUrlRequest;->A:Lorg/chromium/net/impl/c;
 
     if-eqz v3, :cond_0
 
     .line 3
-    new-instance v7, Lorg/chromium/net/impl/RequestFinishedInfoImpl;
+    new-instance v7, Lorg/chromium/net/impl/h;
 
     iget-object v1, p0, Lorg/chromium/net/impl/CronetUrlRequest;->k:Ljava/lang/String;
 
@@ -830,33 +830,33 @@
 
     iget v4, p0, Lorg/chromium/net/impl/CronetUrlRequest;->y:I
 
-    iget-object v5, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    iget-object v5, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/k;
 
     iget-object v6, p0, Lorg/chromium/net/impl/CronetUrlRequest;->z:Lorg/chromium/net/CronetException;
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lorg/chromium/net/impl/RequestFinishedInfoImpl;-><init>(Ljava/lang/String;Ljava/util/Collection;Lorg/chromium/net/RequestFinishedInfo$b;ILorg/chromium/net/UrlResponseInfo;Lorg/chromium/net/CronetException;)V
+    invoke-direct/range {v0 .. v6}, Lorg/chromium/net/impl/h;-><init>(Ljava/lang/String;Ljava/util/Collection;Lorg/chromium/net/q$b;ILorg/chromium/net/x;Lorg/chromium/net/CronetException;)V
 
     .line 4
     iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->g:Lorg/chromium/net/impl/CronetUrlRequestContext;
 
-    invoke-virtual {v0, v7}, Lorg/chromium/net/impl/CronetUrlRequestContext;->a(Lorg/chromium/net/RequestFinishedInfo;)V
+    invoke-virtual {v0, v7}, Lorg/chromium/net/impl/CronetUrlRequestContext;->a(Lorg/chromium/net/q;)V
 
     .line 5
-    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->v:Lorg/chromium/net/impl/VersionSafeCallbacks6;
+    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->v:Lorg/chromium/net/impl/q;
 
     if-eqz v0, :cond_0
 
     .line 6
     :try_start_0
-    invoke-virtual {v0}, Lorg/chromium/net/impl/VersionSafeCallbacks6;->a()Ljava/util/concurrent/Executor;
+    invoke-virtual {v0}, Lorg/chromium/net/impl/q;->a()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
     new-instance v1, Lorg/chromium/net/impl/CronetUrlRequest$h;
 
-    invoke-direct {v1, p0, v7}, Lorg/chromium/net/impl/CronetUrlRequest$h;-><init>(Lorg/chromium/net/impl/CronetUrlRequest;Lorg/chromium/net/RequestFinishedInfo;)V
+    invoke-direct {v1, p0, v7}, Lorg/chromium/net/impl/CronetUrlRequest$h;-><init>(Lorg/chromium/net/impl/CronetUrlRequest;Lorg/chromium/net/q;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
     :try_end_0
@@ -880,7 +880,7 @@
 
     const-string v0, "Exception posting task to executor"
 
-    invoke-static {v1, v0, v2}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_0
     :goto_0
@@ -971,12 +971,12 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/k;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p5, p6}, Lorg/chromium/net/impl/UrlResponseInfoImpl;->a(J)V
+    invoke-virtual {v0, p5, p6}, Lorg/chromium/net/impl/k;->a(J)V
 
     :cond_0
     const/16 p5, 0xa
@@ -1057,12 +1057,12 @@
 
     .line 2
     :try_start_0
-    iget-object v0, v1, Lorg/chromium/net/impl/CronetUrlRequest;->A:Lorg/chromium/net/impl/CronetMetrics;
+    iget-object v0, v1, Lorg/chromium/net/impl/CronetUrlRequest;->A:Lorg/chromium/net/impl/c;
 
     if-nez v0, :cond_0
 
     .line 3
-    new-instance v0, Lorg/chromium/net/impl/CronetMetrics;
+    new-instance v0, Lorg/chromium/net/impl/c;
 
     move-object v3, v0
 
@@ -1098,9 +1098,9 @@
 
     move-wide/from16 v33, p30
 
-    invoke-direct/range {v3 .. v34}, Lorg/chromium/net/impl/CronetMetrics;-><init>(JJJJJJJJJJJJJZJJ)V
+    invoke-direct/range {v3 .. v34}, Lorg/chromium/net/impl/c;-><init>(JJJJJJJJJJJJJZJJ)V
 
-    iput-object v0, v1, Lorg/chromium/net/impl/CronetUrlRequest;->A:Lorg/chromium/net/impl/CronetMetrics;
+    iput-object v0, v1, Lorg/chromium/net/impl/CronetUrlRequest;->A:Lorg/chromium/net/impl/c;
 
     .line 4
     monitor-exit v2
@@ -1197,7 +1197,7 @@
 
     const-string v0, "Exception posting task to executor"
 
-    invoke-static {v1, v0, v2}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0
     return-void
@@ -1220,9 +1220,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/k;
 
-    invoke-virtual {v0, p5, p6}, Lorg/chromium/net/impl/UrlResponseInfoImpl;->a(J)V
+    invoke-virtual {v0, p5, p6}, Lorg/chromium/net/impl/k;->a(J)V
 
     .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
@@ -1310,7 +1310,7 @@
     move-wide/from16 v7, p8
 
     .line 1
-    invoke-direct/range {v0 .. v8}, Lorg/chromium/net/impl/CronetUrlRequest;->a(ILjava/lang/String;[Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;J)Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    invoke-direct/range {v0 .. v8}, Lorg/chromium/net/impl/CronetUrlRequest;->a(ILjava/lang/String;[Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;J)Lorg/chromium/net/impl/k;
 
     move-result-object v0
 
@@ -1322,7 +1322,7 @@
     .line 3
     new-instance v1, Lorg/chromium/net/impl/CronetUrlRequest$b;
 
-    invoke-direct {v1, p0, v0, p1}, Lorg/chromium/net/impl/CronetUrlRequest$b;-><init>(Lorg/chromium/net/impl/CronetUrlRequest;Lorg/chromium/net/impl/UrlResponseInfoImpl;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v0, p1}, Lorg/chromium/net/impl/CronetUrlRequest$b;-><init>(Lorg/chromium/net/impl/CronetUrlRequest;Lorg/chromium/net/impl/k;Ljava/lang/String;)V
 
     .line 4
     invoke-direct {p0, v1}, Lorg/chromium/net/impl/CronetUrlRequest;->a(Ljava/lang/Runnable;)V
@@ -1336,11 +1336,11 @@
     .end annotation
 
     .line 1
-    invoke-direct/range {p0 .. p8}, Lorg/chromium/net/impl/CronetUrlRequest;->a(ILjava/lang/String;[Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;J)Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    invoke-direct/range {p0 .. p8}, Lorg/chromium/net/impl/CronetUrlRequest;->a(ILjava/lang/String;[Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;J)Lorg/chromium/net/impl/k;
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    iput-object p1, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/k;
 
     .line 2
     new-instance p1, Lorg/chromium/net/impl/CronetUrlRequest$c;
@@ -1375,9 +1375,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->x:Lorg/chromium/net/impl/k;
 
-    invoke-virtual {v0, p1, p2}, Lorg/chromium/net/impl/UrlResponseInfoImpl;->a(J)V
+    invoke-virtual {v0, p1, p2}, Lorg/chromium/net/impl/k;->a(J)V
 
     .line 2
     new-instance p1, Lorg/chromium/net/impl/CronetUrlRequest$d;
@@ -1532,7 +1532,7 @@
 
     const-string p1, "Exception in upload method"
 
-    invoke-static {v1, p1, v2}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, p1, v2}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 47
     invoke-direct {p0, v0}, Lorg/chromium/net/impl/CronetUrlRequest;->a(Lorg/chromium/net/CronetException;)V
@@ -1544,10 +1544,10 @@
     .locals 7
 
     .line 16
-    invoke-static {p1}, Lorg/chromium/net/impl/Preconditions;->b(Ljava/nio/ByteBuffer;)V
+    invoke-static {p1}, Lorg/chromium/net/impl/g;->b(Ljava/nio/ByteBuffer;)V
 
     .line 17
-    invoke-static {p1}, Lorg/chromium/net/impl/Preconditions;->a(Ljava/nio/ByteBuffer;)V
+    invoke-static {p1}, Lorg/chromium/net/impl/g;->a(Ljava/nio/ByteBuffer;)V
 
     .line 18
     iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->f:Ljava/lang/Object;
@@ -1640,7 +1640,7 @@
     throw p1
 .end method
 
-.method public a(Lorg/chromium/net/UploadDataProvider;Ljava/util/concurrent/Executor;)V
+.method public a(Lorg/chromium/net/s;Ljava/util/concurrent/Executor;)V
     .locals 1
 
     if-eqz p1, :cond_1
@@ -1659,7 +1659,7 @@
     :cond_0
     new-instance v0, Lorg/chromium/net/impl/CronetUploadDataStream;
 
-    invoke-direct {v0, p1, p2, p0}, Lorg/chromium/net/impl/CronetUploadDataStream;-><init>(Lorg/chromium/net/UploadDataProvider;Ljava/util/concurrent/Executor;Lorg/chromium/net/impl/CronetUrlRequest;)V
+    invoke-direct {v0, p1, p2, p0}, Lorg/chromium/net/impl/CronetUploadDataStream;-><init>(Lorg/chromium/net/s;Ljava/util/concurrent/Executor;Lorg/chromium/net/impl/CronetUrlRequest;)V
 
     iput-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest;->w:Lorg/chromium/net/impl/CronetUploadDataStream;
 
@@ -1785,7 +1785,7 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, v13, Lorg/chromium/net/impl/CronetUrlRequest;->v:Lorg/chromium/net/impl/VersionSafeCallbacks6;
+    iget-object v0, v13, Lorg/chromium/net/impl/CronetUrlRequest;->v:Lorg/chromium/net/impl/q;
 
     if-eqz v0, :cond_0
 

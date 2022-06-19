@@ -3,12 +3,12 @@
 .source "InstantJobManagerImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/instantjobs/impl/InstantJobManagerImpl;-><init>(Landroid/content/Context;Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;Ljava/lang/String;Ljava/lang/String;Lcom/vk/instantjobs/g/d/TimeProvider;Lcom/vk/instantjobs/InstantJobLogger;Lcom/vk/instantjobs/InstantJobLogLevel;)V
+    value = Lcom/vk/instantjobs/impl/InstantJobManagerImpl;-><init>(Landroid/content/Context;Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;Ljava/lang/String;Ljava/lang/String;Lcom/vk/instantjobs/g/d/b;Lcom/vk/instantjobs/a;Lcom/vk/instantjobs/InstantJobLogLevel;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;",
         ">;"
     }
@@ -27,18 +27,18 @@
 
 
 # instance fields
-.field final synthetic $logger:Lcom/vk/instantjobs/InstantJobLogger;
+.field final synthetic $logger:Lcom/vk/instantjobs/a;
 
 .field final synthetic this$0:Lcom/vk/instantjobs/impl/InstantJobManagerImpl;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Lcom/vk/instantjobs/InstantJobLogger;)V
+.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Lcom/vk/instantjobs/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$asyncExecutor$2;->this$0:Lcom/vk/instantjobs/impl/InstantJobManagerImpl;
 
-    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$asyncExecutor$2;->$logger:Lcom/vk/instantjobs/InstantJobLogger;
+    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$asyncExecutor$2;->$logger:Lcom/vk/instantjobs/a;
 
     const/4 p1, 0x0
 
@@ -61,9 +61,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$asyncExecutor$2;->$logger:Lcom/vk/instantjobs/InstantJobLogger;
+    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$asyncExecutor$2;->$logger:Lcom/vk/instantjobs/a;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;-><init>(Ljava/lang/String;Lcom/vk/instantjobs/InstantJobLogger;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;-><init>(Ljava/lang/String;Lcom/vk/instantjobs/a;)V
 
     return-object v0
 .end method

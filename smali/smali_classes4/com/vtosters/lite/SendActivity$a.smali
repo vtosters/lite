@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/SendActivity$a;
-.super Lcom/vtosters/lite/upload/UploadUtils$c;
+.super Lcom/vtosters/lite/upload/k$c;
 .source "SendActivity.java"
 
 
@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field final synthetic a:Lb/h/g/k/VKProgressDialog;
+.field final synthetic a:Lb/h/g/k/a;
 
 .field final synthetic b:Lcom/vtosters/lite/SendActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/SendActivity;Lb/h/g/k/VKProgressDialog;)V
+.method constructor <init>(Lcom/vtosters/lite/SendActivity;Lb/h/g/k/a;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/SendActivity$a;->b:Lcom/vtosters/lite/SendActivity;
 
-    iput-object p2, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/VKProgressDialog;
+    iput-object p2, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/a;
 
-    invoke-direct {p0}, Lcom/vtosters/lite/upload/UploadUtils$c;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/upload/k$c;-><init>()V
 
     return-void
 .end method
@@ -40,7 +40,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/VKProgressDialog;
+    iget-object v0, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/a;
 
     iget-object v1, p0, Lcom/vtosters/lite/SendActivity$a;->b:Lcom/vtosters/lite/SendActivity;
 
@@ -53,7 +53,7 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/VKProgressDialog;
+    iget-object v0, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/a;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
@@ -70,12 +70,12 @@
     const p1, 0x7f120369
 
     .line 3
-    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
 
     .line 4
-    iget-object p1, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/VKProgressDialog;
+    iget-object p1, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/a;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     .line 5
     iget-object p1, p0, Lcom/vtosters/lite/SendActivity$a;->b:Lcom/vtosters/lite/SendActivity;
@@ -187,9 +187,9 @@
 
     .line 16
     :goto_1
-    iget-object p1, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/VKProgressDialog;
+    iget-object p1, p0, Lcom/vtosters/lite/SendActivity$a;->a:Lb/h/g/k/a;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     .line 17
     iget-object p1, p0, Lcom/vtosters/lite/SendActivity$a;->b:Lcom/vtosters/lite/SendActivity;

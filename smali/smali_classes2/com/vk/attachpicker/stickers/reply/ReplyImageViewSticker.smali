@@ -1,9 +1,9 @@
 .class public final Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;
-.super Lcom/vk/attachpicker/stickers/ViewGroupSticker;
+.super Lcom/vk/attachpicker/stickers/t0;
 .source "ReplyImageViewSticker.kt"
 
 # interfaces
-.implements Lcom/vk/attachpicker/stickers/reply/ReplySticker;
+.implements Lcom/vk/attachpicker/stickers/reply/a;
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic G:[Lkotlin/u/KProperty5;
+.field static final synthetic G:[Lkotlin/u/j;
 
 
 # instance fields
@@ -35,9 +35,9 @@
 
 .field private final f:Landroid/widget/ImageView;
 
-.field private final g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+.field private final g:Lcom/vk/attachpicker/stickers/reply/b;
 
-.field private final h:Lkotlin/Lazy2;
+.field private final h:Lkotlin/e;
 
 
 # direct methods
@@ -46,13 +46,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -60,15 +60,15 @@
 
     const-string v4, "getRenderingBitmap()Landroid/graphics/Bitmap;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->G:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->G:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -77,7 +77,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/attachpicker/stickers/t0;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->B:Lcom/vk/dto/common/ImageSize;
 
@@ -90,16 +90,16 @@
     iput-boolean p6, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->F:Z
 
     .line 3
-    sget-object p2, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->v:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate$a;
+    sget-object p2, Lcom/vk/attachpicker/stickers/reply/b;->v:Lcom/vk/attachpicker/stickers/reply/b$a;
 
-    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate$a;->a()F
+    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/reply/b$a;->a()F
 
     move-result p2
 
     iput p2, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->d:F
 
     .line 4
-    sget-object p2, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->v:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate$a;
+    sget-object p2, Lcom/vk/attachpicker/stickers/reply/b;->v:Lcom/vk/attachpicker/stickers/reply/b$a;
 
     iget-object p3, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->B:Lcom/vk/dto/common/ImageSize;
 
@@ -113,7 +113,7 @@
 
     const/4 p6, 0x0
 
-    invoke-static {p2, p3, p4, p5, p6}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate$a;->a(Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate$a;FFILjava/lang/Object;)F
+    invoke-static {p2, p3, p4, p5, p6}, Lcom/vk/attachpicker/stickers/reply/b$a;->a(Lcom/vk/attachpicker/stickers/reply/b$a;FFILjava/lang/Object;)F
 
     move-result p2
 
@@ -127,7 +127,7 @@
     iput-object p2, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->f:Landroid/widget/ImageView;
 
     .line 6
-    new-instance p1, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    new-instance p1, Lcom/vk/attachpicker/stickers/reply/b;
 
     iget-object p2, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->f:Landroid/widget/ImageView;
 
@@ -135,25 +135,25 @@
 
     move-result-object p2
 
-    invoke-direct {p1, p0, p2}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;-><init>(Lcom/vk/attachpicker/stickers/ViewGroupSticker;Ljava/util/List;)V
+    invoke-direct {p1, p0, p2}, Lcom/vk/attachpicker/stickers/reply/b;-><init>(Lcom/vk/attachpicker/stickers/t0;Ljava/util/List;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/b;
 
     .line 7
     new-instance p1, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker$renderingBitmap$2;
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker$renderingBitmap$2;-><init>(Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->h:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->h:Lkotlin/e;
 
     const/4 p1, 0x0
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->setRemovable(Z)V
+    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/t0;->setRemovable(Z)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->f:Landroid/widget/ImageView;
@@ -161,25 +161,25 @@
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 10
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/b;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->a()V
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/reply/b;->a()V
 
     .line 11
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/b;
 
     iget-object p2, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->C:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/stickers/reply/b;->a(Ljava/lang/String;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->D:Landroid/graphics/Bitmap;
 
     if-eqz p1, :cond_0
 
-    iget-object p2, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    iget-object p2, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/b;
 
-    invoke-virtual {p2, p1}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->a(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p2, p1}, Lcom/vk/attachpicker/stickers/reply/b;->a(Landroid/graphics/Bitmap;)V
 
     .line 13
     :cond_0
@@ -195,7 +195,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Lcom/vk/dto/common/ImageSize;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lcom/vk/dto/common/ImageSize;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;ZILkotlin/jvm/internal/i;)V
     .locals 9
 
     and-int/lit8 v0, p7, 0x8
@@ -264,15 +264,15 @@
 .method private final getRenderingBitmap()Landroid/graphics/Bitmap;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->h:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->h:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->G:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->G:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -300,7 +300,7 @@
 
     const-string v0, "context"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->B:Lcom/vk/dto/common/ImageSize;
 
@@ -324,7 +324,7 @@
     check-cast p1, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;
 
     .line 4
-    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->a(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
+    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/t0;->a(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
 
     move-result-object p1
 
@@ -347,11 +347,11 @@
     if-eqz p2, :cond_0
 
     .line 6
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/b;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/reply/b;->b(Z)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->f:Landroid/widget/ImageView;
@@ -364,7 +364,7 @@
 
     .line 8
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->a(Landroid/graphics/Canvas;Z)V
+    invoke-super {p0, p1, p2}, Lcom/vk/attachpicker/stickers/t0;->a(Landroid/graphics/Canvas;Z)V
 
     if-eqz p2, :cond_1
 
@@ -383,7 +383,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/attachpicker/stickers/reply/ReplySticker$b;->a(Lcom/vk/attachpicker/stickers/reply/ReplySticker;Landroid/graphics/RectF;FF)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/attachpicker/stickers/reply/a$b;->a(Lcom/vk/attachpicker/stickers/reply/a;Landroid/graphics/RectF;FF)V
 
     return-void
 .end method
@@ -410,7 +410,7 @@
 
     iget-object v2, p1, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->B:Lcom/vk/dto/common/ImageSize;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -420,7 +420,7 @@
 
     iget-object p1, p1, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->C:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -444,7 +444,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/vk/attachpicker/stickers/reply/ReplySticker$b;->a(Lcom/vk/attachpicker/stickers/reply/ReplySticker;)Ljava/util/List;
+    invoke-static {p0}, Lcom/vk/attachpicker/stickers/reply/a$b;->a(Lcom/vk/attachpicker/stickers/reply/a;)Ljava/util/List;
 
     move-result-object v0
 
@@ -455,11 +455,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->getCommons()Lcom/vk/attachpicker/stickers/StickerCommonDelegate;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/t0;->getCommons()Lcom/vk/attachpicker/stickers/i0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickerCommonDelegate;->f()Landroid/graphics/Matrix;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/i0;->f()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -470,7 +470,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/attachpicker/stickers/reply/ReplySticker$b;->b(Lcom/vk/attachpicker/stickers/reply/ReplySticker;)F
+    invoke-static {p0}, Lcom/vk/attachpicker/stickers/reply/a$b;->b(Lcom/vk/attachpicker/stickers/reply/a;)F
 
     move-result v0
 
@@ -481,7 +481,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/attachpicker/stickers/reply/ReplySticker$b;->c(Lcom/vk/attachpicker/stickers/reply/ReplySticker;)F
+    invoke-static {p0}, Lcom/vk/attachpicker/stickers/reply/a$b;->c(Lcom/vk/attachpicker/stickers/reply/a;)F
 
     move-result v0
 
@@ -554,9 +554,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/b;
 
-    invoke-virtual {p1, p2, p3, p4, p5}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->a(IIII)V
+    invoke-virtual {p1, p2, p3, p4, p5}, Lcom/vk/attachpicker/stickers/reply/b;->a(IIII)V
 
     return-void
 .end method
@@ -565,12 +565,12 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/vk/attachpicker/stickers/t0;->onMeasure(II)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/b;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->a(II)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/stickers/reply/b;->a(II)V
 
     return-void
 .end method
@@ -579,25 +579,25 @@
     .locals 1
 
     .line 1
-    invoke-static {p1}, Lcom/vk/core/util/BitmapUtils;->d(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {p1}, Lcom/vk/core/util/m;->d(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->D:Landroid/graphics/Bitmap;
 
     .line 2
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/b;
 
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->D:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->a(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/stickers/reply/b;->a(Landroid/graphics/Bitmap;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -624,9 +624,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;->g:Lcom/vk/attachpicker/stickers/reply/b;
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/reply/b;->b(Z)V
 
     return-void
 .end method

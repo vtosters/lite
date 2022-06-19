@@ -3,19 +3,19 @@
 .source "HeadsetNotificationManager.kt"
 
 # interfaces
-.implements Lcom/vk/music/common/HeadsetConnectionStateChangedListener;
+.implements Lcom/vk/music/common/b;
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
 .field private static b:I
 
 .field private static final c:J
 
-.field private static final d:Lkotlin/Lazy2;
+.field private static final d:Lkotlin/e;
 
-.field private static final e:Lkotlin/Lazy2;
+.field private static final e:Lkotlin/e;
 
 .field public static final f:Lcom/vk/music/notifications/headset/HeadsetNotificationManager;
 
@@ -28,11 +28,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -40,9 +40,9 @@
 
     const-string v5, "getPrefs()Landroid/content/SharedPreferences;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -50,7 +50,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -58,15 +58,15 @@
 
     const-string v4, "getPlayerModel()Lcom/vk/music/player/PlayerModel;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->a:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->a:[Lkotlin/u/j;
 
     .line 1
     new-instance v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;
@@ -85,20 +85,20 @@
     .line 3
     sget-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager$prefs$2;->a:Lcom/vk/music/notifications/headset/HeadsetNotificationManager$prefs$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->d:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->d:Lkotlin/e;
 
     .line 4
     sget-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager$playerModel$2;->a:Lcom/vk/music/notifications/headset/HeadsetNotificationManager$playerModel$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->e:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->e:Lkotlin/e;
 
     return-void
 .end method
@@ -120,7 +120,7 @@
 
     sget-object v1, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->f:Lcom/vk/music/notifications/headset/HeadsetNotificationManager;
 
-    invoke-direct {v0, v1}, Lcom/vk/music/notifications/headset/listeners/HeadsetWiredConnectedReceiver;-><init>(Lcom/vk/music/common/HeadsetConnectionStateChangedListener;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/notifications/headset/listeners/HeadsetWiredConnectedReceiver;-><init>(Lcom/vk/music/common/b;)V
 
     invoke-virtual {v0, p0}, Lcom/vk/music/notifications/headset/listeners/HeadsetBaseReceiver;->a(Landroid/content/Context;)V
 
@@ -129,23 +129,23 @@
 
     sget-object v1, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->f:Lcom/vk/music/notifications/headset/HeadsetNotificationManager;
 
-    invoke-direct {v0, v1}, Lcom/vk/music/notifications/headset/listeners/HeadsetBluetoothConnectionChangedReceiver;-><init>(Lcom/vk/music/common/HeadsetConnectionStateChangedListener;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/notifications/headset/listeners/HeadsetBluetoothConnectionChangedReceiver;-><init>(Lcom/vk/music/common/b;)V
 
     invoke-virtual {v0, p0}, Lcom/vk/music/notifications/headset/listeners/HeadsetBaseReceiver;->a(Landroid/content/Context;)V
 
     .line 3
-    new-instance v0, Lcom/vk/music/notifications/headset/listeners/HeadsetActivityPausedListener;
+    new-instance v0, Lcom/vk/music/notifications/headset/listeners/a;
 
-    invoke-direct {v0}, Lcom/vk/music/notifications/headset/listeners/HeadsetActivityPausedListener;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/notifications/headset/listeners/a;-><init>()V
 
     invoke-virtual {p0, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     .line 4
     sget-object p0, Lcom/vk/common/AppStateTracker;->k:Lcom/vk/common/AppStateTracker;
 
-    new-instance v0, Lcom/vk/music/notifications/headset/listeners/HeadsetAppResumedListener;
+    new-instance v0, Lcom/vk/music/notifications/headset/listeners/b;
 
-    invoke-direct {v0}, Lcom/vk/music/notifications/headset/listeners/HeadsetAppResumedListener;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/notifications/headset/listeners/b;-><init>()V
 
     invoke-virtual {p0, v0}, Lcom/vk/common/AppStateTracker;->a(Lcom/vk/common/AppStateTracker$e;)Z
 
@@ -171,7 +171,7 @@
     :goto_0
     const-class v0, Lcom/vtosters/lite/live/LivePlayerActivity;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -183,7 +183,7 @@
     :cond_1
     const-class v0, Lcom/vk/stories/CreateStoryActivity;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -195,7 +195,7 @@
     :cond_2
     const-class v0, Lcom/vk/video/VideoActivity;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -281,22 +281,22 @@
     return-void
 .end method
 
-.method private final e()Lcom/vk/music/player/PlayerModel;
+.method private final e()Lcom/vk/music/player/d;
     .locals 3
 
-    sget-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->e:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->e:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/player/PlayerModel;
+    check-cast v0, Lcom/vk/music/player/d;
 
     return-object v0
 .end method
@@ -304,15 +304,15 @@
 .method private final f()Landroid/content/SharedPreferences;
     .locals 3
 
-    sget-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->d:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->d:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -325,11 +325,11 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->e()Lcom/vk/music/player/PlayerModel;
+    invoke-direct {p0}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->e()Lcom/vk/music/player/d;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->Q()Lcom/vk/music/player/PlayState;
+    invoke-interface {v0}, Lcom/vk/music/player/d;->Q()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -339,11 +339,11 @@
 
     if-nez v0, :cond_1
 
-    invoke-direct {p0}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->e()Lcom/vk/music/player/PlayerModel;
+    invoke-direct {p0}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->e()Lcom/vk/music/player/d;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->Q()Lcom/vk/music/player/PlayState;
+    invoke-interface {v0}, Lcom/vk/music/player/d;->Q()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -351,9 +351,9 @@
 
     if-eq v0, v1, :cond_1
 
-    sget-object v0, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
+    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->w()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/v;->w()Z
 
     move-result v0
 
@@ -557,11 +557,11 @@
     move-result v0
 
     .line 6
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->a()Z
+    invoke-interface {v1}, Lcom/vk/bridges/f;->a()Z
 
     move-result v1
 

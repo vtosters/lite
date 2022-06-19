@@ -3,7 +3,7 @@
 .source "PodcastHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lb/h/h/f/Favable;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lb/h/h/f/a;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lb/h/h/f/Favable;)V
+.method public final a(Lb/h/h/f/a;)V
     .locals 3
 
     .line 1
@@ -85,7 +85,7 @@
     const p1, 0x7f120add
 
     .line 4
-    invoke-static {p1, v2, v1, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v2, v1, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -93,7 +93,7 @@
     const p1, 0x7f120adf
 
     .line 5
-    invoke-static {p1, v2, v1, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v2, v1, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     :goto_0
     return-void
@@ -103,11 +103,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/h/f/Favable;
+    check-cast p1, Lb/h/h/f/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->a(Lb/h/h/f/Favable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->a(Lb/h/h/f/a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

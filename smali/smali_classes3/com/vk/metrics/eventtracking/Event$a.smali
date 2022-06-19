@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/vk/metrics/eventtracking/Event;-><init>(Lcom/vk/metrics/eventtracking/Event$a;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, p0, v1}, Lcom/vk/metrics/eventtracking/Event;-><init>(Lcom/vk/metrics/eventtracking/Event$a;Lkotlin/jvm/internal/i;)V
 
     iput-object v0, p0, Lcom/vk/metrics/eventtracking/Event$a;->a:Lcom/vk/metrics/eventtracking/Event;
 
@@ -453,7 +453,7 @@
 
     .line 36
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 

@@ -3,20 +3,20 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/y2/AddVideoByLink;
+.field private final synthetic a:Lcom/vtosters/lite/fragments/y2/n;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/y2/AddVideoByLink;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/y2/n;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/y2/f;->a:Lcom/vtosters/lite/fragments/y2/AddVideoByLink;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/y2/f;->a:Lcom/vtosters/lite/fragments/y2/n;
 
     return-void
 .end method
@@ -26,11 +26,11 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/y2/f;->a:Lcom/vtosters/lite/fragments/y2/AddVideoByLink;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/y2/f;->a:Lcom/vtosters/lite/fragments/y2/n;
 
     check-cast p1, Lcom/vk/api/video/VideoSave$a;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/y2/AddVideoByLink;->a(Lcom/vk/api/video/VideoSave$a;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/y2/n;->a(Lcom/vk/api/video/VideoSave$a;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "StickersExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerPurchaseUpdater$1;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerPurchaseUpdater$1;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/dto/stickers/StickerStockItem;",
         "Lcom/vk/dto/stickers/StickerStockItem;",
         ">;"

@@ -3,12 +3,12 @@
 .source "FaveAllFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/fragments/FaveAllFragment;->b5()Lcom/vk/lists/SimpleAdapter;
+    value = Lcom/vk/fave/fragments/FaveAllFragment;->b5()Lcom/vk/lists/i0;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/lists/DefaultListEmptyView;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/lists/e;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/lists/DefaultListEmptyView;)V
+.method public final a(Lcom/vk/lists/e;)V
     .locals 4
 
     .line 1
@@ -55,7 +55,7 @@
     .line 2
     iget-object v1, p0, Lcom/vk/fave/fragments/FaveAllFragment$onCreateAdapter$adapter$1;->this$0:Lcom/vk/fave/fragments/FaveAllFragment;
 
-    invoke-static {v1}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    invoke-static {v1}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/a;
 
     move-result-object v1
 
@@ -66,7 +66,7 @@
     .line 3
     iget-object v2, p0, Lcom/vk/fave/fragments/FaveAllFragment$onCreateAdapter$adapter$1;->this$0:Lcom/vk/fave/fragments/FaveAllFragment;
 
-    invoke-static {v2}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    invoke-static {v2}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/a;
 
     move-result-object v2
 
@@ -77,25 +77,25 @@
     .line 4
     iget-object v3, p0, Lcom/vk/fave/fragments/FaveAllFragment$onCreateAdapter$adapter$1;->this$0:Lcom/vk/fave/fragments/FaveAllFragment;
 
-    invoke-static {v3}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    invoke-static {v3}, Lcom/vk/fave/fragments/FaveAllFragment;->b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/a;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->D()Lcom/vk/fave/entities/FaveResponseEntries3;
+    invoke-virtual {v3}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->D()Lcom/vk/fave/entities/f;
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/fave/entities/FaveResponseEntries2;
+    check-cast v3, Lcom/vk/fave/entities/h;
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/vk/fave/entities/FaveResponseEntries2;->a()Lcom/vk/fave/entities/FaveResponseEntries1;
+    invoke-virtual {v3}, Lcom/vk/fave/entities/h;->a()Lcom/vk/fave/entities/c;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/vk/fave/entities/FaveResponseEntries1;->a()Ljava/lang/Integer;
+    invoke-virtual {v3}, Lcom/vk/fave/entities/c;->a()Ljava/lang/Integer;
 
     move-result-object v3
 
@@ -115,11 +115,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/lists/DefaultListEmptyView;
+    check-cast p1, Lcom/vk/lists/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveAllFragment$onCreateAdapter$adapter$1;->a(Lcom/vk/lists/DefaultListEmptyView;)V
+    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveAllFragment$onCreateAdapter$adapter$1;->a(Lcom/vk/lists/e;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

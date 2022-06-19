@@ -3,12 +3,12 @@
 .source "StorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/StorageManager;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/DbSchema;Lcom/vk/im/engine/internal/storage/structure/DbMigration;Lcom/vk/im/engine/models/Member;Ljava/util/List;Lcom/vk/im/engine/internal/storage/StorageChangesListener;Lcom/vk/im/engine/internal/storage/StorageTriggerFactory;)V
+    value = Lcom/vk/im/engine/internal/storage/StorageManager;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/c;Lcom/vk/im/engine/internal/storage/structure/a;Lcom/vk/im/engine/models/Member;Ljava/util/List;Lcom/vk/im/engine/internal/storage/a;Lcom/vk/im/engine/internal/storage/e;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/im/engine/internal/storage/delegates/search/SearchStorageManager;",
         ">;"
     }
@@ -53,11 +53,11 @@
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/StorageManager$searchStorageManager$2;->this$0:Lcom/vk/im/engine/internal/storage/StorageManager;
 
-    invoke-static {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironmentImpl;
+    invoke-static {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/internal/storage/c;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/search/SearchStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/search/SearchStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/b;)V
 
     return-object v0
 .end method

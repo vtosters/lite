@@ -3,12 +3,12 @@
 .source "ProxyVideoCache.kt"
 
 # interfaces
-.implements Lcom/danikula/videocache/CacheListener;
+.implements Lcom/danikula/videocache/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Lcom/vk/mediastore/a/VideoCache$c;Ljava/lang/String;)V
+    value = Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Lcom/vk/mediastore/a/c$c;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/mediastore/a/VideoCache$c;
+.field final synthetic a:Lcom/vk/mediastore/a/c$c;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/mediastore/a/VideoCache$c;)V
+.method constructor <init>(Lcom/vk/mediastore/a/c$c;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$a;->a:Lcom/vk/mediastore/a/VideoCache$c;
+    iput-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$a;->a:Lcom/vk/mediastore/a/c$c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,9 +38,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$a;->a:Lcom/vk/mediastore/a/VideoCache$c;
+    iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$a;->a:Lcom/vk/mediastore/a/c$c;
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/vk/mediastore/a/VideoCache$c;->a(Ljava/io/File;Ljava/lang/String;I)V
+    invoke-interface {v0, p1, p2, p3}, Lcom/vk/mediastore/a/c$c;->a(Ljava/io/File;Ljava/lang/String;I)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "MsgBuildHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/NestedMsg;)V
+    value = Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/NestedMsg;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/models/attaches/Attach;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
+.field final synthetic $env:Lcom/vk/im/engine/d;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/ImEnvironment;)V
+.method constructor <init>(Lcom/vk/im/engine/d;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgBuildHelper$generateUniqueLocalIds$2;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgBuildHelper$generateUniqueLocalIds$2;->$env:Lcom/vk/im/engine/d;
 
     const/4 p1, 0x1
 
@@ -50,9 +50,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgBuildHelper$generateUniqueLocalIds$2;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgBuildHelper$generateUniqueLocalIds$2;->$env:Lcom/vk/im/engine/d;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->e0()I
+    invoke-interface {v0}, Lcom/vk/im/engine/d;->e0()I
 
     move-result v0
 
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper$generateUniqueLocalIds$2;->a(Lcom/vk/im/engine/models/attaches/Attach;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

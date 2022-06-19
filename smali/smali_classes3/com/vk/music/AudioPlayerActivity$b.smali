@@ -3,7 +3,7 @@
 .source "AudioPlayerActivity.java"
 
 # interfaces
-.implements Lcom/vk/navigation/Dismissed;
+.implements Lcom/vk/navigation/g;
 
 
 # annotations

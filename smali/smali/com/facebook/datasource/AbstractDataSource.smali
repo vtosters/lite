@@ -3,7 +3,7 @@
 .source "AbstractDataSource.java"
 
 # interfaces
-.implements Lcom/facebook/datasource/DataSource;
+.implements Lcom/facebook/datasource/b;
 
 
 # annotations
@@ -19,7 +19,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/facebook/datasource/DataSource<",
+        "Lcom/facebook/datasource/b<",
         "TT;>;"
     }
 .end annotation
@@ -47,7 +47,7 @@
         value = {
             "Ljava/util/concurrent/ConcurrentLinkedQueue<",
             "Landroid/util/Pair<",
-            "Lcom/facebook/datasource/DataSubscriber<",
+            "Lcom/facebook/datasource/d<",
             "TT;>;",
             "Ljava/util/concurrent/Executor;",
             ">;>;"
@@ -96,12 +96,12 @@
     return-void
 .end method
 
-.method private a(Lcom/facebook/datasource/DataSubscriber;Ljava/util/concurrent/Executor;ZZ)V
+.method private a(Lcom/facebook/datasource/d;Ljava/util/concurrent/Executor;ZZ)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/datasource/DataSubscriber<",
+            "Lcom/facebook/datasource/d<",
             "TT;>;",
             "Ljava/util/concurrent/Executor;",
             "ZZ)V"
@@ -111,7 +111,7 @@
     .line 13
     new-instance v0, Lcom/facebook/datasource/AbstractDataSource$a;
 
-    invoke-direct {v0, p0, p3, p1, p4}, Lcom/facebook/datasource/AbstractDataSource$a;-><init>(Lcom/facebook/datasource/AbstractDataSource;ZLcom/facebook/datasource/DataSubscriber;Z)V
+    invoke-direct {v0, p0, p3, p1, p4}, Lcom/facebook/datasource/AbstractDataSource$a;-><init>(Lcom/facebook/datasource/AbstractDataSource;ZLcom/facebook/datasource/d;Z)V
 
     invoke-interface {p2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -418,13 +418,13 @@
     .line 4
     iget-object v4, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    check-cast v4, Lcom/facebook/datasource/DataSubscriber;
+    check-cast v4, Lcom/facebook/datasource/d;
 
     iget-object v3, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v3, Ljava/util/concurrent/Executor;
 
-    invoke-direct {p0, v4, v3, v0, v1}, Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/DataSubscriber;Ljava/util/concurrent/Executor;ZZ)V
+    invoke-direct {p0, v4, v3, v0, v1}, Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/d;Ljava/util/concurrent/Executor;ZZ)V
 
     goto :goto_0
 
@@ -475,12 +475,12 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/datasource/DataSubscriber;Ljava/util/concurrent/Executor;)V
+.method public a(Lcom/facebook/datasource/d;Ljava/util/concurrent/Executor;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/datasource/DataSubscriber<",
+            "Lcom/facebook/datasource/d<",
             "TT;>;",
             "Ljava/util/concurrent/Executor;",
             ")V"
@@ -488,10 +488,10 @@
     .end annotation
 
     .line 2
-    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    invoke-static {p2}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4
     monitor-enter p0
@@ -572,7 +572,7 @@
 
     move-result v1
 
-    invoke-direct {p0, p1, p2, v0, v1}, Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/DataSubscriber;Ljava/util/concurrent/Executor;ZZ)V
+    invoke-direct {p0, p1, p2, v0, v1}, Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/d;Ljava/util/concurrent/Executor;ZZ)V
 
     :cond_4
     return-void
@@ -980,7 +980,7 @@
     .line 2
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    check-cast v2, Lcom/facebook/datasource/DataSubscriber;
+    check-cast v2, Lcom/facebook/datasource/d;
 
     .line 3
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -990,7 +990,7 @@
     .line 4
     new-instance v3, Lcom/facebook/datasource/AbstractDataSource$b;
 
-    invoke-direct {v3, p0, v2}, Lcom/facebook/datasource/AbstractDataSource$b;-><init>(Lcom/facebook/datasource/AbstractDataSource;Lcom/facebook/datasource/DataSubscriber;)V
+    invoke-direct {v3, p0, v2}, Lcom/facebook/datasource/AbstractDataSource$b;-><init>(Lcom/facebook/datasource/AbstractDataSource;Lcom/facebook/datasource/d;)V
 
     invoke-interface {v1, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

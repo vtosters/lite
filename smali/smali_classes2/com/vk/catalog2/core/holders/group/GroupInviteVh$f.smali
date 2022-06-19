@@ -3,7 +3,7 @@
 .source "GroupInviteVh.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lb/h/g/l/ProfleEvents5;",
+        "Lc/a/z/g<",
+        "Lb/h/g/l/f;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lb/h/g/l/ProfleEvents5;)V
+.method public final a(Lb/h/g/l/f;)V
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lb/h/g/l/ProfleEvents5;->a()I
+    invoke-virtual {p1}, Lb/h/g/l/f;->a()I
 
     move-result v0
 
@@ -61,12 +61,12 @@
     if-eqz p1, :cond_0
 
     .line 2
-    check-cast p1, Lb/h/g/l/ProfleEvents3;
+    check-cast p1, Lb/h/g/l/i;
 
     .line 3
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh$f;->a:Lcom/vk/catalog2/core/holders/group/GroupInviteVh;
 
-    invoke-static {v0, p1}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->a(Lcom/vk/catalog2/core/holders/group/GroupInviteVh;Lb/h/g/l/ProfleEvents3;)V
+    invoke-static {v0, p1}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->a(Lcom/vk/catalog2/core/holders/group/GroupInviteVh;Lb/h/g/l/i;)V
 
     goto :goto_0
 
@@ -89,9 +89,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/g/l/ProfleEvents5;
+    check-cast p1, Lb/h/g/l/f;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh$f;->a(Lb/h/g/l/ProfleEvents5;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh$f;->a(Lb/h/g/l/f;)V
 
     return-void
 .end method

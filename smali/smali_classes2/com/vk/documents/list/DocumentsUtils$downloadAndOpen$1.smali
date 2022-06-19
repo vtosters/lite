@@ -3,12 +3,12 @@
 .source "DocumentsUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/documents/list/DocumentsUtils;->a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/documents/list/DocumentsUtils;->a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -31,7 +31,7 @@
 
 .field final synthetic $ext:Ljava/lang/String;
 
-.field final synthetic $finishCallback:Lkotlin/jvm/b/Functions;
+.field final synthetic $finishCallback:Lkotlin/jvm/b/a;
 
 .field final synthetic $title:Ljava/lang/String;
 
@@ -39,7 +39,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;->$context:Landroid/content/Context;
@@ -50,7 +50,7 @@
 
     iput-object p4, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;->$ext:Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;->$finishCallback:Lkotlin/jvm/b/Functions;
+    iput-object p5, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;->$finishCallback:Lkotlin/jvm/b/a;
 
     const/4 p1, 0x0
 
@@ -67,7 +67,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -82,7 +82,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;II)Lkotlin/Unit;
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;II)Lkotlin/m;
 
     .line 3
     iget-object v0, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;->$context:Landroid/content/Context;
@@ -105,18 +105,18 @@
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/DownloadUtils;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/y;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;->$finishCallback:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;->$finishCallback:Lkotlin/jvm/b/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/m;
 
     :cond_0
     return-void

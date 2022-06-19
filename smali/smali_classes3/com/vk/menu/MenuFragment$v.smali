@@ -3,7 +3,7 @@
 .source "MenuFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/core/util/Optional<",
+        "Lc/a/z/g<",
+        "Lcom/vk/core/util/q0<",
         "Lcom/vk/dto/menu/MenuResponse;",
         ">;>;"
     }
@@ -47,19 +47,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/util/Optional;)V
+.method public final a(Lcom/vk/core/util/q0;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/util/Optional<",
+            "Lcom/vk/core/util/q0<",
             "Lcom/vk/dto/menu/MenuResponse;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/core/util/Optional;->b()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/q0;->b()Z
 
     move-result p1
 
@@ -94,9 +94,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/util/Optional;
+    check-cast p1, Lcom/vk/core/util/q0;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$v;->a(Lcom/vk/core/util/Optional;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$v;->a(Lcom/vk/core/util/q0;)V
 
     return-void
 .end method

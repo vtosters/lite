@@ -46,25 +46,25 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->f()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->f()Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->d()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->d()Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 3
     :cond_1
@@ -72,7 +72,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->a(Lio/reactivex/disposables/b;)V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
@@ -102,11 +102,11 @@
     :cond_2
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->Y2()V
+    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->Y2()V
 
     .line 7
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
@@ -141,47 +141,47 @@
     .line 9
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->e0(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->e0(Z)V
 
     .line 10
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->O(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->O(Z)V
 
     .line 11
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->E(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->E(Z)V
 
     .line 12
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->b0(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->b0(Z)V
 
     .line 13
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->F(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->F(Z)V
 
     goto :goto_1
 
@@ -189,29 +189,29 @@
     :cond_4
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->e0(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->e0(Z)V
 
     .line 15
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->L(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->L(Z)V
 
     .line 16
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->Z(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->Z(Z)V
 
     .line 17
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
@@ -240,65 +240,65 @@
     .line 20
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->clear()V
+    invoke-virtual {p1}, Lcom/vk/lists/i0;->clear()V
 
     .line 21
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->I(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->I(Z)V
 
     .line 22
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->L(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->L(Z)V
 
     .line 23
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->Z(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->Z(Z)V
 
     .line 24
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->b0(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->b0(Z)V
 
     .line 25
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->h()Lcom/vtosters/lite/actionlinks/views/fragments/add/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;->F(Z)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/add/b;->F(Z)V
 
     .line 26
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$g;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->e()Lcom/vk/lists/PaginationHelper;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->e()Lcom/vk/lists/t;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
 
     :goto_1
     return-void

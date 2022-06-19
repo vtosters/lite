@@ -19,27 +19,27 @@
 
 .field private final b:Landroid/widget/TextView;
 
-.field private final c:Lcom/vk/auth/main/AuthUiManager$b;
+.field private final c:Lcom/vk/auth/main/i$b;
 
-.field private d:Lcom/vk/auth/init/exchange/UserItem;
+.field private d:Lcom/vk/auth/init/exchange/c;
 
-.field private final e:Lkotlin/jvm/b/Functions2;
+.field private final e:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
-            "Lcom/vk/auth/init/exchange/UserItem;",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/auth/init/exchange/c;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final f:Lkotlin/jvm/b/Functions2;
+.field private final f:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
-            "Lcom/vk/auth/init/exchange/UserItem;",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/auth/init/exchange/c;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -47,22 +47,22 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/auth/main/AuthUiManager;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/auth/main/i;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lcom/vk/auth/main/AuthUiManager;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lcom/vk/auth/main/i;",
+            "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vk/auth/init/exchange/UserItem;",
-            "Lkotlin/Unit;",
+            "Lcom/vk/auth/init/exchange/c;",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vk/auth/init/exchange/UserItem;",
-            "Lkotlin/Unit;",
+            "Lcom/vk/auth/init/exchange/c;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/auth/r/R8;->vk_auth_exchange_user_item:I
+    sget v1, Lcom/vk/auth/r/f;->vk_auth_exchange_user_item:I
 
     const/4 v2, 0x0
 
@@ -87,14 +87,14 @@
     .line 2
     invoke-direct {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p3, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->e:Lkotlin/jvm/b/Functions2;
+    iput-object p3, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->e:Lkotlin/jvm/b/b;
 
-    iput-object p4, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->f:Lkotlin/jvm/b/Functions2;
+    iput-object p4, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->f:Lkotlin/jvm/b/b;
 
     .line 3
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    sget p4, Lcom/vk/auth/r/R5;->user_controller:I
+    sget p4, Lcom/vk/auth/r/e;->user_controller:I
 
     invoke-virtual {p3, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -107,7 +107,7 @@
     .line 4
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    sget p4, Lcom/vk/auth/r/R5;->name:I
+    sget p4, Lcom/vk/auth/r/e;->name:I
 
     invoke-virtual {p3, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -125,23 +125,23 @@
     const-string p3, "context"
 
     .line 6
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p3, Lcom/vk/auth/r/R6;->vk_placeholder_user_64:I
+    sget p3, Lcom/vk/auth/r/d;->vk_placeholder_user_64:I
 
-    invoke-interface {p2, p1, p3}, Lcom/vk/auth/main/AuthUiManager;->a(Landroid/content/Context;I)Lcom/vk/auth/main/AuthUiManager$b;
+    invoke-interface {p2, p1, p3}, Lcom/vk/auth/main/i;->a(Landroid/content/Context;I)Lcom/vk/auth/main/i$b;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->c:Lcom/vk/auth/main/AuthUiManager$b;
+    iput-object p2, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->c:Lcom/vk/auth/main/i$b;
 
     .line 7
     iget-object p2, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->a:Lcom/vk/auth/ui/AuthExchangeUserControlView;
 
     .line 8
-    iget-object p3, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->c:Lcom/vk/auth/main/AuthUiManager$b;
+    iget-object p3, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->c:Lcom/vk/auth/main/i$b;
 
-    invoke-interface {p3}, Lcom/vk/auth/main/AuthUiManager$b;->a()Landroid/view/View;
+    invoke-interface {p3}, Lcom/vk/auth/main/i$b;->a()Landroid/view/View;
 
     move-result-object p3
 
@@ -159,7 +159,7 @@
     .line 10
     sget-object v0, Lcom/vk/auth/utils/AuthUtils;->d:Lcom/vk/auth/utils/AuthUtils;
 
-    sget v1, Lcom/vk/auth/r/R3;->vk_separator_alpha:I
+    sget v1, Lcom/vk/auth/r/b;->vk_separator_alpha:I
 
     invoke-virtual {v0, p1, v1}, Lcom/vk/auth/utils/AuthUtils;->a(Landroid/content/Context;I)I
 
@@ -193,29 +193,29 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic a(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->f:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->f:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic b(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->e:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->e:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lcom/vk/auth/init/exchange/UserItem;
+.method public static final synthetic c(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lcom/vk/auth/init/exchange/c;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->d:Lcom/vk/auth/init/exchange/UserItem;
+    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->d:Lcom/vk/auth/init/exchange/c;
 
     if-eqz p0, :cond_0
 
@@ -224,7 +224,7 @@
     :cond_0
     const-string p0, "user"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -233,18 +233,18 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/auth/init/exchange/UserItem;ZZZ)V
+.method public final a(Lcom/vk/auth/init/exchange/c;ZZZ)V
     .locals 3
 
     .line 2
-    iput-object p1, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->d:Lcom/vk/auth/init/exchange/UserItem;
+    iput-object p1, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->d:Lcom/vk/auth/init/exchange/c;
 
     .line 3
     iget-object v0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->a:Lcom/vk/auth/ui/AuthExchangeUserControlView;
 
     const-string v1, "userControllerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -253,14 +253,14 @@
     invoke-virtual {v0, p3}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/UserItem;->d()I
+    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/c;->d()I
 
     move-result p3
 
     .line 5
     iget-object v0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->a:Lcom/vk/auth/ui/AuthExchangeUserControlView;
 
-    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/UserItem;->d()I
+    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/c;->d()I
 
     move-result v2
 
@@ -306,7 +306,7 @@
     invoke-virtual {p2, p4}, Lcom/vk/auth/ui/AuthExchangeUserControlView;->setDeleteButtonVisible(Z)V
 
     .line 9
-    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/UserItem;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/c;->a()Ljava/lang/String;
 
     move-result-object p2
 
@@ -323,18 +323,18 @@
 
     .line 10
     :goto_2
-    iget-object p3, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->c:Lcom/vk/auth/main/AuthUiManager$b;
+    iget-object p3, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->c:Lcom/vk/auth/main/i$b;
 
-    invoke-interface {p3, p2}, Lcom/vk/auth/main/AuthUiManager$b;->a(Landroid/net/Uri;)V
+    invoke-interface {p3, p2}, Lcom/vk/auth/main/i$b;->a(Landroid/net/Uri;)V
 
     .line 11
     iget-object p2, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a;->b:Landroid/widget/TextView;
 
     const-string p3, "nameView"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/UserItem;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/c;->c()Ljava/lang/String;
 
     move-result-object p1
 

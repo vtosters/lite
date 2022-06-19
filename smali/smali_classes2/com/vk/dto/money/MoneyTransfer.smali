@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/money/MoneyTransfer;
-.super Lcom/vk/dto/common/Model;
+.super Lcom/vk/dto/common/e;
 .source "MoneyTransfer.java"
 
 # interfaces
@@ -70,7 +70,7 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     const/4 v0, 0x0
 
@@ -133,7 +133,7 @@
     .locals 3
 
     .line 52
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     const/4 v0, 0x0
 
@@ -344,7 +344,7 @@
     const-string v1, "id"
 
     .line 18
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     const/4 v2, 0x0
 
@@ -1024,9 +1024,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
+    sget-object v0, Lb/h/h/a;->b:Lb/h/h/a$a;
 
-    invoke-interface {v0}, Lb/h/h/ModelConfig$a;->c()I
+    invoke-interface {v0}, Lb/h/h/a$a;->c()I
 
     move-result v0
 

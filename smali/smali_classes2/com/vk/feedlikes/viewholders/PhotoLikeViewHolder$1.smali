@@ -3,12 +3,12 @@
 .source "PhotoLikeViewHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/feedlikes/c/PhotosLikeAdapter;)V
+    value = Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/feedlikes/c/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder$1;->this$0:Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
-    invoke-static {p1}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->c(Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-static {p1}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->c(Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;)Lcom/vk/bridges/p$d;
 
     move-result-object p1
 
@@ -71,17 +71,17 @@
     .line 3
     iget-object v0, p0, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder$1;->this$0:Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
-    invoke-virtual {v0}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->g0()Lcom/vk/feedlikes/c/PhotosLikeAdapter;
+    invoke-virtual {v0}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->g0()Lcom/vk/feedlikes/c/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v1, "adapter.list"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {v0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -102,7 +102,7 @@
     :goto_0
     iget-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder$1;->this$0:Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
-    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
+    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
 
     move-result-object v2
 
@@ -118,7 +118,7 @@
 
     const-string v4, "itemView"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -126,7 +126,7 @@
 
     const-string v4, "itemView.context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v4, p0, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder$1;->this$0:Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
@@ -134,11 +134,11 @@
 
     move-result-object v4
 
-    invoke-interface {v2, v1, v0, v3, v4}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-interface {v2, v1, v0, v3, v4}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->a(Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;Lcom/vk/bridges/ImageViewer$d;)V
+    invoke-static {p1, v0}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->a(Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;Lcom/vk/bridges/p$d;)V
 
     return-void
 .end method
@@ -151,7 +151,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "StickerPackVerticalListItemVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -65,13 +65,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$bindData$1;->this$0:Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;
 
-    invoke-static {p1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->a(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;)Lkotlin/jvm/b/Functions2;
+    invoke-static {p1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->a(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;)Lkotlin/jvm/b/b;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$bindData$1;->$pack:Lcom/vk/dto/stickers/StickerStockItem;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_6
 
@@ -87,7 +87,7 @@
 
     move-result-object p1
 
-    sget v0, Lcom/vk/stickers/R1;->stickers_unavailable_details:I
+    sget v0, Lcom/vk/stickers/k;->stickers_unavailable_details:I
 
     const/4 v1, 0x0
 
@@ -98,7 +98,7 @@
     move-result-object p1
 
     .line 4
-    sget v0, Lcom/vk/stickers/R7;->title:I
+    sget v0, Lcom/vk/stickers/j;->title:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -107,7 +107,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 5
-    sget v3, Lcom/vk/stickers/R7;->message:I
+    sget v3, Lcom/vk/stickers/j;->message:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
     check-cast v3, Landroid/widget/TextView;
 
     .line 6
-    sget v4, Lcom/vk/stickers/R7;->positive_button:I
+    sget v4, Lcom/vk/stickers/j;->positive_button:I
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -125,7 +125,7 @@
     check-cast v4, Landroid/widget/Button;
 
     .line 7
-    sget v5, Lcom/vk/stickers/R7;->negative_button:I
+    sget v5, Lcom/vk/stickers/j;->negative_button:I
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -143,7 +143,7 @@
     const-string v7, "titleView"
 
     .line 9
-    invoke-static {v0, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, ""
 
@@ -166,7 +166,7 @@
     const-string v0, "messageView"
 
     .line 10
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v6, :cond_2
 
@@ -218,7 +218,7 @@
 
     .line 12
     :cond_5
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Lcom/vk/dto/stickers/PurchaseDetails;->t1()Lcom/vk/dto/stickers/PurchaseDetailsButton;
 
@@ -241,7 +241,7 @@
     invoke-virtual {v4, v0}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
     .line 13
-    sget v0, Lcom/vk/stickers/R3;->stickers_unavailable_action_not_now:I
+    sget v0, Lcom/vk/stickers/l;->stickers_unavailable_action_not_now:I
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setText(I)V
 
@@ -250,12 +250,12 @@
     .line 14
     :cond_7
     :goto_4
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v4, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 15
-    sget v0, Lcom/vk/stickers/R3;->close:I
+    sget v0, Lcom/vk/stickers/l;->close:I
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setText(I)V
 
@@ -274,7 +274,7 @@
     const-string v1, "dialogView"
 
     .line 17
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setView(Landroid/view/View;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
@@ -309,7 +309,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$bindData$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

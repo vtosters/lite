@@ -4,10 +4,10 @@
 
 
 # instance fields
-.field private final adapterFactory:Lkotlin/jvm/b/Functions2;
+.field private final adapterFactory:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Landroid/content/Context;",
             "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
             "*>;>;"
@@ -38,13 +38,13 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)V
+.method public constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/content/Context;",
             "+",
@@ -66,7 +66,7 @@
 
     iput-object p1, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterName:Ljava/lang/String;
 
-    iput-object p2, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/b;
 
     iput-object p3, p0, Landroidx/recyclerview/widget/PoolConfig;->context:Landroid/content/Context;
 
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;ILkotlin/jvm/internal/i;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x8
@@ -117,12 +117,12 @@
 
     move-object/from16 v8, p7
 
-    invoke-direct/range {v1 .. v8}, Landroidx/recyclerview/widget/PoolConfig;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)V
+    invoke-direct/range {v1 .. v8}, Landroidx/recyclerview/widget/PoolConfig;-><init>(Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)V
 
     return-void
 .end method
 
-.method public static synthetic copy$default(Landroidx/recyclerview/widget/PoolConfig;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;ILjava/lang/Object;)Landroidx/recyclerview/widget/PoolConfig;
+.method public static synthetic copy$default(Landroidx/recyclerview/widget/PoolConfig;Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;ILjava/lang/Object;)Landroidx/recyclerview/widget/PoolConfig;
     .locals 5
 
     and-int/lit8 p9, p8, 0x1
@@ -136,7 +136,7 @@
 
     if-eqz p9, :cond_1
 
-    iget-object p2, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/Functions2;
+    iget-object p2, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/b;
 
     :cond_1
     move-object p9, p2
@@ -202,7 +202,7 @@
 
     move-object p9, v4
 
-    invoke-virtual/range {p2 .. p9}, Landroidx/recyclerview/widget/PoolConfig;->copy(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)Landroidx/recyclerview/widget/PoolConfig;
+    invoke-virtual/range {p2 .. p9}, Landroidx/recyclerview/widget/PoolConfig;->copy(Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)Landroidx/recyclerview/widget/PoolConfig;
 
     move-result-object p0
 
@@ -219,19 +219,19 @@
     return-object v0
 .end method
 
-.method public final component2()Lkotlin/jvm/b/Functions2;
+.method public final component2()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Landroid/content/Context;",
             "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
             "*>;>;"
         }
     .end annotation
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
@@ -285,13 +285,13 @@
     return-object v0
 .end method
 
-.method public final copy(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)Landroidx/recyclerview/widget/PoolConfig;
+.method public final copy(Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)Landroidx/recyclerview/widget/PoolConfig;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/content/Context;",
             "+",
@@ -327,7 +327,7 @@
 
     move-object/from16 v7, p7
 
-    invoke-direct/range {v0 .. v7}, Landroidx/recyclerview/widget/PoolConfig;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)V
+    invoke-direct/range {v0 .. v7}, Landroidx/recyclerview/widget/PoolConfig;-><init>(Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/content/Context;Landroidx/recyclerview/widget/Logger;Ljava/util/Map;ILandroidx/recyclerview/widget/PoolMode;)V
 
     return-object v8
 .end method
@@ -347,17 +347,17 @@
 
     iget-object v1, p1, Landroidx/recyclerview/widget/PoolConfig;->adapterName:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/b;
 
-    iget-object v1, p1, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/Functions2;
+    iget-object v1, p1, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/b;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -367,7 +367,7 @@
 
     iget-object v1, p1, Landroidx/recyclerview/widget/PoolConfig;->context:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -377,7 +377,7 @@
 
     iget-object v1, p1, Landroidx/recyclerview/widget/PoolConfig;->logger:Landroidx/recyclerview/widget/Logger;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -387,7 +387,7 @@
 
     iget-object v1, p1, Landroidx/recyclerview/widget/PoolConfig;->viewTypes:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -403,7 +403,7 @@
 
     iget-object p1, p1, Landroidx/recyclerview/widget/PoolConfig;->mode:Landroidx/recyclerview/widget/PoolMode;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -423,12 +423,12 @@
     return p1
 .end method
 
-.method public final getAdapterFactory()Lkotlin/jvm/b/Functions2;
+.method public final getAdapterFactory()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Landroid/content/Context;",
             "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
             "*>;>;"
@@ -436,7 +436,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
@@ -525,7 +525,7 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/Functions2;
+    iget-object v2, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/b;
 
     if-eqz v2, :cond_1
 
@@ -636,7 +636,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/Functions2;
+    iget-object v1, p0, Landroidx/recyclerview/widget/PoolConfig;->adapterFactory:Lkotlin/jvm/b/b;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/music/player/PlayerModel;
+.field private a:Lcom/vk/music/player/d;
 
 
 # direct methods
@@ -21,7 +21,7 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iput-object v0, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
     return-void
 .end method
@@ -77,18 +77,18 @@
     move-result-object p1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object v0, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
     if-nez v0, :cond_0
 
     .line 3
-    sget-object v0, Lcom/vk/music/common/Music$a;->a:Lcom/vk/music/common/Music$c;
+    sget-object v0, Lcom/vk/music/common/c$a;->a:Lcom/vk/music/common/c$c;
 
-    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iput-object v0, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
     :cond_0
     const/4 v0, -0x1
@@ -165,57 +165,57 @@
 
     .line 8
     :pswitch_0
-    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
-    invoke-interface {p1, v3}, Lcom/vk/music/player/PlayerModel;->b(I)V
+    invoke-interface {p1, v3}, Lcom/vk/music/player/d;->b(I)V
 
     goto :goto_1
 
     .line 9
     :pswitch_1
-    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->F0()V
+    invoke-interface {p1}, Lcom/vk/music/player/d;->F0()V
 
     goto :goto_1
 
     .line 10
     :pswitch_2
-    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->next()V
+    invoke-interface {p1}, Lcom/vk/music/player/d;->next()V
 
     goto :goto_1
 
     .line 11
     :pswitch_3
-    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->stop()V
+    invoke-interface {p1}, Lcom/vk/music/player/d;->stop()V
 
     goto :goto_1
 
     .line 12
     :pswitch_4
-    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->y0()V
+    invoke-interface {p1}, Lcom/vk/music/player/d;->y0()V
 
     goto :goto_1
 
     .line 13
     :cond_4
-    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->e()V
+    invoke-interface {p1}, Lcom/vk/music/player/d;->e()V
 
     goto :goto_1
 
     .line 14
     :cond_5
-    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->t()V
+    invoke-interface {p1}, Lcom/vk/music/player/d;->t()V
 
     goto :goto_1
 
@@ -228,17 +228,17 @@
     if-eqz p1, :cond_7
 
     .line 16
-    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->next()V
+    invoke-interface {p1}, Lcom/vk/music/player/d;->next()V
 
     goto :goto_1
 
     .line 17
     :cond_7
-    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p0, Lcom/vk/music/broadcast/MediaButtonEventReceiver;->a:Lcom/vk/music/player/d;
 
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->y0()V
+    invoke-interface {p1}, Lcom/vk/music/player/d;->y0()V
 
     :cond_8
     :goto_1

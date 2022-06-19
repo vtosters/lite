@@ -3,7 +3,7 @@
 .source "DefaultAudioMsgPlayer.kt"
 
 # interfaces
-.implements Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;
+.implements Lcom/vk/audiomsg/player/fileloader/impl/b;
 
 
 # annotations
@@ -82,7 +82,7 @@
     const-string v2, "it"
 
     .line 5
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v4, p1
 
@@ -140,7 +140,7 @@
     const-string v2, "it"
 
     .line 11
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     invoke-interface {v1, p1, p2}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$a;->a(Landroid/net/Uri;Ljava/lang/Throwable;)V

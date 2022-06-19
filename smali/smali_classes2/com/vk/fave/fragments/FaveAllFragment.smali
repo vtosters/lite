@@ -3,7 +3,7 @@
 .source "FaveAllFragment.kt"
 
 # interfaces
-.implements Lcom/vk/fave/fragments/contracts/FaveBaseView;
+.implements Lcom/vk/fave/fragments/contracts/b;
 
 
 # annotations
@@ -16,23 +16,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/newsfeed/EntriesListFragment<",
-        "Lcom/vk/fave/fragments/contracts/FaveAllPresenter;",
+        "Lcom/vk/fave/fragments/contracts/a;",
         ">;",
-        "Lcom/vk/fave/fragments/contracts/FaveBaseView<",
-        "Lcom/vk/fave/entities/FaveResponseEntries2;",
+        "Lcom/vk/fave/fragments/contracts/b<",
+        "Lcom/vk/fave/entities/h;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private q0:Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;
+.field private q0:Lcom/vk/fave/fragments/adapters/a;
 
-.field private r0:Lcom/vk/fave/fragments/adapters/PagesHeaderAdapter;
+.field private r0:Lcom/vk/fave/fragments/adapters/i;
 
-.field private final s0:Lcom/vk/fave/fragments/adapters/FaveDividerAdapter;
+.field private final s0:Lcom/vk/fave/fragments/adapters/b;
 
-.field private final t0:Lcom/vk/fave/fragments/adapters/FaveEmptyAdapter;
+.field private final t0:Lcom/vk/fave/fragments/adapters/c;
 
 .field private final u0:Lcom/vk/fave/fragments/FaveAllFragment$c;
 
@@ -47,37 +47,37 @@
     invoke-direct {p0}, Lcom/vk/newsfeed/EntriesListFragment;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/fave/fragments/adapters/PagesHeaderAdapter;
+    new-instance v0, Lcom/vk/fave/fragments/adapters/i;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
-
-    invoke-virtual {v1}, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;->G()Lcom/vk/lists/ListDataSet;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/adapters/PagesHeaderAdapter;-><init>(Lcom/vk/lists/ListDataSet;)V
+    check-cast v1, Lcom/vk/fave/fragments/contracts/a;
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/PagesHeaderAdapter;
+    invoke-virtual {v1}, Lcom/vk/fave/fragments/contracts/a;->G()Lcom/vk/lists/o;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/adapters/i;-><init>(Lcom/vk/lists/o;)V
+
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/i;
 
     .line 3
-    new-instance v0, Lcom/vk/fave/fragments/adapters/FaveDividerAdapter;
+    new-instance v0, Lcom/vk/fave/fragments/adapters/b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/adapters/FaveDividerAdapter;-><init>(Z)V
+    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/adapters/b;-><init>(Z)V
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->s0:Lcom/vk/fave/fragments/adapters/FaveDividerAdapter;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->s0:Lcom/vk/fave/fragments/adapters/b;
 
     .line 4
-    new-instance v0, Lcom/vk/fave/fragments/adapters/FaveEmptyAdapter;
+    new-instance v0, Lcom/vk/fave/fragments/adapters/c;
 
-    invoke-direct {v0}, Lcom/vk/fave/fragments/adapters/FaveEmptyAdapter;-><init>()V
+    invoke-direct {v0}, Lcom/vk/fave/fragments/adapters/c;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->t0:Lcom/vk/fave/fragments/adapters/FaveEmptyAdapter;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->t0:Lcom/vk/fave/fragments/adapters/c;
 
     .line 5
     new-instance v0, Lcom/vk/fave/fragments/FaveAllFragment$c;
@@ -96,24 +96,24 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;
+.method public static final synthetic a(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/adapters/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->q0:Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;
+    iget-object p0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->q0:Lcom/vk/fave/fragments/adapters/a;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+.method public static final synthetic b(Lcom/vk/fave/fragments/FaveAllFragment;)Lcom/vk/fave/fragments/contracts/a;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    check-cast p0, Lcom/vk/fave/fragments/contracts/a;
 
     return-object p0
 .end method
@@ -142,11 +142,11 @@
     .locals 13
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v0
 
@@ -165,9 +165,9 @@
 
     .line 2
     :goto_0
-    iget-object v3, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/PagesHeaderAdapter;
+    iget-object v3, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/i;
 
-    invoke-virtual {v3}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {v3}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v3
 
@@ -182,11 +182,11 @@
 
     .line 3
     :goto_1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    check-cast v4, Lcom/vk/fave/fragments/contracts/a;
 
     invoke-virtual {v4}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->E()Lcom/vk/fave/entities/FaveTag;
 
@@ -220,13 +220,13 @@
     const v4, 0x7f1203b8
 
     .line 4
-    invoke-static {v4}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
+    invoke-static {v4}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "ResUtils.str(R.string.fave_emty_title)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -238,11 +238,11 @@
     new-array v1, v1, [Ljava/lang/Object;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    check-cast v5, Lcom/vk/fave/fragments/contracts/a;
 
     invoke-virtual {v5}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->E()Lcom/vk/fave/entities/FaveTag;
 
@@ -262,7 +262,7 @@
     :goto_5
     aput-object v5, v1, v2
 
-    invoke-static {v4, v1}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v1}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -276,7 +276,7 @@
     if-eqz v0, :cond_7
 
     .line 6
-    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -284,7 +284,7 @@
 
     .line 7
     :cond_7
-    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -294,7 +294,7 @@
     const-string v1, "when {\n            withT\u2026ty_description)\n        }"
 
     .line 8
-    invoke-static {v7, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f040028
 
@@ -305,7 +305,7 @@
     if-eqz v0, :cond_8
 
     .line 9
-    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->c(I)I
+    invoke-static {v2}, Lcom/vk/core/util/y0;->c(I)I
 
     move-result v2
 
@@ -324,12 +324,12 @@
     const v3, 0x7f0700f2
 
     .line 11
-    invoke-static {v3}, Lcom/vk/core/util/ResUtils;->c(I)I
+    invoke-static {v3}, Lcom/vk/core/util/y0;->c(I)I
 
     move-result v3
 
     .line 12
-    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->c(I)I
+    invoke-static {v2}, Lcom/vk/core/util/y0;->c(I)I
 
     move-result v2
 
@@ -346,7 +346,7 @@
 
     .line 14
     :goto_7
-    new-instance v1, Lcom/vk/fave/entities/FaveEntries1;
+    new-instance v1, Lcom/vk/fave/entities/b;
 
     const/4 v10, 0x0
 
@@ -356,10 +356,10 @@
 
     move-object v5, v1
 
-    invoke-direct/range {v5 .. v12}, Lcom/vk/fave/entities/FaveEntries1;-><init>(Ljava/lang/String;Ljava/lang/String;IZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v5 .. v12}, Lcom/vk/fave/entities/b;-><init>(Ljava/lang/String;Ljava/lang/String;IZZILkotlin/jvm/internal/i;)V
 
     .line 15
-    iget-object v2, p0, Lcom/vk/fave/fragments/FaveAllFragment;->t0:Lcom/vk/fave/fragments/adapters/FaveEmptyAdapter;
+    iget-object v2, p0, Lcom/vk/fave/fragments/FaveAllFragment;->t0:Lcom/vk/fave/fragments/adapters/c;
 
     if-eqz v0, :cond_9
 
@@ -375,7 +375,7 @@
     move-result-object v0
 
     :goto_8
-    invoke-virtual {v2, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v2, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     return-void
 .end method
@@ -406,7 +406,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/fave/fragments/contracts/FaveBaseView$a;->a(Lcom/vk/fave/fragments/contracts/FaveBaseView;)V
+    invoke-static {p0}, Lcom/vk/fave/fragments/contracts/b$a;->a(Lcom/vk/fave/fragments/contracts/b;)V
 
     return-void
 .end method
@@ -425,7 +425,7 @@
 
     const-string p2, "inflater.inflate(R.layou\u2026agment, container, false)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -434,15 +434,15 @@
     .locals 2
 
     .line 18
-    sget-object v0, Lcom/vk/fave/FaveEntryActionsMenuBuilder;->INSTANCE:Lcom/vk/fave/FaveEntryActionsMenuBuilder;
+    sget-object v0, Lcom/vk/fave/f;->a:Lcom/vk/fave/f;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
     check-cast v1, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/fave/FaveEntryActionsMenuBuilder;->a(Landroid/view/View;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/fave/fragments/contracts/FaveBasePresenter;)V
+    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/fave/f;->a(Landroid/view/View;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/fave/fragments/contracts/FaveBasePresenter;)V
 
     return-void
 .end method
@@ -451,16 +451,16 @@
     .locals 3
 
     .line 11
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/PagesHeaderAdapter;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/i;
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v1
 
     const-string v2, "adapter.list"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -485,7 +485,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     goto :goto_0
 
@@ -499,7 +499,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     .line 15
     :goto_0
@@ -533,32 +533,32 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/fave/entities/FaveResponseEntries3;Z)V
+.method public bridge synthetic a(Lcom/vk/fave/entities/f;Z)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/fave/entities/FaveResponseEntries2;
+    check-cast p1, Lcom/vk/fave/entities/h;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/fave/fragments/FaveAllFragment;->a(Lcom/vk/fave/entities/FaveResponseEntries2;Z)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/fave/fragments/FaveAllFragment;->a(Lcom/vk/fave/entities/h;Z)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/fave/entities/FaveResponseEntries2;Z)V
+.method public a(Lcom/vk/fave/entities/h;Z)V
     .locals 4
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    check-cast v0, Lcom/vk/fave/fragments/contracts/a;
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveResponseEntries2;->b()Lcom/vk/fave/entities/FaveResponseEntries;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/h;->b()Lcom/vk/fave/entities/k;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;->a(Lcom/vk/fave/entities/FaveResponseEntries;)V
+    invoke-virtual {v0, v1}, Lcom/vk/fave/fragments/contracts/a;->a(Lcom/vk/fave/entities/k;)V
 
     .line 5
     new-instance v0, Ljava/util/ArrayList;
@@ -566,11 +566,11 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveResponseEntries2;->a()Lcom/vk/fave/entities/FaveResponseEntries1;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/h;->a()Lcom/vk/fave/entities/c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveResponseEntries1;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/c;->b()Ljava/util/List;
 
     move-result-object p1
 
@@ -594,11 +594,11 @@
     check-cast v1, Lcom/vk/fave/entities/FaveItem;
 
     .line 8
-    sget-object v2, Lcom/vk/fave/FaveConverter;->INSTANCE:Lcom/vk/fave/FaveConverter;
+    sget-object v2, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v1, v3}, Lcom/vk/fave/FaveConverter;->a(Lcom/vk/fave/entities/FaveItem;Z)Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual {v2, v1, v3}, Lcom/vk/fave/d;->a(Lcom/vk/fave/entities/FaveItem;Z)Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v1
 
@@ -612,25 +612,25 @@
     if-eqz p2, :cond_2
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    check-cast p1, Lcom/vk/fave/fragments/contracts/a;
 
     invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a()V
 
     .line 10
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    check-cast p1, Lcom/vk/fave/fragments/contracts/a;
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;->a(Ljava/util/List;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, p2}, Lcom/vk/fave/fragments/contracts/a;->a(Ljava/util/List;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -639,16 +639,16 @@
     .locals 7
 
     .line 2
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/PagesHeaderAdapter;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/i;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v1
 
     const-string v2, "adapter.list"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -724,7 +724,7 @@
     move-result-object v5
 
     :cond_2
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -749,7 +749,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     .line 9
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
@@ -762,10 +762,10 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     .line 11
-    iget-object p1, p0, Lcom/vk/fave/fragments/FaveAllFragment;->q0:Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;
+    iget-object p1, p0, Lcom/vk/fave/fragments/FaveAllFragment;->q0:Lcom/vk/fave/fragments/adapters/a;
 
     if-eqz p1, :cond_5
 
@@ -776,12 +776,12 @@
     return-void
 .end method
 
-.method public b5()Lcom/vk/lists/SimpleAdapter;
+.method public b5()Lcom/vk/lists/i0;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/lists/SimpleAdapter<",
+            "Lcom/vk/lists/i0<",
             "*",
             "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
             ">;"
@@ -789,7 +789,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->q0:Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->q0:Lcom/vk/fave/fragments/adapters/a;
 
     if-eqz v0, :cond_1
 
@@ -799,7 +799,7 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -807,35 +807,35 @@
 
     .line 3
     :cond_1
-    new-instance v0, Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;
+    new-instance v0, Lcom/vk/fave/fragments/adapters/a;
 
     new-instance v1, Lcom/vk/fave/fragments/FaveAllFragment$onCreateAdapter$adapter$1;
 
     invoke-direct {v1, p0}, Lcom/vk/fave/fragments/FaveAllFragment$onCreateAdapter$adapter$1;-><init>(Lcom/vk/fave/fragments/FaveAllFragment;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/adapters/a;-><init>(Lkotlin/jvm/b/b;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/fave/fragments/FaveAllFragment;->s0:Lcom/vk/fave/fragments/adapters/FaveDividerAdapter;
+    iget-object v1, p0, Lcom/vk/fave/fragments/FaveAllFragment;->s0:Lcom/vk/fave/fragments/adapters/b;
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/PagesHeaderAdapter;
+    iget-object v1, p0, Lcom/vk/fave/fragments/FaveAllFragment;->r0:Lcom/vk/fave/fragments/adapters/i;
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/fave/fragments/FaveAllFragment;->t0:Lcom/vk/fave/fragments/adapters/FaveEmptyAdapter;
+    iget-object v1, p0, Lcom/vk/fave/fragments/FaveAllFragment;->t0:Lcom/vk/fave/fragments/adapters/c;
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 8
     iget-object v1, p0, Lcom/vk/fave/fragments/FaveAllFragment;->u0:Lcom/vk/fave/fragments/FaveAllFragment$c;
@@ -843,27 +843,27 @@
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->registerAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
 
     .line 9
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->q0:Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->q0:Lcom/vk/fave/fragments/adapters/a;
 
     return-object v0
 .end method
 
-.method protected c5()Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+.method protected c5()Lcom/vk/fave/fragments/contracts/a;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    new-instance v0, Lcom/vk/fave/fragments/contracts/a;
 
-    invoke-direct {v0, p0}, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;-><init>(Lcom/vk/fave/fragments/contracts/FaveBaseView;)V
+    invoke-direct {v0, p0}, Lcom/vk/fave/fragments/contracts/a;-><init>(Lcom/vk/fave/fragments/contracts/b;)V
 
     return-object v0
 .end method
 
-.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/EntriesListContract;
+.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/e;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/fave/fragments/FaveAllFragment;->c5()Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    invoke-virtual {p0}, Lcom/vk/fave/fragments/FaveAllFragment;->c5()Lcom/vk/fave/fragments/contracts/a;
 
     move-result-object v0
 
@@ -874,14 +874,14 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/fave/fragments/contracts/FaveAllPresenter;
+    check-cast p1, Lcom/vk/fave/fragments/contracts/a;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
 
@@ -935,17 +935,17 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->s0:Lcom/vk/fave/fragments/adapters/FaveDividerAdapter;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveAllFragment;->s0:Lcom/vk/fave/fragments/adapters/b;
 
-    new-instance v1, Lcom/vk/fave/entities/FaveEntries;
+    new-instance v1, Lcom/vk/fave/entities/a;
 
-    invoke-direct {v1}, Lcom/vk/fave/entities/FaveEntries;-><init>()V
+    invoke-direct {v1}, Lcom/vk/fave/entities/a;-><init>()V
 
     invoke-static {v1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     return-void
 .end method

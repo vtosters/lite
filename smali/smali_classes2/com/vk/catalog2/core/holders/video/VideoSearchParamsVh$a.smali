@@ -44,11 +44,11 @@
 
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/video/VideoSearchParamsVh$a;->a:Lcom/vk/catalog2/core/holders/video/VideoSearchParamsVh;
 
-    invoke-static {p1}, Lcom/vk/catalog2/core/holders/video/VideoSearchParamsVh;->d(Lcom/vk/catalog2/core/holders/video/VideoSearchParamsVh;)Lkotlin/jvm/b/Functions;
+    invoke-static {p1}, Lcom/vk/catalog2/core/holders/video/VideoSearchParamsVh;->d(Lcom/vk/catalog2/core/holders/video/VideoSearchParamsVh;)Lkotlin/jvm/b/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

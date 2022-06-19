@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/PendingAttachment;)V
+    value = Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vtosters/lite/attachments/PendingAttachment;
+.field final synthetic a:Lcom/vtosters/lite/attachments/b;
 
 .field final synthetic b:Lcom/vtosters/lite/ui/AttachmentsEditorView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/ui/AttachmentsEditorView;Lcom/vtosters/lite/attachments/PendingAttachment;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/AttachmentsEditorView;Lcom/vtosters/lite/attachments/b;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;->b:Lcom/vtosters/lite/ui/AttachmentsEditorView;
 
-    iput-object p2, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;->a:Lcom/vtosters/lite/attachments/PendingAttachment;
+    iput-object p2, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;->a:Lcom/vtosters/lite/attachments/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;->a:Lcom/vtosters/lite/attachments/PendingAttachment;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;->a:Lcom/vtosters/lite/attachments/b;
 
     instance-of v1, v0, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
@@ -68,13 +68,13 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;->a:Lcom/vtosters/lite/attachments/PendingAttachment;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;->a:Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v0}, Lcom/vtosters/lite/attachments/PendingAttachment;->V0()Lcom/vtosters/lite/upload/UploadTask;
+    invoke-interface {v0}, Lcom/vtosters/lite/attachments/b;->V0()Lcom/vtosters/lite/upload/j;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
+    invoke-static {v0}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     return-void
 .end method

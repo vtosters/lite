@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -46,7 +46,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->INSTANCE:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
+    sget-object v0, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
 
     const/4 v0, 0x2
 
@@ -90,7 +90,7 @@
 
     const-string p1, "java.lang.String.format(format, *args)"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object v0

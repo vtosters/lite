@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;
-.super Lcom/vk/music/ui/common/MusicAdapter;
+.super Lcom/vk/music/ui/common/b;
 .source "MusicTrackHeaderAdapter.kt"
 
 
@@ -15,9 +15,9 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/vk/music/ui/common/MusicAdapter<",
+        "Lcom/vk/music/ui/common/b<",
         "TT;",
-        "Lcom/vk/music/ui/common/MusicViewHolder<",
+        "Lcom/vk/music/ui/common/o<",
         "TT;>;>;"
     }
 .end annotation
@@ -34,19 +34,19 @@
 
 .field private final d:I
 
-.field private final e:Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;
+.field private final e:Lcom/vk/music/bottomsheets/track/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1<",
+            "Lcom/vk/music/bottomsheets/track/b<",
             "TT;>;"
         }
     .end annotation
 .end field
 
-.field private final f:Lcom/vk/music/bottomsheets/a/MusicAction$a;
+.field private final f:Lcom/vk/music/bottomsheets/a/a$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/bottomsheets/a/MusicAction$a<",
+            "Lcom/vk/music/bottomsheets/a/a$a<",
             "TT;>;"
         }
     .end annotation
@@ -58,7 +58,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/music/bottomsheets/a/MusicAction;",
+            "Lcom/vk/music/bottomsheets/a/a;",
             ">;"
         }
     .end annotation
@@ -66,31 +66,31 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;ILcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;Lcom/vk/music/bottomsheets/a/MusicAction$a;ZLjava/util/List;)V
+.method public constructor <init>(Ljava/lang/Object;ILcom/vk/music/bottomsheets/track/b;Lcom/vk/music/bottomsheets/a/a$a;ZLjava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;I",
-            "Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1<",
+            "Lcom/vk/music/bottomsheets/track/b<",
             "TT;>;",
-            "Lcom/vk/music/bottomsheets/a/MusicAction$a<",
+            "Lcom/vk/music/bottomsheets/a/a$a<",
             "TT;>;Z",
             "Ljava/util/List<",
-            "Lcom/vk/music/bottomsheets/a/MusicAction;",
+            "Lcom/vk/music/bottomsheets/a/a;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/music/ui/common/MusicAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/ui/common/b;-><init>()V
 
     iput-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->c:Ljava/lang/Object;
 
     iput p2, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->d:I
 
-    iput-object p3, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->e:Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;
+    iput-object p3, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->e:Lcom/vk/music/bottomsheets/track/b;
 
-    iput-object p4, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->f:Lcom/vk/music/bottomsheets/a/MusicAction$a;
+    iput-object p4, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->f:Lcom/vk/music/bottomsheets/a/a$a;
 
     iput-boolean p5, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->g:Z
 
@@ -108,32 +108,32 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;)Lcom/vk/music/bottomsheets/a/MusicAction$a;
+.method public static final synthetic b(Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;)Lcom/vk/music/bottomsheets/a/a$a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->f:Lcom/vk/music/bottomsheets/a/MusicAction$a;
+    iget-object p0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->f:Lcom/vk/music/bottomsheets/a/a$a;
 
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;
+.method public static final synthetic c(Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;)Lcom/vk/music/bottomsheets/track/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->e:Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;
+    iget-object p0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->e:Lcom/vk/music/bottomsheets/track/b;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/music/ui/common/MusicViewHolder;I)V
+.method public a(Lcom/vk/music/ui/common/o;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "TT;>;I)V"
         }
     .end annotation
@@ -143,7 +143,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, p2, v0}, Lcom/vk/music/ui/common/MusicViewHolder;->a(Ljava/lang/Object;I)V
+    invoke-virtual {p1, p2, v0}, Lcom/vk/music/ui/common/o;->a(Ljava/lang/Object;I)V
 
     return-void
 .end method
@@ -160,9 +160,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/music/ui/common/MusicViewHolder;
+    check-cast p1, Lcom/vk/music/ui/common/o;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->a(Lcom/vk/music/ui/common/MusicViewHolder;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->a(Lcom/vk/music/ui/common/o;I)V
 
     return-void
 .end method
@@ -171,21 +171,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/MusicViewHolder;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/o;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/MusicViewHolder;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/o;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "TT;>;"
         }
     .end annotation
@@ -198,7 +198,7 @@
     .line 3
     new-instance p2, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
 
-    invoke-direct {p2, v6}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p2, v6}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;-><init>(Lkotlin/jvm/b/b;)V
 
     .line 4
     invoke-virtual {p2}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->e()Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
@@ -221,7 +221,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$b;-><init>(Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/core/ui/IdClickListener;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
+    invoke-virtual {p2, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/core/ui/k;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
 
     .line 9
     :cond_0
@@ -237,16 +237,16 @@
 
     const-string v0, "LayoutInflater.from(parent.context)"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/MusicViewHolder;
+    invoke-virtual {p2, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/o;
 
     move-result-object v2
 
     .line 10
     iget-object v3, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->h:Ljava/util/List;
 
-    iget-object v4, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->f:Lcom/vk/music/bottomsheets/a/MusicAction$a;
+    iget-object v4, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->f:Lcom/vk/music/bottomsheets/a/a$a;
 
     iget-object v5, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->c:Ljava/lang/Object;
 
@@ -256,7 +256,7 @@
     move-object v0, v8
 
     .line 12
-    invoke-direct/range {v0 .. v7}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$a;-><init>(Landroid/view/LayoutInflater;Lcom/vk/music/ui/common/MusicViewHolder;Ljava/util/List;Lcom/vk/music/bottomsheets/a/MusicAction$a;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;Z)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$a;-><init>(Landroid/view/LayoutInflater;Lcom/vk/music/ui/common/o;Ljava/util/List;Lcom/vk/music/bottomsheets/a/a$a;Ljava/lang/Object;Lkotlin/jvm/b/b;Z)V
 
     return-object v8
 .end method

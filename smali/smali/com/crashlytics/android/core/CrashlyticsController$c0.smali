@@ -3,7 +3,7 @@
 .source "CrashlyticsController.java"
 
 # interfaces
-.implements Lcom/crashlytics/android/core/ReportUploader$d;
+.implements Lcom/crashlytics/android/core/m0$d;
 
 
 # annotations
@@ -18,37 +18,37 @@
 
 
 # instance fields
-.field private final a:Lio/fabric/sdk/android/Kit;
+.field private final a:Lio/fabric/sdk/android/h;
 
-.field private final b:Lcom/crashlytics/android/core/PreferenceManager;
+.field private final b:Lcom/crashlytics/android/core/h0;
 
-.field private final c:Lio/fabric/sdk/android/services/settings/PromptSettingsData;
+.field private final c:Lio/fabric/sdk/android/services/settings/p;
 
 
 # direct methods
-.method public constructor <init>(Lio/fabric/sdk/android/Kit;Lcom/crashlytics/android/core/PreferenceManager;Lio/fabric/sdk/android/services/settings/PromptSettingsData;)V
+.method public constructor <init>(Lio/fabric/sdk/android/h;Lcom/crashlytics/android/core/h0;Lio/fabric/sdk/android/services/settings/p;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->a:Lio/fabric/sdk/android/Kit;
+    iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->a:Lio/fabric/sdk/android/h;
 
     .line 3
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->b:Lcom/crashlytics/android/core/PreferenceManager;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->b:Lcom/crashlytics/android/core/h0;
 
     .line 4
-    iput-object p3, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->c:Lio/fabric/sdk/android/services/settings/PromptSettingsData;
+    iput-object p3, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->c:Lio/fabric/sdk/android/services/settings/p;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/crashlytics/android/core/CrashlyticsController$c0;)Lcom/crashlytics/android/core/PreferenceManager;
+.method static synthetic a(Lcom/crashlytics/android/core/CrashlyticsController$c0;)Lcom/crashlytics/android/core/h0;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->b:Lcom/crashlytics/android/core/PreferenceManager;
+    iget-object p0, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->b:Lcom/crashlytics/android/core/h0;
 
     return-object p0
 .end method
@@ -59,13 +59,13 @@
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->a:Lio/fabric/sdk/android/Kit;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->a:Lio/fabric/sdk/android/h;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/Kit;->f()Lio/fabric/sdk/android/Fabric;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->f()Lio/fabric/sdk/android/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/Fabric;->a()Landroid/app/Activity;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/c;->a()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -87,22 +87,22 @@
     invoke-direct {v1, p0}, Lcom/crashlytics/android/core/CrashlyticsController$c0$a;-><init>(Lcom/crashlytics/android/core/CrashlyticsController$c0;)V
 
     .line 5
-    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->c:Lio/fabric/sdk/android/services/settings/PromptSettingsData;
+    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0;->c:Lio/fabric/sdk/android/services/settings/p;
 
     .line 6
-    invoke-static {v0, v2, v1}, Lcom/crashlytics/android/core/CrashPromptDialog;->a(Landroid/app/Activity;Lio/fabric/sdk/android/services/settings/PromptSettingsData;Lcom/crashlytics/android/core/CrashPromptDialog$d;)Lcom/crashlytics/android/core/CrashPromptDialog;
+    invoke-static {v0, v2, v1}, Lcom/crashlytics/android/core/h;->a(Landroid/app/Activity;Lio/fabric/sdk/android/services/settings/p;Lcom/crashlytics/android/core/h$d;)Lcom/crashlytics/android/core/h;
 
     move-result-object v1
 
     .line 7
     new-instance v2, Lcom/crashlytics/android/core/CrashlyticsController$c0$b;
 
-    invoke-direct {v2, p0, v1}, Lcom/crashlytics/android/core/CrashlyticsController$c0$b;-><init>(Lcom/crashlytics/android/core/CrashlyticsController$c0;Lcom/crashlytics/android/core/CrashPromptDialog;)V
+    invoke-direct {v2, p0, v1}, Lcom/crashlytics/android/core/CrashlyticsController$c0$b;-><init>(Lcom/crashlytics/android/core/CrashlyticsController$c0;Lcom/crashlytics/android/core/h;)V
 
     invoke-virtual {v0, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 8
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
@@ -110,13 +110,13 @@
 
     const-string v3, "Waiting for user opt-in."
 
-    invoke-interface {v0, v2, v3}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v3}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
-    invoke-virtual {v1}, Lcom/crashlytics/android/core/CrashPromptDialog;->a()V
+    invoke-virtual {v1}, Lcom/crashlytics/android/core/h;->a()V
 
     .line 10
-    invoke-virtual {v1}, Lcom/crashlytics/android/core/CrashPromptDialog;->b()Z
+    invoke-virtual {v1}, Lcom/crashlytics/android/core/h;->b()Z
 
     move-result v0
 

@@ -38,7 +38,7 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->INSTANCE:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
+    sget-object v0, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -76,7 +76,7 @@
 
     const-string v1, "java.lang.String.format(format, *args)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v1, Ljava/lang/Thread;

@@ -3,12 +3,12 @@
 .source "MsgImportantChangeLpTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;->b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
+    value = Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;->b(Lcom/vk/im/engine/internal/longpoll/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -109,7 +109,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask$onSyncStorage$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

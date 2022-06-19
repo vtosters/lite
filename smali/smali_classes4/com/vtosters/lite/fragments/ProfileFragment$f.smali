@@ -3,7 +3,7 @@
 .source "ProfileFragment.java"
 
 # interfaces
-.implements Lcom/vk/api/base/ApiCallback;
+.implements Lcom/vk/api/base/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/ApiCallback<",
-        "Lcom/vk/api/friends/FriendsAddWithRecommendations$a;",
+        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/friends/b$a;",
         ">;"
     }
 .end annotation
@@ -48,11 +48,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/api/friends/FriendsAddWithRecommendations$a;)V
+.method public a(Lcom/vk/api/friends/b$a;)V
     .locals 7
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/api/friends/FriendsAddWithRecommendations$a;->b()I
+    invoke-virtual {p1}, Lcom/vk/api/friends/b$a;->b()I
 
     move-result v0
 
@@ -204,11 +204,11 @@
     if-eqz v2, :cond_5
 
     .line 14
-    invoke-static {v2}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
+    invoke-static {v2}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;)V
 
     .line 15
     :cond_5
-    invoke-virtual {p1}, Lcom/vk/api/friends/FriendsAddWithRecommendations$a;->a()Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
+    invoke-virtual {p1}, Lcom/vk/api/friends/b$a;->a()Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
 
     move-result-object p1
 
@@ -249,13 +249,13 @@
     .line 19
     iget-object p1, p0, Lcom/vtosters/lite/fragments/ProfileFragment$f;->b:Lcom/vtosters/lite/fragments/ProfileFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/ProfileFragment;->A(Lcom/vtosters/lite/fragments/ProfileFragment;)Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/ProfileFragment;->A(Lcom/vtosters/lite/fragments/ProfileFragment;)Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p1
 
     check-cast p1, Lcom/vk/profile/presenter/UserPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->H0()V
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->H0()V
 
     return-void
 .end method
@@ -538,7 +538,7 @@
 
     .line 39
     :cond_5
-    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
 
     :goto_3
     return-void
@@ -548,9 +548,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/friends/FriendsAddWithRecommendations$a;
+    check-cast p1, Lcom/vk/api/friends/b$a;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/ProfileFragment$f;->a(Lcom/vk/api/friends/FriendsAddWithRecommendations$a;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/ProfileFragment$f;->a(Lcom/vk/api/friends/b$a;)V
 
     return-void
 .end method

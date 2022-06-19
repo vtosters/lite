@@ -16,15 +16,15 @@
 
 .field private final J:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
 
-.field private K:Lcom/vk/im/ui/components/attaches_history/attaches/vc/PhotoHistoryAttachesVC;
+.field private K:Lcom/vk/im/ui/components/attaches_history/attaches/vc/c;
 
-.field private final L:Lcom/vk/bridges/ImageViewer;
+.field private final L:Lcom/vk/bridges/p;
 
 .field private final M:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/bridges/ImageViewer;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
+.method public constructor <init>(Lcom/vk/bridges/p;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
     .locals 6
 
     move-object v0, p0
@@ -40,9 +40,9 @@
     move v5, p6
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;-><init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;-><init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->L:Lcom/vk/bridges/ImageViewer;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->L:Lcom/vk/bridges/p;
 
     iput-object p4, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->M:Landroid/content/Context;
 
@@ -65,11 +65,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;)Lcom/vk/im/ui/components/attaches_history/attaches/vc/PhotoHistoryAttachesVC;
+.method public static final synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;)Lcom/vk/im/ui/components/attaches_history/attaches/vc/c;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->K:Lcom/vk/im/ui/components/attaches_history/attaches/vc/PhotoHistoryAttachesVC;
+    iget-object p0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->K:Lcom/vk/im/ui/components/attaches_history/attaches/vc/c;
 
     if-eqz p0, :cond_0
 
@@ -78,7 +78,7 @@
     :cond_0
     const-string p0, "vc"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -115,39 +115,39 @@
 
     const/4 v0, 0x2
 
-    new-array v1, v0, [Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;
+    new-array v1, v0, [Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;
 
     .line 3
-    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;
+    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;
 
     invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->s()Landroid/content/Context;
 
     move-result-object v3
 
-    sget v4, Lcom/vk/im/ui/R12;->ic_goto_outline_28:I
+    sget v4, Lcom/vk/im/ui/f;->ic_goto_outline_28:I
 
-    sget v5, Lcom/vk/im/ui/R4;->vkim_history_attach_open_msg:I
+    sget v5, Lcom/vk/im/ui/m;->vkim_history_attach_open_msg:I
 
     const/4 v6, 0x1
 
-    invoke-direct {v2, v3, v6, v4, v5}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;-><init>(Landroid/content/Context;III)V
+    invoke-direct {v2, v3, v6, v4, v5}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;-><init>(Landroid/content/Context;III)V
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
     .line 4
-    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;
+    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;
 
     invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->s()Landroid/content/Context;
 
     move-result-object v3
 
-    sget v4, Lcom/vk/im/ui/R12;->ic_share_outline_28:I
+    sget v4, Lcom/vk/im/ui/f;->ic_share_outline_28:I
 
-    sget v5, Lcom/vk/im/ui/R4;->vkim_share:I
+    sget v5, Lcom/vk/im/ui/m;->vkim_share:I
 
-    invoke-direct {v2, v3, v0, v4, v5}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;-><init>(Landroid/content/Context;III)V
+    invoke-direct {v2, v3, v0, v4, v5}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;-><init>(Landroid/content/Context;III)V
 
     aput-object v2, v1, v6
 
@@ -169,7 +169,7 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {v1, p1, v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v1, p1, v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -251,7 +251,7 @@
     if-eqz p1, :cond_3
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->L:Lcom/vk/bridges/ImageViewer;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->L:Lcom/vk/bridges/p;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->M:Landroid/content/Context;
 
@@ -263,7 +263,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent$a;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;)V
 
-    invoke-interface {v0, p1, v1, v2, v3}, Lcom/vk/bridges/ImageViewer;->a(Lcom/vk/im/engine/models/attaches/AttachWithImage;Ljava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-interface {v0, p1, v1, v2, v3}, Lcom/vk/bridges/p;->a(Lcom/vk/im/engine/models/attaches/AttachWithImage;Ljava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
 
     :cond_3
     return-void
@@ -283,7 +283,7 @@
     return-void
 .end method
 
-.method public bridge synthetic v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
+.method public bridge synthetic v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
     .locals 1
 
     .line 1
@@ -303,22 +303,22 @@
     return-object v0
 .end method
 
-.method protected z()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
+.method protected z()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/PhotoHistoryAttachesVC;
+    new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/c;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->M:Landroid/content/Context;
 
     const/16 v2, 0x64
 
-    invoke-direct {v0, v1, p0, v2}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/PhotoHistoryAttachesVC;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;I)V
+    invoke-direct {v0, v1, p0, v2}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/c;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;I)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->K:Lcom/vk/im/ui/components/attaches_history/attaches/vc/PhotoHistoryAttachesVC;
+    iput-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->K:Lcom/vk/im/ui/components/attaches_history/attaches/vc/c;
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->K:Lcom/vk/im/ui/components/attaches_history/attaches/vc/PhotoHistoryAttachesVC;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent;->K:Lcom/vk/im/ui/components/attaches_history/attaches/vc/c;
 
     if-eqz v0, :cond_0
 
@@ -327,7 +327,7 @@
     :cond_0
     const-string v0, "vc"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

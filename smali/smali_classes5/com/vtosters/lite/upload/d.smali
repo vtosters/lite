@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/upload/UploadUtils$c;
+.field private final synthetic a:Lcom/vtosters/lite/upload/k$c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/upload/UploadUtils$c;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/upload/k$c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/upload/d;->a:Lcom/vtosters/lite/upload/UploadUtils$c;
+    iput-object p1, p0, Lcom/vtosters/lite/upload/d;->a:Lcom/vtosters/lite/upload/k$c;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/upload/d;->a:Lcom/vtosters/lite/upload/UploadUtils$c;
+    iget-object v0, p0, Lcom/vtosters/lite/upload/d;->a:Lcom/vtosters/lite/upload/k$c;
 
-    invoke-static {v0}, Lcom/vtosters/lite/upload/UploadUtils;->a(Lcom/vtosters/lite/upload/UploadUtils$c;)V
+    invoke-static {v0}, Lcom/vtosters/lite/upload/k;->a(Lcom/vtosters/lite/upload/k$c;)V
 
     return-void
 .end method

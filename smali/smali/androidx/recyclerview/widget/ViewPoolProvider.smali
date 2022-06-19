@@ -140,7 +140,7 @@
 
     invoke-direct {p2, p0}, Landroidx/recyclerview/widget/ViewPoolProvider$1;-><init>(Landroidx/recyclerview/widget/ViewPoolProvider;)V
 
-    invoke-static {p1, p2}, Landroidx/recyclerview/widget/internal/ContextExtKt;->runOnEachLowMemory(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
+    invoke-static {p1, p2}, Landroidx/recyclerview/widget/internal/ContextExtKt;->runOnEachLowMemory(Landroid/content/Context;Lkotlin/jvm/b/a;)V
 
     .line 9
     iget-object p1, p0, Landroidx/recyclerview/widget/ViewPoolProvider;->context:Landroid/content/Context;
@@ -149,7 +149,7 @@
 
     invoke-direct {p2, p0}, Landroidx/recyclerview/widget/ViewPoolProvider$2;-><init>(Landroidx/recyclerview/widget/ViewPoolProvider;)V
 
-    invoke-static {p1, p2}, Landroidx/recyclerview/widget/internal/ContextExtKt;->runOnEachConfigurationChanged(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Landroidx/recyclerview/widget/internal/ContextExtKt;->runOnEachConfigurationChanged(Landroid/content/Context;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -254,12 +254,12 @@
 
     const-string v1, "recycler().adapter!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -301,7 +301,7 @@
 
     sget-object v1, Landroidx/recyclerview/widget/PoolMode$DEFAULT;->INSTANCE:Landroidx/recyclerview/widget/PoolMode$DEFAULT;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -473,7 +473,7 @@
     .line 6
     iget-object v2, p0, Landroidx/recyclerview/widget/ViewPoolProvider;->config:Landroidx/recyclerview/widget/PoolConfig;
 
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/PoolConfig;->getAdapterFactory()Lkotlin/jvm/b/Functions2;
+    invoke-virtual {v2}, Landroidx/recyclerview/widget/PoolConfig;->getAdapterFactory()Lkotlin/jvm/b/b;
 
     move-result-object v2
 
@@ -483,9 +483,9 @@
 
     const-string v4, "context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v2, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -498,7 +498,7 @@
 
     .line 8
     :cond_1
-    sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -511,7 +511,7 @@
 
     .line 10
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -589,7 +589,7 @@
     .line 2
     sget-object v1, Landroidx/recyclerview/widget/PoolMode$NONE;->INSTANCE:Landroidx/recyclerview/widget/PoolMode$NONE;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -643,7 +643,7 @@
 
     const-string v1, "inflater"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 

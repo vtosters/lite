@@ -1,5 +1,5 @@
 .class public final Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$a;
-.super Lcom/vk/core/dialogs/adapter/ModalAdapter1;
+.super Lcom/vk/core/dialogs/adapter/a;
 .source "ArticleAuthorPageSortHolder.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/dialogs/adapter/ModalAdapter1<",
+        "Lcom/vk/core/dialogs/adapter/a<",
         "Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;",
         ">;"
     }
@@ -38,20 +38,20 @@
     .line 1
     iput-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$a;->a:Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;
 
-    invoke-direct {p0}, Lcom/vk/core/dialogs/adapter/ModalAdapter1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/dialogs/adapter/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/ViewReferrer;
+.method public a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/b;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/core/dialogs/adapter/ViewReferrer;
+    new-instance v0, Lcom/vk/core/dialogs/adapter/b;
 
-    invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/ViewReferrer;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/b;-><init>()V
 
     const v1, 0x7f0a0d80
 
@@ -62,9 +62,9 @@
 
     const-string v2, "itemView.findViewById(R.id.title)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/b;->a(Landroid/view/View;)V
 
     const v1, 0x7f0a0bdc
 
@@ -75,20 +75,20 @@
 
     const-string v1, "itemView.findViewById(R.id.selected_icon)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/b;->a(Landroid/view/View;)V
 
     return-object v0
 .end method
 
-.method public a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;I)V
+.method public a(Lcom/vk/core/dialogs/adapter/b;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;I)V
     .locals 1
 
     const p3, 0x7f0a0d80
 
     .line 5
-    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(I)Landroid/view/View;
+    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/b;->a(I)Landroid/view/View;
 
     move-result-object p3
 
@@ -97,7 +97,7 @@
     const v0, 0x7f0a0bdc
 
     .line 6
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/adapter/b;->a(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -130,13 +130,13 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Ljava/lang/Object;I)V
+.method public bridge synthetic a(Lcom/vk/core/dialogs/adapter/b;Ljava/lang/Object;I)V
     .locals 0
 
     .line 1
     check-cast p2, Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$a;->a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;I)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$a;->a(Lcom/vk/core/dialogs/adapter/b;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;I)V
 
     return-void
 .end method

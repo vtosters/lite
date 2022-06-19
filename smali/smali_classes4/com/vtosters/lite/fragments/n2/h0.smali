@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/n2/h0;->a:Landroid/widget/AutoCompleteTextView;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Landroid/widget/AutoCompleteTextView;)V
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/n2/q0;->a(Landroid/widget/AutoCompleteTextView;)V
 
     return-void
 .end method

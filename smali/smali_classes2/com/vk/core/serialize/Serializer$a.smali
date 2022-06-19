@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/ThreadLocal<",
-        "Lcom/vk/core/serialize/StreamParcelableBuffer;",
+        "Lcom/vk/core/serialize/c;",
         ">;"
     }
 .end annotation
@@ -34,13 +34,13 @@
 
 
 # virtual methods
-.method protected initialValue()Lcom/vk/core/serialize/StreamParcelableBuffer;
+.method protected initialValue()Lcom/vk/core/serialize/c;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/core/serialize/StreamParcelableBuffer;
+    new-instance v0, Lcom/vk/core/serialize/c;
 
-    invoke-direct {v0}, Lcom/vk/core/serialize/StreamParcelableBuffer;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/serialize/c;-><init>()V
 
     return-object v0
 .end method
@@ -49,7 +49,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/serialize/Serializer$a;->initialValue()Lcom/vk/core/serialize/StreamParcelableBuffer;
+    invoke-virtual {p0}, Lcom/vk/core/serialize/Serializer$a;->initialValue()Lcom/vk/core/serialize/c;
 
     move-result-object v0
 

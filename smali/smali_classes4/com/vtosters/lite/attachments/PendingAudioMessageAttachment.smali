@@ -3,7 +3,7 @@
 .source "PendingAudioMessageAttachment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/attachments/PendingAttachment;
+.implements Lcom/vtosters/lite/attachments/b;
 
 
 # static fields
@@ -133,7 +133,7 @@
     move/from16 v2, p5
 
     .line 2
-    invoke-static {p4, v2, p2}, Lcom/vk/audio/AudioMessageUtils;->a(IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, v2, p2}, Lcom/vk/audio/a;->a(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -211,7 +211,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->f:Ljava/lang/String;
 
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->i(Ljava/lang/String;)Z
+    invoke-static {v0}, Lb/h/g/m/d;->i(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -222,7 +222,7 @@
     .locals 0
 
     .line 1
-    invoke-static {}, Lcom/vk/audio/VoiceIntents;->a()V
+    invoke-static {}, Lcom/vk/audio/h;->a()V
 
     return-void
 .end method
@@ -237,7 +237,7 @@
 
     const-string v1, "play from pending audio"
 
-    invoke-static {v0, v1}, Lcom/vk/audio/VoiceIntents;->a(Lcom/vk/audio/AudioMsgTrackByRecord;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/audio/h;->a(Lcom/vk/audio/AudioMsgTrackByRecord;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -254,7 +254,7 @@
 
     iget-object v0, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->f:Ljava/lang/String;
 
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lb/h/g/m/d;->a(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -275,7 +275,7 @@
     .locals 0
 
     .line 1
-    invoke-static {}, Lcom/vk/audio/VoiceIntents;->b()V
+    invoke-static {}, Lcom/vk/audio/h;->b()V
 
     return-void
 .end method
@@ -289,22 +289,22 @@
     return v0
 .end method
 
-.method public bridge synthetic V0()Lcom/vtosters/lite/upload/UploadTask;
+.method public bridge synthetic V0()Lcom/vtosters/lite/upload/j;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/attachments/PendingAudioMessageAttachment;->V0()Lcom/vtosters/lite/upload/l/AudioMessageUploadTask;
+    invoke-virtual {p0}, Lcom/vtosters/lite/attachments/PendingAudioMessageAttachment;->V0()Lcom/vtosters/lite/upload/l/d;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public V0()Lcom/vtosters/lite/upload/l/AudioMessageUploadTask;
+.method public V0()Lcom/vtosters/lite/upload/l/d;
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/upload/l/AudioMessageUploadTask;
+    new-instance v0, Lcom/vtosters/lite/upload/l/d;
 
     iget-object v1, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->f:Ljava/lang/String;
 
@@ -313,24 +313,24 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vtosters/lite/upload/l/AudioMessageUploadTask;->a([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vtosters/lite/upload/l/d;->a([B)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v3}, Lb/h/h/d/c;->D0()I
 
     move-result v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/upload/l/AudioMessageUploadTask;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/upload/l/d;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 4
     iget v1, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->E:I
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/upload/UploadTask;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/upload/j;->a(I)V
 
     return-object v0
 .end method
@@ -365,7 +365,7 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->f:Ljava/lang/String;
 
-    invoke-static {p1, v0, v1}, Lcom/vk/audio/AudioMessageUtils;->a(IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Lcom/vk/audio/a;->a(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

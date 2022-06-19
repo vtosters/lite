@@ -31,17 +31,17 @@
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/libvideo/live/views/stat/StatContract1;
+.field private final b:Lcom/vk/libvideo/live/views/stat/b;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/libvideo/live/views/stat/StatContract1;)V
+.method public constructor <init>(Lcom/vk/libvideo/live/views/stat/b;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/stat/StatAdapter;->b:Lcom/vk/libvideo/live/views/stat/StatContract1;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/stat/StatAdapter;->b:Lcom/vk/libvideo/live/views/stat/b;
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -120,7 +120,7 @@
 
     const-string v0, "items[position]"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/libvideo/live/views/stat/StatAdapter$a;
 
@@ -153,22 +153,22 @@
 
     if-eqz p2, :cond_0
 
-    check-cast p2, Lcom/vk/libvideo/live/views/stat/f/StatMore;
+    check-cast p2, Lcom/vk/libvideo/live/views/stat/f/a;
 
     .line 7
-    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/stat/f/StatMore;->getTitle()Landroid/widget/TextView;
+    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/stat/f/a;->getTitle()Landroid/widget/TextView;
 
     move-result-object p2
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v0, Lcom/vk/libvideo/R11;->live_viewers_no_users:I
+    sget v0, Lcom/vk/libvideo/j;->live_viewers_no_users:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -188,13 +188,13 @@
 
     .line 9
     :pswitch_1
-    invoke-static {}, Lcom/vk/bridges/ActionLinksBridge;->a()Lcom/vk/bridges/ActionLinksBridge1;
+    invoke-static {}, Lcom/vk/bridges/c;->a()Lcom/vk/bridges/b;
 
     move-result-object v0
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Lcom/vk/libvideo/live/views/stat/StatAdapter$a;->a()Lcom/vk/dto/actionlinks/ActionLink;
 
@@ -210,18 +210,18 @@
 
     move-result p2
 
-    invoke-interface {v0, p1, v2, v1, p2}, Lcom/vk/bridges/ActionLinksBridge1;->a(Landroid/view/View;Lcom/vk/dto/actionlinks/ActionLink;II)V
+    invoke-interface {v0, p1, v2, v1, p2}, Lcom/vk/bridges/b;->a(Landroid/view/View;Lcom/vk/dto/actionlinks/ActionLink;II)V
 
     goto/16 :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 10
     :pswitch_2
-    invoke-static {}, Lcom/vk/bridges/ActionLinksBridge;->a()Lcom/vk/bridges/ActionLinksBridge1;
+    invoke-static {}, Lcom/vk/bridges/c;->a()Lcom/vk/bridges/b;
 
     move-result-object v0
 
@@ -237,16 +237,16 @@
 
     new-instance v1, Lcom/vk/libvideo/live/views/stat/StatAdapter$onBindViewHolder$3;
 
-    iget-object v3, p0, Lcom/vk/libvideo/live/views/stat/StatAdapter;->b:Lcom/vk/libvideo/live/views/stat/StatContract1;
+    iget-object v3, p0, Lcom/vk/libvideo/live/views/stat/StatAdapter;->b:Lcom/vk/libvideo/live/views/stat/b;
 
-    invoke-direct {v1, v3}, Lcom/vk/libvideo/live/views/stat/StatAdapter$onBindViewHolder$3;-><init>(Lcom/vk/libvideo/live/views/stat/StatContract1;)V
+    invoke-direct {v1, v3}, Lcom/vk/libvideo/live/views/stat/StatAdapter$onBindViewHolder$3;-><init>(Lcom/vk/libvideo/live/views/stat/b;)V
 
-    invoke-interface {v0, p1, v2, p2, v1}, Lcom/vk/bridges/ActionLinksBridge1;->a(Ljava/lang/Object;Lcom/vk/dto/user/UserProfile;ZLkotlin/jvm/b/Functions1;)V
+    invoke-interface {v0, p1, v2, p2, v1}, Lcom/vk/bridges/b;->a(Ljava/lang/Object;Lcom/vk/dto/user/UserProfile;ZLkotlin/jvm/b/c;)V
 
     goto/16 :goto_0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -256,16 +256,16 @@
 
     if-eqz v0, :cond_3
 
-    check-cast v0, Lcom/vk/libvideo/live/views/stat/f/StatMore;
+    check-cast v0, Lcom/vk/libvideo/live/views/stat/f/a;
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/stat/f/StatMore;->getTitle()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/stat/f/a;->getTitle()Landroid/widget/TextView;
 
     move-result-object v0
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -273,9 +273,9 @@
 
     const-string v1, "holder.itemView.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v1, Lcom/vk/libvideo/R6;->live_viewers_more_users:I
+    sget v1, Lcom/vk/libvideo/i;->live_viewers_more_users:I
 
     invoke-virtual {p2}, Lcom/vk/libvideo/live/views/stat/StatAdapter$a;->b()I
 
@@ -303,10 +303,10 @@
 
     if-eqz p1, :cond_5
 
-    check-cast p1, Lcom/vk/libvideo/live/views/stat/f/StatStat;
+    check-cast p1, Lcom/vk/libvideo/live/views/stat/f/b;
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/stat/f/StatStat;->getTitle()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/stat/f/b;->getTitle()Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -324,7 +324,7 @@
     if-eqz v0, :cond_4
 
     .line 17
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/stat/f/StatStat;->getCount()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/stat/f/b;->getCount()Landroid/widget/TextView;
 
     move-result-object p1
 
@@ -338,7 +338,7 @@
 
     .line 18
     :cond_4
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/stat/f/StatStat;->getCount()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/stat/f/b;->getCount()Landroid/widget/TextView;
 
     move-result-object p1
 
@@ -370,9 +370,9 @@
 
     if-eqz p1, :cond_6
 
-    check-cast p1, Lcom/vk/libvideo/live/views/stat/f/StatTitle;
+    check-cast p1, Lcom/vk/libvideo/live/views/stat/f/c;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/stat/f/StatTitle;->getTitle()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/stat/f/c;->getTitle()Landroid/widget/TextView;
 
     move-result-object p1
 
@@ -475,15 +475,15 @@
 
     .line 3
     :pswitch_0
-    new-instance p2, Lcom/vk/libvideo/live/views/stat/f/StatMore;
+    new-instance p2, Lcom/vk/libvideo/live/views/stat/f/a;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, v2}, Lcom/vk/libvideo/live/views/stat/f/StatMore;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, v2}, Lcom/vk/libvideo/live/views/stat/f/a;-><init>(Landroid/content/Context;)V
 
     .line 4
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
@@ -507,7 +507,7 @@
 
     .line 6
     :pswitch_1
-    invoke-static {}, Lcom/vk/bridges/ActionLinksBridge;->a()Lcom/vk/bridges/ActionLinksBridge1;
+    invoke-static {}, Lcom/vk/bridges/c;->a()Lcom/vk/bridges/b;
 
     move-result-object p2
 
@@ -515,9 +515,9 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p1}, Lcom/vk/bridges/ActionLinksBridge1;->a(Landroid/content/Context;)Landroid/view/ViewGroup;
+    invoke-interface {p2, p1}, Lcom/vk/bridges/b;->a(Landroid/content/Context;)Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -543,11 +543,11 @@
 
     .line 9
     :pswitch_2
-    invoke-static {}, Lcom/vk/bridges/ActionLinksBridge;->a()Lcom/vk/bridges/ActionLinksBridge1;
+    invoke-static {}, Lcom/vk/bridges/c;->a()Lcom/vk/bridges/b;
 
     move-result-object p2
 
-    invoke-interface {p2, p1}, Lcom/vk/bridges/ActionLinksBridge1;->a(Landroid/view/ViewGroup;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lcom/vk/bridges/b;->a(Landroid/view/ViewGroup;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -600,15 +600,15 @@
 
     .line 13
     :pswitch_4
-    new-instance p2, Lcom/vk/libvideo/live/views/stat/f/StatStat;
+    new-instance p2, Lcom/vk/libvideo/live/views/stat/f/b;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, v2}, Lcom/vk/libvideo/live/views/stat/f/StatStat;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, v2}, Lcom/vk/libvideo/live/views/stat/f/b;-><init>(Landroid/content/Context;)V
 
     .line 14
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
@@ -632,15 +632,15 @@
 
     .line 16
     :pswitch_5
-    new-instance p2, Lcom/vk/libvideo/live/views/stat/f/StatTitle;
+    new-instance p2, Lcom/vk/libvideo/live/views/stat/f/c;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, v2}, Lcom/vk/libvideo/live/views/stat/f/StatTitle;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, v2}, Lcom/vk/libvideo/live/views/stat/f/c;-><init>(Landroid/content/Context;)V
 
     .line 17
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;

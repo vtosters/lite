@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$a;
-.super Lcom/vk/music/ui/common/MusicDelegateViewHolder;
+.super Lcom/vk/music/ui/common/d;
 .source "MusicTrackHeaderAdapter.kt"
 
 
@@ -18,27 +18,27 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/vk/music/ui/common/MusicDelegateViewHolder<",
+        "Lcom/vk/music/ui/common/d<",
         "TT;>;"
     }
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/LayoutInflater;Lcom/vk/music/ui/common/MusicViewHolder;Ljava/util/List;Lcom/vk/music/bottomsheets/a/MusicAction$a;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;Z)V
+.method public constructor <init>(Landroid/view/LayoutInflater;Lcom/vk/music/ui/common/o;Ljava/util/List;Lcom/vk/music/bottomsheets/a/a$a;Ljava/lang/Object;Lkotlin/jvm/b/b;Z)V
     .locals 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/LayoutInflater;",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "TT;>;",
             "Ljava/util/List<",
-            "Lcom/vk/music/bottomsheets/a/MusicAction;",
+            "Lcom/vk/music/bottomsheets/a/a;",
             ">;",
-            "Lcom/vk/music/bottomsheets/a/MusicAction$a<",
+            "Lcom/vk/music/bottomsheets/a/a$a<",
             "TT;>;TT;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;Z)V"
@@ -50,14 +50,14 @@
     move-object/from16 v0, p2
 
     .line 1
-    invoke-direct {v8, v0}, Lcom/vk/music/ui/common/MusicDelegateViewHolder;-><init>(Lcom/vk/music/ui/common/MusicViewHolder;)V
+    invoke-direct {v8, v0}, Lcom/vk/music/ui/common/d;-><init>(Lcom/vk/music/ui/common/o;)V
 
     move-object/from16 v9, p5
 
     move-object/from16 v0, p6
 
     .line 2
-    invoke-interface {v0, v9}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v9}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -118,7 +118,7 @@
 
     move-object v1, v0
 
-    check-cast v1, Lcom/vk/music/bottomsheets/a/MusicAction;
+    check-cast v1, Lcom/vk/music/bottomsheets/a/a;
 
     const v0, 0x7f0d0353
 
@@ -136,7 +136,7 @@
     check-cast v15, Landroid/widget/ImageView;
 
     .line 8
-    invoke-virtual {v1}, Lcom/vk/music/bottomsheets/a/MusicAction;->a()I
+    invoke-virtual {v1}, Lcom/vk/music/bottomsheets/a/a;->a()I
 
     move-result v0
 
@@ -147,7 +147,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1}, Lcom/vk/music/bottomsheets/a/MusicAction;->e()I
+    invoke-virtual {v1}, Lcom/vk/music/bottomsheets/a/a;->e()I
 
     move-result v2
 
@@ -160,7 +160,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lcom/vk/music/bottomsheets/a/MusicAction;->d()I
+    invoke-virtual {v1}, Lcom/vk/music/bottomsheets/a/a;->d()I
 
     move-result v3
 
@@ -173,7 +173,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1}, Lcom/vk/music/bottomsheets/a/MusicAction;->b()I
+    invoke-virtual {v1}, Lcom/vk/music/bottomsheets/a/a;->b()I
 
     move-result v4
 
@@ -184,9 +184,9 @@
     invoke-virtual {v15, v3}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 12
-    new-instance v3, Lcom/vk/core/drawable/RecoloredDrawable;
+    new-instance v3, Lcom/vk/core/drawable/i;
 
-    invoke-direct {v3, v2, v0}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v3, v2, v0}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     invoke-virtual {v15, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -212,7 +212,7 @@
 
     move-object/from16 v7, p5
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$a$a;-><init>(Lcom/vk/music/bottomsheets/a/MusicAction;Landroid/widget/LinearLayout;Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$a;Ljava/util/List;Landroid/view/LayoutInflater;Lcom/vk/music/bottomsheets/a/MusicAction$a;Ljava/lang/Object;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$a$a;-><init>(Lcom/vk/music/bottomsheets/a/a;Landroid/widget/LinearLayout;Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$a;Ljava/util/List;Landroid/view/LayoutInflater;Lcom/vk/music/bottomsheets/a/a$a;Ljava/lang/Object;)V
 
     invoke-virtual {v15, v12}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

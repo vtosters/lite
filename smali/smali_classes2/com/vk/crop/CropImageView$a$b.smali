@@ -3,7 +3,7 @@
 .source "CropImageView.java"
 
 # interfaces
-.implements Lcom/vk/crop/RectCropOverlayView$d;
+.implements Lcom/vk/crop/p$d;
 
 
 # annotations
@@ -70,7 +70,7 @@
 
     iget-object v0, v0, Lcom/vk/crop/CropImageView$a;->f:Lcom/vk/crop/CropImageView;
 
-    invoke-static {v0}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropController;
+    invoke-static {v0}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/f;
 
     move-result-object v0
 
@@ -81,13 +81,13 @@
 
     iget-object v0, v0, Lcom/vk/crop/CropImageView$a;->f:Lcom/vk/crop/CropImageView;
 
-    invoke-static {v0}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropController;
+    invoke-static {v0}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/f;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/crop/CropController;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/crop/f;->a(Z)V
 
     .line 4
     :cond_0

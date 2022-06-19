@@ -3,7 +3,7 @@
 .source "PostPreviewPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/newsfeed/entries/Post;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     iget-object v0, v0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onPublishButtonClicked$2;->this$0:Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
+    invoke-static {v0}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/b;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
 
     move-result p1
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->k0(I)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/postpreview/b;->k0(I)V
 
     return-void
 .end method

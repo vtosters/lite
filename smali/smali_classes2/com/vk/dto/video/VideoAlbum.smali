@@ -12,10 +12,10 @@
 
 
 # static fields
-.field public static final B:Lcom/vk/dto/common/data/JsonParser;
+.field public static final B:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/video/VideoAlbum;",
             ">;"
         }
@@ -68,7 +68,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/video/VideoAlbum$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/video/VideoAlbum$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/video/VideoAlbum$b;
@@ -83,7 +83,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/video/VideoAlbum$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/video/VideoAlbum;->B:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/video/VideoAlbum;->B:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -126,7 +126,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/String;IILcom/vk/dto/common/Image;ZLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IILjava/lang/String;IILcom/vk/dto/common/Image;ZLjava/util/List;ILkotlin/jvm/internal/i;)V
     .locals 12
 
     move/from16 v0, p9
@@ -290,7 +290,7 @@
 
     .line 23
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -678,7 +678,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/video/VideoAlbum;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -700,7 +700,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/video/VideoAlbum;->f:Lcom/vk/dto/common/Image;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -716,7 +716,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/video/VideoAlbum;->h:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

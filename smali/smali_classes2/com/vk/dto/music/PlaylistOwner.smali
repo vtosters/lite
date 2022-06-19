@@ -3,7 +3,7 @@
 .source "PlaylistOwner.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/core/serialize/a;
 
 
 # annotations
@@ -25,10 +25,10 @@
     .end annotation
 .end field
 
-.field public static final g:Lcom/vk/dto/common/data/JsonParser;
+.field public static final g:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/music/PlaylistOwner;",
             ">;"
         }
@@ -58,7 +58,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/music/PlaylistOwner$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/music/PlaylistOwner$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/music/PlaylistOwner$b;
@@ -73,7 +73,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/music/PlaylistOwner$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/music/PlaylistOwner;->g:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/music/PlaylistOwner;->g:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -99,7 +99,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILkotlin/jvm/internal/i;)V
     .locals 9
 
     and-int/lit8 v0, p7, 0x4
@@ -229,7 +229,7 @@
 
     const-string p1, "g.name"
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -245,7 +245,7 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v1 .. v9}, Lcom/vk/dto/music/PlaylistOwner;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v9}, Lcom/vk/dto/music/PlaylistOwner;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -261,7 +261,7 @@
 
     const-string v0, "profile.firstName"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     iget-object v0, p1, Lcom/vk/dto/user/UserProfile;->L:Landroid/os/Bundle;
@@ -316,7 +316,7 @@
 
     const-string v0, "json.getString(JsonKeys.OWNER_NAME)"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "sex_count"
 
@@ -408,7 +408,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/dto/music/PlaylistOwner$toJSONObject$1;-><init>(Lcom/vk/dto/music/PlaylistOwner;)V
 
-    invoke-static {v0}, Lcom/vk/dto/common/data/JsonObj1;->a(Lkotlin/jvm/b/Functions2;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/vk/dto/common/data/b;->a(Lkotlin/jvm/b/b;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -481,7 +481,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/music/PlaylistOwner;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -491,7 +491,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/music/PlaylistOwner;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -501,7 +501,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/music/PlaylistOwner;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -517,7 +517,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/music/PlaylistOwner;->f:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

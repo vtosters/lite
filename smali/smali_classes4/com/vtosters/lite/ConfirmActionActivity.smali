@@ -52,15 +52,15 @@
     .locals 1
 
     .line 6
-    new-instance v0, Lcom/vk/api/account/AccountValidateAction;
+    new-instance v0, Lcom/vk/api/account/y;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/api/account/AccountValidateAction;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/api/account/y;-><init>(Ljava/lang/String;Z)V
 
     .line 7
-    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v0}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
 
     .line 8
-    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
 
     move-result-object p1
 
@@ -73,7 +73,7 @@
     invoke-direct {v0, p0}, Lcom/vtosters/lite/ConfirmActionActivity$e;-><init>(Lcom/vtosters/lite/ConfirmActionActivity;)V
 
     .line 9
-    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method

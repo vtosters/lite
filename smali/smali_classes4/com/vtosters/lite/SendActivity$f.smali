@@ -211,12 +211,12 @@
     new-instance v11, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
     .line 5
-    invoke-static {v2}, Lcom/vtosters/lite/upload/UploadUtils;->c(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vtosters/lite/upload/k;->c(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 6
-    invoke-static {v2}, Lcom/vtosters/lite/upload/UploadUtils;->e(Landroid/net/Uri;)J
+    invoke-static {v2}, Lcom/vtosters/lite/upload/k;->e(Landroid/net/Uri;)J
 
     move-result-wide v5
 
@@ -230,7 +230,7 @@
     move-result v9
 
     .line 8
-    invoke-static {v2}, Lcom/vtosters/lite/upload/UploadUtils;->b(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vtosters/lite/upload/k;->b(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v10
 

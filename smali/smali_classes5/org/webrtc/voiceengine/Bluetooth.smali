@@ -149,7 +149,7 @@
     const-string v0, "start: isBluetoothScoAvailableOffCall - false!"
 
     .line 2
-    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
@@ -174,7 +174,7 @@
     const-string v0, "start: BluetoothAdapter.getDefaultAdapter returned NULL"
 
     .line 6
-    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
@@ -197,7 +197,7 @@
     const-string v1, "prepare: need BLUETOOTH permission!"
 
     .line 8
-    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return v0
@@ -225,7 +225,7 @@
 
     const-string v1, "voe_bluetooth"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lorg/webrtc/voiceengine/Bluetooth;->scoStarted:Z
@@ -369,7 +369,7 @@
 
     const-string v1, "voe_bluetooth"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lorg/webrtc/voiceengine/Bluetooth;->scoStarted:Z
@@ -488,7 +488,7 @@
     const-string v1, "bluetoothHeadsetConnected: need BLUETOOTH permission!"
 
     .line 5
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     :cond_1
@@ -520,7 +520,7 @@
     const-string v1, "connect"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Lorg/webrtc/voiceengine/Bluetooth;->bluetoothHeadsetConnected()Z
@@ -564,7 +564,7 @@
     const-string v1, "disconnect"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-direct {p0}, Lorg/webrtc/voiceengine/Bluetooth;->stopSco()V
@@ -614,7 +614,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Lorg/webrtc/voiceengine/Bluetooth;->bluetoothHeadsetConnected()Z
@@ -688,7 +688,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -730,7 +730,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-direct {p0}, Lorg/webrtc/voiceengine/Bluetooth;->stopSco()V

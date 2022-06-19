@@ -3,7 +3,7 @@
 .source "PrefetchHelperFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/newsfeed/html5/Html5PrefetchHelper;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/newsfeed/html5/a;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/newsfeed/html5/Html5PrefetchHelper;
+.method public final invoke()Lcom/vk/newsfeed/html5/a;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/html5/Html5PrefetchHelper;
+    new-instance v0, Lcom/vk/newsfeed/html5/a;
 
-    invoke-direct {v0}, Lcom/vk/newsfeed/html5/Html5PrefetchHelper;-><init>()V
+    invoke-direct {v0}, Lcom/vk/newsfeed/html5/a;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$html5AdPrefetchHelper$2;->invoke()Lcom/vk/newsfeed/html5/Html5PrefetchHelper;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$html5AdPrefetchHelper$2;->invoke()Lcom/vk/newsfeed/html5/a;
 
     move-result-object v0
 

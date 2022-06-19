@@ -3,7 +3,7 @@
 .source "CreatePeopleTransferPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/money/MoneyReceiverInfo;",
         ">;"
     }
@@ -66,15 +66,15 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {p1}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/bridges/AuthBridge1;->m()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/bridges/a;->m()Ljava/lang/String;
 
     move-result-object p1
 

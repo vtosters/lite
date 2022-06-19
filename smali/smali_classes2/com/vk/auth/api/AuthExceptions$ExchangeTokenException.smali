@@ -4,11 +4,11 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/auth/api/models/AuthAnswer;)V
+.method public constructor <init>(Lcom/vk/auth/api/models/a;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/auth/api/AuthExceptions$DetailedAuthException;-><init>(Lcom/vk/auth/api/models/AuthAnswer;)V
+    invoke-direct {p0, p1}, Lcom/vk/auth/api/AuthExceptions$DetailedAuthException;-><init>(Lcom/vk/auth/api/models/a;)V
 
     return-void
 .end method

@@ -14,11 +14,11 @@
 # instance fields
 .field private a:Landroid/widget/ImageView;
 
-.field private b:Lcom/vk/crop/CropOverlayView;
+.field private b:Lcom/vk/crop/g;
 
-.field private c:Lcom/vk/crop/CropTouchListener;
+.field private c:Lcom/vk/crop/h;
 
-.field private d:Lcom/vk/crop/CropController;
+.field private d:Lcom/vk/crop/f;
 
 .field private e:Landroid/graphics/Bitmap;
 
@@ -68,7 +68,7 @@
     iput-object p3, p0, Lcom/vk/crop/CropImageView;->g:Landroid/os/Handler;
 
     .line 5
-    sget-object p3, Lcom/vk/crop/R;->CropImageView:[I
+    sget-object p3, Lcom/vk/crop/o;->CropImageView:[I
 
     const/4 v0, 0x0
 
@@ -77,7 +77,7 @@
     move-result-object p2
 
     .line 6
-    sget p3, Lcom/vk/crop/R;->CropImageView_civ_circleCrop:I
+    sget p3, Lcom/vk/crop/o;->CropImageView_civ_circleCrop:I
 
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -109,13 +109,13 @@
     move-object v12, p0
 
     .line 26
-    iget-object v1, v12, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v1, v12, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
-    invoke-virtual {v1}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {v1}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/crop/GeometryState;->g()F
+    invoke-virtual {v1}, Lcom/vk/crop/j;->g()F
 
     move-result v1
 
@@ -176,20 +176,20 @@
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/crop/CropImageView;Lcom/vk/crop/CropController;)Lcom/vk/crop/CropController;
+.method static synthetic a(Lcom/vk/crop/CropImageView;Lcom/vk/crop/f;)Lcom/vk/crop/f;
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iput-object p1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/crop/CropImageView;Lcom/vk/crop/CropTouchListener;)Lcom/vk/crop/CropTouchListener;
+.method static synthetic a(Lcom/vk/crop/CropImageView;Lcom/vk/crop/h;)Lcom/vk/crop/h;
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/crop/CropImageView;->c:Lcom/vk/crop/CropTouchListener;
+    iput-object p1, p0, Lcom/vk/crop/CropImageView;->c:Lcom/vk/crop/h;
 
     return-object p1
 .end method
@@ -214,21 +214,21 @@
     if-eqz p2, :cond_0
 
     .line 10
-    new-instance p2, Lcom/vk/crop/CircleCropOverlayView;
+    new-instance p2, Lcom/vk/crop/a;
 
-    invoke-direct {p2, p1}, Lcom/vk/crop/CircleCropOverlayView;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/crop/a;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iput-object p2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
     goto :goto_0
 
     .line 11
     :cond_0
-    new-instance p2, Lcom/vk/crop/RectCropOverlayView;
+    new-instance p2, Lcom/vk/crop/p;
 
-    invoke-direct {p2, p1}, Lcom/vk/crop/RectCropOverlayView;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/crop/p;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iput-object p2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
     .line 12
     :goto_0
@@ -237,7 +237,7 @@
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object p1, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
@@ -262,49 +262,49 @@
 
     .line 31
     :cond_0
-    iget-object p1, p0, Lcom/vk/crop/CropImageView;->c:Lcom/vk/crop/CropTouchListener;
+    iget-object p1, p0, Lcom/vk/crop/CropImageView;->c:Lcom/vk/crop/h;
 
     if-eqz p1, :cond_1
 
     .line 32
-    invoke-virtual {p1, p2}, Lcom/vk/crop/CropTouchListener;->a(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/crop/h;->a(Z)V
 
     .line 33
     :cond_1
-    iget-object p1, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object p1, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
     if-eqz p1, :cond_2
 
     .line 34
-    invoke-virtual {p1, p3}, Lcom/vk/crop/CropOverlayView;->setTouchEnabled(Z)V
+    invoke-virtual {p1, p3}, Lcom/vk/crop/g;->setTouchEnabled(Z)V
 
     :cond_2
     return-void
 .end method
 
-.method static synthetic b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropController;
+.method static synthetic b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/f;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object p0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     return-object p0
 .end method
 
-.method static synthetic c(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropOverlayView;
+.method static synthetic c(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/g;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object p0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
     return-object p0
 .end method
 
-.method static synthetic d(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropTouchListener;
+.method static synthetic d(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/h;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/crop/CropImageView;->c:Lcom/vk/crop/CropTouchListener;
+    iget-object p0, p0, Lcom/vk/crop/CropImageView;->c:Lcom/vk/crop/h;
 
     return-object p0
 .end method
@@ -384,16 +384,16 @@
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v1, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {v1}, Lcom/vk/crop/CropAreaProvider;->getCropAspectRatio()F
+    invoke-interface {v1}, Lcom/vk/crop/c;->getCropAspectRatio()F
 
     move-result v1
 
     .line 6
-    iget-object v2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-virtual {v2, v1}, Lcom/vk/crop/CropOverlayView;->a(F)Landroid/graphics/RectF;
+    invoke-virtual {v2, v1}, Lcom/vk/crop/g;->a(F)Landroid/graphics/RectF;
 
     move-result-object v1
 
@@ -412,9 +412,9 @@
     sub-float v5, v4, v2
 
     .line 11
-    iget-object v6, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v6, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {v6}, Lcom/vk/crop/CropAreaProvider;->getCropWidth()F
+    invoke-interface {v6}, Lcom/vk/crop/c;->getCropWidth()F
 
     move-result v6
 
@@ -422,9 +422,9 @@
 
     sub-float v7, v1, v3
 
-    iget-object v8, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v8, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {v8}, Lcom/vk/crop/CropAreaProvider;->getCropHeight()F
+    invoke-interface {v8}, Lcom/vk/crop/c;->getCropHeight()F
 
     move-result v8
 
@@ -435,16 +435,16 @@
     move-result v10
 
     .line 12
-    iget-object v6, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v6, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
     .line 13
-    invoke-interface {v6}, Lcom/vk/crop/CropAreaProvider;->getCenterX()F
+    invoke-interface {v6}, Lcom/vk/crop/c;->getCenterX()F
 
     move-result v11
 
-    iget-object v6, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v6, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {v6}, Lcom/vk/crop/CropAreaProvider;->getCenterY()F
+    invoke-interface {v6}, Lcom/vk/crop/c;->getCenterY()F
 
     move-result v12
 
@@ -454,10 +454,10 @@
 
     add-float/2addr v5, v2
 
-    iget-object v8, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v8, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
     .line 14
-    invoke-interface {v8}, Lcom/vk/crop/CropAreaProvider;->getCenterX()F
+    invoke-interface {v8}, Lcom/vk/crop/c;->getCenterX()F
 
     move-result v8
 
@@ -467,10 +467,10 @@
 
     add-float/2addr v7, v3
 
-    iget-object v5, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v5, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
     .line 15
-    invoke-interface {v5}, Lcom/vk/crop/CropAreaProvider;->getCenterY()F
+    invoke-interface {v5}, Lcom/vk/crop/c;->getCenterY()F
 
     move-result v5
 
@@ -488,9 +488,9 @@
     new-array v6, v6, [Landroid/animation/Animator;
 
     .line 17
-    iget-object v7, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v7, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    sget-object v8, Lcom/vk/crop/CropOverlayView;->a:Landroid/util/Property;
+    sget-object v8, Lcom/vk/crop/g;->a:Landroid/util/Property;
 
     const/4 v9, 0x1
 
@@ -505,13 +505,13 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/core/util/AnimationUtils;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {v2}, Lcom/vk/core/util/h;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     aput-object v2, v6, v11
 
-    iget-object v2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    sget-object v7, Lcom/vk/crop/CropOverlayView;->c:Landroid/util/Property;
+    sget-object v7, Lcom/vk/crop/g;->c:Landroid/util/Property;
 
     new-array v8, v9, [F
 
@@ -522,13 +522,13 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/core/util/AnimationUtils;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {v2}, Lcom/vk/core/util/h;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     aput-object v2, v6, v9
 
-    iget-object v2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    sget-object v3, Lcom/vk/crop/CropOverlayView;->b:Landroid/util/Property;
+    sget-object v3, Lcom/vk/crop/g;->b:Landroid/util/Property;
 
     new-array v7, v9, [F
 
@@ -539,15 +539,15 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/core/util/AnimationUtils;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {v2}, Lcom/vk/core/util/h;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     const/4 v3, 0x2
 
     aput-object v2, v6, v3
 
-    iget-object v2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    sget-object v3, Lcom/vk/crop/CropOverlayView;->d:Landroid/util/Property;
+    sget-object v3, Lcom/vk/crop/g;->d:Landroid/util/Property;
 
     new-array v4, v9, [F
 
@@ -558,14 +558,14 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/core/util/AnimationUtils;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {v1}, Lcom/vk/core/util/h;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     const/4 v2, 0x3
 
     aput-object v1, v6, v2
 
     .line 22
-    invoke-static {v5}, Lcom/vk/core/util/AnimationUtils;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {v5}, Lcom/vk/core/util/h;->c(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     const/4 v1, 0x4
 
@@ -625,11 +625,11 @@
     .locals 2
 
     .line 15
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     iget-object v1, p0, Lcom/vk/crop/CropImageView;->e:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/crop/CropController;->a(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/crop/f;->a(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -643,19 +643,19 @@
     invoke-direct {p0}, Lcom/vk/crop/CropImageView;->k()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/crop/CropController;->c()V
+    invoke-virtual {v0}, Lcom/vk/crop/f;->c()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/crop/CropController;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/crop/f;->a(Z)V
 
     :cond_0
     return-void
@@ -665,12 +665,12 @@
     .locals 1
 
     .line 20
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     if-eqz v0, :cond_0
 
     .line 21
-    invoke-virtual {v0, p1}, Lcom/vk/crop/CropController;->a(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/crop/f;->a(F)V
 
     .line 22
     :cond_0
@@ -694,24 +694,24 @@
     .locals 2
 
     .line 14
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
-    invoke-virtual {v1}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {v1}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/crop/GeometryState;->b()F
+    invoke-virtual {v1}, Lcom/vk/crop/j;->b()F
 
     move-result v1
 
-    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/crop/CropOverlayView;->a(FFZ)V
+    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/crop/g;->a(FFZ)V
 
     return-void
 .end method
 
-.method public a(Landroid/graphics/Bitmap;Lcom/vk/crop/GeometryState;Lcom/vk/crop/CropAspectRatio;ZZ)V
+.method public a(Landroid/graphics/Bitmap;Lcom/vk/crop/j;Lcom/vk/crop/d;ZZ)V
     .locals 9
 
     if-eqz p1, :cond_1
@@ -752,7 +752,7 @@
 
     move v7, p4
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/crop/CropImageView$a;-><init>(Lcom/vk/crop/CropImageView;Lcom/vk/crop/GeometryState;ZLcom/vk/crop/CropAspectRatio;Landroid/graphics/Bitmap;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/crop/CropImageView$a;-><init>(Lcom/vk/crop/CropImageView;Lcom/vk/crop/j;ZLcom/vk/crop/d;Landroid/graphics/Bitmap;Z)V
 
     invoke-virtual {v0, v8}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
@@ -904,20 +904,20 @@
     return v0
 .end method
 
-.method public getCropController()Lcom/vk/crop/CropController;
+.method public getCropController()Lcom/vk/crop/f;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     return-object v0
 .end method
 
-.method public h()Lcom/vk/crop/CropOverlayView;
+.method public h()Lcom/vk/crop/g;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
     return-object v0
 .end method
@@ -926,35 +926,35 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/crop/CropController;->c()V
+    invoke-virtual {v0}, Lcom/vk/crop/f;->c()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/crop/CropController;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/crop/f;->a(I)V
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
-    invoke-virtual {v1}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {v1}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/crop/GeometryState;->b()F
+    invoke-virtual {v1}, Lcom/vk/crop/j;->b()F
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/crop/CropOverlayView;->b(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/crop/g;->b(F)V
 
     return-void
 .end method
@@ -963,13 +963,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
-    invoke-virtual {v0}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {v0}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/crop/GeometryState;->a()F
+    invoke-virtual {v0}, Lcom/vk/crop/j;->a()F
 
     move-result v0
 
@@ -980,33 +980,33 @@
     float-to-int v0, v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-virtual {v1}, Lcom/vk/crop/CropController;->c()V
+    invoke-virtual {v1}, Lcom/vk/crop/f;->c()V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
-    invoke-virtual {v1, v0}, Lcom/vk/crop/CropController;->a(I)V
+    invoke-virtual {v1, v0}, Lcom/vk/crop/f;->a(I)V
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
-    invoke-virtual {v1}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {v1}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/crop/GeometryState;->b()F
+    invoke-virtual {v1}, Lcom/vk/crop/j;->b()F
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/crop/CropOverlayView;->b(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/crop/g;->b(F)V
 
     .line 6
     invoke-virtual {p0}, Lcom/vk/crop/CropImageView;->g()V
@@ -1021,53 +1021,53 @@
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object p1, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {p1}, Lcom/vk/crop/CropAreaProvider;->getCropWidth()F
+    invoke-interface {p1}, Lcom/vk/crop/c;->getCropWidth()F
 
     move-result p1
 
     .line 3
-    iget-object p2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object p2, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {p2}, Lcom/vk/crop/CropAreaProvider;->getX0()F
+    invoke-interface {p2}, Lcom/vk/crop/c;->getX0()F
 
     move-result p2
 
     .line 4
-    iget-object p3, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object p3, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {p3}, Lcom/vk/crop/CropAreaProvider;->getY0()F
+    invoke-interface {p3}, Lcom/vk/crop/c;->getY0()F
 
     move-result p3
 
     .line 5
-    iget-object p4, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object p4, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {p4}, Lcom/vk/crop/CropAreaProvider;->getCropAspectRatio()F
+    invoke-interface {p4}, Lcom/vk/crop/c;->getCropAspectRatio()F
 
     move-result p5
 
-    invoke-virtual {p4, p5}, Lcom/vk/crop/CropOverlayView;->b(F)V
+    invoke-virtual {p4, p5}, Lcom/vk/crop/g;->b(F)V
 
     .line 6
-    iget-object p4, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object p4, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {p4}, Lcom/vk/crop/CropAreaProvider;->getCropWidth()F
+    invoke-interface {p4}, Lcom/vk/crop/c;->getCropWidth()F
 
     move-result p4
 
     .line 7
-    iget-object p5, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object p5, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {p5}, Lcom/vk/crop/CropAreaProvider;->getX0()F
+    invoke-interface {p5}, Lcom/vk/crop/c;->getX0()F
 
     move-result p5
 
     .line 8
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-interface {v0}, Lcom/vk/crop/CropAreaProvider;->getY0()F
+    invoke-interface {v0}, Lcom/vk/crop/c;->getY0()F
 
     move-result v0
 
@@ -1078,18 +1078,18 @@
     if-eqz v2, :cond_0
 
     .line 9
-    iget-object v2, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object v2, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     if-eqz v2, :cond_0
 
     div-float/2addr p4, p1
 
     .line 10
-    invoke-virtual {v2}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {v2}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object p1
 
-    invoke-virtual {p1, p4, p2, p3}, Lcom/vk/crop/GeometryState;->b(FFF)V
+    invoke-virtual {p1, p4, p2, p3}, Lcom/vk/crop/j;->b(FFF)V
 
     :cond_0
     cmpl-float p1, p2, v1
@@ -1097,18 +1097,18 @@
     if-eqz p1, :cond_1
 
     .line 11
-    iget-object p1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object p1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     if-eqz p1, :cond_1
 
     .line 12
-    invoke-virtual {p1}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {p1}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object p1
 
     sub-float/2addr p5, p2
 
-    invoke-virtual {p1, p5, v1}, Lcom/vk/crop/GeometryState;->a(FF)V
+    invoke-virtual {p1, p5, v1}, Lcom/vk/crop/j;->a(FF)V
 
     :cond_1
     cmpl-float p1, p3, v1
@@ -1116,27 +1116,27 @@
     if-eqz p1, :cond_2
 
     .line 13
-    iget-object p1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object p1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     if-eqz p1, :cond_2
 
     .line 14
-    invoke-virtual {p1}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {p1}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object p1
 
     sub-float/2addr v0, p3
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/crop/GeometryState;->a(FF)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/crop/j;->a(FF)V
 
     .line 15
     :cond_2
-    iget-object p1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/CropController;
+    iget-object p1, p0, Lcom/vk/crop/CropImageView;->d:Lcom/vk/crop/f;
 
     if-eqz p1, :cond_3
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/crop/CropController;->i()V
+    invoke-virtual {p1}, Lcom/vk/crop/f;->i()V
 
     .line 17
     :cond_3
@@ -1158,9 +1158,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/CropOverlayView;
+    iget-object v0, p0, Lcom/vk/crop/CropImageView;->b:Lcom/vk/crop/g;
 
-    invoke-virtual {v0, p1}, Lcom/vk/crop/CropOverlayView;->setLinesAndTransparentOverlayVisible(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/crop/g;->setLinesAndTransparentOverlayVisible(Z)V
 
     return-void
 .end method

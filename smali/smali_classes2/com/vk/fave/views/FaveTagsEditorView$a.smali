@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
+.field private final a:Lcom/vk/fave/fragments/adapters/j;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;)V
+.method public constructor <init>(Lcom/vk/fave/fragments/adapters/j;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
+    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/j;
 
     return-void
 .end method
@@ -41,9 +41,9 @@
     move-result p1
 
     .line 2
-    iget-object p2, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
+    iget-object p2, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/j;
 
-    invoke-virtual {p2, p1}, Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;->h(I)Z
+    invoke-virtual {p2, p1}, Lcom/vk/fave/fragments/adapters/j;->h(I)Z
 
     move-result p1
 
@@ -95,17 +95,17 @@
     move-result p3
 
     .line 3
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/j;
 
-    invoke-virtual {v0, p2}, Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;->h(I)Z
+    invoke-virtual {v0, p2}, Lcom/vk/fave/fragments/adapters/j;->h(I)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/j;
 
-    invoke-virtual {v0, p3}, Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;->h(I)Z
+    invoke-virtual {v0, p3}, Lcom/vk/fave/fragments/adapters/j;->h(I)Z
 
     move-result v0
 
@@ -115,21 +115,21 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/j;
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
+    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/j;
 
-    invoke-virtual {v1, p2}, Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;->I(I)I
+    invoke-virtual {v1, p2}, Lcom/vk/fave/fragments/adapters/j;->I(I)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
+    iget-object v2, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/j;
 
-    invoke-virtual {v2, p3}, Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;->I(I)I
+    invoke-virtual {v2, p3}, Lcom/vk/fave/fragments/adapters/j;->I(I)I
 
     move-result v2
 
@@ -142,15 +142,15 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
+    iget-object v2, p0, Lcom/vk/fave/views/FaveTagsEditorView$a;->a:Lcom/vk/fave/fragments/adapters/j;
 
-    invoke-virtual {v2}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v2}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v2
 
     const-string v3, "adapter.list"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Ljava/util/List;)V
 

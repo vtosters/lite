@@ -3,8 +3,8 @@
 .source "AppsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/Clearable;
-.implements Lcom/vk/core/ui/MilkshakeProvider;
+.implements Lcom/vk/lists/c;
+.implements Lcom/vk/core/ui/n;
 
 
 # annotations
@@ -20,10 +20,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "*>;>;",
-        "Lcom/vk/lists/Clearable;",
-        "Lcom/vk/core/ui/MilkshakeProvider;"
+        "Lcom/vk/lists/c;",
+        "Lcom/vk/core/ui/n;"
     }
 .end annotation
 
@@ -68,12 +68,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;I)V"
         }
     .end annotation
@@ -95,7 +95,7 @@
 
     check-cast p2, Lcom/vk/apps/AppsFragment$j;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -126,7 +126,7 @@
 
     check-cast p2, Lcom/vk/apps/AppsFragment$h;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -157,7 +157,7 @@
 
     check-cast p2, Lcom/vk/apps/AppsFragment$g;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -188,7 +188,7 @@
 
     check-cast p2, Lcom/vk/apps/AppsFragment$l;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -219,7 +219,7 @@
 
     check-cast p2, Lcom/vk/apps/AppsFragment$a;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -250,7 +250,7 @@
 
     check-cast p2, Lcom/vk/apps/AppsFragment$c;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -285,7 +285,7 @@
 
     const-string v1, "items[position]"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/apps/AppsFragment$d;
 
@@ -347,7 +347,7 @@
 
     const-string v1, "items[position]"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/apps/AppsFragment$d;
 
@@ -410,11 +410,11 @@
 
     const-string v0, "items[position]"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/apps/AppsFragment$d;
 
-    invoke-virtual {p1}, Lcom/vk/common/i/RecyclerItem;->b()I
+    invoke-virtual {p1}, Lcom/vk/common/i/b;->b()I
 
     move-result p1
 
@@ -447,7 +447,7 @@
 
     const-string v1, "DiffUtil.calculateDiff(callback)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/apps/AppsFragment$b;->a:Ljava/util/ArrayList;
@@ -464,9 +464,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/apps/AppsFragment$b;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/apps/AppsFragment$b;->a(Lcom/vtosters/lite/ui/b0/i;I)V
 
     return-void
 .end method
@@ -475,21 +475,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/apps/AppsFragment$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/apps/AppsFragment$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "+",
             "Lcom/vk/apps/AppsFragment$d;",
             ">;"
@@ -615,7 +615,7 @@
 
     const-string v1, "DiffUtil.calculateDiff(callback)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/apps/AppsFragment$b;->a:Ljava/util/ArrayList;

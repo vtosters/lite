@@ -3,7 +3,7 @@
 .source "ImGifController.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/ImageViewer$a;
+.implements Lcom/vk/bridges/p$a;
 
 
 # annotations
@@ -44,7 +44,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;II)Ljava/lang/String;
+    invoke-static {p0, p1, p2}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;II)Ljava/lang/String;
 
     move-result-object p1
 
@@ -55,7 +55,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/bridges/ImageViewer$a$a;->b(Lcom/vk/bridges/ImageViewer$a;I)V
+    invoke-static {p0, p1}, Lcom/vk/bridges/p$a$a;->b(Lcom/vk/bridges/p$a;I)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
     .locals 1
 
     .line 3
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->g(Lcom/vk/bridges/ImageViewer$a;)Z
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->g(Lcom/vk/bridges/p$a;)Z
 
     move-result v0
 
@@ -99,7 +99,7 @@
     .locals 1
 
     .line 2
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->c(Lcom/vk/bridges/ImageViewer$a;)Ljava/lang/Integer;
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->c(Lcom/vk/bridges/p$a;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -145,7 +145,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->d()Lcom/vk/libvideo/VideoUI2;
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/a;->d()Lcom/vk/libvideo/q;
 
     move-result-object v0
 
@@ -157,27 +157,27 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/libvideo/VideoUI2;->a(Lcom/vk/libvideo/VideoUI;)V
+    invoke-interface {v0, v1}, Lcom/vk/libvideo/q;->a(Lcom/vk/libvideo/r;)V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vtosters/lite/im/video/ImGifController$b;->a:Lcom/vtosters/lite/im/video/ImGifController;
 
-    invoke-static {v0}, Lcom/vtosters/lite/im/video/ImGifController;->a(Lcom/vtosters/lite/im/video/ImGifController;)Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-static {v0}, Lcom/vtosters/lite/im/video/ImGifController;->a(Lcom/vtosters/lite/im/video/ImGifController;)Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->w()Z
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->w()Z
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/libvideo/autoplay/AutoPlay;->a(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/libvideo/autoplay/a;->a(Z)V
 
     .line 4
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->e()V
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->e()V
 
     :cond_1
     return-void
@@ -187,7 +187,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->h(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->h(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
@@ -196,16 +196,16 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->d(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->d(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
 
-.method public g()Lcom/vk/bridges/ImageViewer$c;
+.method public g()Lcom/vk/bridges/p$c;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$c;
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$c;
 
     move-result-object v0
 
@@ -222,7 +222,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->d()Lcom/vk/libvideo/VideoUI2;
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/a;->d()Lcom/vk/libvideo/q;
 
     move-result-object v0
 
@@ -234,7 +234,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/libvideo/VideoUI2;->a(Lcom/vk/libvideo/VideoUI;)V
+    invoke-interface {v0, v1}, Lcom/vk/libvideo/q;->a(Lcom/vk/libvideo/r;)V
 
     .line 2
     :cond_0

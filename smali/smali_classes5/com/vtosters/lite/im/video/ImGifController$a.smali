@@ -3,7 +3,7 @@
 .source "ImGifController.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/AdapterPosition;
+.implements Lcom/vk/core/util/b;
 
 
 # annotations
@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1

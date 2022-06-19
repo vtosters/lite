@@ -18,33 +18,33 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper<",
-            "Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;",
+            "Lcom/vk/im/engine/models/groups/a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+.field private final c:Lcom/vk/im/engine/internal/storage/b;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/b;)V
     .locals 12
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
     .line 2
     new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
     const-class v1, Lcom/vk/im/engine/models/groups/Group;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
 
     move-result-object v2
 
@@ -66,7 +66,7 @@
     move-object v0, p1
 
     .line 7
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
@@ -74,11 +74,11 @@
     new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    const-class v1, Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;
+    const-class v1, Lcom/vk/im/engine/models/groups/a;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
 
     move-result-object v8
 
@@ -100,38 +100,38 @@
     move-object v6, p1
 
     .line 13
-    invoke-direct/range {v6 .. v11}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->b:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;)Lcom/vk/im/engine/internal/storage/b;
     .locals 0
 
     .line 5
-    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
     return-object p0
 .end method
 
-.method private final a(Landroid/database/Cursor;)Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;
+.method private final a(Landroid/database/Cursor;)Lcom/vk/im/engine/models/groups/a;
     .locals 4
 
     .line 31
-    new-instance v0, Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;
+    new-instance v0, Lcom/vk/im/engine/models/groups/a;
 
     const-string v1, "group_id"
 
@@ -155,7 +155,7 @@
     move-result p1
 
     .line 35
-    invoke-direct {v0, v1, v2, p1}, Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;-><init>(IZZ)V
+    invoke-direct {v0, v1, v2, p1}, Lcom/vk/im/engine/models/groups/a;-><init>(IZZ)V
 
     return-object v0
 .end method
@@ -183,7 +183,7 @@
 
     const-string v0, "compileStatement(sql)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -197,11 +197,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/groups/a;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/groups/a;)V
 
     return-void
 .end method
@@ -334,11 +334,11 @@
     return-void
 .end method
 
-.method private final a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;)V
+.method private final a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/groups/a;)V
     .locals 2
 
     .line 28
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;->c()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/groups/a;->c()I
 
     move-result v0
 
@@ -347,7 +347,7 @@
     invoke-static {p1, v1, v0}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteStatement;II)V
 
     .line 29
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;->a()Z
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/groups/a;->a()Z
 
     move-result v0
 
@@ -356,7 +356,7 @@
     invoke-static {p1, v1, v0}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteStatement;IZ)V
 
     .line 30
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;->b()Z
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/groups/a;->b()Z
 
     move-result p2
 
@@ -367,11 +367,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public static final synthetic b(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->d(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->d(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p0
 
@@ -423,7 +423,7 @@
 
     const/4 v6, 0x1
 
-    invoke-direct {v1, v2, v6, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, v2, v6, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
 
     :goto_0
     move-object v6, v1
@@ -465,7 +465,7 @@
 
     const-string v1, "GroupType.fromInt(getInt(\"type\"))"
 
-    invoke-static {v7, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "is_verified"
 
@@ -524,12 +524,12 @@
 
     .line 22
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method
@@ -557,7 +557,7 @@
 
     const-string v0, "compileStatement(sql)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -571,28 +571,28 @@
     return-void
 .end method
 
-.method private final c(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method private final c(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;",
+            "Lcom/vk/im/engine/models/groups/a;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/vk/core/extensions/SparseArrayExt1;->a()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/vk/core/extensions/x;->a()Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -602,7 +602,7 @@
     const-string v0, ","
 
     .line 3
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -626,9 +626,9 @@
     move-result-object p1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -669,7 +669,7 @@
     move-result v1
 
     .line 10
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/models/groups/a;
 
     move-result-object v2
 
@@ -702,7 +702,7 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;",
+            "Lcom/vk/im/engine/models/groups/a;",
             ">;)V"
         }
     .end annotation
@@ -718,9 +718,9 @@
 
     .line 14
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -728,17 +728,17 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager$putCanSendToMePendingFromDb$1;-><init>(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;Ljava/util/Collection;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method private final d(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method private final d(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/groups/Group;",
@@ -747,14 +747,14 @@
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/vk/core/extensions/SparseArrayExt1;->a()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/vk/core/extensions/x;->a()Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -764,7 +764,7 @@
     const-string v0, ","
 
     .line 3
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -788,9 +788,9 @@
     move-result-object p1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -880,9 +880,9 @@
 
     .line 14
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -890,19 +890,19 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager$putToDb$1;-><init>(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;Ljava/util/Collection;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public final a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/groups/Group;",
@@ -913,7 +913,7 @@
     .line 7
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -924,9 +924,9 @@
     .locals 3
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -971,12 +971,12 @@
     invoke-direct {v2, p0, p2, p3, p1}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager$changeCanSendToMe$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;ZZI)V
 
     .line 12
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;)V
+.method public final a(Lcom/vk/im/engine/models/groups/a;)V
     .locals 0
 
     .line 13
@@ -1008,15 +1008,15 @@
     return-void
 .end method
 
-.method public final b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public final b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;",
+            "Lcom/vk/im/engine/models/groups/a;",
             ">;"
         }
     .end annotation
@@ -1024,26 +1024,26 @@
     .line 5
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->b:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final b(I)Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;
+.method public final b(I)Lcom/vk/im/engine/models/groups/a;
     .locals 2
 
     .line 4
-    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
+    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/e;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object v0
 
     const-string v1, "intListOf(groupId)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {p0, v0}, Lcom/vk/im/engine/internal/storage/delegates/groups/GroupsStorageManager;->b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -1051,7 +1051,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;
+    check-cast p1, Lcom/vk/im/engine/models/groups/a;
 
     return-object p1
 .end method
@@ -1062,7 +1062,7 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/models/groups/GroupCanSendToMePending;",
+            "Lcom/vk/im/engine/models/groups/a;",
             ">;)V"
         }
     .end annotation

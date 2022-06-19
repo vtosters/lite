@@ -1,9 +1,9 @@
 .class public final Lio/reactivex/internal/operators/maybe/MaybeToObservable;
-.super Lio/reactivex/Observable;
+.super Lc/a/m;
 .source "MaybeToObservable.java"
 
 # interfaces
-.implements Lc/a/a0/b/HasUpstreamMaybeSource;
+.implements Lc/a/a0/b/c;
 
 
 # annotations
@@ -18,19 +18,19 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/Observable<",
+        "Lc/a/m<",
         "TT;>;",
-        "Lc/a/a0/b/HasUpstreamMaybeSource<",
+        "Lc/a/a0/b/c<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Lio/reactivex/MaybeSource;
+.field final a:Lc/a/k;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/MaybeSource<",
+            "Lc/a/k<",
             "TT;>;"
         }
     .end annotation
@@ -38,35 +38,35 @@
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/MaybeSource;)V
+.method public constructor <init>(Lc/a/k;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/MaybeSource<",
+            "Lc/a/k<",
             "TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
+    invoke-direct {p0}, Lc/a/m;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/maybe/MaybeToObservable;->a:Lio/reactivex/MaybeSource;
+    iput-object p1, p0, Lio/reactivex/internal/operators/maybe/MaybeToObservable;->a:Lc/a/k;
 
     return-void
 .end method
 
-.method public static d(Lio/reactivex/Observer;)Lio/reactivex/MaybeObserver;
+.method public static d(Lc/a/r;)Lc/a/j;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)",
-            "Lio/reactivex/MaybeObserver<",
+            "Lc/a/j<",
             "TT;>;"
         }
     .end annotation
@@ -74,31 +74,31 @@
     .line 1
     new-instance v0, Lio/reactivex/internal/operators/maybe/MaybeToObservable$MaybeToObservableObserver;
 
-    invoke-direct {v0, p0}, Lio/reactivex/internal/operators/maybe/MaybeToObservable$MaybeToObservableObserver;-><init>(Lio/reactivex/Observer;)V
+    invoke-direct {v0, p0}, Lio/reactivex/internal/operators/maybe/MaybeToObservable$MaybeToObservableObserver;-><init>(Lc/a/r;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected b(Lio/reactivex/Observer;)V
+.method protected b(Lc/a/r;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeToObservable;->a:Lio/reactivex/MaybeSource;
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeToObservable;->a:Lc/a/k;
 
-    invoke-static {p1}, Lio/reactivex/internal/operators/maybe/MaybeToObservable;->d(Lio/reactivex/Observer;)Lio/reactivex/MaybeObserver;
+    invoke-static {p1}, Lio/reactivex/internal/operators/maybe/MaybeToObservable;->d(Lc/a/r;)Lc/a/j;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lio/reactivex/MaybeSource;->a(Lio/reactivex/MaybeObserver;)V
+    invoke-interface {v0, p1}, Lc/a/k;->a(Lc/a/j;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class final Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$c;
-.super Lcom/vk/core/ui/CardItemDecorator;
+.super Lcom/vk/core/ui/d;
 .source "FriendsSuggestNearbyFragment.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/core/ui/CardItemDecorator;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/Provider;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/core/ui/d;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/o;Z)V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
     if-eqz p2, :cond_0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/ui/CardItemDecorator;->a(Landroid/graphics/Rect;I)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/ui/d;->a(Landroid/graphics/Rect;I)V
 
     goto :goto_0
 

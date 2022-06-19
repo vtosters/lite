@@ -481,7 +481,7 @@
     move-result-object v1
 
     .line 3
-    invoke-static {v1, p2, p3}, Lcom/vk/dto/stories/model/StoriesContainerFactory;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;Landroid/util/SparseArray;)Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-static {v1, p2, p3}, Lcom/vk/dto/stories/model/c;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;Landroid/util/SparseArray;)Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v1
 

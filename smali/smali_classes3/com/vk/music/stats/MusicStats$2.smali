@@ -3,7 +3,7 @@
 .source "MusicStats.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/String;",
-        "Lcom/vtosters/lite/data/Analytics$l;",
+        "Lcom/vtosters/lite/data/n$l;",
         ">;"
     }
 .end annotation
@@ -56,17 +56,17 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
+.method public final a(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
     .locals 1
 
     .line 1
-    invoke-static {p1}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
     const-string v0, "Analytics.track(it)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -77,7 +77,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/stats/MusicStats$2;->a(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
+    invoke-virtual {p0, p1}, Lcom/vk/music/stats/MusicStats$2;->a(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 

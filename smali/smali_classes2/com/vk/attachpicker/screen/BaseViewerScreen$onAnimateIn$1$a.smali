@@ -42,7 +42,7 @@
 
     iget-object v0, v0, Lcom/vk/attachpicker/screen/BaseViewerScreen$onAnimateIn$1;->this$0:Lcom/vk/attachpicker/screen/BaseViewerScreen;
 
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/attachpicker/util/Utils;->a(Landroid/view/View;)I
+    invoke-static {v1}, Lcom/vk/attachpicker/util/f;->a(Landroid/view/View;)I
 
     move-result v1
 
@@ -91,7 +91,7 @@
 
     iget-object v0, v0, Lcom/vk/attachpicker/screen/BaseViewerScreen$onAnimateIn$1;->this$0:Lcom/vk/attachpicker/screen/BaseViewerScreen;
 
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -104,7 +104,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -123,7 +123,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/vk/attachpicker/util/Utils;->b(Landroid/view/View;)I
+    invoke-static {v4}, Lcom/vk/attachpicker/util/f;->b(Landroid/view/View;)I
 
     move-result v4
 
@@ -664,7 +664,7 @@
 
     const-string v11, "ObjectAnimator.ofFloat(a\u2026iew, View.SCALE_X, scale)"
 
-    invoke-static {v8, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v8, v5, v3
 
@@ -689,7 +689,7 @@
 
     const-string v8, "ObjectAnimator.ofFloat(a\u2026iew, View.SCALE_Y, scale)"
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v6, v5, v12
 
@@ -714,7 +714,7 @@
 
     const-string v8, "ObjectAnimator.ofFloat(a\u2026View.TRANSLATION_X, xPos)"
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v6, v5, v10
 
@@ -741,7 +741,7 @@
 
     const-string v8, "ObjectAnimator.ofFloat(a\u2026View.TRANSLATION_Y, yPos)"
 
-    invoke-static {v0, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v0, v5, v6
 
@@ -756,7 +756,7 @@
 
     move-result-object v6
 
-    sget-object v8, Lcom/vk/core/util/DrawableUtils;->a:Landroid/util/Property;
+    sget-object v8, Lcom/vk/core/util/z;->a:Landroid/util/Property;
 
     new-array v9, v10, [I
 
@@ -768,7 +768,7 @@
 
     const-string v8, "ObjectAnimator.ofInt<Dra\u2026wableUtils.ALPHA, 0, 255)"
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v6, v5, v0
 
@@ -797,7 +797,7 @@
 
     const-string v7, "ObjectAnimator.ofInt(ani\u2026ONTAL, clipHorizontal, 0)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v6, v5, v0
 
@@ -826,7 +826,7 @@
 
     const-string v6, "ObjectAnimator.ofInt(ani\u2026iew.CLIP_TOP, clipTop, 0)"
 
-    invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v2, v5, v0
 
@@ -855,7 +855,7 @@
 
     const-string v2, "ObjectAnimator.ofInt(ani\u2026IP_BOTTOM, clipBottom, 0)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v1, v5, v0
 

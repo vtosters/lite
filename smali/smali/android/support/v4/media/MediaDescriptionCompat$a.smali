@@ -57,7 +57,7 @@
 
     .line 4
     :cond_0
-    invoke-static {p1}, Landroid/support/v4/media/MediaDescriptionCompatApi21;->a(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-static {p1}, Landroid/support/v4/media/c;->a(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object p1
 

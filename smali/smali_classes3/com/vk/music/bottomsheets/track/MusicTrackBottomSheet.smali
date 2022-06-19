@@ -17,7 +17,7 @@
 # instance fields
 .field private a:Z
 
-.field private b:Lcom/vk/music/bottomsheets/track/d/MusicTrackBottomSheetActionsFactory;
+.field private b:Lcom/vk/music/bottomsheets/track/d/a;
 
 .field private c:Lcom/vk/dto/music/Playlist;
 
@@ -27,11 +27,11 @@
 
 .field private f:Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;
 
-.field private g:Lkotlin/jvm/b/Functions;
+.field private g:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -39,11 +39,11 @@
 
 .field private final h:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-.field private final i:Lcom/vk/music/l/ModernMusicTrackModel;
+.field private final i:Lcom/vk/music/l/a;
 
 .field private final j:Lcom/vk/music/common/BoomModel;
 
-.field private final k:Lcom/vk/music/player/PlayerModel;
+.field private final k:Lcom/vk/music/player/d;
 
 .field private final l:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
@@ -53,10 +53,10 @@
     .end annotation
 .end field
 
-.field private final m:Lkotlin/jvm/b/Functions2;
+.field private final m:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "TT;",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
@@ -70,15 +70,15 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Ljava/lang/Object;)V
+.method public constructor <init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Ljava/lang/Object;)V
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/music/common/MusicPlaybackLaunchContext;",
-            "Lcom/vk/music/l/ModernMusicTrackModel;",
+            "Lcom/vk/music/l/a;",
             "Lcom/vk/music/common/BoomModel;",
-            "Lcom/vk/music/player/PlayerModel;",
+            "Lcom/vk/music/player/d;",
             "TT;)V"
         }
     .end annotation
@@ -105,22 +105,22 @@
 
     move-object/from16 v5, p5
 
-    invoke-direct/range {v0 .. v10}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Ljava/lang/Object;Lkotlin/jvm/b/b;ZZILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Ljava/lang/Object;Lkotlin/jvm/b/b;)V
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/music/common/MusicPlaybackLaunchContext;",
-            "Lcom/vk/music/l/ModernMusicTrackModel;",
+            "Lcom/vk/music/l/a;",
             "Lcom/vk/music/common/BoomModel;",
-            "Lcom/vk/music/player/PlayerModel;",
+            "Lcom/vk/music/player/d;",
             "TT;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;)V"
@@ -149,22 +149,22 @@
 
     move-object/from16 v6, p6
 
-    invoke-direct/range {v0 .. v10}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Ljava/lang/Object;Lkotlin/jvm/b/b;ZZILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;ZZ)V
+.method public constructor <init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Ljava/lang/Object;Lkotlin/jvm/b/b;ZZ)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/music/common/MusicPlaybackLaunchContext;",
-            "Lcom/vk/music/l/ModernMusicTrackModel;",
+            "Lcom/vk/music/l/a;",
             "Lcom/vk/music/common/BoomModel;",
-            "Lcom/vk/music/player/PlayerModel;",
+            "Lcom/vk/music/player/d;",
             "TT;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;ZZ)V"
@@ -176,28 +176,28 @@
 
     iput-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->h:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-    iput-object p2, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->i:Lcom/vk/music/l/ModernMusicTrackModel;
+    iput-object p2, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->i:Lcom/vk/music/l/a;
 
     iput-object p3, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->j:Lcom/vk/music/common/BoomModel;
 
-    iput-object p4, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->k:Lcom/vk/music/player/PlayerModel;
+    iput-object p4, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->k:Lcom/vk/music/player/d;
 
     iput-object p5, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->l:Ljava/lang/Object;
 
-    iput-object p6, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->m:Lkotlin/jvm/b/Functions2;
+    iput-object p6, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->m:Lkotlin/jvm/b/b;
 
     iput-boolean p7, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->n:Z
 
     iput-boolean p8, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->o:Z
 
     .line 2
-    new-instance p1, Lcom/vk/music/bottomsheets/track/d/VkMusicTrackBottomSheetActionsFactory;
+    new-instance p1, Lcom/vk/music/bottomsheets/track/d/b;
 
-    iget-object p2, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->k:Lcom/vk/music/player/PlayerModel;
+    iget-object p2, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->k:Lcom/vk/music/player/d;
 
-    invoke-direct {p1, p2}, Lcom/vk/music/bottomsheets/track/d/VkMusicTrackBottomSheetActionsFactory;-><init>(Lcom/vk/music/player/PlayerModel;)V
+    invoke-direct {p1, p2}, Lcom/vk/music/bottomsheets/track/d/b;-><init>(Lcom/vk/music/player/d;)V
 
-    iput-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->b:Lcom/vk/music/bottomsheets/track/d/MusicTrackBottomSheetActionsFactory;
+    iput-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->b:Lcom/vk/music/bottomsheets/track/d/a;
 
     .line 3
     const-class p1, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
@@ -208,14 +208,14 @@
 
     const-string p2, "MusicTrackBottomSheet::class.java.simpleName"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->e:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Ljava/lang/Object;Lkotlin/jvm/b/b;ZZILkotlin/jvm/internal/i;)V
     .locals 11
 
     move/from16 v0, p9
@@ -276,12 +276,12 @@
     move-object/from16 v7, p5
 
     .line 5
-    invoke-direct/range {v2 .. v10}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;ZZ)V
+    invoke-direct/range {v2 .. v10}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Ljava/lang/Object;Lkotlin/jvm/b/b;ZZ)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/MusicAction$a;ILjava/lang/Object;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
+.method public static synthetic a(Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/a$a;ILjava/lang/Object;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -292,23 +292,23 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/MusicAction$a;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/a$a;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel;Lcom/vk/music/bottomsheets/AutoDismissListener;Ljava/util/List;)Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;
+.method private final a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/bottomsheets/track/c;Lcom/vk/music/bottomsheets/AutoDismissListener;Ljava/util/List;)Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/music/MusicTrack;",
-            "Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel<",
+            "Lcom/vk/music/bottomsheets/track/c<",
             "TT;>;",
             "Lcom/vk/music/bottomsheets/AutoDismissListener<",
             "TT;>;",
             "Ljava/util/List<",
-            "Lcom/vk/music/bottomsheets/a/MusicAction;",
+            "Lcom/vk/music/bottomsheets/a/a;",
             ">;)",
             "Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter<",
             "TT;>;"
@@ -335,7 +335,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel;->k()Z
+    invoke-virtual {p2}, Lcom/vk/music/bottomsheets/track/c;->k()Z
 
     move-result v0
 
@@ -398,12 +398,12 @@
 
     move-object v7, p4
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;-><init>(Ljava/lang/Object;ILcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;Lcom/vk/music/bottomsheets/a/MusicAction$a;ZLjava/util/List;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;-><init>(Ljava/lang/Object;ILcom/vk/music/bottomsheets/track/b;Lcom/vk/music/bottomsheets/a/a$a;ZLjava/util/List;)V
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/dto/music/MusicTrack;)Lcom/vk/music/bottomsheets/track/d/MusicTrackBottomSheetActionsFactory;
+.method private final a(Lcom/vk/dto/music/MusicTrack;)Lcom/vk/music/bottomsheets/track/d/a;
     .locals 1
 
     .line 21
@@ -413,9 +413,9 @@
 
     if-eqz p1, :cond_0
 
-    new-instance p1, Lcom/vk/music/bottomsheets/track/d/VkPodcastBottomSheetActionsFactory;
+    new-instance p1, Lcom/vk/music/bottomsheets/track/d/c;
 
-    invoke-direct {p1}, Lcom/vk/music/bottomsheets/track/d/VkPodcastBottomSheetActionsFactory;-><init>()V
+    invoke-direct {p1}, Lcom/vk/music/bottomsheets/track/d/c;-><init>()V
 
     goto :goto_0
 
@@ -425,27 +425,27 @@
 
     if-eqz p1, :cond_1
 
-    new-instance p1, Lcom/vk/music/bottomsheets/track/d/VkStoriesMusicTrackBottomSheetActionsFactory;
+    new-instance p1, Lcom/vk/music/bottomsheets/track/d/d;
 
     iget-boolean v0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->n:Z
 
-    invoke-direct {p1, v0}, Lcom/vk/music/bottomsheets/track/d/VkStoriesMusicTrackBottomSheetActionsFactory;-><init>(Z)V
+    invoke-direct {p1, v0}, Lcom/vk/music/bottomsheets/track/d/d;-><init>(Z)V
 
     goto :goto_0
 
     .line 23
     :cond_1
-    iget-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->b:Lcom/vk/music/bottomsheets/track/d/MusicTrackBottomSheetActionsFactory;
+    iget-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->b:Lcom/vk/music/bottomsheets/track/d/a;
 
     :goto_0
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;)Lkotlin/jvm/b/Functions;
+.method public static final synthetic a(Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;)Lkotlin/jvm/b/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->g:Lkotlin/jvm/b/Functions;
+    iget-object p0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->g:Lkotlin/jvm/b/a;
 
     return-object p0
 .end method
@@ -468,18 +468,18 @@
 
     const/4 v1, 0x2
 
-    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/MusicAction$a;ILjava/lang/Object;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
+    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/a$a;ILjava/lang/Object;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
 
     return-object p0
 .end method
 
-.method public final a(Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/MusicAction$a;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
+.method public final a(Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/a$a;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/app/Activity;",
-            "Lcom/vk/music/bottomsheets/a/MusicAction$a<",
+            "Lcom/vk/music/bottomsheets/a/a$a<",
             "TT;>;)",
             "Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet<",
             "TT;>;"
@@ -504,9 +504,9 @@
     if-eqz v0, :cond_1
 
     .line 5
-    new-instance v9, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel;
+    new-instance v9, Lcom/vk/music/bottomsheets/track/c;
 
-    iget-object v2, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->m:Lkotlin/jvm/b/Functions2;
+    iget-object v2, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->m:Lkotlin/jvm/b/b;
 
     iget-object v3, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->h:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
@@ -514,27 +514,27 @@
 
     iget-boolean v5, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a:Z
 
-    iget-object v6, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->i:Lcom/vk/music/l/ModernMusicTrackModel;
+    iget-object v6, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->i:Lcom/vk/music/l/a;
 
     iget-object v7, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->j:Lcom/vk/music/common/BoomModel;
 
-    iget-object v8, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->k:Lcom/vk/music/player/PlayerModel;
+    iget-object v8, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->k:Lcom/vk/music/player/d;
 
     move-object v1, v9
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel;-><init>(Lkotlin/jvm/b/Functions2;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/dto/music/Playlist;ZLcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/music/bottomsheets/track/c;-><init>(Lkotlin/jvm/b/b;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/dto/music/Playlist;ZLcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;)V
 
     .line 6
     iget-object v1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->l:Ljava/lang/Object;
 
-    invoke-virtual {v9, v1}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel;->a(Ljava/lang/Object;)Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {v9, v1}, Lcom/vk/music/bottomsheets/track/c;->a(Ljava/lang/Object;)Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v8
 
     .line 7
     new-instance v10, Lcom/vk/music/bottomsheets/AutoDismissListener;
 
-    new-instance v11, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetClickListener;
+    new-instance v11, Lcom/vk/music/bottomsheets/track/a;
 
     const/4 v5, 0x0
 
@@ -550,41 +550,41 @@
 
     move-object v4, p2
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetClickListener;-><init>(Landroid/app/Activity;Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;Lcom/vk/music/bottomsheets/a/MusicAction$a;Lcom/vk/music/player/PlayerModel;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/music/bottomsheets/track/a;-><init>(Landroid/app/Activity;Lcom/vk/music/bottomsheets/track/b;Lcom/vk/music/bottomsheets/a/a$a;Lcom/vk/music/player/d;ILkotlin/jvm/internal/i;)V
 
-    invoke-direct {v10, v11}, Lcom/vk/music/bottomsheets/AutoDismissListener;-><init>(Lcom/vk/music/bottomsheets/a/MusicAction$a;)V
+    invoke-direct {v10, v11}, Lcom/vk/music/bottomsheets/AutoDismissListener;-><init>(Lcom/vk/music/bottomsheets/a/a$a;)V
 
     .line 8
-    invoke-direct {p0, v8}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lcom/vk/dto/music/MusicTrack;)Lcom/vk/music/bottomsheets/track/d/MusicTrackBottomSheetActionsFactory;
+    invoke-direct {p0, v8}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lcom/vk/dto/music/MusicTrack;)Lcom/vk/music/bottomsheets/track/d/a;
 
     move-result-object v1
 
     .line 9
-    invoke-interface {v1, v8}, Lcom/vk/music/bottomsheets/track/d/MusicTrackBottomSheetActionsFactory;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/util/List;
+    invoke-interface {v1, v8}, Lcom/vk/music/bottomsheets/track/d/a;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/util/List;
 
     move-result-object v2
 
-    invoke-direct {p0, v8, v9, v10, v2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel;Lcom/vk/music/bottomsheets/AutoDismissListener;Ljava/util/List;)Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;
+    invoke-direct {p0, v8, v9, v10, v2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/bottomsheets/track/c;Lcom/vk/music/bottomsheets/AutoDismissListener;Ljava/util/List;)Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;
 
     move-result-object v2
 
     .line 10
-    new-instance v3, Lcom/vk/music/bottomsheets/a/MusicBottomSheetActionAdapter;
+    new-instance v3, Lcom/vk/music/bottomsheets/a/b;
 
     iget-object v4, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->l:Ljava/lang/Object;
 
-    invoke-direct {v3, v4, v10}, Lcom/vk/music/bottomsheets/a/MusicBottomSheetActionAdapter;-><init>(Ljava/lang/Object;Lcom/vk/music/bottomsheets/a/MusicAction$a;)V
+    invoke-direct {v3, v4, v10}, Lcom/vk/music/bottomsheets/a/b;-><init>(Ljava/lang/Object;Lcom/vk/music/bottomsheets/a/a$a;)V
 
     .line 11
-    invoke-interface {v1, v8, v9}, Lcom/vk/music/bottomsheets/track/d/MusicTrackBottomSheetActionsFactory;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;)Ljava/util/List;
+    invoke-interface {v1, v8, v9}, Lcom/vk/music/bottomsheets/track/d/a;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/bottomsheets/track/b;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Lcom/vk/music/ui/common/MusicAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v3, v1}, Lcom/vk/music/ui/common/b;->setItems(Ljava/util/List;)V
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lcom/vk/music/ui/common/MusicAdapter;
+    new-array v1, v1, [Lcom/vk/music/ui/common/b;
 
     const/4 v4, 0x0
 
@@ -604,9 +604,9 @@
 
     new-instance v3, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet$show$$inlined$apply$lambda$1;
 
-    invoke-direct {v3, v9, p0, p1, p2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet$show$$inlined$apply$lambda$1;-><init>(Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel;Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/MusicAction$a;)V
+    invoke-direct {v3, v9, p0, p1, p2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet$show$$inlined$apply$lambda$1;-><init>(Lcom/vk/music/bottomsheets/track/c;Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/a$a;)V
 
-    invoke-direct {v2, v1, v3}, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;-><init>(Ljava/util/List;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v2, v1, v3}, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;-><init>(Ljava/util/List;Lkotlin/jvm/b/a;)V
 
     .line 14
     iget-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->e:Ljava/lang/String;
@@ -623,7 +623,7 @@
 
     invoke-direct {p1, v2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet$show$1$1$1;-><init>(Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;)V
 
-    invoke-virtual {v10, p1}, Lcom/vk/music/bottomsheets/AutoDismissListener;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v10, p1}, Lcom/vk/music/bottomsheets/AutoDismissListener;->a(Lkotlin/jvm/b/a;)V
 
     :cond_1
     return-object p0
@@ -647,13 +647,13 @@
     return-object p0
 .end method
 
-.method public final a(Lkotlin/jvm/b/Functions;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
+.method public final a(Lkotlin/jvm/b/a;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)",
             "Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet<",
             "TT;>;"
@@ -661,7 +661,7 @@
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->g:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->g:Lkotlin/jvm/b/a;
 
     return-object p0
 .end method
@@ -707,13 +707,13 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/music/bottomsheets/track/d/VkStoriesMusicTrackBottomSheetActionsFactory;
+    new-instance v0, Lcom/vk/music/bottomsheets/track/d/d;
 
     iget-boolean v1, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->n:Z
 
-    invoke-direct {v0, v1}, Lcom/vk/music/bottomsheets/track/d/VkStoriesMusicTrackBottomSheetActionsFactory;-><init>(Z)V
+    invoke-direct {v0, v1}, Lcom/vk/music/bottomsheets/track/d/d;-><init>(Z)V
 
-    iput-object v0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->b:Lcom/vk/music/bottomsheets/track/d/MusicTrackBottomSheetActionsFactory;
+    iput-object v0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->b:Lcom/vk/music/bottomsheets/track/d/a;
 
     const/4 v0, 0x1
 

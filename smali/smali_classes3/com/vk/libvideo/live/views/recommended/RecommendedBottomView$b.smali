@@ -89,11 +89,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView$b;->a:Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;->c(Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;)Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;->c(Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;)Lcom/vk/libvideo/live/views/recommended/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/recommended/RecommendedContract;->L()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/recommended/a;->L()V
 
     const/4 p1, 0x5
 
@@ -112,11 +112,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView$b;->a:Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;->c(Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;)Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;->c(Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;)Lcom/vk/libvideo/live/views/recommended/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/recommended/RecommendedContract;->M()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/recommended/a;->M()V
 
     .line 4
     iget-object p1, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView$b;->a:Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;

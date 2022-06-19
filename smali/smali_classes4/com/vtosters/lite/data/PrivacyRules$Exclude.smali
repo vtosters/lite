@@ -308,7 +308,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f120b7d
 

@@ -23,7 +23,7 @@
 
     invoke-direct {p2}, Lreceivers/TimeSyncRequestedReceiver$a;-><init>()V
 
-    invoke-static {p1, p2}, Lcom/vk/utils/g/ServerClock;->a(Landroid/content/Context;Lcom/vk/utils/g/ServerTimeResolver$a;)V
+    invoke-static {p1, p2}, Lcom/vk/utils/g/a;->a(Landroid/content/Context;Lcom/vk/utils/g/b$a;)V
 
     return-void
 .end method

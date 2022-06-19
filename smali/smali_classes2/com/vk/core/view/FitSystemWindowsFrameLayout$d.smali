@@ -103,7 +103,7 @@
 
     iget-object v1, p0, Lcom/vk/core/view/FitSystemWindowsFrameLayout$d;->a:Landroid/graphics/Rect;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -128,7 +128,7 @@
 
     const-string v0, "insets.replaceSystemWind\u2026.right, newInsets.bottom)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {p1, p2}, Lcom/vk/core/view/FitSystemWindowsFrameLayout;->setChildInsets(Ljava/lang/Object;)V
@@ -148,7 +148,7 @@
 
     const-string p2, "insets.consumeSystemWindowInsets()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

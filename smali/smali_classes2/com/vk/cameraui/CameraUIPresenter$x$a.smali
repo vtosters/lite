@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -58,7 +58,7 @@
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/cameraui/i/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {p1}, Lcom/vk/cameraui/i/b;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -68,7 +68,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/core/extensions/ActivityExt;->b(Landroid/app/Activity;)V
+    invoke-static {p1}, Lcom/vk/core/extensions/a;->b(Landroid/app/Activity;)V
 
     .line 2
     :cond_0

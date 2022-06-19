@@ -19,7 +19,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/AssistantVerificationService$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/AssistantVerificationService$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -114,7 +114,7 @@
     if-eqz v4, :cond_1
 
     .line 4
-    sget-object v1, Lcom/vtosters/lite/im/ImSendHelper;->INSTANCE:Lcom/vtosters/lite/im/ImSendHelper;
+    sget-object v1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
 
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
@@ -130,7 +130,7 @@
 
     move-object v2, p0
 
-    invoke-static/range {v1 .. v8}, Lcom/vtosters/lite/im/ImSendHelper;->a(Lcom/vtosters/lite/im/ImSendHelper;Ljava/lang/Object;ILjava/lang/String;Ljava/util/Collection;Ljava/lang/String;ILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v8}, Lcom/vtosters/lite/im/i;->a(Lcom/vtosters/lite/im/i;Ljava/lang/Object;ILjava/lang/String;Ljava/util/Collection;Ljava/lang/String;ILjava/lang/Object;)Z
 
     goto :goto_2
 
@@ -192,9 +192,9 @@
     .line 1
     new-instance v0, Landroidx/core/app/NotificationCompat$Builder;
 
-    sget-object v1, Lcom/vk/pushes/NotificationChannelsController;->INSTANCE:Lcom/vk/pushes/NotificationChannelsController;
+    sget-object v1, Lcom/vk/pushes/a;->c:Lcom/vk/pushes/a;
 
-    invoke-virtual {v1, p0}, Lcom/vk/pushes/NotificationChannelsController;->b(Landroid/content/Context;)Landroid/app/NotificationChannel;
+    invoke-virtual {v1, p0}, Lcom/vk/pushes/a;->b(Landroid/content/Context;)Landroid/app/NotificationChannel;
 
     move-result-object v1
 

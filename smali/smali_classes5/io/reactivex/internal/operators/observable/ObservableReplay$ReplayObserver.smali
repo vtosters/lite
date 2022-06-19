@@ -3,8 +3,8 @@
 .source "ObservableReplay.java"
 
 # interfaces
-.implements Lio/reactivex/Observer;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lc/a/r;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -23,11 +23,11 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         ">;",
-        "Lio/reactivex/Observer<",
+        "Lc/a/r<",
         "TT;>;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -157,11 +157,11 @@
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 8
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
 
     move-result p1
 
@@ -199,7 +199,7 @@
 
     .line 14
     :cond_0
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

@@ -3,7 +3,7 @@
 .source "MilkshakeSearchView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -74,7 +74,7 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
 
     move-result v0
 

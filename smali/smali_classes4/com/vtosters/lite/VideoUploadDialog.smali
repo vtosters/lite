@@ -33,7 +33,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/VideoUploadDialog$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/VideoUploadDialog$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vtosters/lite/VideoUploadDialog;->e:Lcom/vtosters/lite/VideoUploadDialog$a;
 
@@ -94,11 +94,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->b()I
+    invoke-interface {v1}, Lcom/vk/bridges/f;->b()I
 
     move-result v1
 
@@ -140,7 +140,7 @@
     move-result-object v0
 
     .line 3
-    new-instance v1, Lcom/vtosters/lite/upload/l/VideoUploadTask;
+    new-instance v1, Lcom/vtosters/lite/upload/l/r;
 
     .line 4
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -191,7 +191,7 @@
     move-object v5, v2
 
     .line 8
-    invoke-direct/range {v3 .. v9}, Lcom/vtosters/lite/upload/l/VideoUploadTask;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/api/video/VideoSave$Target;IZ)V
+    invoke-direct/range {v3 .. v9}, Lcom/vtosters/lite/upload/l/r;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/api/video/VideoSave$Target;IZ)V
 
     .line 9
     new-instance v2, Lcom/vtosters/lite/upload/UploadNotification$a;
@@ -204,7 +204,7 @@
 
     const-string v4, "getString(R.string.video_upload_ok)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v4, 0x7f1210af
 
@@ -216,10 +216,10 @@
     .line 11
     invoke-direct {v2, v3, v4, v0}, Lcom/vtosters/lite/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    invoke-static {v1, v2}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/UploadTask;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
+    invoke-static {v1, v2}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     .line 12
-    invoke-static {v1}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
+    invoke-static {v1}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     return-void
 
@@ -227,7 +227,7 @@
     const-string v0, "descInputView"
 
     .line 13
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -235,7 +235,7 @@
     const-string v0, "titleInputView"
 
     .line 14
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v5
 .end method
@@ -336,7 +336,7 @@
     invoke-virtual {v15, v0}, Landroid/widget/EditText;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 11
-    sget-object v0, Lcom/vk/core/drawable/VkUiDrawableHelper;->INSTANCE:Lcom/vk/core/drawable/VkUiDrawableHelper;
+    sget-object v0, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
 
     const/4 v2, 0x0
 
@@ -350,7 +350,7 @@
 
     move-object/from16 v1, p0
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static/range {v0 .. v7}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -384,7 +384,7 @@
     const v6, 0x7f04059a
 
     .line 17
-    invoke-static {v15, v6}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v15, v6}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     const v19, 0x7f04059b
 
@@ -447,7 +447,7 @@
     invoke-virtual {v14, v0}, Landroid/widget/EditText;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 24
-    sget-object v0, Lcom/vk/core/drawable/VkUiDrawableHelper;->INSTANCE:Lcom/vk/core/drawable/VkUiDrawableHelper;
+    sget-object v0, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
 
     const/4 v2, 0x0
 
@@ -473,7 +473,7 @@
 
     move-object/from16 v7, v17
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static/range {v0 .. v7}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -505,7 +505,7 @@
     invoke-virtual {v14, v11, v13}, Landroid/widget/EditText;->setTextSize(IF)V
 
     .line 30
-    invoke-static {v14, v15}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v14, v15}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     .line 31
     invoke-static/range {v19 .. v19}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
@@ -594,7 +594,7 @@
 
     const-string v2, "dialog.getButton(AlertDialog.BUTTON_POSITIVE)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v9}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -612,7 +612,7 @@
     return-void
 
     :cond_1
-    invoke-static {v12}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v12}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -624,7 +624,7 @@
     const-string v1, "descInputView"
 
     .line 45
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -632,7 +632,7 @@
     const/4 v0, 0x0
 
     .line 46
-    invoke-static {v12}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v12}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -674,7 +674,7 @@
     :cond_0
     const-string p1, "descInputView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -682,7 +682,7 @@
     const-string p1, "titleInputView"
 
     .line 4
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -731,7 +731,7 @@
     const-string p1, "descInputView"
 
     .line 4
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -739,7 +739,7 @@
     const-string p1, "titleInputView"
 
     .line 5
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method

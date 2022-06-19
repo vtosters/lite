@@ -58,11 +58,11 @@
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lcom/vk/navigation/ResulterProvider;
+    check-cast p1, Lcom/vk/navigation/u;
 
     iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$b;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-interface {p1, v0}, Lcom/vk/navigation/ResulterProvider;->b(Lcom/vk/navigation/ActivityResulter;)V
+    invoke-interface {p1, v0}, Lcom/vk/navigation/u;->b(Lcom/vk/navigation/c;)V
 
     return-void
 
@@ -88,11 +88,11 @@
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lcom/vk/navigation/ResulterProvider;
+    check-cast p1, Lcom/vk/navigation/u;
 
     iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$b;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-interface {p1, v0}, Lcom/vk/navigation/ResulterProvider;->a(Lcom/vk/navigation/ActivityResulter;)V
+    invoke-interface {p1, v0}, Lcom/vk/navigation/u;->a(Lcom/vk/navigation/c;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$b;->b:Landroid/view/ViewGroup;
@@ -101,7 +101,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
 
     return-void
 

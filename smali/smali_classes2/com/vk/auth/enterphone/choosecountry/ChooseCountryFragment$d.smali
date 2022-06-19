@@ -3,7 +3,7 @@
 .source "ChooseCountryFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/auth/utils/AuthExtensions;",
+        "Lc/a/z/g<",
+        "Lcom/vk/auth/utils/a;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/auth/utils/AuthExtensions;)V
+.method public final a(Lcom/vk/auth/utils/a;)V
     .locals 1
 
     .line 1
@@ -56,7 +56,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/auth/utils/AuthExtensions;->a()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/auth/utils/a;->a()Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/auth/utils/AuthExtensions;
+    check-cast p1, Lcom/vk/auth/utils/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$d;->a(Lcom/vk/auth/utils/AuthExtensions;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$d;->a(Lcom/vk/auth/utils/a;)V
 
     return-void
 .end method

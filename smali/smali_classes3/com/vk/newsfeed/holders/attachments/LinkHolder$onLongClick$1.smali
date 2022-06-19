@@ -3,7 +3,7 @@
 .source "LinkHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -57,13 +57,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/LinkHolder$onLongClick$1;->this$0:Lcom/vk/newsfeed/holders/attachments/LinkHolder;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
     const-string v2, "parent"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -71,7 +71,7 @@
 
     const-string v2, "parent.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v1}, Lcom/vk/newsfeed/holders/attachments/LinkHolder;->a(Lcom/vk/newsfeed/holders/attachments/LinkHolder;Landroid/content/Context;)V
 

@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static d:Lcom/vk/api/sdk/VKApiValidationHandler$b;
+.field private static d:Lcom/vk/api/sdk/i$b;
 
 .field public static final e:Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$a;
 
@@ -23,7 +23,7 @@
 
 .field private b:Landroid/widget/ProgressBar;
 
-.field private c:Lcom/vk/api/sdk/auth/VKAuthParams;
+.field private c:Lcom/vk/api/sdk/auth/c;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->e:Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$a;
 
@@ -50,11 +50,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;)Lcom/vk/api/sdk/auth/VKAuthParams;
+.method public static final synthetic a(Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;)Lcom/vk/api/sdk/auth/c;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/VKAuthParams;
+    iget-object p0, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/c;
 
     if-eqz p0, :cond_0
 
@@ -63,27 +63,27 @@
     :cond_0
     const-string p0, "params"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/api/sdk/VKApiValidationHandler$b;)V
+.method public static final synthetic a(Lcom/vk/api/sdk/i$b;)V
     .locals 0
 
     .line 2
-    sput-object p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->d:Lcom/vk/api/sdk/VKApiValidationHandler$b;
+    sput-object p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->d:Lcom/vk/api/sdk/i$b;
 
     return-void
 .end method
 
-.method public static final synthetic b()Lcom/vk/api/sdk/VKApiValidationHandler$b;
+.method public static final synthetic b()Lcom/vk/api/sdk/i$b;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->d:Lcom/vk/api/sdk/VKApiValidationHandler$b;
+    sget-object v0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->d:Lcom/vk/api/sdk/i$b;
 
     return-object v0
 .end method
@@ -154,13 +154,13 @@
 
     .line 9
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 10
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -278,7 +278,7 @@
     :cond_2
     const-string v0, "webView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -363,7 +363,7 @@
     :cond_0
     const-string v0, "webView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -371,7 +371,7 @@
     const-string v0, "progress"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -395,7 +395,7 @@
     new-array v0, v0, [Lkotlin/Pair;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/VKAuthParams;
+    iget-object v1, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/c;
 
     const/4 v2, 0x0
 
@@ -403,7 +403,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lcom/vk/api/sdk/auth/VKAuthParams;->a()I
+    invoke-virtual {v1}, Lcom/vk/api/sdk/auth/c;->a()I
 
     move-result v1
 
@@ -413,7 +413,7 @@
 
     const-string v4, "client_id"
 
-    invoke-static {v4, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -424,17 +424,17 @@
     const/4 v1, 0x1
 
     .line 4
-    iget-object v4, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/VKAuthParams;
+    iget-object v4, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/c;
 
     if-eqz v4, :cond_1
 
-    invoke-virtual {v4}, Lcom/vk/api/sdk/auth/VKAuthParams;->c()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vk/api/sdk/auth/c;->c()Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "scope"
 
-    invoke-static {v5, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v5, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v4
 
@@ -443,17 +443,17 @@
     const/4 v1, 0x2
 
     .line 5
-    iget-object v4, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/VKAuthParams;
+    iget-object v4, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/c;
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {v4}, Lcom/vk/api/sdk/auth/VKAuthParams;->b()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vk/api/sdk/auth/c;->b()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "redirect_uri"
 
-    invoke-static {v3, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
@@ -466,7 +466,7 @@
     const-string v3, "token"
 
     .line 6
-    invoke-static {v2, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
@@ -479,7 +479,7 @@
     const-string v3, "mobile"
 
     .line 7
-    invoke-static {v2, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
@@ -488,13 +488,13 @@
     const/4 v1, 0x5
 
     .line 8
-    invoke-static {}, Lcom/vk/api/sdk/VK;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/api/sdk/d;->b()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "v"
 
-    invoke-static {v3, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
@@ -507,7 +507,7 @@
     const-string v3, "1"
 
     .line 9
-    invoke-static {v2, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
@@ -522,19 +522,19 @@
 
     .line 11
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 12
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 13
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -546,12 +546,12 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    sget p1, Lcom/vk/api/sdk/R2;->vk_webview_auth_dialog:I
+    sget p1, Lcom/vk/api/sdk/b;->vk_webview_auth_dialog:I
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
 
     .line 3
-    sget p1, Lcom/vk/api/sdk/R;->webView:I
+    sget p1, Lcom/vk/api/sdk/a;->webView:I
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -559,14 +559,14 @@
 
     const-string v0, "findViewById(R.id.webView)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/webkit/WebView;
 
     iput-object p1, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->a:Landroid/webkit/WebView;
 
     .line 4
-    sget p1, Lcom/vk/api/sdk/R;->progress:I
+    sget p1, Lcom/vk/api/sdk/a;->progress:I
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -574,14 +574,14 @@
 
     const-string v0, "findViewById(R.id.progress)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ProgressBar;
 
     iput-object p1, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->b:Landroid/widget/ProgressBar;
 
     .line 5
-    sget-object p1, Lcom/vk/api/sdk/auth/VKAuthParams;->d:Lcom/vk/api/sdk/auth/VKAuthParams$a;
+    sget-object p1, Lcom/vk/api/sdk/auth/c;->d:Lcom/vk/api/sdk/auth/c$a;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -593,7 +593,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/api/sdk/auth/VKAuthParams$a;->a(Landroid/os/Bundle;)Lcom/vk/api/sdk/auth/VKAuthParams;
+    invoke-virtual {p1, v0}, Lcom/vk/api/sdk/auth/c$a;->a(Landroid/os/Bundle;)Lcom/vk/api/sdk/auth/c;
 
     move-result-object p1
 
@@ -612,7 +612,7 @@
 
     .line 7
     :cond_0
-    iput-object p1, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/VKAuthParams;
+    iput-object p1, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->c:Lcom/vk/api/sdk/auth/c;
 
     .line 8
     :cond_1
@@ -636,9 +636,9 @@
     invoke-virtual {v0}, Landroid/webkit/WebView;->destroy()V
 
     .line 2
-    sget-object v0, Lcom/vk/api/sdk/utils/VKValidationLocker;->INSTANCE:Lcom/vk/api/sdk/utils/VKValidationLocker;
+    sget-object v0, Lcom/vk/api/sdk/utils/g;->c:Lcom/vk/api/sdk/utils/g;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/VKValidationLocker;->b()V
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/g;->b()V
 
     .line 3
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
@@ -649,7 +649,7 @@
     const-string v0, "webView"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

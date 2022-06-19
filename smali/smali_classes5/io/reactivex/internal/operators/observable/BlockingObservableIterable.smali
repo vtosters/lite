@@ -26,10 +26,10 @@
 
 
 # instance fields
-.field final a:Lio/reactivex/ObservableSource;
+.field final a:Lc/a/p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "+TT;>;"
         }
     .end annotation
@@ -39,12 +39,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/ObservableSource;I)V
+.method public constructor <init>(Lc/a/p;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "+TT;>;I)V"
         }
     .end annotation
@@ -53,7 +53,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable;->a:Lio/reactivex/ObservableSource;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable;->a:Lc/a/p;
 
     .line 3
     iput p2, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable;->b:I
@@ -81,9 +81,9 @@
     invoke-direct {v0, v1}, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;-><init>(I)V
 
     .line 2
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable;->a:Lio/reactivex/ObservableSource;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable;->a:Lc/a/p;
 
-    invoke-interface {v1, v0}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
+    invoke-interface {v1, v0}, Lc/a/p;->a(Lc/a/r;)V
 
     return-object v0
 .end method

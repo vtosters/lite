@@ -140,7 +140,7 @@
 
     const-string p3, "GLTextureView"
 
-    invoke-static {p3, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     invoke-interface {p1}, Ljavax/microedition/khronos/egl/EGL10;->eglGetError()I

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -59,7 +59,7 @@
 
     const-string v4, "json.getJSONObject(\"team_a\")"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v3}, Lcom/vk/dto/menu/widgets/SuperAppWidgetSports$Team$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/menu/widgets/SuperAppWidgetSports$Team;
 
@@ -76,7 +76,7 @@
 
     const-string v6, "json.getJSONObject(\"team_b\")"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v5}, Lcom/vk/dto/menu/widgets/SuperAppWidgetSports$Team$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/menu/widgets/SuperAppWidgetSports$Team;
 

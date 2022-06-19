@@ -3,7 +3,7 @@
 .source "FragmentNavigationController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentNavigationController$remove$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -72,7 +72,7 @@
 
     iget-object v1, p0, Lcom/vk/core/fragments/FragmentNavigationController$remove$1;->$fr:Lcom/vk/core/fragments/FragmentImpl;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->b(Lcom/vk/core/fragments/j/b/ParentSupportFragment;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/fragments/j/b/b;->b(Lcom/vk/core/fragments/j/b/a;)V
 
     return-void
 .end method

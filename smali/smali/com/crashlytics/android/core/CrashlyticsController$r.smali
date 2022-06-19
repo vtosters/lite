@@ -3,7 +3,7 @@
 .source "CrashlyticsController.java"
 
 # interfaces
-.implements Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$a;
+.implements Lcom/crashlytics/android/core/p$a;
 
 
 # annotations
@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public a(Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$b;Ljava/lang/Thread;Ljava/lang/Throwable;Z)V
+.method public a(Lcom/crashlytics/android/core/p$b;Ljava/lang/Thread;Ljava/lang/Throwable;Z)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$r;->a:Lcom/crashlytics/android/core/CrashlyticsController;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$b;Ljava/lang/Thread;Ljava/lang/Throwable;Z)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/p$b;Ljava/lang/Thread;Ljava/lang/Throwable;Z)V
 
     return-void
 .end method

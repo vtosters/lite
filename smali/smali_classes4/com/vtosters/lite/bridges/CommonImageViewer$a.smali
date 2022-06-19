@@ -1,5 +1,5 @@
 .class public Lcom/vtosters/lite/bridges/CommonImageViewer$a;
-.super Lcom/vk/bridges/ImageViewer$b;
+.super Lcom/vk/bridges/p$b;
 .source "CommonImageViewer.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/bridges/ImageViewer$b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/bridges/p$b;-><init>()V
 
     return-void
 .end method

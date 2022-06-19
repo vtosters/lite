@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/NotificationItem;
+.method public final a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/NotificationItem;
     .locals 21
 
     move-object/from16 v0, p1
@@ -45,17 +45,17 @@
     .line 1
     new-instance v2, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$entityParser$1;
 
-    invoke-direct {v2, v1}, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$entityParser$1;-><init>(Lcom/vk/dto/notifications/NotificationsResponseData;)V
+    invoke-direct {v2, v1}, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$entityParser$1;-><init>(Lcom/vk/dto/notifications/c;)V
 
     .line 2
     new-instance v3, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$actionParser$1;
 
-    invoke-direct {v3, v1}, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$actionParser$1;-><init>(Lcom/vk/dto/notifications/NotificationsResponseData;)V
+    invoke-direct {v3, v1}, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$actionParser$1;-><init>(Lcom/vk/dto/notifications/c;)V
 
     .line 3
     new-instance v4, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$buttonParser$1;
 
-    invoke-direct {v4, v1}, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$buttonParser$1;-><init>(Lcom/vk/dto/notifications/NotificationsResponseData;)V
+    invoke-direct {v4, v1}, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$buttonParser$1;-><init>(Lcom/vk/dto/notifications/c;)V
 
     const-string v1, "id"
 
@@ -66,7 +66,7 @@
 
     const-string v1, "json.optString(\"id\")"
 
-    invoke-static {v6, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "date"
 
@@ -84,7 +84,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v2, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -142,7 +142,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v2, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -194,7 +194,7 @@
 
     if-eqz v15, :cond_2
 
-    invoke-interface {v2, v15}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v15}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v15
 
@@ -227,7 +227,7 @@
 
     if-eqz v1, :cond_5
 
-    invoke-interface {v3, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -275,7 +275,7 @@
 
     if-eqz v5, :cond_6
 
-    invoke-interface {v4, v5}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v5}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -301,7 +301,7 @@
 
     if-eqz v2, :cond_9
 
-    invoke-interface {v4, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -326,7 +326,7 @@
 
     sget-object v5, Lcom/vk/dto/notifications/NotificationItem$ActionButtons;->c:Lcom/vk/dto/notifications/NotificationItem$ActionButtons$b;
 
-    invoke-virtual {v5, v2, v4}, Lcom/vk/dto/notifications/NotificationItem$ActionButtons$b;->a(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)Lcom/vk/dto/notifications/NotificationItem$ActionButtons;
+    invoke-virtual {v5, v2, v4}, Lcom/vk/dto/notifications/NotificationItem$ActionButtons$b;->a(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)Lcom/vk/dto/notifications/NotificationItem$ActionButtons;
 
     move-result-object v2
 

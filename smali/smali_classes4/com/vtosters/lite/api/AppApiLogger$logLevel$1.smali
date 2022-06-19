@@ -3,12 +3,12 @@
 .source "AppApiLogger.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/api/AppApiLogger;->a()Lkotlin/Lazy2;
+    value = Lcom/vtosters/lite/api/AppApiLogger;->a()Lkotlin/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/api/sdk/utils/log/Logger$LogLevel;",
         ">;"
     }

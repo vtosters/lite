@@ -3,7 +3,7 @@
 .source "CronetHttpRequestExecutor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lorg/chromium/net/ExperimentalCronetEngine;",
+        "Lkotlin/jvm/b/a<",
+        "Lorg/chromium/net/i;",
         ">;"
     }
 .end annotation
@@ -49,20 +49,20 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor$cronetEngine$2;->invoke()Lorg/chromium/net/ExperimentalCronetEngine;
+    invoke-virtual {p0}, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor$cronetEngine$2;->invoke()Lorg/chromium/net/i;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Lorg/chromium/net/ExperimentalCronetEngine;
+.method public final invoke()Lorg/chromium/net/i;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor$cronetEngine$2;->this$0:Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;
 
-    invoke-static {v0}, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;->a(Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;)Lorg/chromium/net/ExperimentalCronetEngine;
+    invoke-static {v0}, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;->a(Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;)Lorg/chromium/net/i;
 
     move-result-object v0
 

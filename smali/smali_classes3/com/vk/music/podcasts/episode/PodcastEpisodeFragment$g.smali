@@ -40,15 +40,15 @@
     .line 1
     iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$g;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
+    check-cast p1, Lcom/vk/music/podcasts/episode/b;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->q()Lcom/vk/dto/podcast/PodcastPage;
+    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/b;->q()Lcom/vk/dto/podcast/PodcastPage;
 
     move-result-object p1
 
@@ -68,15 +68,15 @@
     .line 3
     iget-object v1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$g;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {v1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {v1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
+    check-cast v1, Lcom/vk/music/podcasts/episode/b;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v1}, Lcom/vk/music/podcasts/episode/b;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v1
 
@@ -96,18 +96,18 @@
     iget-object v2, p1, Lcom/vk/dto/music/MusicTrack;->P:Ljava/lang/String;
 
     .line 5
-    invoke-static {v0, v1, v2}, Lcom/vk/music/i/PodcastsAnalytics;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/vk/music/i/a;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
-    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
+    new-instance v0, Lcom/vk/profile/ui/c$z;
 
     iget p1, p1, Lcom/vk/dto/music/MusicTrack;->e:I
 
-    invoke-direct {v0, p1}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
+    invoke-direct {v0, p1}, Lcom/vk/profile/ui/c$z;-><init>(I)V
 
     iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$g;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
     :cond_1
     const/4 p1, 0x1

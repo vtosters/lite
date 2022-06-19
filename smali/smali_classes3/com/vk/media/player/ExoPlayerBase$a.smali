@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -55,7 +55,7 @@
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/vigo/metrics/config;->m:Lcom/vk/reef/ReefFactory;
+    sget-object v0, Lcom/vigo/metrics/z;->m:Lcom/vk/reef/ReefFactory;
 
     if-eqz v0, :cond_1
 

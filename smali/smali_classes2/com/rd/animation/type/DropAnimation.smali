@@ -1,5 +1,5 @@
 .class public Lcom/rd/animation/type/DropAnimation;
-.super Lcom/rd/animation/type/BaseAnimation;
+.super Lcom/rd/animation/type/a;
 .source "DropAnimation.java"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/rd/animation/type/BaseAnimation<",
+        "Lcom/rd/animation/type/a<",
         "Landroid/animation/AnimatorSet;",
         ">;"
     }
@@ -30,26 +30,26 @@
 
 .field private h:I
 
-.field private i:Lcom/rd/b/c/b/DropAnimationValue;
+.field private i:Lcom/rd/b/c/b/b;
 
 
 # direct methods
-.method public constructor <init>(Lcom/rd/b/b/ValueController$a;)V
+.method public constructor <init>(Lcom/rd/b/b/b$a;)V
     .locals 0
-    .param p1    # Lcom/rd/b/b/ValueController$a;
+    .param p1    # Lcom/rd/b/b/b$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/rd/animation/type/BaseAnimation;-><init>(Lcom/rd/b/b/ValueController$a;)V
+    invoke-direct {p0, p1}, Lcom/rd/animation/type/a;-><init>(Lcom/rd/b/b/b$a;)V
 
     .line 2
-    new-instance p1, Lcom/rd/b/c/b/DropAnimationValue;
+    new-instance p1, Lcom/rd/b/c/b/b;
 
-    invoke-direct {p1}, Lcom/rd/b/c/b/DropAnimationValue;-><init>()V
+    invoke-direct {p1}, Lcom/rd/b/c/b/b;-><init>()V
 
-    iput-object p1, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/DropAnimationValue;
+    iput-object p1, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/b;
 
     return-void
 .end method
@@ -141,36 +141,36 @@
 
     .line 39
     :cond_0
-    iget-object p2, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/DropAnimationValue;
+    iget-object p2, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/b;
 
-    invoke-virtual {p2, p1}, Lcom/rd/b/c/b/DropAnimationValue;->b(I)V
+    invoke-virtual {p2, p1}, Lcom/rd/b/c/b/b;->b(I)V
 
     goto :goto_0
 
     .line 40
     :cond_1
-    iget-object p2, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/DropAnimationValue;
+    iget-object p2, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/b;
 
-    invoke-virtual {p2, p1}, Lcom/rd/b/c/b/DropAnimationValue;->a(I)V
+    invoke-virtual {p2, p1}, Lcom/rd/b/c/b/b;->a(I)V
 
     goto :goto_0
 
     .line 41
     :cond_2
-    iget-object p2, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/DropAnimationValue;
+    iget-object p2, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/b;
 
-    invoke-virtual {p2, p1}, Lcom/rd/b/c/b/DropAnimationValue;->c(I)V
+    invoke-virtual {p2, p1}, Lcom/rd/b/c/b/b;->c(I)V
 
     .line 42
     :goto_0
-    iget-object p1, p0, Lcom/rd/animation/type/BaseAnimation;->b:Lcom/rd/b/b/ValueController$a;
+    iget-object p1, p0, Lcom/rd/animation/type/a;->b:Lcom/rd/b/b/b$a;
 
     if-eqz p1, :cond_3
 
     .line 43
-    iget-object p2, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/DropAnimationValue;
+    iget-object p2, p0, Lcom/rd/animation/type/DropAnimation;->i:Lcom/rd/b/c/b/b;
 
-    invoke-interface {p1, p2}, Lcom/rd/b/b/ValueController$a;->a(Lcom/rd/b/c/Value;)V
+    invoke-interface {p1, p2}, Lcom/rd/b/b/b$a;->a(Lcom/rd/b/c/a;)V
 
     :cond_3
     return-void
@@ -274,12 +274,12 @@
     .locals 11
 
     .line 6
-    iget-object v0, p0, Lcom/rd/animation/type/BaseAnimation;->c:Landroid/animation/Animator;
+    iget-object v0, p0, Lcom/rd/animation/type/a;->c:Landroid/animation/Animator;
 
     if-eqz v0, :cond_5
 
     .line 7
-    iget-wide v1, p0, Lcom/rd/animation/type/BaseAnimation;->a:J
+    iget-wide v1, p0, Lcom/rd/animation/type/a;->a:J
 
     long-to-float v1, v1
 
@@ -368,7 +368,7 @@
     if-nez p1, :cond_0
 
     .line 13
-    iget-wide v6, p0, Lcom/rd/animation/type/BaseAnimation;->a:J
+    iget-wide v6, p0, Lcom/rd/animation/type/a;->a:J
 
     cmp-long v3, v4, v6
 
@@ -401,7 +401,7 @@
 
     move-result-object v0
 
-    iput-object v0, v6, Lcom/rd/animation/type/BaseAnimation;->c:Landroid/animation/Animator;
+    iput-object v0, v6, Lcom/rd/animation/type/a;->c:Landroid/animation/Animator;
 
     move/from16 v1, p1
 
@@ -435,7 +435,7 @@
     double-to-int v10, v3
 
     .line 22
-    iget-wide v3, v6, Lcom/rd/animation/type/BaseAnimation;->a:J
+    iget-wide v3, v6, Lcom/rd/animation/type/a;->a:J
 
     const-wide/16 v11, 0x2
 
@@ -497,7 +497,7 @@
     move-result-object v0
 
     .line 28
-    iget-object v1, v6, Lcom/rd/animation/type/BaseAnimation;->c:Landroid/animation/Animator;
+    iget-object v1, v6, Lcom/rd/animation/type/a;->c:Landroid/animation/Animator;
 
     check-cast v1, Landroid/animation/AnimatorSet;
 
@@ -531,12 +531,12 @@
     .locals 0
 
     .line 14
-    invoke-super {p0, p1, p2}, Lcom/rd/animation/type/BaseAnimation;->a(J)Lcom/rd/animation/type/BaseAnimation;
+    invoke-super {p0, p1, p2}, Lcom/rd/animation/type/a;->a(J)Lcom/rd/animation/type/a;
 
     return-object p0
 .end method
 
-.method public bridge synthetic a(F)Lcom/rd/animation/type/BaseAnimation;
+.method public bridge synthetic a(F)Lcom/rd/animation/type/a;
     .locals 0
 
     .line 3

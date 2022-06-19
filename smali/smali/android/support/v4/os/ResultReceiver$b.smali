@@ -1,5 +1,5 @@
 .class Landroid/support/v4/os/ResultReceiver$b;
-.super Landroid/support/v4/os/IResultReceiver$a;
+.super Landroid/support/v4/os/a$a;
 .source "ResultReceiver.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Landroid/support/v4/os/ResultReceiver$b;->a:Landroid/support/v4/os/ResultReceiver;
 
-    invoke-direct {p0}, Landroid/support/v4/os/IResultReceiver$a;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/os/a$a;-><init>()V
 
     return-void
 .end method

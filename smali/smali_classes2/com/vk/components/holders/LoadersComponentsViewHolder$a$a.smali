@@ -3,7 +3,7 @@
 .source "LoadersComponentsViewHolder.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -94,7 +94,7 @@
 
     iget-object v1, v1, Lcom/vk/components/holders/LoadersComponentsViewHolder$a;->b:Lcom/vk/components/holders/LoadersComponentsViewHolder$1;
 
-    invoke-virtual {v1}, Lcom/vk/components/holders/LoadersComponentsViewHolder$1;->invoke()Lcom/vk/core/drawable/CircularProgressDrawable;
+    invoke-virtual {v1}, Lcom/vk/components/holders/LoadersComponentsViewHolder$1;->invoke()Lcom/vk/core/drawable/c;
 
     move-result-object v1
 
@@ -121,7 +121,7 @@
 
     move-result-object p1
 
-    instance-of v1, p1, Lcom/vk/core/drawable/CircularProgressDrawable;
+    instance-of v1, p1, Lcom/vk/core/drawable/c;
 
     const/4 v2, 0x0
 
@@ -130,11 +130,11 @@
     move-object p1, v2
 
     :cond_1
-    check-cast p1, Lcom/vk/core/drawable/CircularProgressDrawable;
+    check-cast p1, Lcom/vk/core/drawable/c;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/core/drawable/CircularProgressDrawable;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/drawable/c;->a()V
 
     .line 6
     :cond_2
@@ -142,13 +142,13 @@
 
     iget-object p1, p1, Lcom/vk/components/holders/LoadersComponentsViewHolder$a;->a:Lcom/vk/components/holders/LoadersComponentsViewHolder;
 
-    invoke-static {p1}, Lcom/vk/components/holders/LoadersComponentsViewHolder;->a(Lcom/vk/components/holders/LoadersComponentsViewHolder;)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1}, Lcom/vk/components/holders/LoadersComponentsViewHolder;->a(Lcom/vk/components/holders/LoadersComponentsViewHolder;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     .line 7
     :cond_3
@@ -156,7 +156,7 @@
 
     iget-object p1, p1, Lcom/vk/components/holders/LoadersComponentsViewHolder$a;->a:Lcom/vk/components/holders/LoadersComponentsViewHolder;
 
-    invoke-static {p1, v2}, Lcom/vk/components/holders/LoadersComponentsViewHolder;->a(Lcom/vk/components/holders/LoadersComponentsViewHolder;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {p1, v2}, Lcom/vk/components/holders/LoadersComponentsViewHolder;->a(Lcom/vk/components/holders/LoadersComponentsViewHolder;Lio/reactivex/disposables/b;)V
 
     goto :goto_0
 

@@ -3,12 +3,12 @@
 .source "FaveSearchFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+    value = Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,21 +57,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/fave/entities/FaveResponseEntries;)Ljava/util/List;
+.method public final a(Lcom/vk/fave/entities/k;)Ljava/util/List;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/fave/entities/FaveResponseEntries;",
+            "Lcom/vk/fave/entities/k;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/fave/entities/FaveEntries3;",
+            "Lcom/vk/fave/entities/j;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveResponseEntries;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/k;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -106,11 +106,11 @@
     check-cast v1, Lcom/vk/fave/entities/FavePage;
 
     .line 5
-    new-instance v2, Lcom/vk/fave/entities/FaveEntries3;
+    new-instance v2, Lcom/vk/fave/entities/j;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v1, v3, v3}, Lcom/vk/fave/entities/FaveEntries3;-><init>(Lcom/vk/fave/entities/FavePage;Lkotlin/Pair;Lkotlin/Pair;)V
+    invoke-direct {v2, v1, v3, v3}, Lcom/vk/fave/entities/j;-><init>(Lcom/vk/fave/entities/FavePage;Lkotlin/Pair;Lkotlin/Pair;)V
 
     invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -124,9 +124,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/fave/entities/FaveResponseEntries;
+    check-cast p1, Lcom/vk/fave/entities/k;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$a;->a(Lcom/vk/fave/entities/FaveResponseEntries;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$a;->a(Lcom/vk/fave/entities/k;)Ljava/util/List;
 
     move-result-object p1
 

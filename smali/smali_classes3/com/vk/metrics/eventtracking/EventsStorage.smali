@@ -12,27 +12,27 @@
 
 
 # static fields
-.field static final synthetic l:[Lkotlin/u/KProperty5;
+.field static final synthetic l:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
-.field private final b:Lkotlin/Lazy2;
+.field private final b:Lkotlin/e;
 
 .field private volatile c:J
 
-.field private final d:Lkotlin/Lazy2;
+.field private final d:Lkotlin/e;
 
-.field private final e:Lkotlin/Lazy2;
+.field private final e:Lkotlin/e;
 
-.field private final f:Lkotlin/Lazy2;
+.field private final f:Lkotlin/e;
 
-.field private final g:Lkotlin/Lazy2;
+.field private final g:Lkotlin/e;
 
-.field private final h:Lkotlin/Lazy2;
+.field private final h:Lkotlin/e;
 
-.field private final i:Lkotlin/Lazy2;
+.field private final i:Lkotlin/e;
 
 .field private final j:Ljava/lang/String;
 
@@ -47,11 +47,11 @@
 
     const/16 v1, 0x8
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -59,9 +59,9 @@
 
     const-string v5, "getOpenHelper()Lcom/vk/metrics/eventtracking/DatabaseOpenHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -69,7 +69,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -77,9 +77,9 @@
 
     const-string v5, "getDb()Landroid/database/sqlite/SQLiteDatabase;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x1
 
@@ -87,7 +87,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -95,9 +95,9 @@
 
     const-string v5, "getSessionId()J"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x2
 
@@ -105,7 +105,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -113,9 +113,9 @@
 
     const-string v5, "getContainsEventName()Landroid/database/sqlite/SQLiteStatement;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x3
 
@@ -123,7 +123,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -131,9 +131,9 @@
 
     const-string v5, "getContainsEventNameForVersion()Landroid/database/sqlite/SQLiteStatement;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x4
 
@@ -141,7 +141,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -149,9 +149,9 @@
 
     const-string v5, "getContainsEventNameForSession()Landroid/database/sqlite/SQLiteStatement;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x5
 
@@ -159,7 +159,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -167,9 +167,9 @@
 
     const-string v5, "getContainsEventNameForDate()Landroid/database/sqlite/SQLiteStatement;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x6
 
@@ -177,7 +177,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -185,15 +185,15 @@
 
     const-string v4, "getAppHash()Ljava/lang/String;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x7
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -213,88 +213,88 @@
 
     invoke-direct {p3, p1}, Lcom/vk/metrics/eventtracking/EventsStorage$openHelper$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p3}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p3}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->a:Lkotlin/e;
 
     .line 3
     new-instance p1, Lcom/vk/metrics/eventtracking/EventsStorage$db$2;
 
     invoke-direct {p1, p0}, Lcom/vk/metrics/eventtracking/EventsStorage$db$2;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->b:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->b:Lkotlin/e;
 
     .line 4
     new-instance p1, Lcom/vk/metrics/eventtracking/EventsStorage$sessionId$2;
 
     invoke-direct {p1, p0}, Lcom/vk/metrics/eventtracking/EventsStorage$sessionId$2;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->d:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->d:Lkotlin/e;
 
     .line 5
     new-instance p1, Lcom/vk/metrics/eventtracking/EventsStorage$containsEventName$2;
 
     invoke-direct {p1, p0}, Lcom/vk/metrics/eventtracking/EventsStorage$containsEventName$2;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->e:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->e:Lkotlin/e;
 
     .line 6
     new-instance p1, Lcom/vk/metrics/eventtracking/EventsStorage$containsEventNameForVersion$2;
 
     invoke-direct {p1, p0}, Lcom/vk/metrics/eventtracking/EventsStorage$containsEventNameForVersion$2;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->f:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->f:Lkotlin/e;
 
     .line 7
     new-instance p1, Lcom/vk/metrics/eventtracking/EventsStorage$containsEventNameForSession$2;
 
     invoke-direct {p1, p0}, Lcom/vk/metrics/eventtracking/EventsStorage$containsEventNameForSession$2;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->g:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->g:Lkotlin/e;
 
     .line 8
     new-instance p1, Lcom/vk/metrics/eventtracking/EventsStorage$containsEventNameForDate$2;
 
     invoke-direct {p1, p0}, Lcom/vk/metrics/eventtracking/EventsStorage$containsEventNameForDate$2;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->h:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->h:Lkotlin/e;
 
     .line 9
     new-instance p1, Lcom/vk/metrics/eventtracking/EventsStorage$appHash$2;
 
     invoke-direct {p1, p0}, Lcom/vk/metrics/eventtracking/EventsStorage$appHash$2;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->i:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->i:Lkotlin/e;
 
     int-to-long p1, p2
 
@@ -415,7 +415,7 @@
     move-result-object v0
 
     .line 16
-    sget-object v1, Lkotlin/text/Charsets;->a:Ljava/nio/charset/Charset;
+    sget-object v1, Lkotlin/text/d;->a:Ljava/nio/charset/Charset;
 
     if-eqz p1, :cond_0
 
@@ -425,7 +425,7 @@
 
     const-string v1, "(this as java.lang.String).getBytes(charset)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->digest([B)[B
 
@@ -491,16 +491,16 @@
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+.method private final a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/metrics/eventtracking/Event;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
@@ -511,7 +511,7 @@
 
     new-instance v1, Lcom/vk/metrics/eventtracking/EventsStorage$b;
 
-    invoke-direct {v1, p0, p3, p1, p2}, Lcom/vk/metrics/eventtracking/EventsStorage$b;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;Lkotlin/jvm/b/Functions;Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p3, p1, p2}, Lcom/vk/metrics/eventtracking/EventsStorage$b;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;Lkotlin/jvm/b/a;Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -565,7 +565,7 @@
     const-string v1, "calendar"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
@@ -678,15 +678,15 @@
 .method private final d()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->i:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->i:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/j;
 
     const/4 v2, 0x7
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -698,15 +698,15 @@
 .method private final e()Landroid/database/sqlite/SQLiteStatement;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->e:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->e:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/j;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -729,15 +729,15 @@
 .method private final f()Landroid/database/sqlite/SQLiteStatement;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->h:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->h:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/j;
 
     const/4 v2, 0x6
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -760,15 +760,15 @@
 .method private final g()Landroid/database/sqlite/SQLiteStatement;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->g:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->g:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/j;
 
     const/4 v2, 0x5
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -802,15 +802,15 @@
 .method private final h()Landroid/database/sqlite/SQLiteStatement;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->f:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->f:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/j;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -822,15 +822,15 @@
 .method private final i()Landroid/database/sqlite/SQLiteDatabase;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->b:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -839,11 +839,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic i(Lcom/vk/metrics/eventtracking/EventsStorage;)Lcom/vk/metrics/eventtracking/EventsStorage1;
+.method public static final synthetic i(Lcom/vk/metrics/eventtracking/EventsStorage;)Lcom/vk/metrics/eventtracking/a;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/metrics/eventtracking/EventsStorage;->j()Lcom/vk/metrics/eventtracking/EventsStorage1;
+    invoke-direct {p0}, Lcom/vk/metrics/eventtracking/EventsStorage;->j()Lcom/vk/metrics/eventtracking/a;
 
     move-result-object p0
 
@@ -861,22 +861,22 @@
     return-wide v0
 .end method
 
-.method private final j()Lcom/vk/metrics/eventtracking/EventsStorage1;
+.method private final j()Lcom/vk/metrics/eventtracking/a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/metrics/eventtracking/EventsStorage1;
+    check-cast v0, Lcom/vk/metrics/eventtracking/a;
 
     return-object v0
 .end method
@@ -884,15 +884,15 @@
 .method private final k()J
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->d:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage;->d:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/metrics/eventtracking/EventsStorage;->l:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -925,14 +925,14 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
+.method public final a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/metrics/eventtracking/Event;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -942,19 +942,19 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/metrics/eventtracking/EventsStorage$doIfNotLoggedYet$1;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;Lcom/vk/metrics/eventtracking/Event;)V
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public final b(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
+.method public final b(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/metrics/eventtracking/Event;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -973,19 +973,19 @@
 
     invoke-direct {v2, p0, p1, v0, v1}, Lcom/vk/metrics/eventtracking/EventsStorage$doIfNotLoggedYetForDay$1;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;Lcom/vk/metrics/eventtracking/Event;J)V
 
-    invoke-direct {p0, p1, p2, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1, p2, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public final c(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
+.method public final c(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/metrics/eventtracking/Event;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -995,19 +995,19 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/metrics/eventtracking/EventsStorage$doIfNotLoggedYetForSession$1;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;Lcom/vk/metrics/eventtracking/Event;)V
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public final d(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
+.method public final d(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/metrics/eventtracking/Event;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1017,7 +1017,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/metrics/eventtracking/EventsStorage$doIfNotLoggedYetForVersion$1;-><init>(Lcom/vk/metrics/eventtracking/EventsStorage;Lcom/vk/metrics/eventtracking/Event;)V
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

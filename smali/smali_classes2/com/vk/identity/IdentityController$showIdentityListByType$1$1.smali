@@ -3,7 +3,7 @@
 .source "IdentityController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions4;
+.implements Lkotlin/jvm/b/d;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions4<",
+        "Lkotlin/jvm/b/d<",
         "Ljava/lang/String;",
         "Ljava/lang/Integer;",
         "Lcom/vk/identity/IdentityContext;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/identity/IdentityController$showIdentityListByType$1$1;->a(Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/identity/IdentityContext;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -80,12 +80,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/identity/IdentityController;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 

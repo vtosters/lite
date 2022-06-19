@@ -24,7 +24,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/httpexecutor/api/exceptions/NoNetworkException$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/httpexecutor/api/exceptions/NoNetworkException$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const-wide v0, -0x251849973e26668fL    # -8.218378731299439E129
 

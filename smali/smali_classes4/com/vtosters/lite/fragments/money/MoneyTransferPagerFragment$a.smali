@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "MoneyTransferPagerFragment.kt"
 
 
@@ -21,7 +21,7 @@
     .line 1
     const-class v0, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
     .locals 2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "moneyInfo"
 
@@ -45,7 +45,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "to"
 
@@ -58,7 +58,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "amount"
 
@@ -71,7 +71,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "ref"
 
@@ -84,7 +84,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "to_id"
 
@@ -97,7 +97,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "isChatRequest"
 
@@ -110,7 +110,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "startWithRequest"
 

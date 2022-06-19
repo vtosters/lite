@@ -1,5 +1,5 @@
 .class public final Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$g;
-.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
+.super Lc/a/c0/a;
 .source "ActionLinksSnippetPresenter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
+        "Lc/a/c0/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -38,7 +38,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$g;->b:Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;
 
-    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
+    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$g;->b:Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

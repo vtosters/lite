@@ -1,5 +1,5 @@
 .class public final Lkotlin/text/MatcherMatchResult$a;
-.super Lkotlin/collections/AbstractList;
+.super Lkotlin/collections/c;
 .source "Regex.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/collections/AbstractList<",
+        "Lkotlin/collections/c<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -38,7 +38,7 @@
     .line 1
     iput-object p1, p0, Lkotlin/text/MatcherMatchResult$a;->b:Lkotlin/text/MatcherMatchResult;
 
-    invoke-direct {p0}, Lkotlin/collections/AbstractList;-><init>()V
+    invoke-direct {p0}, Lkotlin/collections/c;-><init>()V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lkotlin/collections/AbstractList;->indexOf(Ljava/lang/Object;)I
+    invoke-super {p0, p1}, Lkotlin/collections/c;->indexOf(Ljava/lang/Object;)I
 
     move-result p1
 
@@ -90,7 +90,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lkotlin/collections/AbstractList;->lastIndexOf(Ljava/lang/Object;)I
+    invoke-super {p0, p1}, Lkotlin/collections/c;->lastIndexOf(Ljava/lang/Object;)I
 
     move-result p1
 

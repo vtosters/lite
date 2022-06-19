@@ -3,12 +3,12 @@
 .source "MsgAddBatchLpTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;Landroid/util/SparseArray;)V
+    value = Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask;->a(Lcom/vk/im/engine/d;Ljava/util/List;Landroid/util/SparseArray;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
 
 .field final synthetic $dialogsStorage:Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
-.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
+.field final synthetic $env:Lcom/vk/im/engine/d;
 
 .field final synthetic $msgList:Ljava/util/List;
 
@@ -40,14 +40,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask;Ljava/util/List;Lcom/vk/im/engine/ImEnvironment;Landroid/util/SparseArray;Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask;Ljava/util/List;Lcom/vk/im/engine/d;Landroid/util/SparseArray;Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask$updateDialogKeyboard$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask;
 
     iput-object p2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask$updateDialogKeyboard$1;->$msgList:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask$updateDialogKeyboard$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask$updateDialogKeyboard$1;->$env:Lcom/vk/im/engine/d;
 
     iput-object p4, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask$updateDialogKeyboard$1;->$dialogKeyboardFromMsg:Landroid/util/SparseArray;
 
@@ -88,15 +88,15 @@
     check-cast v0, Lcom/vk/im/engine/models/messages/Msg;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask$updateDialogKeyboard$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask$updateDialogKeyboard$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-interface {v1}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface {v1}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v1
 
     const-string v2, "env.member"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/messages/Msg;->b(Lcom/vk/im/engine/models/Member;)Z
 
@@ -190,7 +190,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgAddBatchLpTask$updateDialogKeyboard$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

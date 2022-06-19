@@ -1,5 +1,5 @@
 .class public Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
-.super Lcom/vtosters/lite/fragments/VKRecyclerFragment;
+.super Lcom/vtosters/lite/fragments/f2;
 .source "PhotoListFragment.java"
 
 
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/fragments/VKRecyclerFragment<",
+        "Lcom/vtosters/lite/fragments/f2<",
         "Lcom/vk/dto/photo/Photo;",
         ">;"
     }
@@ -34,7 +34,7 @@
 
 .field protected t0:Lcom/vk/dto/photo/PhotoAlbum;
 
-.field protected u0:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
+.field protected u0:Ld/a/a/c/b;
 
 .field protected v0:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -50,10 +50,10 @@
 
 .field protected x0:Z
 
-.field protected y0:Lcom/vk/bridges/ImageViewer$d;
+.field protected y0:Lcom/vk/bridges/p$d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/bridges/ImageViewer$d<",
+            "Lcom/vk/bridges/p$d<",
             "Lcom/vk/dto/photo/Photo;",
             ">;"
         }
@@ -70,7 +70,7 @@
     const/16 v0, 0x64
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/VKRecyclerFragment;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/f2;-><init>(I)V
 
     .line 2
     new-instance v0, Ljava/util/ArrayList;
@@ -103,7 +103,7 @@
     .end annotation
 
     .line 5
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/VKRecyclerFragment;-><init>(I)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/f2;-><init>(I)V
 
     .line 6
     new-instance p1, Ljava/util/ArrayList;
@@ -151,7 +151,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -187,7 +187,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -196,7 +196,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -205,7 +205,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -214,7 +214,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -255,7 +255,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -266,7 +266,7 @@
     move-object/from16 v0, p0
 
     .line 1
-    iget-object v1, v0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object v1, v0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -324,7 +324,7 @@
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     .line 6
-    iget-object v6, v0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object v6, v0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -455,7 +455,7 @@
     move-object/from16 v16, v6
 
     .line 12
-    invoke-static {v12}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v12}, Ld/a/a/c/e;->a(F)I
 
     move-result v6
 
@@ -671,7 +671,7 @@
     const/high16 v7, 0x43340000    # 180.0f
 
     .line 30
-    invoke-static {v7}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v7}, Ld/a/a/c/e;->a(F)I
 
     move-result v8
 
@@ -757,16 +757,16 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
 
-.method static synthetic i(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;)Lme/grishka/appkit/utils/Preloader;
+.method static synthetic i(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;)Ld/a/a/c/c;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->f0:Lme/grishka/appkit/utils/Preloader;
+    iget-object p0, p0, Ld/a/a/a/i;->f0:Ld/a/a/c/c;
 
     return-object p0
 .end method
@@ -775,7 +775,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -784,7 +784,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -793,7 +793,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -802,7 +802,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -811,7 +811,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -820,7 +820,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -829,7 +829,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -838,7 +838,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -847,7 +847,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -856,7 +856,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -867,7 +867,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object v0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     const/4 v1, 0x0
 
@@ -880,7 +880,7 @@
 
     .line 2
     :goto_0
-    iget-object v2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object v2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -889,14 +889,14 @@
     if-ge v0, v2, :cond_2
 
     .line 3
-    iget-object v2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object v2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
     .line 4
-    iget-object v3, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object v3, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {v3, v2}, Lme/grishka/appkit/views/UsableRecyclerView;->getChildViewHolder(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
@@ -910,14 +910,14 @@
     .line 6
     check-cast v3, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$p;
 
-    invoke-virtual {v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/vk/dto/photo/Photo;
 
     .line 7
-    iget-object v4, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object v4, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
@@ -942,7 +942,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->T3()Z
+    invoke-super {p0}, Ld/a/a/a/i;->T3()Z
 
     move-result v0
 
@@ -973,16 +973,16 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Ld/a/a/c/b;
 
     if-nez v0, :cond_1
 
     .line 2
-    new-instance v0, Lme/grishka/appkit/utils/MergeRecyclerAdapter;
+    new-instance v0, Ld/a/a/c/b;
 
-    invoke-direct {v0}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;-><init>()V
+    invoke-direct {v0}, Ld/a/a/c/b;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Ld/a/a/c/b;
 
     .line 3
     iget-boolean v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->x0:Z
@@ -990,17 +990,17 @@
     if-eqz v0, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Ld/a/a/c/b;
 
     new-instance v1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$k;
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$k;-><init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;)V
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Ld/a/a/c/b;
 
     new-instance v1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$n;
 
@@ -1010,11 +1010,11 @@
 
     invoke-direct {v1, p0, v2, v3}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$n;-><init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;II)V
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 6
     :cond_1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Ld/a/a/c/b;
 
     return-object v0
 .end method
@@ -1040,7 +1040,7 @@
     add-int/2addr p2, p1
 
     .line 8
-    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p1, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -1054,14 +1054,14 @@
     const/high16 p1, 0x40400000    # 3.0f
 
     .line 9
-    invoke-static {p1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {p1}, Ld/a/a/c/e;->a(F)I
 
     move-result p3
 
     iput p3, p4, Landroid/graphics/Rect;->right:I
 
     .line 10
-    iget-object p3, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p3, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {p3, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1080,7 +1080,7 @@
     const/high16 p1, -0x3fc00000    # -3.0f
 
     .line 11
-    invoke-static {p1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {p1}, Ld/a/a/c/e;->a(F)I
 
     move-result p1
 
@@ -1091,7 +1091,7 @@
 
     .line 12
     :cond_3
-    invoke-static {p1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {p1}, Ld/a/a/c/e;->a(F)I
 
     move-result p1
 
@@ -1112,7 +1112,7 @@
     .end annotation
 
     .line 4
-    invoke-super {p0, p1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->a(Lcom/vk/dto/common/data/PaginatedList;)V
+    invoke-super {p0, p1}, Ld/a/a/a/i;->a(Lcom/vk/dto/common/data/PaginatedList;)V
 
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->t0:Lcom/vk/dto/photo/PhotoAlbum;
@@ -1163,7 +1163,7 @@
 
     .line 15
     :cond_0
-    invoke-super {p0, p1, p2}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->a(Lcom/vk/dto/common/data/PaginatedList;I)Z
+    invoke-super {p0, p1, p2}, Ld/a/a/a/i;->a(Lcom/vk/dto/common/data/PaginatedList;I)Z
 
     move-result p1
 
@@ -1243,7 +1243,7 @@
 
     .line 13
     :cond_1
-    iget-object v0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object v0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
@@ -1268,7 +1268,7 @@
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p1, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1284,7 +1284,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Ljava/lang/Throwable;)V
 
     .line 16
-    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p1, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1303,7 +1303,7 @@
     .line 18
     :cond_3
     :goto_0
-    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p1, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1329,11 +1329,11 @@
 
     .line 20
     :cond_4
-    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
+    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
 
     move-result-object p1
 
-    iget-object v1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object v1, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
@@ -1343,11 +1343,11 @@
 
     move-result-object v3
 
-    invoke-interface {p1, v0, v1, v2, v3}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-interface {p1, v0, v1, v2, v3}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->y0:Lcom/vk/bridges/ImageViewer$d;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->y0:Lcom/vk/bridges/p$d;
 
     return-void
 .end method
@@ -1371,7 +1371,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, v0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->x0(Z)V
+    invoke-virtual {p0, v0}, Ld/a/a/a/i;->x0(Z)V
 
     return-void
 .end method
@@ -1386,7 +1386,7 @@
     .locals 7
 
     .line 2
-    iget-boolean v0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->m0:Z
+    iget-boolean v0, p0, Ld/a/a/a/i;->m0:Z
 
     if-eqz v0, :cond_0
 
@@ -1442,7 +1442,7 @@
     if-le v2, v1, :cond_3
 
     .line 9
-    new-instance v6, Lcom/vk/api/photos/PhotosGet;
+    new-instance v6, Lcom/vk/api/photos/j;
 
     iget v1, v0, Lcom/vk/dto/photo/PhotoAlbum;->b:I
 
@@ -1454,23 +1454,23 @@
 
     move v4, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/api/photos/PhotosGet;-><init>(IIIIZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/api/photos/j;-><init>(IIIIZ)V
 
-    new-instance p1, Lcom/vtosters/lite/api/SimpleListCallback;
+    new-instance p1, Lcom/vtosters/lite/api/m;
 
-    invoke-direct {p1, p0}, Lcom/vtosters/lite/api/SimpleListCallback;-><init>(Lme/grishka/appkit/fragments/BaseRecyclerFragment;)V
+    invoke-direct {p1, p0}, Lcom/vtosters/lite/api/m;-><init>(Ld/a/a/a/i;)V
 
     .line 10
-    invoke-virtual {v6, p1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {v6, p1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
 
     move-result-object p1
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->T:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Ld/a/a/a/j;->T:Lio/reactivex/disposables/b;
 
     goto :goto_1
 
@@ -1480,30 +1480,30 @@
     const/4 v1, 0x1
 
     .line 12
-    iput-boolean v1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->R:Z
+    iput-boolean v1, p0, Ld/a/a/a/j;->R:Z
 
     .line 13
-    new-instance v1, Lcom/vk/api/photos/PhotosGetUserPhotos;
+    new-instance v1, Lcom/vk/api/photos/u;
 
     iget v0, v0, Lcom/vk/dto/photo/PhotoAlbum;->b:I
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/photos/PhotosGetUserPhotos;-><init>(III)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/photos/u;-><init>(III)V
 
     new-instance p1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$g;
 
-    invoke-direct {p1, p0, p0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$g;-><init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;Lme/grishka/appkit/fragments/BaseRecyclerFragment;)V
+    invoke-direct {p1, p0, p0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$g;-><init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;Ld/a/a/a/i;)V
 
     .line 14
-    invoke-virtual {v1, p1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {v1, p1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
 
     move-result-object p1
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->T:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Ld/a/a/a/j;->T:Lio/reactivex/disposables/b;
 
     goto :goto_1
 
@@ -1523,35 +1523,35 @@
     iput-object p1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->B0:Ljava/lang/String;
 
     .line 18
-    new-instance v0, Lcom/vk/api/fave/FaveGetPhotos;
+    new-instance v0, Lcom/vk/api/fave/k;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/api/fave/FaveGetPhotos;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/api/fave/k;-><init>(Ljava/lang/String;I)V
 
     goto :goto_0
 
     .line 19
     :cond_5
-    new-instance v0, Lcom/vk/api/fave/FaveGetPhotos;
+    new-instance v0, Lcom/vk/api/fave/k;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/api/fave/FaveGetPhotos;-><init>(II)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/api/fave/k;-><init>(II)V
 
     .line 20
     :goto_0
     new-instance p1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$h;
 
-    invoke-direct {p1, p0, p0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$h;-><init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;Lme/grishka/appkit/fragments/BaseRecyclerFragment;)V
+    invoke-direct {p1, p0, p0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$h;-><init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;Ld/a/a/a/i;)V
 
     .line 21
-    invoke-virtual {v0, p1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {v0, p1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
 
     move-result-object p1
 
     .line 22
-    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->T:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Ld/a/a/a/j;->T:Lio/reactivex/disposables/b;
 
     goto :goto_1
 
@@ -1561,27 +1561,27 @@
     if-ne v2, v1, :cond_7
 
     .line 23
-    new-instance v1, Lcom/vk/api/photos/PhotosGetAll;
+    new-instance v1, Lcom/vk/api/photos/k;
 
     iget v0, v0, Lcom/vk/dto/photo/PhotoAlbum;->b:I
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/photos/PhotosGetAll;-><init>(III)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/photos/k;-><init>(III)V
 
     new-instance p1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$i;
 
-    invoke-direct {p1, p0, p0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$i;-><init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;Lme/grishka/appkit/fragments/BaseRecyclerFragment;)V
+    invoke-direct {p1, p0, p0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$i;-><init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;Ld/a/a/a/i;)V
 
     .line 24
-    invoke-virtual {v1, p1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {v1, p1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
 
     move-result-object p1
 
     .line 25
-    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->T:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Ld/a/a/a/j;->T:Lio/reactivex/disposables/b;
 
     :cond_7
     :goto_1
@@ -1657,7 +1657,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 7
-    new-instance p3, Lcom/vtosters/lite/upload/l/AlbumPhotoUploadTask;
+    new-instance p3, Lcom/vtosters/lite/upload/l/c;
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->t0:Lcom/vk/dto/photo/PhotoAlbum;
 
@@ -1671,7 +1671,7 @@
 
     move-object v0, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/upload/l/AlbumPhotoUploadTask;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/upload/l/c;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
 
     invoke-virtual {p2, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1699,7 +1699,7 @@
     move-result-object p1
 
     .line 10
-    new-instance p3, Lcom/vtosters/lite/upload/l/BatchUploadTask;
+    new-instance p3, Lcom/vtosters/lite/upload/l/f;
 
     const v0, 0x7f121017
 
@@ -1707,7 +1707,7 @@
 
     move-result-object v0
 
-    invoke-direct {p3, p2, v0}, Lcom/vtosters/lite/upload/l/BatchUploadTask;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {p3, p2, v0}, Lcom/vtosters/lite/upload/l/f;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     .line 11
     new-instance p2, Lcom/vtosters/lite/upload/UploadNotification$a;
@@ -1726,10 +1726,10 @@
 
     invoke-direct {p2, v0, v1, p1}, Lcom/vtosters/lite/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    invoke-static {p3, p2}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/UploadTask;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
+    invoke-static {p3, p2}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     .line 12
-    invoke-static {p3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
+    invoke-static {p3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     :cond_2
     return-void
@@ -1754,7 +1754,7 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->t0:Lcom/vk/dto/photo/PhotoAlbum;
 
     .line 2
-    invoke-super {p0, p1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->onAttach(Landroid/content/Context;)V
+    invoke-super {p0, p1}, Ld/a/a/a/i;->onAttach(Landroid/content/Context;)V
 
     .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -1778,7 +1778,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/photo/PhotoAlbum;->f:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lme/grishka/appkit/fragments/AppKitFragment;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p1}, Ld/a/a/a/h;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -1794,7 +1794,7 @@
     if-nez p1, :cond_0
 
     .line 6
-    invoke-virtual {p0, v0}, Lme/grishka/appkit/fragments/AppKitFragment;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Ld/a/a/a/h;->setHasOptionsMenu(Z)V
 
     .line 7
     :cond_0
@@ -1833,7 +1833,7 @@
     move-result v2
 
     .line 10
-    iget-boolean v3, p0, Lme/grishka/appkit/fragments/LoaderFragment;->Q:Z
+    iget-boolean v3, p0, Ld/a/a/a/j;->Q:Z
 
     if-nez v3, :cond_2
 
@@ -1845,7 +1845,7 @@
     if-nez v0, :cond_2
 
     .line 11
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/LoaderFragment;->W4()V
+    invoke-virtual {p0}, Ld/a/a/a/j;->W4()V
 
     .line 12
     :cond_2
@@ -1879,7 +1879,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/ActivityUtils;->a(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/n;->a(Landroid/app/Activity;Ljava/lang/String;)V
 
     if-nez p1, :cond_3
 
@@ -1890,7 +1890,7 @@
 
     const-string v0, "photo_album_group"
 
-    invoke-static {p1, v0}, Lcom/vk/profile/e/ProfileTracker1;->b(ILjava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/profile/e/f;->b(ILjava/lang/String;)V
 
     :cond_3
     return-void
@@ -1923,7 +1923,7 @@
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 6
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->C0:Landroid/content/BroadcastReceiver;
 
@@ -2007,7 +2007,7 @@
 
     iget v1, v1, Lcom/vk/dto/photo/PhotoAlbum;->b:I
 
-    invoke-static {v1}, Lcom/vtosters/lite/auth/VKAccountManager;->a(I)Z
+    invoke-static {v1}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result v1
 
@@ -2031,11 +2031,11 @@
 
     if-eqz v0, :cond_4
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
 
     move-result v1
 
@@ -2165,7 +2165,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/SubMenu;I)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/f0;->a(Landroid/view/SubMenu;I)V
 
     const/4 p2, 0x0
 
@@ -2229,10 +2229,10 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lme/grishka/appkit/fragments/LoaderFragment;->onDestroy()V
+    invoke-super {p0}, Ld/a/a/a/j;->onDestroy()V
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->C0:Landroid/content/BroadcastReceiver;
 
@@ -2259,17 +2259,17 @@
 
     .line 2
     :sswitch_0
-    new-instance p1, Lcom/vtosters/lite/fragments/photos/EditAlbumFragment$f;
+    new-instance p1, Lcom/vtosters/lite/fragments/photos/c$f;
 
-    invoke-direct {p1}, Lcom/vtosters/lite/fragments/photos/EditAlbumFragment$f;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/fragments/photos/c$f;-><init>()V
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->t0:Lcom/vk/dto/photo/PhotoAlbum;
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/fragments/photos/EditAlbumFragment$f;->a(Lcom/vk/dto/photo/PhotoAlbum;)Lcom/vtosters/lite/fragments/photos/EditAlbumFragment$f;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/fragments/photos/c$f;->a(Lcom/vk/dto/photo/PhotoAlbum;)Lcom/vtosters/lite/fragments/photos/c$f;
 
     const/16 v0, 0x2067
 
-    invoke-virtual {p1, p0, v0}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {p1, p0, v0}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return v1
 
@@ -2282,11 +2282,11 @@
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->t0:Lcom/vk/dto/photo/PhotoAlbum;
 
     .line 4
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
 
     move-result v2
 
@@ -2295,7 +2295,7 @@
     invoke-direct {v3, p0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$a;-><init>(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;)V
 
     .line 5
-    invoke-static {p1, v0, v2, v3}, Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment;->b(Landroid/content/Context;Lcom/vk/dto/photo/PhotoAlbum;ILcom/vk/common/g/F1;)V
+    invoke-static {p1, v0, v2, v3}, Lcom/vtosters/lite/fragments/photos/e;->b(Landroid/content/Context;Lcom/vk/dto/photo/PhotoAlbum;ILcom/vk/common/g/b;)V
 
     return v1
 
@@ -2316,7 +2316,7 @@
     .line 7
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->t0:Lcom/vk/dto/photo/PhotoAlbum;
 
-    invoke-static {v0}, Lcom/vk/utils/EntityLinkUtils;->a(Lcom/vk/dto/photo/PhotoAlbum;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/utils/c;->a(Lcom/vk/dto/photo/PhotoAlbum;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2325,7 +2325,7 @@
     const p1, 0x7f1205e1
 
     .line 8
-    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
 
     return v1
 
@@ -2363,7 +2363,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/VKRecyclerFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/f2;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -2378,13 +2378,13 @@
 
     if-nez p2, :cond_0
 
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p2
 
@@ -2395,13 +2395,13 @@
     if-eqz p2, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p2
 
-    new-instance v1, Lcom/vk/core/drawable/RecoloredDrawable;
+    new-instance v1, Lcom/vk/core/drawable/i;
 
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object v2
 
@@ -2415,12 +2415,12 @@
 
     move-result v3
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     invoke-virtual {p2, v1}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 4
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p2
 
@@ -2432,18 +2432,18 @@
 
     .line 5
     :cond_0
-    iget-object p2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     const/4 v1, 0x1
 
     invoke-virtual {p2, v1}, Lme/grishka/appkit/views/UsableRecyclerView;->setDrawSelectorOnTop(Z)V
 
     .line 6
-    iget-object p2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     const/high16 v1, -0x3fc00000    # -3.0f
 
-    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
 
     move-result v1
 
@@ -2452,19 +2452,19 @@
     invoke-virtual {p2, v2, v2, v1, v2}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     .line 7
-    iget-object p2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     const v1, 0x7f0802f7
 
     invoke-virtual {p2, v1}, Lme/grishka/appkit/views/UsableRecyclerView;->setSelector(I)V
 
     .line 8
-    iget-object p2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {p2, v2}, Landroid/view/ViewGroup;->setScrollBarStyle(I)V
 
     .line 9
-    iget-object p2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     new-instance v1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$d;
 
@@ -2504,7 +2504,7 @@
     if-nez p1, :cond_1
 
     .line 13
-    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p1, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -2532,15 +2532,15 @@
     .end annotation
 
     .line 2
-    invoke-super {p0, p1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->q(Ljava/util/List;)V
+    invoke-super {p0, p1}, Ld/a/a/a/i;->q(Ljava/util/List;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->y0:Lcom/vk/bridges/ImageViewer$d;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->y0:Lcom/vk/bridges/p$d;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {v0, p1}, Lcom/vk/bridges/ImageViewer$d;->a(Ljava/util/List;)V
+    invoke-interface {v0, p1}, Lcom/vk/bridges/p$d;->a(Ljava/util/List;)V
 
     .line 5
     :cond_0

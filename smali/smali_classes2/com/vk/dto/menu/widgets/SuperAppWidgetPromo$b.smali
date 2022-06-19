@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -63,7 +63,7 @@
 
     const-string v4, "obj.getJSONObject(\"button\")"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v3}, Lcom/vk/dto/menu/widgets/WidgetButton$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/menu/widgets/WidgetButton;
 
@@ -149,7 +149,7 @@
     .line 9
     new-instance v4, Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v4, v1, p1, v2, v3}, Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/menu/widgets/WidgetButton;Ljava/util/List;)V
 

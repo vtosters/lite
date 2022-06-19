@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/fragments/market/GoodFragment$g;
-.super Lcom/vk/stickers/StickersView$k;
+.super Lcom/vk/stickers/b0$k;
 .source "GoodFragment.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$g;->c:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-direct {p0}, Lcom/vk/stickers/StickersView$k;-><init>()V
+    invoke-direct {p0}, Lcom/vk/stickers/b0$k;-><init>()V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     iput v1, v0, Lcom/vtosters/lite/attachments/StickerAttachment;->e:I
 
     .line 3
-    sget v1, Lcom/vk/stickers/StickersConfig;->g:I
+    sget v1, Lcom/vk/stickers/v;->g:I
 
     invoke-virtual {p2, v1}, Lcom/vk/dto/stickers/StickerItem;->h(I)Ljava/lang/String;
 

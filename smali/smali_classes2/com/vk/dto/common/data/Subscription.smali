@@ -3,7 +3,7 @@
 .source "Subscription.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/Purchase1;
+.implements Lcom/vk/dto/common/data/e;
 
 
 # static fields
@@ -599,9 +599,9 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
+    sget-object v1, Lb/h/h/a;->b:Lb/h/h/a$a;
 
-    invoke-interface {v1}, Lb/h/h/ModelConfig$a;->c()I
+    invoke-interface {v1}, Lb/h/h/a$a;->c()I
 
     move-result v1
 

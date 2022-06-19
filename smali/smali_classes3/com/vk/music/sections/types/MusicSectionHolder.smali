@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/sections/types/MusicSectionHolder;
-.super Lcom/vk/music/ui/common/MusicViewHolder;
+.super Lcom/vk/music/ui/common/o;
 .source "MusicSectionHolder.kt"
 
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/music/ui/common/MusicViewHolder<",
+        "Lcom/vk/music/ui/common/o<",
         "Lcom/vk/dto/music/Section;",
         ">;"
     }
@@ -48,14 +48,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/sections/types/MusicSectionHolder$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/sections/types/MusicSectionHolder$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/music/sections/types/MusicSectionHolder;->B:Lcom/vk/music/sections/types/MusicSectionHolder$b;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;IILcom/vk/music/sections/MusicSectionsModel;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;)V
+.method public constructor <init>(Landroid/view/ViewGroup;IILcom/vk/music/sections/f;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;)V
     .locals 7
     .param p3    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -75,7 +75,7 @@
     move-object v2, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/common/MusicViewHolder;-><init>(ILandroid/view/ViewGroup;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/common/o;-><init>(ILandroid/view/ViewGroup;ZILkotlin/jvm/internal/i;)V
 
     .line 2
     sget-object p1, Lcom/vk/music/sections/types/MusicSectionHolder;->B:Lcom/vk/music/sections/types/MusicSectionHolder$b;
@@ -123,7 +123,7 @@
 
     const-string p2, "itemView.findViewById(R.id.section_show_all_btn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->b:Landroid/view/View;
 
@@ -152,7 +152,7 @@
 
     iget-object p2, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->d:Lcom/vk/dto/music/Section$Type;
 
-    invoke-direct {p1, p2, p4}, Lcom/vk/music/sections/types/MusicSectionAdapter;-><init>(Lcom/vk/dto/music/Section$Type;Lcom/vk/music/sections/MusicSectionsModel;)V
+    invoke-direct {p1, p2, p4}, Lcom/vk/music/sections/types/MusicSectionAdapter;-><init>(Lcom/vk/dto/music/Section$Type;Lcom/vk/music/sections/f;)V
 
     iput-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->g:Lcom/vk/music/sections/types/MusicSectionAdapter;
 
@@ -169,9 +169,9 @@
 
     .line 10
     :cond_0
-    new-instance p1, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
+    new-instance p1, Lcom/vk/music/ui/track/b/f;
 
-    invoke-interface {p4}, Lcom/vk/music/sections/MusicSectionsModel;->r0()Lcom/vk/music/player/PlayerModel;
+    invoke-interface {p4}, Lcom/vk/music/sections/f;->r0()Lcom/vk/music/player/d;
 
     move-result-object v1
 
@@ -187,10 +187,10 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;-><init>(Lcom/vk/music/player/PlayerModel;Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions1;Landroid/os/Handler;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/music/ui/track/b/f;-><init>(Lcom/vk/music/player/d;Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/c;Landroid/os/Handler;ILkotlin/jvm/internal/i;)V
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;->b()V
+    invoke-virtual {p1}, Lcom/vk/music/ui/track/b/f;->b()V
 
     .line 12
     :cond_1
@@ -204,7 +204,7 @@
 
     const-string p2, "itemView.findViewById(R.id.recycle)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -225,9 +225,9 @@
     .line 15
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->h:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance p3, Lcom/vk/music/sections/HorizontalScrollHelper;
+    new-instance p3, Lcom/vk/music/sections/a;
 
-    invoke-direct {p3}, Lcom/vk/music/sections/HorizontalScrollHelper;-><init>()V
+    invoke-direct {p3}, Lcom/vk/music/sections/a;-><init>()V
 
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->addOnItemTouchListener(Landroidx/recyclerview/widget/RecyclerView$OnItemTouchListener;)V
 
@@ -317,13 +317,13 @@
     .line 21
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->h:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance p3, Lcom/vk/lists/l0/SpacesItemDecoration;
+    new-instance p3, Lcom/vk/lists/l0/c;
 
     invoke-static {v0}, Lcom/vk/core/util/Screen;->a(F)I
 
     move-result v0
 
-    invoke-direct {p3, v0}, Lcom/vk/lists/l0/SpacesItemDecoration;-><init>(I)V
+    invoke-direct {p3, v0}, Lcom/vk/lists/l0/c;-><init>(I)V
 
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -409,13 +409,13 @@
     .line 27
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->h:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v1, Lcom/vk/lists/l0/SpacesItemDecoration;
+    new-instance v1, Lcom/vk/lists/l0/c;
 
     invoke-static {v0}, Lcom/vk/core/util/Screen;->a(F)I
 
     move-result v0
 
-    invoke-direct {v1, v0}, Lcom/vk/lists/l0/SpacesItemDecoration;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vk/lists/l0/c;-><init>(I)V
 
     invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -472,13 +472,13 @@
     .line 31
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->h:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance p3, Lcom/vk/lists/l0/SpacesItemDecoration;
+    new-instance p3, Lcom/vk/lists/l0/c;
 
     invoke-static {v0}, Lcom/vk/core/util/Screen;->a(F)I
 
     move-result v0
 
-    invoke-direct {p3, v0}, Lcom/vk/lists/l0/SpacesItemDecoration;-><init>(I)V
+    invoke-direct {p3, v0}, Lcom/vk/lists/l0/c;-><init>(I)V
 
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -661,7 +661,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p3
 
@@ -684,13 +684,13 @@
     .line 44
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->h:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance p3, Lcom/vk/lists/l0/SpacesItemDecoration;
+    new-instance p3, Lcom/vk/lists/l0/c;
 
     invoke-static {v0}, Lcom/vk/core/util/Screen;->a(F)I
 
     move-result v0
 
-    invoke-direct {p3, v0}, Lcom/vk/lists/l0/SpacesItemDecoration;-><init>(I)V
+    invoke-direct {p3, v0}, Lcom/vk/lists/l0/c;-><init>(I)V
 
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -725,7 +725,7 @@
     .line 46
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->c:Landroid/widget/TextView;
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -756,7 +756,7 @@
     :cond_5
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->c:Landroid/widget/TextView;
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -787,7 +787,7 @@
     :cond_8
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->c:Landroid/widget/TextView;
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -845,7 +845,7 @@
     .locals 5
 
     .line 22
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->d0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->d0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -883,20 +883,20 @@
 
     iget-object v0, v0, Lcom/vk/dto/music/Section;->e:Ljava/lang/String;
 
-    invoke-static {v1, v2, v3, v0}, Lcom/vtosters/lite/fragments/y2/VideoAlbumFragment;->a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Lcom/vk/navigation/Navigator;
+    invoke-static {v1, v2, v3, v0}, Lcom/vtosters/lite/fragments/y2/t;->a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Lcom/vk/navigation/o;
 
     move-result-object v0
 
     .line 25
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 26
     :pswitch_1
-    new-instance v1, Lcom/vk/music/fragment/PlaylistsFragment$b;
+    new-instance v1, Lcom/vk/music/fragment/m$b;
 
-    invoke-direct {v1}, Lcom/vk/music/fragment/PlaylistsFragment$b;-><init>()V
+    invoke-direct {v1}, Lcom/vk/music/fragment/m$b;-><init>()V
 
     .line 27
     iget-object v2, v0, Lcom/vk/dto/music/Section;->e:Ljava/lang/String;
@@ -905,39 +905,39 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/fragment/PlaylistsFragment$b;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lcom/vk/music/fragment/PlaylistsFragment$b;
+    invoke-virtual {v1, v2}, Lcom/vk/music/fragment/m$b;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lcom/vk/music/fragment/m$b;
 
     .line 28
     iget-object v2, v0, Lcom/vk/dto/music/Section;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/fragment/PlaylistsFragment$b;->a(Ljava/lang/String;)Lcom/vk/music/fragment/PlaylistsFragment$b;
+    invoke-virtual {v1, v2}, Lcom/vk/music/fragment/m$b;->a(Ljava/lang/String;)Lcom/vk/music/fragment/m$b;
 
     .line 29
     iget-object v2, v0, Lcom/vk/dto/music/Section;->F:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/fragment/PlaylistsFragment$b;->b(Ljava/lang/String;)Lcom/vk/music/fragment/PlaylistsFragment$b;
+    invoke-virtual {v1, v2}, Lcom/vk/music/fragment/m$b;->b(Ljava/lang/String;)Lcom/vk/music/fragment/m$b;
 
     .line 30
     iget-object v0, v0, Lcom/vk/dto/music/Section;->c:Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Lcom/vk/music/fragment/PlaylistsFragment$b;->c(Ljava/lang/String;)Lcom/vk/music/fragment/PlaylistsFragment$b;
+    invoke-virtual {v1, v0}, Lcom/vk/music/fragment/m$b;->c(Ljava/lang/String;)Lcom/vk/music/fragment/m$b;
 
     .line 31
-    invoke-virtual {v1, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 32
     :pswitch_2
-    new-instance v1, Lcom/vk/music/artists/list/MusicCatalogCustomImagesBlockFragment$a;
+    new-instance v1, Lcom/vk/music/artists/list/a$a;
 
     iget-object v3, v0, Lcom/vk/dto/music/Section;->a:Ljava/lang/String;
 
     const-string v4, "it.id"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v3}, Lcom/vk/music/artists/list/MusicCatalogCustomImagesBlockFragment$a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v3}, Lcom/vk/music/artists/list/a$a;-><init>(Ljava/lang/String;)V
 
     .line 33
     iget-object v3, v0, Lcom/vk/dto/music/Section;->b:Lcom/vk/dto/music/Section$Type;
@@ -949,42 +949,42 @@
     const/4 v2, 0x1
 
     :cond_1
-    invoke-virtual {v1, v2}, Lcom/vk/music/artists/list/MusicCatalogCustomImagesBlockFragment$a;->c(Z)Lcom/vk/music/artists/list/MusicCatalogCustomImagesBlockFragment$a;
+    invoke-virtual {v1, v2}, Lcom/vk/music/artists/list/a$a;->c(Z)Lcom/vk/music/artists/list/a$a;
 
     .line 34
     iget-object v2, v0, Lcom/vk/dto/music/Section;->e:Ljava/lang/String;
 
     const-string v3, "it.source"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/artists/list/MusicCatalogCustomImagesBlockFragment$a;->a(Ljava/lang/String;)Lcom/vk/music/artists/list/MusicCatalogCustomImagesBlockFragment$a;
+    invoke-virtual {v1, v2}, Lcom/vk/music/artists/list/a$a;->a(Ljava/lang/String;)Lcom/vk/music/artists/list/a$a;
 
     .line 35
     iget-object v0, v0, Lcom/vk/dto/music/Section;->c:Ljava/lang/String;
 
     const-string v2, "it.title"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/music/artists/list/MusicCatalogCustomImagesBlockFragment$a;->b(Ljava/lang/String;)Lcom/vk/music/artists/list/MusicCatalogCustomImagesBlockFragment$a;
+    invoke-virtual {v1, v0}, Lcom/vk/music/artists/list/a$a;->b(Ljava/lang/String;)Lcom/vk/music/artists/list/a$a;
 
     .line 36
-    invoke-virtual {v1, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 37
     :pswitch_3
-    new-instance v1, Lcom/vk/music/fragment/MusicFragment$f;
+    new-instance v1, Lcom/vk/music/fragment/k$f;
 
-    invoke-direct {v1}, Lcom/vk/music/fragment/MusicFragment$f;-><init>()V
+    invoke-direct {v1}, Lcom/vk/music/fragment/k$f;-><init>()V
 
     .line 38
-    invoke-virtual {v1, v0}, Lcom/vk/music/fragment/MusicFragment$f;->a(Lcom/vk/dto/music/Section;)Lcom/vk/music/fragment/MusicFragment$f;
+    invoke-virtual {v1, v0}, Lcom/vk/music/fragment/k$f;->a(Lcom/vk/dto/music/Section;)Lcom/vk/music/fragment/k$f;
 
     .line 39
-    invoke-virtual {v1, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     :cond_2
     :goto_0
@@ -1104,7 +1104,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/music/Section;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->f:Landroid/widget/TextView;
@@ -1113,7 +1113,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->h:Landroidx/recyclerview/widget/RecyclerView;
@@ -1172,13 +1172,13 @@
 
     aput-object v3, v2, v1
 
-    invoke-static {v2}, Lcom/vk/core/util/CollectionUtils;->a([Ljava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/vk/core/util/o;->a([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object v1
 
     const-string v2, "CollectionUtils.arrayOf<Artist>(item.artist)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, p1}, Lcom/vk/music/sections/types/MusicSectionAdapter;->a(Ljava/util/ArrayList;Lcom/vk/dto/music/Section;)V
 
@@ -1297,7 +1297,7 @@
     :pswitch_7
     iget-object v0, p1, Lcom/vk/dto/music/Section;->E:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/vk/core/util/CollectionUtils;->b(Ljava/util/Collection;)I
+    invoke-static {v0}, Lcom/vk/core/util/o;->b(Ljava/util/Collection;)I
 
     move-result v0
 
@@ -1346,7 +1346,7 @@
     :pswitch_9
     iget-object v0, p1, Lcom/vk/dto/music/Section;->h:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/vk/core/util/CollectionUtils;->b(Ljava/util/Collection;)I
+    invoke-static {v0}, Lcom/vk/core/util/o;->b(Ljava/util/Collection;)I
 
     move-result v0
 

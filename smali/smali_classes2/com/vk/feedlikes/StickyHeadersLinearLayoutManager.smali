@@ -5,7 +5,7 @@
 # interfaces
 .implements Lcom/vk/core/ui/themes/VKThemeHelper$a;
 .implements Lcom/vk/newsfeed/EntriesListFragment$c;
-.implements Lcom/vk/lists/LastVisiblePositionProvider;
+.implements Lcom/vk/lists/n;
 
 
 # annotations
@@ -21,12 +21,12 @@
         "<T:",
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
         "*>;:",
-        "Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;",
+        "Lcom/vk/feedlikes/b;",
         ">",
         "Landroidx/recyclerview/widget/LinearLayoutManager;",
         "Lcom/vk/core/ui/themes/VKThemeHelper$a;",
         "Lcom/vk/newsfeed/EntriesListFragment$c;",
-        "Lcom/vk/lists/LastVisiblePositionProvider;"
+        "Lcom/vk/lists/n;"
     }
 .end annotation
 
@@ -167,7 +167,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
@@ -218,7 +218,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
@@ -308,7 +308,7 @@
     :cond_3
     iget-object v5, p0, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager;->g:Landroid/view/View;
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -424,7 +424,7 @@
 
     .line 31
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -446,9 +446,9 @@
 
     if-eqz p3, :cond_7
 
-    check-cast p3, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;
+    check-cast p3, Lcom/vk/feedlikes/b;
 
-    invoke-interface {p3, p1}, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;->B(I)Z
+    invoke-interface {p3, p1}, Lcom/vk/feedlikes/b;->B(I)Z
 
     move-result p3
 
@@ -518,14 +518,14 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 15
     :cond_1
     :goto_0
-    instance-of v0, p1, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;
+    instance-of v0, p1, Lcom/vk/feedlikes/b;
 
     if-eqz v0, :cond_3
 
@@ -550,7 +550,7 @@
 
     .line 19
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -604,9 +604,9 @@
 
     if-eqz v1, :cond_2
 
-    check-cast v1, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;
+    check-cast v1, Lcom/vk/feedlikes/b;
 
-    invoke-interface {v1, v0}, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;->b(Landroid/view/View;)V
+    invoke-interface {v1, v0}, Lcom/vk/feedlikes/b;->b(Landroid/view/View;)V
 
     :cond_2
     if-eqz v0, :cond_3
@@ -676,7 +676,7 @@
 
     .line 70
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -686,7 +686,7 @@
 
     .line 71
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -728,7 +728,7 @@
 
     const-string v6, "getChildAt(i) ?: continue"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 41
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -806,7 +806,7 @@
     :goto_2
     const-string v8, "if (headerIndex != -1) h\u2026ions[headerIndex] else -1"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
@@ -835,7 +835,7 @@
     :goto_3
     const-string v6, "if (headerCount > header\u2026[headerIndex + 1] else -1"
 
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -885,12 +885,12 @@
 
     .line 51
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
@@ -909,7 +909,7 @@
     goto :goto_5
 
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
@@ -931,7 +931,7 @@
     goto :goto_6
 
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
@@ -992,29 +992,29 @@
     return-void
 
     :cond_10
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
     :cond_11
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
     .line 60
     :cond_12
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
     :cond_13
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
     .line 61
     :cond_14
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
@@ -1314,14 +1314,14 @@
 
     .line 4
     :goto_0
-    instance-of v0, p1, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;
+    instance-of v0, p1, Lme/grishka/appkit/views/b;
 
     if-eqz v0, :cond_0
 
     .line 5
-    check-cast p1, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;
+    check-cast p1, Lme/grishka/appkit/views/b;
 
-    invoke-virtual {p1}, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->j()Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {p1}, Lme/grishka/appkit/views/b;->j()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p1
 
@@ -1329,14 +1329,14 @@
 
     .line 6
     :cond_0
-    instance-of v0, p1, Lcom/vk/lists/PaginatedRecyclerAdapter;
+    instance-of v0, p1, Lcom/vk/lists/s;
 
     if-eqz v0, :cond_1
 
     .line 7
-    check-cast p1, Lcom/vk/lists/PaginatedRecyclerAdapter;
+    check-cast p1, Lcom/vk/lists/s;
 
-    iget-object p1, p1, Lcom/vk/lists/PaginatedRecyclerAdapter;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object p1, p1, Lcom/vk/lists/s;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     goto :goto_0
 
@@ -1375,16 +1375,16 @@
 
     const-string v0, "recycler.getViewForPosition(position)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager;->b:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;
+    check-cast v0, Lcom/vk/feedlikes/b;
 
-    invoke-interface {v0, p1}, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;->a(Landroid/view/View;)V
+    invoke-interface {v0, p1}, Lcom/vk/feedlikes/b;->a(Landroid/view/View;)V
 
     .line 10
     :cond_0
@@ -1576,7 +1576,7 @@
 
     move-result v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(II)I
 
     move-result v3
 
@@ -1602,7 +1602,7 @@
 
     move-result v1
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(II)I
 
     move-result v1
 
@@ -1701,7 +1701,7 @@
 
     .line 7
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -1743,7 +1743,7 @@
 
     move-result v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(II)I
 
     move-result v3
 
@@ -1781,7 +1781,7 @@
 
     move-result v1
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(II)I
 
     move-result v1
 
@@ -1862,7 +1862,7 @@
 
     move-result v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(II)I
 
     move-result v3
 
@@ -1886,7 +1886,7 @@
 
     move-result v1
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(II)I
 
     move-result v1
 
@@ -1954,9 +1954,9 @@
 
     if-eqz v1, :cond_0
 
-    check-cast v1, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;
+    check-cast v1, Lcom/vk/feedlikes/b;
 
-    invoke-interface {v1, v0, p1}, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;->a(Landroid/view/View;Lcom/vk/core/ui/themes/VKTheme;)V
+    invoke-interface {v1, v0, p1}, Lcom/vk/feedlikes/b;->a(Landroid/view/View;Lcom/vk/core/ui/themes/VKTheme;)V
 
     :cond_0
     return-void
@@ -2262,7 +2262,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -2423,7 +2423,7 @@
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
 
     .line 4
     invoke-virtual {p1}, Landroid/view/View;->clearFocus()V

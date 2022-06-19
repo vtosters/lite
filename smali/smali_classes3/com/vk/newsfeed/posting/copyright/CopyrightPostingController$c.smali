@@ -3,7 +3,7 @@
 .source "CopyrightPostingController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Landroid/content/DialogInterface;",
         "Ljava/lang/CharSequence;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController$c;->a(Landroid/content/DialogInterface;Ljava/lang/CharSequence;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

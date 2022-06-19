@@ -41,11 +41,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity$a;->a:Lcom/vk/attachpicker/PhotoVideoAttachActivity;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/SelectionContext;
+    invoke-static {p1}, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->d()Landroid/content/Intent;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->d()Landroid/content/Intent;
 
     move-result-object v0
 

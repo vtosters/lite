@@ -3,7 +3,7 @@
 .source "FragmentManagerImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/core/fragments/FragmentManagerImplSimple;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/core/fragments/f;",
         ">;"
     }
 .end annotation
@@ -45,15 +45,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/fragments/FragmentManagerImplSimple;
+.method public final invoke()Lcom/vk/core/fragments/f;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/core/fragments/FragmentManagerImplSimple;
+    new-instance v0, Lcom/vk/core/fragments/f;
 
     iget-object v1, p0, Lcom/vk/core/fragments/FragmentManagerImpl$simple$2;->this$0:Lcom/vk/core/fragments/FragmentManagerImpl;
 
-    invoke-direct {v0, v1}, Lcom/vk/core/fragments/FragmentManagerImplSimple;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/fragments/f;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentManagerImpl$simple$2;->invoke()Lcom/vk/core/fragments/FragmentManagerImplSimple;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentManagerImpl$simple$2;->invoke()Lcom/vk/core/fragments/f;
 
     move-result-object v0
 

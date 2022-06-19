@@ -3,7 +3,7 @@
 .source "LinkProcessor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     invoke-virtual {p0}, Lcom/vk/common/links/LinkProcessorKt$openFave$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -67,7 +67,7 @@
 
     const-string v1, "likes_photo"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -127,34 +127,34 @@
     if-eqz v0, :cond_5
 
     .line 5
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
     .line 6
-    new-instance v0, Lcom/vk/feedlikes/d/FeedLikesPhotoFragment$a;
+    new-instance v0, Lcom/vk/feedlikes/d/c$a;
 
-    invoke-direct {v0}, Lcom/vk/feedlikes/d/FeedLikesPhotoFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/feedlikes/d/c$a;-><init>()V
 
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$openFave$1;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_2
 
     .line 7
     :cond_4
-    new-instance v0, Lcom/vk/feedlikes/d/FavePhotoListFragment$a;
+    new-instance v0, Lcom/vk/feedlikes/d/a$a;
 
-    invoke-direct {v0}, Lcom/vk/feedlikes/d/FavePhotoListFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/feedlikes/d/a$a;-><init>()V
 
-    invoke-virtual {v0}, Lcom/vk/feedlikes/d/FavePhotoListFragment$a;->h()Lcom/vk/feedlikes/d/FavePhotoListFragment$a;
+    invoke-virtual {v0}, Lcom/vk/feedlikes/d/a$a;->h()Lcom/vk/feedlikes/d/a$a;
 
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$openFave$1;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_2
 
@@ -176,7 +176,7 @@
 
     const-string v1, "links"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -199,7 +199,7 @@
     .line 14
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$openFave$1;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_2
 
@@ -209,7 +209,7 @@
 
     const-string v1, "articles"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -232,7 +232,7 @@
     .line 20
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$openFave$1;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_2
 
@@ -254,7 +254,7 @@
     .line 25
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$openFave$1;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     :goto_2
     return-void

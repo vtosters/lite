@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/single/SingleObserveOn;
-.super Lio/reactivex/Single;
+.super Lc/a/t;
 .source "SingleObserveOn.java"
 
 
@@ -15,72 +15,72 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/Single<",
+        "Lc/a/t<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Lio/reactivex/SingleSource;
+.field final a:Lc/a/x;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/SingleSource<",
+            "Lc/a/x<",
             "TT;>;"
         }
     .end annotation
 .end field
 
-.field final b:Lio/reactivex/Scheduler;
+.field final b:Lc/a/s;
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/SingleSource;Lio/reactivex/Scheduler;)V
+.method public constructor <init>(Lc/a/x;Lc/a/s;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/SingleSource<",
+            "Lc/a/x<",
             "TT;>;",
-            "Lio/reactivex/Scheduler;",
+            "Lc/a/s;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
+    invoke-direct {p0}, Lc/a/t;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleObserveOn;->a:Lio/reactivex/SingleSource;
+    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleObserveOn;->a:Lc/a/x;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleObserveOn;->b:Lio/reactivex/Scheduler;
+    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleObserveOn;->b:Lc/a/s;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lio/reactivex/SingleObserver;)V
+.method protected b(Lc/a/v;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/SingleObserver<",
+            "Lc/a/v<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleObserveOn;->a:Lio/reactivex/SingleSource;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleObserveOn;->a:Lc/a/x;
 
     new-instance v1, Lio/reactivex/internal/operators/single/SingleObserveOn$ObserveOnSingleObserver;
 
-    iget-object v2, p0, Lio/reactivex/internal/operators/single/SingleObserveOn;->b:Lio/reactivex/Scheduler;
+    iget-object v2, p0, Lio/reactivex/internal/operators/single/SingleObserveOn;->b:Lc/a/s;
 
-    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/single/SingleObserveOn$ObserveOnSingleObserver;-><init>(Lio/reactivex/SingleObserver;Lio/reactivex/Scheduler;)V
+    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/single/SingleObserveOn$ObserveOnSingleObserver;-><init>(Lc/a/v;Lc/a/s;)V
 
-    invoke-interface {v0, v1}, Lio/reactivex/SingleSource;->a(Lio/reactivex/SingleObserver;)V
+    invoke-interface {v0, v1}, Lc/a/x;->a(Lc/a/v;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "ImUiModule.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/ImUiModule;->a(ILcom/vk/core/ui/w/VkViewPoolProvider;)Lcom/vk/core/ui/w/VkViewPoolProvider;
+    value = Lcom/vk/im/ui/ImUiModule;->a(ILcom/vk/core/ui/w/b;)Lcom/vk/core/ui/w/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/content/Context;",
         "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter;",
         ">;"
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $keyboard:Lcom/vk/core/ui/w/VkViewPoolProvider;
+.field final synthetic $keyboard:Lcom/vk/core/ui/w/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/ui/w/VkViewPoolProvider;)V
+.method constructor <init>(Lcom/vk/core/ui/w/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/ui/ImUiModule$getCarouselViewPool$1;->$keyboard:Lcom/vk/core/ui/w/VkViewPoolProvider;
+    iput-object p1, p0, Lcom/vk/im/ui/ImUiModule$getCarouselViewPool$1;->$keyboard:Lcom/vk/core/ui/w/b;
 
     const/4 p1, 0x1
 
@@ -58,11 +58,11 @@
 
     const-string v1, "LayoutInflater.from(it)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/im/ui/ImUiModule$getCarouselViewPool$1;->$keyboard:Lcom/vk/core/ui/w/VkViewPoolProvider;
+    iget-object v1, p0, Lcom/vk/im/ui/ImUiModule$getCarouselViewPool$1;->$keyboard:Lcom/vk/core/ui/w/b;
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/w/VkViewPoolProvider;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
+    invoke-virtual {v1}, Lcom/vk/core/ui/w/b;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     move-result-object v1
 

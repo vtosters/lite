@@ -159,9 +159,9 @@
     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 4
-    new-instance v1, Lcom/vk/navigation/Navigator;
+    new-instance v1, Lcom/vk/navigation/o;
 
-    invoke-direct {v1, p2, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {v1, p2, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     new-instance p2, Lcom/vtosters/lite/TabletDialogActivity$b;
 
@@ -172,7 +172,7 @@
     const/high16 v0, 0x439c0000    # 312.0f
 
     .line 5
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -181,7 +181,7 @@
     const/high16 v0, 0x42000000    # 32.0f
 
     .line 6
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -201,10 +201,10 @@
     invoke-virtual {p2, p3}, Lcom/vtosters/lite/TabletDialogActivity$b;->g(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     .line 10
-    invoke-virtual {v1, p2}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/navigation/Navigator$a;)Lcom/vk/navigation/Navigator;
+    invoke-virtual {v1, p2}, Lcom/vk/navigation/o;->a(Lcom/vk/navigation/o$a;)Lcom/vk/navigation/o;
 
     .line 11
-    invoke-virtual {v1, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     return-void
 .end method

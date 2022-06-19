@@ -40,7 +40,7 @@
     const-string p1, "event"
 
     .line 1
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -203,7 +203,7 @@
     .line 11
     iget-object v2, p0, Lcom/vk/cameraui/CameraUIView$c0;->a:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-virtual {v2}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/Camera1View;
+    invoke-virtual {v2}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/c;
 
     move-result-object v2
 
@@ -211,7 +211,7 @@
 
     iget-object v3, p0, Lcom/vk/cameraui/CameraUIView$c0;->a:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-virtual {v3}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/Camera1View;
+    invoke-virtual {v3}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/c;
 
     move-result-object v3
 
@@ -219,7 +219,7 @@
 
     if-eqz v3, :cond_3
 
-    invoke-virtual {v3}, Lcom/vk/camera/Camera1View;->getZoomLevel()F
+    invoke-virtual {v3}, Lcom/vk/camera/c;->getZoomLevel()F
 
     move-result v3
 
@@ -241,12 +241,12 @@
 
     add-float/2addr v3, p1
 
-    invoke-virtual {v2, v3}, Lcom/vk/camera/Camera1View;->setZoomLevel(F)V
+    invoke-virtual {v2, v3}, Lcom/vk/camera/c;->setZoomLevel(F)V
 
     goto :goto_1
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
@@ -382,23 +382,23 @@
     :cond_a
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIView$c0;->a:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {p1}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {p1}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->d()Lcom/vk/libvideo/live/views/broadcast/BroadcastView;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_b
-
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/broadcast/BroadcastView;->getWrite()Lcom/vk/libvideo/live/views/write/WriteContract1;
+    invoke-virtual {p1}, Lcom/vk/cameraui/f;->d()Lcom/vk/libvideo/live/views/broadcast/e;
 
     move-result-object p1
 
     if-eqz p1, :cond_b
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/write/WriteContract1;->o()Z
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/broadcast/e;->getWrite()Lcom/vk/libvideo/live/views/write/b;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/write/b;->o()Z
 
     .line 25
     :cond_b

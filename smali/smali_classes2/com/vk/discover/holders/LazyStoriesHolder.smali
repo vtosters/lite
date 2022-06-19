@@ -1,10 +1,10 @@
 .class public final Lcom/vk/discover/holders/LazyStoriesHolder;
-.super Lcom/vk/discover/holders/BaseDiscoverHolder;
+.super Lcom/vk/discover/holders/d;
 .source "LazyStoriesHolder.kt"
 
 # interfaces
-.implements Lcom/vk/stories/holders/StoriesItemHolder1;
-.implements Lcom/vk/navigation/ScrolledToTop;
+.implements Lcom/vk/stories/holders/c;
+.implements Lcom/vk/navigation/v;
 .implements Landroid/view/View$OnClickListener;
 .implements Lcom/vk/newsfeed/StoriesBlocksEventController$a;
 
@@ -19,7 +19,7 @@
 
 
 # static fields
-.field static final synthetic N:[Lkotlin/u/KProperty5;
+.field static final synthetic N:[Lkotlin/u/j;
 
 .field private static final O:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
@@ -37,23 +37,23 @@
 
 .field private final C:Landroid/view/View;
 
-.field private final D:Lkotlin/Lazy2;
+.field private final D:Lkotlin/e;
 
-.field private final E:Lkotlin/Lazy2;
+.field private final E:Lkotlin/e;
 
-.field private final F:Lkotlin/Lazy2;
+.field private final F:Lkotlin/e;
 
-.field private final G:Lkotlin/Lazy2;
+.field private final G:Lkotlin/e;
 
-.field private final H:Lkotlin/Lazy2;
+.field private final H:Lkotlin/e;
 
-.field private final I:Lkotlin/Lazy2;
+.field private final I:Lkotlin/e;
 
 .field private final J:I
 
 .field private final K:[Landroid/graphics/RectF;
 
-.field private final L:Lcom/vk/discover/DiscoverAdapter;
+.field private final L:Lcom/vk/discover/b;
 
 .field private final M:Z
 
@@ -72,13 +72,13 @@
 
     const/4 v0, 0x6
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -86,9 +86,9 @@
 
     const-string v4, "getWidth()F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
@@ -98,7 +98,7 @@
 
     const-class v2, Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -106,9 +106,9 @@
 
     const-string v4, "getHeight()F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x1
 
@@ -118,7 +118,7 @@
 
     const-class v2, Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -126,9 +126,9 @@
 
     const-string v4, "getPaddingSide()F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x2
 
@@ -138,7 +138,7 @@
 
     const-class v2, Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -146,9 +146,9 @@
 
     const-string v4, "getPaddingBottom()F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x3
 
@@ -158,7 +158,7 @@
 
     const-class v2, Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -166,9 +166,9 @@
 
     const-string v4, "getBlockPadding()F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x4
 
@@ -178,7 +178,7 @@
 
     const-class v2, Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -186,21 +186,21 @@
 
     const-string v4, "getCorners()F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x5
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/discover/holders/LazyStoriesHolder$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/discover/holders/LazyStoriesHolder$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/discover/holders/LazyStoriesHolder$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Ljava/util/HashSet;
@@ -212,7 +212,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/discover/DiscoverAdapter;Z)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/discover/b;Z)V
     .locals 9
 
     .line 1
@@ -224,9 +224,9 @@
 
     invoke-direct {v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0, p1}, Lcom/vk/discover/holders/BaseDiscoverHolder;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/discover/holders/d;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->L:Lcom/vk/discover/DiscoverAdapter;
+    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->L:Lcom/vk/discover/b;
 
     iput-boolean p3, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->M:Z
 
@@ -246,7 +246,7 @@
 
     const-string p3, "discover_full"
 
-    invoke-virtual {p2, p1, p0, p3}, Lcom/vk/stories/holders/StoriesBlockHolder$a;->a(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoriesItemHolder1;Ljava/lang/String;)Lcom/vk/stories/holders/StoriesBlockHolder;
+    invoke-virtual {p2, p1, p0, p3}, Lcom/vk/stories/holders/StoriesBlockHolder$a;->a(Landroid/view/ViewGroup;Lcom/vk/stories/holders/c;Ljava/lang/String;)Lcom/vk/stories/holders/StoriesBlockHolder;
 
     move-result-object p2
 
@@ -275,7 +275,7 @@
     aput-object v1, v0, v2
 
     .line 6
-    new-instance v1, Lcom/vk/core/drawable/RecoloredDrawable;
+    new-instance v1, Lcom/vk/core/drawable/i;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -293,7 +293,7 @@
 
     move-result v4
 
-    invoke-direct {v1, v3, v4}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v1, v3, v4}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     const/4 v3, 0x1
 
@@ -353,7 +353,7 @@
     const-string v0, "LayoutInflater.from(cont\u2026stener { rebind() }\n    }"
 
     .line 12
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->C:Landroid/view/View;
 
@@ -362,58 +362,58 @@
 
     invoke-direct {p2, p0}, Lcom/vk/discover/holders/LazyStoriesHolder$width$2;-><init>(Lcom/vk/discover/holders/LazyStoriesHolder;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->D:Lkotlin/Lazy2;
+    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->D:Lkotlin/e;
 
     .line 14
     new-instance p2, Lcom/vk/discover/holders/LazyStoriesHolder$height$2;
 
     invoke-direct {p2, p0}, Lcom/vk/discover/holders/LazyStoriesHolder$height$2;-><init>(Lcom/vk/discover/holders/LazyStoriesHolder;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->E:Lkotlin/Lazy2;
+    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->E:Lkotlin/e;
 
     .line 15
     sget-object p2, Lcom/vk/discover/holders/LazyStoriesHolder$paddingSide$2;->a:Lcom/vk/discover/holders/LazyStoriesHolder$paddingSide$2;
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->F:Lkotlin/Lazy2;
+    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->F:Lkotlin/e;
 
     .line 16
     sget-object p2, Lcom/vk/discover/holders/LazyStoriesHolder$paddingBottom$2;->a:Lcom/vk/discover/holders/LazyStoriesHolder$paddingBottom$2;
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->G:Lkotlin/Lazy2;
+    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->G:Lkotlin/e;
 
     .line 17
     sget-object p2, Lcom/vk/discover/holders/LazyStoriesHolder$blockPadding$2;->a:Lcom/vk/discover/holders/LazyStoriesHolder$blockPadding$2;
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->H:Lkotlin/Lazy2;
+    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->H:Lkotlin/e;
 
     .line 18
     sget-object p2, Lcom/vk/discover/holders/LazyStoriesHolder$corners$2;->a:Lcom/vk/discover/holders/LazyStoriesHolder$corners$2;
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->I:Lkotlin/Lazy2;
+    iput-object p2, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->I:Lkotlin/e;
 
     const/16 p2, 0xa
 
@@ -521,7 +521,7 @@
 
     const-string v1, "container.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p1, p0}, Lcom/vk/discover/holders/LazyStoriesHolder$c;-><init>(Landroid/content/Context;Lcom/vk/discover/holders/LazyStoriesHolder;)V
 
@@ -648,15 +648,15 @@
 .method private final j0()F
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->H:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->H:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/j;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -672,15 +672,15 @@
 .method private final k0()F
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->I:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->I:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/j;
 
     const/4 v2, 0x5
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -696,15 +696,15 @@
 .method private final l0()F
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->E:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->E:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -720,15 +720,15 @@
 .method private final m0()F
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->G:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->G:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/j;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -744,15 +744,15 @@
 .method private final n0()F
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->F:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->F:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -768,15 +768,15 @@
 .method private final o0()F
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->D:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->D:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/discover/holders/LazyStoriesHolder;->N:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -835,7 +835,7 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -846,7 +846,7 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->f:Lcom/vk/stories/holders/StoriesBlockHolder;
@@ -868,19 +868,19 @@
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     .line 10
-    new-instance v0, Lcom/vk/api/stories/StoriesGetDiscover;
+    new-instance v0, Lcom/vk/api/stories/p;
 
     invoke-virtual {p1}, Lcom/vk/dto/discover/DiscoverItem;->s1()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/stories/StoriesGetDiscover;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/stories/p;-><init>(Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -894,7 +894,7 @@
     invoke-direct {v2, p0, p1}, Lcom/vk/discover/holders/LazyStoriesHolder$e;-><init>(Lcom/vk/discover/holders/LazyStoriesHolder;Lcom/vk/dto/discover/DiscoverItem;)V
 
     .line 12
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     goto :goto_0
 
@@ -914,7 +914,7 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
@@ -925,7 +925,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 17
     iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->f:Lcom/vk/stories/holders/StoriesBlockHolder;
@@ -939,7 +939,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
     invoke-virtual {p1}, Lcom/vk/dto/discover/DiscoverItem;->H1()Lcom/vk/discover/DiscoverLayoutParams;
@@ -979,13 +979,13 @@
     .locals 1
 
     .line 22
-    sget-object v0, Lcom/vk/discover/holders/BaseDiscoverHolder;->d:Lcom/vk/discover/holders/BaseDiscoverHolder$a;
+    sget-object v0, Lcom/vk/discover/holders/d;->d:Lcom/vk/discover/holders/d$a;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoriesContainer;->z1()Lcom/vk/dto/stories/model/StoryEntry;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/discover/holders/BaseDiscoverHolder$a;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
+    invoke-virtual {v0, p1}, Lcom/vk/discover/holders/d$a;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
 
     return-void
 .end method
@@ -1062,11 +1062,11 @@
     return-void
 .end method
 
-.method public final h0()Lcom/vk/discover/DiscoverAdapter;
+.method public final h0()Lcom/vk/discover/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->L:Lcom/vk/discover/DiscoverAdapter;
+    iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->L:Lcom/vk/discover/b;
 
     return-object v0
 .end method

@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/actionlinks/ActionLink$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/actionlinks/ActionLink$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/actionlinks/ActionLink$b;
@@ -161,7 +161,7 @@
 
     const-string v1, "o.optString(ServerKeys.TYPE)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/dto/actionlinks/ActionLink;->b:Ljava/lang/String;
 
@@ -174,7 +174,7 @@
 
     const-string v1, "o.optString(ServerKeys.ID)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/dto/actionlinks/ActionLink;->c:Ljava/lang/String;
 
@@ -187,7 +187,7 @@
 
     const-string v1, "o.optString(ServerKeys.URL)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/dto/actionlinks/ActionLink;->d:Ljava/lang/String;
 
@@ -209,7 +209,7 @@
 
     const-string v0, "o.getJSONObject(ServerKeys.SNIPPET)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, p1}, Lcom/vk/dto/actionlinks/ActionLinkSnippet;-><init>(Lorg/json/JSONObject;)V
 

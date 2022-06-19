@@ -3,11 +3,11 @@
 .source "TaskRunnerImpl.java"
 
 # interfaces
-.implements Lorg/chromium/base/task/TaskRunner;
+.implements Lorg/chromium/base/task/p;
 
 
 # instance fields
-.field private final a:Lorg/chromium/base/task/TaskTraits;
+.field private final a:Lorg/chromium/base/task/q;
 
 .field private final b:Ljava/lang/String;
 
@@ -53,7 +53,7 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/chromium/base/task/TaskTraits;)V
+.method constructor <init>(Lorg/chromium/base/task/q;)V
     .locals 2
 
     const-string v0, "TaskRunnerImpl"
@@ -61,12 +61,12 @@
     const/4 v1, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v0, v1}, Lorg/chromium/base/task/TaskRunnerImpl;-><init>(Lorg/chromium/base/task/TaskTraits;Ljava/lang/String;I)V
+    invoke-direct {p0, p1, v0, v1}, Lorg/chromium/base/task/TaskRunnerImpl;-><init>(Lorg/chromium/base/task/q;Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method protected constructor <init>(Lorg/chromium/base/task/TaskTraits;Ljava/lang/String;I)V
+.method protected constructor <init>(Lorg/chromium/base/task/q;Ljava/lang/String;I)V
     .locals 1
 
     .line 2
@@ -108,7 +108,7 @@
     iput-object v0, p0, Lorg/chromium/base/task/TaskRunnerImpl;->j:Ljava/util/List;
 
     .line 8
-    iput-object p1, p0, Lorg/chromium/base/task/TaskRunnerImpl;->a:Lorg/chromium/base/task/TaskTraits;
+    iput-object p1, p0, Lorg/chromium/base/task/TaskRunnerImpl;->a:Lorg/chromium/base/task/q;
 
     .line 9
     new-instance p1, Ljava/lang/StringBuilder;
@@ -131,7 +131,7 @@
     iput p3, p0, Lorg/chromium/base/task/TaskRunnerImpl;->c:I
 
     .line 11
-    invoke-static {p0}, Lorg/chromium/base/task/PostTask;->a(Lorg/chromium/base/task/TaskRunner;)Z
+    invoke-static {p0}, Lorg/chromium/base/task/PostTask;->a(Lorg/chromium/base/task/p;)Z
 
     move-result p1
 
@@ -323,19 +323,19 @@
     .line 2
     iget v6, p0, Lorg/chromium/base/task/TaskRunnerImpl;->c:I
 
-    iget-object v0, p0, Lorg/chromium/base/task/TaskRunnerImpl;->a:Lorg/chromium/base/task/TaskTraits;
+    iget-object v0, p0, Lorg/chromium/base/task/TaskRunnerImpl;->a:Lorg/chromium/base/task/q;
 
-    iget-boolean v7, v0, Lorg/chromium/base/task/TaskTraits;->a:Z
+    iget-boolean v7, v0, Lorg/chromium/base/task/q;->a:Z
 
-    iget v8, v0, Lorg/chromium/base/task/TaskTraits;->b:I
+    iget v8, v0, Lorg/chromium/base/task/q;->b:I
 
-    iget-boolean v9, v0, Lorg/chromium/base/task/TaskTraits;->c:Z
+    iget-boolean v9, v0, Lorg/chromium/base/task/q;->c:Z
 
-    iget-boolean v10, v0, Lorg/chromium/base/task/TaskTraits;->d:Z
+    iget-boolean v10, v0, Lorg/chromium/base/task/q;->d:Z
 
-    iget-byte v11, v0, Lorg/chromium/base/task/TaskTraits;->e:B
+    iget-byte v11, v0, Lorg/chromium/base/task/q;->e:B
 
-    iget-object v12, v0, Lorg/chromium/base/task/TaskTraits;->f:[B
+    iget-object v12, v0, Lorg/chromium/base/task/q;->f:[B
 
     move-object v5, p0
 
@@ -487,9 +487,9 @@
 
     .line 7
     :try_start_3
-    iget-object v1, p0, Lorg/chromium/base/task/TaskRunnerImpl;->a:Lorg/chromium/base/task/TaskTraits;
+    iget-object v1, p0, Lorg/chromium/base/task/TaskRunnerImpl;->a:Lorg/chromium/base/task/q;
 
-    iget v1, v1, Lorg/chromium/base/task/TaskTraits;->b:I
+    iget v1, v1, Lorg/chromium/base/task/q;->b:I
 
     const/4 v3, 0x1
 

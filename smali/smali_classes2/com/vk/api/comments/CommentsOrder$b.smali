@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -92,7 +92,7 @@
 
     const-string v7, "it.optString(\"id\")"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "name"
 
@@ -102,7 +102,7 @@
 
     const-string v7, "it.optString(\"name\")"
 
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v5, v6, v4}, Lcom/vk/api/comments/CommentsOrder$Item;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -133,7 +133,7 @@
 
     const-string v2, "currentOrder"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, v0, v1}, Lcom/vk/api/comments/CommentsOrder;-><init>(Ljava/lang/String;Ljava/util/List;)V
 

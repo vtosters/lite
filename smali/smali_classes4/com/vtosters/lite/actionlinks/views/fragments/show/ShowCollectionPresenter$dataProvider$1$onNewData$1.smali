@@ -3,12 +3,12 @@
 .source "ShowCollectionPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+    value = Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;->a(Lc/a/m;ZLcom/vk/lists/t;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/actionlinks/ActionLinks;",
         ">;"
     }
@@ -105,7 +105,7 @@
 
     iget-object v1, v1, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    invoke-virtual {v1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/b;
 
     move-result-object v1
 
@@ -113,7 +113,7 @@
 
     invoke-direct {v2, v0}, Lcom/vtosters/lite/actionlinks/AL$g;-><init>(I)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
 
     .line 5
     :cond_1
@@ -121,7 +121,7 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/b;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
 
     .line 6
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;
@@ -161,14 +161,14 @@
 
     move-object v6, v0
 
-    invoke-direct/range {v5 .. v10}, Lcom/vtosters/lite/actionlinks/AL$a;-><init>(Lcom/vk/dto/actionlinks/ActionLink;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v5 .. v10}, Lcom/vtosters/lite/actionlinks/AL$a;-><init>(Lcom/vk/dto/actionlinks/ActionLink;ZZILkotlin/jvm/internal/i;)V
 
     .line 8
     new-instance v2, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1$$special$$inlined$let$lambda$1;
 
     invoke-direct {v2, v0, p0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1$$special$$inlined$let$lambda$1;-><init>(Lcom/vk/dto/actionlinks/ActionLink;Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1;)V
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/actionlinks/AL$BaseItem;->b(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/actionlinks/AL$BaseItem;->b(Lkotlin/jvm/b/a;)V
 
     .line 9
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;
@@ -186,11 +186,11 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
 
     .line 11
     :cond_2
@@ -209,13 +209,13 @@
     if-ne v0, v4, :cond_5
 
     .line 12
-    sget-object v0, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->INSTANCE:Lcom/vtosters/lite/actionlinks/b/ActionLinksController;
+    sget-object v0, Lcom/vtosters/lite/actionlinks/b/b;->a:Lcom/vtosters/lite/actionlinks/b/b;
 
     const-string v1, "actionLinks"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->a(Lcom/vk/dto/actionlinks/ActionLinks;)Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/b/b;->a(Lcom/vk/dto/actionlinks/ActionLinks;)Lcom/vk/dto/common/data/VKList;
 
     move-result-object p1
 
@@ -258,14 +258,14 @@
 
     invoke-direct {v2, v1, p0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1$$special$$inlined$forEach$lambda$1;-><init>(Lcom/vtosters/lite/actionlinks/AL$a;Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1;)V
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/actionlinks/AL$BaseItem;->b(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/actionlinks/AL$BaseItem;->b(Lkotlin/jvm/b/a;)V
 
     .line 17
     new-instance v2, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1$$special$$inlined$forEach$lambda$2;
 
     invoke-direct {v2, v1, p0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1$$special$$inlined$forEach$lambda$2;-><init>(Lcom/vtosters/lite/actionlinks/AL$a;Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1;)V
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/actionlinks/AL$BaseItem;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/actionlinks/AL$BaseItem;->a(Lkotlin/jvm/b/a;)V
 
     .line 18
     iget-object v2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;
@@ -294,11 +294,11 @@
 
     iget-object p1, p1, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
 
     .line 22
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1$onNewData$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$dataProvider$1;
@@ -341,7 +341,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->c(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->c(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

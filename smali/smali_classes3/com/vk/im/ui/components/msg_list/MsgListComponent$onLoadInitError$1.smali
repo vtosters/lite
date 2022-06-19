@@ -3,7 +3,7 @@
 .source "MsgListComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/core/util/q1/a/IdlingScope1;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/core/util/q1/a/b;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -56,15 +56,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/util/q1/a/IdlingScope1;)V
+.method public final a(Lcom/vk/core/util/q1/a/b;)V
     .locals 0
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/core/util/q1/a/IdlingScope1;->a()Lcom/vk/core/util/q1/a/IdlingResources;
+    invoke-interface {p1}, Lcom/vk/core/util/q1/a/b;->a()Lcom/vk/core/util/q1/a/e;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/util/q1/a/AbstractIdlingResource;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/util/q1/a/a;->a()V
 
     const/4 p1, 0x0
 
@@ -75,11 +75,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/util/q1/a/IdlingScope1;
+    check-cast p1, Lcom/vk/core/util/q1/a/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/MsgListComponent$onLoadInitError$1;->a(Lcom/vk/core/util/q1/a/IdlingScope1;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/MsgListComponent$onLoadInitError$1;->a(Lcom/vk/core/util/q1/a/b;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

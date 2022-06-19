@@ -12,18 +12,18 @@
 
 
 # instance fields
-.field private final internalParams:Lcom/my/tracker/TrackerParams;
+.field private final internalParams:Lcom/my/tracker/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/my/tracker/TrackerParams;)V
+.method constructor <init>(Lcom/my/tracker/c;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iput-object p1, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
     return-void
 .end method
@@ -34,9 +34,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->a()I
+    invoke-virtual {v0}, Lcom/my/tracker/c;->a()I
 
     move-result v0
 
@@ -47,9 +47,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->b()I
+    invoke-virtual {v0}, Lcom/my/tracker/c;->b()I
 
     move-result v0
 
@@ -60,9 +60,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -73,9 +73,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->d()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->d()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -86,9 +86,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -99,9 +99,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->f()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->f()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -112,9 +112,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->g()I
+    invoke-virtual {v0}, Lcom/my/tracker/c;->g()I
 
     move-result v0
 
@@ -125,9 +125,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->h()Ljava/lang/String;
 
     move-result-object v0
 
@@ -138,9 +138,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->i()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->i()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -151,9 +151,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->j()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->j()Ljava/lang/String;
 
     move-result-object v0
 
@@ -164,9 +164,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->k()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->k()Ljava/lang/String;
 
     move-result-object v0
 
@@ -177,9 +177,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->l()I
+    invoke-virtual {v0}, Lcom/my/tracker/c;->l()I
 
     move-result v0
 
@@ -190,9 +190,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->m()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->m()Ljava/lang/String;
 
     move-result-object v0
 
@@ -203,9 +203,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->n()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->n()Ljava/lang/String;
 
     move-result-object v0
 
@@ -216,9 +216,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->o()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->o()Ljava/lang/String;
 
     move-result-object v0
 
@@ -229,9 +229,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->p()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->p()Ljava/lang/String;
 
     move-result-object v0
 
@@ -242,9 +242,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->q()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->q()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -255,9 +255,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->u()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->u()Ljava/lang/String;
 
     move-result-object v0
 
@@ -268,9 +268,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->v()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->v()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -281,9 +281,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->r()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -294,9 +294,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->s()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->s()Ljava/lang/String;
 
     move-result-object v0
 
@@ -307,9 +307,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->t()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->t()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -320,9 +320,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->w()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/c;->w()Ljava/lang/String;
 
     move-result-object v0
 
@@ -333,9 +333,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->B()Z
+    invoke-virtual {v0}, Lcom/my/tracker/c;->B()Z
 
     move-result v0
 
@@ -346,9 +346,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->x()Z
+    invoke-virtual {v0}, Lcom/my/tracker/c;->x()Z
 
     move-result v0
 
@@ -359,9 +359,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->y()Z
+    invoke-virtual {v0}, Lcom/my/tracker/c;->y()Z
 
     move-result v0
 
@@ -372,9 +372,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->z()Z
+    invoke-virtual {v0}, Lcom/my/tracker/c;->z()Z
 
     move-result v0
 
@@ -385,9 +385,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->A()Z
+    invoke-virtual {v0}, Lcom/my/tracker/c;->A()Z
 
     move-result v0
 
@@ -398,9 +398,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->a(I)V
 
     return-void
 .end method
@@ -409,9 +409,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->e(Z)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->e(Z)V
 
     return-void
 .end method
@@ -420,9 +420,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->b(I)V
 
     return-void
 .end method
@@ -431,9 +431,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -442,9 +442,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->a([Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->a([Ljava/lang/String;)V
 
     return-void
 .end method
@@ -453,9 +453,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->C()V
+    invoke-virtual {v0}, Lcom/my/tracker/c;->C()V
 
     return-void
 .end method
@@ -464,9 +464,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -475,9 +475,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->b([Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->b([Ljava/lang/String;)V
 
     return-void
 .end method
@@ -486,9 +486,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->c(I)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->c(I)V
 
     return-void
 .end method
@@ -497,9 +497,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->c(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->c(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -508,9 +508,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->c([Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->c([Ljava/lang/String;)V
 
     return-void
 .end method
@@ -519,9 +519,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->e(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->e(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -530,9 +530,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->d(I)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->d(I)V
 
     return-void
 .end method
@@ -541,9 +541,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->f(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->f(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -552,9 +552,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->g(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->g(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -563,9 +563,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->h(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->h(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -574,9 +574,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->i(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -585,9 +585,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->e([Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->e([Ljava/lang/String;)V
 
     return-void
 .end method
@@ -596,9 +596,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->d(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->d(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -607,9 +607,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->d([Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->d([Ljava/lang/String;)V
 
     return-void
 .end method
@@ -618,9 +618,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->j(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->j(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -629,9 +629,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->a(Z)V
 
     return-void
 .end method
@@ -640,9 +640,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->b(Z)V
 
     return-void
 .end method
@@ -651,9 +651,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->c(Z)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->c(Z)V
 
     return-void
 .end method
@@ -662,9 +662,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->d(Z)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->d(Z)V
 
     return-void
 .end method
@@ -673,9 +673,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->k(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->k(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -684,9 +684,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->f([Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->f([Ljava/lang/String;)V
 
     return-void
 .end method
@@ -695,9 +695,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/TrackerParams;
+    iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->internalParams:Lcom/my/tracker/c;
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/TrackerParams;->l(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/my/tracker/c;->l(Ljava/lang/String;)V
 
     return-void
 .end method

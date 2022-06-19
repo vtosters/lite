@@ -3,7 +3,7 @@
 .source "EntriesListFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "TP;>;"
     }
 .end annotation
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/newsfeed/contracts/EntriesListContract;
+.method public final invoke()Lcom/vk/newsfeed/contracts/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,7 +55,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment$presenter$2;->this$0:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->c5()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->c5()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
@@ -66,7 +66,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment$presenter$2;->invoke()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment$presenter$2;->invoke()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 

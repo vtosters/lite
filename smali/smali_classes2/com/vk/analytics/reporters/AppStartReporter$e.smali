@@ -55,14 +55,14 @@
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v2}, Lb/h/g/m/FileUtils;->b(I)J
+    invoke-static {v2}, Lb/h/g/m/d;->b(I)J
 
     move-result-wide v3
 
     const/4 v5, 0x0
 
     .line 3
-    invoke-static {v5}, Lb/h/g/m/FileUtils;->b(I)J
+    invoke-static {v5}, Lb/h/g/m/d;->b(I)J
 
     move-result-wide v6
 

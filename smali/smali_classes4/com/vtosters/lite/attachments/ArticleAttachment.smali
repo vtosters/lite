@@ -3,10 +3,10 @@
 .source "ArticleAttachment.kt"
 
 # interfaces
-.implements Lcom/vk/dto/attachments/ImageAttachment;
-.implements Lcom/vk/dto/attachments/WebCacheAttachment;
-.implements Lb/h/h/f/Favable;
-.implements Lcom/vk/dto/common/WithOwner;
+.implements Lcom/vk/dto/attachments/b;
+.implements Lcom/vk/dto/attachments/c;
+.implements Lb/h/h/f/a;
+.implements Lcom/vk/dto/common/k;
 
 
 # annotations
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/ArticleAttachment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/ArticleAttachment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vtosters/lite/attachments/ArticleAttachment;->g:Lcom/vtosters/lite/attachments/ArticleAttachment$b;
 
@@ -190,7 +190,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -213,7 +213,7 @@
 
     iget-object v3, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;->f:Lcom/vk/dto/articles/Article;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -386,7 +386,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f1200e6
 
@@ -396,7 +396,7 @@
 
     const-string v1, "AppContextHolder.context\u2026tString(R.string.article)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -405,7 +405,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->p:I
+    sget v0, Lcom/vk/dto/attachments/a;->p:I
 
     return v0
 .end method

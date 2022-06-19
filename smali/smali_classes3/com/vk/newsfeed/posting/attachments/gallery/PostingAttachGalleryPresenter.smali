@@ -3,7 +3,7 @@
 .source "PostingAttachGalleryPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract;
+.implements Lcom/vk/newsfeed/posting/attachments/gallery/c;
 
 
 # annotations
@@ -29,9 +29,9 @@
 
 .field private e:I
 
-.field private final f:Lcom/vk/attachpicker/SelectionContext;
+.field private final f:Lcom/vk/attachpicker/p;
 
-.field private final g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+.field private final g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
 
 # direct methods
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const-string v0, "android.permission.CAMERA"
 
@@ -56,13 +56,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;)V
+.method public constructor <init>(Lcom/vk/newsfeed/posting/attachments/gallery/d;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
     .line 2
     sget-object p1, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
@@ -79,11 +79,11 @@
     iput p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->e:I
 
     .line 4
-    new-instance p1, Lcom/vk/attachpicker/SelectionContext;
+    new-instance p1, Lcom/vk/attachpicker/p;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/SelectionContext;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/p;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->f:Lcom/vk/attachpicker/SelectionContext;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->f:Lcom/vk/attachpicker/p;
 
     return-void
 .end method
@@ -114,29 +114,29 @@
     if-eqz p1, :cond_0
 
     .line 28
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->n0(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->n0(Z)V
 
     goto :goto_0
 
     .line 29
     :cond_0
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
     const/4 v1, 0x1
 
-    invoke-interface {p1, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->n0(Z)V
+    invoke-interface {p1, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->n0(Z)V
 
     .line 30
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->s0(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->s0(Z)V
 
     .line 31
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->k0(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->k0(Z)V
 
     :goto_0
     return-void
@@ -160,11 +160,11 @@
     return p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+.method public static final synthetic d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
     return-object p0
 .end method
@@ -176,9 +176,9 @@
     sget-object v0, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
     .line 2
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->getActivity()Landroid/app/Activity;
+    invoke-interface {v1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -201,7 +201,7 @@
     const/4 v8, 0x0
 
     .line 5
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
 
     return-void
 .end method
@@ -213,9 +213,9 @@
     sget-object v0, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
     .line 2
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->getActivity()Landroid/app/Activity;
+    invoke-interface {v1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -238,7 +238,7 @@
     const/4 v8, 0x0
 
     .line 5
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
 
     return-void
 .end method
@@ -247,9 +247,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->getActivity()Landroid/app/Activity;
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -267,7 +267,7 @@
 
     aput-object v3, v2, v1
 
-    invoke-static {v0, v2}, Lpub/devrel/easypermissions/EasyPermissions;->a(Landroid/content/Context;[Ljava/lang/String;)Z
+    invoke-static {v0, v2}, Lpub/devrel/easypermissions/b;->a(Landroid/content/Context;[Ljava/lang/String;)Z
 
     move-result v1
 
@@ -281,11 +281,11 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/SelectionContext;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->g()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->g()I
 
     move-result v0
 
@@ -295,11 +295,11 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/SelectionContext;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->d()Landroid/content/Intent;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->d()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -307,13 +307,13 @@
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->c()V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
     const-string v2, "selection"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->a(Landroid/content/Intent;)V
+    invoke-interface {v1, v0}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->a(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -331,9 +331,9 @@
     .locals 1
 
     .line 18
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->m0(I)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->m0(I)V
 
     return-void
 .end method
@@ -409,14 +409,14 @@
     sget-object v1, Lcom/vk/permission/RequiredPermissionHelper;->I:Lcom/vk/permission/RequiredPermissionHelper$a;
 
     .line 7
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->getActivity()Landroid/app/Activity;
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     .line 8
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
     if-eqz p1, :cond_3
 
@@ -425,7 +425,7 @@
     check-cast v3, Lcom/vk/core/fragments/FragmentImpl;
 
     .line 9
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->m4()Landroid/widget/FrameLayout;
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->m4()Landroid/widget/FrameLayout;
 
     move-result-object v4
 
@@ -448,23 +448,23 @@
     move-object v8, v9
 
     .line 12
-    invoke-virtual/range {v1 .. v11}, Lcom/vk/permission/RequiredPermissionHelper$a;->b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)Lcom/vk/permission/RequiredPermissionHelper;
+    invoke-virtual/range {v1 .. v11}, Lcom/vk/permission/RequiredPermissionHelper$a;->b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/a;Z)Lcom/vk/permission/RequiredPermissionHelper;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->b:Lcom/vk/permission/RequiredPermissionHelper;
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/SelectionContext;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/p;
 
     move-result-object p1
 
     iget v1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->e:I
 
-    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/SelectionContext;->a(I)V
+    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/p;->a(I)V
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/SelectionContext;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/p;
 
     move-result-object p1
 
@@ -472,10 +472,10 @@
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$c;-><init>(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/SelectionContext;->a(Lcom/vk/attachpicker/SelectionContext$a;)V
+    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/p;->a(Lcom/vk/attachpicker/p$a;)V
 
     .line 15
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/SelectionContext;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/p;
 
     move-result-object p1
 
@@ -483,7 +483,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$d;-><init>(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/SelectionContext;->a(Lcom/vk/attachpicker/SelectionContext$c;)V
+    invoke-virtual {p1, v1}, Lcom/vk/attachpicker/p;->a(Lcom/vk/attachpicker/p$c;)V
 
     if-eqz v0, :cond_2
 
@@ -504,11 +504,11 @@
     throw p1
 .end method
 
-.method public a(Lcom/vk/mediastore/system/AlbumEntry;I)V
+.method public a(Lcom/vk/mediastore/system/a;I)V
     .locals 2
 
     .line 20
-    invoke-virtual {p1}, Lcom/vk/mediastore/system/AlbumEntry;->b()I
+    invoke-virtual {p1}, Lcom/vk/mediastore/system/a;->b()I
 
     move-result v0
 
@@ -517,15 +517,15 @@
     if-eq v0, v1, :cond_1
 
     .line 21
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-virtual {p1}, Lcom/vk/mediastore/system/AlbumEntry;->a()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/mediastore/system/a;->a()Ljava/util/ArrayList;
 
     move-result-object p1
 
     const-string v1, "albumEntry.bucketImages"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez p2, :cond_0
 
@@ -537,12 +537,12 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->d(Ljava/util/List;Z)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->d(Ljava/util/List;Z)V
 
     .line 22
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {p1, p2}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->g0(I)V
+    invoke-interface {p1, p2}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->g0(I)V
 
     .line 23
     iput p2, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->c:I
@@ -551,14 +551,14 @@
 
     .line 24
     :cond_1
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
     iget p2, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->c:I
 
-    invoke-interface {p1, p2}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->g0(I)V
+    invoke-interface {p1, p2}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->g0(I)V
 
     .line 25
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
     new-instance p2, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$onAlbumClicked$1;
 
@@ -566,7 +566,7 @@
 
     const-wide/16 v0, 0xc8
 
-    invoke-interface {p1, p2, v0, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->a(Lkotlin/jvm/b/Functions;J)V
+    invoke-interface {p1, p2, v0, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->a(Lkotlin/jvm/b/a;J)V
 
     :goto_1
     return-void
@@ -612,16 +612,16 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/SelectionContext;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->a()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->a()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->o4()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->o4()V
 
     return-void
 .end method
@@ -630,13 +630,13 @@
     .locals 6
 
     .line 2
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->j()Lcom/vk/mediastore/system/MediaStoreController;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->j()Lcom/vk/mediastore/system/b;
 
     move-result-object v0
 
     const/16 v1, 0x6f
 
-    invoke-static {v1}, Lcom/vk/attachpicker/AlbumNameHelper;->a(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/attachpicker/h;->a(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -646,7 +646,7 @@
 
     const-wide/16 v3, 0x0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/mediastore/system/MediaStoreController;->a(ILjava/lang/String;JLcom/vk/mediastore/system/MediaStoreController$f;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/mediastore/system/b;->a(ILjava/lang/String;JLcom/vk/mediastore/system/b$f;)V
 
     return-void
 .end method
@@ -670,30 +670,30 @@
 
     .line 2
     :cond_1
-    invoke-static {p1}, Lb/h/g/m/CameraUtils;->b(I)Z
+    invoke-static {p1}, Lb/h/g/m/a;->b(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
     .line 3
-    invoke-static {p1}, Lb/h/g/m/CameraUtils;->c(I)Z
+    invoke-static {p1}, Lb/h/g/m/a;->c(I)Z
 
     move-result p2
 
     .line 4
-    invoke-static {p1}, Lb/h/g/m/CameraUtils;->a(I)Ljava/io/File;
+    invoke-static {p1}, Lb/h/g/m/a;->a(I)Ljava/io/File;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lcom/vk/attachpicker/Picker;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/vk/attachpicker/o;->a()Landroid/content/Context;
 
     move-result-object v1
 
     sget-object v2, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$b;->a:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$b;
 
-    invoke-static {v1, v0, v2}, Lb/h/g/m/CameraUtils;->a(Landroid/content/Context;Ljava/io/File;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
+    invoke-static {v1, v0, v2}, Lb/h/g/m/a;->a(Landroid/content/Context;Ljava/io/File;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
 
     if-eqz p2, :cond_2
 
@@ -702,18 +702,18 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/attachpicker/SelectionContext;->a(Landroid/net/Uri;)Landroid/content/Intent;
+    invoke-static {p1}, Lcom/vk/attachpicker/p;->a(Landroid/net/Uri;)Landroid/content/Intent;
 
     move-result-object p1
 
     .line 7
-    iget-object p2, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p2, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
     const-string p3, "selection"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->a(Landroid/content/Intent;)V
+    invoke-interface {p2, p1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->a(Landroid/content/Intent;)V
 
     return-void
 
@@ -789,11 +789,11 @@
 
     .line 13
     :goto_0
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->g:Lcom/vk/newsfeed/posting/attachments/gallery/d;
 
     if-eqz p3, :cond_7
 
-    invoke-interface {p1, p3}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->a(Landroid/content/Intent;)V
+    invoke-interface {p1, p3}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->a(Landroid/content/Intent;)V
 
     :cond_7
     return-void
@@ -860,11 +860,11 @@
     return-void
 .end method
 
-.method public t()Lcom/vk/attachpicker/SelectionContext;
+.method public t()Lcom/vk/attachpicker/p;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->f:Lcom/vk/attachpicker/SelectionContext;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->f:Lcom/vk/attachpicker/p;
 
     return-object v0
 .end method

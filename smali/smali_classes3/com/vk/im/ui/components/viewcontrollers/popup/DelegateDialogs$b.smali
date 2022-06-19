@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/common/AvatarAction;Lkotlin/jvm/b/Functions;Z)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/common/AvatarAction;Lkotlin/jvm/b/a;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
 
 .field final synthetic b:I
 
-.field final synthetic c:Lkotlin/jvm/b/Functions;
+.field final synthetic c:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ILkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ILkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$b;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;
 
     iput p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$b;->b:I
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$b;->c:Lkotlin/jvm/b/Functions;
+    iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$b;->c:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
 
     iget v1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$b;->b:I
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$b;->c:Lkotlin/jvm/b/Functions;
+    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$b;->c:Lkotlin/jvm/b/a;
 
-    invoke-static {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ILkotlin/jvm/b/Functions;)V
+    invoke-static {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ILkotlin/jvm/b/a;)V
 
     return-void
 .end method

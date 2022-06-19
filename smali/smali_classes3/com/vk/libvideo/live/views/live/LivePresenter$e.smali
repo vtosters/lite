@@ -1,5 +1,5 @@
 .class Lcom/vk/libvideo/live/views/live/LivePresenter$e;
-.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
+.super Lc/a/c0/a;
 .source "LivePresenter.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
+        "Lc/a/c0/a<",
         "Lcom/vk/dto/live/LiveEventModel;",
         ">;"
     }
@@ -33,7 +33,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$e;->b:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
+    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$e;->b:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->n(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/live/views/live/LiveContract1;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->n(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/live/views/live/b;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
 
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$e;->b:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->t(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/h/EventsProcessor;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->t(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/h/b;
 
     move-result-object v0
 
@@ -65,11 +65,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$e;->b:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->t(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/h/EventsProcessor;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->t(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/h/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/EventsProcessor;->a(Lcom/vk/dto/live/LiveEventModel;)V
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/b;->a(Lcom/vk/dto/live/LiveEventModel;)V
 
     :cond_0
     return-void
@@ -86,7 +86,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->a(Lcom/vk/libvideo/live/views/live/LivePresenter;Lio/reactivex/observers/DisposableObserver/DisposableObserver;)Lio/reactivex/observers/DisposableObserver/DisposableObserver;
+    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->a(Lcom/vk/libvideo/live/views/live/LivePresenter;Lc/a/c0/a;)Lc/a/c0/a;
 
     return-void
 .end method
@@ -99,7 +99,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/live/LivePresenter;->a(Lcom/vk/libvideo/live/views/live/LivePresenter;Lio/reactivex/observers/DisposableObserver/DisposableObserver;)Lio/reactivex/observers/DisposableObserver/DisposableObserver;
+    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/live/LivePresenter;->a(Lcom/vk/libvideo/live/views/live/LivePresenter;Lc/a/c0/a;)Lc/a/c0/a;
 
     return-void
 .end method

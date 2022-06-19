@@ -3,12 +3,12 @@
 .source "ListsUtil.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/lists/ListsUtil;->a(Ljava/lang/Object;)Lkotlin/jvm/b/Functions2;
+    value = Lcom/vk/lists/ListsUtil;->a(Ljava/lang/Object;)Lkotlin/jvm/b/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "TT;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -81,7 +81,7 @@
 
     iget-object v0, p0, Lcom/vk/lists/ListsUtil$createItemFilter$1;->$item:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

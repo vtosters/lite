@@ -17,17 +17,17 @@
 
 .field private final b:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field private final c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+.field private final c:Lcom/vk/im/engine/internal/storage/b;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/b;)V
     .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
     .line 2
     new-instance p1, Landroidx/collection/ArrayMap;
@@ -48,7 +48,7 @@
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+.method private final a(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
     .locals 3
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -63,7 +63,7 @@
             ">(",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/database/Cursor;",
             "+TT;>;)TT;"
@@ -101,7 +101,7 @@
     .line 10
     :cond_0
     :try_start_1
-    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
@@ -128,9 +128,9 @@
     move-result-object p2
 
     .line 13
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -148,7 +148,7 @@
 
     const-string v0, "env.database.rawQuery(sql, arrayOf(key))"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     :try_start_2
@@ -158,7 +158,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p3, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p3
     :try_end_2
@@ -185,7 +185,7 @@
     invoke-interface {v0, p1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 18
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -218,7 +218,7 @@
     throw p1
 .end method
 
-.method private final a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+.method private final a(Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -226,7 +226,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/database/Cursor;",
             "+TT;>;)TT;"
@@ -236,7 +236,7 @@
     const-string v0, "value_simple"
 
     .line 6
-    invoke-direct {p0, p1, v0, p2}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0, p2}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -299,9 +299,9 @@
 
     .line 25
     :goto_1
-    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v2}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v2}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
@@ -331,7 +331,7 @@
     invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 28
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -356,7 +356,7 @@
 
     const-string v1, "value_blob"
 
-    invoke-direct {p0, p1, v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -373,7 +373,7 @@
     .line 2
     sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getInt$2;->a:Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getInt$2;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -395,7 +395,7 @@
     .line 3
     sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getLong$2;->a:Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getLong$2;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -426,7 +426,7 @@
     .line 1
     sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getBoolean$2;->a:Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getBoolean$2;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -459,7 +459,7 @@
     .line 1
     sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getBoolean$1;->a:Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getBoolean$1;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -513,7 +513,7 @@
     .line 1
     sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getInt$1;->a:Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getInt$1;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -528,7 +528,7 @@
     .line 1
     sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getLong$1;->a:Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager$getLong$1;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 

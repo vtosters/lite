@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions1;)V
+    value = Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Ljava/lang/String;Lkotlin/jvm/b/c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
 
 .field final synthetic b:Ljava/lang/String;
 
-.field final synthetic c:Lkotlin/jvm/b/Functions1;
+.field final synthetic c:Lkotlin/jvm/b/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Ljava/lang/String;Lkotlin/jvm/b/Functions1;)V
+.method constructor <init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Ljava/lang/String;Lkotlin/jvm/b/c;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;->a:Lcom/vk/mediastore/legacy/ProxyVideoCache;
 
     iput-object p2, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;->c:Lkotlin/jvm/b/Functions1;
+    iput-object p3, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;->c:Lkotlin/jvm/b/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -67,13 +67,13 @@
     :try_start_0
     iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;->a:Lcom/vk/mediastore/legacy/ProxyVideoCache;
 
-    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/HttpProxyCacheServer;
+    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/f;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/danikula/videocache/HttpProxyCacheServer;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/danikula/videocache/f;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
     :try_end_0
@@ -88,11 +88,11 @@
     .line 5
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;->c:Lkotlin/jvm/b/Functions1;
+    iget-object v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;->c:Lkotlin/jvm/b/c;
 
     iget-object v2, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;->b:Ljava/lang/String;
 
-    invoke-interface {v1, v2, v0}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v2, v0}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

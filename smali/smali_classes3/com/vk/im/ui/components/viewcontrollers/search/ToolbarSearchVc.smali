@@ -12,11 +12,11 @@
 
 .field private final d:Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;
 
-.field private final e:Lkotlin/jvm/b/Functions;
+.field private final e:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -24,14 +24,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -39,10 +39,10 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->e:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->e:Lkotlin/jvm/b/a;
 
     .line 2
-    sget p2, Lcom/vk/im/ui/R11;->toolbar:I
+    sget p2, Lcom/vk/im/ui/h;->toolbar:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -50,14 +50,14 @@
 
     const-string v0, "view.findViewById(R.id.toolbar)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroidx/appcompat/widget/Toolbar;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->a:Landroidx/appcompat/widget/Toolbar;
 
     .line 3
-    sget p2, Lcom/vk/im/ui/R11;->vkim_search_shadow:I
+    sget p2, Lcom/vk/im/ui/h;->vkim_search_shadow:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -66,7 +66,7 @@
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->b:Landroid/view/View;
 
     .line 4
-    sget p2, Lcom/vk/im/ui/R11;->vkim_search:I
+    sget p2, Lcom/vk/im/ui/h;->vkim_search:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -74,7 +74,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_search)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/search/MilkshakeSearchView;
 
@@ -95,14 +95,14 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;Landroid/view/View;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;Landroid/view/View;JILkotlin/jvm/internal/i;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->d:Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;
 
     .line 6
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->a:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/R1;->vkim_menu_search:I
+    sget p2, Lcom/vk/im/ui/k;->vkim_menu_search:I
 
     invoke-virtual {p1, p2}, Landroidx/appcompat/widget/Toolbar;->inflateMenu(I)V
 
@@ -122,12 +122,12 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/view/View;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -138,16 +138,16 @@
 
     .line 9
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;)Lkotlin/jvm/b/Functions;
+.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;)Lkotlin/jvm/b/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->e:Lkotlin/jvm/b/Functions;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->e:Lkotlin/jvm/b/a;
 
     return-object p0
 .end method
@@ -195,7 +195,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc$hideSearch$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;->a(Lkotlin/jvm/b/a;)V
 
     const/4 v0, 0x1
 
@@ -220,13 +220,13 @@
 
 
 # virtual methods
-.method public final a()Lio/reactivex/Observable;
+.method public final a()Lc/a/m;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lio/reactivex/Observable<",
-            "Lb/h/v/TextViewTextChangeEvent;",
+            "Lc/a/m<",
+            "Lb/h/v/e;",
             ">;"
         }
     .end annotation
@@ -242,7 +242,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 

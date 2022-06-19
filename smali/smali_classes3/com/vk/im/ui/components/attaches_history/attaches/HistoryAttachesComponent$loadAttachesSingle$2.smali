@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final c:Lkotlin/u/KProperty2;
+.field public static final c:Lkotlin/u/l;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     invoke-direct {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$loadAttachesSingle$2;-><init>()V
 
-    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$loadAttachesSingle$2;->c:Lkotlin/u/KProperty2;
+    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$loadAttachesSingle$2;->c:Lkotlin/u/l;
 
     return-void
 .end method
@@ -38,12 +38,12 @@
     return-object v0
 .end method
 
-.method public f()Lkotlin/u/KDeclarationContainer;
+.method public f()Lkotlin/u/e;
     .locals 1
 
-    const-class v0, Lcom/vk/im/engine/models/attaches/HistoryAttachesResponse;
+    const-class v0, Lcom/vk/im/engine/models/attaches/b;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -53,10 +53,10 @@
 .method public get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lcom/vk/im/engine/models/attaches/HistoryAttachesResponse;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/b;
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/HistoryAttachesResponse;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/b;->a()Ljava/util/List;
 
     move-result-object p1
 

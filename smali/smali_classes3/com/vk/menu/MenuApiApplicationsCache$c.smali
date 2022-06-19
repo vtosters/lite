@@ -3,12 +3,12 @@
 .source "MenuApiApplicationsCache.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/menu/MenuApiApplicationsCache;->j()Lio/reactivex/Observable;
+    value = Lcom/vk/menu/MenuApiApplicationsCache;->j()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/common/data/VkAppsList;",
         ">;"
     }
@@ -60,7 +60,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
+    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
 
     invoke-virtual {p1}, Lcom/vk/dto/common/data/VkAppsList;->s()Ljava/util/List;
 
@@ -68,10 +68,10 @@
 
     const-string v2, "key_menu_fav_vk_apps_list"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
 
     .line 2
-    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
+    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
 
     invoke-virtual {p1}, Lcom/vk/dto/common/data/VkAppsList;->t()Lcom/vk/dto/common/data/VkAppsFeatured;
 
@@ -79,7 +79,7 @@
 
     const-string v1, "key_menu_fea_vk_apps"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -121,7 +121,7 @@
     const-string p1, "vk_apps_featured_menu"
 
     .line 6
-    invoke-static {p1}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
@@ -130,10 +130,10 @@
     const-string v1, "show"
 
     .line 7
-    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 8
-    invoke-virtual {p1}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
+    invoke-virtual {p1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method

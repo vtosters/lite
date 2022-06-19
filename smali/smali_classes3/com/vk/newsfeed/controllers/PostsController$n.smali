@@ -3,7 +3,7 @@
 .source "PostsController.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/group/Group;",
         ">;"
     }
@@ -58,9 +58,9 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->T0:Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;
+    sget-object v0, Lcom/vk/newsfeed/posting/l;->T0:Lcom/vk/newsfeed/posting/l$a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;->a()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/l$a;->a()Lcom/vk/newsfeed/posting/l;
 
     move-result-object v0
 
@@ -69,9 +69,9 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/group/Group;)Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/newsfeed/posting/l;->a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/group/Group;)Lcom/vk/newsfeed/posting/l;
 
     .line 3
     sget-object p1, Lcom/vk/newsfeed/controllers/PostsController;->c:Lcom/vk/newsfeed/controllers/PostsController;
@@ -80,7 +80,7 @@
 
     iget v2, p0, Lcom/vk/newsfeed/controllers/PostsController$n;->c:I
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/newsfeed/posting/PostingFragmentBuilder;Landroid/app/Activity;I)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/newsfeed/posting/l;Landroid/app/Activity;I)V
 
     return-void
 .end method

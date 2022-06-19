@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;
-.super Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;
+.super Lcom/vk/newsfeed/holders/h;
 .source "CommentsOrderDropdownHolder.kt"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/newsfeed/holders/BaseNewsEntryHolder<",
+        "Lcom/vk/newsfeed/holders/h<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -24,7 +24,7 @@
 
 
 # static fields
-.field static final synthetic L:[Lkotlin/u/KProperty5;
+.field static final synthetic L:[Lkotlin/u/j;
 
 
 # instance fields
@@ -36,7 +36,7 @@
 
 .field private final I:Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter;
 
-.field private final J:Lkotlin/Lazy2;
+.field private final J:Lkotlin/e;
 
 .field private final K:Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$b;
 
@@ -47,13 +47,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -61,15 +61,15 @@
 
     const-string v4, "getMenuPopup()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->L:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->L:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -80,14 +80,14 @@
     const v0, 0x7f0d014e
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/h;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -95,7 +95,7 @@
 
     const v3, 0x7f0a0097
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -106,11 +106,11 @@
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a07c7
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -130,11 +130,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$menuPopup$2;-><init>(Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->J:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->J:Lkotlin/e;
 
     .line 6
     new-instance p1, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$b;
@@ -169,11 +169,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.method public static final synthetic c(Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;)Lcom/vk/core/dialogs/actionspopup/a;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->o0()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->o0()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p0
 
@@ -189,22 +189,22 @@
     return-object p0
 .end method
 
-.method private final o0()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.method private final o0()Lcom/vk/core/dialogs/actionspopup/a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->J:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->J:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->L:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->L:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    check-cast v0, Lcom/vk/core/dialogs/actionspopup/a;
 
     return-object v0
 .end method
@@ -230,11 +230,11 @@
     invoke-virtual {v0, v1}, Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter;->a(Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter$a;)V
 
     .line 4
-    invoke-direct {p0}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->o0()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->o0()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->d()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a;->d()Lcom/vk/core/dialogs/actionspopup/a;
 
     :cond_0
     return-void
@@ -242,11 +242,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 2
-    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->g:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     instance-of v1, v0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;
 
@@ -260,7 +260,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->H:Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -291,14 +291,14 @@
 
     int-to-long v3, v0
 
-    invoke-static {v3, v4}, Lcom/vk/core/util/StringUtils;->a(J)Ljava/lang/CharSequence;
+    invoke-static {v3, v4}, Lcom/vk/core/util/b1;->a(J)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     .line 6
     iget-object v3, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->F:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -321,7 +321,7 @@
     .line 7
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->F:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -401,7 +401,7 @@
 
     move-result-object v6
 
-    invoke-static {v7, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -482,7 +482,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->G:Landroid/widget/TextView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

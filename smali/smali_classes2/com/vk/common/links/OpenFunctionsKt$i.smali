@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/f;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/articles/Article;",
         ">;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Landroid/content/Context;
 
-.field final synthetic b:Lcom/vk/common/links/OpenCallback;
+.field final synthetic b:Lcom/vk/common/links/f;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Lcom/vk/common/links/OpenCallback;)V
+.method constructor <init>(Landroid/content/Context;Lcom/vk/common/links/f;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$i;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$i;->b:Lcom/vk/common/links/OpenCallback;
+    iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$i;->b:Lcom/vk/common/links/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -67,7 +67,7 @@
 
     const-string v0, "r"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -102,7 +102,7 @@
     const p1, 0x7f1200fd
 
     .line 4
-    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -117,7 +117,7 @@
     const p1, 0x7f1200ed
 
     .line 6
-    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -132,7 +132,7 @@
     const p1, 0x7f1200f5
 
     .line 8
-    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -140,15 +140,15 @@
     const p1, 0x7f120369
 
     .line 9
-    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     .line 10
     :goto_0
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$i;->b:Lcom/vk/common/links/OpenCallback;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$i;->b:Lcom/vk/common/links/f;
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
 
     :cond_4
     return-void

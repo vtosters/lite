@@ -3,7 +3,7 @@
 .source "MusicPlaylistFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -52,13 +52,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$onCreateView$$inlined$also$lambda$3;->this$0:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->c(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->c(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/t;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
 
     .line 2
     :cond_0
@@ -68,7 +68,7 @@
 
     const-string v1, "this.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f07019f
 
@@ -81,7 +81,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f07019e
 
@@ -125,7 +125,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$onCreateView$$inlined$also$lambda$3;->a(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

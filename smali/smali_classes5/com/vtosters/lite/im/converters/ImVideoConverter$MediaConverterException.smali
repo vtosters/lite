@@ -33,7 +33,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/converters/ImVideoConverter$MediaConverterException$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/converters/ImVideoConverter$MediaConverterException$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const-wide v0, 0x37c3daa2045a69a7L    # 4.5582628146964916E-40
 

@@ -46,11 +46,11 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->a(I)I
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/d;->a(I)I
 
     move-result p1
 
@@ -63,11 +63,11 @@
     .line 8
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->a(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/d;->a(F)V
 
     return-void
 .end method
@@ -78,11 +78,11 @@
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->c()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/d;->c()Ljava/util/List;
 
     move-result-object v3
 
@@ -104,7 +104,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     return-void
 
@@ -128,21 +128,21 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/d;->b()Ljava/lang/String;
 
     move-result-object v4
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->d()Lcom/vk/im/engine/models/messages/MsgSendSource;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/d;->d()Lcom/vk/im/engine/models/messages/e;
 
     move-result-object v5
 
@@ -154,7 +154,7 @@
 
     move-object v6, p1
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a$b;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a$b;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -165,11 +165,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->a(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/d;->a(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -180,11 +180,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->e()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/d;->e()Z
 
     move-result v0
 
@@ -197,11 +197,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->h()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/d;->h()Z
 
     move-result v0
 
@@ -231,11 +231,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->c()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/d;->c()Ljava/util/List;
 
     move-result-object v0
 
@@ -257,7 +257,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     return-void
 
@@ -273,7 +273,7 @@
 
     invoke-direct {v2, p0, v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback$onActionBtnClick$1;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;Ljava/util/List;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -284,11 +284,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/d;->g()V
 
     return-void
 .end method
@@ -299,29 +299,29 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/d;->a()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->f(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/core/util/Provider2;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->f(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/core/util/u0;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->u()V
+    invoke-interface {v0}, Lcom/vk/core/util/u0;->u()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->b(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lio/reactivex/disposables/CompositeDisposable;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->b(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lio/reactivex/disposables/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;

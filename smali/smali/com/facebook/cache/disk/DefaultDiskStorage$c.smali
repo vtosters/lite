@@ -3,7 +3,7 @@
 .source "DefaultDiskStorage.java"
 
 # interfaces
-.implements Lcom/facebook/cache/disk/DiskStorage$a;
+.implements Lcom/facebook/cache/disk/c$a;
 
 
 # annotations
@@ -20,7 +20,7 @@
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lcom/facebook/r/FileBinaryResource;
+.field private final b:Lcom/facebook/r/b;
 
 .field private c:J
 
@@ -35,21 +35,21 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    invoke-static {p2}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4
-    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/String;
 
     iput-object p1, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->a:Ljava/lang/String;
 
     .line 5
-    invoke-static {p2}, Lcom/facebook/r/FileBinaryResource;->a(Ljava/io/File;)Lcom/facebook/r/FileBinaryResource;
+    invoke-static {p2}, Lcom/facebook/r/b;->a(Ljava/io/File;)Lcom/facebook/r/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->b:Lcom/facebook/r/FileBinaryResource;
+    iput-object p1, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->b:Lcom/facebook/r/b;
 
     const-wide/16 p1, -0x1
 
@@ -73,11 +73,11 @@
 
 
 # virtual methods
-.method public a()Lcom/facebook/r/FileBinaryResource;
+.method public a()Lcom/facebook/r/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->b:Lcom/facebook/r/FileBinaryResource;
+    iget-object v0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->b:Lcom/facebook/r/b;
 
     return-object v0
 .end method
@@ -104,9 +104,9 @@
     if-gez v4, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->b:Lcom/facebook/r/FileBinaryResource;
+    iget-object v0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->b:Lcom/facebook/r/b;
 
-    invoke-virtual {v0}, Lcom/facebook/r/FileBinaryResource;->b()Ljava/io/File;
+    invoke-virtual {v0}, Lcom/facebook/r/b;->b()Ljava/io/File;
 
     move-result-object v0
 
@@ -137,9 +137,9 @@
     if-gez v4, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->b:Lcom/facebook/r/FileBinaryResource;
+    iget-object v0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->b:Lcom/facebook/r/b;
 
-    invoke-virtual {v0}, Lcom/facebook/r/FileBinaryResource;->size()J
+    invoke-virtual {v0}, Lcom/facebook/r/b;->size()J
 
     move-result-wide v0
 

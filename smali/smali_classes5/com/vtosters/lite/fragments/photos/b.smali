@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment$i;
+.field private final synthetic a:Lcom/vtosters/lite/fragments/photos/e$i;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment$i;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/photos/e$i;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/photos/b;->a:Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment$i;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/photos/b;->a:Lcom/vtosters/lite/fragments/photos/e$i;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/b;->a:Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment$i;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/b;->a:Lcom/vtosters/lite/fragments/photos/e$i;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment$i;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/photos/e$i;->a(Landroid/view/View;)V
 
     return-void
 .end method

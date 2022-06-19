@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController;->e(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
+    value = Lcom/vk/masks/MasksController;->e(Lcom/vk/dto/masks/Mask;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/util/List<",
         "Lcom/vk/dto/masks/MasksCatalogItem;",
         ">;>;"
@@ -143,11 +143,11 @@
 
     .line 9
     :cond_2
-    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
+    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
 
     const-string v1, "masks_catalog"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
 
     :cond_3
     return-void

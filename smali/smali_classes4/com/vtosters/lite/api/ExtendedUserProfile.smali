@@ -310,7 +310,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vtosters/lite/api/BoardTopic;",
+            "Lcom/vtosters/lite/api/c;",
             ">;"
         }
     .end annotation
@@ -507,7 +507,7 @@
 
 .field public z0:Ljava/lang/String;
 
-.field public z1:Lcom/vk/dto/common/Model;
+.field public z1:Lcom/vk/dto/common/e;
 
 
 # direct methods
@@ -694,7 +694,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/vk/core/util/CollectionUtils;->d(Ljava/util/Collection;)Z
+    invoke-static {v0}, Lcom/vk/core/util/o;->d(Ljava/util/Collection;)Z
 
     move-result v0
 

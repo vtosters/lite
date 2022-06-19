@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,30 +19,30 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/attachpicker/stickers/ISticker;",
         ">;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $editor:Lcom/vk/stories/editor/base/BaseCameraEditorView;
+.field final synthetic $editor:Lcom/vk/stories/editor/base/d0;
 
 .field final synthetic this$0:Lcom/vk/cameraui/CameraUIPresenter$initEditor$4;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/cameraui/CameraUIPresenter$initEditor$4;Lcom/vk/stories/editor/base/BaseCameraEditorView;)V
+.method constructor <init>(Lcom/vk/cameraui/CameraUIPresenter$initEditor$4;Lcom/vk/stories/editor/base/d0;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/cameraui/CameraUIPresenter$initEditor$4$1;->this$0:Lcom/vk/cameraui/CameraUIPresenter$initEditor$4;
 
-    iput-object p2, p0, Lcom/vk/cameraui/CameraUIPresenter$initEditor$4$1;->$editor:Lcom/vk/stories/editor/base/BaseCameraEditorView;
+    iput-object p2, p0, Lcom/vk/cameraui/CameraUIPresenter$initEditor$4$1;->$editor:Lcom/vk/stories/editor/base/d0;
 
     const/4 p1, 0x1
 
@@ -79,9 +79,9 @@
     invoke-virtual {v0, v1}, Lcom/vk/cameraui/builder/CameraParams;->a(Lcom/vk/dto/stories/model/web/StoryBox;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/cameraui/CameraUIPresenter$initEditor$4$1;->$editor:Lcom/vk/stories/editor/base/BaseCameraEditorView;
+    iget-object v0, p0, Lcom/vk/cameraui/CameraUIPresenter$initEditor$4$1;->$editor:Lcom/vk/stories/editor/base/d0;
 
-    invoke-virtual {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorView;->getStickersDrawingView()Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
+    invoke-virtual {v0}, Lcom/vk/stories/editor/base/d0;->getStickersDrawingView()Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
     move-result-object v0
 
@@ -98,7 +98,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/cameraui/CameraUIPresenter$initEditor$4$1;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

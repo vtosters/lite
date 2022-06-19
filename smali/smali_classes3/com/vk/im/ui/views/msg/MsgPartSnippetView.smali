@@ -3,7 +3,7 @@
 .source "MsgPartSnippetView.java"
 
 # interfaces
-.implements Lcom/vk/im/ui/views/msg/WithTime;
+.implements Lcom/vk/im/ui/views/msg/a;
 
 
 # instance fields
@@ -134,7 +134,7 @@
     .locals 6
 
     .line 83
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_android_maxWidth:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_android_maxWidth:I
 
     const v0, 0x7fffffff
 
@@ -145,7 +145,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMaximumWidth(I)V
 
     .line 84
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_android_maxHeight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_android_maxHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -154,7 +154,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMaximumHeight(I)V
 
     .line 85
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_imageMinWidth:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_imageMinWidth:I
 
     const/4 v1, 0x0
 
@@ -165,7 +165,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setImageMinWidth(I)V
 
     .line 86
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_imageMaxWidth:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_imageMaxWidth:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -174,7 +174,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setImageMaxWidth(I)V
 
     .line 87
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_imageMinHeight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_imageMinHeight:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -183,7 +183,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setImageMinHeight(I)V
 
     .line 88
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_imageMaxHeight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_imageMaxHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -192,7 +192,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setImageMaxHeight(I)V
 
     .line 89
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_imageWidth:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_imageWidth:I
 
     const/4 v0, -0x1
 
@@ -203,7 +203,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setImageWidth(I)V
 
     .line 90
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_imageHeight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_imageHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -212,7 +212,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setImageHeight(I)V
 
     .line 91
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_imageCornerRadius:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_imageCornerRadius:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -221,7 +221,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setImageCornerRadius(I)V
 
     .line 92
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_imagePlaceholder:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_imagePlaceholder:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -230,7 +230,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setImagePlaceholder(Landroid/graphics/drawable/Drawable;)V
 
     .line 93
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_contentPaddingLeft:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_contentPaddingLeft:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -239,7 +239,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setContentPaddingLeft(I)V
 
     .line 94
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_contentPaddingTop:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_contentPaddingTop:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -248,7 +248,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setContentPaddingTop(I)V
 
     .line 95
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_contentPaddingRight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_contentPaddingRight:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -257,7 +257,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setContentPaddingRight(I)V
 
     .line 96
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_contentPaddingBottom:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_contentPaddingBottom:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -266,7 +266,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setContentPaddingBottom(I)V
 
     .line 97
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_titleText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_titleText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -277,7 +277,7 @@
     invoke-virtual {p0, p1, v2}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->b(Ljava/lang/CharSequence;I)V
 
     .line 98
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_titleTextColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_titleTextColor:I
 
     const/high16 v3, -0x1000000
 
@@ -288,7 +288,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setTitleTextColor(I)V
 
     .line 99
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_titleTextSize:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_titleTextSize:I
 
     const/16 v4, 0xc
 
@@ -299,14 +299,14 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setTitleTextSize(I)V
 
     .line 100
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_titleFontFamily:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_titleFontFamily:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
     .line 101
-    sget v5, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_titleTextStyle:I
+    sget v5, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_titleTextStyle:I
 
     invoke-virtual {p2, v5, v1}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -316,7 +316,7 @@
     invoke-virtual {p0, p1, v5}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->b(Ljava/lang/String;I)V
 
     .line 103
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_descriptionText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_descriptionText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -325,7 +325,7 @@
     invoke-virtual {p0, p1, v2}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->a(Ljava/lang/CharSequence;I)V
 
     .line 104
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_descriptionTextColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_descriptionTextColor:I
 
     invoke-virtual {p2, p1, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -334,7 +334,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setDescriptionTextColor(I)V
 
     .line 105
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_descriptionTextSize:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_descriptionTextSize:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -343,14 +343,14 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setDescriptionTextSize(I)V
 
     .line 106
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_descriptionTextStyle:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_descriptionTextStyle:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result p1
 
     .line 107
-    sget v2, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_descriptionFontFamily:I
+    sget v2, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_descriptionFontFamily:I
 
     invoke-virtual {p2, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -360,7 +360,7 @@
     invoke-virtual {p0, v2, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->a(Ljava/lang/String;I)V
 
     .line 109
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ratingText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ratingText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -369,7 +369,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setRatingText(Ljava/lang/CharSequence;)V
 
     .line 110
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ratingTextColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ratingTextColor:I
 
     invoke-virtual {p2, p1, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -378,7 +378,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setRatingTextColor(I)V
 
     .line 111
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ratingTextSize:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ratingTextSize:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -387,7 +387,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setRatingTextSize(I)V
 
     .line 112
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ratingFontFamily:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ratingFontFamily:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -396,7 +396,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setRatingFontFamily(Ljava/lang/String;)V
 
     .line 113
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ratingHeight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ratingHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -405,7 +405,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setRatingHeight(I)V
 
     .line 114
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ordersCountText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ordersCountText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -414,7 +414,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setOrdersCountText(Ljava/lang/CharSequence;)V
 
     .line 115
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ordersCountTextColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ordersCountTextColor:I
 
     invoke-virtual {p2, p1, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -423,7 +423,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setOrdersCountTextColor(I)V
 
     .line 116
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ordersCountTextSize:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ordersCountTextSize:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -432,7 +432,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setOrdersCountTextSize(I)V
 
     .line 117
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ordersCountFontFamily:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ordersCountFontFamily:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -441,7 +441,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setOrdersCountFontFamily(Ljava/lang/String;)V
 
     .line 118
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_ordersCountHeight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_ordersCountHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -450,7 +450,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setOrdersCountHeight(I)V
 
     .line 119
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_middotText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_middotText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -459,7 +459,7 @@
     invoke-direct {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMiddotText(Ljava/lang/CharSequence;)V
 
     .line 120
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_middotTextColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_middotTextColor:I
 
     invoke-virtual {p2, p1, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -468,7 +468,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMiddotTextColor(I)V
 
     .line 121
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_middotTextSize:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_middotTextSize:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -477,7 +477,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMiddotTextSize(I)V
 
     .line 122
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_middotFontFamily:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_middotFontFamily:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -486,7 +486,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMiddotFontFamily(Ljava/lang/String;)V
 
     .line 123
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_middotHeight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_middotHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -495,7 +495,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMiddotHeight(I)V
 
     .line 124
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_merchantLogoWidth:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_merchantLogoWidth:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -504,7 +504,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMerchantLogoWidth(I)V
 
     .line 125
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_merchantLogoHeight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_merchantLogoHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -513,7 +513,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMerchantLogoHeight(I)V
 
     .line 126
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_merchantLogoBackground:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_merchantLogoBackground:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -522,7 +522,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setMerchantLogoDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 127
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_priceText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_priceText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -531,7 +531,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setPriceText(Ljava/lang/CharSequence;)V
 
     .line 128
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_priceTextColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_priceTextColor:I
 
     invoke-virtual {p2, p1, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -540,7 +540,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setPriceTextColor(I)V
 
     .line 129
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_priceTextSize:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_priceTextSize:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -549,7 +549,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setPriceTextSize(I)V
 
     .line 130
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_priceFontFamily:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_priceFontFamily:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -558,7 +558,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setPriceFontFamily(Ljava/lang/String;)V
 
     .line 131
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_priceSpaceWidth:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_priceSpaceWidth:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -567,7 +567,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setPriceSpaceWidth(I)V
 
     .line 132
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_oldPriceText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_oldPriceText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -576,7 +576,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setOldPriceText(Ljava/lang/CharSequence;)V
 
     .line 133
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_oldPriceTextColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_oldPriceTextColor:I
 
     invoke-virtual {p2, p1, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -585,7 +585,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setOldPriceTextColor(I)V
 
     .line 134
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_oldPriceTextSize:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_oldPriceTextSize:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -594,7 +594,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setOldPriceTextSize(I)V
 
     .line 135
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_oldPriceFontFamily:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_oldPriceFontFamily:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -603,7 +603,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setOldPriceFontFamily(Ljava/lang/String;)V
 
     .line 136
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_captionText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_captionText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -612,7 +612,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setCaptionText(Ljava/lang/CharSequence;)V
 
     .line 137
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_captionTextColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_captionTextColor:I
 
     invoke-virtual {p2, p1, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -621,7 +621,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setCaptionTextColor(I)V
 
     .line 138
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_captionTextSize:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_captionTextSize:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -630,7 +630,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setCaptionTextSize(I)V
 
     .line 139
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_captionFontFamily:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_captionFontFamily:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -639,7 +639,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setCaptionFontFamily(Ljava/lang/String;)V
 
     .line 140
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_buttonText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_buttonText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -648,7 +648,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setButtonText(Ljava/lang/CharSequence;)V
 
     .line 141
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_buttonTextColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_buttonTextColor:I
 
     invoke-virtual {p2, p1, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -657,7 +657,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setButtonTextColor(I)V
 
     .line 142
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_buttonTextSize:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_buttonTextSize:I
 
     invoke-virtual {p2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -666,7 +666,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setButtonTextSize(I)V
 
     .line 143
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_buttonFontFamily:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_buttonFontFamily:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -675,7 +675,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setButtonFontFamily(Ljava/lang/String;)V
 
     .line 144
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_buttonBackground:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_buttonBackground:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -684,28 +684,28 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setButtonBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 145
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_buttonLeftMargin:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_buttonLeftMargin:I
 
     .line 146
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p1
 
-    sget v0, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_buttonTopMargin:I
+    sget v0, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_buttonTopMargin:I
 
     .line 147
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v0
 
-    sget v2, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_buttonRightMargin:I
+    sget v2, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_buttonRightMargin:I
 
     .line 148
     invoke-virtual {p2, v2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    sget v3, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_buttonBottomMargin:I
+    sget v3, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_buttonBottomMargin:I
 
     .line 149
     invoke-virtual {p2, v3, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -716,7 +716,7 @@
     invoke-virtual {p0, p1, v0, v2, v3}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->a(IIII)V
 
     .line 151
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_timeText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_timeText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -725,7 +725,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setTimeText(Ljava/lang/CharSequence;)V
 
     .line 152
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_timeTextAppearance:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_timeTextAppearance:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -734,7 +734,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setTimeTextAppearance(I)V
 
     .line 153
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartSnippetView_vkim_snippet_timeMargin:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartSnippetView_vkim_snippet_timeMargin:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -924,11 +924,11 @@
     .line 24
     iget-object v0, p0, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->d:Landroid/widget/TextView;
 
-    sget v5, Lcom/vk/im/ui/R12;->vkim_ic_favorite_12:I
+    sget v5, Lcom/vk/im/ui/f;->vkim_ic_favorite_12:I
 
-    sget v6, Lcom/vk/im/ui/R10;->gray_300:I
+    sget v6, Lcom/vk/im/ui/d;->gray_300:I
 
-    invoke-static {v0, v5, v6}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;II)V
+    invoke-static {v0, v5, v6}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;II)V
 
     .line 25
     new-instance v0, Lcom/vk/im/ui/views/FixTextView;
@@ -1270,7 +1270,7 @@
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 80
-    sget-object v0, Lcom/vk/im/ui/R2;->MsgPartSnippetView:[I
+    sget-object v0, Lcom/vk/im/ui/o;->MsgPartSnippetView:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

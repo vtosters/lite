@@ -1,9 +1,9 @@
 .class public final Lkotlin/g;
-.super Lkotlin/Lazy1;
+.super Lkotlin/i;
 
 
 # direct methods
-.method public static bridge synthetic a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+.method public static bridge synthetic a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -11,35 +11,35 @@
             "Ljava/lang/Object;",
             ">(",
             "Lkotlin/LazyThreadSafetyMode;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+TT;>;)",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "TT;>;"
         }
     .end annotation
 
-    invoke-static {p0, p1}, Lkotlin/LazyJVM;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p0, p1}, Lkotlin/h;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static bridge synthetic a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+.method public static bridge synthetic a(Lkotlin/jvm/b/a;)Lkotlin/e;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+TT;>;)",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "TT;>;"
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/LazyJVM;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p0}, Lkotlin/h;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p0
 

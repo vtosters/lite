@@ -47,19 +47,19 @@
     const-string v0, "map"
 
     .line 2
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b$a;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b;
 
     iget-object v0, v0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/f;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->b()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->b()Z
 
     move-result v0
 
@@ -97,7 +97,7 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->f(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lkotlin/jvm/b/Functions2;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->f(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lkotlin/jvm/b/b;
 
     move-result-object v0
 
@@ -108,17 +108,17 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->f(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lkotlin/jvm/b/Functions2;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->f(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lkotlin/jvm/b/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     goto :goto_1
 
@@ -128,11 +128,11 @@
 
     iget-object p1, p1, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lcom/vk/im/ui/components/msg_send/picker/location/g;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;->a()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/g;->a()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object p1
 

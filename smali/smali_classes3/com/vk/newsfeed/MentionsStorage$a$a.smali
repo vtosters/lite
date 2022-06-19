@@ -3,12 +3,12 @@
 .source "MentionsStorage.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/MentionsStorage$a;->a(Ljava/util/List;)Lio/reactivex/Observable;
+    value = Lcom/vk/newsfeed/MentionsStorage$a;->a(Ljava/util/List;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,11 +57,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/user/UserProfile;)Lcom/vk/mentions/MentionModels2;
+.method public final a(Lcom/vk/dto/user/UserProfile;)Lcom/vk/mentions/h;
     .locals 7
 
     .line 1
-    new-instance v6, Lcom/vk/mentions/MentionModels2;
+    new-instance v6, Lcom/vk/mentions/h;
 
     iget v1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -69,13 +69,13 @@
 
     const-string v0, "it.fullName"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v4, p1, Lcom/vk/dto/user/UserProfile;->f:Ljava/lang/String;
 
     const-string v0, "it.photo"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p1, p1, Lcom/vk/dto/user/UserProfile;->J:Ljava/lang/String;
 
@@ -93,7 +93,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/mentions/MentionModels2;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/mentions/h;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v6
 .end method
@@ -104,7 +104,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/user/UserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/MentionsStorage$a$a;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vk/mentions/MentionModels2;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/MentionsStorage$a$a;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vk/mentions/h;
 
     move-result-object p1
 

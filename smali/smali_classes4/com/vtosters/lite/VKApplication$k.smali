@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Predicate;
+.implements Lc/a/z/l;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Predicate<",
-        "Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;",
+        "Lc/a/z/l<",
+        "Lcom/vk/im/engine/events/h;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;)Z
+.method public final a(Lcom/vk/im/engine/events/h;)Z
     .locals 1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;->c()Lcom/vk/im/engine/models/ImBgSyncState;
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/h;->c()Lcom/vk/im/engine/models/ImBgSyncState;
 
     move-result-object p1
 
@@ -83,9 +83,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;
+    check-cast p1, Lcom/vk/im/engine/events/h;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$k;->a(Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;)Z
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$k;->a(Lcom/vk/im/engine/events/h;)Z
 
     move-result p1
 

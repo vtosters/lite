@@ -1,5 +1,5 @@
 .class final Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController$b;
-.super Lcom/vk/audiomsg/player/utils/BaseAudioMsgPlayerListener;
+.super Lcom/vk/audiomsg/player/utils/e;
 .source "ChangeSpeakerByRaiseToEarController.kt"
 
 
@@ -30,14 +30,14 @@
     .line 1
     iput-object p1, p0, Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController$b;->a:Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController;
 
-    invoke-direct {p0}, Lcom/vk/audiomsg/player/utils/BaseAudioMsgPlayerListener;-><init>()V
+    invoke-direct {p0}, Lcom/vk/audiomsg/player/utils/e;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;)V
+.method public a(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;)V
     .locals 0
 
     .line 1
@@ -48,7 +48,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+.method public a(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
     .locals 0
 
     .line 2
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Ljava/lang/Throwable;)V
+.method public a(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Ljava/lang/Throwable;)V
     .locals 0
 
     .line 3
@@ -70,7 +70,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+.method public b(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
     .locals 0
 
     .line 1
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method public e(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+.method public e(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
     .locals 0
 
     .line 1

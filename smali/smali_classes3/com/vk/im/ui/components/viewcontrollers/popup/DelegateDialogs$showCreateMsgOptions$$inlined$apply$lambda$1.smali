@@ -3,12 +3,12 @@
 .source "DelegateDialogs.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -30,28 +30,28 @@
 # instance fields
 .field final synthetic $items$inlined:Ljava/util/List;
 
-.field final synthetic $onNewChatSelectListener$inlined:Lkotlin/jvm/b/Functions;
+.field final synthetic $onNewChatSelectListener$inlined:Lkotlin/jvm/b/a;
 
-.field final synthetic $onNewMsgSelectListener$inlined:Lkotlin/jvm/b/Functions;
+.field final synthetic $onNewMsgSelectListener$inlined:Lkotlin/jvm/b/a;
 
-.field final synthetic $onProfileSelectListener$inlined:Lkotlin/jvm/b/Functions2;
+.field final synthetic $onProfileSelectListener$inlined:Lkotlin/jvm/b/b;
 
 .field final synthetic this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Ljava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Ljava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$items$inlined:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onProfileSelectListener$inlined:Lkotlin/jvm/b/Functions2;
+    iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onProfileSelectListener$inlined:Lkotlin/jvm/b/b;
 
-    iput-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onNewMsgSelectListener$inlined:Lkotlin/jvm/b/Functions;
+    iput-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onNewMsgSelectListener$inlined:Lkotlin/jvm/b/a;
 
-    iput-object p5, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onNewChatSelectListener$inlined:Lkotlin/jvm/b/Functions;
+    iput-object p5, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onNewChatSelectListener$inlined:Lkotlin/jvm/b/a;
 
     const/4 p1, 0x1
 
@@ -62,7 +62,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;)V
     .locals 1
 
     .line 1
@@ -71,61 +71,61 @@
     invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->h()V
 
     .line 2
-    instance-of v0, p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item$e;
+    instance-of v0, p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c$e;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onProfileSelectListener$inlined:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onProfileSelectListener$inlined:Lkotlin/jvm/b/b;
 
     if-eqz v0, :cond_2
 
-    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item$e;
+    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c$e;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item$e;->a()Lcom/vk/im/engine/models/Profile;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c$e;->a()Lcom/vk/im/engine/models/j;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lkotlin/m;
 
     goto :goto_0
 
     .line 3
     :cond_0
-    instance-of v0, p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item$d;
+    instance-of v0, p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c$d;
 
     if-eqz v0, :cond_1
 
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onNewMsgSelectListener$inlined:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onNewMsgSelectListener$inlined:Lkotlin/jvm/b/a;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     goto :goto_0
 
     .line 4
     :cond_1
-    instance-of p1, p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item$c;
+    instance-of p1, p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c$c;
 
     if-eqz p1, :cond_2
 
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onNewChatSelectListener$inlined:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->$onNewChatSelectListener$inlined:Lkotlin/jvm/b/a;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_2
     :goto_0
@@ -136,11 +136,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;
+    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateMsgOptions$$inlined$apply$lambda$1;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

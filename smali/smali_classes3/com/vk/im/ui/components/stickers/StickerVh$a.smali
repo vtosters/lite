@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -45,7 +45,7 @@
 
     const-string v1, "parent.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -54,7 +54,7 @@
     .line 2
     new-instance v1, Lcom/vk/im/ui/components/stickers/StickerVh;
 
-    sget v2, Lcom/vk/im/ui/R13;->vkim_stiker_vh:I
+    sget v2, Lcom/vk/im/ui/j;->vkim_stiker_vh:I
 
     const/4 v3, 0x0
 
@@ -64,7 +64,7 @@
 
     const-string v0, "inflater.inflate(R.layou\u2026stiker_vh, parent, false)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, p1, p2}, Lcom/vk/im/ui/components/stickers/StickerVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/stickers/StickersAdapter$a;)V
 

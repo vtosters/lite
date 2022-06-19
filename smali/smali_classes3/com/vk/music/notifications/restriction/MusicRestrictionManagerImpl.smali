@@ -3,7 +3,7 @@
 .source "MusicRestrictionManagerImpl.kt"
 
 # interfaces
-.implements Lcom/vk/music/restriction/MusicRestrictionManager;
+.implements Lcom/vk/music/restriction/h;
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private a:Lio/reactivex/disposables/Disposable;
+.field private a:Lio/reactivex/disposables/b;
 
 .field private b:Ljava/lang/String;
 
@@ -23,7 +23,7 @@
 
 .field private final d:Landroid/os/Handler;
 
-.field private final e:Lcom/vk/music/stats/MusicStatsTracker;
+.field private final e:Lcom/vk/music/stats/d;
 
 
 # direct methods
@@ -34,18 +34,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/music/stats/MusicStatsTracker;)V
+.method public constructor <init>(Lcom/vk/music/stats/d;)V
     .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->e:Lcom/vk/music/stats/MusicStatsTracker;
+    iput-object p1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->e:Lcom/vk/music/stats/d;
 
     .line 2
     new-instance p1, Landroid/os/Handler;
@@ -61,20 +61,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/MusicStatsTracker;
+.method public static final synthetic a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->e:Lcom/vk/music/stats/MusicStatsTracker;
+    iget-object p0, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->e:Lcom/vk/music/stats/d;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;Lio/reactivex/disposables/Disposable;)V
+.method public static final synthetic a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -115,7 +115,7 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 12
-    new-instance v0, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;
+    new-instance v0, Lcom/vk/music/notifications/restriction/popup/a;
 
     invoke-virtual {p1}, Lcom/vk/dto/music/MusicDynamicRestriction;->t1()Ljava/lang/String;
 
@@ -133,10 +133,10 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/music/notifications/restriction/popup/a;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     .line 13
-    sget-object v2, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;->I:Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;
+    sget-object v2, Lcom/vk/music/notifications/restriction/popup/b;->I:Lcom/vk/music/notifications/restriction/popup/b$a;
 
     .line 14
     invoke-virtual {p1}, Lcom/vk/dto/music/MusicDynamicRestriction;->x1()Lcom/vk/dto/common/Image;
@@ -160,7 +160,7 @@
     move-object v6, v0
 
     .line 17
-    invoke-static/range {v2 .. v9}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;->a(Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;Lcom/vk/dto/common/Image;Ljava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;ILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;
+    invoke-static/range {v2 .. v9}, Lcom/vk/music/notifications/restriction/popup/b$a;->a(Lcom/vk/music/notifications/restriction/popup/b$a;Lcom/vk/dto/common/Image;Ljava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/a;Lcom/vk/music/notifications/restriction/popup/a;ILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/b;
 
     move-result-object p1
 
@@ -190,7 +190,7 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 6
-    new-instance v0, Lcom/vk/api/audio/AudioGetRestrictionPopup;
+    new-instance v0, Lb/h/c/c/s;
 
     invoke-virtual {p1}, Lcom/vk/dto/music/MusicTrack;->A1()Ljava/lang/String;
 
@@ -198,14 +198,14 @@
 
     iget-object p1, p1, Lcom/vk/dto/music/MusicTrack;->P:Ljava/lang/String;
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/api/audio/AudioGetRestrictionPopup;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lb/h/c/c/s;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
     const/4 v1, 0x0
 
     .line 7
-    invoke-static {v0, v1, p1, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, p1, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -220,7 +220,7 @@
     invoke-direct {v1, p0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$c;-><init>(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)V
 
     .line 10
-    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -255,7 +255,7 @@
     if-eqz v3, :cond_0
 
     .line 20
-    new-instance v3, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;
+    new-instance v3, Lcom/vk/music/notifications/restriction/popup/a;
 
     const v6, 0x7f1207ce
 
@@ -278,10 +278,10 @@
     move-object v6, v3
 
     .line 23
-    invoke-direct/range {v6 .. v11}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/music/notifications/restriction/popup/a;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     .line 24
-    new-instance v1, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;
+    new-instance v1, Lcom/vk/music/notifications/restriction/popup/a;
 
     const v6, 0x7f1207cd
 
@@ -304,10 +304,10 @@
     move-object v12, v1
 
     .line 27
-    invoke-direct/range {v12 .. v17}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v12 .. v17}, Lcom/vk/music/notifications/restriction/popup/a;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     .line 28
-    sget-object v6, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;->I:Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;
+    sget-object v6, Lcom/vk/music/notifications/restriction/popup/b;->I:Lcom/vk/music/notifications/restriction/popup/b$a;
 
     const v7, 0x7f08077a
 
@@ -320,7 +320,7 @@
 
     const-string v9, "activity.getString(R.str\u2026ic_new_pause_alert_title)"
 
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v9, 0x7f1207cf
 
@@ -338,7 +338,7 @@
     move-object v11, v1
 
     .line 31
-    invoke-static/range {v6 .. v14}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;->a(Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;ILjava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;IILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;
+    invoke-static/range {v6 .. v14}, Lcom/vk/music/notifications/restriction/popup/b$a;->a(Lcom/vk/music/notifications/restriction/popup/b$a;ILjava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/a;Lcom/vk/music/notifications/restriction/popup/a;IILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/b;
 
     move-result-object v1
 
@@ -348,7 +348,7 @@
 
     .line 32
     :cond_0
-    new-instance v3, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;
+    new-instance v3, Lcom/vk/music/notifications/restriction/popup/a;
 
     const v6, 0x7f1207d3
 
@@ -371,10 +371,10 @@
     move-object v6, v3
 
     .line 35
-    invoke-direct/range {v6 .. v11}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/music/notifications/restriction/popup/a;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     .line 36
-    sget-object v6, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;->I:Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;
+    sget-object v6, Lcom/vk/music/notifications/restriction/popup/b;->I:Lcom/vk/music/notifications/restriction/popup/b$a;
 
     const v7, 0x7f08077a
 
@@ -387,7 +387,7 @@
 
     const-string v1, "activity.getString(R.str\u2026.music_pause_alert_title)"
 
-    invoke-static {v8, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f1207d4
 
@@ -405,7 +405,7 @@
     move-object v10, v3
 
     .line 39
-    invoke-static/range {v6 .. v14}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;->a(Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;ILjava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;IILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;
+    invoke-static/range {v6 .. v14}, Lcom/vk/music/notifications/restriction/popup/b$a;->a(Lcom/vk/music/notifications/restriction/popup/b$a;ILjava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/a;Lcom/vk/music/notifications/restriction/popup/a;IILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/b;
 
     move-result-object v1
 
@@ -468,7 +468,7 @@
     invoke-static {v1}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 47
-    new-instance v1, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;
+    new-instance v1, Lcom/vk/music/notifications/restriction/popup/a;
 
     const v4, 0x7f1207ad
 
@@ -489,10 +489,10 @@
     move-object v4, v1
 
     .line 50
-    invoke-direct/range {v4 .. v9}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/music/notifications/restriction/popup/a;-><init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     .line 51
-    sget-object v4, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;->I:Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;
+    sget-object v4, Lcom/vk/music/notifications/restriction/popup/b;->I:Lcom/vk/music/notifications/restriction/popup/b$a;
 
     const v5, 0x7f08077a
 
@@ -505,7 +505,7 @@
 
     const-string v7, "it.getString(R.string.mu\u2026_restriction_alert_title)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v7, 0x7f1207ae
 
@@ -527,7 +527,7 @@
     move-object v8, v1
 
     .line 54
-    invoke-static/range {v4 .. v12}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;->a(Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;ILjava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;IILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;
+    invoke-static/range {v4 .. v12}, Lcom/vk/music/notifications/restriction/popup/b$a;->a(Lcom/vk/music/notifications/restriction/popup/b$a;ILjava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/a;Lcom/vk/music/notifications/restriction/popup/a;IILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/b;
 
     move-result-object p1
 
@@ -579,9 +579,9 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 2
-    new-instance v0, Lcom/vk/music/notifications/restriction/popup/MusicSubscriptionsWasBoughtPopup;
+    new-instance v0, Lcom/vk/music/notifications/restriction/popup/c;
 
-    invoke-direct {v0}, Lcom/vk/music/notifications/restriction/popup/MusicSubscriptionsWasBoughtPopup;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/notifications/restriction/popup/c;-><init>()V
 
     const/4 v1, 0x0
 
@@ -617,7 +617,7 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 4
-    sget-object v2, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;->I:Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;
+    sget-object v2, Lcom/vk/music/notifications/restriction/popup/b;->I:Lcom/vk/music/notifications/restriction/popup/b$a;
 
     const v3, 0x7f08077a
 
@@ -630,7 +630,7 @@
 
     const-string v0, "it.getString(R.string.mu\u2026estriction_default_title)"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -645,7 +645,7 @@
     const/4 v10, 0x0
 
     .line 6
-    invoke-static/range {v2 .. v10}, Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;->a(Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup$a;ILjava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;Lcom/vk/music/notifications/restriction/popup/MusicDynamicPopupButton;IILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/MusicDynamicRestrictionPopup;
+    invoke-static/range {v2 .. v10}, Lcom/vk/music/notifications/restriction/popup/b$a;->a(Lcom/vk/music/notifications/restriction/popup/b$a;ILjava/lang/String;Ljava/lang/String;Lcom/vk/music/notifications/restriction/popup/a;Lcom/vk/music/notifications/restriction/popup/a;IILjava/lang/Object;)Lcom/vk/music/notifications/restriction/popup/b;
 
     move-result-object v0
 

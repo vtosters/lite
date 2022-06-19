@@ -41,7 +41,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p2}, Lcom/vtosters/lite/data/Games;->a(Landroid/content/Intent;)Lcom/vk/dto/common/data/ApiApplication;
+    invoke-static {p2}, Lcom/vtosters/lite/data/p;->a(Landroid/content/Intent;)Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object p1
 
@@ -56,7 +56,7 @@
 
     const-string v0, "it"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, p1}, Lcom/vtosters/lite/fragments/MyGamesListFragment$c;->a(Lcom/vk/dto/common/data/ApiApplication;)V
 

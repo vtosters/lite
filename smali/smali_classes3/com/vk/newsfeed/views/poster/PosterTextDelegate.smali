@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/views/poster/PosterTextDelegate$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/views/poster/PosterTextDelegate$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/newsfeed/views/poster/PosterTextDelegate;->g:Lcom/vk/newsfeed/views/poster/PosterTextDelegate$a;
 
@@ -63,7 +63,7 @@
     iput-object p1, p0, Lcom/vk/newsfeed/views/poster/PosterTextDelegate;->f:Landroid/widget/TextView;
 
     .line 2
-    sget-object p1, Lcom/vk/common/links/LinkParser;->a:Ljava/util/regex/Pattern;
+    sget-object p1, Lcom/vk/common/links/b;->a:Ljava/util/regex/Pattern;
 
     const-string v0, ""
 
@@ -74,7 +74,7 @@
     iput-object p1, p0, Lcom/vk/newsfeed/views/poster/PosterTextDelegate;->d:Ljava/util/regex/Matcher;
 
     .line 3
-    sget-object p1, Lcom/vk/common/links/LinkParser;->f:Ljava/util/regex/Pattern;
+    sget-object p1, Lcom/vk/common/links/b;->f:Ljava/util/regex/Pattern;
 
     invoke-virtual {p1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -102,7 +102,7 @@
 
     const-string v1, "it.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f09000f
 
@@ -209,26 +209,26 @@
 
     move-result-object v11
 
-    check-cast v11, Lcom/vk/mentions/MentionModels;
+    check-cast v11, Lcom/vk/mentions/a;
 
     if-eqz v11, :cond_6
 
     .line 12
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->c()I
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->c()I
 
     move-result v12
 
     sub-int/2addr v12, v8
 
     .line 13
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->a()I
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->a()I
 
     move-result v13
 
     sub-int/2addr v13, v8
 
     .line 14
-    instance-of v14, v11, Lcom/vk/mentions/MentionModels3;
+    instance-of v14, v11, Lcom/vk/mentions/u;
 
     if-eqz v14, :cond_4
 
@@ -240,9 +240,9 @@
 
     move-object v9, v11
 
-    check-cast v9, Lcom/vk/mentions/MentionModels3;
+    check-cast v9, Lcom/vk/mentions/u;
 
-    invoke-virtual {v9}, Lcom/vk/mentions/MentionModels3;->e()Z
+    invoke-virtual {v9}, Lcom/vk/mentions/u;->e()Z
 
     move-result v15
 
@@ -258,7 +258,7 @@
     :goto_3
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9}, Lcom/vk/mentions/MentionModels3;->d()I
+    invoke-virtual {v9}, Lcom/vk/mentions/u;->d()I
 
     move-result v9
 
@@ -280,17 +280,17 @@
 
     .line 15
     :cond_4
-    instance-of v9, v11, Lcom/vk/mentions/MentionModels4;
+    instance-of v9, v11, Lcom/vk/mentions/f;
 
     if-eqz v9, :cond_5
 
-    new-instance v9, Lcom/vk/mentions/Spans2;
+    new-instance v9, Lcom/vk/mentions/e;
 
     move-object v14, v11
 
-    check-cast v14, Lcom/vk/mentions/MentionModels4;
+    check-cast v14, Lcom/vk/mentions/f;
 
-    invoke-virtual {v14}, Lcom/vk/mentions/MentionModels4;->d()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/vk/mentions/f;->d()Ljava/lang/String;
 
     move-result-object v14
 
@@ -300,7 +300,7 @@
 
     invoke-direct {v5, v0}, Lcom/vk/newsfeed/views/poster/PosterTextDelegate$parseLinks$1;-><init>(Lcom/vk/newsfeed/views/poster/PosterTextDelegate;)V
 
-    invoke-direct {v9, v14, v15, v5}, Lcom/vk/mentions/Spans2;-><init>(Ljava/lang/String;ILkotlin/jvm/b/Functions2;)V
+    invoke-direct {v9, v14, v15, v5}, Lcom/vk/mentions/e;-><init>(Ljava/lang/String;ILkotlin/jvm/b/b;)V
 
     move-object v14, v9
 
@@ -316,24 +316,24 @@
     iput-boolean v10, v0, Lcom/vk/newsfeed/views/poster/PosterTextDelegate;->a:Z
 
     .line 17
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->b()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->b()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v1, v12, v13, v5}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
     .line 18
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->a()I
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->a()I
 
     move-result v5
 
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->c()I
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->c()I
 
     move-result v9
 
     sub-int/2addr v5, v9
 
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->b()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->b()Ljava/lang/String;
 
     move-result-object v9
 
@@ -346,7 +346,7 @@
     add-int/2addr v8, v5
 
     .line 19
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->b()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->b()Ljava/lang/String;
 
     move-result-object v5
 
@@ -359,17 +359,17 @@
     invoke-interface {v1, v14, v12, v5, v3}, Landroid/text/Editable;->setSpan(Ljava/lang/Object;III)V
 
     .line 20
-    new-instance v5, Lcom/vk/common/links/LinkParser$b;
+    new-instance v5, Lcom/vk/common/links/b$b;
 
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->c()I
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->c()I
 
     move-result v9
 
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->c()I
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->c()I
 
     move-result v10
 
-    invoke-virtual {v11}, Lcom/vk/mentions/MentionModels;->b()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/vk/mentions/a;->b()Ljava/lang/String;
 
     move-result-object v11
 
@@ -379,7 +379,7 @@
 
     add-int/2addr v10, v11
 
-    invoke-direct {v5, v9, v10}, Lcom/vk/common/links/LinkParser$b;-><init>(II)V
+    invoke-direct {v5, v9, v10}, Lcom/vk/common/links/b$b;-><init>(II)V
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -407,7 +407,7 @@
     .line 23
     iget-object v4, v0, Lcom/vk/newsfeed/views/poster/PosterTextDelegate;->d:Ljava/util/regex/Matcher;
 
-    invoke-static {v4, v2}, Lcom/vk/common/links/LinkParser;->a(Ljava/util/regex/Matcher;Ljava/util/ArrayList;)Z
+    invoke-static {v4, v2}, Lcom/vk/common/links/b;->a(Ljava/util/regex/Matcher;Ljava/util/ArrayList;)Z
 
     move-result v4
 
@@ -470,7 +470,7 @@
 
     const-string v8, "urlMatcher.group()"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v6, v0, v7}, Lcom/vk/newsfeed/views/poster/PosterTextDelegate$PosterSpan;-><init>(Lcom/vk/newsfeed/views/poster/PosterTextDelegate;Ljava/lang/String;)V
 
@@ -478,9 +478,9 @@
     invoke-interface {v1, v6, v4, v5, v3}, Landroid/text/Editable;->setSpan(Ljava/lang/Object;III)V
 
     .line 30
-    new-instance v6, Lcom/vk/common/links/LinkParser$b;
+    new-instance v6, Lcom/vk/common/links/b$b;
 
-    invoke-direct {v6, v4, v5}, Lcom/vk/common/links/LinkParser$b;-><init>(II)V
+    invoke-direct {v6, v4, v5}, Lcom/vk/common/links/b$b;-><init>(II)V
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -505,7 +505,7 @@
     .line 33
     iget-object v4, v0, Lcom/vk/newsfeed/views/poster/PosterTextDelegate;->e:Ljava/util/regex/Matcher;
 
-    invoke-static {v4, v2}, Lcom/vk/common/links/LinkParser;->a(Ljava/util/regex/Matcher;Ljava/util/ArrayList;)Z
+    invoke-static {v4, v2}, Lcom/vk/common/links/b;->a(Ljava/util/regex/Matcher;Ljava/util/ArrayList;)Z
 
     move-result v4
 
@@ -594,7 +594,7 @@
 
     const-string v8, "hashMatcher.group(1)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v7, :cond_d
 
@@ -604,7 +604,7 @@
 
     const-string v8, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v7}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
@@ -627,9 +627,9 @@
     invoke-interface {v1, v6, v4, v5, v3}, Landroid/text/Editable;->setSpan(Ljava/lang/Object;III)V
 
     .line 40
-    new-instance v6, Lcom/vk/common/links/LinkParser$b;
+    new-instance v6, Lcom/vk/common/links/b$b;
 
-    invoke-direct {v6, v4, v5}, Lcom/vk/common/links/LinkParser$b;-><init>(II)V
+    invoke-direct {v6, v4, v5}, Lcom/vk/common/links/b$b;-><init>(II)V
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -798,7 +798,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/newsfeed/views/poster/PosterTextDelegate;->f:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;F)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;F)V
 
     const/4 v0, 0x0
 

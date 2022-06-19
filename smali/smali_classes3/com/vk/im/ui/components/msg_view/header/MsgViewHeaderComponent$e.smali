@@ -3,7 +3,7 @@
 .source "MsgViewHeaderComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lc/a/z/g<",
+        "Lio/reactivex/disposables/b;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/Disposable;)V
+.method public final a(Lio/reactivex/disposables/b;)V
     .locals 2
 
     .line 1
@@ -64,7 +64,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0, v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;Lkotlin/jvm/b/Functions;ZILjava/lang/Object;)V
+    invoke-static {p1, v1, v0, v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;Lkotlin/jvm/b/a;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/Disposable;
+    check-cast p1, Lio/reactivex/disposables/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$e;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$e;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

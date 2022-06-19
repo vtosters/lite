@@ -3,12 +3,12 @@
 .source "AnimationExt.kt"
 
 # interfaces
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
+    value = Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lio/reactivex/disposables/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

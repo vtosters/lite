@@ -3,12 +3,12 @@
 .source "MusicSectionsContainer.kt"
 
 # interfaces
-.implements Lcom/vk/music/view/LastReachedScrollListener$a;
+.implements Lcom/vk/music/view/q$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;ZZ)V
+    value = Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/f;ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/sections/MusicSectionsContainer$b;->a:Lcom/vk/music/sections/MusicSectionsContainer;
 
-    invoke-virtual {v0}, Lcom/vk/music/sections/MusicSectionsContainer;->getModel$app_armUpload()Lcom/vk/music/sections/MusicSectionsModel;
+    invoke-virtual {v0}, Lcom/vk/music/sections/MusicSectionsContainer;->getModel$app_armUpload()Lcom/vk/music/sections/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/sections/MusicSectionsModel;->m()Z
+    invoke-interface {v0}, Lcom/vk/music/sections/f;->m()Z
 
     move-result v0
 
@@ -53,11 +53,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/sections/MusicSectionsContainer$b;->a:Lcom/vk/music/sections/MusicSectionsContainer;
 
-    invoke-virtual {v0}, Lcom/vk/music/sections/MusicSectionsContainer;->getModel$app_armUpload()Lcom/vk/music/sections/MusicSectionsModel;
+    invoke-virtual {v0}, Lcom/vk/music/sections/MusicSectionsContainer;->getModel$app_armUpload()Lcom/vk/music/sections/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/sections/MusicSectionsModel;->l()V
+    invoke-interface {v0}, Lcom/vk/music/sections/f;->l()V
 
     :cond_0
     return-void

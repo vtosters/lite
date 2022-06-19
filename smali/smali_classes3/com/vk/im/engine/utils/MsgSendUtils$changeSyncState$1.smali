@@ -3,12 +3,12 @@
 .source "MsgSendUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/utils/MsgSendUtils;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/messages/MsgSyncState;Lcom/vk/im/engine/models/attaches/AttachSyncState;Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;)V
+    value = Lcom/vk/im/engine/utils/MsgSendUtils;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/messages/MsgSyncState;Lcom/vk/im/engine/models/attaches/AttachSyncState;Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Ljava/util/List<",
         "+",
@@ -32,7 +32,7 @@
 # instance fields
 .field final synthetic $attachSyncState:Lcom/vk/im/engine/models/attaches/AttachSyncState;
 
-.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
+.field final synthetic $env:Lcom/vk/im/engine/d;
 
 .field final synthetic $msgLocalId:I
 
@@ -42,7 +42,7 @@
 
 
 # direct methods
-.method constructor <init>(ILcom/vk/im/engine/models/messages/MsgSyncState;Lcom/vk/im/engine/models/attaches/AttachSyncState;Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;Lcom/vk/im/engine/ImEnvironment;)V
+.method constructor <init>(ILcom/vk/im/engine/models/messages/MsgSyncState;Lcom/vk/im/engine/models/attaches/AttachSyncState;Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;Lcom/vk/im/engine/d;)V
     .locals 0
 
     iput p1, p0, Lcom/vk/im/engine/utils/MsgSendUtils$changeSyncState$1;->$msgLocalId:I
@@ -53,7 +53,7 @@
 
     iput-object p4, p0, Lcom/vk/im/engine/utils/MsgSendUtils$changeSyncState$1;->$weightStrategy:Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;
 
-    iput-object p5, p0, Lcom/vk/im/engine/utils/MsgSendUtils$changeSyncState$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p5, p0, Lcom/vk/im/engine/utils/MsgSendUtils$changeSyncState$1;->$env:Lcom/vk/im/engine/d;
 
     const/4 p1, 0x1
 
@@ -177,9 +177,9 @@
 
     invoke-direct {v0, p1, v1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;-><init>(Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;)V
 
-    iget-object p1, p0, Lcom/vk/im/engine/utils/MsgSendUtils$changeSyncState$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object p1, p0, Lcom/vk/im/engine/utils/MsgSendUtils$changeSyncState$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -193,9 +193,9 @@
 
     invoke-direct {v0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
 
-    iget-object p1, p0, Lcom/vk/im/engine/utils/MsgSendUtils$changeSyncState$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object p1, p0, Lcom/vk/im/engine/utils/MsgSendUtils$changeSyncState$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object p1
 

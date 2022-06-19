@@ -156,7 +156,7 @@
     move-object v1, v8
 
     .line 1
-    invoke-direct/range {v1 .. v7}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v8, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->LIST:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -181,7 +181,7 @@
     move-object v9, v1
 
     .line 2
-    invoke-direct/range {v9 .. v15}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v9 .. v15}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->HEADER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -204,7 +204,7 @@
     move-object v3, v1
 
     .line 3
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->HEADER_COMPACT:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -223,7 +223,7 @@
     move-object v3, v1
 
     .line 4
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SEPARATOR:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -242,7 +242,7 @@
     move-object v3, v1
 
     .line 5
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->BUTTON:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -261,7 +261,7 @@
     move-object v3, v1
 
     .line 6
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->LARGE_LIST:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -280,7 +280,7 @@
     move-object v3, v1
 
     .line 7
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SLIDER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -299,7 +299,7 @@
     move-object v3, v1
 
     .line 8
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->LARGE_SLIDER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -318,7 +318,7 @@
     move-object v3, v1
 
     .line 9
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->DOUBLE_STACKED_SLIDER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -337,7 +337,7 @@
     move-object v3, v1
 
     .line 10
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->TRIPLE_STACKED_SLIDER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -356,7 +356,7 @@
     move-object v3, v1
 
     .line 11
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->TRIPLE_STACKED_SLIDER_PICKER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -375,7 +375,7 @@
     move-object v3, v1
 
     .line 12
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->MUSIC_CHART_TRIPLE_STACKED_SLIDER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -394,7 +394,7 @@
     move-object v3, v1
 
     .line 13
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->MUSIC_CHART_LIST:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -413,7 +413,7 @@
     move-object v3, v1
 
     .line 14
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->LIST_PICKER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -432,7 +432,7 @@
     move-object v3, v1
 
     .line 15
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->BANNER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -451,7 +451,7 @@
     move-object v3, v1
 
     .line 16
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_TABS:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -470,7 +470,7 @@
     move-object v3, v1
 
     .line 17
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->PLACEHOLDER_SMALL:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -489,7 +489,7 @@
     move-object v3, v1
 
     .line 18
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->PLACEHOLDER_BIG:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -508,7 +508,7 @@
     move-object v3, v1
 
     .line 19
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->NOTIFICATION:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -527,7 +527,7 @@
     move-object v3, v1
 
     .line 20
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->BUTTONS_HORIZONTAL:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -546,7 +546,7 @@
     move-object v3, v1
 
     .line 21
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->FIENDS_HORIZONTAL_ACTION:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -565,7 +565,7 @@
     move-object v3, v1
 
     .line 22
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->GRID:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -584,7 +584,7 @@
     move-object v3, v1
 
     .line 23
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->LIST_FRIENDS_SUGGEST:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -603,7 +603,7 @@
     move-object v3, v1
 
     .line 24
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->FRIENDS_REQUEST:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -622,7 +622,7 @@
     move-object v3, v1
 
     .line 25
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->FRIENDS_UNREAD_REQUEST:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -641,7 +641,7 @@
     move-object v3, v1
 
     .line 26
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->FRIENDS_BIRTHDAYS_LIST:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -660,7 +660,7 @@
     move-object v3, v1
 
     .line 27
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->LIST_FRIENDS_REQUESTS:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -679,7 +679,7 @@
     move-object v3, v1
 
     .line 28
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->LIST_FRIENDS_REQUESTS_OUT:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -698,7 +698,7 @@
     move-object v3, v1
 
     .line 29
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_FOLLOW:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -717,7 +717,7 @@
     move-object v3, v1
 
     .line 30
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_CREATE_ALBUM:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -736,7 +736,7 @@
     move-object v3, v1
 
     .line 31
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_CREATE_PLAYLIST:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -755,7 +755,7 @@
     move-object v3, v1
 
     .line 32
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_PLAY_AUDIO_FROM_BLOCK:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -774,7 +774,7 @@
     move-object v3, v1
 
     .line 33
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_PLAY_SHUFFLED_AUDIO_FROM_BLOCK:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -793,7 +793,7 @@
     move-object v3, v1
 
     .line 34
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_UPLOAD_VIDEO:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -812,7 +812,7 @@
     move-object v3, v1
 
     .line 35
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_ADD_FRIEND:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -831,7 +831,7 @@
     move-object v3, v1
 
     .line 36
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_SCAN_QR:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -850,7 +850,7 @@
     move-object v3, v1
 
     .line 37
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_OPEN_SCREEN:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -869,7 +869,7 @@
     move-object v3, v1
 
     .line 38
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_FRIENDS_SORT_MODES:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -888,7 +888,7 @@
     move-object v3, v1
 
     .line 39
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_ADV_URL:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -907,7 +907,7 @@
     move-object v3, v1
 
     .line 40
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_CREATE_GROUP:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -926,7 +926,7 @@
     move-object v3, v1
 
     .line 41
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_OPEN_URL:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -945,7 +945,7 @@
     move-object v3, v1
 
     .line 42
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_SWITCH_SECTION:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -964,7 +964,7 @@
     move-object v3, v1
 
     .line 43
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_GO_TO_OWNER:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -983,7 +983,7 @@
     move-object v3, v1
 
     .line 44
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_ACTION_CLOSE_NOTIFICATION:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -1002,7 +1002,7 @@
     move-object v3, v1
 
     .line 45
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_HEADER_CLEAR_RECENTS:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -1021,7 +1021,7 @@
     move-object v3, v1
 
     .line 46
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_VIDEO_VIDEOS_RATIO_1_1:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -1040,7 +1040,7 @@
     move-object v3, v1
 
     .line 47
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_VIDEO_VIDEOS_RATIO_4_5:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -1059,7 +1059,7 @@
     move-object v3, v1
 
     .line 48
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_CATALOG:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -1078,7 +1078,7 @@
     move-object v3, v1
 
     .line 49
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->SYNTHETIC_HEADER_SECTION:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -1097,7 +1097,7 @@
     move-object v3, v1
 
     .line 50
-    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     sput-object v1, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->UNKNOWN:Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
@@ -1111,7 +1111,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogViewType$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogViewType$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->Companion:Lcom/vk/catalog2/core/api/dto/CatalogViewType$a;
 
@@ -1139,7 +1139,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x2

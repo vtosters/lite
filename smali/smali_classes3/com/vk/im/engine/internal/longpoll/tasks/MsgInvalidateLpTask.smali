@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;
-.super Lcom/vk/im/engine/internal/longpoll/LongPollTask;
+.super Lcom/vk/im/engine/internal/longpoll/g;
 .source "MsgInvalidateLpTask.kt"
 
 
@@ -12,7 +12,7 @@
 
 .field private e:Z
 
-.field private final f:Lcom/vk/im/engine/ImEnvironment;
+.field private final f:Lcom/vk/im/engine/d;
 
 .field private final g:I
 
@@ -22,13 +22,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/messages/Msg;Ljava/lang/Integer;)V
+.method public constructor <init>(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/messages/Msg;Ljava/lang/Integer;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/longpoll/LongPollTask;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/longpoll/g;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/d;
 
     iput p2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->g:I
 
@@ -39,7 +39,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/messages/Msg;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/messages/Msg;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x4
@@ -59,16 +59,16 @@
 
     .line 2
     :cond_1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;-><init>(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/messages/Msg;Ljava/lang/Integer;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;-><init>(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/messages/Msg;Ljava/lang/Integer;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;)Lcom/vk/im/engine/ImEnvironment;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;)Lcom/vk/im/engine/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/ImEnvironment;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/d;
 
     return-object p0
 .end method
@@ -77,9 +77,9 @@
     .locals 1
 
     .line 18
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/d;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -107,11 +107,11 @@
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
+.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
     .locals 2
 
     .line 10
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
     move-result-object p2
 
     .line 15
-    invoke-virtual {p2, p1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -160,7 +160,7 @@
     const-string p2, "changes"
 
     .line 17
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->g(Ljava/util/List;)Ljava/lang/Object;
 
@@ -184,11 +184,11 @@
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
 
     move-result-object p0
 
@@ -222,7 +222,7 @@
     return p0
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
+.method private final b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
     .locals 3
 
     .line 15
@@ -243,7 +243,7 @@
     .line 17
     sget-object v2, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a:Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;
 
-    invoke-virtual {v2, p1, v0, p2}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/messages/Msg;)Z
+    invoke-virtual {v2, p1, v0, p2}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/messages/Msg;)Z
 
     move-result v2
 
@@ -254,7 +254,7 @@
 
     check-cast p2, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-virtual {v1, p1, v0, p2}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/messages/MsgFromUser;)V
+    invoke-virtual {v1, p1, v0, p2}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/messages/MsgFromUser;)V
 
     .line 19
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -267,11 +267,11 @@
     return-object v1
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
+.method public static final synthetic b(Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/Integer;
 
     move-result-object p0
 
@@ -362,7 +362,7 @@
     return-void
 .end method
 
-.method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollChanges;)V
+.method protected b(Lcom/vk/im/engine/internal/longpoll/c;)V
     .locals 2
 
     .line 11
@@ -373,7 +373,7 @@
     .line 12
     iget v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->b:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/longpoll/LongPollChanges;->b(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/longpoll/c;->b(I)V
 
     .line 13
     :cond_0
@@ -386,13 +386,13 @@
 
     iget v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->c:I
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/longpoll/LongPollChanges;->e(II)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/longpoll/c;->e(II)V
 
     :cond_1
     return-void
 .end method
 
-.method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
+.method protected b(Lcom/vk/im/engine/internal/longpoll/d;)V
     .locals 3
 
     .line 5
@@ -403,7 +403,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object p1, p1, Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;->g:Landroid/util/SparseArray;
+    iget-object p1, p1, Lcom/vk/im/engine/internal/longpoll/d;->g:Landroid/util/SparseArray;
 
     iget v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->g:I
 
@@ -433,17 +433,17 @@
     if-eqz p1, :cond_1
 
     .line 8
-    iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/ImEnvironment;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/d;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
@@ -457,9 +457,9 @@
 
     .line 9
     :cond_1
-    iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/ImEnvironment;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->f:Lcom/vk/im/engine/d;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -467,24 +467,24 @@
 
     invoke-direct {v1, p0, v0}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask$onSyncStorage$1;-><init>(Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;Lcom/vk/im/engine/models/messages/Msg;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 
     .line 10
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;Lcom/vk/im/engine/internal/longpoll/LongPollEntityMissed;)V
+.method protected b(Lcom/vk/im/engine/internal/longpoll/d;Lcom/vk/im/engine/internal/longpoll/e;)V
     .locals 2
 
     .line 4
-    iget-object p2, p2, Lcom/vk/im/engine/internal/longpoll/LongPollEntityMissed;->d:Lcom/vk/im/engine/utils/collection/IntArraySet;
+    iget-object p2, p2, Lcom/vk/im/engine/internal/longpoll/e;->d:Lcom/vk/im/engine/utils/collection/c;
 
     iget v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->g:I
 
@@ -492,15 +492,15 @@
 
     if-nez v1, :cond_0
 
-    iget-object p1, p1, Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;->g:Landroid/util/SparseArray;
+    iget-object p1, p1, Lcom/vk/im/engine/internal/longpoll/d;->g:Landroid/util/SparseArray;
 
     const-string v1, "lpInfo.messages"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgInvalidateLpTask;->g:I
 
-    invoke-static {p1, v1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;I)Z
+    invoke-static {p1, v1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;I)Z
 
     move-result p1
 
@@ -514,7 +514,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {p2, v0, p1}, Lcom/vk/im/engine/utils/collection/IntArraySet;->a(IZ)V
+    invoke-virtual {p2, v0, p1}, Lcom/vk/im/engine/utils/collection/c;->a(IZ)V
 
     return-void
 .end method

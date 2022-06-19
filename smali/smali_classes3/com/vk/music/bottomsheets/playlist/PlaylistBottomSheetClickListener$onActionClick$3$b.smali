@@ -3,7 +3,7 @@
 .source "PlaylistBottomSheetClickListener.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Action;
+.implements Lc/a/z/a;
 
 
 # annotations
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;->c(Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {v0, v1}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;->c(Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

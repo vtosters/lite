@@ -10,7 +10,7 @@
 
 
 # direct methods
-.method constructor <init>(Lokio/Buffer;I)V
+.method constructor <init>(Lokio/c;I)V
     .locals 7
 
     const/4 v0, 0x0
@@ -19,16 +19,16 @@
     invoke-direct {p0, v0}, Lokio/ByteString;-><init>([B)V
 
     .line 2
-    iget-wide v1, p1, Lokio/Buffer;->b:J
+    iget-wide v1, p1, Lokio/c;->b:J
 
     int-to-long v5, p2
 
     const-wide/16 v3, 0x0
 
-    invoke-static/range {v1 .. v6}, Lokio/Util;->a(JJJ)V
+    invoke-static/range {v1 .. v6}, Lokio/t;->a(JJJ)V
 
     .line 3
-    iget-object v0, p1, Lokio/Buffer;->a:Lokio/Segment;
+    iget-object v0, p1, Lokio/c;->a:Lokio/o;
 
     const/4 v1, 0x0
 
@@ -42,9 +42,9 @@
     if-ge v0, p2, :cond_1
 
     .line 4
-    iget v4, v3, Lokio/Segment;->c:I
+    iget v4, v3, Lokio/o;->c:I
 
-    iget v5, v3, Lokio/Segment;->b:I
+    iget v5, v3, Lokio/o;->b:I
 
     if-eq v4, v5, :cond_0
 
@@ -55,7 +55,7 @@
     add-int/lit8 v2, v2, 0x1
 
     .line 5
-    iget-object v3, v3, Lokio/Segment;->f:Lokio/Segment;
+    iget-object v3, v3, Lokio/o;->f:Lokio/o;
 
     goto :goto_0
 
@@ -83,7 +83,7 @@
     iput-object v0, p0, Lokio/SegmentedByteString;->f:[I
 
     .line 9
-    iget-object p1, p1, Lokio/Buffer;->a:Lokio/Segment;
+    iget-object p1, p1, Lokio/c;->a:Lokio/o;
 
     move-object v0, p1
 
@@ -95,14 +95,14 @@
     .line 10
     iget-object v2, p0, Lokio/SegmentedByteString;->e:[[B
 
-    iget-object v3, v0, Lokio/Segment;->a:[B
+    iget-object v3, v0, Lokio/o;->a:[B
 
     aput-object v3, v2, p1
 
     .line 11
-    iget v2, v0, Lokio/Segment;->c:I
+    iget v2, v0, Lokio/o;->c:I
 
-    iget v3, v0, Lokio/Segment;->b:I
+    iget v3, v0, Lokio/o;->b:I
 
     sub-int/2addr v2, v3
 
@@ -125,19 +125,19 @@
 
     add-int/2addr v3, p1
 
-    iget v4, v0, Lokio/Segment;->b:I
+    iget v4, v0, Lokio/o;->b:I
 
     aput v4, v2, v3
 
     const/4 v2, 0x1
 
     .line 14
-    iput-boolean v2, v0, Lokio/Segment;->d:Z
+    iput-boolean v2, v0, Lokio/o;->d:Z
 
     add-int/lit8 p1, p1, 0x1
 
     .line 15
-    iget-object v0, v0, Lokio/Segment;->f:Lokio/Segment;
+    iget-object v0, v0, Lokio/o;->f:Lokio/o;
 
     goto :goto_1
 
@@ -222,7 +222,7 @@
 
     const-wide/16 v5, 0x1
 
-    invoke-static/range {v1 .. v6}, Lokio/Util;->a(JJJ)V
+    invoke-static/range {v1 .. v6}, Lokio/t;->a(JJJ)V
 
     .line 4
     invoke-direct {p0, p1}, Lokio/SegmentedByteString;->b(I)I
@@ -297,7 +297,7 @@
     return-object p1
 .end method
 
-.method a(Lokio/Buffer;)V
+.method a(Lokio/c;)V
     .locals 11
 
     .line 8
@@ -323,7 +323,7 @@
     aget v3, v3, v1
 
     .line 11
-    new-instance v4, Lokio/Segment;
+    new-instance v4, Lokio/o;
 
     iget-object v5, p0, Lokio/SegmentedByteString;->e:[[B
 
@@ -339,27 +339,27 @@
 
     move-object v5, v4
 
-    invoke-direct/range {v5 .. v10}, Lokio/Segment;-><init>([BIIZZ)V
+    invoke-direct/range {v5 .. v10}, Lokio/o;-><init>([BIIZZ)V
 
     .line 12
-    iget-object v2, p1, Lokio/Buffer;->a:Lokio/Segment;
+    iget-object v2, p1, Lokio/c;->a:Lokio/o;
 
     if-nez v2, :cond_0
 
     .line 13
-    iput-object v4, v4, Lokio/Segment;->g:Lokio/Segment;
+    iput-object v4, v4, Lokio/o;->g:Lokio/o;
 
-    iput-object v4, v4, Lokio/Segment;->f:Lokio/Segment;
+    iput-object v4, v4, Lokio/o;->f:Lokio/o;
 
-    iput-object v4, p1, Lokio/Buffer;->a:Lokio/Segment;
+    iput-object v4, p1, Lokio/c;->a:Lokio/o;
 
     goto :goto_1
 
     .line 14
     :cond_0
-    iget-object v2, v2, Lokio/Segment;->g:Lokio/Segment;
+    iget-object v2, v2, Lokio/o;->g:Lokio/o;
 
-    invoke-virtual {v2, v4}, Lokio/Segment;->a(Lokio/Segment;)Lokio/Segment;
+    invoke-virtual {v2, v4}, Lokio/o;->a(Lokio/o;)Lokio/o;
 
     :goto_1
     add-int/lit8 v1, v1, 0x1
@@ -370,13 +370,13 @@
 
     .line 15
     :cond_1
-    iget-wide v0, p1, Lokio/Buffer;->b:J
+    iget-wide v0, p1, Lokio/c;->b:J
 
     int-to-long v2, v2
 
     add-long/2addr v0, v2
 
-    iput-wide v0, p1, Lokio/Buffer;->b:J
+    iput-wide v0, p1, Lokio/c;->b:J
 
     return-void
 .end method
@@ -570,7 +570,7 @@
     .line 29
     aget-object v4, v5, v1
 
-    invoke-static {v4, v2, p2, p3, v3}, Lokio/Util;->a([BI[BII)Z
+    invoke-static {v4, v2, p2, p3, v3}, Lokio/t;->a([BI[BII)Z
 
     move-result v2
 

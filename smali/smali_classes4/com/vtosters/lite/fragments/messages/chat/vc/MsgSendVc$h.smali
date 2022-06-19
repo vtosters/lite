@@ -56,7 +56,7 @@
 
     invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->s(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     const/4 p1, 0x1
 
@@ -100,7 +100,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$h;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
 
     move-result-object v0
 
@@ -108,7 +108,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->b()Z
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->b()Z
 
     move-result v0
 
@@ -124,7 +124,7 @@
     :goto_0
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$h;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/b;
 
     move-result-object v0
 
@@ -134,7 +134,7 @@
 
     move-result v2
 
-    invoke-interface {v0, v2, v1}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->a(IZ)V
+    invoke-interface {v0, v2, v1}, Lcom/vk/im/ui/q/h/f/b;->a(IZ)V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$h;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
@@ -154,11 +154,11 @@
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$h;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->d(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->d(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->f()V
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->f()V
 
     return-void
 .end method
@@ -195,11 +195,11 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$h;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->m(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->m(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->f()V
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->f()V
 
     return-void
 .end method
@@ -234,11 +234,11 @@
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$h;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/stickers/f0/KeyboardPopup;)Z
+    invoke-static {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/stickers/f0/a;)Z
 
     .line 6
     :cond_0
@@ -249,11 +249,11 @@
     .line 7
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$h;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/b;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->e()V
+    invoke-interface {p1}, Lcom/vk/im/ui/q/h/f/b;->e()V
 
     return-void
 .end method
@@ -264,11 +264,11 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$h;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->g()V
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/b;->g()V
 
     return-void
 .end method

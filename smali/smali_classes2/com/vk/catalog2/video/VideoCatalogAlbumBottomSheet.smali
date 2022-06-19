@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.field private static a:Lcom/vk/core/dialogs/bottomsheet/e;
 
 .field private static b:Lcom/vk/dto/video/VideoAlbum;
 
@@ -72,7 +72,7 @@
     invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;-><init>()V
 
     .line 13
-    sget v1, Lcom/vk/libvideo/R9;->bottom_menu_simple_item_view:I
+    sget v1, Lcom/vk/libvideo/h;->bottom_menu_simple_item_view:I
 
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -80,7 +80,7 @@
 
     const-string v3, "LayoutInflater.from(context)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(ILandroid/view/LayoutInflater;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
@@ -89,7 +89,7 @@
 
     invoke-direct {v1}, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$a;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 15
     new-instance v1, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$b;
@@ -154,30 +154,30 @@
     move-result v3
 
     .line 23
-    sget v4, Lcom/vk/libvideo/R;->edit:I
+    sget v4, Lcom/vk/libvideo/g;->edit:I
 
     if-ne v3, v4, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
+    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
 
     move-result-object p2
 
     sget-wide v3, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->c:J
 
-    invoke-interface {p2, p1, v3, v4, v1}, Lcom/vk/bridges/VideoBridge1;->a(Landroid/content/Context;JLcom/vk/dto/video/VideoAlbum;)V
+    invoke-interface {p2, p1, v3, v4, v1}, Lcom/vk/bridges/k0;->a(Landroid/content/Context;JLcom/vk/dto/video/VideoAlbum;)V
 
     goto :goto_0
 
     .line 24
     :cond_0
-    sget v4, Lcom/vk/libvideo/R;->remove:I
+    sget v4, Lcom/vk/libvideo/g;->remove:I
 
     if-ne v3, v4, :cond_1
 
     .line 25
     new-instance v3, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$c;
 
-    invoke-direct {v3, v1, p2, p1, v0}, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$c;-><init>(Lcom/vk/dto/video/VideoAlbum;Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$Options;Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v3, v1, p2, p1, v0}, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$c;-><init>(Lcom/vk/dto/video/VideoAlbum;Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$Options;Landroid/content/Context;Lkotlin/jvm/b/a;)V
 
     .line 26
     new-instance p2, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
@@ -185,22 +185,22 @@
     invoke-direct {p2, p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 27
-    sget p1, Lcom/vk/libvideo/R11;->video_alert_title:I
+    sget p1, Lcom/vk/libvideo/j;->video_alert_title:I
 
     invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setTitle(I)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 28
-    sget p1, Lcom/vk/libvideo/R11;->video_album_confirm_remove:I
+    sget p1, Lcom/vk/libvideo/j;->video_album_confirm_remove:I
 
     invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setMessage(I)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 29
-    sget p1, Lcom/vk/libvideo/R11;->delete:I
+    sget p1, Lcom/vk/libvideo/j;->delete:I
 
     invoke-virtual {p2, p1, v3}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 30
-    sget p1, Lcom/vk/libvideo/R11;->cancel:I
+    sget p1, Lcom/vk/libvideo/j;->cancel:I
 
     invoke-virtual {p2, p1, v2}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
@@ -224,20 +224,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+.method public static final synthetic a(Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
     .locals 0
 
     .line 3
-    sput-object p1, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    sput-object p1, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.method public static final synthetic b(Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    sget-object p0, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-object p0
 .end method
@@ -275,14 +275,14 @@
     invoke-virtual {v1, p2}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->setItems(Ljava/util/List;)V
 
     .line 8
-    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
-    invoke-direct {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     .line 9
     sget-object p1, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$d;->a:Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$d;
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v2, 0x1
 
@@ -295,16 +295,16 @@
     move-object v0, p2
 
     .line 10
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const-string p1, "video_catalog_album_options"
 
     .line 11
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object p1
 
-    sput-object p1, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    sput-object p1, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 .end method

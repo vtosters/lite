@@ -1,9 +1,9 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableCache;
-.super Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;
+.super Lio/reactivex/internal/operators/observable/a;
 .source "ObservableCache.java"
 
 # interfaces
-.implements Lio/reactivex/Observer;
+.implements Lc/a/r;
 
 
 # annotations
@@ -19,9 +19,9 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream<",
+        "Lio/reactivex/internal/operators/observable/a<",
         "TT;TT;>;",
-        "Lio/reactivex/Observer<",
+        "Lc/a/r<",
         "TT;>;"
     }
 .end annotation
@@ -95,18 +95,18 @@
     return-void
 .end method
 
-.method public constructor <init>(Lio/reactivex/Observable;I)V
+.method public constructor <init>(Lc/a/m;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "TT;>;I)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;-><init>(Lio/reactivex/ObservableSource;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/a;-><init>(Lc/a/p;)V
 
     .line 2
     iput p2, p0, Lio/reactivex/internal/operators/observable/ObservableCache;->c:I
@@ -143,7 +143,7 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 0
 
     return-void
@@ -286,12 +286,12 @@
     return-void
 .end method
 
-.method protected b(Lio/reactivex/Observer;)V
+.method protected b(Lc/a/r;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)V"
         }
     .end annotation
@@ -299,10 +299,10 @@
     .line 1
     new-instance v0, Lio/reactivex/internal/operators/observable/ObservableCache$CacheDisposable;
 
-    invoke-direct {v0, p1, p0}, Lio/reactivex/internal/operators/observable/ObservableCache$CacheDisposable;-><init>(Lio/reactivex/Observer;Lio/reactivex/internal/operators/observable/ObservableCache;)V
+    invoke-direct {v0, p1, p0}, Lio/reactivex/internal/operators/observable/ObservableCache$CacheDisposable;-><init>(Lc/a/r;Lio/reactivex/internal/operators/observable/ObservableCache;)V
 
     .line 2
-    invoke-interface {p1, v0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     .line 3
     invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/observable/ObservableCache;->a(Lio/reactivex/internal/operators/observable/ObservableCache$CacheDisposable;)V
@@ -329,9 +329,9 @@
     if-eqz p1, :cond_0
 
     .line 5
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
 
-    invoke-interface {p1, p0}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
+    invoke-interface {p1, p0}, Lc/a/p;->a(Lc/a/r;)V
 
     goto :goto_0
 
@@ -566,7 +566,7 @@
     iget-object v3, p1, Lio/reactivex/internal/operators/observable/ObservableCache$CacheDisposable;->node:Lio/reactivex/internal/operators/observable/ObservableCache$a;
 
     .line 5
-    iget-object v4, p1, Lio/reactivex/internal/operators/observable/ObservableCache$CacheDisposable;->downstream:Lio/reactivex/Observer;
+    iget-object v4, p1, Lio/reactivex/internal/operators/observable/ObservableCache$CacheDisposable;->downstream:Lc/a/r;
 
     .line 6
     iget v5, p0, Lio/reactivex/internal/operators/observable/ObservableCache;->c:I
@@ -623,13 +623,13 @@
     if-eqz p1, :cond_4
 
     .line 13
-    invoke-interface {v4, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v4, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
     .line 14
     :cond_4
-    invoke-interface {v4}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v4}, Lc/a/r;->b()V
 
     :goto_2
     return-void
@@ -652,7 +652,7 @@
 
     aget-object v8, v8, v2
 
-    invoke-interface {v4, v8}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v4, v8}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     add-int/2addr v2, v6
 

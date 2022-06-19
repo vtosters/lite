@@ -3,12 +3,12 @@
 .source "PlaylistsContainer.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/IdClickListener;
+.implements Lcom/vk/core/ui/k;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;)V
+    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/g;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/core/ui/IdClickListener<",
+        "Lcom/vk/core/ui/k<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -80,11 +80,11 @@
 
     if-ne p2, p1, :cond_2
 
-    new-instance p1, Lcom/vk/music/fragment/MusicFragment$f;
+    new-instance p1, Lcom/vk/music/fragment/k$f;
 
-    invoke-direct {p1}, Lcom/vk/music/fragment/MusicFragment$f;-><init>()V
+    invoke-direct {p1}, Lcom/vk/music/fragment/k$f;-><init>()V
 
-    invoke-virtual {p1}, Lcom/vk/music/fragment/MusicFragment$f;->h()Lcom/vk/music/fragment/MusicFragment$f;
+    invoke-virtual {p1}, Lcom/vk/music/fragment/k$f;->h()Lcom/vk/music/fragment/k$f;
 
     iget-object p2, p0, Lcom/vk/music/playlist/PlaylistsContainer$d;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
@@ -92,7 +92,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, p2}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     :cond_2
     :goto_0
@@ -114,7 +114,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/View;)V
 
     return-void
 .end method
@@ -123,7 +123,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/MenuItem;)Z
+    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/MenuItem;)Z
 
     move-result p1
 

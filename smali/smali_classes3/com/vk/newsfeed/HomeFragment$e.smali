@@ -3,7 +3,7 @@
 .source "HomeFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,7 +57,7 @@
             "Lcom/vtosters/lite/NewsfeedList;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/newsfeed/NewsListsAdapter2;",
+            "Lcom/vk/newsfeed/r;",
             ">;"
         }
     .end annotation

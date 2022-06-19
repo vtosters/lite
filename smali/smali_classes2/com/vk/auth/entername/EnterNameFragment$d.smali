@@ -3,7 +3,7 @@
 .source "EnterNameFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/utils/KeyboardController$a;
+.implements Lcom/vk/auth/utils/c$a;
 
 
 # annotations

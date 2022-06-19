@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/ValidationActivity$b;
-.super Lcom/vk/webapp/helpers/WebClients4;
+.super Lcom/vk/webapp/helpers/f;
 .source "ValidationActivity.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/ValidationActivity$b;->f:Lcom/vtosters/lite/ValidationActivity;
 
-    invoke-direct {p0}, Lcom/vk/webapp/helpers/WebClients4;-><init>()V
+    invoke-direct {p0}, Lcom/vk/webapp/helpers/f;-><init>()V
 
     return-void
 .end method
@@ -123,7 +123,7 @@
     :goto_0
     iget-object p2, p0, Lcom/vtosters/lite/ValidationActivity$b;->f:Lcom/vtosters/lite/ValidationActivity;
 
-    invoke-static {p2}, Lcom/vtosters/lite/ValidationActivity;->d(Lcom/vtosters/lite/ValidationActivity;)Lb/h/g/k/VKProgressDialog;
+    invoke-static {p2}, Lcom/vtosters/lite/ValidationActivity;->d(Lcom/vtosters/lite/ValidationActivity;)Lb/h/g/k/a;
 
     move-result-object p2
 
@@ -139,20 +139,20 @@
     if-eqz p1, :cond_1
 
     .line 3
-    invoke-static {p2}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/app/Dialog;)V
+    invoke-static {p2}, Lcom/vtosters/lite/f0;->b(Landroid/app/Dialog;)V
 
     goto :goto_1
 
     .line 4
     :cond_1
-    invoke-static {p2}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/app/Dialog;)V
+    invoke-static {p2}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     .line 5
     iget-object p1, p0, Lcom/vtosters/lite/ValidationActivity$b;->f:Lcom/vtosters/lite/ValidationActivity;
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p2}, Lcom/vtosters/lite/ValidationActivity;->a(Lcom/vtosters/lite/ValidationActivity;Lb/h/g/k/VKProgressDialog;)Lb/h/g/k/VKProgressDialog;
+    invoke-static {p1, p2}, Lcom/vtosters/lite/ValidationActivity;->a(Lcom/vtosters/lite/ValidationActivity;Lb/h/g/k/a;)Lb/h/g/k/a;
 
     :cond_2
     :goto_1

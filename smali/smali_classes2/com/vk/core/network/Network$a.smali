@@ -17,9 +17,9 @@
 # instance fields
 .field private final a:Ljava/lang/Object;
 
-.field private b:Lokhttp3/OkHttpClient$b;
+.field private b:Lokhttp3/x$b;
 
-.field private c:Lokhttp3/OkHttpClient;
+.field private c:Lokhttp3/x;
 
 .field private final d:Lcom/vk/core/network/Network$ClientType;
 
@@ -45,28 +45,28 @@
 
 
 # virtual methods
-.method public final a()Lokhttp3/OkHttpClient$b;
+.method public final a()Lokhttp3/x$b;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/network/Network$a;->b()Lokhttp3/OkHttpClient;
+    invoke-virtual {p0}, Lcom/vk/core/network/Network$a;->b()Lokhttp3/x;
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/OkHttpClient$b;
+    iget-object v0, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/x$b;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public final a(Lokhttp3/OkHttpClient$b;)Lokhttp3/OkHttpClient;
+.method public final a(Lokhttp3/x$b;)Lokhttp3/x;
     .locals 1
 
     .line 3
@@ -76,17 +76,17 @@
 
     .line 4
     :try_start_0
-    iput-object p1, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/OkHttpClient$b;
+    iput-object p1, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/x$b;
 
     .line 5
-    invoke-virtual {p1}, Lokhttp3/OkHttpClient$b;->a()Lokhttp3/OkHttpClient;
+    invoke-virtual {p1}, Lokhttp3/x$b;->a()Lokhttp3/x;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/OkHttpClient;
+    iput-object p1, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/x;
 
     .line 6
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -94,14 +94,14 @@
     monitor-exit v0
 
     .line 8
-    iget-object p1, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/OkHttpClient;
+    iget-object p1, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/x;
 
     if-eqz p1, :cond_0
 
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -116,7 +116,7 @@
     throw p1
 .end method
 
-.method public final b()Lokhttp3/OkHttpClient;
+.method public final b()Lokhttp3/x;
     .locals 3
 
     .line 1
@@ -142,27 +142,27 @@
     if-eqz v2, :cond_1
 
     .line 4
-    invoke-static {}, Lcom/vk/core/network/Network;->l()Lokhttp3/OkHttpClient$b;
+    invoke-static {}, Lcom/vk/core/network/Network;->l()Lokhttp3/x$b;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/OkHttpClient$b;
+    iput-object v2, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/x$b;
 
     .line 5
-    iget-object v2, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/OkHttpClient$b;
+    iget-object v2, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/x$b;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lokhttp3/OkHttpClient$b;->a()Lokhttp3/OkHttpClient;
+    invoke-virtual {v2}, Lokhttp3/x$b;->a()Lokhttp3/x;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/OkHttpClient;
+    iput-object v2, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/x;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -172,7 +172,7 @@
     :cond_1
     :goto_0
     :try_start_1
-    sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -191,14 +191,14 @@
     .line 8
     :cond_2
     :goto_1
-    iget-object v0, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/OkHttpClient;
+    iget-object v0, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/x;
 
     if-eqz v0, :cond_3
 
     return-object v0
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -249,25 +249,25 @@
     .line 4
     sget-object v1, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
-    iget-object v2, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/OkHttpClient$b;
+    iget-object v2, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/x$b;
 
-    invoke-static {v1, v2}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network;Lokhttp3/OkHttpClient$b;)V
+    invoke-static {v1, v2}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network;Lokhttp3/x$b;)V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/OkHttpClient$b;
+    iget-object v1, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/x$b;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lokhttp3/OkHttpClient$b;->a()Lokhttp3/OkHttpClient;
+    invoke-virtual {v1}, Lokhttp3/x$b;->a()Lokhttp3/x;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/OkHttpClient;
+    iput-object v1, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/x;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -279,7 +279,7 @@
     :cond_1
     :goto_0
     :try_start_1
-    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -300,7 +300,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/OkHttpClient;
+    iget-object v0, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/x;
 
     if-nez v0, :cond_0
 
@@ -359,37 +359,37 @@
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-static {}, Lcom/vk/core/network/Network;->l()Lokhttp3/OkHttpClient$b;
+    invoke-static {}, Lcom/vk/core/network/Network;->l()Lokhttp3/x$b;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/OkHttpClient$b;
+    iput-object v1, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/x$b;
 
     .line 5
     :cond_0
     sget-object v1, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
-    iget-object v2, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/OkHttpClient$b;
+    iget-object v2, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/x$b;
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_2
 
-    invoke-static {v1, v2}, Lcom/vk/core/network/Network;->b(Lcom/vk/core/network/Network;Lokhttp3/OkHttpClient$b;)V
+    invoke-static {v1, v2}, Lcom/vk/core/network/Network;->b(Lcom/vk/core/network/Network;Lokhttp3/x$b;)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/OkHttpClient$b;
+    iget-object v1, p0, Lcom/vk/core/network/Network$a;->b:Lokhttp3/x$b;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lokhttp3/OkHttpClient$b;->a()Lokhttp3/OkHttpClient;
+    invoke-virtual {v1}, Lokhttp3/x$b;->a()Lokhttp3/x;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/OkHttpClient;
+    iput-object v1, p0, Lcom/vk/core/network/Network$a;->c:Lokhttp3/x;
 
     .line 7
-    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -401,7 +401,7 @@
     .line 9
     :cond_1
     :try_start_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -410,7 +410,7 @@
     .line 10
     :cond_2
     :try_start_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

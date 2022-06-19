@@ -3,7 +3,7 @@
 .source "AttachmentsPostingViewController.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/PostingContracts7;
+.implements Lcom/vk/newsfeed/posting/b;
 
 
 # annotations
@@ -16,19 +16,19 @@
 
 
 # static fields
-.field static final synthetic E:[Lkotlin/u/KProperty5;
+.field static final synthetic E:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final B:Lkotlin/Lazy2;
+.field private final B:Lkotlin/e;
 
 .field private final C:Landroid/app/Activity;
 
 .field private final D:I
 
-.field private final a:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+.field private final a:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
-.field private final b:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces1;
+.field private final b:Lcom/vk/newsfeed/posting/viewpresenter/attachments/e;
 
 .field private final c:Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;
 
@@ -36,11 +36,11 @@
 
 .field private e:Z
 
-.field private f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces2;
+.field private f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/d;
 
 .field private final g:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$a;
 
-.field private h:Lcom/vk/newsfeed/posting/PostingContracts1;
+.field private h:Lcom/vk/newsfeed/posting/a;
 
 
 # direct methods
@@ -49,13 +49,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -63,24 +63,24 @@
 
     const-string v4, "getUploadProgressListener()Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$uploadProgressListener$2$1;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->E:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->E:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f120986
 
@@ -90,7 +90,7 @@
 
     const-string v1, "AppContextHolder.context\u2026attachments_upload_title)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -110,26 +110,26 @@
 
     invoke-direct {p1, p0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$c;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;)V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
     .line 3
     new-instance p1, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$d;
 
     invoke-direct {p1, p0, p3}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$d;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;Lcom/vk/core/fragments/FragmentImpl;)V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->b:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces1;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->b:Lcom/vk/newsfeed/posting/viewpresenter/attachments/e;
 
     .line 4
     new-instance p1, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;
 
-    iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+    iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
-    iget-object p3, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->b:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces1;
+    iget-object p3, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->b:Lcom/vk/newsfeed/posting/viewpresenter/attachments/e;
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces1;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;Lcom/vk/newsfeed/posting/viewpresenter/attachments/e;)V
 
     .line 5
-    new-instance p2, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
     new-instance p3, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/AttachmentsNewsEntry;
 
@@ -141,9 +141,9 @@
 
     const/4 v0, 0x5
 
-    invoke-direct {p2, p3, v0}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, p3, v0}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
 
     .line 6
     iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->c:Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;
@@ -160,11 +160,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$uploadProgressListener$2;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->B:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->B:Lkotlin/e;
 
     return-void
 .end method
@@ -202,13 +202,13 @@
     check-cast v3, Lcom/vk/dto/common/Attachment;
 
     .line 36
-    instance-of v4, v3, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v4, :cond_1
 
-    check-cast v3, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v3, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v3}, Lcom/vtosters/lite/attachments/PendingAttachment;->V()I
+    invoke-interface {v3}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v3
 
@@ -337,15 +337,15 @@
 .method private final a()Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$uploadProgressListener$2$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->B:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->B:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->E:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->E:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -363,14 +363,14 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vtosters/lite/attachments/PendingAttachment;)Lcom/vtosters/lite/upload/UploadTask;
+.method private final a(Lcom/vtosters/lite/attachments/b;)Lcom/vtosters/lite/upload/j;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/attachments/PendingAttachment<",
+            "Lcom/vtosters/lite/attachments/b<",
             "*>;)",
-            "Lcom/vtosters/lite/upload/UploadTask<",
+            "Lcom/vtosters/lite/upload/j<",
             "*>;"
         }
     .end annotation
@@ -380,7 +380,7 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vtosters/lite/upload/l/DocumentUploadTask;
+    new-instance v0, Lcom/vtosters/lite/upload/l/g;
 
     check-cast p1, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
@@ -388,7 +388,7 @@
 
     const-string p1, "attachment.url"
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->D:I
 
@@ -402,7 +402,7 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/upload/l/DocumentUploadTask;-><init>(Ljava/lang/String;IZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/upload/l/g;-><init>(Ljava/lang/String;IZZILkotlin/jvm/internal/i;)V
 
     goto :goto_0
 
@@ -412,7 +412,7 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lcom/vtosters/lite/upload/l/WallPhotoUploadTask;
+    new-instance v0, Lcom/vtosters/lite/upload/l/s;
 
     check-cast p1, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
@@ -422,11 +422,11 @@
 
     const-string v1, "attachment.uri"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->D:I
 
-    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/upload/l/WallPhotoUploadTask;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/upload/l/s;-><init>(Ljava/lang/String;I)V
 
     goto :goto_0
 
@@ -436,7 +436,7 @@
 
     if-eqz v0, :cond_2
 
-    new-instance v0, Lcom/vtosters/lite/upload/l/VideoUploadTask;
+    new-instance v0, Lcom/vtosters/lite/upload/l/r;
 
     check-cast p1, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
@@ -469,7 +469,7 @@
     move-object v1, v0
 
     .line 29
-    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/upload/l/VideoUploadTask;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/api/video/VideoSave$Target;IZ)V
+    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/upload/l/r;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/api/video/VideoSave$Target;IZ)V
 
     goto :goto_0
 
@@ -485,7 +485,7 @@
 
     new-instance v3, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$getPendingAttachmentJob$1;
 
-    invoke-direct {v3, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$getPendingAttachmentJob$1;-><init>(Lcom/vtosters/lite/attachments/PendingAttachment;)V
+    invoke-direct {v3, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$getPendingAttachmentJob$1;-><init>(Lcom/vtosters/lite/attachments/b;)V
 
     const-class p1, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$getPendingAttachmentJob$1;
 
@@ -522,11 +522,11 @@
     invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->I(I)V
 
     .line 33
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces2;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/d;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces2;->b()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/d;->b()V
 
     :cond_0
     return-void
@@ -615,13 +615,13 @@
     check-cast v2, Lcom/vk/dto/common/Attachment;
 
     .line 8
-    instance-of v3, v2, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v3, v2, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v3, :cond_1
 
-    check-cast v2, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v2, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v2}, Lcom/vtosters/lite/attachments/PendingAttachment;->V()I
+    invoke-interface {v2}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v2
 
@@ -668,11 +668,11 @@
     if-nez p1, :cond_4
 
     .line 12
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces2;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/d;
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces2;->a()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/d;->a()V
 
     :cond_4
     return-void
@@ -682,7 +682,7 @@
     .locals 1
 
     .line 13
-    instance-of v0, p1, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/b;
 
     if-nez v0, :cond_0
 
@@ -690,55 +690,55 @@
 
     .line 14
     :cond_0
-    check-cast p1, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/b;
 
     invoke-static {}, Lcom/vtosters/lite/upload/Upload;->a()I
 
     move-result v0
 
-    invoke-interface {p1, v0}, Lcom/vtosters/lite/attachments/PendingAttachment;->d(I)V
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/attachments/b;->d(I)V
 
     .line 15
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->b(Lcom/vtosters/lite/attachments/PendingAttachment;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->b(Lcom/vtosters/lite/attachments/b;)V
 
     return-void
 .end method
 
-.method private final b(Lcom/vtosters/lite/attachments/PendingAttachment;)V
+.method private final b(Lcom/vtosters/lite/attachments/b;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/attachments/PendingAttachment<",
+            "Lcom/vtosters/lite/attachments/b<",
             "*>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a(Lcom/vtosters/lite/attachments/PendingAttachment;)Lcom/vtosters/lite/upload/UploadTask;
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a(Lcom/vtosters/lite/attachments/b;)Lcom/vtosters/lite/upload/j;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vtosters/lite/upload/UploadTask;->n()Lcom/vtosters/lite/upload/UploadNotification;
+    invoke-virtual {v0}, Lcom/vtosters/lite/upload/j;->n()Lcom/vtosters/lite/upload/UploadNotification;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/upload/UploadNotification;->a()Lcom/vtosters/lite/upload/UploadUtils$e;
+    invoke-virtual {v1}, Lcom/vtosters/lite/upload/UploadNotification;->a()Lcom/vtosters/lite/upload/k$e;
 
     .line 3
     invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a()Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$uploadProgressListener$2$a;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/UploadTask;Lkotlin/jvm/b/Functions2;)I
+    invoke-static {v0, v1}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lkotlin/jvm/b/b;)I
 
     move-result v0
 
     .line 4
-    invoke-interface {p1, v0}, Lcom/vtosters/lite/attachments/PendingAttachment;->d(I)V
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/attachments/b;->d(I)V
 
     :cond_0
     return-void
@@ -761,7 +761,7 @@
     const-string v0, "it"
 
     .line 8
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->c:Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;
 
@@ -784,11 +784,11 @@
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setNestedScrollingEnabled(Z)V
 
     .line 11
-    new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/AttachmentsTouchHelper;
+    new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/a;
 
     iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->c:Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/AttachmentsTouchHelper;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/AttachmentsTouchHelper1;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/a;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/b;)V
 
     .line 12
     new-instance v1, Landroidx/recyclerview/widget/ItemTouchHelper;
@@ -802,9 +802,9 @@
     iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 15
-    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
 
     move-result-object p1
 
@@ -813,7 +813,7 @@
 
     const/16 v1, 0x78
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
 
     return-void
 .end method
@@ -838,22 +838,22 @@
 
     .line 21
     :cond_0
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/d;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces2;->b(Lcom/vk/dto/common/Attachment;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/d;->b(Lcom/vk/dto/common/Attachment;)V
 
     .line 22
     :cond_1
-    instance-of v0, p1, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v0, :cond_2
 
     .line 23
-    check-cast p1, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {p1}, Lcom/vtosters/lite/attachments/PendingAttachment;->V()I
+    invoke-interface {p1}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result p1
 
@@ -863,20 +863,20 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/PostingContracts1;)V
+.method public a(Lcom/vk/newsfeed/posting/a;)V
     .locals 0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->h:Lcom/vk/newsfeed/posting/PostingContracts1;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->h:Lcom/vk/newsfeed/posting/a;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces2;)V
+.method public a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/d;)V
     .locals 0
 
     .line 17
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces2;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/d;
 
     return-void
 .end method
@@ -961,11 +961,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/attachments/AttachmentUtils;->e(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vtosters/lite/attachments/a;->e(Ljava/util/List;)Ljava/util/List;
 
     const-string v0, "AttachmentUtils.sorted(a\u2026achments.toMutableList())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     new-instance v0, Ljava/util/ArrayList;
@@ -1053,14 +1053,14 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 11
-    instance-of v1, v0, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v1, :cond_9
 
     .line 12
-    check-cast v0, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/b;
 
-    invoke-direct {p0, v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->b(Lcom/vtosters/lite/attachments/PendingAttachment;)V
+    invoke-direct {p0, v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->b(Lcom/vtosters/lite/attachments/b;)V
 
     goto :goto_4
 
@@ -1086,11 +1086,11 @@
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/newsfeed/posting/PostingContracts1;
+.method public getPresenter()Lcom/vk/newsfeed/posting/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->h:Lcom/vk/newsfeed/posting/PostingContracts1;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->h:Lcom/vk/newsfeed/posting/a;
 
     return-object v0
 .end method
@@ -1138,7 +1138,7 @@
     check-cast v1, Lcom/vk/dto/common/Attachment;
 
     .line 4
-    instance-of v1, v1, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v1, v1, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v1, :cond_1
 
@@ -1174,16 +1174,16 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
 
     move-result-object v0
 
     .line 2
     iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->g:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$a;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->m()Ljava/util/List;
@@ -1210,14 +1210,14 @@
     check-cast v1, Lcom/vk/dto/common/Attachment;
 
     .line 5
-    instance-of v2, v1, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v2, v1, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v2, :cond_0
 
     .line 6
-    check-cast v1, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v1}, Lcom/vtosters/lite/attachments/PendingAttachment;->V()I
+    invoke-interface {v1}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v1
 
@@ -1227,13 +1227,13 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts1;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->getPresenter()Lcom/vk/newsfeed/posting/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts6;->onStop()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/c;->onStop()V
 
     :cond_2
     const/4 v0, 0x0
@@ -1242,7 +1242,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 9
-    invoke-static {p0}, Lcom/vk/newsfeed/posting/PostingContracts$a7;->a(Lcom/vk/newsfeed/posting/PostingContracts7;)V
+    invoke-static {p0}, Lcom/vk/newsfeed/posting/b$a;->a(Lcom/vk/newsfeed/posting/b;)V
 
     return-void
 .end method

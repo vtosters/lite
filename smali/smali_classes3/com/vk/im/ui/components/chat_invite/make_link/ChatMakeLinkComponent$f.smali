@@ -3,7 +3,7 @@
 .source "ChatMakeLinkComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/engine/models/chats/ChatInviteLink;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/engine/models/chats/a;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/chats/ChatInviteLink;)V
+.method public final a(Lcom/vk/im/engine/models/chats/a;)V
     .locals 2
 
     .line 1
@@ -58,11 +58,11 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v1, p0, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkComponent$f;->b:Z
 
-    invoke-static {v0, p1, v1}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkComponent;->a(Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkComponent;Lcom/vk/im/engine/models/chats/ChatInviteLink;Z)V
+    invoke-static {v0, p1, v1}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkComponent;->a(Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkComponent;Lcom/vk/im/engine/models/chats/a;Z)V
 
     return-void
 .end method
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/chats/ChatInviteLink;
+    check-cast p1, Lcom/vk/im/engine/models/chats/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkComponent$f;->a(Lcom/vk/im/engine/models/chats/ChatInviteLink;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkComponent$f;->a(Lcom/vk/im/engine/models/chats/a;)V
 
     return-void
 .end method

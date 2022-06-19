@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/group/vc/GroupProfileView;
-.super Lcom/vk/im/ui/views/ContactHeaderView;
+.super Lcom/vk/im/ui/views/a;
 .source "GroupProfileView.kt"
 
 
@@ -35,7 +35,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/group/vc/GroupProfileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/group/vc/GroupProfileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/group/vc/GroupProfileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/group/vc/GroupProfileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -64,10 +64,10 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/ui/views/ContactHeaderView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/ui/views/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
-    sget p1, Lcom/vk/im/ui/R11;->im_message:I
+    sget p1, Lcom/vk/im/ui/h;->im_message:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -75,14 +75,14 @@
 
     const-string p2, "findViewById(R.id.im_message)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/buttons/TextImageButton;
 
     iput-object p1, p0, Lcom/vk/im/ui/components/group/vc/GroupProfileView;->Q:Lcom/vk/im/ui/views/buttons/TextImageButton;
 
     .line 4
-    sget p1, Lcom/vk/im/ui/R11;->im_share:I
+    sget p1, Lcom/vk/im/ui/h;->im_share:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -90,7 +90,7 @@
 
     const-string p2, "findViewById(R.id.im_share)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/buttons/TextImageButton;
 
@@ -103,7 +103,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/group/vc/GroupProfileView$1;-><init>(Lcom/vk/im/ui/components/group/vc/GroupProfileView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/im/ui/components/group/vc/GroupProfileView;->R:Lcom/vk/im/ui/views/buttons/TextImageButton;
@@ -112,10 +112,10 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/group/vc/GroupProfileView$2;-><init>(Lcom/vk/im/ui/components/group/vc/GroupProfileView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/ContactHeaderView;->getAvatarView()Lcom/vk/im/ui/views/avatars/AvatarView;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/a;->getAvatarView()Lcom/vk/im/ui/views/avatars/AvatarView;
 
     move-result-object p1
 
@@ -123,12 +123,12 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/group/vc/GroupProfileView$3;-><init>(Lcom/vk/im/ui/components/group/vc/GroupProfileView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -166,7 +166,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/im/ui/R13;->vkim_group_profile:I
+    sget v0, Lcom/vk/im/ui/j;->vkim_group_profile:I
 
     return v0
 .end method

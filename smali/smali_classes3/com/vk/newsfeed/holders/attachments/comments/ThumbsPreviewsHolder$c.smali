@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->b(II)Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;
+    value = Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->b(II)Lcom/vk/newsfeed/holders/attachments/k;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

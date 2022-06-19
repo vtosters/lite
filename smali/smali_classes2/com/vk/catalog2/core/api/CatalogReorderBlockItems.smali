@@ -1,5 +1,5 @@
 .class public final Lcom/vk/catalog2/core/api/CatalogReorderBlockItems;
-.super Lcom/vk/api/base/BooleanApiRequest;
+.super Lcom/vk/api/base/h;
 .source "CatalogReorderBlockItems.kt"
 
 
@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/catalog2/core/api/CatalogReorderBlockItems;->F:Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion;
 
@@ -37,7 +37,7 @@
             "(",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;",
+            "Lcom/vk/catalog2/core/util/k;",
             ">;)V"
         }
     .end annotation
@@ -45,12 +45,12 @@
     const-string v0, "catalog.reorderBlockItems"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/BooleanApiRequest;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/h;-><init>(Ljava/lang/String;)V
 
     const-string v0, "block_id"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     .line 3
     sget-object p1, Lcom/vk/catalog2/core/api/CatalogReorderBlockItems;->F:Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion;
@@ -65,7 +65,7 @@
 
     const-string p2, "replacement_ids"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # static fields
@@ -36,7 +36,7 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    invoke-static {p1}, Lcom/vtosters/lite/data/Games;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/p;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

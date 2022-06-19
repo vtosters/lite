@@ -62,7 +62,7 @@
 
     const-string v1, "capacityHint"
 
-    invoke-static {p1, v1}, Lc/a/a0/a/ObjectHelper;->a(ILjava/lang/String;)I
+    invoke-static {p1, v1}, Lc/a/a0/a/b;->a(ILjava/lang/String;)I
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(I)V
 
@@ -103,7 +103,7 @@
     iget-object v0, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->buffer:Ljava/util/List;
 
     .line 7
-    iget-object v1, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->downstream:Lio/reactivex/Observer;
+    iget-object v1, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->downstream:Lc/a/r;
 
     .line 8
     iget-object v2, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->index:Ljava/lang/Object;
@@ -193,7 +193,7 @@
     if-eqz v0, :cond_5
 
     .line 20
-    invoke-interface {v1}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v1}, Lc/a/r;->b()V
 
     goto :goto_3
 
@@ -203,7 +203,7 @@
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     .line 22
     :goto_3
@@ -216,7 +216,7 @@
 
     .line 24
     :cond_6
-    invoke-interface {v1, v7}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, v7}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     add-int/lit8 v3, v3, 0x1
 

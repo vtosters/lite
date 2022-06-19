@@ -54,12 +54,12 @@
 .method public static a(Lcom/vk/cameraui/CameraUI$e;IILandroid/content/Intent;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/cameraui/i/BaseView$a;->a(Lcom/vk/cameraui/i/BaseView;IILandroid/content/Intent;)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/cameraui/i/b$a;->a(Lcom/vk/cameraui/i/b;IILandroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/cameraui/CameraUI$e;Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/cameraui/CameraUI$e;Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p4, :cond_1
@@ -72,7 +72,7 @@
 
     .line 7
     :cond_0
-    invoke-interface {p0, p1, p2}, Lcom/vk/cameraui/CameraUI$e;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
+    invoke-interface {p0, p1, p2}, Lcom/vk/cameraui/CameraUI$e;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
 
     return-void
 
@@ -115,7 +115,7 @@
     throw p0
 .end method
 
-.method public static synthetic a(Lcom/vk/cameraui/CameraUI$e;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/cameraui/CameraUI$e;ZLkotlin/jvm/b/a;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p4, :cond_1
@@ -128,7 +128,7 @@
 
     .line 3
     :cond_0
-    invoke-interface {p0, p1, p2}, Lcom/vk/cameraui/CameraUI$e;->a(ZLkotlin/jvm/b/Functions;)V
+    invoke-interface {p0, p1, p2}, Lcom/vk/cameraui/CameraUI$e;->a(ZLkotlin/jvm/b/a;)V
 
     return-void
 
@@ -154,7 +154,7 @@
 .method public static c(Lcom/vk/cameraui/CameraUI$e;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/cameraui/i/BaseView$a;->a(Lcom/vk/cameraui/i/BaseView;)V
+    invoke-static {p0}, Lcom/vk/cameraui/i/b$a;->a(Lcom/vk/cameraui/i/b;)V
 
     return-void
 .end method
@@ -162,7 +162,7 @@
 .method public static d(Lcom/vk/cameraui/CameraUI$e;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/cameraui/i/BaseView$a;->b(Lcom/vk/cameraui/i/BaseView;)V
+    invoke-static {p0}, Lcom/vk/cameraui/i/b$a;->b(Lcom/vk/cameraui/i/b;)V
 
     return-void
 .end method
@@ -170,7 +170,7 @@
 .method public static e(Lcom/vk/cameraui/CameraUI$e;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/cameraui/i/BaseView$a;->c(Lcom/vk/cameraui/i/BaseView;)V
+    invoke-static {p0}, Lcom/vk/cameraui/i/b$a;->c(Lcom/vk/cameraui/i/b;)V
 
     return-void
 .end method
@@ -178,7 +178,7 @@
 .method public static f(Lcom/vk/cameraui/CameraUI$e;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/cameraui/i/BaseView$a;->d(Lcom/vk/cameraui/i/BaseView;)V
+    invoke-static {p0}, Lcom/vk/cameraui/i/b$a;->d(Lcom/vk/cameraui/i/b;)V
 
     return-void
 .end method
@@ -186,7 +186,7 @@
 .method public static g(Lcom/vk/cameraui/CameraUI$e;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/cameraui/i/BaseView$a;->e(Lcom/vk/cameraui/i/BaseView;)V
+    invoke-static {p0}, Lcom/vk/cameraui/i/b$a;->e(Lcom/vk/cameraui/i/b;)V
 
     return-void
 .end method

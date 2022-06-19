@@ -5,7 +5,7 @@
 # interfaces
 .implements Ljava/util/Set;
 .implements Ljava/io/Serializable;
-.implements Lkotlin/jvm/internal/t/KMarkers;
+.implements Lkotlin/jvm/internal/t/a;
 
 
 # static fields
@@ -180,7 +180,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lkotlin/collections/Collections1;->INSTANCE:Lkotlin/collections/Collections1;
+    sget-object v0, Lkotlin/collections/v;->a:Lkotlin/collections/v;
 
     return-object v0
 .end method
@@ -235,7 +235,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p0}, Lkotlin/jvm/internal/CollectionToArray;->a(Ljava/util/Collection;)[Ljava/lang/Object;
+    invoke-static {p0}, Lkotlin/jvm/internal/h;->a(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -252,7 +252,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/CollectionToArray;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/h;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 

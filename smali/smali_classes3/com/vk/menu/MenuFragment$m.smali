@@ -3,7 +3,7 @@
 .source "MenuFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/common/data/VkAppsList;",
         ">;"
     }
@@ -68,7 +68,7 @@
     if-eqz v1, :cond_1
 
     .line 3
-    new-instance p1, Lcom/vk/menu/MenuViewItem;
+    new-instance p1, Lcom/vk/menu/d;
 
     const/16 v1, 0x8
 
@@ -78,10 +78,10 @@
 
     move-result-object v5
 
-    invoke-direct {p1, v1, v4, v5}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
+    invoke-direct {p1, v1, v4, v5}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
 
     .line 4
-    invoke-virtual {p1, v2}, Lcom/vk/menu/MenuViewItem;->a(I)V
+    invoke-virtual {p1, v2}, Lcom/vk/menu/d;->a(I)V
 
     .line 5
     invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -102,31 +102,31 @@
 
     .line 7
     :cond_1
-    new-instance v1, Lcom/vk/menu/MenuViewItem;
+    new-instance v1, Lcom/vk/menu/d;
 
     const/4 v5, 0x7
 
     const/4 v6, 0x0
 
-    invoke-direct {v1, v5, v4, v6}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v1, v5, v4, v6}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
 
     const/4 v5, 0x2
 
     .line 8
-    invoke-virtual {v1, v5}, Lcom/vk/menu/MenuViewItem;->a(I)V
+    invoke-virtual {v1, v5}, Lcom/vk/menu/d;->a(I)V
 
     .line 9
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     .line 10
-    new-instance v1, Lcom/vk/menu/MenuViewItem;
+    new-instance v1, Lcom/vk/menu/d;
 
-    invoke-direct {v1, v2, v4, p1}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v1, v2, v4, p1}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
 
     const/4 p1, 0x1
 
     .line 11
-    invoke-virtual {v1, p1}, Lcom/vk/menu/MenuViewItem;->a(I)V
+    invoke-virtual {v1, p1}, Lcom/vk/menu/d;->a(I)V
 
     .line 12
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -140,9 +140,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/menu/MenuViewItem;
+    check-cast p1, Lcom/vk/menu/d;
 
-    invoke-virtual {p1, v3}, Lcom/vk/menu/MenuViewItem;->a(I)V
+    invoke-virtual {p1, v3}, Lcom/vk/menu/d;->a(I)V
 
     .line 14
     iget-object p1, p0, Lcom/vk/menu/MenuFragment$m;->a:Lcom/vk/menu/MenuFragment;

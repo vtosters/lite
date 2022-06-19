@@ -30,7 +30,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/metrics/performance/anr/ANR$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/metrics/performance/anr/ANR$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -121,12 +121,12 @@
 
     const-string v2, "Looper.getMainLooper().getThread()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     new-instance v2, Lcom/vk/metrics/performance/anr/AnrException;
 
-    invoke-static {}, Lb/h/q/c/c/ExceptionExt;->a()Ljava/lang/Throwable;
+    invoke-static {}, Lb/h/q/c/c/a;->a()Ljava/lang/Throwable;
 
     move-result-object v3
 
@@ -184,7 +184,7 @@
         value = {
             "()",
             "Ljava/util/ArrayList<",
-            "Lb/h/q/c/c/PerformanceChecker;",
+            "Lb/h/q/c/c/b;",
             ">;"
         }
     .end annotation
@@ -214,9 +214,9 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 6
-    sget-object v1, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
+    sget-object v1, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
 
-    invoke-virtual {v1}, Lcom/vk/metrics/reporters/PerformanceReporter;->d()Z
+    invoke-virtual {v1}, Lcom/vk/metrics/reporters/a;->d()Z
 
     move-result v1
 

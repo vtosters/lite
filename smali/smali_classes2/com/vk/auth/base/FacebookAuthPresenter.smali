@@ -14,7 +14,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<V::",
-        "Lcom/vk/auth/base/AuthView;",
+        "Lcom/vk/auth/base/b;",
         ">",
         "Lcom/vk/auth/base/BaseAuthPresenter<",
         "TV;>;"
@@ -23,15 +23,15 @@
 
 
 # static fields
-.field static final synthetic w:[Lkotlin/u/KProperty5;
+.field static final synthetic w:[Lkotlin/u/j;
 
 .field private static final x:[Ljava/lang/String;
 
 
 # instance fields
-.field private final t:Lkotlin/Lazy2;
+.field private final t:Lkotlin/e;
 
-.field private final u:Lkotlin/Lazy2;
+.field private final u:Lkotlin/e;
 
 .field private v:Ljava/lang/Boolean;
 
@@ -44,11 +44,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -56,9 +56,9 @@
 
     const-string v5, "getFacebookModel()Lcom/vk/auth/main/AuthModel$FacebookModel;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -66,7 +66,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -74,21 +74,21 @@
 
     const-string v4, "getFacebookTokenListener()Lcom/vk/auth/base/FacebookAuthPresenter$FacebookTokenListener;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/auth/base/FacebookAuthPresenter;->w:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/auth/base/FacebookAuthPresenter;->w:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/auth/base/FacebookAuthPresenter$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/base/FacebookAuthPresenter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/base/FacebookAuthPresenter$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const-string v0, "com.facebook.orca"
 
@@ -119,22 +119,22 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/base/FacebookAuthPresenter$facebookModel$2;-><init>(Lcom/vk/auth/base/FacebookAuthPresenter;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter;->t:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter;->t:Lkotlin/e;
 
     .line 3
     new-instance v0, Lcom/vk/auth/base/FacebookAuthPresenter$facebookTokenListener$2;
 
     invoke-direct {v0, p0}, Lcom/vk/auth/base/FacebookAuthPresenter$facebookTokenListener$2;-><init>(Lcom/vk/auth/base/FacebookAuthPresenter;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter;->u:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter;->u:Lkotlin/e;
 
     return-void
 .end method
@@ -191,22 +191,22 @@
     return v3
 .end method
 
-.method private final x()Lcom/vk/auth/main/AuthModel$a;
+.method private final x()Lcom/vk/auth/main/f$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter;->t:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter;->t:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/auth/base/FacebookAuthPresenter;->w:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/auth/base/FacebookAuthPresenter;->w:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/main/AuthModel$a;
+    check-cast v0, Lcom/vk/auth/main/f$a;
 
     return-object v0
 .end method
@@ -221,15 +221,15 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter;->u:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter;->u:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/auth/base/FacebookAuthPresenter;->w:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/auth/base/FacebookAuthPresenter;->w:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -246,7 +246,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/auth/base/FacebookAuthPresenter;->x()Lcom/vk/auth/main/AuthModel$a;
+    invoke-direct {p0}, Lcom/vk/auth/base/FacebookAuthPresenter;->x()Lcom/vk/auth/main/f$a;
 
     move-result-object v0
 
@@ -254,7 +254,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/auth/main/AuthModel$a;->a(Landroidx/fragment/app/Fragment;Lcom/vk/auth/main/AuthModel$b;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/auth/main/f$a;->a(Landroidx/fragment/app/Fragment;Lcom/vk/auth/main/f$b;)V
 
     return-void
 .end method
@@ -269,11 +269,11 @@
 
     if-eqz p1, :cond_0
 
-    invoke-direct {p0}, Lcom/vk/auth/base/FacebookAuthPresenter;->x()Lcom/vk/auth/main/AuthModel$a;
+    invoke-direct {p0}, Lcom/vk/auth/base/FacebookAuthPresenter;->x()Lcom/vk/auth/main/f$a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/auth/main/AuthModel$a;->a()Z
+    invoke-interface {p1}, Lcom/vk/auth/main/f$a;->a()Z
 
     move-result p1
 
@@ -294,11 +294,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/auth/base/FacebookAuthPresenter;->x()Lcom/vk/auth/main/AuthModel$a;
+    invoke-direct {p0}, Lcom/vk/auth/base/FacebookAuthPresenter;->x()Lcom/vk/auth/main/f$a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/vk/auth/main/AuthModel$a;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-interface {v0, p1, p2, p3}, Lcom/vk/auth/main/f$a;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
     invoke-super {p0, p1, p2, p3}, Lcom/vk/auth/base/BaseAuthPresenter;->onActivityResult(IILandroid/content/Intent;)Z

@@ -140,7 +140,7 @@
     .locals 2
 
     .line 17
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->d()I
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->d()I
 
     move-result v0
 
@@ -151,7 +151,7 @@
     or-int/2addr p1, v0
 
     .line 18
-    invoke-static {p1}, Lcom/vk/core/ui/themes/MilkshakeHelper;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/ui/themes/d;->a(I)V
 
     .line 19
     sget v0, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->f:I
@@ -163,7 +163,7 @@
     const/4 v0, 0x0
 
     .line 20
-    invoke-static {v0}, Lcom/vk/core/ui/themes/MilkshakeHelper;->c(Z)V
+    invoke-static {v0}, Lcom/vk/core/ui/themes/d;->c(Z)V
 
     :cond_0
     return p1
@@ -301,7 +301,7 @@
     return-object p1
 .end method
 
-.method private final a(Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/WindowBackground$a;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions;)Lcom/vk/core/tips/TipTextWindow$c;
+.method private final a(Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/b$a;Landroid/graphics/RectF;Lkotlin/jvm/b/a;)Lcom/vk/core/tips/TipTextWindow$c;
     .locals 26
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -311,10 +311,10 @@
             "Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;",
             "Landroid/view/View;",
             "Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;",
-            "Lcom/vk/core/tips/WindowBackground$a;",
+            "Lcom/vk/core/tips/b$a;",
             "Landroid/graphics/RectF;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)",
             "Lcom/vk/core/tips/TipTextWindow$c;"
         }
@@ -337,7 +337,7 @@
     move-object/from16 v5, p6
 
     .line 65
-    instance-of v3, v5, Lcom/vk/core/tips/WindowBackground$b;
+    instance-of v3, v5, Lcom/vk/core/tips/b$b;
 
     if-eqz v3, :cond_0
 
@@ -364,7 +364,7 @@
     move-object/from16 v7, p8
 
     .line 67
-    invoke-direct {v0, v6, v3, v4, v7}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;ILkotlin/jvm/b/Functions;)Lkotlin/jvm/b/Functions;
+    invoke-direct {v0, v6, v3, v4, v7}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;ILkotlin/jvm/b/a;)Lkotlin/jvm/b/a;
 
     move-result-object v4
 
@@ -430,7 +430,7 @@
 
     move-object/from16 v22, v6
 
-    invoke-direct {v6, v4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$d;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v6, v4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$d;-><init>(Lkotlin/jvm/b/a;)V
 
     const v23, 0x21d68
 
@@ -451,12 +451,12 @@
     const/4 v9, 0x0
 
     .line 74
-    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/i;)V
 
     const-string v3, "context"
 
     .line 75
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object/from16 v3, v25
 
@@ -473,12 +473,12 @@
 
     invoke-direct {v3, v1}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$showTooltip$1;-><init>(Lcom/vk/core/tips/TipTextWindow$c;)V
 
-    invoke-static {v2, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v2, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-object v1
 .end method
 
-.method static synthetic a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/WindowBackground$a;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/tips/TipTextWindow$c;
+.method static synthetic a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/b$a;Landroid/graphics/RectF;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/tips/TipTextWindow$c;
     .locals 11
 
     and-int/lit8 v0, p9, 0x40
@@ -518,7 +518,7 @@
 
     move-object/from16 v10, p8
 
-    invoke-direct/range {v2 .. v10}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/WindowBackground$a;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions;)Lcom/vk/core/tips/TipTextWindow$c;
+    invoke-direct/range {v2 .. v10}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/b$a;Landroid/graphics/RectF;Lkotlin/jvm/b/a;)Lcom/vk/core/tips/TipTextWindow$c;
 
     move-result-object v0
 
@@ -557,7 +557,7 @@
 
     const-string p1, "LayoutInflater.from(cont\u2026ding_layout, null, false)"
 
-    invoke-static {v4, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p1, 0x7f0a0817
 
@@ -619,23 +619,23 @@
 
     const-string v0, "image"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "banner"
 
-    invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "title"
 
-    invoke-static {v7, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "description"
 
-    invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "button"
 
-    invoke-static {v9, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v3, p1
 
@@ -644,7 +644,7 @@
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;ILkotlin/jvm/b/Functions;)Lkotlin/jvm/b/Functions;
+.method private final a(Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;ILkotlin/jvm/b/a;)Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -652,11 +652,11 @@
             "Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;",
             "Landroid/view/View;",
             "I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -664,7 +664,7 @@
     .line 80
     new-instance v0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$createNextStepProcessor$1;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$createNextStepProcessor$1;-><init>(Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;ILkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, p1, p2, p3, p4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$createNextStepProcessor$1;-><init>(Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;ILkotlin/jvm/b/a;)V
 
     return-object v0
 .end method
@@ -713,7 +713,7 @@
     return-void
 .end method
 
-.method private final a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/Functions;)V
+.method private final a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/a;)V
     .locals 15
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -721,8 +721,8 @@
             "Landroid/view/View;",
             "Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;",
             "I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -743,7 +743,7 @@
     const-string v1, "context"
 
     .line 23
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/content/Context;)Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;
 
@@ -802,7 +802,7 @@
     invoke-static/range {v0 .. v9}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;IIIIIZILjava/lang/Object;)V
 
     .line 26
-    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->d(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->d(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
 
     move-result v0
 
@@ -840,7 +840,7 @@
     invoke-static/range {v0 .. v9}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;IIIIIZILjava/lang/Object;)V
 
     .line 28
-    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
 
     move-result v0
 
@@ -871,7 +871,7 @@
     invoke-static/range {v0 .. v9}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;IIIIIZILjava/lang/Object;)V
 
     .line 30
-    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->b(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->b(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
 
     move-result v0
 
@@ -902,7 +902,7 @@
     invoke-static/range {v0 .. v9}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;IIIIIZILjava/lang/Object;)V
 
     .line 32
-    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->c(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->c(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
 
     move-result v0
 
@@ -929,7 +929,7 @@
     invoke-direct/range {v0 .. v7}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;IIIIIZ)V
 
     .line 34
-    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+    invoke-direct {p0, v11, v14, v12, v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
 
     move-result v0
 
@@ -945,7 +945,7 @@
 
     .line 36
     :cond_5
-    invoke-interface/range {p4 .. p4}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface/range {p4 .. p4}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     :goto_1
     return-void
@@ -1056,16 +1056,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/Functions;)V
+.method public static final synthetic a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/a;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/a;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x4
@@ -1076,7 +1076,7 @@
 
     .line 21
     :cond_0
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -1154,7 +1154,7 @@
     return p1
 .end method
 
-.method private final a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+.method private final a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
     .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1162,8 +1162,8 @@
             "Landroid/view/View;",
             "Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;",
             "I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)Z"
         }
     .end annotation
@@ -1197,7 +1197,7 @@
     sget-object v6, Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;->EXPLORE:Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;
 
     .line 41
-    new-instance v9, Lcom/vk/core/tips/WindowBackground$b;
+    new-instance v9, Lcom/vk/core/tips/b$b;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1205,7 +1205,7 @@
 
     const-string v2, "view.context"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v2, p0
 
@@ -1213,7 +1213,7 @@
 
     move-result v0
 
-    invoke-direct {v9, v0}, Lcom/vk/core/tips/WindowBackground$b;-><init>(I)V
+    invoke-direct {v9, v0}, Lcom/vk/core/tips/b$b;-><init>(I)V
 
     const/4 v10, 0x0
 
@@ -1232,7 +1232,7 @@
     move-object/from16 v11, p4
 
     .line 42
-    invoke-static/range {v3 .. v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/WindowBackground$a;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/tips/TipTextWindow$c;
+    invoke-static/range {v3 .. v13}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/b$a;Landroid/graphics/RectF;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/tips/TipTextWindow$c;
 
     move-result-object v0
 
@@ -1292,7 +1292,7 @@
     if-eqz p1, :cond_2
 
     .line 3
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->d()I
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->d()I
 
     move-result v0
 
@@ -1315,7 +1315,7 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->g()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->g()Z
 
     move-result v0
 
@@ -1340,7 +1340,7 @@
     return-object p1
 .end method
 
-.method private final b(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+.method private final b(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
     .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1348,8 +1348,8 @@
             "Landroid/view/View;",
             "Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;",
             "I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)Z"
         }
     .end annotation
@@ -1413,7 +1413,7 @@
     sget-object v4, Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;->FOR_YOU:Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;
 
     .line 13
-    new-instance v7, Lcom/vk/core/tips/WindowBackground$d;
+    new-instance v7, Lcom/vk/core/tips/b$d;
 
     sget v0, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->d:I
 
@@ -1425,7 +1425,7 @@
 
     const-string v6, "view.context"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v13, p0
 
@@ -1433,7 +1433,7 @@
 
     move-result v1
 
-    invoke-direct {v7, v0, v1}, Lcom/vk/core/tips/WindowBackground$d;-><init>(FI)V
+    invoke-direct {v7, v0, v1}, Lcom/vk/core/tips/b$d;-><init>(FI)V
 
     const/4 v8, 0x0
 
@@ -1452,7 +1452,7 @@
     move-object/from16 v9, p4
 
     .line 14
-    invoke-static/range {v1 .. v11}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/WindowBackground$a;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/tips/TipTextWindow$c;
+    invoke-static/range {v1 .. v11}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/b$a;Landroid/graphics/RectF;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/tips/TipTextWindow$c;
 
     move-result-object v0
 
@@ -1486,13 +1486,13 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->h()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->h()Z
 
     move-result v0
 
@@ -1509,7 +1509,7 @@
     return v0
 .end method
 
-.method private final c(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+.method private final c(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1517,8 +1517,8 @@
             "Landroid/view/View;",
             "Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;",
             "I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)Z"
         }
     .end annotation
@@ -1568,7 +1568,7 @@
     sget-object v4, Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;->NOTIFICATIONS:Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;
 
     .line 7
-    new-instance v7, Lcom/vk/core/tips/WindowBackground$b;
+    new-instance v7, Lcom/vk/core/tips/b$b;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1576,13 +1576,13 @@
 
     const-string v2, "view.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v1}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->b(Landroid/content/Context;)I
 
     move-result v1
 
-    invoke-direct {v7, v1}, Lcom/vk/core/tips/WindowBackground$b;-><init>(I)V
+    invoke-direct {v7, v1}, Lcom/vk/core/tips/b$b;-><init>(I)V
 
     move-object v1, p0
 
@@ -1595,7 +1595,7 @@
     move-object v9, p4
 
     .line 8
-    invoke-direct/range {v1 .. v9}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/WindowBackground$a;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions;)Lcom/vk/core/tips/TipTextWindow$c;
+    invoke-direct/range {v1 .. v9}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/b$a;Landroid/graphics/RectF;Lkotlin/jvm/b/a;)Lcom/vk/core/tips/TipTextWindow$c;
 
     move-result-object p1
 
@@ -1607,7 +1607,7 @@
     return v0
 .end method
 
-.method private final d(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+.method private final d(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1615,8 +1615,8 @@
             "Landroid/view/View;",
             "Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;",
             "I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)Z"
         }
     .end annotation
@@ -1684,7 +1684,7 @@
     sget-object v4, Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;->SIDEBAR:Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;
 
     .line 8
-    new-instance v7, Lcom/vk/core/tips/WindowBackground$b;
+    new-instance v7, Lcom/vk/core/tips/b$b;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1692,13 +1692,13 @@
 
     const-string v2, "view.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v1}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->b(Landroid/content/Context;)I
 
     move-result v1
 
-    invoke-direct {v7, v1}, Lcom/vk/core/tips/WindowBackground$b;-><init>(I)V
+    invoke-direct {v7, v1}, Lcom/vk/core/tips/b$b;-><init>(I)V
 
     move-object v1, p0
 
@@ -1711,7 +1711,7 @@
     move-object v9, p4
 
     .line 9
-    invoke-direct/range {v1 .. v9}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/WindowBackground$a;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions;)Lcom/vk/core/tips/TipTextWindow$c;
+    invoke-direct/range {v1 .. v9}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;ILcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;Lcom/vk/core/tips/b$a;Landroid/graphics/RectF;Lkotlin/jvm/b/a;)Lcom/vk/core/tips/TipTextWindow$c;
 
     move-result-object p1
 
@@ -1723,7 +1723,7 @@
     return v0
 .end method
 
-.method private final e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+.method private final e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1731,8 +1731,8 @@
             "Landroid/view/View;",
             "Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;",
             "I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)Z"
         }
     .end annotation
@@ -1745,12 +1745,12 @@
     .line 2
     sget-object v1, Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;->WELCOME:Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;
 
-    invoke-direct {p0, v1, p1, p3, p4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;ILkotlin/jvm/b/Functions;)Lkotlin/jvm/b/Functions;
+    invoke-direct {p0, v1, p1, p3, p4}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;Landroid/view/View;ILkotlin/jvm/b/a;)Lkotlin/jvm/b/a;
 
     move-result-object p3
 
     .line 3
-    new-instance p4, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance p4, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1758,35 +1758,35 @@
 
     const-string v2, "view.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p4, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p4, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     .line 4
     invoke-virtual {p2}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;->f()Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {p4, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {p4, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 5
     new-instance v1, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$dialog$1;
 
     invoke-direct {v1, p1}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$dialog$1;-><init>(Landroid/view/View;)V
 
-    invoke-virtual {p4, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {p4, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 6
     new-instance p1, Lcom/vk/milkshake/MilkshakeOnboardingHelper$e;
 
-    invoke-direct {p1, p3}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$e;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p1, p3}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$e;-><init>(Lkotlin/jvm/b/a;)V
 
-    invoke-virtual {p4, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {p4, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const-string p1, "WelcomeOnboarding"
 
     .line 7
-    invoke-virtual {p4, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {p4, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object p1
 
@@ -1797,24 +1797,24 @@
 
     new-instance p3, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$1;
 
-    invoke-direct {p3, p1}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-direct {p3, p1}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/e;)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;ILkotlin/jvm/b/Functions;)V
+.method public final a(Landroid/view/View;ILkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1827,7 +1827,7 @@
     if-nez v0, :cond_0
 
     .line 7
-    invoke-interface {p3}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -1842,25 +1842,25 @@
     if-eqz v0, :cond_1
 
     .line 9
-    invoke-direct {p0, p1, v0, p2, p3}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1, v0, p2, p3}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/a;)V
 
     return-void
 
     .line 10
     :cond_1
-    invoke-interface {p3}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final a(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public final a(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1873,7 +1873,7 @@
     if-nez v0, :cond_0
 
     .line 12
-    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -1900,13 +1900,13 @@
     move-object v5, p2
 
     .line 14
-    invoke-static/range {v1 .. v7}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$OnboardingStep;ILkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     return-void
 
     .line 15
     :cond_1
-    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

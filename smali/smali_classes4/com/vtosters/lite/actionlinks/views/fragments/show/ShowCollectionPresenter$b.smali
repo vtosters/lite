@@ -3,7 +3,7 @@
 .source "ShowCollectionPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,14 +49,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/actionlinks/ActionLink;)Lio/reactivex/Observable;
+.method public final a(Lcom/vk/dto/actionlinks/ActionLink;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/actionlinks/ActionLink;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/dto/actionlinks/ActionLinks;",
             ">;"
         }
@@ -68,7 +68,7 @@
     invoke-static {v0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;Lcom/vk/dto/actionlinks/ActionLink;)V
 
     .line 2
-    sget-object p1, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->INSTANCE:Lcom/vtosters/lite/actionlinks/b/ActionLinksController;
+    sget-object p1, Lcom/vtosters/lite/actionlinks/b/b;->a:Lcom/vtosters/lite/actionlinks/b/b;
 
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$b;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
@@ -78,7 +78,7 @@
 
     const-string v1, "live"
 
-    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->a(ILjava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/actionlinks/b/b;->a(ILjava/lang/String;)Lc/a/m;
 
     move-result-object p1
 
@@ -91,7 +91,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/actionlinks/ActionLink;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$b;->a(Lcom/vk/dto/actionlinks/ActionLink;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$b;->a(Lcom/vk/dto/actionlinks/ActionLink;)Lc/a/m;
 
     move-result-object p1
 

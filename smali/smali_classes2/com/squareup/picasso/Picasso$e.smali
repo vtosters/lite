@@ -34,5 +34,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/squareup/picasso/Request;)Lcom/squareup/picasso/Request;
+.method public abstract a(Lcom/squareup/picasso/q;)Lcom/squareup/picasso/q;
 .end method

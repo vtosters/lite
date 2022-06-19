@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -46,7 +46,7 @@
     move-result-object p1
 
     .line 3
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Lcom/vk/dto/stories/model/actions/ActionEmoji$b;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -160,7 +160,7 @@
 
     .line 13
     :cond_1
-    sget-object v4, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->INSTANCE:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
+    sget-object v4, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
 
     new-array v4, v5, [Ljava/lang/Object;
 
@@ -184,7 +184,7 @@
 
     const-string v4, "java.lang.String.format(format, *args)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

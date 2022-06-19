@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vk/music/view/j;->a:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lcom/vk/music/view/MusicTabbedContainer;->a(Ljava/lang/String;Landroid/view/View;)V
+    invoke-static {v0, p1}, Lcom/vk/music/view/s;->a(Ljava/lang/String;Landroid/view/View;)V
 
     return-void
 .end method

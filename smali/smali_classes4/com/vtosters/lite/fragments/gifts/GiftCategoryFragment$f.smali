@@ -3,7 +3,7 @@
 .source "GiftCategoryFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/SearchViewWrapper$i;
+.implements Lcom/vtosters/lite/ui/x$i;
 
 
 # annotations

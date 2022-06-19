@@ -41,13 +41,13 @@
 
     const-string v1, "name.packageName"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v1, Lcom/vk/im/engine/synchelper/SyncCmdWriter;
+    new-instance v1, Lcom/vk/im/engine/synchelper/b;
 
-    invoke-direct {v1, p2}, Lcom/vk/im/engine/synchelper/SyncCmdWriter;-><init>(Landroid/os/IBinder;)V
+    invoke-direct {v1, p2}, Lcom/vk/im/engine/synchelper/b;-><init>(Landroid/os/IBinder;)V
 
-    invoke-static {v0, p1, v1}, Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->a(Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;Ljava/lang/String;Lcom/vk/im/engine/synchelper/SyncCmdWriter;)V
+    invoke-static {v0, p1, v1}, Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->a(Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;Ljava/lang/String;Lcom/vk/im/engine/synchelper/b;)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     const-string v1, "name.packageName"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->a(Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;Ljava/lang/String;)V
 

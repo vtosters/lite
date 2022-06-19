@@ -3,12 +3,12 @@
 .source "DiscoverDataProvider.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/DiscoverDataProvider;->b(Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Z)Lio/reactivex/Observable;
+    value = Lcom/vk/discover/DiscoverDataProvider;->b(Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Z)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Lio/reactivex/Observable;
+.method public final a(Ljava/util/List;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -57,7 +57,7 @@
             "Ljava/util/List<",
             "Lcom/vk/discover/NewsEntriesContainer;",
             ">;)",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "+",
             "Lcom/vk/discover/NewsEntriesContainer;",
             ">;"
@@ -91,13 +91,13 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
     const-string v0, "Observable.just(container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -109,7 +109,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Ljava/lang/String;)Lc/a/m;
 
     move-result-object p1
 
@@ -123,7 +123,7 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Lcom/vk/discover/DiscoverDataProvider$l;->a(Ljava/util/List;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/discover/DiscoverDataProvider$l;->a(Ljava/util/List;)Lc/a/m;
 
     move-result-object p1
 

@@ -61,7 +61,7 @@
     .end annotation
 
     .line 1
-    new-instance v10, Lcom/vk/media/player/exo/ExoVideoRenderer;
+    new-instance v10, Lcom/vk/media/player/exo/e;
 
     .line 2
     sget-object v2, Lcom/google/android/exoplayer2/mediacodec/b;->a:Lcom/google/android/exoplayer2/mediacodec/b;
@@ -86,7 +86,7 @@
     move-object/from16 v8, p7
 
     .line 4
-    invoke-direct/range {v0 .. v9}, Lcom/vk/media/player/exo/ExoVideoRenderer;-><init>(Landroid/content/Context;Lcom/google/android/exoplayer2/mediacodec/b;JLcom/google/android/exoplayer2/drm/i;ZLandroid/os/Handler;Lcom/google/android/exoplayer2/video/p;I)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/media/player/exo/e;-><init>(Landroid/content/Context;Lcom/google/android/exoplayer2/mediacodec/b;JLcom/google/android/exoplayer2/drm/i;ZLandroid/os/Handler;Lcom/google/android/exoplayer2/video/p;I)V
 
     move-object/from16 v0, p10
 

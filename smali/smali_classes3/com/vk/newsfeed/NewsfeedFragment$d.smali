@@ -3,7 +3,7 @@
 .source "NewsfeedFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/PaginationHelper$l;
+.implements Lcom/vk/lists/t$l;
 
 
 # annotations
@@ -46,13 +46,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment$d;->a:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v0, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result v0
 
@@ -63,11 +63,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment$d;->a:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->size()I
 
     move-result v0
 
@@ -75,13 +75,13 @@
 
     iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment$d;->a:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/NewsfeedFragment;->e(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+    invoke-static {v0}, Lcom/vk/newsfeed/NewsfeedFragment;->e(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/k0/a/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;->j()Z
+    invoke-virtual {v0}, Lcom/vk/newsfeed/k0/a/b;->j()Z
 
     move-result v0
 
@@ -98,13 +98,13 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment$d;->a:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/NewsfeedFragment;->c(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+    invoke-static {v0}, Lcom/vk/newsfeed/NewsfeedFragment;->c(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/adapters/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;->M0()Z
+    invoke-virtual {v0}, Lcom/vk/newsfeed/adapters/c;->M0()Z
 
     move-result v1
 
@@ -119,11 +119,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment$d;->a:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->clear()V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/ValidationActivity$b$a;
-.super Lcom/vk/webapp/helpers/WebClients;
+.super Lcom/vk/webapp/helpers/g;
 .source "ValidationActivity.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/ValidationActivity$b$a;->c:Lcom/vtosters/lite/ValidationActivity$b;
 
-    invoke-direct {p0}, Lcom/vk/webapp/helpers/WebClients;-><init>()V
+    invoke-direct {p0}, Lcom/vk/webapp/helpers/g;-><init>()V
 
     return-void
 .end method

@@ -40,23 +40,23 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/holders/link/ItemLinkView$a;->a:Lcom/vtosters/lite/actionlinks/views/holders/link/ItemLinkView;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/holders/link/ItemLinkView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/link/ItemLink;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/holders/link/ItemLinkView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/link/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/c/b/ItemBaseContract;->V0()Lkotlin/jvm/b/Functions;
+    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/c/b/a;->V0()Lkotlin/jvm/b/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_0
     return-void

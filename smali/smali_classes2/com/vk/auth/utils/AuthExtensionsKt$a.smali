@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/utils/AuthExtensionsKt;->a(Lkotlin/jvm/b/Functions2;)Landroid/view/View$OnClickListener;
+    value = Lcom/vk/auth/utils/AuthExtensionsKt;->a(Lkotlin/jvm/b/b;)Landroid/view/View$OnClickListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions2;
+.field final synthetic a:Lkotlin/jvm/b/b;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(Lkotlin/jvm/b/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/auth/utils/AuthExtensionsKt$a;->a:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/auth/utils/AuthExtensionsKt$a;->a:Lkotlin/jvm/b/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,13 +48,13 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/auth/utils/AuthExtensionsKt$a;->a:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/auth/utils/AuthExtensionsKt$a;->a:Lkotlin/jvm/b/b;
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

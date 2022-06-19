@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -69,7 +69,7 @@
     move-object v2, v0
 
     .line 3
-    invoke-direct/range {v2 .. v9}, Lcom/vk/discover/DiscoverUiConfig;-><init>(Lcom/vk/discover/DiscoverUiConfig$Version;ZZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/discover/DiscoverUiConfig;-><init>(Lcom/vk/discover/DiscoverUiConfig$Version;ZZZZILkotlin/jvm/internal/i;)V
 
     goto :goto_0
 
@@ -95,7 +95,7 @@
     move-object v10, v0
 
     .line 6
-    invoke-direct/range {v10 .. v17}, Lcom/vk/discover/DiscoverUiConfig;-><init>(Lcom/vk/discover/DiscoverUiConfig$Version;ZZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v10 .. v17}, Lcom/vk/discover/DiscoverUiConfig;-><init>(Lcom/vk/discover/DiscoverUiConfig$Version;ZZZZILkotlin/jvm/internal/i;)V
 
     goto :goto_0
 
@@ -121,7 +121,7 @@
     move-object v1, v0
 
     .line 9
-    invoke-direct/range {v1 .. v8}, Lcom/vk/discover/DiscoverUiConfig;-><init>(Lcom/vk/discover/DiscoverUiConfig$Version;ZZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/discover/DiscoverUiConfig;-><init>(Lcom/vk/discover/DiscoverUiConfig$Version;ZZZZILkotlin/jvm/internal/i;)V
 
     :goto_0
     return-object v0

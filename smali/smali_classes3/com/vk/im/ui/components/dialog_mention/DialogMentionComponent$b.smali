@@ -3,7 +3,7 @@
 .source "DialogMentionComponent.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/dialog_mention/d/DialogMentionVcCallback;
+.implements Lcom/vk/im/ui/components/dialog_mention/d/d;
 
 
 # annotations
@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent$b;->a:Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent;->s()Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponentCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent;->s()Lcom/vk/im/ui/components/dialog_mention/b;
 
     move-result-object v0
 
@@ -54,19 +54,19 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent$b;->a:Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent;->a(Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent;)Lcom/vk/im/ui/components/dialog_mention/State;
+    invoke-static {v1}, Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent;->a(Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponent;)Lcom/vk/im/ui/components/dialog_mention/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_mention/State;->c()Lcom/vk/im/engine/models/Suggestion;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_mention/c;->c()Lcom/vk/im/engine/models/p;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/Suggestion;->a()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/p;->a()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v1
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/im/ui/components/dialog_mention/DialogMentionComponentCallback;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesInfo;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/im/ui/components/dialog_mention/b;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesInfo;)V
 
     :cond_0
     return-void

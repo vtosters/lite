@@ -3,7 +3,7 @@
 .source "DialogsEntryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -83,22 +83,22 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$putToDb$1;->this$0:Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogContentWriter1;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/delegates/dialogs/b;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogContentWriter1;->b(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
+    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/b;->b(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$putToDb$1;->this$0:Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
-    invoke-static {v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogContentWriter1;
+    invoke-static {v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/delegates/dialogs/b;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogContentWriter1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
+    invoke-interface {v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/b;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
 
     move-result-object p1
 
@@ -121,22 +121,22 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    check-cast v2, Lcom/vk/im/engine/internal/storage/models/a;
 
     .line 6
     iget-object v3, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$putToDb$1;->this$0:Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
-    invoke-static {v3}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogContentWriter1;
+    invoke-static {v3}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/delegates/dialogs/b;
 
     move-result-object v3
 
-    invoke-interface {v3, v0, v2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogContentWriter1;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)V
+    invoke-interface {v3, v0, v2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/b;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/internal/storage/models/a;)V
 
     .line 7
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/SQLiteStatement;->executeInsert()J
 
     .line 8
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->t()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/a;->t()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v3
 
@@ -171,15 +171,15 @@
     .line 10
     iget-object v5, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$putToDb$1;->this$0:Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
-    invoke-static {v5}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogContentWriter1;
+    invoke-static {v5}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/delegates/dialogs/b;
 
     move-result-object v5
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->getId()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/a;->getId()I
 
     move-result v6
 
-    invoke-interface {v5, p1, v6, v4}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogContentWriter1;->a(Lio/requery/android/database/sqlite/SQLiteStatement;ILcom/vk/im/engine/models/attaches/Attach;)V
+    invoke-interface {v5, p1, v6, v4}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/b;->a(Lio/requery/android/database/sqlite/SQLiteStatement;ILcom/vk/im/engine/models/attaches/Attach;)V
 
     .line 11
     invoke-virtual {p1}, Lio/requery/android/database/sqlite/SQLiteStatement;->executeInsert()J
@@ -204,7 +204,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$putToDb$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

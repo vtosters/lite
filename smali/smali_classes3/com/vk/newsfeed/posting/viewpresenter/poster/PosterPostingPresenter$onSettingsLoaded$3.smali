@@ -3,7 +3,7 @@
 .source "PosterPostingPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/newsfeed/posting/dto/PosterBackground;",
-        "Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;",
+        "Lcom/vk/newsfeed/posting/dto/b;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/newsfeed/posting/dto/PosterBackground;)Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;
+.method public final a(Lcom/vk/newsfeed/posting/dto/PosterBackground;)Lcom/vk/newsfeed/posting/dto/b;
     .locals 8
 
     .line 1
-    new-instance v7, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;
+    new-instance v7, Lcom/vk/newsfeed/posting/dto/b;
 
     invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PosterBackground;->getId()I
 
@@ -116,7 +116,7 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;-><init>(IIILjava/util/List;ZLjava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/newsfeed/posting/dto/b;-><init>(IIILjava/util/List;ZLjava/lang/String;)V
 
     return-object v7
 .end method
@@ -127,7 +127,7 @@
     .line 1
     check-cast p1, Lcom/vk/newsfeed/posting/dto/PosterBackground;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter$onSettingsLoaded$3;->a(Lcom/vk/newsfeed/posting/dto/PosterBackground;)Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter$onSettingsLoaded$3;->a(Lcom/vk/newsfeed/posting/dto/PosterBackground;)Lcom/vk/newsfeed/posting/dto/b;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "SubscribeHelper.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/subscribe/SubscribeHelper;->a(Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/common/subscribe/SubscribeHelper;->a(Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -61,21 +61,21 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
+.method public final a(Ljava/lang/Boolean;)Lc/a/m;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Boolean;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance p1, Lcom/vk/api/groups/GroupsJoin;
+    new-instance p1, Lcom/vk/api/groups/s;
 
     iget v1, p0, Lcom/vk/common/subscribe/SubscribeHelper$e;->a:I
 
@@ -93,24 +93,24 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/api/groups/GroupsJoin;-><init>(IZLjava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/api/groups/s;-><init>(IZLjava/lang/String;IIILkotlin/jvm/internal/i;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/common/subscribe/SubscribeHelper$e;->c:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/api/groups/GroupsJoin;->d(Ljava/lang/String;)Lcom/vk/api/groups/GroupsJoin;
+    invoke-virtual {p1, v0}, Lcom/vk/api/groups/s;->d(Ljava/lang/String;)Lcom/vk/api/groups/s;
 
     .line 3
     iget-object v0, p0, Lcom/vk/common/subscribe/SubscribeHelper$e;->d:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/api/groups/GroupsJoin;->e(Ljava/lang/String;)Lcom/vk/api/groups/GroupsJoin;
+    invoke-virtual {p1, v0}, Lcom/vk/api/groups/s;->e(Ljava/lang/String;)Lcom/vk/api/groups/s;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     .line 4
-    invoke-static {p1, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1, v0, v1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -123,7 +123,7 @@
     .line 1
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1}, Lcom/vk/common/subscribe/SubscribeHelper$e;->a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/common/subscribe/SubscribeHelper$e;->a(Ljava/lang/Boolean;)Lc/a/m;
 
     move-result-object p1
 

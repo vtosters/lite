@@ -77,7 +77,7 @@
 
     .line 3
     :goto_0
-    invoke-static {p2, p1, p3}, Lcom/vk/core/util/MathUtils;->a(III)I
+    invoke-static {p2, p1, p3}, Lcom/vk/core/util/o0;->a(III)I
 
     move-result p1
 

@@ -3,12 +3,12 @@
 .source "OggTrackPlayer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;-><init>(Lcom/vk/audiomsg/player/i/FileLoader;)V
+    value = Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;-><init>(Lcom/vk/audiomsg/player/i/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Integer;",
         ">;"
     }

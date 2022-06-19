@@ -3,7 +3,7 @@
 .source "MentionUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/mentions/Spans;",
-        "Lcom/vk/mentions/MentionModels;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/mentions/k;",
+        "Lcom/vk/mentions/a;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/mentions/Spans;)Lcom/vk/mentions/MentionModels;
+.method public final a(Lcom/vk/mentions/k;)Lcom/vk/mentions/a;
     .locals 4
 
     .line 1
@@ -75,37 +75,37 @@
     move-result-object v2
 
     .line 4
-    instance-of v3, p1, Lcom/vk/mentions/Spans2;
+    instance-of v3, p1, Lcom/vk/mentions/e;
 
     if-eqz v3, :cond_0
 
-    new-instance v3, Lcom/vk/mentions/MentionModels4;
+    new-instance v3, Lcom/vk/mentions/f;
 
-    check-cast p1, Lcom/vk/mentions/Spans2;
+    check-cast p1, Lcom/vk/mentions/e;
 
-    invoke-virtual {p1}, Lcom/vk/mentions/Spans2;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/mentions/e;->a()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v3, v0, v1, v2, p1}, Lcom/vk/mentions/MentionModels4;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v0, v1, v2, p1}, Lcom/vk/mentions/f;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    instance-of v3, p1, Lcom/vk/mentions/Spans1;
+    instance-of v3, p1, Lcom/vk/mentions/t;
 
     if-eqz v3, :cond_1
 
-    new-instance v3, Lcom/vk/mentions/MentionModels3;
+    new-instance v3, Lcom/vk/mentions/u;
 
-    check-cast p1, Lcom/vk/mentions/Spans1;
+    check-cast p1, Lcom/vk/mentions/t;
 
-    invoke-virtual {p1}, Lcom/vk/mentions/Spans1;->a()I
+    invoke-virtual {p1}, Lcom/vk/mentions/t;->a()I
 
     move-result p1
 
-    invoke-direct {v3, v0, v1, v2, p1}, Lcom/vk/mentions/MentionModels3;-><init>(IILjava/lang/String;I)V
+    invoke-direct {v3, v0, v1, v2, p1}, Lcom/vk/mentions/u;-><init>(IILjava/lang/String;I)V
 
     goto :goto_0
 
@@ -120,9 +120,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/mentions/Spans;
+    check-cast p1, Lcom/vk/mentions/k;
 
-    invoke-virtual {p0, p1}, Lcom/vk/mentions/MentionUtils$getMentionsBySpan$1$1;->a(Lcom/vk/mentions/Spans;)Lcom/vk/mentions/MentionModels;
+    invoke-virtual {p0, p1}, Lcom/vk/mentions/MentionUtils$getMentionsBySpan$1$1;->a(Lcom/vk/mentions/k;)Lcom/vk/mentions/a;
 
     move-result-object p1
 

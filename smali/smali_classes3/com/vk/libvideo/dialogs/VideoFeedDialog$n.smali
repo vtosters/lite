@@ -3,12 +3,12 @@
 .source "VideoFeedDialog.kt"
 
 # interfaces
-.implements Lcom/vk/core/utils/OrientationListener$c;
+.implements Lcom/vk/core/utils/e$c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/dialogs/VideoFeedDialog;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/libvideo/dialogs/AnimationDialogCallback;)V
+    value = Lcom/vk/libvideo/dialogs/VideoFeedDialog;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/libvideo/dialogs/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -60,7 +60,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$n;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/e;
 
     move-result-object p1
 
@@ -75,7 +75,7 @@
     :goto_0
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$n;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/e;
 
     move-result-object p1
 
@@ -89,7 +89,7 @@
     :cond_2
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$n;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->n(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->n(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/dialogs/d;
 
     move-result-object p1
 
@@ -109,11 +109,11 @@
 
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$n;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/VideoDiscoverController;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/n;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/VideoDiscoverController;->b()Z
+    invoke-virtual {p1}, Lcom/vk/libvideo/n;->b()Z
 
     move-result p1
 

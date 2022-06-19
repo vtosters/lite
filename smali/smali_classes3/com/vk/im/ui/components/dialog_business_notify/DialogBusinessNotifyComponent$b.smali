@@ -3,7 +3,7 @@
 .source "DialogBusinessNotifyComponent.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVcCallback;
+.implements Lcom/vk/im/ui/components/dialog_business_notify/vc/a;
 
 
 # annotations

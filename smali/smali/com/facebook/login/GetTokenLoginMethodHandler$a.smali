@@ -3,7 +3,7 @@
 .source "GetTokenLoginMethodHandler.java"
 
 # interfaces
-.implements Lcom/facebook/internal/PlatformServiceClient$b;
+.implements Lcom/facebook/internal/o$b;
 
 
 # annotations

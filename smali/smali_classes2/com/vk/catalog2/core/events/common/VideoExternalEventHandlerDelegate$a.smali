@@ -3,12 +3,12 @@
 .source "VideoExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Predicate;
+.implements Lc/a/z/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/Disposable;
+    value = Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Predicate<",
-        "Lcom/vk/libvideo/y/VideoEvents1;",
+        "Lc/a/z/l<",
+        "Lcom/vk/libvideo/y/a;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/libvideo/y/VideoEvents1;)Z
+.method public final a(Lcom/vk/libvideo/y/a;)Z
     .locals 0
 
     .line 2
-    instance-of p1, p1, Lcom/vk/libvideo/y/VideoEvents6;
+    instance-of p1, p1, Lcom/vk/libvideo/y/l;
 
     xor-int/lit8 p1, p1, 0x1
 
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/y/VideoEvents1;
+    check-cast p1, Lcom/vk/libvideo/y/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$a;->a(Lcom/vk/libvideo/y/VideoEvents1;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$a;->a(Lcom/vk/libvideo/y/a;)Z
 
     move-result p1
 

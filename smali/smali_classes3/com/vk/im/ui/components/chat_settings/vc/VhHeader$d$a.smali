@@ -46,13 +46,13 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$d;->a:Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->e0()Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->e0()Lcom/vk/im/ui/components/chat_settings/vc/a;
 
     move-result-object v0
 
     iget-boolean v1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$d$a;->b:Z
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;->a(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/a;->a(Z)V
 
     return-void
 .end method

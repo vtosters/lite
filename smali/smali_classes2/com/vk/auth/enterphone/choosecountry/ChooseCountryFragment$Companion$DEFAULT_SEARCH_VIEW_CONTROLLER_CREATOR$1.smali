@@ -3,7 +3,7 @@
 .source "ChooseCountryFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/auth/main/AuthUiManager$a;",
+        "Lcom/vk/auth/main/i$a;",
         ">;"
     }
 .end annotation
@@ -56,18 +56,18 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/auth/main/AuthUiManager$a;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/auth/main/i$a;
     .locals 1
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
+    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->f()Lcom/vk/auth/main/AuthUiManager;
+    invoke-virtual {v0}, Lcom/vk/auth/main/e;->f()Lcom/vk/auth/main/i;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/auth/main/AuthUiManager;->a(Landroid/view/ViewGroup;)Lcom/vk/auth/main/AuthUiManager$a;
+    invoke-interface {v0, p1}, Lcom/vk/auth/main/i;->a(Landroid/view/ViewGroup;)Lcom/vk/auth/main/i$a;
 
     move-result-object p1
     :try_end_0
@@ -92,7 +92,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$Companion$DEFAULT_SEARCH_VIEW_CONTROLLER_CREATOR$1;->a(Landroid/view/ViewGroup;)Lcom/vk/auth/main/AuthUiManager$a;
+    invoke-virtual {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$Companion$DEFAULT_SEARCH_VIEW_CONTROLLER_CREATOR$1;->a(Landroid/view/ViewGroup;)Lcom/vk/auth/main/i$a;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "DiscoverDataProvider.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -59,7 +59,7 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/Pair;)Lio/reactivex/Observable;
+.method public final a(Lkotlin/Pair;)Lc/a/m;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -69,7 +69,7 @@
             "+",
             "Ljava/lang/Object;",
             ">;)",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/discover/DiscoverCategoriesContainer;",
             ">;"
         }
@@ -135,17 +135,17 @@
 
     sget-object v1, Lcom/vk/discover/DiscoverDataProvider;->d:Lcom/vk/discover/DiscoverDataProvider;
 
-    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
     const-string v3, "Observable.just(categories)"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     xor-int/2addr p1, v2
 
-    invoke-static {v1, v0, p1}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lio/reactivex/Observable;Z)Lio/reactivex/Observable;
+    invoke-static {v1, v0, p1}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lc/a/m;Z)Lc/a/m;
 
     move-result-object p1
 
@@ -163,19 +163,19 @@
 
     move-result v4
 
-    invoke-static {v1, v2, v3, p1, v4}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;ZLcom/vk/dto/discover/DiscoverIntent;ZI)Lio/reactivex/Observable;
+    invoke-static {v1, v2, v3, p1, v4}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;ZLcom/vk/dto/discover/DiscoverIntent;ZI)Lc/a/m;
 
     move-result-object p1
 
     .line 7
-    invoke-static {v1, p1, v0}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lio/reactivex/Observable;Lcom/vk/discover/DiscoverCategoriesContainer;)Lio/reactivex/Observable;
+    invoke-static {v1, p1, v0}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lc/a/m;Lcom/vk/discover/DiscoverCategoriesContainer;)Lc/a/m;
 
     move-result-object p1
 
     .line 8
     sget-object v0, Lcom/vk/discover/DiscoverDataProvider$a$a;->a:Lcom/vk/discover/DiscoverDataProvider$a$a;
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -189,7 +189,7 @@
     .line 1
     check-cast p1, Lkotlin/Pair;
 
-    invoke-virtual {p0, p1}, Lcom/vk/discover/DiscoverDataProvider$a;->a(Lkotlin/Pair;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/discover/DiscoverDataProvider$a;->a(Lkotlin/Pair;)Lc/a/m;
 
     move-result-object p1
 

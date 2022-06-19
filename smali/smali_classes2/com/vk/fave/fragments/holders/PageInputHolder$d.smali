@@ -3,12 +3,12 @@
 .source "PageInputHolder.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/ActivityResulter;
+.implements Lcom/vk/navigation/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/fragments/holders/PageInputHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/fave/fragments/holders/PageInputHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -38,7 +38,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -53,7 +53,7 @@
 
     const-string p3, "voiceQuery"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, p1}, Lcom/vk/core/view/search/RoundedSearchView;->setQuery(Ljava/lang/String;)V
 

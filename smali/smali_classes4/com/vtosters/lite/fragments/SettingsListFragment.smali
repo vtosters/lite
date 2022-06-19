@@ -1,10 +1,10 @@
 .class public Lcom/vtosters/lite/fragments/SettingsListFragment;
-.super Lcom/vtosters/lite/fragments/CardRecyclerFragment;
+.super Lcom/vtosters/lite/fragments/z0;
 .source "SettingsListFragment.java"
 
 # interfaces
-.implements Lcom/vk/common/g/VoidF1;
-.implements Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$b;
+.implements Lcom/vk/common/g/g;
+.implements Lcom/vtosters/lite/ui/b0/j$b;
 
 
 # annotations
@@ -20,13 +20,13 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/fragments/CardRecyclerFragment<",
-        "Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;",
+        "Lcom/vtosters/lite/fragments/z0<",
+        "Lcom/vtosters/lite/ui/b0/j$a;",
         ">;",
-        "Lcom/vk/common/g/VoidF1<",
+        "Lcom/vk/common/g/g<",
         "Lcom/vtosters/lite/fragments/SettingsListFragment$c;",
         ">;",
-        "Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$b;"
+        "Lcom/vtosters/lite/ui/b0/j$b;"
     }
 .end annotation
 
@@ -46,19 +46,19 @@
     const/16 v0, 0xa
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/CardRecyclerFragment;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/z0;-><init>(I)V
 
     .line 2
     new-instance v0, Lcom/vtosters/lite/fragments/SettingsListFragment$f;
 
-    invoke-direct {v0, p0, p0}, Lcom/vtosters/lite/fragments/SettingsListFragment$f;-><init>(Lcom/vtosters/lite/fragments/SettingsListFragment;Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$b;)V
+    invoke-direct {v0, p0, p0}, Lcom/vtosters/lite/fragments/SettingsListFragment$f;-><init>(Lcom/vtosters/lite/fragments/SettingsListFragment;Lcom/vtosters/lite/ui/b0/j$b;)V
 
     iput-object v0, p0, Lcom/vtosters/lite/fragments/SettingsListFragment;->u0:Lcom/vtosters/lite/fragments/SettingsListFragment$f;
 
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, v0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->x0(Z)V
+    invoke-virtual {p0, v0}, Ld/a/a/a/i;->x0(Z)V
 
     return-void
 .end method
@@ -77,14 +77,14 @@
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    new-instance p1, Lcom/vk/navigation/Navigator;
+    new-instance p1, Lcom/vk/navigation/o;
 
     const-class v1, Lcom/vtosters/lite/fragments/SettingsListFragment;
 
-    invoke-direct {p1, v1, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {p1, v1, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     .line 6
-    invoke-virtual {p1, p0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, p0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -113,7 +113,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->C()V
+    invoke-virtual {p0}, Ld/a/a/a/i;->C()V
 
     return-void
 .end method
@@ -133,7 +133,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->C()V
+    invoke-virtual {p0}, Ld/a/a/a/i;->C()V
 
     return-void
 .end method
@@ -201,7 +201,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -251,7 +251,7 @@
     aput v2, v1, v4
 
     .line 2
-    iget-object v2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object v2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -263,7 +263,7 @@
     if-ge v5, v2, :cond_2
 
     .line 3
-    iget-object v6, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object v6, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {v6, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -274,14 +274,14 @@
     move-result-object v6
 
     .line 4
-    instance-of v7, v6, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder;
+    instance-of v7, v6, Lcom/vtosters/lite/ui/b0/n/k;
 
     if-eqz v7, :cond_1
 
     .line 5
-    check-cast v6, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder;
+    check-cast v6, Lcom/vtosters/lite/ui/b0/n/k;
 
-    invoke-virtual {v6}, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder;->g0()Landroidx/appcompat/widget/SwitchCompat;
+    invoke-virtual {v6}, Lcom/vtosters/lite/ui/b0/n/k;->g0()Landroidx/appcompat/widget/SwitchCompat;
 
     move-result-object v2
 
@@ -370,7 +370,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object v0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -382,7 +382,7 @@
     if-ge v1, v0, :cond_1
 
     .line 2
-    iget-object v2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object v2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -393,14 +393,14 @@
     move-result-object v2
 
     .line 3
-    instance-of v3, v2, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder;
+    instance-of v3, v2, Lcom/vtosters/lite/ui/b0/n/k;
 
     if-eqz v3, :cond_0
 
     .line 4
-    check-cast v2, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder;
+    check-cast v2, Lcom/vtosters/lite/ui/b0/n/k;
 
-    invoke-virtual {v2}, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder;->g0()Landroidx/appcompat/widget/SwitchCompat;
+    invoke-virtual {v2}, Lcom/vtosters/lite/ui/b0/n/k;->g0()Landroidx/appcompat/widget/SwitchCompat;
 
     move-result-object v0
 
@@ -443,7 +443,7 @@
     .locals 1
 
     .line 7
-    iget-object v0, p1, Lcom/vtosters/lite/fragments/SettingsListFragment$c;->e:Lcom/vk/navigation/Navigator;
+    iget-object v0, p1, Lcom/vtosters/lite/fragments/SettingsListFragment$c;->e:Lcom/vk/navigation/o;
 
     if-eqz v0, :cond_0
 
@@ -452,7 +452,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -463,15 +463,15 @@
     if-eqz v0, :cond_1
 
     .line 10
-    new-instance p1, Lcom/vk/navigation/Navigator;
+    new-instance p1, Lcom/vk/navigation/o;
 
-    invoke-direct {p1, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p1, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -502,13 +502,13 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;",
+            "Lcom/vtosters/lite/ui/b0/j$a;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object v0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -525,7 +525,7 @@
 
     const/4 p2, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->e(Ljava/util/List;Z)V
+    invoke-virtual {p0, p1, p2}, Ld/a/a/a/i;->e(Ljava/util/List;Z)V
 
     return-void
 .end method
@@ -534,12 +534,12 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/CardRecyclerFragment;->onAttach(Landroid/content/Context;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/z0;->onAttach(Landroid/content/Context;)V
 
     const p1, 0x7f1206fa
 
     .line 2
-    invoke-virtual {p0, p1}, Lme/grishka/appkit/fragments/AppKitFragment;->setTitle(I)V
+    invoke-virtual {p0, p1}, Ld/a/a/a/h;->setTitle(I)V
 
     .line 3
     new-instance p1, Landroid/content/IntentFilter;
@@ -554,7 +554,7 @@
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/LoaderFragment;->W4()V
+    invoke-virtual {p0}, Ld/a/a/a/j;->W4()V
 
     return-void
 .end method
@@ -563,10 +563,10 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/CardRecyclerFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/z0;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p1, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -574,7 +574,7 @@
 
     if-nez p1, :cond_1
 
-    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p1, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
@@ -582,29 +582,29 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/j$a;
 
-    iget p1, p1, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a:I
+    iget p1, p1, Lcom/vtosters/lite/ui/b0/j$a;->a:I
 
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_1
 
     .line 3
-    iget-boolean p1, p0, Lme/grishka/appkit/fragments/AppKitFragment;->I:Z
+    iget-boolean p1, p0, Ld/a/a/a/h;->I:Z
 
     const v2, 0x7f080246
 
     if-eqz p1, :cond_0
 
     .line 4
-    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p1, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->d(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
+    invoke-static {v1, v2}, Lcom/vtosters/lite/ui/b0/j$a;->d(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
 
     move-result-object v1
 
@@ -614,13 +614,13 @@
 
     .line 5
     :cond_0
-    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
+    iget-object p1, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
+    invoke-static {v1, v2}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
 
     move-result-object v1
 
@@ -629,7 +629,7 @@
     .line 6
     :cond_1
     :goto_0
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/CardRecyclerFragment;->d5()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/z0;->d5()V
 
     return-void
 .end method
@@ -645,7 +645,7 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 2
-    invoke-super {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->onPause()V
+    invoke-super {p0}, Ld/a/a/a/h;->onPause()V
 
     return-void
 .end method
@@ -654,7 +654,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->onResume()V
+    invoke-super {p0}, Ld/a/a/a/h;->onResume()V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -670,7 +670,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/CardRecyclerFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/z0;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -715,7 +715,7 @@
 
     const-wide/16 v0, 0xfa
 
-    invoke-static {p1, v0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Ljava/lang/Runnable;J)V
+    invoke-static {p1, v0, v1}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     :cond_0
     return-void

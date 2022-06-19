@@ -3,7 +3,7 @@
 .source "SearchSuggestionVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,14 +19,14 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lkotlin/Pair<",
         "+",
         "Landroid/view/View;",
         "+",
         "Lcom/vk/dto/music/SearchSuggestion;",
         ">;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -73,7 +73,7 @@
 
     check-cast p1, Landroid/view/View;
 
-    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->onClick(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/y/b;->onClick(Landroid/view/View;)V
 
     return-void
 .end method
@@ -86,7 +86,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/common/SearchSuggestionVh$createView$1;->a(Lkotlin/Pair;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

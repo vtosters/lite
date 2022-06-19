@@ -1,5 +1,5 @@
 .class Lcom/vk/api/likes/LikesGetList$a;
-.super Lcom/vk/dto/common/data/JsonParser;
+.super Lcom/vk/dto/common/data/c;
 .source "LikesGetList.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/JsonParser<",
+        "Lcom/vk/dto/common/data/c<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
 
     return-void
 .end method
@@ -68,7 +68,7 @@
     :cond_0
     sget-object v0, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
-    invoke-interface {v0}, Lb/h/h/ModelConfig$a;->a()F
+    invoke-interface {v0}, Lb/h/h/a$a;->a()F
 
     move-result v0
 

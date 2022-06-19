@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/vk/core/serialize/Serializer$StreamParcelable;
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/core/serialize/a;
 
 
 # annotations
@@ -26,10 +26,10 @@
     .end annotation
 .end field
 
-.field private static final g:Lcom/vk/dto/common/data/JsonParser;
+.field private static final g:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/market/Variant;",
             ">;"
         }
@@ -61,7 +61,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/market/Variant$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/market/Variant$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/market/Variant;->h:Lcom/vk/dto/market/Variant$c;
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/market/Variant$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/market/Variant;->g:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/market/Variant;->g:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -104,11 +104,11 @@
     return-void
 .end method
 
-.method public static final synthetic y()Lcom/vk/dto/common/data/JsonParser;
+.method public static final synthetic y()Lcom/vk/dto/common/data/c;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/dto/market/Variant;->g:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v0, Lcom/vk/dto/market/Variant;->g:Lcom/vk/dto/common/data/c;
 
     return-object v0
 .end method
@@ -236,7 +236,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/market/Variant;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -246,7 +246,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/market/Variant;->c:Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -268,7 +268,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/market/Variant;->f:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

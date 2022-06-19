@@ -56,7 +56,7 @@
     invoke-virtual {p0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 6
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
 
@@ -71,7 +71,7 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -93,7 +93,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0

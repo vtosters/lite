@@ -3,7 +3,7 @@
 .source "DialogHeaderInfoComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lc/a/z/g<",
+        "Lio/reactivex/disposables/b;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/Disposable;)V
+.method public final a(Lio/reactivex/disposables/b;)V
     .locals 2
 
     .line 1
@@ -66,7 +66,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lkotlin/jvm/b/Functions;Z)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lkotlin/jvm/b/a;Z)V
 
     return-void
 .end method
@@ -75,9 +75,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/Disposable;
+    check-cast p1, Lio/reactivex/disposables/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent$addNewMembers$1;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent$addNewMembers$1;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

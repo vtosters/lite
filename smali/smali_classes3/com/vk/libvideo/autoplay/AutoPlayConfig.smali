@@ -30,10 +30,10 @@
 
 .field private final d:Lcom/vk/libvideo/VideoTracker$PlayerType;
 
-.field private final e:Lkotlin/jvm/b/Functions;
+.field private final e:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Lcom/vk/libvideo/VideoTracker$Screen;",
             ">;"
         }
@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/autoplay/AutoPlayConfig$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/autoplay/AutoPlayConfig$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;
@@ -70,7 +70,7 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v9}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->f:Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
@@ -96,18 +96,18 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;)V
+.method public constructor <init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZZ",
             "Lcom/vk/libvideo/VideoTracker$PlayerType;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+",
             "Lcom/vk/libvideo/VideoTracker$Screen;",
             ">;)V"
@@ -125,12 +125,12 @@
 
     iput-object p4, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->d:Lcom/vk/libvideo/VideoTracker$PlayerType;
 
-    iput-object p5, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/Functions;
+    iput-object p5, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/a;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
     .locals 3
 
     and-int/lit8 p7, p6, 0x1
@@ -201,12 +201,12 @@
 
     move-object p5, v2
 
-    invoke-direct/range {p1 .. p6}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;)V
+    invoke-direct/range {p1 .. p6}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/libvideo/autoplay/AutoPlayConfig;ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/libvideo/autoplay/AutoPlayConfig;
+.method public static synthetic a(Lcom/vk/libvideo/autoplay/AutoPlayConfig;ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/libvideo/autoplay/AutoPlayConfig;
     .locals 3
 
     and-int/lit8 p7, p6, 0x1
@@ -247,7 +247,7 @@
 
     if-eqz p2, :cond_4
 
-    iget-object p5, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/Functions;
+    iget-object p5, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/a;
 
     :cond_4
     move-object v2, p5
@@ -264,7 +264,7 @@
 
     move-object p7, v2
 
-    invoke-virtual/range {p2 .. p7}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->a(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;)Lcom/vk/libvideo/autoplay/AutoPlayConfig;
+    invoke-virtual/range {p2 .. p7}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->a(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;)Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
     move-result-object p0
 
@@ -273,13 +273,13 @@
 
 
 # virtual methods
-.method public final a(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;)Lcom/vk/libvideo/autoplay/AutoPlayConfig;
+.method public final a(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;)Lcom/vk/libvideo/autoplay/AutoPlayConfig;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZZ",
             "Lcom/vk/libvideo/VideoTracker$PlayerType;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+",
             "Lcom/vk/libvideo/VideoTracker$Screen;",
             ">;)",
@@ -301,7 +301,7 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;)V
 
     return-object v6
 .end method
@@ -342,19 +342,19 @@
     return-object v0
 .end method
 
-.method public final e()Lkotlin/jvm/b/Functions;
+.method public final e()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Lcom/vk/libvideo/VideoTracker$Screen;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
@@ -392,17 +392,17 @@
 
     iget-object v1, p1, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->d:Lcom/vk/libvideo/VideoTracker$PlayerType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/a;
 
-    iget-object p1, p1, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/Functions;
+    iget-object p1, p1, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/a;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -481,7 +481,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/Functions;
+    iget-object v1, p0, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->e:Lkotlin/jvm/b/a;
 
     if-eqz v1, :cond_4
 

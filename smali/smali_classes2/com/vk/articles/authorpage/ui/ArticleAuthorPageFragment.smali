@@ -1,11 +1,11 @@
 .class public final Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
-.super Lcom/vk/core/fragments/BaseMvpFragment;
+.super Lcom/vk/core/fragments/c;
 .source "ArticleAuthorPageFragment.kt"
 
 # interfaces
-.implements Lcom/vk/articles/authorpage/ArticleAuthorPageContract1;
-.implements Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/articles/authorpage/b;
+.implements Lcom/vk/navigation/b0/a;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # annotations
@@ -19,12 +19,12 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/BaseMvpFragment<",
-        "Lcom/vk/articles/authorpage/ArticleAuthorPageContract;",
+        "Lcom/vk/core/fragments/c<",
+        "Lcom/vk/articles/authorpage/a;",
         ">;",
-        "Lcom/vk/articles/authorpage/ArticleAuthorPageContract1;",
-        "Lcom/vk/navigation/b0/FragmentWhiteStatusBar;",
-        "Lcom/vk/core/ui/themes/Themable;"
+        "Lcom/vk/articles/authorpage/b;",
+        "Lcom/vk/navigation/b0/a;",
+        "Lcom/vk/core/ui/themes/f;"
     }
 .end annotation
 
@@ -60,11 +60,11 @@
 
 .field private Q:Landroid/widget/TextView;
 
-.field private R:Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+.field private R:Lcom/vk/articles/authorpage/a;
 
-.field private S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+.field private S:Lcom/vk/articles/authorpage/f/a;
 
-.field private T:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+.field private T:Lcom/vk/articles/preload/c;
 
 .field private U:I
 
@@ -79,7 +79,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/16 v0, 0x64
 
@@ -120,7 +120,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
 
     return-void
 .end method
@@ -147,7 +147,7 @@
     .locals 8
 
     .line 1
-    new-instance v7, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
+    new-instance v7, Lcom/vk/core/dialogs/actionspopup/a$b;
 
     iget-object v1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->N:Landroid/widget/TextView;
 
@@ -165,10 +165,10 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/a$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/i;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -182,7 +182,7 @@
 
     const-string v0, "context!!.getString(R.string.profile_unsubscribe)"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -198,24 +198,24 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
 
     const/4 v0, 0x1
 
     .line 3
-    invoke-virtual {v7, v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Z)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-virtual {v7, v0}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Z)Lcom/vk/core/dialogs/actionspopup/a;
 
     return-void
 
     .line 4
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v6
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v6
 .end method
@@ -262,10 +262,10 @@
 
     const-string v4, "ColorStateList.valueOf(V\u2026r.header_tint_alternate))"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    invoke-static {p1, v1, v0, v3, v2}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
+    invoke-static {p1, v1, v0, v3, v2}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -274,24 +274,24 @@
     .locals 1
 
     .line 9
-    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/c;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;->c()Lcom/vk/articles/preload/QueryParameters;
+    invoke-virtual {v0}, Lcom/vk/articles/preload/c;->c()Lcom/vk/articles/preload/QueryParameters;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageHelper1;->a(Lcom/vk/articles/preload/QueryParameters;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)Lcom/vk/articles/preload/QueryParameters;
+    invoke-static {v0, p1}, Lcom/vk/articles/authorpage/e;->a(Lcom/vk/articles/preload/QueryParameters;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)Lcom/vk/articles/preload/QueryParameters;
 
     .line 10
-    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->a(Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)V
+    invoke-interface {v0, p1}, Lcom/vk/articles/authorpage/a;->a(Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)V
 
     :cond_0
     return-void
@@ -300,7 +300,7 @@
     const-string p1, "webCacheHelper"
 
     .line 11
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -403,7 +403,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->b(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->b(Lcom/vk/navigation/b0/a;)Z
 
     move-result v0
 
@@ -414,7 +414,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     const/4 v1, 0x0
 
@@ -422,20 +422,20 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v0
 
     if-lez v0, :cond_2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     if-eqz v0, :cond_1
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v1
 
@@ -443,17 +443,17 @@
 
     sub-int/2addr v1, v2
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/lists/SimpleAdapter;->b(II)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/lists/i0;->b(II)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -463,7 +463,7 @@
 
     .line 3
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -472,7 +472,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)I
+    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->a(Lcom/vk/navigation/b0/a;)I
 
     move-result v0
 
@@ -512,11 +512,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/articles/authorpage/ArticleAuthorPageContract;)V
+.method public a(Lcom/vk/articles/authorpage/a;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->R:Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    iput-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->R:Lcom/vk/articles/authorpage/a;
 
     return-void
 .end method
@@ -525,7 +525,7 @@
     .locals 8
 
     .line 12
-    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     const-string v1, "adapter"
 
@@ -533,13 +533,13 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v3, "adapter.list"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -561,10 +561,10 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/vk/common/i/RecyclerItem;
+    check-cast v6, Lcom/vk/common/i/b;
 
     .line 14
-    instance-of v7, v6, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
+    instance-of v7, v6, Lcom/vk/articles/authorpage/g/a;
 
     if-nez v7, :cond_0
 
@@ -576,11 +576,11 @@
     move-object v7, v6
 
     :goto_1
-    check-cast v7, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
+    check-cast v7, Lcom/vk/articles/authorpage/g/a;
 
     if-eqz v7, :cond_1
 
-    invoke-virtual {v7}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->c()Lcom/vk/dto/articles/Article;
+    invoke-virtual {v7}, Lcom/vk/articles/authorpage/g/a;->c()Lcom/vk/dto/articles/Article;
 
     move-result-object v7
 
@@ -590,25 +590,25 @@
     move-object v7, v2
 
     :goto_2
-    invoke-static {v7, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_3
 
     .line 15
-    check-cast v6, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
+    check-cast v6, Lcom/vk/articles/authorpage/g/a;
 
     const/4 v3, 0x2
 
-    invoke-static {v6, p1, v4, v3, v2}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->a(Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;Lcom/vk/dto/articles/Article;ZILjava/lang/Object;)Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
+    invoke-static {v6, p1, v4, v3, v2}, Lcom/vk/articles/authorpage/g/a;->a(Lcom/vk/articles/authorpage/g/a;Lcom/vk/dto/articles/Article;ZILjava/lang/Object;)Lcom/vk/articles/authorpage/g/a;
 
     move-result-object p1
 
     invoke-interface {v0, v5, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     .line 16
-    iget-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iget-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     if-eqz p1, :cond_2
 
@@ -617,7 +617,7 @@
     goto :goto_3
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -632,12 +632,12 @@
 
     .line 17
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
-.method public a(Lcom/vk/dto/articles/ArticleAuthor;Z)V
+.method public a(Lcom/vk/dto/articles/a;Z)V
     .locals 9
 
     .line 18
@@ -645,7 +645,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -657,7 +657,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -669,7 +669,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -677,13 +677,13 @@
 
     .line 21
     :cond_2
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->b()I
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->b()I
 
     move-result v0
 
     if-lez v0, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->f()Z
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->f()Z
 
     move-result v0
 
@@ -702,13 +702,13 @@
 
     .line 22
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->b()I
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->b()I
 
     move-result v0
 
     if-lez v0, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->f()Z
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->f()Z
 
     move-result v0
 
@@ -731,7 +731,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->e()I
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->e()I
 
     move-result v1
 
@@ -741,7 +741,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/util/StringUtils;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/util/b1;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -756,7 +756,7 @@
     .line 25
     sget-object v2, Lcom/vk/core/utils/VerifyInfoHelper;->h:Lcom/vk/core/utils/VerifyInfoHelper;
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->d()Lcom/vk/dto/newsfeed/Owner;
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->d()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v0
 
@@ -786,15 +786,15 @@
 
     .line 27
     :cond_7
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->f()Z
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->f()Z
 
     move-result p2
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->i()Z
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->i()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->h()Z
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->h()Z
 
     move-result p1
 
@@ -857,13 +857,13 @@
     if-nez p2, :cond_2
 
     .line 33
-    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->U0()Lcom/vk/dto/articles/ArticleAuthor;
+    invoke-interface {p1}, Lcom/vk/articles/authorpage/a;->U0()Lcom/vk/dto/articles/a;
 
     move-result-object p1
 
@@ -874,7 +874,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->b()I
+    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->b()I
 
     move-result p1
 
@@ -919,7 +919,7 @@
     const p1, 0x7f0400e3
 
     .line 39
-    invoke-static {v0, p1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     const p2, 0x7f080b75
 
@@ -929,7 +929,7 @@
     const p2, 0x7f080440
 
     .line 41
-    invoke-static {v0, p2, p1}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;II)V
+    invoke-static {v0, p2, p1}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;II)V
 
     const/4 v1, 0x0
 
@@ -961,7 +961,7 @@
     const p1, 0x7f0400df
 
     .line 44
-    invoke-static {v0, p1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     const p1, 0x7f080b70
 
@@ -969,7 +969,7 @@
     invoke-static {v0, p1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;I)V
 
     .line 46
-    invoke-static {v0}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;)V
 
     const/4 v1, 0x0
 
@@ -1001,7 +1001,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -1014,13 +1014,13 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     :goto_0
     return-void
 .end method
 
-.method public c(Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
+.method public c(Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
     .locals 1
 
     .line 2
@@ -1028,14 +1028,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, v0}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {p1, v0}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -1099,46 +1099,46 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
 
     return-void
 
     :cond_0
     const-string p1, "adapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/BaseScreenContract;
+.method public bridge synthetic getPresenter()Lb/h/r/c;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+.method public getPresenter()Lcom/vk/articles/authorpage/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->R:Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->R:Lcom/vk/articles/authorpage/a;
 
     return-object v0
 .end method
@@ -1164,11 +1164,11 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v0
 
@@ -1201,7 +1201,7 @@
     const-string p1, "adapter"
 
     .line 4
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1210,7 +1210,7 @@
     return-void
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -1219,7 +1219,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -1312,18 +1312,18 @@
     const/4 v2, 0x2
 
     .line 6
-    invoke-static {p1, v0, v2, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v2, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     .line 7
     invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentImpl;->finish()V
 
     .line 8
     :cond_4
-    new-instance p1, Lcom/vk/articles/authorpage/h/ArticleAuthorPagePresenter;
+    new-instance p1, Lcom/vk/articles/authorpage/h/b;
 
-    invoke-direct {p1, p0}, Lcom/vk/articles/authorpage/h/ArticleAuthorPagePresenter;-><init>(Lcom/vk/articles/authorpage/ArticleAuthorPageContract1;)V
+    invoke-direct {p1, p0}, Lcom/vk/articles/authorpage/h/b;-><init>(Lcom/vk/articles/authorpage/b;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->a(Lcom/vk/articles/authorpage/ArticleAuthorPageContract;)V
+    invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->a(Lcom/vk/articles/authorpage/a;)V
 
     .line 9
     iget p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->U:I
@@ -1331,7 +1331,7 @@
     if-eqz p1, :cond_5
 
     .line 10
-    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
 
     move-result-object p1
 
@@ -1343,13 +1343,13 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->c(Ljava/lang/Integer;)V
+    invoke-interface {p1, v0}, Lcom/vk/articles/authorpage/a;->c(Ljava/lang/Integer;)V
 
     goto :goto_4
 
     .line 11
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
 
     move-result-object p1
 
@@ -1357,7 +1357,7 @@
 
     iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->V:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->d(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/articles/authorpage/a;->d(Ljava/lang/String;)V
 
     :cond_6
     :goto_4
@@ -1562,7 +1562,7 @@
 
     .line 23
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -1578,7 +1578,7 @@
 
     if-eqz v2, :cond_3
 
-    invoke-static {v2, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v2, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 26
     :cond_3
@@ -1586,7 +1586,7 @@
 
     if-eqz v2, :cond_4
 
-    invoke-static {v2, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v2, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 27
     :cond_4
@@ -1594,7 +1594,7 @@
 
     if-eqz v2, :cond_5
 
-    invoke-static {v2, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v2, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     :cond_5
     const p2, 0x7f0a0265
@@ -1606,7 +1606,7 @@
 
     const-string v2, "view.findViewById(R.id.collapsing_toolbar_layout)"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
@@ -1629,7 +1629,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$2;-><init>(Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;)V
 
-    invoke-static {p2, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p2, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     :cond_6
     const p2, 0x7f0a00a5
@@ -1669,7 +1669,7 @@
 
     const-string v3, "activity!!"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -1677,7 +1677,7 @@
 
     const-string v3, "activity!!.resources"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -1694,7 +1694,7 @@
 
     .line 36
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -1711,7 +1711,7 @@
 
     .line 38
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -1765,11 +1765,11 @@
 
     invoke-direct {p3, p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$4;-><init>(Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;->setToggleSubscription(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p2, p3}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;->setToggleSubscription(Lkotlin/jvm/b/a;)V
 
     .line 43
     :cond_d
-    new-instance p2, Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    new-instance p2, Lcom/vk/articles/authorpage/f/a;
 
     new-instance p3, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$5;
 
@@ -1779,9 +1779,9 @@
 
     invoke-direct {v2, p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$6;-><init>(Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;)V
 
-    invoke-direct {p2, p3, v2}, Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p2, p3, v2}, Lcom/vk/articles/authorpage/f/a;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
 
-    iput-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iput-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     .line 44
     iget-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->P:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;
@@ -1790,7 +1790,7 @@
 
     if-eqz p2, :cond_f
 
-    iget-object v2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iget-object v2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     if-eqz v2, :cond_e
 
@@ -1799,23 +1799,23 @@
     goto :goto_3
 
     :cond_e
-    invoke-static {p3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 45
     :cond_f
     :goto_3
-    new-instance p2, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    new-instance p2, Lcom/vk/articles/preload/c;
 
     const/4 v2, 0x6
 
-    invoke-direct {p2, v2, v1, v0, v1}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;-><init>(ILcom/vk/articles/preload/QueryParameters;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p2, v2, v1, v0, v1}, Lcom/vk/articles/preload/c;-><init>(ILcom/vk/articles/preload/QueryParameters;ILkotlin/jvm/internal/i;)V
 
-    iput-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    iput-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/c;
 
     .line 46
-    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    invoke-virtual {p0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
 
     move-result-object p2
 
@@ -1823,44 +1823,44 @@
 
     if-eqz p2, :cond_11
 
-    invoke-interface {p2}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->R0()Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
+    invoke-interface {p2}, Lcom/vk/articles/authorpage/a;->R0()Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
 
     move-result-object p2
 
     if-eqz p2, :cond_11
 
-    iget-object v2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    iget-object v2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/c;
 
     if-eqz v2, :cond_10
 
-    invoke-virtual {v2}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;->c()Lcom/vk/articles/preload/QueryParameters;
+    invoke-virtual {v2}, Lcom/vk/articles/preload/c;->c()Lcom/vk/articles/preload/QueryParameters;
 
     move-result-object v2
 
-    invoke-static {v2, p2}, Lcom/vk/articles/authorpage/ArticleAuthorPageHelper1;->a(Lcom/vk/articles/preload/QueryParameters;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)Lcom/vk/articles/preload/QueryParameters;
+    invoke-static {v2, p2}, Lcom/vk/articles/authorpage/e;->a(Lcom/vk/articles/preload/QueryParameters;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)Lcom/vk/articles/preload/QueryParameters;
 
     goto :goto_4
 
     :cond_10
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 47
     :cond_11
     :goto_4
-    iget-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    iget-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/c;
 
     if-eqz p2, :cond_15
 
-    iget-object v2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iget-object v2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     if-eqz v2, :cond_14
 
-    invoke-virtual {p2, v2}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;->a(Lcom/vk/articles/preload/WebCacheProvider;)V
+    invoke-virtual {p2, v2}, Lcom/vk/articles/preload/c;->a(Lcom/vk/articles/preload/b;)V
 
     .line 48
-    iget-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    iget-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/c;
 
     if-eqz p2, :cond_13
 
@@ -1874,36 +1874,36 @@
 
     const-string v0, "recycler!!.recyclerView"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p2, p3}, Lcom/vk/articles/preload/c;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     const-string p2, "view"
 
     .line 49
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     .line 50
     :cond_12
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     :cond_13
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 51
     :cond_14
-    invoke-static {p3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_15
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1924,18 +1924,18 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    iget-object v2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->T:Lcom/vk/articles/preload/c;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2, v0}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v2, v0}, Lcom/vk/articles/preload/c;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     goto :goto_0
 
     :cond_0
     const-string v0, "webCacheHelper"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1972,7 +1972,7 @@
     iput-object v1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->Q:Landroid/widget/TextView;
 
     .line 12
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
 
     return-void
 .end method
@@ -1988,7 +1988,7 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/c;->onPause()V
 
     return-void
 .end method
@@ -1997,7 +1997,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/c;->onResume()V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -2013,24 +2013,24 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/ArticleAuthorPageAdapter;
+    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->S:Lcom/vk/articles/authorpage/f/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;
+    instance-of v0, v0, Lcom/vk/articles/authorpage/g/b;
 
     return v0
 
     :cond_0
     const-string v0, "adapter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

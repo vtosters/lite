@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->P4()Lio/reactivex/Observable;
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->P4()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final call()Lcom/vk/utils/ContactImportUtils$a;
+.method public final call()Lcom/vk/utils/b$a;
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/utils/ContactImportUtils;->INSTANCE:Lcom/vk/utils/ContactImportUtils;
+    sget-object v0, Lcom/vk/utils/b;->a:Lcom/vk/utils/b;
 
-    invoke-virtual {v0}, Lcom/vk/utils/ContactImportUtils;->a()Lcom/vk/utils/ContactImportUtils$a;
+    invoke-virtual {v0}, Lcom/vk/utils/b;->a()Lcom/vk/utils/b$a;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$e;->call()Lcom/vk/utils/ContactImportUtils$a;
+    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$e;->call()Lcom/vk/utils/b$a;
 
     move-result-object v0
 

@@ -3,12 +3,12 @@
 .source "FriendsImportFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->U4()Lio/reactivex/Observable;
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->U4()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,20 +47,20 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Lcom/vk/utils/ContactImportUtils$a;
+.method public final a(Ljava/util/List;)Lcom/vk/utils/b$a;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/dto/common/Contact;",
+            "Lcom/vk/dto/common/b;",
             ">;)",
-            "Lcom/vk/utils/ContactImportUtils$a;"
+            "Lcom/vk/utils/b$a;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/utils/ContactImportUtils$a;
+    new-instance v0, Lcom/vk/utils/b$a;
 
     iget-object v1, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$g;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
@@ -88,12 +88,12 @@
 
     const-string v3, "email"
 
-    invoke-direct {v0, v3, v1, p1, v2}, Lcom/vk/utils/ContactImportUtils$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {v0, v3, v1, p1, v2}, Lcom/vk/utils/b$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Z)V
 
     return-object v0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -106,7 +106,7 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsImportFragment$g;->a(Ljava/util/List;)Lcom/vk/utils/ContactImportUtils$a;
+    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsImportFragment$g;->a(Ljava/util/List;)Lcom/vk/utils/b$a;
 
     move-result-object p1
 

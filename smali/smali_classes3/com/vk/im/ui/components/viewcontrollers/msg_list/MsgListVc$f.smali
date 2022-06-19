@@ -3,7 +3,7 @@
 .source "MsgListVc.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController$b;
+.implements Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b$b;
 
 
 # annotations
@@ -69,7 +69,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$f;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->g()Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->g()Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     const-string v1, "StbView"
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -89,11 +89,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$f;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    invoke-static {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->e()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->e()Z
 
     move-result v0
 

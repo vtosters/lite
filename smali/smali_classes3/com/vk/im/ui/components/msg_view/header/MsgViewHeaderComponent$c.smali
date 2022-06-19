@@ -3,7 +3,7 @@
 .source "MsgViewHeaderComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Action;
+.implements Lc/a/z/a;
 
 
 # annotations

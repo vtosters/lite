@@ -3,12 +3,12 @@
 .source "PostingAttachLocationFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
+    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f;->a(Lc/a/m;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -59,14 +59,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Throwable;)Lio/reactivex/Observable;
+.method public final a(Ljava/lang/Throwable;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Throwable;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/lang/Long;",
             ">;"
         }
@@ -77,7 +77,7 @@
 
     const-wide/16 v0, 0x1
 
-    invoke-static {v0, v1, p1}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, p1}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
 
     move-result-object p1
 
@@ -90,7 +90,7 @@
     .line 1
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f$a;->a(Ljava/lang/Throwable;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f$a;->a(Ljava/lang/Throwable;)Lc/a/m;
 
     move-result-object p1
 

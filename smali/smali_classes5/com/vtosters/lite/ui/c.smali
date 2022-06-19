@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # instance fields
@@ -28,9 +28,9 @@
 
     iget-object v0, p0, Lcom/vtosters/lite/ui/c;->a:Lcom/vtosters/lite/ui/AttachmentsEditorView;
 
-    check-cast p1, Lio/reactivex/disposables/Disposable;
+    check-cast p1, Lio/reactivex/disposables/b;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lio/reactivex/disposables/Disposable;)Lkotlin/Unit;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lio/reactivex/disposables/b;)Lkotlin/m;
 
     move-result-object p1
 

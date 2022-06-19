@@ -1,11 +1,11 @@
 .class public final Lcom/vk/music/artists/MusicArtistHeaderContainer$g;
-.super Lcom/vk/music/player/PlayerModel$a$a;
+.super Lcom/vk/music/player/d$a$a;
 .source "MusicArtistHeaderContainer.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/MusicSectionsModel;Z)V
+    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/f;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,14 +30,14 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer$g;->a:Lcom/vk/music/artists/MusicArtistHeaderContainer;
 
-    invoke-direct {p0}, Lcom/vk/music/player/PlayerModel$a$a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/player/d$a$a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/music/player/PlayerModel;)V
+.method public a(Lcom/vk/music/player/d;)V
     .locals 1
 
     .line 1
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/music/player/PlayerModel;)V
+.method public b(Lcom/vk/music/player/d;)V
     .locals 1
 
     .line 1
@@ -95,7 +95,7 @@
     return-void
 .end method
 
-.method public d(Lcom/vk/music/player/PlayerModel;)V
+.method public d(Lcom/vk/music/player/d;)V
     .locals 1
 
     .line 1

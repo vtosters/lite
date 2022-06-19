@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/newposter/NewPosterImageView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/newposter/NewPosterImageView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/4 v0, 0x1
 
@@ -420,7 +420,7 @@
 
     .line 11
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p2
 .end method

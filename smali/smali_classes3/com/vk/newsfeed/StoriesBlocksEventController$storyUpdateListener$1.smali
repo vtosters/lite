@@ -3,7 +3,7 @@
 .source "StoriesBlocksEventController.kt"
 
 # interfaces
-.implements Lb/h/g/l/NotificationListener;
+.implements Lb/h/g/l/e;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/h/g/l/NotificationListener<",
+        "Lb/h/g/l/e<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/stories/model/StoryEntry;",
@@ -78,7 +78,7 @@
 
     invoke-direct {p2, p3}, Lcom/vk/newsfeed/StoriesBlocksEventController$storyUpdateListener$1$1;-><init>(Ljava/util/List;)V
 
-    invoke-static {p1, p2}, Lcom/vk/newsfeed/StoriesBlocksEventController;->a(Lcom/vk/newsfeed/StoriesBlocksEventController;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/newsfeed/StoriesBlocksEventController;->a(Lcom/vk/newsfeed/StoriesBlocksEventController;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method

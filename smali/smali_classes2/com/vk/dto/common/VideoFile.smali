@@ -3,8 +3,8 @@
 .source "VideoFile.java"
 
 # interfaces
-.implements Lcom/vk/core/serialize/JSONSerialize;
-.implements Lcom/vk/dto/newsfeed/Likable;
+.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/dto/newsfeed/c;
 
 
 # static fields
@@ -18,10 +18,10 @@
     .end annotation
 .end field
 
-.field public static final Q0:Lcom/vk/dto/common/data/JsonParser;
+.field public static final Q0:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/common/VideoFile;",
             ">;"
         }
@@ -209,7 +209,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/common/VideoFile$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/c;
 
     .line 2
     new-instance v0, Lcom/vk/dto/common/VideoFile$b;
@@ -699,14 +699,14 @@
 
     const-class v3, Lcom/vk/dto/common/data/PrivacySetting$PrivacyRule;
 
-    invoke-static {p1, v0, v3}, Lb/h/h/ModelUtils;->a(Lcom/vk/core/serialize/Serializer;Ljava/util/List;Ljava/lang/Class;)V
+    invoke-static {p1, v0, v3}, Lb/h/h/b;->a(Lcom/vk/core/serialize/Serializer;Ljava/util/List;Ljava/lang/Class;)V
 
     .line 52
     iget-object v0, p0, Lcom/vk/dto/common/VideoFile;->B0:Ljava/util/List;
 
     const-class v3, Lcom/vk/dto/common/data/PrivacySetting$PrivacyRule;
 
-    invoke-static {p1, v0, v3}, Lb/h/h/ModelUtils;->a(Lcom/vk/core/serialize/Serializer;Ljava/util/List;Ljava/lang/Class;)V
+    invoke-static {p1, v0, v3}, Lb/h/h/b;->a(Lcom/vk/core/serialize/Serializer;Ljava/util/List;Ljava/lang/Class;)V
 
     .line 53
     invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->p()J
@@ -1236,11 +1236,11 @@
     .line 106
     sget-object v9, Lcom/vk/dto/common/VideoAd;->h:Lcom/vk/dto/common/VideoAd$c;
 
-    invoke-virtual {v9}, Lcom/vk/dto/common/VideoAd$c;->a()Lcom/vk/dto/common/data/JsonParser;
+    invoke-virtual {v9}, Lcom/vk/dto/common/VideoAd$c;->a()Lcom/vk/dto/common/data/c;
 
     move-result-object v9
 
-    invoke-virtual {v9, v8}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v9, v8}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v8
 
@@ -1261,11 +1261,11 @@
     .line 108
     sget-object v9, Lcom/vk/dto/common/Restriction;->C:Lcom/vk/dto/common/Restriction$c;
 
-    invoke-virtual {v9}, Lcom/vk/dto/common/Restriction$c;->a()Lcom/vk/dto/common/data/JsonParser;
+    invoke-virtual {v9}, Lcom/vk/dto/common/Restriction$c;->a()Lcom/vk/dto/common/data/c;
 
     move-result-object v9
 
-    invoke-virtual {v9, v8}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v9, v8}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v8
 
@@ -2416,7 +2416,7 @@
     .line 206
     sget-object v0, Lcom/vk/dto/common/TimelineThumbs;->h:Lcom/vk/dto/common/TimelineThumbs$c;
 
-    invoke-virtual {v0}, Lcom/vk/dto/common/TimelineThumbs$c;->a()Lcom/vk/dto/common/data/JsonParser;
+    invoke-virtual {v0}, Lcom/vk/dto/common/TimelineThumbs$c;->a()Lcom/vk/dto/common/data/c;
 
     move-result-object v0
 
@@ -2426,7 +2426,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3293,7 +3293,7 @@
     .end param
 
     .line 1
-    invoke-static {p1, p0}, Lcom/vk/dto/common/VideoFileFactory;->a(Lcom/vk/core/serialize/Serializer;Lcom/vk/dto/common/VideoFile;)V
+    invoke-static {p1, p0}, Lcom/vk/dto/common/i;->a(Lcom/vk/core/serialize/Serializer;Lcom/vk/dto/common/VideoFile;)V
 
     .line 2
     iget v0, p0, Lcom/vk/dto/common/VideoFile;->a:I
@@ -3488,12 +3488,12 @@
     .line 40
     iget-object v0, p0, Lcom/vk/dto/common/VideoFile;->A0:Ljava/util/List;
 
-    invoke-static {p1, v0}, Lb/h/h/ModelUtils;->a(Lcom/vk/core/serialize/Serializer;Ljava/util/List;)V
+    invoke-static {p1, v0}, Lb/h/h/b;->a(Lcom/vk/core/serialize/Serializer;Ljava/util/List;)V
 
     .line 41
     iget-object v0, p0, Lcom/vk/dto/common/VideoFile;->B0:Ljava/util/List;
 
-    invoke-static {p1, v0}, Lb/h/h/ModelUtils;->a(Lcom/vk/core/serialize/Serializer;Ljava/util/List;)V
+    invoke-static {p1, v0}, Lb/h/h/b;->a(Lcom/vk/core/serialize/Serializer;Ljava/util/List;)V
 
     .line 42
     iget-wide v0, p0, Lcom/vk/dto/common/VideoFile;->C0:J
@@ -3653,46 +3653,46 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/dto/newsfeed/Likable;)V
+.method public a(Lcom/vk/dto/newsfeed/c;)V
     .locals 1
 
     .line 75
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->W0()I
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->W0()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/vk/dto/common/VideoFile;->f(I)V
 
     .line 76
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->P()Z
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->P()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/vk/dto/common/VideoFile;->g(Z)V
 
     .line 77
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->g1()I
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->g1()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/vk/dto/common/VideoFile;->b(I)V
 
     .line 78
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->d1()I
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->d1()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/vk/dto/common/VideoFile;->e(I)V
 
     .line 79
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->r1()I
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->r1()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/vk/dto/common/VideoFile;->g(I)V
 
     .line 80
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->M0()Z
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->M0()Z
 
     move-result p1
 
@@ -4200,7 +4200,7 @@
 
     iget-object v2, p0, Lcom/vk/dto/common/VideoFile;->w0:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
 
     move-result v2
 

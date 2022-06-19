@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/completable/CompletableDoFinally;
-.super Lio/reactivex/Completable;
+.super Lc/a/a;
 .source "CompletableDoFinally.java"
 
 
@@ -12,42 +12,42 @@
 
 
 # instance fields
-.field final a:Lio/reactivex/CompletableSource;
+.field final a:Lc/a/e;
 
-.field final b:Lio/reactivex/functions/Action;
+.field final b:Lc/a/z/a;
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/CompletableSource;Lio/reactivex/functions/Action;)V
+.method public constructor <init>(Lc/a/e;Lc/a/z/a;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/Completable;-><init>()V
+    invoke-direct {p0}, Lc/a/a;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableDoFinally;->a:Lio/reactivex/CompletableSource;
+    iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableDoFinally;->a:Lc/a/e;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/completable/CompletableDoFinally;->b:Lio/reactivex/functions/Action;
+    iput-object p2, p0, Lio/reactivex/internal/operators/completable/CompletableDoFinally;->b:Lc/a/z/a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lio/reactivex/CompletableObserver;)V
+.method protected b(Lc/a/c;)V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableDoFinally;->a:Lio/reactivex/CompletableSource;
+    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableDoFinally;->a:Lc/a/e;
 
     new-instance v1, Lio/reactivex/internal/operators/completable/CompletableDoFinally$DoFinallyObserver;
 
-    iget-object v2, p0, Lio/reactivex/internal/operators/completable/CompletableDoFinally;->b:Lio/reactivex/functions/Action;
+    iget-object v2, p0, Lio/reactivex/internal/operators/completable/CompletableDoFinally;->b:Lc/a/z/a;
 
-    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/completable/CompletableDoFinally$DoFinallyObserver;-><init>(Lio/reactivex/CompletableObserver;Lio/reactivex/functions/Action;)V
+    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/completable/CompletableDoFinally$DoFinallyObserver;-><init>(Lc/a/c;Lc/a/z/a;)V
 
-    invoke-interface {v0, v1}, Lio/reactivex/CompletableSource;->a(Lio/reactivex/CompletableObserver;)V
+    invoke-interface {v0, v1}, Lc/a/e;->a(Lc/a/c;)V
 
     return-void
 .end method

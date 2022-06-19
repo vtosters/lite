@@ -3,7 +3,7 @@
 .source "LibVerifyAuthPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate$incorrectPhoneAction$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate$incorrectPhoneAction$1;->this$0:Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate;
 
-    invoke-static {v0}, Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate;->a(Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate;)Lcom/vk/auth/main/AuthRouter;
+    invoke-static {v0}, Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate;->a(Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate;)Lcom/vk/auth/main/g;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v2, v1}, Lcom/vk/auth/main/AuthRouter;->a(ZLjava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lcom/vk/auth/main/g;->a(ZLjava/lang/String;)V
 
     return-void
 .end method

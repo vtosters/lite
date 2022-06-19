@@ -3,7 +3,7 @@
 .source "SelectionStickerSearchDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,23 +49,23 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lio/reactivex/Observable;
+.method public final a(Ljava/lang/String;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/dto/stories/model/GifWithQueryData;",
             ">;"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils1;->INSTANCE:Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils1;
+    sget-object v0, Lcom/vk/attachpicker/stickers/selection/gfycat/b;->a:Lcom/vk/attachpicker/stickers/selection/gfycat/b;
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils1;->a(Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/selection/gfycat/b;->a(Ljava/lang/String;)Lc/a/m;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v$a;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
@@ -82,7 +82,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v$b;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->g(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->g(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
@@ -95,7 +95,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v;->a(Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v;->a(Ljava/lang/String;)Lc/a/m;
 
     move-result-object p1
 

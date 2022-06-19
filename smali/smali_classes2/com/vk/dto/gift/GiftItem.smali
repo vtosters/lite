@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/gift/GiftItem;
-.super Lcom/vk/dto/common/Model;
+.super Lcom/vk/dto/common/e;
 .source "GiftItem.java"
 
 # interfaces
@@ -7,10 +7,10 @@
 
 
 # static fields
-.field public static final C:Lcom/vk/dto/common/data/JsonParser;
+.field public static final C:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/gift/GiftItem;",
             ">;"
         }
@@ -71,7 +71,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/gift/GiftItem$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/gift/GiftItem;->C:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/gift/GiftItem;->C:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     .locals 2
 
     .line 11
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -170,7 +170,7 @@
     .locals 2
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     const-string v0, "id"
 

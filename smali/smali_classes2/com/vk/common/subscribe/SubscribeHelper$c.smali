@@ -3,12 +3,12 @@
 .source "SubscribeHelper.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/subscribe/SubscribeHelper;->a(Landroid/content/Context;ILkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/common/subscribe/SubscribeHelper;->a(Landroid/content/Context;ILkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -30,16 +30,16 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions2;
+.field final synthetic a:Lkotlin/jvm/b/b;
 
 .field final synthetic b:I
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions2;I)V
+.method constructor <init>(Lkotlin/jvm/b/b;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/common/subscribe/SubscribeHelper$c;->a:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/common/subscribe/SubscribeHelper$c;->a:Lkotlin/jvm/b/b;
 
     iput p2, p0, Lcom/vk/common/subscribe/SubscribeHelper$c;->b:I
 
@@ -54,7 +54,7 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/common/subscribe/SubscribeHelper$c;->a:Lkotlin/jvm/b/Functions2;
+    iget-object p1, p0, Lcom/vk/common/subscribe/SubscribeHelper$c;->a:Lkotlin/jvm/b/b;
 
     if-eqz p1, :cond_0
 
@@ -64,11 +64,11 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     .line 2
     :cond_0

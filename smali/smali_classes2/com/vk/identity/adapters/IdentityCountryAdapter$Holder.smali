@@ -39,7 +39,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/identity/adapters/IdentityCountryAdapter$Holder$1;-><init>(Lcom/vk/identity/adapters/IdentityCountryAdapter$Holder;)V
 
-    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -54,13 +54,13 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/identity/c/CheckedTextView;
+    check-cast v0, Lcom/vk/identity/c/a;
 
     iget-object v1, p1, Lcom/vk/dto/common/Country;->b:Ljava/lang/String;
 
     const-string v2, "country.name"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/identity/adapters/IdentityCountryAdapter$Holder;->a:Lcom/vk/identity/adapters/IdentityCountryAdapter;
 
@@ -74,7 +74,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/identity/c/CheckedTextView;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/identity/c/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     return-void
 

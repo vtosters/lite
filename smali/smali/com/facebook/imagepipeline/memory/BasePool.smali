@@ -3,7 +3,7 @@
 .source "BasePool.java"
 
 # interfaces
-.implements Lcom/facebook/common/memory/Pool;
+.implements Lcom/facebook/common/memory/e;
 
 
 # annotations
@@ -23,7 +23,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/facebook/common/memory/Pool<",
+        "Lcom/facebook/common/memory/e<",
         "TV;>;"
     }
 .end annotation
@@ -39,15 +39,15 @@
     .end annotation
 .end field
 
-.field final b:Lcom/facebook/common/memory/MemoryTrimmableRegistry;
+.field final b:Lcom/facebook/common/memory/c;
 
-.field final c:Lcom/facebook/imagepipeline/memory/PoolParams;
+.field final c:Lcom/facebook/imagepipeline/memory/d0;
 
 .field final d:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/facebook/imagepipeline/memory/Bucket<",
+            "Lcom/facebook/imagepipeline/memory/e<",
             "TV;>;>;"
         }
     .end annotation
@@ -68,11 +68,11 @@
 
 .field final h:Lcom/facebook/imagepipeline/memory/BasePool$a;
 
-.field private final i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+.field private final i:Lcom/facebook/imagepipeline/memory/e0;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/common/memory/MemoryTrimmableRegistry;Lcom/facebook/imagepipeline/memory/PoolParams;Lcom/facebook/imagepipeline/memory/PoolStatsTracker;)V
+.method public constructor <init>(Lcom/facebook/common/memory/c;Lcom/facebook/imagepipeline/memory/d0;Lcom/facebook/imagepipeline/memory/e0;)V
     .locals 1
 
     .line 1
@@ -86,25 +86,25 @@
     iput-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->a:Ljava/lang/Class;
 
     .line 3
-    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p1, Lcom/facebook/common/memory/MemoryTrimmableRegistry;
+    check-cast p1, Lcom/facebook/common/memory/c;
 
-    iput-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->b:Lcom/facebook/common/memory/MemoryTrimmableRegistry;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->b:Lcom/facebook/common/memory/c;
 
     .line 4
-    invoke-static {p2}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p2, Lcom/facebook/imagepipeline/memory/PoolParams;
+    check-cast p2, Lcom/facebook/imagepipeline/memory/d0;
 
-    iput-object p2, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iput-object p2, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
     .line 5
-    invoke-static {p3}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p3, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    check-cast p3, Lcom/facebook/imagepipeline/memory/e0;
 
-    iput-object p3, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iput-object p3, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
     .line 6
     new-instance p1, Landroid/util/SparseArray;
@@ -114,9 +114,9 @@
     iput-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->d:Landroid/util/SparseArray;
 
     .line 7
-    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget-boolean p1, p1, Lcom/facebook/imagepipeline/memory/PoolParams;->d:Z
+    iget-boolean p1, p1, Lcom/facebook/imagepipeline/memory/d0;->d:Z
 
     if-eqz p1, :cond_0
 
@@ -137,7 +137,7 @@
 
     .line 10
     :goto_0
-    invoke-static {}, Lcom/facebook/common/internal/Sets;->b()Ljava/util/Set;
+    invoke-static {}, Lcom/facebook/common/internal/i;->b()Ljava/util/Set;
 
     move-result-object p1
 
@@ -193,18 +193,18 @@
     .line 9
     iget-object v4, p0, Lcom/facebook/imagepipeline/memory/BasePool;->d:Landroid/util/SparseArray;
 
-    new-instance v5, Lcom/facebook/imagepipeline/memory/Bucket;
+    new-instance v5, Lcom/facebook/imagepipeline/memory/e;
 
     .line 10
     invoke-virtual {p0, v2}, Lcom/facebook/imagepipeline/memory/BasePool;->e(I)I
 
     move-result v6
 
-    iget-object v7, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v7, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget-boolean v7, v7, Lcom/facebook/imagepipeline/memory/PoolParams;->d:Z
+    iget-boolean v7, v7, Lcom/facebook/imagepipeline/memory/d0;->d:Z
 
-    invoke-direct {v5, v6, v3, v0, v7}, Lcom/facebook/imagepipeline/memory/Bucket;-><init>(IIIZ)V
+    invoke-direct {v5, v6, v3, v0, v7}, Lcom/facebook/imagepipeline/memory/e;-><init>(IIIZ)V
 
     .line 11
     invoke-virtual {v4, v2, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -224,7 +224,7 @@
 
     .line 1
     :try_start_0
-    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->d:Landroid/util/SparseArray;
@@ -232,9 +232,9 @@
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
     .line 3
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget-object v0, v0, Lcom/facebook/imagepipeline/memory/PoolParams;->c:Landroid/util/SparseIntArray;
+    iget-object v0, v0, Lcom/facebook/imagepipeline/memory/d0;->c:Landroid/util/SparseIntArray;
 
     if-eqz v0, :cond_1
 
@@ -268,18 +268,18 @@
     .line 8
     iget-object v6, p0, Lcom/facebook/imagepipeline/memory/BasePool;->d:Landroid/util/SparseArray;
 
-    new-instance v7, Lcom/facebook/imagepipeline/memory/Bucket;
+    new-instance v7, Lcom/facebook/imagepipeline/memory/e;
 
     .line 9
     invoke-virtual {p0, v3}, Lcom/facebook/imagepipeline/memory/BasePool;->e(I)I
 
     move-result v8
 
-    iget-object v9, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v9, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget-boolean v9, v9, Lcom/facebook/imagepipeline/memory/PoolParams;->d:Z
+    iget-boolean v9, v9, Lcom/facebook/imagepipeline/memory/d0;->d:Z
 
-    invoke-direct {v7, v8, v4, v5, v9}, Lcom/facebook/imagepipeline/memory/Bucket;-><init>(IIIZ)V
+    invoke-direct {v7, v8, v4, v5, v9}, Lcom/facebook/imagepipeline/memory/e;-><init>(IIIZ)V
 
     .line 10
     invoke-virtual {v6, v3, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -347,7 +347,7 @@
     const/4 v0, 0x1
 
     :goto_1
-    invoke-static {v0}, Lcom/facebook/common/internal/Preconditions;->b(Z)V
+    invoke-static {v0}, Lcom/facebook/common/internal/g;->b(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -371,9 +371,9 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget-object v0, v0, Lcom/facebook/imagepipeline/memory/PoolParams;->c:Landroid/util/SparseIntArray;
+    iget-object v0, v0, Lcom/facebook/imagepipeline/memory/d0;->c:Landroid/util/SparseIntArray;
 
     if-eqz v0, :cond_0
 
@@ -409,12 +409,12 @@
     throw v0
 .end method
 
-.method private declared-synchronized h(I)Lcom/facebook/imagepipeline/memory/Bucket;
+.method private declared-synchronized h(I)Lcom/facebook/imagepipeline/memory/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/facebook/imagepipeline/memory/Bucket<",
+            "Lcom/facebook/imagepipeline/memory/e<",
             "TV;>;"
         }
     .end annotation
@@ -429,7 +429,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/imagepipeline/memory/Bucket;
+    check-cast p1, Lcom/facebook/imagepipeline/memory/e;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -456,7 +456,7 @@
     const/4 v0, 0x2
 
     .line 2
-    invoke-static {v0}, Lcom/facebook/common/h/FLog;->a(I)Z
+    invoke-static {v0}, Lcom/facebook/common/h/a;->a(I)Z
 
     move-result v0
 
@@ -504,7 +504,7 @@
     const-string v2, "Used = (%d, %d); Free = (%d, %d)"
 
     .line 8
-    invoke-static/range {v1 .. v6}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/facebook/common/h/a;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -516,7 +516,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/facebook/imagepipeline/memory/Bucket<",
+            "Lcom/facebook/imagepipeline/memory/e<",
             "TV;>;>;"
         }
     .end annotation
@@ -551,21 +551,21 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/facebook/imagepipeline/memory/Bucket;
+    check-cast v3, Lcom/facebook/imagepipeline/memory/e;
 
     .line 4
-    iget v4, v3, Lcom/facebook/imagepipeline/memory/Bucket;->a:I
+    iget v4, v3, Lcom/facebook/imagepipeline/memory/e;->a:I
 
     .line 5
-    iget v5, v3, Lcom/facebook/imagepipeline/memory/Bucket;->b:I
+    iget v5, v3, Lcom/facebook/imagepipeline/memory/e;->b:I
 
     .line 6
-    invoke-virtual {v3}, Lcom/facebook/imagepipeline/memory/Bucket;->d()I
+    invoke-virtual {v3}, Lcom/facebook/imagepipeline/memory/e;->d()I
 
     move-result v6
 
     .line 7
-    invoke-virtual {v3}, Lcom/facebook/imagepipeline/memory/Bucket;->c()I
+    invoke-virtual {v3}, Lcom/facebook/imagepipeline/memory/e;->c()I
 
     move-result v7
 
@@ -578,18 +578,18 @@
     :cond_0
     iget-object v3, p0, Lcom/facebook/imagepipeline/memory/BasePool;->d:Landroid/util/SparseArray;
 
-    new-instance v7, Lcom/facebook/imagepipeline/memory/Bucket;
+    new-instance v7, Lcom/facebook/imagepipeline/memory/e;
 
     .line 10
     invoke-virtual {p0, v4}, Lcom/facebook/imagepipeline/memory/BasePool;->e(I)I
 
     move-result v4
 
-    iget-object v8, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v8, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget-boolean v8, v8, Lcom/facebook/imagepipeline/memory/PoolParams;->d:Z
+    iget-boolean v8, v8, Lcom/facebook/imagepipeline/memory/d0;->d:Z
 
-    invoke-direct {v7, v4, v5, v6, v8}, Lcom/facebook/imagepipeline/memory/Bucket;-><init>(IIIZ)V
+    invoke-direct {v7, v4, v5, v6, v8}, Lcom/facebook/imagepipeline/memory/e;-><init>(IIIZ)V
 
     .line 11
     invoke-virtual {v3, v2, v7}, Landroid/util/SparseArray;->setValueAt(ILjava/lang/Object;)V
@@ -612,12 +612,12 @@
     .end annotation
 .end method
 
-.method protected declared-synchronized a(Lcom/facebook/imagepipeline/memory/Bucket;)Ljava/lang/Object;
+.method protected declared-synchronized a(Lcom/facebook/imagepipeline/memory/e;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/imagepipeline/memory/Bucket<",
+            "Lcom/facebook/imagepipeline/memory/e<",
             "TV;>;)TV;"
         }
     .end annotation
@@ -626,7 +626,7 @@
 
     .line 3
     :try_start_0
-    invoke-virtual {p1}, Lcom/facebook/imagepipeline/memory/Bucket;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/facebook/imagepipeline/memory/e;->b()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0
@@ -648,14 +648,14 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->b:Lcom/facebook/common/memory/MemoryTrimmableRegistry;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->b:Lcom/facebook/common/memory/c;
 
-    invoke-interface {v0, p0}, Lcom/facebook/common/memory/MemoryTrimmableRegistry;->a(Lcom/facebook/common/memory/MemoryTrimmable;)V
+    invoke-interface {v0, p0}, Lcom/facebook/common/memory/c;->a(Lcom/facebook/common/memory/b;)V
 
     .line 2
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
-    invoke-interface {v0, p0}, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;->a(Lcom/facebook/imagepipeline/memory/BasePool;)V
+    invoke-interface {v0, p0}, Lcom/facebook/imagepipeline/memory/e0;->a(Lcom/facebook/imagepipeline/memory/BasePool;)V
 
     return-void
 .end method
@@ -702,9 +702,9 @@
 
     add-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget v1, v1, Lcom/facebook/imagepipeline/memory/PoolParams;->b:I
+    iget v1, v1, Lcom/facebook/imagepipeline/memory/d0;->b:I
 
     if-le v0, v1, :cond_0
 
@@ -719,9 +719,9 @@
     if-eqz v0, :cond_1
 
     .line 15
-    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
-    invoke-interface {v1}, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;->a()V
+    invoke-interface {v1}, Lcom/facebook/imagepipeline/memory/e0;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -746,9 +746,9 @@
 
     .line 17
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget v0, v0, Lcom/facebook/imagepipeline/memory/PoolParams;->a:I
+    iget v0, v0, Lcom/facebook/imagepipeline/memory/d0;->a:I
 
     .line 18
     iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->g:Lcom/facebook/imagepipeline/memory/BasePool$a;
@@ -762,9 +762,9 @@
     if-le p1, v1, :cond_0
 
     .line 19
-    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;->b()V
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/memory/e0;->b()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -776,9 +776,9 @@
     .line 21
     :cond_0
     :try_start_1
-    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget v1, v1, Lcom/facebook/imagepipeline/memory/PoolParams;->b:I
+    iget v1, v1, Lcom/facebook/imagepipeline/memory/d0;->b:I
 
     .line 22
     iget-object v3, p0, Lcom/facebook/imagepipeline/memory/BasePool;->g:Lcom/facebook/imagepipeline/memory/BasePool$a;
@@ -817,9 +817,9 @@
     if-le p1, v0, :cond_2
 
     .line 25
-    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;->b()V
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/memory/e0;->b()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -844,12 +844,12 @@
     throw p1
 .end method
 
-.method declared-synchronized c(I)Lcom/facebook/imagepipeline/memory/Bucket;
+.method declared-synchronized c(I)Lcom/facebook/imagepipeline/memory/e;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/facebook/imagepipeline/memory/Bucket<",
+            "Lcom/facebook/imagepipeline/memory/e<",
             "TV;>;"
         }
     .end annotation
@@ -864,7 +864,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/imagepipeline/memory/Bucket;
+    check-cast v0, Lcom/facebook/imagepipeline/memory/e;
 
     if-nez v0, :cond_2
 
@@ -879,7 +879,7 @@
     const/4 v0, 0x2
 
     .line 4
-    invoke-static {v0}, Lcom/facebook/common/h/FLog;->a(I)Z
+    invoke-static {v0}, Lcom/facebook/common/h/a;->a(I)Z
 
     move-result v0
 
@@ -894,11 +894,11 @@
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcom/facebook/common/h/FLog;->b(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/facebook/common/h/a;->b(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 6
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->f(I)Lcom/facebook/imagepipeline/memory/Bucket;
+    invoke-virtual {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->f(I)Lcom/facebook/imagepipeline/memory/e;
 
     move-result-object v0
 
@@ -944,7 +944,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 p1, 0x1
 
@@ -962,9 +962,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget-boolean v0, v0, Lcom/facebook/imagepipeline/memory/PoolParams;->d:Z
+    iget-boolean v0, v0, Lcom/facebook/imagepipeline/memory/d0;->d:Z
 
     const/4 v1, 0x0
 
@@ -1013,10 +1013,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/facebook/imagepipeline/memory/Bucket;
+    check-cast v4, Lcom/facebook/imagepipeline/memory/e;
 
     .line 8
-    invoke-virtual {v4}, Lcom/facebook/imagepipeline/memory/Bucket;->c()I
+    invoke-virtual {v4}, Lcom/facebook/imagepipeline/memory/e;->c()I
 
     move-result v5
 
@@ -1033,7 +1033,7 @@
 
     move-result v5
 
-    invoke-virtual {v4}, Lcom/facebook/imagepipeline/memory/Bucket;->d()I
+    invoke-virtual {v4}, Lcom/facebook/imagepipeline/memory/e;->d()I
 
     move-result v4
 
@@ -1077,11 +1077,11 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/facebook/imagepipeline/memory/Bucket;
+    check-cast v2, Lcom/facebook/imagepipeline/memory/e;
 
     .line 18
     :goto_3
-    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/Bucket;->g()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/e;->g()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1129,9 +1129,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget v0, v0, Lcom/facebook/imagepipeline/memory/PoolParams;->b:I
+    iget v0, v0, Lcom/facebook/imagepipeline/memory/d0;->b:I
 
     invoke-virtual {p0, v0}, Lcom/facebook/imagepipeline/memory/BasePool;->g(I)V
     :try_end_0
@@ -1151,33 +1151,33 @@
     throw v0
 .end method
 
-.method f(I)Lcom/facebook/imagepipeline/memory/Bucket;
+.method f(I)Lcom/facebook/imagepipeline/memory/e;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/facebook/imagepipeline/memory/Bucket<",
+            "Lcom/facebook/imagepipeline/memory/e<",
             "TV;>;"
         }
     .end annotation
 
     .line 3
-    new-instance v0, Lcom/facebook/imagepipeline/memory/Bucket;
+    new-instance v0, Lcom/facebook/imagepipeline/memory/e;
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->e(I)I
 
     move-result p1
 
-    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget-boolean v1, v1, Lcom/facebook/imagepipeline/memory/PoolParams;->d:Z
+    iget-boolean v1, v1, Lcom/facebook/imagepipeline/memory/d0;->d:Z
 
     const v2, 0x7fffffff
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, p1, v2, v3, v1}, Lcom/facebook/imagepipeline/memory/Bucket;-><init>(IIIZ)V
+    invoke-direct {v0, p1, v2, v3, v1}, Lcom/facebook/imagepipeline/memory/e;-><init>(IIIZ)V
 
     return-object v0
 .end method
@@ -1223,7 +1223,7 @@
 
     .line 8
     :try_start_1
-    invoke-static {v1}, Lcom/facebook/common/h/FLog;->a(I)Z
+    invoke-static {v1}, Lcom/facebook/common/h/a;->a(I)Z
 
     move-result v2
 
@@ -1260,7 +1260,7 @@
     move-result-object v6
 
     .line 13
-    invoke-static {v2, v3, v4, v5, v6}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4, v5, v6}, Lcom/facebook/common/h/a;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 14
     :cond_1
@@ -1290,13 +1290,13 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/facebook/imagepipeline/memory/Bucket;
+    check-cast v3, Lcom/facebook/imagepipeline/memory/e;
 
     :goto_1
     if-lez v0, :cond_4
 
     .line 17
-    invoke-virtual {v3}, Lcom/facebook/imagepipeline/memory/Bucket;->g()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/facebook/imagepipeline/memory/e;->g()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -1309,14 +1309,14 @@
     invoke-virtual {p0, v4}, Lcom/facebook/imagepipeline/memory/BasePool;->a(Ljava/lang/Object;)V
 
     .line 19
-    iget v4, v3, Lcom/facebook/imagepipeline/memory/Bucket;->a:I
+    iget v4, v3, Lcom/facebook/imagepipeline/memory/e;->a:I
 
     sub-int/2addr v0, v4
 
     .line 20
     iget-object v4, p0, Lcom/facebook/imagepipeline/memory/BasePool;->h:Lcom/facebook/imagepipeline/memory/BasePool$a;
 
-    iget v5, v3, Lcom/facebook/imagepipeline/memory/Bucket;->a:I
+    iget v5, v3, Lcom/facebook/imagepipeline/memory/e;->a:I
 
     invoke-virtual {v4, v5}, Lcom/facebook/imagepipeline/memory/BasePool$a;->a(I)V
 
@@ -1334,7 +1334,7 @@
     invoke-direct {p0}, Lcom/facebook/imagepipeline/memory/BasePool;->h()V
 
     .line 22
-    invoke-static {v1}, Lcom/facebook/common/h/FLog;->a(I)Z
+    invoke-static {v1}, Lcom/facebook/common/h/a;->a(I)Z
 
     move-result v0
 
@@ -1366,7 +1366,7 @@
     move-result-object v2
 
     .line 26
-    invoke-static {v0, v1, p1, v2}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v0, v1, p1, v2}, Lcom/facebook/common/h/a;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -1405,7 +1405,7 @@
 
     .line 4
     :try_start_0
-    invoke-virtual {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->c(I)Lcom/facebook/imagepipeline/memory/Bucket;
+    invoke-virtual {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->c(I)Lcom/facebook/imagepipeline/memory/e;
 
     move-result-object v0
 
@@ -1414,7 +1414,7 @@
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/facebook/imagepipeline/memory/BasePool;->a(Lcom/facebook/imagepipeline/memory/Bucket;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/facebook/imagepipeline/memory/BasePool;->a(Lcom/facebook/imagepipeline/memory/e;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1427,7 +1427,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->b(Z)V
+    invoke-static {p1}, Lcom/facebook/common/internal/g;->b(Z)V
 
     .line 7
     invoke-virtual {p0, v2}, Lcom/facebook/imagepipeline/memory/BasePool;->b(Ljava/lang/Object;)I
@@ -1450,15 +1450,15 @@
     invoke-virtual {v3, v0}, Lcom/facebook/imagepipeline/memory/BasePool$a;->a(I)V
 
     .line 11
-    iget-object v3, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iget-object v3, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
-    invoke-interface {v3, v0}, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;->d(I)V
+    invoke-interface {v3, v0}, Lcom/facebook/imagepipeline/memory/e0;->d(I)V
 
     .line 12
     invoke-direct {p0}, Lcom/facebook/imagepipeline/memory/BasePool;->h()V
 
     .line 13
-    invoke-static {v1}, Lcom/facebook/common/h/FLog;->a(I)Z
+    invoke-static {v1}, Lcom/facebook/common/h/a;->a(I)Z
 
     move-result v0
 
@@ -1484,7 +1484,7 @@
     move-result-object p1
 
     .line 17
-    invoke-static {v0, v1, v3, p1}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v0, v1, v3, p1}, Lcom/facebook/common/h/a;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 18
     :cond_0
@@ -1513,7 +1513,7 @@
     if-eqz v0, :cond_2
 
     .line 22
-    invoke-virtual {v0}, Lcom/facebook/imagepipeline/memory/Bucket;->e()V
+    invoke-virtual {v0}, Lcom/facebook/imagepipeline/memory/e;->e()V
 
     .line 23
     :cond_2
@@ -1546,14 +1546,14 @@
     invoke-virtual {v4, v2}, Lcom/facebook/imagepipeline/memory/BasePool$a;->a(I)V
 
     .line 27
-    invoke-virtual {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->c(I)Lcom/facebook/imagepipeline/memory/Bucket;
+    invoke-virtual {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->c(I)Lcom/facebook/imagepipeline/memory/e;
 
     move-result-object v4
 
     if-eqz v4, :cond_3
 
     .line 28
-    invoke-virtual {v4}, Lcom/facebook/imagepipeline/memory/Bucket;->a()V
+    invoke-virtual {v4}, Lcom/facebook/imagepipeline/memory/e;->a()V
 
     .line 29
     :cond_3
@@ -1562,7 +1562,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     .line 30
-    invoke-static {v3}, Lcom/facebook/common/internal/Throwables;->b(Ljava/lang/Throwable;)V
+    invoke-static {v3}, Lcom/facebook/common/internal/l;->b(Ljava/lang/Throwable;)V
 
     .line 31
     :goto_0
@@ -1576,21 +1576,21 @@
 
     move-result v3
 
-    invoke-static {v3}, Lcom/facebook/common/internal/Preconditions;->b(Z)V
+    invoke-static {v3}, Lcom/facebook/common/internal/g;->b(Z)V
 
     .line 33
     invoke-virtual {p0}, Lcom/facebook/imagepipeline/memory/BasePool;->e()V
 
     .line 34
-    iget-object v3, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iget-object v3, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
-    invoke-interface {v3, v2}, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;->c(I)V
+    invoke-interface {v3, v2}, Lcom/facebook/imagepipeline/memory/e0;->c(I)V
 
     .line 35
     invoke-direct {p0}, Lcom/facebook/imagepipeline/memory/BasePool;->h()V
 
     .line 36
-    invoke-static {v1}, Lcom/facebook/common/h/FLog;->a(I)Z
+    invoke-static {v1}, Lcom/facebook/common/h/a;->a(I)Z
 
     move-result v1
 
@@ -1616,7 +1616,7 @@
     move-result-object p1
 
     .line 40
-    invoke-static {v1, v2, v3, p1}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3, p1}, Lcom/facebook/common/h/a;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 41
     :cond_4
@@ -1649,9 +1649,9 @@
     :try_start_5
     new-instance p1, Lcom/facebook/imagepipeline/memory/BasePool$PoolSizeViolationException;
 
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/PoolParams;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/BasePool;->c:Lcom/facebook/imagepipeline/memory/d0;
 
-    iget v0, v0, Lcom/facebook/imagepipeline/memory/PoolParams;->a:I
+    iget v0, v0, Lcom/facebook/imagepipeline/memory/d0;->a:I
 
     iget-object v1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->g:Lcom/facebook/imagepipeline/memory/BasePool$a;
 
@@ -1685,7 +1685,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     invoke-virtual {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->b(Ljava/lang/Object;)I
@@ -1702,7 +1702,7 @@
 
     .line 5
     :try_start_0
-    invoke-direct {p0, v0}, Lcom/facebook/imagepipeline/memory/BasePool;->h(I)Lcom/facebook/imagepipeline/memory/Bucket;
+    invoke-direct {p0, v0}, Lcom/facebook/imagepipeline/memory/BasePool;->h(I)Lcom/facebook/imagepipeline/memory/e;
 
     move-result-object v2
 
@@ -1747,15 +1747,15 @@
     aput-object v0, v4, v5
 
     .line 10
-    invoke-static {v2, v3, v4}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/facebook/common/h/a;->a(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 11
     invoke-virtual {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->a(Ljava/lang/Object;)V
 
     .line 12
-    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
-    invoke-interface {p1, v1}, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;->a(I)V
+    invoke-interface {p1, v1}, Lcom/facebook/imagepipeline/memory/e0;->a(I)V
 
     goto :goto_1
 
@@ -1763,7 +1763,7 @@
     if-eqz v2, :cond_2
 
     .line 13
-    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/Bucket;->f()Z
+    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/e;->f()Z
 
     move-result v3
 
@@ -1787,7 +1787,7 @@
 
     .line 16
     :cond_1
-    invoke-virtual {v2, p1}, Lcom/facebook/imagepipeline/memory/Bucket;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, p1}, Lcom/facebook/imagepipeline/memory/e;->b(Ljava/lang/Object;)V
 
     .line 17
     iget-object v2, p0, Lcom/facebook/imagepipeline/memory/BasePool;->h:Lcom/facebook/imagepipeline/memory/BasePool$a;
@@ -1800,12 +1800,12 @@
     invoke-virtual {v2, v1}, Lcom/facebook/imagepipeline/memory/BasePool$a;->a(I)V
 
     .line 19
-    iget-object v2, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
-    invoke-interface {v2, v1}, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;->b(I)V
+    invoke-interface {v2, v1}, Lcom/facebook/imagepipeline/memory/e0;->b(I)V
 
     .line 20
-    invoke-static {v4}, Lcom/facebook/common/h/FLog;->a(I)Z
+    invoke-static {v4}, Lcom/facebook/common/h/a;->a(I)Z
 
     move-result v1
 
@@ -1831,7 +1831,7 @@
     move-result-object v0
 
     .line 24
-    invoke-static {v1, v2, p1, v0}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v1, v2, p1, v0}, Lcom/facebook/common/h/a;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -1840,11 +1840,11 @@
     if-eqz v2, :cond_3
 
     .line 25
-    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/Bucket;->a()V
+    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/e;->a()V
 
     .line 26
     :cond_3
-    invoke-static {v4}, Lcom/facebook/common/h/FLog;->a(I)Z
+    invoke-static {v4}, Lcom/facebook/common/h/a;->a(I)Z
 
     move-result v2
 
@@ -1870,7 +1870,7 @@
     move-result-object v0
 
     .line 30
-    invoke-static {v2, v3, v4, v0}, Lcom/facebook/common/h/FLog;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4, v0}, Lcom/facebook/common/h/a;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 31
     :cond_4
@@ -1882,9 +1882,9 @@
     invoke-virtual {p1, v1}, Lcom/facebook/imagepipeline/memory/BasePool$a;->a(I)V
 
     .line 33
-    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/PoolStatsTracker;
+    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/BasePool;->i:Lcom/facebook/imagepipeline/memory/e0;
 
-    invoke-interface {p1, v1}, Lcom/facebook/imagepipeline/memory/PoolStatsTracker;->a(I)V
+    invoke-interface {p1, v1}, Lcom/facebook/imagepipeline/memory/e0;->a(I)V
 
     .line 34
     :cond_5

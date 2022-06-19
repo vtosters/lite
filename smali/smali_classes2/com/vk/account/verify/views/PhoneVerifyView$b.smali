@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/account/verify/PhoneVerifyManager$b;)V
+.method public final a(Lcom/vk/account/verify/g$b;)V
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/account/verify/PhoneVerifyManager;->INSTANCE:Lcom/vk/account/verify/PhoneVerifyManager;
+    sget-object v0, Lcom/vk/account/verify/g;->e:Lcom/vk/account/verify/g;
 
-    invoke-virtual {v0}, Lcom/vk/account/verify/PhoneVerifyManager;->a()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/vk/account/verify/g;->a()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -50,33 +50,33 @@
     .line 2
     new-instance v1, Lcom/vk/account/verify/views/PhoneVerifyView;
 
-    invoke-direct {v1, v0, p1}, Lcom/vk/account/verify/views/PhoneVerifyView;-><init>(Landroid/content/Context;Lcom/vk/account/verify/PhoneVerifyManager$b;)V
+    invoke-direct {v1, v0, p1}, Lcom/vk/account/verify/views/PhoneVerifyView;-><init>(Landroid/content/Context;Lcom/vk/account/verify/g$b;)V
 
     .line 3
-    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
-    invoke-direct {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     .line 4
-    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 5
-    invoke-virtual {v1}, Lcom/vk/account/verify/views/PhoneVerifyView;->getListener()Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
+    invoke-virtual {v1}, Lcom/vk/account/verify/views/PhoneVerifyView;->getListener()Lcom/vk/core/dialogs/bottomsheet/h$c;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$c;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v0, 0x1
 
     const/4 v2, 0x0
 
     .line 6
-    invoke-static {p1, v2, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {p1, v2, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/account/verify/views/PhoneVerifyView;->setDialog(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-virtual {v1, p1}, Lcom/vk/account/verify/views/PhoneVerifyView;->setDialog(Lcom/vk/core/dialogs/bottomsheet/e;)V
 
     :cond_0
     return-void

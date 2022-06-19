@@ -41,10 +41,10 @@
 
 .field private static d:Lorg/chromium/base/ApplicationStatus$b;
 
-.field private static final e:Lorg/chromium/base/ObserverList;
+.field private static final e:Lorg/chromium/base/f;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lorg/chromium/base/ObserverList<",
+            "Lorg/chromium/base/f<",
             "Lorg/chromium/base/ApplicationStatus$b;",
             ">;"
         }
@@ -74,21 +74,21 @@
     sput v0, Lorg/chromium/base/ApplicationStatus;->b:I
 
     .line 4
-    new-instance v0, Lorg/chromium/base/ObserverList;
+    new-instance v0, Lorg/chromium/base/f;
 
-    invoke-direct {v0}, Lorg/chromium/base/ObserverList;-><init>()V
+    invoke-direct {v0}, Lorg/chromium/base/f;-><init>()V
 
     .line 5
-    new-instance v0, Lorg/chromium/base/ObserverList;
+    new-instance v0, Lorg/chromium/base/f;
 
-    invoke-direct {v0}, Lorg/chromium/base/ObserverList;-><init>()V
+    invoke-direct {v0}, Lorg/chromium/base/f;-><init>()V
 
-    sput-object v0, Lorg/chromium/base/ApplicationStatus;->e:Lorg/chromium/base/ObserverList;
+    sput-object v0, Lorg/chromium/base/ApplicationStatus;->e:Lorg/chromium/base/f;
 
     .line 6
-    new-instance v0, Lorg/chromium/base/ObserverList;
+    new-instance v0, Lorg/chromium/base/f;
 
-    invoke-direct {v0}, Lorg/chromium/base/ObserverList;-><init>()V
+    invoke-direct {v0}, Lorg/chromium/base/f;-><init>()V
 
     return-void
 .end method
@@ -137,9 +137,9 @@
     .end annotation
 
     .line 2
-    sget-object v0, Lorg/chromium/base/ApplicationStatus;->e:Lorg/chromium/base/ObserverList;
+    sget-object v0, Lorg/chromium/base/ApplicationStatus;->e:Lorg/chromium/base/f;
 
-    invoke-virtual {v0, p0}, Lorg/chromium/base/ObserverList;->a(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p0}, Lorg/chromium/base/f;->a(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -150,9 +150,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lorg/chromium/base/ApplicationStatus;->e:Lorg/chromium/base/ObserverList;
+    sget-object v0, Lorg/chromium/base/ApplicationStatus;->e:Lorg/chromium/base/f;
 
-    invoke-virtual {v0, p0}, Lorg/chromium/base/ObserverList;->b(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p0}, Lorg/chromium/base/f;->b(Ljava/lang/Object;)Z
 
     return-void
 .end method

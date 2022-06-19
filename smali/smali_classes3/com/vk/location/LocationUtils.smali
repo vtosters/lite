@@ -49,16 +49,16 @@
     return-void
 .end method
 
-.method private final a(Landroid/content/Context;Lcom/google/android/gms/location/LocationRequest;Lcom/vk/location/LocationRequestConfig;)Lio/reactivex/Observable;
+.method private final a(Landroid/content/Context;Lcom/google/android/gms/location/LocationRequest;Lcom/vk/location/b;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Lcom/google/android/gms/location/LocationRequest;",
-            "Lcom/vk/location/LocationRequestConfig;",
+            "Lcom/vk/location/b;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Landroid/location/Location;",
             ">;"
         }
@@ -73,13 +73,13 @@
 
     invoke-direct {p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lio/reactivex/Observable;->b(Ljava/lang/Throwable;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->b(Ljava/lang/Throwable;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "Observable.error(Exception(\"Context is null\"))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -92,9 +92,9 @@
     if-nez v0, :cond_1
 
     .line 8
-    sget-object p3, Lcom/vk/location/d/LocationUpdatesGooglePlayServicesObservableOnSubscribe;->f:Lcom/vk/location/d/LocationUpdatesGooglePlayServicesObservableOnSubscribe$a;
+    sget-object p3, Lcom/vk/location/d/d;->f:Lcom/vk/location/d/d$a;
 
-    invoke-virtual {p3, p1, p2}, Lcom/vk/location/d/LocationUpdatesGooglePlayServicesObservableOnSubscribe$a;->a(Landroid/content/Context;Lcom/google/android/gms/location/LocationRequest;)Lio/reactivex/Observable;
+    invoke-virtual {p3, p1, p2}, Lcom/vk/location/d/d$a;->a(Landroid/content/Context;Lcom/google/android/gms/location/LocationRequest;)Lc/a/m;
 
     move-result-object p1
 
@@ -102,39 +102,39 @@
 
     .line 9
     :cond_1
-    sget-object p2, Lcom/vk/location/d/LocationManagerObservableOnSubscribe;->c:Lcom/vk/location/d/LocationManagerObservableOnSubscribe$a;
+    sget-object p2, Lcom/vk/location/d/c;->c:Lcom/vk/location/d/c$a;
 
-    invoke-virtual {p2, p1, p3}, Lcom/vk/location/d/LocationManagerObservableOnSubscribe$a;->a(Landroid/content/Context;Lcom/vk/location/LocationRequestConfig;)Lio/reactivex/Observable;
+    invoke-virtual {p2, p1, p3}, Lcom/vk/location/d/c$a;->a(Landroid/content/Context;Lcom/vk/location/b;)Lc/a/m;
 
     move-result-object p1
 
     .line 10
     :goto_0
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p2}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 11
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "observable\n             \u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public static synthetic a(Lcom/vk/location/LocationUtils;Landroid/content/Context;JILjava/lang/Object;)Lio/reactivex/Observable;
+.method public static synthetic a(Lcom/vk/location/LocationUtils;Landroid/content/Context;JILjava/lang/Object;)Lc/a/m;
     .locals 0
 
     and-int/lit8 p4, p4, 0x2
@@ -145,14 +145,14 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;J)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;J)Lc/a/m;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic a(Lcom/vk/location/LocationUtils;Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/location/LocationUtils;Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -172,7 +172,7 @@
 
     .line 13
     :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -203,7 +203,7 @@
     const-string v1, "result"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/ConnectionResult;->e()Z
 
@@ -352,47 +352,47 @@
     return-object v0
 .end method
 
-.method public final a(Landroid/content/Context;J)Lio/reactivex/Observable;
+.method public final a(Landroid/content/Context;J)Lc/a/m;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "J)",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Landroid/location/Location;",
             ">;"
         }
     .end annotation
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/location/LocationUtils;->b(Landroid/content/Context;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/location/LocationUtils;->b(Landroid/content/Context;)Lc/a/m;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p0, p1}, Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lc/a/m;
 
     move-result-object v2
 
-    invoke-virtual {v0, p2, p3, v1, v2}, Lio/reactivex/Observable;->a(JLjava/util/concurrent/TimeUnit;Lio/reactivex/ObservableSource;)Lio/reactivex/Observable;
+    invoke-virtual {v0, p2, p3, v1, v2}, Lc/a/m;->a(JLjava/util/concurrent/TimeUnit;Lc/a/p;)Lc/a/m;
 
     move-result-object p2
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lc/a/m;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lio/reactivex/Observable;->d(Lio/reactivex/ObservableSource;)Lio/reactivex/Observable;
+    invoke-virtual {p2, p1}, Lc/a/m;->d(Lc/a/p;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "getCurrentLocationHighAc\u2026etLastKnownLocation(ctx))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -447,7 +447,7 @@
 
     const-string v1, "LocationServices.getSettingsClient(activity)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 27
     invoke-virtual {v2}, Lcom/google/android/gms/location/LocationSettingsRequest$a;->a()Lcom/google/android/gms/location/LocationSettingsRequest;
@@ -460,7 +460,7 @@
 
     const-string v1, "client.checkLocationSettings(builder.build())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 28
     new-instance v1, Lcom/vk/location/LocationUtils$b;
@@ -473,22 +473,22 @@
 
     .line 29
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
 
-.method public final a(Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+.method public final a(Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -499,36 +499,36 @@
     invoke-direct {v0, p1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 15
-    sget v1, Lcom/vk/location/R;->location_disabled_title:I
+    sget v1, Lcom/vk/location/c;->location_disabled_title:I
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
     .line 16
-    sget v1, Lcom/vk/location/R;->location_disabled:I
+    sget v1, Lcom/vk/location/c;->location_disabled:I
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
     .line 17
-    sget v1, Lcom/vk/location/R;->open_settings:I
+    sget v1, Lcom/vk/location/c;->open_settings:I
 
     new-instance v2, Lcom/vk/location/LocationUtils$c;
 
-    invoke-direct {v2, p1, p2}, Lcom/vk/location/LocationUtils$c;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v2, p1, p2}, Lcom/vk/location/LocationUtils$c;-><init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object p1
 
     .line 18
-    sget p2, Lcom/vk/location/R;->cancel:I
+    sget p2, Lcom/vk/location/c;->cancel:I
 
     new-instance v0, Lcom/vk/location/LocationUtils$d;
 
-    invoke-direct {v0, p3}, Lcom/vk/location/LocationUtils$d;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, p3}, Lcom/vk/location/LocationUtils$d;-><init>(Lkotlin/jvm/b/a;)V
 
     invoke-virtual {p1, p2, v0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -567,14 +567,14 @@
     return p1
 .end method
 
-.method public final b(Landroid/content/Context;)Lio/reactivex/Observable;
+.method public final b(Landroid/content/Context;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Landroid/location/Location;",
             ">;"
         }
@@ -602,29 +602,29 @@
     const-string v1, "singleLocationRequest"
 
     .line 4
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/location/LocationRequestConfig;->e:Lcom/vk/location/LocationRequestConfig$a;
+    sget-object v1, Lcom/vk/location/b;->e:Lcom/vk/location/b$a;
 
-    invoke-virtual {v1}, Lcom/vk/location/LocationRequestConfig$a;->a()Lcom/vk/location/LocationRequestConfig;
+    invoke-virtual {v1}, Lcom/vk/location/b$a;->a()Lcom/vk/location/b;
 
     move-result-object v1
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;Lcom/google/android/gms/location/LocationRequest;Lcom/vk/location/LocationRequestConfig;)Lio/reactivex/Observable;
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;Lcom/google/android/gms/location/LocationRequest;Lcom/vk/location/b;)Lc/a/m;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final c(Landroid/content/Context;)Lio/reactivex/Observable;
+.method public final c(Landroid/content/Context;)Lc/a/m;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Landroid/location/Location;",
             ">;"
         }
@@ -648,7 +648,7 @@
     move-object v2, p1
 
     .line 2
-    invoke-static/range {v1 .. v6}, Lcom/vk/location/LocationUtils;->a(Lcom/vk/location/LocationUtils;Landroid/content/Context;JILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v1 .. v6}, Lcom/vk/location/LocationUtils;->a(Lcom/vk/location/LocationUtils;Landroid/content/Context;JILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -658,26 +658,26 @@
     :cond_0
     sget-object p1, Lcom/vk/location/LocationUtils;->a:Landroid/location/Location;
 
-    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
     const-string v0, "Observable.just(NO_LOCATION)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
 .end method
 
-.method public final d(Landroid/content/Context;)Lio/reactivex/Observable;
+.method public final d(Landroid/content/Context;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Landroid/location/Location;",
             ">;"
         }
@@ -688,38 +688,38 @@
 
     invoke-direct {v0, p1}, Lcom/vk/location/LocationUtils$a;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
+    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
 
     move-result-object p1
 
     .line 2
     sget-object v0, Lcom/vk/location/LocationUtils;->a:Landroid/location/Location;
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->d(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
     .line 3
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 4
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     const-string v0, "Observable.fromCallable \u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

@@ -3,12 +3,12 @@
 .source "GifImage.java"
 
 # interfaces
-.implements Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
-.implements Lcom/facebook/x/a/a/AnimatedImageDecoder;
+.implements Lcom/facebook/imagepipeline/animated/base/b;
+.implements Lcom/facebook/x/a/a/c;
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/DoNotStrip;
+.annotation build Lcom/facebook/common/internal/d;
 .end annotation
 
 
@@ -18,7 +18,7 @@
 
 # instance fields
 .field private mNativeContext:J
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end field
 
@@ -26,7 +26,7 @@
 # direct methods
 .method public constructor <init>()V
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 1
@@ -37,7 +37,7 @@
 
 .method constructor <init>(J)V
     .locals 0
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 
     .line 2
@@ -70,7 +70,7 @@
 
     .line 6
     :goto_0
-    invoke-static {v0}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
+    invoke-static {v0}, Lcom/facebook/common/internal/g;->a(Z)V
 
     .line 7
     invoke-static {p0, p1, p2}, Lcom/facebook/animated/gif/GifImage;->nativeCreateFromNativeMemory(JI)Lcom/facebook/animated/gif/GifImage;
@@ -184,62 +184,62 @@
 .end method
 
 .method private static native nativeCreateFromDirectByteBuffer(Ljava/nio/ByteBuffer;)Lcom/facebook/animated/gif/GifImage;
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private static native nativeCreateFromNativeMemory(JI)Lcom/facebook/animated/gif/GifImage;
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeDispose()V
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeFinalize()V
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeGetDuration()I
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeGetFrame(I)Lcom/facebook/animated/gif/GifFrame;
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeGetFrameCount()I
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeGetFrameDurations()[I
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeGetHeight()I
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeGetLoopCount()I
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeGetSizeInBytes()I
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
 .method private native nativeGetWidth()I
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method
 
@@ -320,7 +320,7 @@
     throw p1
 .end method
 
-.method public a(JI)Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
+.method public a(JI)Lcom/facebook/imagepipeline/animated/base/b;
     .locals 0
 
     .line 1
@@ -331,7 +331,7 @@
     return-object p1
 .end method
 
-.method public a(Ljava/nio/ByteBuffer;)Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
+.method public a(Ljava/nio/ByteBuffer;)Lcom/facebook/imagepipeline/animated/base/b;
     .locals 0
 
     .line 2
@@ -382,7 +382,7 @@
     return-object p1
 .end method
 
-.method public bridge synthetic b(I)Lcom/facebook/imagepipeline/animated/base/AnimatedImageFrame;
+.method public bridge synthetic b(I)Lcom/facebook/imagepipeline/animated/base/c;
     .locals 0
 
     .line 1

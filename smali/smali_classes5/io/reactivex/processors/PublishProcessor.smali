@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/processors/PublishProcessor;
-.super Lio/reactivex/processors/FlowableProcessor;
+.super Lio/reactivex/processors/a;
 .source "PublishProcessor.java"
 
 
@@ -15,7 +15,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/processors/FlowableProcessor<",
+        "Lio/reactivex/processors/a<",
         "TT;>;"
     }
 .end annotation
@@ -65,7 +65,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/processors/FlowableProcessor;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/processors/a;-><init>()V
 
     .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
@@ -101,7 +101,7 @@
 
 
 # virtual methods
-.method public a(Le/b/Subscription;)V
+.method public a(Le/b/d;)V
     .locals 2
 
     .line 8
@@ -116,7 +116,7 @@
     if-ne v0, v1, :cond_0
 
     .line 9
-    invoke-interface {p1}, Le/b/Subscription;->cancel()V
+    invoke-interface {p1}, Le/b/d;->cancel()V
 
     return-void
 
@@ -124,7 +124,7 @@
     const-wide v0, 0x7fffffffffffffffL
 
     .line 10
-    invoke-interface {p1, v0, v1}, Le/b/Subscription;->a(J)V
+    invoke-interface {p1, v0, v1}, Le/b/d;->a(J)V
 
     return-void
 .end method
@@ -135,7 +135,7 @@
     const-string v0, "onError called with null. Null values are generally not allowed in 2.x operators and sources."
 
     .line 11
-    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 12
     iget-object v0, p0, Lio/reactivex/processors/PublishProcessor;->b:Ljava/util/concurrent/atomic/AtomicReference;
@@ -149,7 +149,7 @@
     if-ne v0, v1, :cond_0
 
     .line 13
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -290,12 +290,12 @@
     return-void
 .end method
 
-.method protected b(Le/b/Subscriber;)V
+.method protected b(Le/b/c;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;)V"
         }
     .end annotation
@@ -303,10 +303,10 @@
     .line 1
     new-instance v0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;
 
-    invoke-direct {v0, p1, p0}, Lio/reactivex/processors/PublishProcessor$PublishSubscription;-><init>(Le/b/Subscriber;Lio/reactivex/processors/PublishProcessor;)V
+    invoke-direct {v0, p1, p0}, Lio/reactivex/processors/PublishProcessor$PublishSubscription;-><init>(Le/b/c;Lio/reactivex/processors/PublishProcessor;)V
 
     .line 2
-    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
+    invoke-interface {p1, v0}, Le/b/c;->a(Le/b/d;)V
 
     .line 3
     invoke-virtual {p0, v0}, Lio/reactivex/processors/PublishProcessor;->a(Lio/reactivex/processors/PublishProcessor$PublishSubscription;)Z
@@ -334,13 +334,13 @@
     if-eqz v0, :cond_1
 
     .line 7
-    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 8
     :cond_1
-    invoke-interface {p1}, Le/b/Subscriber;->b()V
+    invoke-interface {p1}, Le/b/c;->b()V
 
     :cond_2
     :goto_0
@@ -467,7 +467,7 @@
     const-string v0, "onNext called with null. Null values are generally not allowed in 2.x operators and sources."
 
     .line 18
-    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 19
     iget-object v0, p0, Lio/reactivex/processors/PublishProcessor;->b:Ljava/util/concurrent/atomic/AtomicReference;

@@ -14,7 +14,7 @@
     .end annotation
 .end field
 
-.field private static final b:Lio/reactivex/disposables/CompositeDisposable;
+.field private static final b:Lio/reactivex/disposables/a;
 
 .field public static final c:Lcom/vk/newsfeed/controllers/PostsController;
 
@@ -38,11 +38,11 @@
     sput-object v0, Lcom/vk/newsfeed/controllers/PostsController;->a:Ljava/util/ArrayList;
 
     .line 3
-    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance v0, Lio/reactivex/disposables/a;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
 
-    sput-object v0, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sput-object v0, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
     return-void
 .end method
@@ -103,18 +103,18 @@
 
     .line 80
     :goto_0
-    new-instance v2, Lcom/vk/api/newsfeed/NewsfeedAddBan;
+    new-instance v2, Lcom/vk/api/newsfeed/c;
 
     move-object/from16 v4, p4
 
     move-object/from16 v5, p5
 
-    invoke-direct {v2, v0, v4, v1, v5}, Lcom/vk/api/newsfeed/NewsfeedAddBan;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v4, v1, v5}, Lcom/vk/api/newsfeed/c;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
     .line 81
-    invoke-static {v2, v3, v1, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v2, v3, v1, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v4
 
@@ -133,7 +133,7 @@
     move-object v5, p1
 
     .line 82
-    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v1
 
@@ -150,14 +150,14 @@
     invoke-direct {v0, p1}, Lcom/vk/newsfeed/controllers/PostsController$i;-><init>(Landroid/content/Context;)V
 
     .line 85
-    invoke-virtual {v1, v2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v1, v2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     .line 86
-    sget-object v1, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object v1, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -166,7 +166,7 @@
     .locals 11
 
     .line 200
-    new-instance v0, Lcom/vtosters/lite/api/newsfeed/NewsfeedSetPostTopic;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/e;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -188,14 +188,14 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, p3, v3}, Lcom/vtosters/lite/api/newsfeed/NewsfeedSetPostTopic;-><init>(IIILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, p3, v3}, Lcom/vtosters/lite/api/newsfeed/e;-><init>(IIILjava/lang/String;)V
 
     const/4 p3, 0x0
 
     const/4 v1, 0x1
 
     .line 201
-    invoke-static {v0, p3, v1, p3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, p3, v1, p3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v2
 
@@ -214,7 +214,7 @@
     move-object v3, p1
 
     .line 202
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object p3
 
@@ -229,14 +229,14 @@
     invoke-direct {p2, p1}, Lcom/vk/newsfeed/controllers/PostsController$f0;-><init>(Landroid/content/Context;)V
 
     .line 205
-    invoke-virtual {p3, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p3, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 206
-    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -285,11 +285,11 @@
 
     const-string v2, "context.resources"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v2, 0x41a80000    # 21.0f
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v1, v2}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result v1
 
@@ -340,18 +340,18 @@
     .locals 1
 
     .line 32
-    instance-of v0, p1, Lcom/vk/dto/newsfeed/Ownable;
+    instance-of v0, p1, Lcom/vk/dto/newsfeed/d;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/dto/newsfeed/Ownable;
+    check-cast p1, Lcom/vk/dto/newsfeed/d;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Ownable;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/d;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object p1
 
@@ -379,18 +379,18 @@
 
     const-string v0, "photos.first()?.photo ?: return"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 189
-    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
 
     move-result-object v0
 
     const/16 v1, 0x71
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -521,7 +521,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/dto/newsfeed/Likable;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/dto/newsfeed/c;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;ILjava/lang/Object;)V
     .locals 9
 
     and-int/lit8 v0, p7, 0x10
@@ -561,7 +561,7 @@
     move-object v6, p4
 
     .line 167
-    invoke-virtual/range {v2 .. v8}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/dto/newsfeed/Likable;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;)V
+    invoke-virtual/range {v2 .. v8}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/dto/newsfeed/c;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -600,16 +600,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/newsfeed/posting/PostingFragmentBuilder;Landroid/app/Activity;I)V
+.method public static final synthetic a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/newsfeed/posting/l;Landroid/app/Activity;I)V
     .locals 0
 
     .line 7
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/posting/PostingFragmentBuilder;Landroid/app/Activity;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/posting/l;Landroid/app/Activity;I)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/newsfeed/posting/PostingFragmentBuilder;Landroid/app/Activity;I)V
+.method private final a(Lcom/vk/newsfeed/posting/l;Landroid/app/Activity;I)V
     .locals 1
 
     const/4 v0, -0x1
@@ -617,13 +617,13 @@
     if-eq p3, v0, :cond_0
 
     .line 107
-    invoke-virtual {p1, p2, p3}, Lcom/vk/navigation/Navigator;->a(Landroid/app/Activity;I)V
+    invoke-virtual {p1, p2, p3}, Lcom/vk/navigation/o;->a(Landroid/app/Activity;I)V
 
     goto :goto_0
 
     .line 108
     :cond_0
-    invoke-virtual {p1, p2}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, p2}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     :goto_0
     return-void
@@ -727,7 +727,7 @@
     .locals 12
 
     .line 11
-    new-instance v0, Lcom/vk/api/wall/WallEdit;
+    new-instance v0, Lb/h/c/e0/c;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->P1()I
 
@@ -741,14 +741,14 @@
 
     move-result v3
 
-    invoke-direct {v0, v1, v2, p3, v3}, Lcom/vk/api/wall/WallEdit;-><init>(IILjava/lang/String;I)V
+    invoke-direct {v0, v1, v2, p3, v3}, Lb/h/c/e0/c;-><init>(IILjava/lang/String;I)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 12
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v3
 
@@ -767,7 +767,7 @@
     move-object v4, p1
 
     .line 13
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -782,14 +782,14 @@
     invoke-direct {v2, p1, p2, p3}, Lcom/vk/newsfeed/controllers/PostsController$c0;-><init>(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/Post;Ljava/lang/String;)V
 
     .line 16
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 17
-    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -819,16 +819,16 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/newsfeed/posting/PostingFragmentBuilder;Landroid/app/Activity;I)V
+.method private final b(Lcom/vk/newsfeed/posting/l;Landroid/app/Activity;I)V
     .locals 5
 
     .line 4
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
-    invoke-direct {v0, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     .line 5
-    new-instance v1, Lcom/vk/core/drawable/RecoloredDrawable;
+    new-instance v1, Lcom/vk/core/drawable/i;
 
     const v2, 0x7f080492
 
@@ -842,14 +842,14 @@
 
     move-result v3
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const v1, 0x7f120ff0
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v1, 0x0
 
@@ -860,7 +860,7 @@
     const/4 v4, 0x2
 
     .line 7
-    invoke-static {v0, v2, v3, v4, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;IIILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static {v0, v2, v3, v4, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;IIILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 8
     new-instance v2, Lcom/vk/newsfeed/controllers/PostsController$j0;
@@ -869,21 +869,21 @@
 
     const v3, 0x7f12018a
 
-    invoke-virtual {v0, v3, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v3, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 9
     new-instance v2, Lcom/vk/newsfeed/controllers/PostsController$k0;
 
-    invoke-direct {v2, p1, p2, p3}, Lcom/vk/newsfeed/controllers/PostsController$k0;-><init>(Lcom/vk/newsfeed/posting/PostingFragmentBuilder;Landroid/app/Activity;I)V
+    invoke-direct {v2, p1, p2, p3}, Lcom/vk/newsfeed/controllers/PostsController$k0;-><init>(Lcom/vk/newsfeed/posting/l;Landroid/app/Activity;I)V
 
     const p1, 0x7f120286
 
-    invoke-virtual {v0, p1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, p1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 p1, 0x1
 
     .line 10
-    invoke-static {v0, v1, p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {v0, v1, p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 .end method
@@ -892,7 +892,7 @@
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/dto/newsfeed/Ownable;
+    instance-of v0, p1, Lcom/vk/dto/newsfeed/d;
 
     if-eqz v0, :cond_0
 
@@ -978,14 +978,14 @@
     if-eqz v0, :cond_5
 
     .line 92
-    sget-object v0, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->T0:Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;
+    sget-object v0, Lcom/vk/newsfeed/posting/l;->T0:Lcom/vk/newsfeed/posting/l$a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;->a()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/l$a;->a()Lcom/vk/newsfeed/posting/l;
 
     move-result-object v1
 
     .line 93
-    invoke-virtual {v1, p2}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->b(Lcom/vk/dto/newsfeed/entries/Post;)Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
+    invoke-virtual {v1, p2}, Lcom/vk/newsfeed/posting/l;->b(Lcom/vk/dto/newsfeed/entries/Post;)Lcom/vk/newsfeed/posting/l;
 
     goto :goto_2
 
@@ -1014,13 +1014,13 @@
     if-nez v2, :cond_4
 
     .line 97
-    new-instance v2, Lcom/vk/api/groups/GroupsGetById;
+    new-instance v2, Lcom/vk/api/groups/i;
 
-    invoke-direct {v2, v0}, Lcom/vk/api/groups/GroupsGetById;-><init>(I)V
+    invoke-direct {v2, v0}, Lcom/vk/api/groups/i;-><init>(I)V
 
     const/4 v0, 0x1
 
-    invoke-static {v2, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v2, v1, v0, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -1028,13 +1028,13 @@
 
     .line 98
     :cond_4
-    invoke-static {v2}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v2}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
     const-string v2, "Observable.just(group)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 99
     :goto_0
@@ -1046,21 +1046,21 @@
     sget-object v3, Lcom/vk/newsfeed/controllers/PostsController$o;->a:Lcom/vk/newsfeed/controllers/PostsController$o;
 
     .line 101
-    invoke-virtual {v0, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     goto :goto_2
 
     .line 102
     :cond_5
     :goto_1
-    sget-object v0, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->T0:Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;
+    sget-object v0, Lcom/vk/newsfeed/posting/l;->T0:Lcom/vk/newsfeed/posting/l$a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;->a()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/l$a;->a()Lcom/vk/newsfeed/posting/l;
 
     move-result-object v1
 
     .line 103
-    invoke-virtual {v1, p2}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->a(Lcom/vk/dto/newsfeed/entries/Post;)Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
+    invoke-virtual {v1, p2}, Lcom/vk/newsfeed/posting/l;->a(Lcom/vk/dto/newsfeed/entries/Post;)Lcom/vk/newsfeed/posting/l;
 
     .line 104
     :goto_2
@@ -1079,7 +1079,7 @@
     if-eqz v1, :cond_6
 
     .line 105
-    invoke-direct {p0, v1, p1, p3}, Lcom/vk/newsfeed/controllers/PostsController;->b(Lcom/vk/newsfeed/posting/PostingFragmentBuilder;Landroid/app/Activity;I)V
+    invoke-direct {p0, v1, p1, p3}, Lcom/vk/newsfeed/controllers/PostsController;->b(Lcom/vk/newsfeed/posting/l;Landroid/app/Activity;I)V
 
     :cond_6
     return-void
@@ -1088,7 +1088,7 @@
     if-eqz v1, :cond_8
 
     .line 106
-    invoke-direct {p0, v1, p1, p3}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/posting/PostingFragmentBuilder;Landroid/app/Activity;I)V
+    invoke-direct {p0, v1, p1, p3}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/posting/l;Landroid/app/Activity;I)V
 
     :cond_8
     return-void
@@ -1201,10 +1201,10 @@
     invoke-direct {v0, v4, v5}, Lcom/vk/api/adsint/AdsintHideAd;-><init>(Ljava/lang/String;Lcom/vk/api/adsint/AdsintHideAd$ObjectType;)V
 
     .line 52
-    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v0}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
 
     .line 53
-    invoke-static {v0, v3, v1, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v3, v1, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -1217,7 +1217,7 @@
     sget-object v2, Lcom/vk/newsfeed/controllers/PostsController$d;->a:Lcom/vk/newsfeed/controllers/PostsController$d;
 
     .line 56
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     goto/16 :goto_6
 
@@ -1242,10 +1242,10 @@
     invoke-direct {v0, v4, v5}, Lcom/vk/api/adsint/AdsintHideAd;-><init>(Ljava/lang/String;Lcom/vk/api/adsint/AdsintHideAd$ObjectType;)V
 
     .line 58
-    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v0}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
 
     .line 59
-    invoke-static {v0, v3, v1, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v3, v1, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -1258,13 +1258,13 @@
     sget-object v2, Lcom/vk/newsfeed/controllers/PostsController$f;->a:Lcom/vk/newsfeed/controllers/PostsController$f;
 
     .line 62
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     goto/16 :goto_6
 
     .line 63
     :cond_2
-    instance-of v0, p2, Lcom/vk/dto/newsfeed/Ownable;
+    instance-of v0, p2, Lcom/vk/dto/newsfeed/d;
 
     if-eqz v0, :cond_c
 
@@ -1509,9 +1509,9 @@
     :cond_b
     move-object v0, p2
 
-    check-cast v0, Lcom/vk/dto/newsfeed/Ownable;
+    check-cast v0, Lcom/vk/dto/newsfeed/d;
 
-    invoke-interface {v0}, Lcom/vk/dto/newsfeed/Ownable;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v0}, Lcom/vk/dto/newsfeed/d;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v0
 
@@ -1545,7 +1545,7 @@
     .locals 11
 
     .line 19
-    invoke-static {p2}, Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Z
+    invoke-static {p2}, Lcom/vtosters/lite/api/newsfeed/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Z
 
     move-result v0
 
@@ -1564,16 +1564,16 @@
 
     .line 21
     :cond_0
-    new-instance v0, Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/d;
 
-    invoke-direct {v0, p2, p3}, Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
+    invoke-direct {v0, p2, p3}, Lcom/vtosters/lite/api/newsfeed/d;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
 
     const/4 p3, 0x1
 
     const/4 v1, 0x0
 
     .line 22
-    invoke-static {v0, v1, p3, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, p3, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v2
 
@@ -1592,7 +1592,7 @@
     move-object v3, p1
 
     .line 23
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object p3
 
@@ -1607,14 +1607,14 @@
     invoke-direct {p4, p1}, Lcom/vk/newsfeed/controllers/PostsController$r;-><init>(Landroid/content/Context;)V
 
     .line 26
-    invoke-virtual {p3, v0, p4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p3, v0, p4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 27
-    sget-object p3, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p3, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p3, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p3, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     .line 28
     instance-of p1, p2, Lcom/vk/dto/newsfeed/entries/Digest;
@@ -1624,7 +1624,7 @@
     const-string p1, "digest_hide"
 
     .line 29
-    invoke-static {p1}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
@@ -1637,10 +1637,10 @@
 
     const-string p3, "track_code"
 
-    invoke-virtual {p1, p3, p2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
+    invoke-virtual {p1, p3, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 31
-    invoke-virtual {p1}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
+    invoke-virtual {p1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     :cond_1
     return-void
@@ -1652,9 +1652,9 @@
     .line 33
     move-object v0, p2
 
-    check-cast v0, Lcom/vk/dto/newsfeed/Ownable;
+    check-cast v0, Lcom/vk/dto/newsfeed/d;
 
-    invoke-interface {v0}, Lcom/vk/dto/newsfeed/Ownable;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v0}, Lcom/vk/dto/newsfeed/d;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v0
 
@@ -1673,27 +1673,27 @@
     if-eqz v0, :cond_1
 
     .line 34
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
 
     move-result v1
 
     if-eq v0, v1, :cond_1
 
     .line 35
-    new-instance v1, Lcom/vk/api/wall/WallSubscribe;
+    new-instance v1, Lb/h/c/e0/i;
 
-    invoke-direct {v1, v0, p3}, Lcom/vk/api/wall/WallSubscribe;-><init>(IZ)V
+    invoke-direct {v1, v0, p3}, Lb/h/c/e0/i;-><init>(IZ)V
 
     const/4 v0, 0x1
 
     const/4 v2, 0x0
 
     .line 36
-    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v3
 
@@ -1712,7 +1712,7 @@
     move-object v4, p1
 
     .line 37
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -1727,14 +1727,14 @@
     invoke-direct {p2, p1}, Lcom/vk/newsfeed/controllers/PostsController$m0;-><init>(Landroid/content/Context;)V
 
     .line 40
-    invoke-virtual {v0, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 41
-    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     :cond_1
     return-void
@@ -1744,7 +1744,7 @@
     .locals 11
 
     .line 42
-    new-instance v0, Lcom/vtosters/lite/api/wall/WallArchive;
+    new-instance v0, Lcom/vtosters/lite/api/wall/c;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -1754,14 +1754,14 @@
 
     move-result p2
 
-    invoke-direct {v0, v1, p2}, Lcom/vtosters/lite/api/wall/WallArchive;-><init>(II)V
+    invoke-direct {v0, v1, p2}, Lcom/vtosters/lite/api/wall/c;-><init>(II)V
 
     const/4 p2, 0x0
 
     const/4 v1, 0x1
 
     .line 43
-    invoke-static {v0, p2, v1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, p2, v1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v2
 
@@ -1780,7 +1780,7 @@
     move-object v3, p1
 
     .line 44
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object p2
 
@@ -1793,14 +1793,14 @@
     invoke-direct {v1, p1}, Lcom/vk/newsfeed/controllers/PostsController$b;-><init>(Landroid/content/Context;)V
 
     .line 47
-    invoke-virtual {p2, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p2, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 48
-    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -1809,7 +1809,7 @@
     .locals 12
 
     .line 152
-    new-instance v0, Lcom/vk/api/wall/WallPost;
+    new-instance v0, Lb/h/c/e0/f;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -1819,14 +1819,14 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/api/wall/WallPost;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lb/h/c/e0/f;-><init>(II)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 153
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v3
 
@@ -1845,7 +1845,7 @@
     move-object v4, p1
 
     .line 154
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -1860,14 +1860,14 @@
     invoke-direct {p2, p1}, Lcom/vk/newsfeed/controllers/PostsController$v;-><init>(Landroid/content/Context;)V
 
     .line 157
-    invoke-virtual {v0, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 158
-    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -1922,7 +1922,7 @@
     return-void
 .end method
 
-.method public final a(Landroid/content/Context;Ljava/util/List;ILkotlin/jvm/b/Functions2;)V
+.method public final a(Landroid/content/Context;Ljava/util/List;ILkotlin/jvm/b/b;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1931,10 +1931,10 @@
             "Ljava/util/List<",
             "Lcom/vk/dto/newsfeed/PostTopic;",
             ">;I",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/newsfeed/PostTopic;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1945,29 +1945,29 @@
     invoke-direct {v6}, Lcom/vk/newsfeed/adapters/PostTopicsAdapter;-><init>()V
 
     .line 191
-    invoke-virtual {v6, p2}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v6, p2}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     .line 192
     invoke-virtual {v6, p3}, Lcom/vk/newsfeed/adapters/PostTopicsAdapter;->H(I)V
 
     .line 193
-    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
-    invoke-direct {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     const p1, 0x7f120934
 
     .line 194
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 195
-    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;
+    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/c;
 
     const/4 p3, 0x0
 
-    invoke-direct {p1, p3}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;-><init>(Z)V
+    invoke-direct {p1, p3}, Lcom/vk/core/dialogs/bottomsheet/c;-><init>(Z)V
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v2, 0x0
 
@@ -1982,32 +1982,32 @@
     move-object v1, v6
 
     .line 196
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 197
     new-instance p1, Lcom/vk/newsfeed/controllers/PostsController$i0;
 
-    invoke-direct {p1, v6, p4}, Lcom/vk/newsfeed/controllers/PostsController$i0;-><init>(Lcom/vk/newsfeed/adapters/PostTopicsAdapter;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, v6, p4}, Lcom/vk/newsfeed/controllers/PostsController$i0;-><init>(Lcom/vk/newsfeed/adapters/PostTopicsAdapter;Lkotlin/jvm/b/b;)V
 
     const p3, 0x7f12032b
 
-    invoke-virtual {p2, p3, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {p2, p3, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 p1, 0x0
 
     const/4 p3, 0x1
 
     .line 198
-    invoke-static {p2, p1, p3, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {p2, p1, p3, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object p1
 
     .line 199
     new-instance p2, Lcom/vk/newsfeed/controllers/PostsController$h0;
 
-    invoke-direct {p2, p1}, Lcom/vk/newsfeed/controllers/PostsController$h0;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-direct {p2, p1}, Lcom/vk/newsfeed/controllers/PostsController$h0;-><init>(Lcom/vk/core/dialogs/bottomsheet/e;)V
 
-    invoke-virtual {v6, p2}, Lcom/vk/newsfeed/adapters/PostTopicsAdapter;->a(Lcom/vk/core/view/links/ClickableLinkSpan$a;)V
+    invoke-virtual {v6, p2}, Lcom/vk/newsfeed/adapters/PostTopicsAdapter;->a(Lcom/vk/core/view/links/a$a;)V
 
     return-void
 .end method
@@ -2016,9 +2016,9 @@
     .locals 3
 
     .line 141
-    new-instance v0, Lcom/vk/webapp/fragments/ReportFragment$a;
+    new-instance v0, Lcom/vk/webapp/fragments/j$a;
 
-    invoke-direct {v0}, Lcom/vk/webapp/fragments/ReportFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/webapp/fragments/j$a;-><init>()V
 
     .line 142
     instance-of v1, p2, Lcom/vk/dto/newsfeed/entries/Photos;
@@ -2027,7 +2027,7 @@
 
     const-string v1, "photo"
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
 
     check-cast p2, Lcom/vk/dto/newsfeed/entries/Photos;
 
@@ -2035,13 +2035,13 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Photos;->E1()I
 
     move-result p2
 
-    invoke-virtual {v0, p2}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, p2}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
 
     goto :goto_0
 
@@ -2054,7 +2054,7 @@
     const-string v1, "video"
 
     .line 144
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
 
     .line 145
     check-cast p2, Lcom/vk/dto/newsfeed/entries/Videos;
@@ -2073,11 +2073,11 @@
 
     iget v1, p2, Lcom/vk/dto/common/VideoFile;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
 
     iget p2, p2, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-virtual {v0, p2}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, p2}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
 
     goto :goto_0
 
@@ -2089,7 +2089,7 @@
 
     const-string v1, "wall"
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
 
     check-cast p2, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -2097,13 +2097,13 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
     move-result p2
 
-    invoke-virtual {v0, p2}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, p2}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
 
     goto :goto_0
 
@@ -2115,7 +2115,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v0, v2}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v2}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
 
     move-object v1, p2
 
@@ -2125,7 +2125,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/webapp/fragments/ReportFragment$a;->a(Ljava/lang/String;Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1, p2}, Lcom/vk/webapp/fragments/j$a;->a(Ljava/lang/String;Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/webapp/fragments/j$a;
 
     goto :goto_0
 
@@ -2135,7 +2135,7 @@
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v0, v2}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v2}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
 
     move-object v1, p2
 
@@ -2145,23 +2145,23 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/webapp/fragments/ReportFragment$a;->a(Ljava/lang/String;Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1, p2}, Lcom/vk/webapp/fragments/j$a;->a(Ljava/lang/String;Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/webapp/fragments/j$a;
 
     :cond_4
     :goto_0
     if-eqz p3, :cond_5
 
     .line 149
-    invoke-virtual {v0, p3}, Lcom/vk/webapp/fragments/ReportFragment$a;->a(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, p3}, Lcom/vk/webapp/fragments/j$a;->a(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
 
     .line 150
     :cond_5
-    invoke-virtual {v0, p1, p4}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, p1, p4}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/dto/newsfeed/Likable;ZLandroid/content/Context;Ljava/lang/String;)V
+.method public final a(Lcom/vk/dto/newsfeed/c;ZLandroid/content/Context;Ljava/lang/String;)V
     .locals 9
 
     const/4 v5, 0x0
@@ -2182,22 +2182,22 @@
 
     move-object v4, p4
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/dto/newsfeed/Likable;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v8}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/dto/newsfeed/c;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/dto/newsfeed/Likable;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;)V
+.method public final a(Lcom/vk/dto/newsfeed/c;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;)V
     .locals 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/dto/newsfeed/Likable;",
+            "Lcom/vk/dto/newsfeed/c;",
             "Z",
             "Landroid/content/Context;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;",
             "Ljava/lang/String;",
             ")V"
@@ -2211,7 +2211,7 @@
     move-object/from16 v1, p6
 
     .line 168
-    invoke-static/range {p3 .. p3}, Lcom/vtosters/lite/auth/VKAuth;->a(Landroid/content/Context;)Z
+    invoke-static/range {p3 .. p3}, Lcom/vtosters/lite/i0/d;->a(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -2245,10 +2245,10 @@
     int-to-long v10, v0
 
     .line 172
-    invoke-interface {v9, v8}, Lcom/vk/dto/newsfeed/Likable;->e(Z)V
+    invoke-interface {v9, v8}, Lcom/vk/dto/newsfeed/c;->e(Z)V
 
     .line 173
-    invoke-interface {v9}, Lcom/vk/dto/newsfeed/Likable;->g1()I
+    invoke-interface {v9}, Lcom/vk/dto/newsfeed/c;->g1()I
 
     move-result v12
 
@@ -2267,12 +2267,12 @@
     add-int/2addr v2, v12
 
     .line 174
-    invoke-interface {v9, v2}, Lcom/vk/dto/newsfeed/Likable;->b(I)V
+    invoke-interface {v9, v2}, Lcom/vk/dto/newsfeed/c;->b(I)V
 
     .line 175
-    sget-object v2, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v2, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
+    invoke-virtual {v2}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
 
     move-result-object v2
 
@@ -2284,7 +2284,7 @@
 
     check-cast v4, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-virtual {v2, v3, v4}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
+    invoke-virtual {v2, v3, v4}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
 
     .line 176
     instance-of v2, v9, Lcom/vk/dto/newsfeed/entries/Photos;
@@ -2354,7 +2354,7 @@
     :goto_3
     if-eqz v2, :cond_7
 
-    invoke-static {v9, v8}, Lcom/vtosters/lite/api/wall/WallLike;->a(Lcom/vk/dto/newsfeed/Likable;Z)Lcom/vtosters/lite/api/wall/WallLike;
+    invoke-static {v9, v8}, Lcom/vtosters/lite/api/wall/h;->a(Lcom/vk/dto/newsfeed/c;Z)Lcom/vtosters/lite/api/wall/h;
 
     move-result-object v1
 
@@ -2362,7 +2362,7 @@
 
     .line 181
     :cond_7
-    invoke-static {v9, v8, v1}, Lcom/vtosters/lite/api/wall/WallLike;->a(Lcom/vk/dto/newsfeed/Likable;ZLjava/lang/String;)Lcom/vtosters/lite/api/wall/WallLike;
+    invoke-static {v9, v8, v1}, Lcom/vtosters/lite/api/wall/h;->a(Lcom/vk/dto/newsfeed/c;ZLjava/lang/String;)Lcom/vtosters/lite/api/wall/h;
 
     move-result-object v1
 
@@ -2374,12 +2374,12 @@
     move-object/from16 v6, p4
 
     .line 182
-    invoke-virtual {v1, v2, v6}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v1, v2, v6}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     const/4 v2, 0x0
 
     .line 183
-    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v14
 
@@ -2397,7 +2397,7 @@
 
     move-object/from16 v7, p5
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/newsfeed/controllers/PostsController$s;-><init>(JLcom/vk/dto/newsfeed/Likable;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/newsfeed/controllers/PostsController$s;-><init>(JLcom/vk/dto/newsfeed/c;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/a;)V
 
     .line 184
     new-instance v7, Lcom/vk/newsfeed/controllers/PostsController$t;
@@ -2414,17 +2414,17 @@
 
     move-object/from16 v6, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/newsfeed/controllers/PostsController$t;-><init>(Lcom/vk/dto/newsfeed/Likable;IZJLandroid/content/Context;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/newsfeed/controllers/PostsController$t;-><init>(Lcom/vk/dto/newsfeed/c;IZJLandroid/content/Context;)V
 
     .line 185
-    invoke-virtual {v14, v15, v7}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v14, v15, v7}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     .line 186
-    sget-object v1, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object v1, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     :cond_8
     return-void
@@ -2446,7 +2446,7 @@
     .locals 4
 
     .line 14
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v1, "clipboard"
 
@@ -2500,7 +2500,7 @@
     const/4 v1, 0x2
 
     .line 17
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     :cond_1
     return-void
@@ -2537,7 +2537,7 @@
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 13
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
@@ -2549,7 +2549,7 @@
     .locals 21
 
     .line 125
-    new-instance v0, Lcom/vtosters/lite/api/wall/WallDelete;
+    new-instance v0, Lcom/vtosters/lite/api/wall/d;
 
     invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -2563,14 +2563,14 @@
 
     move-result v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/api/wall/WallDelete;-><init>(III)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/api/wall/d;-><init>(III)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 126
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v3
 
@@ -2589,7 +2589,7 @@
     move-object/from16 v4, p2
 
     .line 127
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v12
 
@@ -2608,7 +2608,7 @@
     move-object/from16 v13, p2
 
     .line 128
-    invoke-static/range {v12 .. v20}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v12 .. v20}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -2627,14 +2627,14 @@
     invoke-direct {v2, v3}, Lcom/vk/newsfeed/controllers/PostsController$k;-><init>(Landroid/content/Context;)V
 
     .line 131
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     .line 132
-    sget-object v1, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object v1, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -2645,7 +2645,7 @@
     if-eqz p1, :cond_0
 
     .line 214
-    new-instance v0, Lb/h/c/w/NewPostRequest;
+    new-instance v0, Lb/h/c/w/f;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -2655,14 +2655,14 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lb/h/c/w/NewPostRequest;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lb/h/c/w/f;-><init>(II)V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 215
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v3
 
@@ -2681,7 +2681,7 @@
     move-object v4, p2
 
     .line 216
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -2696,14 +2696,14 @@
     invoke-direct {p1, p2}, Lcom/vk/newsfeed/controllers/PostsController$x;-><init>(Landroid/content/Context;)V
 
     .line 219
-    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 220
-    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     :cond_0
     return-void
@@ -2718,7 +2718,7 @@
 
     .line 207
     :cond_0
-    new-instance v0, Lcom/vtosters/lite/api/newsfeed/NewsfeedDoubtCategory;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/b;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -2732,14 +2732,14 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3, p2}, Lcom/vtosters/lite/api/newsfeed/NewsfeedDoubtCategory;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3, p2}, Lcom/vtosters/lite/api/newsfeed/b;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 208
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -2752,19 +2752,19 @@
     sget-object p1, Lcom/vk/newsfeed/controllers/PostsController$m;->a:Lcom/vk/newsfeed/controllers/PostsController$m;
 
     .line 211
-    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 212
-    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
 
-.method public final b(Lcom/vk/dto/newsfeed/entries/Post;Landroid/content/Context;)Lio/reactivex/Observable;
+.method public final b(Lcom/vk/dto/newsfeed/entries/Post;Landroid/content/Context;)Lc/a/m;
     .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2772,14 +2772,14 @@
             "Lcom/vk/dto/newsfeed/entries/Post;",
             "Landroid/content/Context;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 22
-    new-instance v0, Lcom/vk/api/wall/WallSetFixed;
+    new-instance v0, Lb/h/c/e0/h;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/Post;->P1()I
 
@@ -2803,12 +2803,12 @@
 
     xor-int/2addr p1, v3
 
-    invoke-direct {v0, v1, v2, p1}, Lcom/vk/api/wall/WallSetFixed;-><init>(IIZ)V
+    invoke-direct {v0, v1, v2, p1}, Lb/h/c/e0/h;-><init>(IIZ)V
 
     const/4 p1, 0x0
 
     .line 23
-    invoke-static {v0, p1, v3, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, p1, v3, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v4
 
@@ -2827,7 +2827,7 @@
     move-object v5, p2
 
     .line 24
-    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -2842,9 +2842,9 @@
 
     if-eqz v0, :cond_0
 
-    check-cast p2, Lb/h/h/f/Favable;
+    check-cast p2, Lb/h/h/f/a;
 
-    new-instance v7, Lcom/vk/fave/entities/FaveMetaInfo;
+    new-instance v7, Lcom/vk/fave/entities/e;
 
     const/4 v3, 0x0
 
@@ -2860,9 +2860,9 @@
 
     move-object v2, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
 
-    invoke-static {p1, p2, v7}, Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
+    invoke-static {p1, p2, v7}, Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
 
     goto :goto_0
 
@@ -2878,7 +2878,7 @@
 
     move-result-object p2
 
-    new-instance v7, Lcom/vk/fave/entities/FaveMetaInfo;
+    new-instance v7, Lcom/vk/fave/entities/e;
 
     const/4 v3, 0x0
 
@@ -2894,9 +2894,9 @@
 
     move-object v2, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
 
-    invoke-static {p1, p2, v7}, Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
+    invoke-static {p1, p2, v7}, Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
 
     goto :goto_0
 
@@ -2967,7 +2967,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, p2, v0, v0}, Lcom/vk/common/links/OpenFunctionsKt;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
+    invoke-static {p1, p2, v0, v0}, Lcom/vk/common/links/OpenFunctionsKt;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;)Z
 
     :cond_0
     return-void
@@ -3012,7 +3012,7 @@
     invoke-virtual {v0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 28
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
@@ -3023,7 +3023,7 @@
     .locals 11
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/api/wall/WallReveal;
+    new-instance v0, Lcom/vtosters/lite/api/wall/j;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -3033,14 +3033,14 @@
 
     move-result p2
 
-    invoke-direct {v0, v1, p2}, Lcom/vtosters/lite/api/wall/WallReveal;-><init>(II)V
+    invoke-direct {v0, v1, p2}, Lcom/vtosters/lite/api/wall/j;-><init>(II)V
 
     const/4 p2, 0x0
 
     const/4 v1, 0x1
 
     .line 2
-    invoke-static {v0, p2, v1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, p2, v1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v2
 
@@ -3059,7 +3059,7 @@
     move-object v3, p1
 
     .line 3
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object p2
 
@@ -3072,14 +3072,14 @@
     invoke-direct {v1, p1}, Lcom/vk/newsfeed/controllers/PostsController$a0;-><init>(Landroid/content/Context;)V
 
     .line 6
-    invoke-virtual {p2, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p2, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 7
-    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -3094,7 +3094,7 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vtosters/lite/api/newsfeed/NewsfeedUnsubscribe;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/g;
 
     move-object v2, p1
 
@@ -3112,7 +3112,7 @@
 
     move-result v4
 
-    invoke-direct {v0, v3, v2, v4}, Lcom/vtosters/lite/api/newsfeed/NewsfeedUnsubscribe;-><init>(III)V
+    invoke-direct {v0, v3, v2, v4}, Lcom/vtosters/lite/api/newsfeed/g;-><init>(III)V
 
     goto/16 :goto_2
 
@@ -3146,7 +3146,7 @@
     if-eqz v0, :cond_6
 
     .line 11
-    new-instance v2, Lcom/vtosters/lite/api/newsfeed/NewsfeedUnsubscribe;
+    new-instance v2, Lcom/vtosters/lite/api/newsfeed/g;
 
     iget v3, v0, Lcom/vk/dto/common/VideoFile;->a:I
 
@@ -3156,7 +3156,7 @@
 
     move-result v4
 
-    invoke-direct {v2, v3, v0, v4}, Lcom/vtosters/lite/api/newsfeed/NewsfeedUnsubscribe;-><init>(III)V
+    invoke-direct {v2, v3, v0, v4}, Lcom/vtosters/lite/api/newsfeed/g;-><init>(III)V
 
     move-object v0, v2
 
@@ -3168,7 +3168,7 @@
 
     if-eqz v0, :cond_6
 
-    new-instance v0, Lcom/vtosters/lite/api/newsfeed/NewsfeedUnsubscribe;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/g;
 
     move-object v2, p1
 
@@ -3186,7 +3186,7 @@
 
     move-result v5
 
-    invoke-direct {v0, v3, v4, v5}, Lcom/vtosters/lite/api/newsfeed/NewsfeedUnsubscribe;-><init>(III)V
+    invoke-direct {v0, v3, v4, v5}, Lcom/vtosters/lite/api/newsfeed/g;-><init>(III)V
 
     .line 13
     invoke-virtual {v2}, Lcom/vk/dto/newsfeed/entries/Post;->k0()Ljava/lang/String;
@@ -3240,7 +3240,7 @@
 
     const-string v3, "type"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v0, v3, v2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     goto :goto_2
 
@@ -3254,7 +3254,7 @@
     const/4 v2, 0x1
 
     .line 15
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -3268,16 +3268,16 @@
     sget-object p1, Lcom/vk/newsfeed/controllers/PostsController$o0;->a:Lcom/vk/newsfeed/controllers/PostsController$o0;
 
     .line 17
-    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     if-eqz p1, :cond_8
 
     .line 18
-    sget-object v0, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object v0, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     :cond_8
     return-void
@@ -3292,9 +3292,9 @@
 
     .line 2
     :cond_0
-    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->m()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->m()Lc/a/m;
 
     move-result-object v1
 
@@ -3313,7 +3313,7 @@
     move-object v2, p1
 
     .line 3
-    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -3328,19 +3328,19 @@
     invoke-direct {p2, p1}, Lcom/vk/newsfeed/controllers/PostsController$d0;-><init>(Landroid/content/Context;)V
 
     .line 6
-    invoke-virtual {v0, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 7
-    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/CompositeDisposable;
+    sget-object p2, Lcom/vk/newsfeed/controllers/PostsController;->b:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
 
-.method public final e(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/Post;)Lio/reactivex/Observable;
+.method public final e(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/Post;)Lc/a/m;
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -3348,7 +3348,7 @@
             "Landroid/content/Context;",
             "Lcom/vk/dto/newsfeed/entries/Post;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -3368,7 +3368,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/api/wall/WallCloseComments;
+    new-instance v0, Lb/h/c/e0/a;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->P1()I
 
@@ -3378,13 +3378,13 @@
 
     move-result p2
 
-    invoke-direct {v0, v1, p2}, Lcom/vk/api/wall/WallCloseComments;-><init>(II)V
+    invoke-direct {v0, v1, p2}, Lb/h/c/e0/a;-><init>(II)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vk/api/wall/WallOpenComments;
+    new-instance v0, Lb/h/c/e0/e;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->P1()I
 
@@ -3394,7 +3394,7 @@
 
     move-result p2
 
-    invoke-direct {v0, v1, p2}, Lcom/vk/api/wall/WallOpenComments;-><init>(II)V
+    invoke-direct {v0, v1, p2}, Lb/h/c/e0/e;-><init>(II)V
 
     :goto_0
     const/4 p2, 0x1
@@ -3402,7 +3402,7 @@
     const/4 v1, 0x0
 
     .line 4
-    invoke-static {v0, v1, p2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, p2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v2
 
@@ -3420,7 +3420,7 @@
 
     move-object v3, p1
 
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 

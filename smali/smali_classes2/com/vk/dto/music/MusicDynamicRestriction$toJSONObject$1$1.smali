@@ -3,12 +3,12 @@
 .source "MusicDynamicRestriction.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1;->a(Lcom/vk/dto/common/data/JsonObj;)V
+    value = Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1;->a(Lcom/vk/dto/common/data/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/dto/common/data/JsonObj;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/dto/common/data/a;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/data/JsonObj;)V
+.method public final a(Lcom/vk/dto/common/data/a;)V
     .locals 2
 
     .line 1
@@ -60,20 +60,20 @@
 
     const-string v1, "title"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 2
     new-instance v0, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1$1$1;
 
     invoke-direct {v0, p0}, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1$1$1;-><init>(Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1$1;)V
 
-    invoke-static {v0}, Lcom/vk/dto/common/data/JsonObj1;->a(Lkotlin/jvm/b/Functions2;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/vk/dto/common/data/b;->a(Lkotlin/jvm/b/b;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     const-string v1, "action"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -82,11 +82,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/data/JsonObj;
+    check-cast p1, Lcom/vk/dto/common/data/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1$1;->a(Lcom/vk/dto/common/data/JsonObj;)V
+    invoke-virtual {p0, p1}, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1$1;->a(Lcom/vk/dto/common/data/a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

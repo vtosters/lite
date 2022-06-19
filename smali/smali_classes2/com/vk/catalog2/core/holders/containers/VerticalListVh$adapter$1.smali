@@ -3,12 +3,12 @@
 .source "VerticalListVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/containers/VerticalListVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/lists/PaginationHelper$k;Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;Lcom/vk/catalog2/core/CatalogEntryPointParams;ZI)V
+    value = Lcom/vk/catalog2/core/holders/containers/VerticalListVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/lists/t$k;Lcom/vk/catalog2/core/presenters/c;Lcom/vk/catalog2/core/e;ZI)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/catalog2/core/holders/common/i;",
         ">;"
     }
 .end annotation
@@ -45,13 +45,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
+.method public final invoke()Lcom/vk/catalog2/core/holders/common/i;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/VerticalListVh$adapter$1;->this$0:Lcom/vk/catalog2/core/holders/containers/VerticalListVh;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/common/CatalogBasePaginatedListVh;->l()Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/common/e;->l()Lcom/vk/catalog2/core/holders/common/i;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/containers/VerticalListVh$adapter$1;->invoke()Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/containers/VerticalListVh$adapter$1;->invoke()Lcom/vk/catalog2/core/holders/common/i;
 
     move-result-object v0
 

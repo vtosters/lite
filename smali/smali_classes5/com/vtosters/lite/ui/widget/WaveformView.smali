@@ -390,7 +390,7 @@
 
     .line 20
     :cond_0
-    invoke-static {p0, p1}, Lcom/vk/audio/AudioMessageUtils;->a([BI)[B
+    invoke-static {p0, p1}, Lcom/vk/audio/a;->a([BI)[B
 
     move-result-object p0
 
@@ -528,7 +528,7 @@
     if-eqz p2, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vtosters/lite/R;->WaveformView:[I
+    sget-object v0, Lcom/vtosters/lite/a0;->WaveformView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

@@ -7,27 +7,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/audioipc/core/ListenersNotifyManager<",
-        "Lcom/vk/audioipc/core/AudioPlayerListener;",
+        "Lcom/vk/audioipc/core/e;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private final c:Lcom/vk/audioipc/core/AudioPlayer;
+.field private final c:Lcom/vk/audioipc/core/d;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;Lcom/vk/audioipc/core/AudioPlayer;Ljava/util/Set;)V
+.method public constructor <init>(Landroid/os/Handler;Lcom/vk/audioipc/core/d;Ljava/util/Set;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/os/Handler;",
-            "Lcom/vk/audioipc/core/AudioPlayer;",
+            "Lcom/vk/audioipc/core/d;",
             "Ljava/util/Set<",
             "+",
-            "Lcom/vk/audioipc/core/AudioPlayerListener;",
+            "Lcom/vk/audioipc/core/e;",
             ">;)V"
         }
     .end annotation
@@ -35,16 +35,16 @@
     .line 1
     invoke-direct {p0, p1, p3}, Lcom/vk/audioipc/core/ListenersNotifyManager;-><init>(Landroid/os/Handler;Ljava/util/Set;)V
 
-    iput-object p2, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->c:Lcom/vk/audioipc/core/AudioPlayer;
+    iput-object p2, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->c:Lcom/vk/audioipc/core/d;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/AudioPlayer;
+.method public static final synthetic a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->c:Lcom/vk/audioipc/core/AudioPlayer;
+    iget-object p0, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->c:Lcom/vk/audioipc/core/d;
 
     return-object p0
 .end method
@@ -59,20 +59,20 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnSpeedChanged$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;F)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public final a(FLcom/vk/music/player/AdvertisementInfo;)V
+.method public final a(FLcom/vk/music/player/a;)V
     .locals 1
 
     .line 9
     new-instance v0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlayProgressChanged$1;
 
-    invoke-direct {v0, p0, p2, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlayProgressChanged$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/AdvertisementInfo;F)V
+    invoke-direct {v0, p0, p2, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlayProgressChanged$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/a;F)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -85,7 +85,7 @@
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnLikeGet$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;IJ)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -98,7 +98,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnTrackComplete$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;ILcom/vk/dto/music/MusicTrack;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -111,7 +111,7 @@
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnTrackPlayProgressChanged$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;ILcom/vk/dto/music/MusicTrack;F)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -136,7 +136,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnTrackBufferingProgressChanged$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;ILcom/vk/dto/music/MusicTrack;FF)V
 
-    invoke-virtual {p0, v6}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v6}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -149,7 +149,7 @@
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnTrackChange$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;ILcom/vk/dto/music/MusicTrack;Z)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -162,7 +162,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnBackgroundTimePlayedMs$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;J)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -175,7 +175,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnRepeatStateChanged$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/LoopMode;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -188,20 +188,20 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnPlayerModeChanged$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/PlayerMode;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/music/player/AdvertisementInfo;)V
+.method public final a(Lcom/vk/music/player/a;)V
     .locals 1
 
     .line 8
     new-instance v0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPause$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPause$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/AdvertisementInfo;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPause$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/a;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -214,7 +214,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnError$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -235,7 +235,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnTrackListChanged$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Ljava/util/List;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -248,7 +248,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnShuffleStateChange$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Z)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -261,7 +261,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementComplete$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -274,7 +274,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnVolumeChanged$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;F)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -287,20 +287,20 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnTrackPause$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;ILcom/vk/dto/music/MusicTrack;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public final b(Lcom/vk/music/player/AdvertisementInfo;)V
+.method public final b(Lcom/vk/music/player/a;)V
     .locals 1
 
     .line 3
     new-instance v0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/AdvertisementInfo;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/a;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -313,7 +313,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnBackgroundTimeOver$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -326,7 +326,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnTrackPlay$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;ILcom/vk/dto/music/MusicTrack;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -339,7 +339,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnPlayerStopped$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -352,7 +352,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnTrackListComplete$1;-><init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audioipc/core/ListenersNotifyManager;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method

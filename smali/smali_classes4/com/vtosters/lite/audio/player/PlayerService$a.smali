@@ -1,5 +1,5 @@
 .class final Lcom/vtosters/lite/audio/player/PlayerService$a;
-.super Lcom/vtosters/lite/audio/g/StaticObservableEvent;
+.super Lcom/vtosters/lite/audio/g/b;
 .source "PlayerService.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/audio/g/StaticObservableEvent<",
+        "Lcom/vtosters/lite/audio/g/b<",
         "Lcom/vtosters/lite/audio/player/PlayerService$h;",
         "Lcom/vtosters/lite/audio/player/PlayerService;",
         "Ljava/lang/Boolean;",
@@ -29,7 +29,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/audio/g/StaticObservableEvent;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/audio/g/b;-><init>()V
 
     return-void
 .end method

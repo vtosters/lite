@@ -186,18 +186,18 @@
 
 
 # virtual methods
-.method protected a(Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;)V
+.method protected a(Lcom/facebook/drawee/generic/b;)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 2
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(I)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->a(I)Lcom/facebook/drawee/generic/b;
 
     .line 3
-    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->INSTANCE:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->i:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/drawable/r$b;)Lcom/facebook/drawee/generic/b;
 
     return-void
 .end method

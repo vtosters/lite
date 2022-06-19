@@ -3,12 +3,12 @@
 .source "PostingInteractor.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/PostingInteractor;->b(Lb/h/c/w/NewPostRequest;Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;)Lio/reactivex/Observable;
+    value = Lcom/vk/newsfeed/posting/PostingInteractor;->b(Lb/h/c/w/f;Lcom/vk/newsfeed/posting/dto/d;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "Ljava/lang/Throwable;",
-        "Lb/h/c/w/PosterUpload$a;",
+        "Lb/h/c/w/h$a;",
         ">;"
     }
 .end annotation
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Throwable;)Lb/h/c/w/PosterUpload$a;
+.method public final a(Ljava/lang/Throwable;)Lb/h/c/w/h$a;
     .locals 2
 
     .line 1
@@ -109,11 +109,11 @@
 
     .line 5
     :goto_2
-    new-instance p1, Lb/h/c/w/PosterUpload$a;
+    new-instance p1, Lb/h/c/w/h$a;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0, v0, v1}, Lb/h/c/w/PosterUpload$a;-><init>(IILjava/lang/String;)V
+    invoke-direct {p1, v0, v0, v1}, Lb/h/c/w/h$a;-><init>(IILjava/lang/String;)V
 
     return-object p1
 .end method
@@ -124,7 +124,7 @@
     .line 1
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$i;->a(Ljava/lang/Throwable;)Lb/h/c/w/PosterUpload$a;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$i;->a(Ljava/lang/Throwable;)Lb/h/c/w/h$a;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "CatalogReplacementPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
-        "Lcom/vk/lists/PaginationHelper;",
+        "Lcom/vk/lists/t;",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
         ">;"
     }
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+.method public final a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
     .locals 2
 
     .line 2
@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
 
     :cond_0
     return-object p1
@@ -95,9 +95,9 @@
     .line 1
     check-cast p1, Lcom/vk/catalog2/core/blocks/UIBlockList;
 
-    check-cast p2, Lcom/vk/lists/PaginationHelper;
+    check-cast p2, Lcom/vk/lists/t;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleBlocksReplacement$event$2;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleBlocksReplacement$event$2;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
 
     move-result-object p1
 

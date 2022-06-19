@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/im/ImEngineProvider$d;
-.super Lb/h/n/AppLifecycleDispatcher$a;
+.super Lb/h/n/c$a;
 .source "ImEngineProvider.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lb/h/n/AppLifecycleDispatcher$a;-><init>()V
+    invoke-direct {p0}, Lb/h/n/c$a;-><init>()V
 
     return-void
 .end method

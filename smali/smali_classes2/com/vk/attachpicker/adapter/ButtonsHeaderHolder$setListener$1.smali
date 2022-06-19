@@ -3,12 +3,12 @@
 .source "ButtonsHeaderFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder;->a(Lcom/vk/attachpicker/adapter/ButtonsHeaderFactory;)V
+    value = Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder;->a(Lcom/vk/attachpicker/adapter/c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $listener:Lcom/vk/attachpicker/adapter/ButtonsHeaderFactory;
+.field final synthetic $listener:Lcom/vk/attachpicker/adapter/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/attachpicker/adapter/ButtonsHeaderFactory;)V
+.method constructor <init>(Lcom/vk/attachpicker/adapter/c;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$1;->$listener:Lcom/vk/attachpicker/adapter/ButtonsHeaderFactory;
+    iput-object p1, p0, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$1;->$listener:Lcom/vk/attachpicker/adapter/c;
 
     const/4 p1, 0x1
 
@@ -50,9 +50,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$1;->$listener:Lcom/vk/attachpicker/adapter/ButtonsHeaderFactory;
+    iget-object p1, p0, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$1;->$listener:Lcom/vk/attachpicker/adapter/c;
 
-    invoke-interface {p1}, Lcom/vk/attachpicker/adapter/ButtonsHeaderFactory;->b()V
+    invoke-interface {p1}, Lcom/vk/attachpicker/adapter/c;->b()V
 
     return-void
 .end method
@@ -65,7 +65,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/attachpicker/adapter/ButtonsHeaderHolder$setListener$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

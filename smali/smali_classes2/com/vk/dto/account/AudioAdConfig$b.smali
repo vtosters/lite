@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -63,7 +63,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/dto/account/AudioAdConfig;-><init>(IILjava/util/List;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/dto/account/AudioAdConfig;-><init>(IILjava/util/List;Ljava/util/List;ZILkotlin/jvm/internal/i;)V
 
     goto :goto_0
 
@@ -76,7 +76,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/dto/account/AudioAdConfig;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/dto/account/AudioAdConfig;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/i;)V
 
     move-object p1, v0
 
@@ -108,7 +108,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/dto/account/AudioAdConfig;-><init>(IILjava/util/List;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/dto/account/AudioAdConfig;-><init>(IILjava/util/List;Ljava/util/List;ZILkotlin/jvm/internal/i;)V
 
     goto :goto_0
 
@@ -117,7 +117,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/dto/account/AudioAdConfig;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/dto/account/AudioAdConfig;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/i;)V
 
     move-object p1, v0
 
@@ -191,7 +191,7 @@
     const-string p1, "im"
 
     .line 7
-    invoke-static {p4, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p4, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

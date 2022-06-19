@@ -3,7 +3,7 @@
 .source "ChatSettingsComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Action;
+.implements Lc/a/z/a;
 
 
 # annotations
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->c(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->c(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
 
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$n;->a:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;
 

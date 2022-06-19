@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Ljava/util/concurrent/Callable<",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/core/util/state/cache/DatabaseCache$b;->call()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "AudioArtistAttachment.java"
 
 # interfaces
-.implements Lcom/vk/dto/attachments/ImageAttachment;
+.implements Lcom/vk/dto/attachments/b;
 
 
 # static fields
@@ -212,7 +212,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f12010d
 
@@ -227,7 +227,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->j:I
+    sget v0, Lcom/vk/dto/attachments/a;->j:I
 
     return v0
 .end method

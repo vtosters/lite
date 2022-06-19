@@ -16,12 +16,12 @@
 
 .field private final b:I
 
-.field private final c:Lcom/vk/api/sdk/VKApiValidationHandler;
+.field private final c:Lcom/vk/api/sdk/i;
 
-.field private final d:Lkotlin/Lazy2;
+.field private final d:Lkotlin/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -30,7 +30,7 @@
 
 .field private final e:Ljava/lang/String;
 
-.field private final f:Lcom/vk/api/sdk/VKOkHttpProvider;
+.field private final f:Lcom/vk/api/sdk/m;
 
 .field private final g:J
 
@@ -38,20 +38,20 @@
 
 .field private final i:Lcom/vk/api/sdk/utils/log/Logger;
 
-.field private final j:Lkotlin/Lazy2;
+.field private final j:Lkotlin/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final k:Lkotlin/Lazy2;
+.field private final k:Lkotlin/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -60,10 +60,10 @@
 
 .field private final l:Z
 
-.field private final m:Lkotlin/Lazy2;
+.field private final m:Lkotlin/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -72,10 +72,10 @@
 
 .field private final n:I
 
-.field private final o:Lkotlin/Lazy2;
+.field private final o:Lkotlin/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -93,36 +93,36 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/api/sdk/VKApiConfig$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/sdk/VKApiConfig$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ILcom/vk/api/sdk/VKApiValidationHandler;Lkotlin/Lazy2;Ljava/lang/String;Lcom/vk/api/sdk/VKOkHttpProvider;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;Lkotlin/Lazy2;ZLkotlin/Lazy2;ILkotlin/Lazy2;Ljava/lang/String;)V
+.method public constructor <init>(Landroid/content/Context;ILcom/vk/api/sdk/i;Lkotlin/e;Ljava/lang/String;Lcom/vk/api/sdk/m;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;Lkotlin/e;ZLkotlin/e;ILkotlin/e;Ljava/lang/String;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "I",
-            "Lcom/vk/api/sdk/VKApiValidationHandler;",
-            "Lkotlin/Lazy2<",
+            "Lcom/vk/api/sdk/i;",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/api/sdk/VKOkHttpProvider;",
+            "Lcom/vk/api/sdk/m;",
             "JJ",
             "Lcom/vk/api/sdk/utils/log/Logger;",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;Z",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/Boolean;",
             ">;I",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;",
             "Ljava/lang/String;",
@@ -145,11 +145,11 @@
 
     move-object v1, p3
 
-    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/VKApiValidationHandler;
+    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/i;
 
     move-object v1, p4
 
-    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/Lazy2;
+    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/e;
 
     move-object v1, p5
 
@@ -157,7 +157,7 @@
 
     move-object v1, p6
 
-    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/VKOkHttpProvider;
+    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/m;
 
     move-wide v1, p7
 
@@ -173,11 +173,11 @@
 
     move-object v1, p12
 
-    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/Lazy2;
+    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/e;
 
     move-object/from16 v1, p13
 
-    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/Lazy2;
+    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/e;
 
     move/from16 v1, p14
 
@@ -185,7 +185,7 @@
 
     move-object/from16 v1, p15
 
-    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/Lazy2;
+    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/e;
 
     move/from16 v1, p16
 
@@ -193,7 +193,7 @@
 
     move-object/from16 v1, p17
 
-    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/Lazy2;
+    iput-object v1, v0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/e;
 
     move-object/from16 v1, p18
 
@@ -202,7 +202,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;ILcom/vk/api/sdk/VKApiValidationHandler;Lkotlin/Lazy2;Ljava/lang/String;Lcom/vk/api/sdk/VKOkHttpProvider;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;Lkotlin/Lazy2;ZLkotlin/Lazy2;ILkotlin/Lazy2;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;ILcom/vk/api/sdk/i;Lkotlin/e;Ljava/lang/String;Lcom/vk/api/sdk/m;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;Lkotlin/e;ZLkotlin/e;ILkotlin/e;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
     .locals 21
 
     move/from16 v0, p19
@@ -228,7 +228,7 @@
     .line 2
     sget-object v1, Lcom/vk/api/sdk/VKApiConfig$1;->a:Lcom/vk/api/sdk/VKApiConfig$1;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v1
 
@@ -259,9 +259,9 @@
     if-eqz v1, :cond_3
 
     .line 3
-    new-instance v1, Lcom/vk/api/sdk/VKOkHttpProvider$b;
+    new-instance v1, Lcom/vk/api/sdk/m$b;
 
-    invoke-direct {v1}, Lcom/vk/api/sdk/VKOkHttpProvider$b;-><init>()V
+    invoke-direct {v1}, Lcom/vk/api/sdk/m$b;-><init>()V
 
     move-object v8, v1
 
@@ -318,17 +318,17 @@
     if-eqz v1, :cond_6
 
     .line 6
-    new-instance v1, Lcom/vk/api/sdk/utils/log/DefaultApiLogger;
+    new-instance v1, Lcom/vk/api/sdk/utils/log/b;
 
     sget-object v2, Lcom/vk/api/sdk/VKApiConfig$2;->a:Lcom/vk/api/sdk/VKApiConfig$2;
 
-    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v2
 
     const-string v3, "VKSdkApi"
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/api/sdk/utils/log/DefaultApiLogger;-><init>(Lkotlin/Lazy2;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/api/sdk/utils/log/b;-><init>(Lkotlin/e;Ljava/lang/String;)V
 
     move-object v13, v1
 
@@ -345,7 +345,7 @@
     .line 7
     sget-object v1, Lcom/vk/api/sdk/VKApiConfig$3;->a:Lcom/vk/api/sdk/VKApiConfig$3;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v1
 
@@ -364,7 +364,7 @@
     .line 8
     sget-object v1, Lcom/vk/api/sdk/VKApiConfig$4;->a:Lcom/vk/api/sdk/VKApiConfig$4;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v1
 
@@ -397,7 +397,7 @@
     .line 9
     sget-object v1, Lcom/vk/api/sdk/VKApiConfig$5;->a:Lcom/vk/api/sdk/VKApiConfig$5;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v1
 
@@ -430,7 +430,7 @@
     .line 10
     sget-object v1, Lcom/vk/api/sdk/VKApiConfig$6;->a:Lcom/vk/api/sdk/VKApiConfig$6;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v1
 
@@ -465,26 +465,26 @@
     move-object/from16 v5, p3
 
     .line 11
-    invoke-direct/range {v2 .. v20}, Lcom/vk/api/sdk/VKApiConfig;-><init>(Landroid/content/Context;ILcom/vk/api/sdk/VKApiValidationHandler;Lkotlin/Lazy2;Ljava/lang/String;Lcom/vk/api/sdk/VKOkHttpProvider;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;Lkotlin/Lazy2;ZLkotlin/Lazy2;ILkotlin/Lazy2;Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v20}, Lcom/vk/api/sdk/VKApiConfig;-><init>(Landroid/content/Context;ILcom/vk/api/sdk/i;Lkotlin/e;Ljava/lang/String;Lcom/vk/api/sdk/m;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;Lkotlin/e;ZLkotlin/e;ILkotlin/e;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkotlin/Lazy2;
+.method public final a()Lkotlin/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/e;
 
     return-object v0
 .end method
@@ -507,19 +507,19 @@
     return-object v0
 .end method
 
-.method public final d()Lkotlin/Lazy2;
+.method public final d()Lkotlin/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/e;
 
     return-object v0
 .end method
@@ -548,7 +548,7 @@
 
     iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->a:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -560,21 +560,21 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/VKApiValidationHandler;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/i;
 
-    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/VKApiValidationHandler;
+    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/i;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/e;
 
-    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/Lazy2;
+    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/e;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -584,17 +584,17 @@
 
     iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->e:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/VKOkHttpProvider;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/m;
 
-    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/VKOkHttpProvider;
+    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/m;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -620,27 +620,27 @@
 
     iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->i:Lcom/vk/api/sdk/utils/log/Logger;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/e;
 
-    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/Lazy2;
+    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/e;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/e;
 
-    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/Lazy2;
+    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/e;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -652,11 +652,11 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/e;
 
-    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/Lazy2;
+    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/e;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -668,11 +668,11 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/e;
 
-    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/Lazy2;
+    iget-object v1, p1, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/e;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -682,7 +682,7 @@
 
     iget-object p1, p1, Lcom/vk/api/sdk/VKApiConfig;->p:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -702,36 +702,36 @@
     return p1
 .end method
 
-.method public final f()Lkotlin/Lazy2;
+.method public final f()Lkotlin/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/e;
 
     return-object v0
 .end method
 
-.method public final g()Lkotlin/Lazy2;
+.method public final g()Lkotlin/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/e;
 
     return-object v0
 .end method
@@ -772,7 +772,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/VKApiValidationHandler;
+    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/i;
 
     if-eqz v2, :cond_1
 
@@ -790,7 +790,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/Lazy2;
+    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/e;
 
     if-eqz v2, :cond_2
 
@@ -826,7 +826,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/VKOkHttpProvider;
+    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/m;
 
     if-eqz v2, :cond_4
 
@@ -888,7 +888,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/Lazy2;
+    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/e;
 
     if-eqz v2, :cond_6
 
@@ -906,7 +906,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/Lazy2;
+    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/e;
 
     if-eqz v2, :cond_7
 
@@ -935,7 +935,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/Lazy2;
+    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/e;
 
     if-eqz v2, :cond_9
 
@@ -959,7 +959,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/Lazy2;
+    iget-object v2, p0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/e;
 
     if-eqz v2, :cond_a
 
@@ -1009,11 +1009,11 @@
     return-object v0
 .end method
 
-.method public final k()Lcom/vk/api/sdk/VKOkHttpProvider;
+.method public final k()Lcom/vk/api/sdk/m;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/VKOkHttpProvider;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/m;
 
     return-object v0
 .end method
@@ -1027,28 +1027,28 @@
     return-wide v0
 .end method
 
-.method public final m()Lkotlin/Lazy2;
+.method public final m()Lkotlin/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/e;
 
     return-object v0
 .end method
 
-.method public final n()Lcom/vk/api/sdk/VKApiValidationHandler;
+.method public final n()Lcom/vk/api/sdk/i;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/VKApiValidationHandler;
+    iget-object v0, p0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/i;
 
     return-object v0
 .end method
@@ -1089,7 +1089,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/VKApiValidationHandler;
+    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->c:Lcom/vk/api/sdk/i;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1097,7 +1097,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/Lazy2;
+    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->d:Lkotlin/e;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1113,7 +1113,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/VKOkHttpProvider;
+    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->f:Lcom/vk/api/sdk/m;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1145,7 +1145,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/Lazy2;
+    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->j:Lkotlin/e;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1153,7 +1153,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/Lazy2;
+    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->k:Lkotlin/e;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1169,7 +1169,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/Lazy2;
+    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->m:Lkotlin/e;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1185,7 +1185,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/Lazy2;
+    iget-object v1, p0, Lcom/vk/api/sdk/VKApiConfig;->o:Lkotlin/e;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

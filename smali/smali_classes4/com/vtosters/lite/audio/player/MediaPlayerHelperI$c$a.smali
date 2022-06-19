@@ -33,7 +33,7 @@
     .locals 7
 
     .line 2
-    new-instance p1, Lcom/vtosters/lite/audio/player/ExoPlayerHelper;
+    new-instance p1, Lcom/vtosters/lite/audio/player/p;
 
     move-object v0, p1
 
@@ -47,7 +47,7 @@
 
     move v6, p7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/audio/player/ExoPlayerHelper;-><init>(Landroid/content/Context;ILcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;JZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/audio/player/p;-><init>(Landroid/content/Context;ILcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;JZ)V
 
     return-object p1
 .end method
@@ -56,7 +56,7 @@
     .locals 7
 
     .line 1
-    new-instance p1, Lcom/vtosters/lite/audio/player/ExoPlayerHelper;
+    new-instance p1, Lcom/vtosters/lite/audio/player/p;
 
     const-wide/16 v4, 0x1f4
 
@@ -70,7 +70,7 @@
 
     move v6, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/audio/player/ExoPlayerHelper;-><init>(Landroid/content/Context;ILcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;JZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/audio/player/p;-><init>(Landroid/content/Context;ILcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;JZ)V
 
     return-object p1
 .end method

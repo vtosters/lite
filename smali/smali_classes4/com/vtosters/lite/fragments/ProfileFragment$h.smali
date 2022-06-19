@@ -3,7 +3,7 @@
 .source "ProfileFragment.java"
 
 # interfaces
-.implements Lcom/vk/api/base/ApiCallback;
+.implements Lcom/vk/api/base/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/ApiCallback<",
+        "Lcom/vk/api/base/a<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -50,7 +50,7 @@
     .line 18
     iget-object v0, p0, Lcom/vtosters/lite/fragments/ProfileFragment$h;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/BaseProfileFragment;->c(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/c;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -175,7 +175,7 @@
     move-result-object p1
 
     .line 9
-    invoke-static {p1, v3}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;Z)V
+    invoke-static {p1, v3}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;Z)V
 
     .line 10
     :cond_2
@@ -222,7 +222,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;Z)V
+    invoke-static {p1, v3}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;Z)V
 
     .line 14
     :cond_3
@@ -259,13 +259,13 @@
     .line 17
     iget-object p1, p0, Lcom/vtosters/lite/fragments/ProfileFragment$h;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/ProfileFragment;->W(Lcom/vtosters/lite/fragments/ProfileFragment;)Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/ProfileFragment;->W(Lcom/vtosters/lite/fragments/ProfileFragment;)Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p1
 
     check-cast p1, Lcom/vk/profile/presenter/UserPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->H0()V
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->H0()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "MsgStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
     const-string v2, ","
 
-    invoke-static {v0, v2, v1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -82,23 +82,23 @@
     invoke-virtual {p1, v0}, Lio/requery/android/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 3
-    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;
+    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->b(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->b(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
 
     move-result-object v0
 
     .line 4
-    sget-object v1, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;
+    sget-object v1, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/d;
 
-    invoke-virtual {v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->c(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
+    invoke-virtual {v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->c(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
 
     move-result-object v1
 
     .line 5
-    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;
+    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/d;
 
-    invoke-virtual {v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
+    invoke-virtual {v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
 
     move-result-object p1
 
@@ -124,9 +124,9 @@
     check-cast v3, Lcom/vk/im/engine/models/messages/Msg;
 
     .line 8
-    sget-object v4, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;
+    sget-object v4, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/d;
 
-    invoke-virtual {v4, v0, v3}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-virtual {v4, v0, v3}, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/messages/Msg;)V
 
     .line 9
     invoke-virtual {v0}, Lio/requery/android/database/sqlite/SQLiteStatement;->executeInsert()J
@@ -137,13 +137,13 @@
     if-eqz v4, :cond_1
 
     .line 11
-    sget-object v4, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;
+    sget-object v4, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/d;
 
     move-object v5, v3
 
     check-cast v5, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-virtual {v4, v1, v5}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/messages/MsgFromUser;)V
+    invoke-virtual {v4, v1, v5}, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/models/messages/MsgFromUser;)V
 
     .line 12
     invoke-virtual {v1}, Lio/requery/android/database/sqlite/SQLiteStatement;->executeInsert()J
@@ -184,13 +184,13 @@
     check-cast v5, Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 16
-    sget-object v6, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;
+    sget-object v6, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/d;
 
     invoke-virtual {v3}, Lcom/vk/im/engine/models/messages/Msg;->getLocalId()I
 
     move-result v7
 
-    invoke-virtual {v6, p1, v7, v5}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbWriter;->a(Lio/requery/android/database/sqlite/SQLiteStatement;ILcom/vk/im/engine/models/attaches/Attach;)V
+    invoke-virtual {v6, p1, v7, v5}, Lcom/vk/im/engine/internal/storage/delegates/messages/d;->a(Lio/requery/android/database/sqlite/SQLiteStatement;ILcom/vk/im/engine/models/attaches/Attach;)V
 
     .line 17
     invoke-virtual {p1}, Lio/requery/android/database/sqlite/SQLiteStatement;->executeInsert()J
@@ -218,7 +218,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$put$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

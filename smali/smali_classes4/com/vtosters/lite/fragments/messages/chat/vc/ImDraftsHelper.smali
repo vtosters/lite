@@ -13,13 +13,13 @@
 
 
 # static fields
-.field static final synthetic c:[Lkotlin/u/KProperty5;
+.field static final synthetic c:[Lkotlin/u/j;
 
 .field public static final d:Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$a;
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
 .field private b:I
 
@@ -30,13 +30,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -44,21 +44,21 @@
 
     const-string v4, "getDrafts()Landroid/content/SharedPreferences;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->c:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->c:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->d:Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$a;
 
@@ -78,30 +78,30 @@
 
     invoke-direct {p2, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$drafts$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a:Lkotlin/e;
 
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+.method private final a(Lkotlin/jvm/b/a;)Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+TT;>;)TT;"
         }
     .end annotation
 
     .line 24
     :try_start_0
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0
@@ -139,7 +139,7 @@
 
     invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$encodeMembers$1;-><init>(Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->b(Lkotlin/jvm/b/Functions;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->b(Lkotlin/jvm/b/a;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -154,7 +154,7 @@
 
     invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$encodeMsg$1;-><init>(Lcom/vk/im/engine/models/messages/MsgFromUser;)V
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->b(Lkotlin/jvm/b/Functions;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->b(Lkotlin/jvm/b/a;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -190,7 +190,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$encodeAttaches$1;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;Ljava/util/List;)V
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->b(Lkotlin/jvm/b/Functions;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->b(Lkotlin/jvm/b/a;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -228,7 +228,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$decodeAttaches$1;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a(Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a(Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -256,7 +256,7 @@
 
     invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$decodeMembers$1;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a(Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a(Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -265,12 +265,12 @@
     return-object p1
 .end method
 
-.method private final b(Lkotlin/jvm/b/Functions;)Ljava/lang/String;
+.method private final b(Lkotlin/jvm/b/a;)Ljava/lang/String;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/String;",
             ">;)",
             "Ljava/lang/String;"
@@ -279,7 +279,7 @@
 
     .line 8
     :try_start_0
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -384,15 +384,15 @@
 .method private final c()Landroid/content/SharedPreferences;
     .locals 3
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->c:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->c:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -409,7 +409,7 @@
 
     invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$decodeMsg$1;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a(Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a(Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     move-result-object p1
 

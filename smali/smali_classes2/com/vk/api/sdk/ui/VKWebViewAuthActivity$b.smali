@@ -68,7 +68,7 @@
     move-result-object p1
 
     .line 22
-    sget p2, Lcom/vk/api/sdk/R1;->vk_retry:I
+    sget p2, Lcom/vk/api/sdk/c;->vk_retry:I
 
     new-instance v0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$b$a;
 
@@ -133,11 +133,11 @@
     .line 2
     iget-object v1, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$b;->b:Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;
 
-    invoke-static {v1}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->a(Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;)Lcom/vk/api/sdk/auth/VKAuthParams;
+    invoke-static {v1}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->a(Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;)Lcom/vk/api/sdk/auth/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/api/sdk/auth/VKAuthParams;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/api/sdk/auth/c;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -188,7 +188,7 @@
 
     const-string v5, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v5, "extra-token-data"
 
@@ -306,17 +306,17 @@
     :cond_3
     sget-object p1, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;->e:Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$a;
 
-    new-instance v2, Lcom/vk/api/sdk/VKApiValidationHandler$b;
+    new-instance v2, Lcom/vk/api/sdk/i$b;
 
-    invoke-direct {v2, v1, v0, v3}, Lcom/vk/api/sdk/VKApiValidationHandler$b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-direct {v2, v1, v0, v3}, Lcom/vk/api/sdk/i$b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
 
-    invoke-virtual {p1, v2}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$a;->a(Lcom/vk/api/sdk/VKApiValidationHandler$b;)V
+    invoke-virtual {p1, v2}, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$a;->a(Lcom/vk/api/sdk/i$b;)V
 
     .line 17
     :cond_4
-    sget-object p1, Lcom/vk/api/sdk/utils/VKValidationLocker;->INSTANCE:Lcom/vk/api/sdk/utils/VKValidationLocker;
+    sget-object p1, Lcom/vk/api/sdk/utils/g;->c:Lcom/vk/api/sdk/utils/g;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/utils/VKValidationLocker;->b()V
+    invoke-virtual {p1}, Lcom/vk/api/sdk/utils/g;->b()V
 
     .line 18
     iget-object p1, p0, Lcom/vk/api/sdk/ui/VKWebViewAuthActivity$b;->b:Lcom/vk/api/sdk/ui/VKWebViewAuthActivity;

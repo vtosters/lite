@@ -1,18 +1,18 @@
 .class public final Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;
-.super Lcom/vk/music/ui/common/MusicViewHolder;
+.super Lcom/vk/music/ui/common/o;
 .source "MusicPlaylistButtonsHolder.kt"
 
 # interfaces
-.implements Lcom/vk/music/playlist/modern/h/OnConfigChangedListener;
+.implements Lcom/vk/music/playlist/modern/h/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/music/ui/common/MusicViewHolder<",
-        "Lcom/vk/music/playlist/modern/PlaylistScreenData;",
+        "Lcom/vk/music/ui/common/o<",
+        "Lcom/vk/music/playlist/modern/g;",
         ">;",
-        "Lcom/vk/music/playlist/modern/h/OnConfigChangedListener;"
+        "Lcom/vk/music/playlist/modern/h/g;"
     }
 .end annotation
 
@@ -68,14 +68,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/music/playlist/modern/h/OnConfigChangedListener1;Lcom/vk/core/ui/IdClickListener;ZZ)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/music/playlist/modern/h/h;Lcom/vk/core/ui/k;ZZ)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lcom/vk/music/playlist/modern/h/OnConfigChangedListener1;",
-            "Lcom/vk/core/ui/IdClickListener<",
+            "Lcom/vk/music/playlist/modern/h/h;",
+            "Lcom/vk/core/ui/k<",
             "*>;ZZ)V"
         }
     .end annotation
@@ -83,7 +83,7 @@
     const v0, 0x7f0d037f
 
     .line 2
-    invoke-direct {p0, v0, p1, p5}, Lcom/vk/music/ui/common/MusicViewHolder;-><init>(ILandroid/view/ViewGroup;Z)V
+    invoke-direct {p0, v0, p1, p5}, Lcom/vk/music/ui/common/o;-><init>(ILandroid/view/ViewGroup;Z)V
 
     iput-boolean p4, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->J:Z
 
@@ -140,7 +140,7 @@
 
     const-string p5, "btnListenAll"
 
-    invoke-static {p4, p5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p4}, Landroid/view/ViewGroup;->getId()I
 
@@ -181,7 +181,7 @@
     .line 16
     iget-object p4, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->d:Lcom/vk/music/view/MusicActionButton;
 
-    invoke-static {p4, p5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p4}, Landroid/view/ViewGroup;->getId()I
 
@@ -193,7 +193,7 @@
     iput-object p1, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->f:Landroid/widget/ImageView;
 
     .line 18
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
@@ -210,7 +210,7 @@
     iput p1, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->g:I
 
     .line 19
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
@@ -227,7 +227,7 @@
     iput p1, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->h:I
 
     .line 20
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
@@ -269,7 +269,7 @@
 
     const-string p4, "context"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget p4, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->g:I
 
@@ -282,7 +282,7 @@
     const/4 p5, 0x0
 
     .line 25
-    invoke-static {p1, v0, p5, p4, p5}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
+    invoke-static {p1, v0, p5, p4, p5}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
 
     .line 26
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -292,7 +292,7 @@
 
     const-string v0, "btnRemoveEdit"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/widget/ImageView;->getId()I
 
@@ -308,7 +308,7 @@
 
     const-string p1, "itemView"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0a09e0
 
@@ -320,7 +320,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -329,11 +329,11 @@
     .line 30
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p1, 0x7f0a0bcd
 
-    invoke-static {p3, p1, p5, p4, p5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p3, p1, p5, p4, p5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -365,7 +365,7 @@
 
     const-string p3, "btnFollowEdit"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -381,12 +381,12 @@
     iput-object p1, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->I:Landroid/graphics/Rect;
 
     .line 34
-    invoke-interface {p2, p0}, Lcom/vk/music/playlist/modern/h/OnConfigChangedListener1;->a(Lcom/vk/music/playlist/modern/h/OnConfigChangedListener;)V
+    invoke-interface {p2, p0}, Lcom/vk/music/playlist/modern/h/h;->a(Lcom/vk/music/playlist/modern/h/g;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/ViewGroup;Lcom/vk/music/playlist/modern/h/OnConfigChangedListener1;Lcom/vk/core/ui/IdClickListener;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/view/ViewGroup;Lcom/vk/music/playlist/modern/h/h;Lcom/vk/core/ui/k;ZZILkotlin/jvm/internal/i;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x10
@@ -414,7 +414,7 @@
     move v4, p4
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/playlist/modern/h/OnConfigChangedListener1;Lcom/vk/core/ui/IdClickListener;ZZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/playlist/modern/h/h;Lcom/vk/core/ui/k;ZZ)V
 
     return-void
 .end method
@@ -428,15 +428,15 @@
     return-object p0
 .end method
 
-.method private final a(Landroid/view/View;FFZLkotlin/jvm/b/Functions;)V
+.method private final a(Landroid/view/View;FFZLkotlin/jvm/b/a;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "FFZ",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -448,15 +448,15 @@
     invoke-virtual {p1, p2}, Landroid/view/View;->setScaleY(F)V
 
     .line 31
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->d0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->d0()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/music/playlist/modern/PlaylistScreenData;
+    check-cast p2, Lcom/vk/music/playlist/modern/g;
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->a()Ljava/lang/Integer;
+    invoke-virtual {p2}, Lcom/vk/music/playlist/modern/g;->a()Ljava/lang/Integer;
 
     move-result-object p2
 
@@ -511,7 +511,7 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$a;-><init>(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FZLkotlin/jvm/b/Functions;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$a;-><init>(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FZLkotlin/jvm/b/a;)V
 
     invoke-virtual {p2, v6}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -562,7 +562,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FFZLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FFZLkotlin/jvm/b/a;ILjava/lang/Object;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x10
@@ -585,27 +585,27 @@
     move v4, p4
 
     .line 28
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Landroid/view/View;FFZLkotlin/jvm/b/Functions;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Landroid/view/View;FFZLkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
+.method public static final synthetic a(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Lcom/vk/music/playlist/modern/g;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->b(Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
+    invoke-direct {p0, p1}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->b(Lcom/vk/music/playlist/modern/g;)V
 
     return-void
 .end method
 
-.method private final a(ZLcom/vk/music/playlist/modern/PlaylistScreenData;)V
+.method private final a(ZLcom/vk/music/playlist/modern/g;)V
     .locals 6
 
     if-eqz p1, :cond_0
 
     .line 25
-    invoke-virtual {p2}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p2}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result p1
 
@@ -616,7 +616,7 @@
 
     const-string p1, "btnEdit"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v2, 0x3f800000    # 1.0f
 
@@ -626,42 +626,42 @@
 
     new-instance v5, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$updateEditBtn$1;
 
-    invoke-direct {v5, p0, p2}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$updateEditBtn$1;-><init>(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
+    invoke-direct {v5, p0, p2}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$updateEditBtn$1;-><init>(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Lcom/vk/music/playlist/modern/g;)V
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Landroid/view/View;FFZLkotlin/jvm/b/Functions;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Landroid/view/View;FFZLkotlin/jvm/b/a;)V
 
     goto :goto_0
 
     .line 27
     :cond_0
-    invoke-direct {p0, p2}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->b(Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
+    invoke-direct {p0, p2}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->b(Lcom/vk/music/playlist/modern/g;)V
 
     :goto_0
     return-void
 .end method
 
-.method private final b(Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
+.method private final b(Lcom/vk/music/playlist/modern/g;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->c:Lcom/vk/music/view/MusicActionButton;
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->e()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->e()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result v1
 
@@ -678,13 +678,13 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->e()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->e()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result v1
 
@@ -703,13 +703,13 @@
     invoke-virtual {v0, v1}, Lcom/vk/music/view/MusicActionButton;->setIcon(I)V
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result v1
 
@@ -721,13 +721,13 @@
 
     .line 7
     :cond_3
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->e()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->e()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result p1
 
@@ -793,7 +793,7 @@
 
     const-string v4, "followed[0]"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/view/View;
 
@@ -852,7 +852,7 @@
     const-string v3, "it"
 
     .line 7
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v8, 0x0
 
@@ -868,7 +868,7 @@
 
     move v7, p1
 
-    invoke-static/range {v3 .. v10}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FFZLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v10}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FFZLkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     goto :goto_1
 
@@ -911,7 +911,7 @@
     move v6, v0
 
     .line 10
-    invoke-static/range {v3 .. v10}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FFZLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v10}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FFZLkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     goto :goto_2
 
@@ -940,11 +940,11 @@
     return-void
 .end method
 
-.method protected a(Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
+.method protected a(Lcom/vk/music/playlist/modern/g;)V
     .locals 8
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->a()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->a()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -953,7 +953,7 @@
     move-result v0
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->c()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->c()Z
 
     move-result v1
 
@@ -963,7 +963,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->h()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->h()Z
 
     move-result v1
 
@@ -980,7 +980,7 @@
     if-nez v0, :cond_1
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->g()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->g()Z
 
     move-result v0
 
@@ -995,13 +995,13 @@
 
     .line 7
     :goto_1
-    invoke-direct {p0, v1, p1}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(ZLcom/vk/music/playlist/modern/PlaylistScreenData;)V
+    invoke-direct {p0, v1, p1}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(ZLcom/vk/music/playlist/modern/g;)V
 
     .line 8
     iget-object v4, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->e:Lcom/vk/music/view/MusicActionButton;
 
     .line 9
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result v5
 
@@ -1018,7 +1018,7 @@
     invoke-virtual {v4, v5}, Lcom/vk/music/view/MusicActionButton;->setIcon(I)V
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result v5
 
@@ -1039,13 +1039,13 @@
 
     const-string v5, "btnDownload"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->b()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->b()Lcom/vk/dto/music/Playlist;
 
     move-result-object v7
 
@@ -1073,7 +1073,7 @@
     iget-object v4, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->f:Landroid/widget/ImageView;
 
     .line 13
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result v6
 
@@ -1090,11 +1090,11 @@
     invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result v7
 
@@ -1117,7 +1117,7 @@
     if-eqz v0, :cond_7
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->f()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->f()Z
 
     move-result v4
 
@@ -1136,7 +1136,7 @@
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result v7
 
@@ -1183,19 +1183,19 @@
     if-eqz v1, :cond_e
 
     .line 19
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->e()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_d
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_c
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result p1
 
@@ -1218,11 +1218,11 @@
 
     const-string v4, "btnEdit"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_f
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result v4
 
@@ -1243,11 +1243,11 @@
 
     const-string v4, "btnListenAll"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_10
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result v4
 
@@ -1266,23 +1266,23 @@
     .line 22
     iget-object v1, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->D:Landroid/widget/ImageView;
 
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_12
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result v4
 
     if-nez v4, :cond_12
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result v4
 
     if-nez v4, :cond_11
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->e()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->e()Z
 
     move-result v4
 
@@ -1304,23 +1304,23 @@
 
     const-string v4, "btnRemoveEdit"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_14
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->e()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->e()Z
 
     move-result v4
 
     if-nez v4, :cond_13
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result v4
 
     if-eqz v4, :cond_14
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->d()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->d()Z
 
     move-result v4
 
@@ -1342,17 +1342,17 @@
 
     const-string v4, "btnFollowEdit"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_15
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
 
     move-result v0
 
     if-nez v0, :cond_15
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->e()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->e()Z
 
     move-result p1
 
@@ -1374,9 +1374,9 @@
     .locals 0
 
     .line 3
-    check-cast p1, Lcom/vk/music/playlist/modern/PlaylistScreenData;
+    check-cast p1, Lcom/vk/music/playlist/modern/g;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Lcom/vk/music/playlist/modern/g;)V
 
     return-void
 .end method
@@ -1394,7 +1394,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
 
     move-result-object p1
 
@@ -1404,7 +1404,7 @@
 
     const-string v0, "ctx.resources"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -1441,13 +1441,13 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->d0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->d0()Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v1, v0
 
-    check-cast v1, Lcom/vk/music/playlist/modern/PlaylistScreenData;
+    check-cast v1, Lcom/vk/music/playlist/modern/g;
 
     if-eqz v1, :cond_0
 
@@ -1475,13 +1475,13 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v1 .. v11}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->a(Lcom/vk/music/playlist/modern/PlaylistScreenData;Lcom/vk/dto/music/Playlist;ZZZZZZLjava/lang/Integer;ILjava/lang/Object;)Lcom/vk/music/playlist/modern/PlaylistScreenData;
+    invoke-static/range {v1 .. v11}, Lcom/vk/music/playlist/modern/g;->a(Lcom/vk/music/playlist/modern/g;Lcom/vk/dto/music/Playlist;ZZZZZZLjava/lang/Integer;ILjava/lang/Object;)Lcom/vk/music/playlist/modern/g;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/music/ui/common/MusicViewHolder;->a(Ljava/lang/Object;I)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/music/ui/common/o;->a(Ljava/lang/Object;I)V
 
     :cond_0
     return-void

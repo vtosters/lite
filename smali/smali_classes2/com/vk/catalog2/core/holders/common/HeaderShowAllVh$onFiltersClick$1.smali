@@ -3,7 +3,7 @@
 .source "HeaderShowAllVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/String;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -62,11 +62,11 @@
 
     iget-object v2, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh$onFiltersClick$1;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v1, v2, p1}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a(Landroid/content/Context;Ljava/lang/String;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v1, v2, p1}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a(Landroid/content/Context;Ljava/lang/String;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->a(Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {v0, p1}, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->a(Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;Lio/reactivex/disposables/b;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh$onFiltersClick$1;->a(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

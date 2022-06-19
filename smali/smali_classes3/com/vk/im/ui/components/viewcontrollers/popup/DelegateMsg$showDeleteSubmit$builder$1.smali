@@ -3,12 +3,12 @@
 .source "DelegateMsg.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(IZZLkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(IZZLkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -29,14 +29,14 @@
 # instance fields
 .field final synthetic $isDeleteForAllSelected:Lkotlin/jvm/internal/Ref$BooleanRef;
 
-.field final synthetic $onSubmitListener:Lkotlin/jvm/b/Functions2;
+.field final synthetic $onSubmitListener:Lkotlin/jvm/b/b;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/internal/Ref$BooleanRef;)V
+.method constructor <init>(Lkotlin/jvm/b/b;Lkotlin/jvm/internal/Ref$BooleanRef;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$1;->$onSubmitListener:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$1;->$onSubmitListener:Lkotlin/jvm/b/b;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$1;->$isDeleteForAllSelected:Lkotlin/jvm/internal/Ref$BooleanRef;
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$1;->$onSubmitListener:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$showDeleteSubmit$builder$1;->$onSubmitListener:Lkotlin/jvm/b/b;
 
     if-eqz v0, :cond_0
 
@@ -76,11 +76,11 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/m;
 
     :cond_0
     return-void

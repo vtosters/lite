@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/PostingInteractor;->c()Lio/reactivex/Single;
+    value = Lcom/vk/newsfeed/posting/PostingInteractor;->c()Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

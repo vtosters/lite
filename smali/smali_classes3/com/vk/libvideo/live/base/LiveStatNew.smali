@@ -48,13 +48,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 11
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -83,13 +83,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 7
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object p1
 
     const-string v1, "live_action"
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -98,7 +98,7 @@
     .locals 2
 
     .line 22
-    invoke-static {}, Lcom/vk/core/util/TimeUtils;->b()I
+    invoke-static {}, Lcom/vk/core/util/i1;->b()I
 
     move-result v0
 
@@ -136,7 +136,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/media/recorder/StreamAnalytics;)V
+.method public final a(Lcom/vk/media/recorder/g;)V
     .locals 2
 
     .line 18
@@ -155,13 +155,13 @@
     invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 21
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v0
 
     const-string v1, "live_action"
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -204,13 +204,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 17
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object p1
 
     const-string p2, "live_action"
 
-    invoke-interface {p1, p2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, p2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -234,13 +234,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -269,18 +269,18 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object p1
 
     const-string v1, "live_action"
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public final b(Lcom/vk/media/recorder/StreamAnalytics;)V
+.method public final b(Lcom/vk/media/recorder/g;)V
     .locals 2
 
     .line 10
@@ -299,13 +299,13 @@
     invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 13
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v0
 
     const-string v1, "live_action"
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -329,13 +329,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -364,18 +364,18 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object p1
 
     const-string v1, "live_action"
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public final c(Lcom/vk/media/recorder/StreamAnalytics;)V
+.method public final c(Lcom/vk/media/recorder/g;)V
     .locals 2
 
     .line 10
@@ -394,13 +394,13 @@
     invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 13
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v0
 
     const-string v1, "live_action"
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -424,13 +424,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -459,13 +459,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object p1
 
     const-string v1, "live_action"
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -489,13 +489,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -524,13 +524,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object p1
 
     const-string v1, "live_action"
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -554,13 +554,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -589,13 +589,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object p1
 
     const-string v1, "live_action"
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -619,13 +619,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -654,13 +654,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object p1
 
     const-string v1, "live_action"
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -684,13 +684,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -719,13 +719,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object p1
 
     const-string v1, "live_action"
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -749,13 +749,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -779,13 +779,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -809,13 +809,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -839,13 +839,13 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/base/LiveStatNew;->a(Landroid/os/Bundle;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v1
 
     const-string v2, "live_action"
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method

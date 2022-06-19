@@ -52,7 +52,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->a(Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-static {p1, v0}, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->a(Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
 
     return-void
 .end method

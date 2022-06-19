@@ -12,10 +12,10 @@
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/Lazy2<",
+            "Lkotlin/e<",
             "Lcom/vk/log/settings/LoggerSettings$a;",
             ">;"
         }
@@ -28,10 +28,10 @@
 
 .field private final d:Z
 
-.field private final e:Lkotlin/jvm/b/Functions;
+.field private final e:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -40,7 +40,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Landroid/content/SharedPreferences;ZLkotlin/jvm/b/Functions;)V
+.method public constructor <init>(Ljava/lang/String;Landroid/content/SharedPreferences;ZLkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -48,7 +48,7 @@
             "Ljava/lang/String;",
             "Landroid/content/SharedPreferences;",
             "Z",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/String;",
             ">;)V"
         }
@@ -63,18 +63,18 @@
 
     iput-boolean p3, p0, Lcom/vk/log/settings/LoggerSettings;->d:Z
 
-    iput-object p4, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/Functions;
+    iput-object p4, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/a;
 
     .line 2
     new-instance p1, Lcom/vk/log/settings/LoggerSettings$remoteLogTypesMap$1;
 
     invoke-direct {p1, p0}, Lcom/vk/log/settings/LoggerSettings$remoteLogTypesMap$1;-><init>(Lcom/vk/log/settings/LoggerSettings;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/log/settings/LoggerSettings;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/log/settings/LoggerSettings;->a:Lkotlin/e;
 
     return-void
 .end method
@@ -221,9 +221,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/log/settings/LoggerSettings;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/log/settings/LoggerSettings;->a:Lkotlin/e;
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -260,19 +260,19 @@
     return-object v0
 .end method
 
-.method public final c()Lkotlin/jvm/b/Functions;
+.method public final c()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
@@ -301,7 +301,7 @@
 
     iget-object v1, p1, Lcom/vk/log/settings/LoggerSettings;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -311,7 +311,7 @@
 
     iget-object v1, p1, Lcom/vk/log/settings/LoggerSettings;->c:Landroid/content/SharedPreferences;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -323,11 +323,11 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/a;
 
-    iget-object p1, p1, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/Functions;
+    iget-object p1, p1, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/a;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -397,7 +397,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/Functions;
+    iget-object v2, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/a;
 
     if-eqz v2, :cond_3
 
@@ -446,7 +446,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/Functions;
+    iget-object v1, p0, Lcom/vk/log/settings/LoggerSettings;->e:Lkotlin/jvm/b/a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

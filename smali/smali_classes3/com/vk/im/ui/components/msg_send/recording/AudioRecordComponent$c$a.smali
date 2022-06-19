@@ -3,12 +3,12 @@
 .source "AudioRecordComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$c;->a(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
+    value = Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$c;->a(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Integer;",
         ">;"
     }

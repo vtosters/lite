@@ -3,7 +3,7 @@
 .source "ImAudioMsgPlayerProvider.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -66,7 +66,7 @@
 
     move-result-object p1
 
-    sget v0, Lcom/vk/im/ui/R4;->vkim_audio_msg_player_error:I
+    sget v0, Lcom/vk/im/ui/m;->vkim_audio_msg_player_error:I
 
     const/4 v1, 0x0
 
@@ -74,7 +74,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
 
     return-void
 .end method

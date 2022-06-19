@@ -28,7 +28,7 @@
 # instance fields
 .field a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
-.field b:Landroid/support/v4/media/session/IMediaControllerCallback;
+.field b:Landroid/support/v4/media/session/a;
 
 
 # direct methods
@@ -50,7 +50,7 @@
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaControllerCompat$a$b;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$a;)V
 
-    invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21;->a(Landroid/support/v4/media/session/MediaControllerCompatApi21$a;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/session/c;->a(Landroid/support/v4/media/session/c$a;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -60,7 +60,7 @@
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaControllerCompat$a$c;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$a;)V
 
-    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/IMediaControllerCallback;
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/a;
 
     :goto_0
     return-void

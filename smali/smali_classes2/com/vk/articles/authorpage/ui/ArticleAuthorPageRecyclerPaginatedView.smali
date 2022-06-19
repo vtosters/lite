@@ -16,11 +16,11 @@
 
 
 # instance fields
-.field private V:Lkotlin/jvm/b/Functions;
+.field private V:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -37,7 +37,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/16 v0, 0x30
 
@@ -66,7 +66,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -86,7 +86,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -100,7 +100,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -144,7 +144,7 @@
     const-string v0, "subscribeView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -170,7 +170,7 @@
     const-string v0, "subscribeView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -196,7 +196,7 @@
     const-string v0, "subscribeView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -227,7 +227,7 @@
 
     const-string p2, "LayoutInflater.from(cont\u2026 = createLayoutParams() }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -273,7 +273,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     iput-object p2, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;->W:Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView;
 
@@ -309,24 +309,24 @@
     return-void
 
     :cond_0
-    invoke-static {p3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 6
     :cond_1
-    invoke-static {p3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 7
     :cond_2
-    invoke-static {p3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p2
 .end method
 
-.method public a(Lcom/vk/lists/EmptyViewConfiguration;)V
+.method public a(Lcom/vk/lists/h;)V
     .locals 1
 
     .line 17
@@ -337,7 +337,7 @@
     invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 18
-    invoke-super {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/EmptyViewConfiguration;)V
+    invoke-super {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/h;)V
 
     return-void
 
@@ -345,14 +345,14 @@
     const-string p1, "subscribeView"
 
     .line 19
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public a(Ljava/lang/Throwable;Lcom/vk/lists/ErrorViewConfiguration;)V
+.method public a(Ljava/lang/Throwable;Lcom/vk/lists/i;)V
     .locals 1
 
     .line 14
@@ -363,7 +363,7 @@
     invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 15
-    invoke-super {p0, p1, p2}, Lcom/vk/lists/AbstractPaginatedView;->a(Ljava/lang/Throwable;Lcom/vk/lists/ErrorViewConfiguration;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/lists/AbstractPaginatedView;->a(Ljava/lang/Throwable;Lcom/vk/lists/i;)V
 
     return-void
 
@@ -371,7 +371,7 @@
     const-string p1, "subscribeView"
 
     .line 16
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -412,7 +412,7 @@
 
     const/4 v1, 0x3
 
-    iget-object v5, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
+    iget-object v5, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
 
     aput-object v5, v0, v1
 
@@ -434,13 +434,13 @@
     return-void
 
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 13
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -464,14 +464,14 @@
     const-string v0, "subscribeView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method protected b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/AbstractErrorView;
+.method protected b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/a;
     .locals 0
 
     .line 1
@@ -508,37 +508,37 @@
     const-string v0, "subscribeView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public final getToggleSubscription()Lkotlin/jvm/b/Functions;
+.method public final getToggleSubscription()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;->V:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;->V:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
 
-.method public final setToggleSubscription(Lkotlin/jvm/b/Functions;)V
+.method public final setToggleSubscription(Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -548,10 +548,10 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView;->setToggleSubscription(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView;->setToggleSubscription(Lkotlin/jvm/b/a;)V
 
     .line 2
-    iput-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;->V:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageRecyclerPaginatedView;->V:Lkotlin/jvm/b/a;
 
     return-void
 
@@ -559,7 +559,7 @@
     const-string p1, "subscribeView"
 
     .line 3
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

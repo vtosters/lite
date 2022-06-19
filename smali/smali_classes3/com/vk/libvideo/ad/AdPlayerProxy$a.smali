@@ -1,5 +1,5 @@
 .class public final Lcom/vk/libvideo/ad/AdPlayerProxy$a;
-.super Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;
+.super Lcom/vk/media/player/exo/d;
 .source "AdPlayerProxy.kt"
 
 
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$a;->e:Lcom/vk/libvideo/ad/AdPlayerProxy;
 
-    invoke-direct {p0}, Lcom/vk/media/player/exo/ExoMediaSourceAnalyticsListener;-><init>()V
+    invoke-direct {p0}, Lcom/vk/media/player/exo/d;-><init>()V
 
     return-void
 .end method
@@ -47,7 +47,7 @@
     .line 12
     iget-object p1, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$a;->e:Lcom/vk/libvideo/ad/AdPlayerProxy;
 
-    invoke-static {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy;->b(Lcom/vk/libvideo/ad/AdPlayerProxy;)Lcom/vk/media/player/video/ExoVideoSource;
+    invoke-static {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy;->b(Lcom/vk/libvideo/ad/AdPlayerProxy;)Lcom/vk/media/player/video/a;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
 
     move v4, p3
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/media/player/video/ExoVideoSource;->a(Lcom/vk/media/player/video/ExoVideoSource;Ljava/lang/String;Landroid/net/Uri;IIJILjava/lang/Object;)Lcom/vk/media/player/video/ExoVideoSource;
+    invoke-static/range {v0 .. v8}, Lcom/vk/media/player/video/a;->a(Lcom/vk/media/player/video/a;Ljava/lang/String;Landroid/net/Uri;IIJILjava/lang/Object;)Lcom/vk/media/player/video/a;
 
     move-result-object p2
 
@@ -77,7 +77,7 @@
     const/4 p2, 0x0
 
     :goto_0
-    invoke-static {p1, p2}, Lcom/vk/libvideo/ad/AdPlayerProxy;->a(Lcom/vk/libvideo/ad/AdPlayerProxy;Lcom/vk/media/player/video/ExoVideoSource;)V
+    invoke-static {p1, p2}, Lcom/vk/libvideo/ad/AdPlayerProxy;->a(Lcom/vk/libvideo/ad/AdPlayerProxy;Lcom/vk/media/player/video/a;)V
 
     return-void
 .end method
@@ -98,17 +98,17 @@
     .line 7
     iget-object p1, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$a;->e:Lcom/vk/libvideo/ad/AdPlayerProxy;
 
-    invoke-static {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy;->c(Lcom/vk/libvideo/ad/AdPlayerProxy;)Lkotlin/jvm/b/Functions;
+    invoke-static {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy;->c(Lcom/vk/libvideo/ad/AdPlayerProxy;)Lkotlin/jvm/b/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$a;->e:Lcom/vk/libvideo/ad/AdPlayerProxy;
 
-    invoke-static {p2}, Lcom/vk/libvideo/ad/AdPlayerProxy;->b(Lcom/vk/libvideo/ad/AdPlayerProxy;)Lcom/vk/media/player/video/ExoVideoSource;
+    invoke-static {p2}, Lcom/vk/libvideo/ad/AdPlayerProxy;->b(Lcom/vk/libvideo/ad/AdPlayerProxy;)Lcom/vk/media/player/video/a;
 
     move-result-object p2
 
@@ -120,7 +120,7 @@
     check-cast p1, Lcom/vk/media/player/video/view/VideoTextureView;
 
     .line 9
-    invoke-virtual {p2}, Lcom/vk/media/player/video/ExoVideoSource;->e()I
+    invoke-virtual {p2}, Lcom/vk/media/player/video/a;->e()I
 
     move-result v0
 
@@ -128,7 +128,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/vk/media/player/video/ExoVideoSource;->c()I
+    invoke-virtual {p2}, Lcom/vk/media/player/video/a;->c()I
 
     move-result p2
 
@@ -136,7 +136,7 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, p2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p2
 
@@ -148,7 +148,7 @@
 
     move-result v1
 
-    invoke-static {p2, v0, v1}, Lcom/vk/libvideo/ad/AdPlayerProxy1;->a(Lkotlin/Pair;II)Lkotlin/Pair;
+    invoke-static {p2, v0, v1}, Lcom/vk/libvideo/ad/d;->a(Lkotlin/Pair;II)Lkotlin/Pair;
 
     move-result-object p2
 
@@ -196,7 +196,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/InstreamAdPlayer$a;
+    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/b$a;
 
     move-result-object p1
 
@@ -204,7 +204,7 @@
 
     const-string p2, "error"
 
-    invoke-interface {p1, p2}, Lcom/my/target/i3/InstreamAdPlayer$a;->a(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/my/target/i3/b$a;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -233,13 +233,13 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/InstreamAdPlayer$a;
+    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/b$a;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/my/target/i3/InstreamAdPlayer$a;->e()V
+    invoke-interface {p1}, Lcom/my/target/i3/b$a;->e()V
 
     goto :goto_0
 
@@ -258,13 +258,13 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/InstreamAdPlayer$a;
+    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/b$a;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/my/target/i3/InstreamAdPlayer$a;->a()V
+    invoke-interface {p1}, Lcom/my/target/i3/b$a;->a()V
 
     :cond_2
     const/4 p1, 0x1

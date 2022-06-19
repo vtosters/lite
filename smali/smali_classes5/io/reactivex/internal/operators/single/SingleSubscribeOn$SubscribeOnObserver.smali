@@ -3,8 +3,8 @@
 .source "SingleSubscribeOn.java"
 
 # interfaces
-.implements Lio/reactivex/SingleObserver;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lc/a/v;
+.implements Lio/reactivex/disposables/b;
 .implements Ljava/lang/Runnable;
 
 
@@ -24,11 +24,11 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         ">;",
-        "Lio/reactivex/SingleObserver<",
+        "Lc/a/v<",
         "TT;>;",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         "Ljava/lang/Runnable;"
     }
 .end annotation
@@ -39,19 +39,19 @@
 
 
 # instance fields
-.field final downstream:Lio/reactivex/SingleObserver;
+.field final downstream:Lc/a/v;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/SingleObserver<",
+            "Lc/a/v<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field final source:Lio/reactivex/SingleSource;
+.field final source:Lc/a/x;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/SingleSource<",
+            "Lc/a/x<",
             "+TT;>;"
         }
     .end annotation
@@ -61,14 +61,14 @@
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/SingleObserver;Lio/reactivex/SingleSource;)V
+.method constructor <init>(Lc/a/v;Lc/a/x;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/SingleObserver<",
+            "Lc/a/v<",
             "-TT;>;",
-            "Lio/reactivex/SingleSource<",
+            "Lc/a/x<",
             "+TT;>;)V"
         }
     .end annotation
@@ -77,10 +77,10 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->downstream:Lio/reactivex/SingleObserver;
+    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->downstream:Lc/a/v;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->source:Lio/reactivex/SingleSource;
+    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->source:Lc/a/x;
 
     .line 4
     new-instance p1, Lio/reactivex/internal/disposables/SequentialDisposable;
@@ -94,11 +94,11 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -112,9 +112,9 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->downstream:Lio/reactivex/SingleObserver;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->downstream:Lc/a/v;
 
-    invoke-interface {v0, p1}, Lio/reactivex/SingleObserver;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lc/a/v;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -123,9 +123,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->downstream:Lio/reactivex/SingleObserver;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->downstream:Lc/a/v;
 
-    invoke-interface {v0, p1}, Lio/reactivex/SingleObserver;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lc/a/v;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -138,9 +138,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;)Z
 
     move-result v0
 
@@ -165,9 +165,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->source:Lio/reactivex/SingleSource;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->source:Lc/a/x;
 
-    invoke-interface {v0, p0}, Lio/reactivex/SingleSource;->a(Lio/reactivex/SingleObserver;)V
+    invoke-interface {v0, p0}, Lc/a/x;->a(Lc/a/v;)V
 
     return-void
 .end method

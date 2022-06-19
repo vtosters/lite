@@ -48,10 +48,10 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lcom/vk/mentions/MentionModels;
+    check-cast p1, Lcom/vk/mentions/a;
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels;->c()I
+    invoke-virtual {p1}, Lcom/vk/mentions/a;->c()I
 
     move-result p1
 
@@ -59,10 +59,10 @@
 
     move-result-object p1
 
-    check-cast p2, Lcom/vk/mentions/MentionModels;
+    check-cast p2, Lcom/vk/mentions/a;
 
     .line 3
-    invoke-virtual {p2}, Lcom/vk/mentions/MentionModels;->c()I
+    invoke-virtual {p2}, Lcom/vk/mentions/a;->c()I
 
     move-result p2
 

@@ -1,5 +1,5 @@
 .class final Lcom/vk/dto/common/GoodAlbum$b;
-.super Lcom/vk/dto/common/data/JsonParser;
+.super Lcom/vk/dto/common/data/c;
 .source "GoodAlbum.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/JsonParser<",
+        "Lcom/vk/dto/common/data/c<",
         "Lcom/vk/dto/common/GoodAlbum;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "LinkRedirActivity.java"
 
 # interfaces
-.implements Lcom/vk/navigation/ResulterProvider;
+.implements Lcom/vk/navigation/u;
 
 
 # instance fields
@@ -13,7 +13,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/navigation/ActivityResulter;",
+            "Lcom/vk/navigation/c;",
             ">;"
         }
     .end annotation
@@ -21,9 +21,9 @@
 
 .field private c:Lcom/vtosters/lite/activities/LogoutReceiver;
 
-.field private d:Lcom/vk/im/engine/reporters/ImReporters;
+.field private d:Lcom/vk/im/engine/reporters/k;
 
-.field private e:Lcom/vk/music/stats/MusicStatsTracker;
+.field private e:Lcom/vk/music/stats/d;
 
 
 # direct methods
@@ -44,20 +44,20 @@
     iput-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity;->c:Lcom/vtosters/lite/activities/LogoutReceiver;
 
     .line 4
-    invoke-static {}, Lcom/vk/im/ui/ImUiModule1;->a()Lcom/vk/im/ui/ImUiModule;
+    invoke-static {}, Lcom/vk/im/ui/a;->a()Lcom/vk/im/ui/ImUiModule;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/ImUiModule;->c()Lcom/vk/im/engine/reporters/ImReporters;
+    invoke-virtual {v0}, Lcom/vk/im/ui/ImUiModule;->c()Lcom/vk/im/engine/reporters/k;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity;->d:Lcom/vk/im/engine/reporters/ImReporters;
+    iput-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity;->d:Lcom/vk/im/engine/reporters/k;
 
     .line 5
-    sget-object v0, Lcom/vk/music/common/Music$a;->h:Lcom/vk/music/stats/MusicStatsTracker;
+    sget-object v0, Lcom/vk/music/common/c$a;->h:Lcom/vk/music/stats/d;
 
-    iput-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity;->e:Lcom/vk/music/stats/MusicStatsTracker;
+    iput-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity;->e:Lcom/vk/music/stats/d;
 
     return-void
 .end method
@@ -111,9 +111,9 @@
     sub-long/2addr v0, v2
 
     .line 4
-    iget-object p1, p0, Lcom/vtosters/lite/LinkRedirActivity;->d:Lcom/vk/im/engine/reporters/ImReporters;
+    iget-object p1, p0, Lcom/vtosters/lite/LinkRedirActivity;->d:Lcom/vk/im/engine/reporters/k;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/reporters/ImReporters;->k()Lcom/vk/im/engine/reporters/MsgShowReporter;
+    invoke-virtual {p1}, Lcom/vk/im/engine/reporters/k;->k()Lcom/vk/im/engine/reporters/MsgShowReporter;
 
     move-result-object p1
 
@@ -134,7 +134,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/navigation/ActivityResulter;)V
+.method public a(Lcom/vk/navigation/c;)V
     .locals 1
 
     .line 6
@@ -149,7 +149,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/ActivityResulter;)V
+.method public b(Lcom/vk/navigation/c;)V
     .locals 1
 
     .line 1
@@ -200,10 +200,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/ActivityResulter;
+    check-cast v1, Lcom/vk/navigation/c;
 
     .line 4
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/ActivityResulter;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/c;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -259,11 +259,11 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {p1}, Lb/h/h/d/c;->D0()I
 
     move-result p1
 
@@ -313,13 +313,13 @@
     if-eqz p1, :cond_2
 
     .line 9
-    new-instance p1, Lcom/vk/navigation/Navigator;
+    new-instance p1, Lcom/vk/navigation/o;
 
     const-class v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;
 
-    invoke-direct {p1, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p1, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
-    invoke-virtual {p1, p0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, p0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     .line 10
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -377,20 +377,20 @@
     if-eqz v6, :cond_4
 
     .line 15
-    invoke-static {v2}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/vk/common/links/b;->a(Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
     .line 16
-    invoke-static {v2}, Lcom/vk/common/links/LinkProcessor;->b(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/vk/common/links/c;->b(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_4
 
-    invoke-static {v2}, Lcom/vk/common/links/LinkProcessor;->c(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/vk/common/links/c;->c(Ljava/lang/String;)Z
 
     move-result v6
 
@@ -418,7 +418,7 @@
     invoke-static {p1}, Lcom/vk/log/L;->b([Ljava/lang/Object;)V
 
     .line 18
-    invoke-static {v5}, Lcom/vk/core/util/ToastUtils;->a(I)V
+    invoke-static {v5}, Lcom/vk/core/util/k1;->a(I)V
 
     .line 19
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -536,11 +536,11 @@
     if-eqz v1, :cond_6
 
     .line 29
-    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
+    new-instance v0, Lcom/vk/profile/ui/c$z;
 
-    invoke-direct {v0, v9}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
+    invoke-direct {v0, v9}, Lcom/vk/profile/ui/c$z;-><init>(I)V
 
-    invoke-virtual {v0, p0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     .line 30
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -558,11 +558,11 @@
     if-eqz v1, :cond_7
 
     .line 32
-    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
 
     move-result-object v7
 
@@ -574,7 +574,7 @@
 
     move-object v8, p0
 
-    invoke-interface/range {v7 .. v12}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface/range {v7 .. v12}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 33
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -743,7 +743,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lcom/vtosters/lite/utils/XSRFTokenUtil;->a(Ljava/lang/String;Ljava/lang/Object;)Z
+    invoke-static {p1, v2}, Lcom/vtosters/lite/utils/o;->a(Ljava/lang/String;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -756,7 +756,7 @@
 
     .line 50
     :cond_c
-    invoke-static {p1}, Lcom/vk/common/links/LinkProcessor;->b(Landroid/net/Uri;)Z
+    invoke-static {p1}, Lcom/vk/common/links/c;->b(Landroid/net/Uri;)Z
 
     move-result v0
 
@@ -845,9 +845,9 @@
     if-eqz p1, :cond_d
 
     .line 57
-    sget-object v1, Lcom/vtosters/lite/im/ImSendHelper;->INSTANCE:Lcom/vtosters/lite/im/ImSendHelper;
+    sget-object v1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
 
-    invoke-virtual {v1, p0, p1, v0}, Lcom/vtosters/lite/im/ImSendHelper;->a(Ljava/lang/Object;ILjava/lang/String;)Z
+    invoke-virtual {v1, p0, p1, v0}, Lcom/vtosters/lite/im/i;->a(Ljava/lang/Object;ILjava/lang/String;)Z
 
     .line 58
     :cond_d
@@ -894,7 +894,7 @@
     check-cast v10, Lcom/vk/api/base/Document;
 
     .line 62
-    new-instance p1, Lcom/vk/common/links/LinkProcessor$b;
+    new-instance p1, Lcom/vk/common/links/c$b;
 
     iget-boolean v7, p0, Lcom/vtosters/lite/LinkRedirActivity;->a:Z
 
@@ -904,10 +904,10 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v4 .. v10}, Lcom/vk/common/links/LinkProcessor$b;-><init>(ZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/api/base/Document;)V
+    invoke-direct/range {v4 .. v10}, Lcom/vk/common/links/c$b;-><init>(ZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/api/base/Document;)V
 
     .line 63
-    iget-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity;->e:Lcom/vk/music/stats/MusicStatsTracker;
+    iget-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity;->e:Lcom/vk/music/stats/d;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -915,14 +915,14 @@
 
     const-string v3, "open_music"
 
-    invoke-interface {v0, v1, v3}, Lcom/vk/music/stats/MusicStatsTracker;->a(Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v3}, Lcom/vk/music/stats/d;->a(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 64
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/IntentUtils;->b(Landroid/content/Intent;)Z
+    invoke-static {v0}, Lcom/vk/core/util/j0;->b(Landroid/content/Intent;)Z
 
     move-result v0
 
@@ -937,9 +937,9 @@
 
     new-instance v3, Lcom/vtosters/lite/LinkRedirActivity$c;
 
-    invoke-direct {v3, p0, v0, p1, v2}, Lcom/vtosters/lite/LinkRedirActivity$c;-><init>(Lcom/vtosters/lite/LinkRedirActivity;ZLcom/vk/common/links/LinkProcessor$b;Ljava/lang/String;)V
+    invoke-direct {v3, p0, v0, p1, v2}, Lcom/vtosters/lite/LinkRedirActivity$c;-><init>(Lcom/vtosters/lite/LinkRedirActivity;ZLcom/vk/common/links/c$b;Ljava/lang/String;)V
 
-    invoke-static {p0, v2, p1, v1, v3}, Lcom/vk/common/links/LinkProcessor;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;Lcom/vk/common/links/OpenCallback;)Z
+    invoke-static {p0, v2, p1, v1, v3}, Lcom/vk/common/links/c;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;Landroid/os/Bundle;Lcom/vk/common/links/f;)Z
 
     move-result p1
 
@@ -956,7 +956,7 @@
     .line 67
     :cond_10
     :goto_4
-    invoke-static {v5}, Lcom/vk/core/util/ToastUtils;->a(I)V
+    invoke-static {v5}, Lcom/vk/core/util/k1;->a(I)V
 
     .line 68
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V

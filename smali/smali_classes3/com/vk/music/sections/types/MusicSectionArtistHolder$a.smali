@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/sections/types/MusicSectionArtistHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/music/sections/types/MusicSectionAdapter;)V
+    value = Lcom/vk/music/sections/types/MusicSectionArtistHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/sections/f;Lcom/vk/music/sections/types/MusicSectionAdapter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -52,7 +52,7 @@
 
     iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionArtistHolder$a;->a:Lcom/vk/music/sections/types/MusicSectionArtistHolder;
 
-    invoke-static {v0}, Lcom/vk/music/sections/types/MusicSectionArtistHolder;->b(Lcom/vk/music/sections/types/MusicSectionArtistHolder;)Lcom/vk/music/sections/MusicSectionsModel;
+    invoke-static {v0}, Lcom/vk/music/sections/types/MusicSectionArtistHolder;->b(Lcom/vk/music/sections/types/MusicSectionArtistHolder;)Lcom/vk/music/sections/f;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, p1, v1, v2}, Lcom/vk/music/sections/MusicSectionsModel;->a(Lcom/vk/dto/music/Section;Lcom/vk/dto/music/MusicTrack;Z)V
+    invoke-interface {v0, p1, v1, v2}, Lcom/vk/music/sections/f;->a(Lcom/vk/dto/music/Section;Lcom/vk/dto/music/MusicTrack;Z)V
 
     :cond_0
     return-void

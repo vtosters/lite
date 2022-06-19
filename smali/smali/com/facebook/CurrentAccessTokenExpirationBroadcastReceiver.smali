@@ -32,18 +32,18 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/facebook/FacebookSdk;->t()Z
+    invoke-static {}, Lcom/facebook/e;->t()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-static {}, Lcom/facebook/AccessTokenManager;->e()Lcom/facebook/AccessTokenManager;
+    invoke-static {}, Lcom/facebook/b;->e()Lcom/facebook/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/facebook/AccessTokenManager;->a()V
+    invoke-virtual {p1}, Lcom/facebook/b;->a()V
 
     :cond_0
     return-void

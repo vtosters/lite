@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->Q4()Lio/reactivex/Observable;
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->Q4()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final call()Lcom/vk/utils/ContactImportUtils$a;
+.method public final call()Lcom/vk/utils/b$a;
     .locals 12
 
     const/4 v0, 0x1
@@ -89,10 +89,10 @@
     move-result-object v1
 
     .line 4
-    invoke-virtual {v1}, Lcom/facebook/GraphRequest;->a()Lcom/facebook/GraphResponse;
+    invoke-virtual {v1}, Lcom/facebook/GraphRequest;->a()Lcom/facebook/i;
 
     .line 5
-    new-instance v1, Lcom/vk/utils/ContactImportUtils$a;
+    new-instance v1, Lcom/vk/utils/b$a;
 
     iget-object v5, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$f;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
@@ -110,7 +110,7 @@
 
     const-string v3, "getArguments()!!.getParc\u2026e<AccessToken>(SESSION)!!"
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Lcom/facebook/AccessToken;
 
@@ -120,7 +120,7 @@
 
     const-string v3, "getArguments()!!.getParc\u2026sToken>(SESSION)!!.userId"
 
-    invoke-static {v7, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aget-object v8, v0, v2
 
@@ -134,23 +134,23 @@
 
     move-object v5, v1
 
-    invoke-direct/range {v5 .. v11}, Lcom/vk/utils/ContactImportUtils$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v5 .. v11}, Lcom/vk/utils/b$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZILkotlin/jvm/internal/i;)V
 
     return-object v1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
     .line 6
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 .end method
@@ -159,7 +159,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$f;->call()Lcom/vk/utils/ContactImportUtils$a;
+    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$f;->call()Lcom/vk/utils/b$a;
 
     move-result-object v0
 

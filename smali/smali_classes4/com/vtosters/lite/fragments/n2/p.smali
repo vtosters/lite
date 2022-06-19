@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # static fields
@@ -36,9 +36,9 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Lkotlin/Unit;)V
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/n2/q0;->a(Lkotlin/m;)V
 
     return-void
 .end method

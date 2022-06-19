@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts;
-.super Lcom/vk/im/engine/i/BaseImEngineCmd;
+.super Lcom/vk/im/engine/i/a;
 .source "ContactsHideNewVkContacts.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
-        "Lkotlin/Unit;",
+        "Lcom/vk/im/engine/i/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -18,7 +18,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;"
         }
     .end annotation
@@ -35,7 +35,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;",
             "Ljava/lang/Object;",
             ")V"
@@ -43,7 +43,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts;->b:Ljava/util/List;
 
@@ -54,43 +54,43 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts;->a(Lcom/vk/im/engine/ImEnvironment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts;->a(Lcom/vk/im/engine/d;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/ImEnvironment;)V
+.method public a(Lcom/vk/im/engine/d;)V
     .locals 10
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts;->b:Ljava/util/List;
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts$onExecute$userIds$1;->a:Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts$onExecute$userIds$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts$onExecute$userIds$2;->a:Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts$onExecute$userIds$2;
 
-    invoke-static {v0, v1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lcom/vk/im/engine/utils/collection/IntCollection;
+    invoke-static {v0, v1}, Lcom/vk/im/engine/utils/collection/e;->a(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lcom/vk/im/engine/utils/collection/d;
 
     move-result-object v0
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
@@ -98,19 +98,19 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object v0
 
     .line 6
     sget-object v1, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts$onExecute$result$1;->a:Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts$onExecute$result$1;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/SparseArrayExt1;->c(Landroid/util/SparseArray;Lkotlin/jvm/b/Functions2;)Landroid/util/SparseArray;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/x;->c(Landroid/util/SparseArray;Lkotlin/jvm/b/b;)Landroid/util/SparseArray;
 
     move-result-object v5
 
     .line 7
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -118,34 +118,34 @@
 
     move-result-object v0
 
-    invoke-static {v5}, Lcom/vk/core/extensions/SparseArrayExt1;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
+    invoke-static {v5}, Lcom/vk/core/extensions/x;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->a(Ljava/util/Collection;)V
 
     .line 8
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts$onExecute$1;->a:Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts$onExecute$1;
 
-    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/InstantJobManager;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/b;->a(Lkotlin/jvm/b/b;)V
 
     .line 9
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/im/engine/internal/j/d/ContactsMarkNewAsSeenJob;
+    new-instance v1, Lcom/vk/im/engine/internal/j/d/a;
 
-    invoke-direct {v1}, Lcom/vk/im/engine/internal/j/d/ContactsMarkNewAsSeenJob;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/engine/internal/j/d/a;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/InstantJobManager;->a(Lcom/vk/instantjobs/InstantJob;)V
+    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/b;->a(Lcom/vk/instantjobs/InstantJob;)V
 
     .line 10
-    new-instance v0, Lcom/vk/im/engine/events/OnProfilesUpdateEvent;
+    new-instance v0, Lcom/vk/im/engine/events/i0;
 
     iget-object v3, p0, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts;->c:Ljava/lang/Object;
 
@@ -161,9 +161,9 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v9}, Lcom/vk/im/engine/events/OnProfilesUpdateEvent;-><init>(Ljava/lang/Object;Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/im/engine/events/i0;-><init>(Ljava/lang/Object;Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
 
     return-void
 .end method
@@ -183,7 +183,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -193,7 +193,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts;->c:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

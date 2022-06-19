@@ -3,7 +3,7 @@
 .source "PostingAttachGalleryPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/mediastore/system/AlbumEntry;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/mediastore/system/a;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,15 +56,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/mediastore/system/AlbumEntry;)Z
+.method public final a(Lcom/vk/mediastore/system/a;)Z
     .locals 1
 
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/mediastore/system/AlbumEntry;->a()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/mediastore/system/a;->a()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -79,9 +79,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/mediastore/system/AlbumEntry;
+    check-cast p1, Lcom/vk/mediastore/system/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$reloadMediaStore$1$2;->a(Lcom/vk/mediastore/system/AlbumEntry;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$reloadMediaStore$1$2;->a(Lcom/vk/mediastore/system/a;)Z
 
     move-result p1
 

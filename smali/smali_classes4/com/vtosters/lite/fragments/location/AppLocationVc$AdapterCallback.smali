@@ -3,7 +3,7 @@
 .source "AppLocationVc.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/fragments/location/AppLocationAdapter$a;
+.implements Lcom/vtosters/lite/fragments/location/a$a;
 
 
 # annotations
@@ -52,17 +52,17 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->a(DD)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->a(DD)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)V
+.method public a(Lcom/vk/im/ui/components/msg_send/picker/location/c;)V
     .locals 2
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;->b()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/c;->b()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
 
     if-eq v0, v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;->b()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/c;->b()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v0
 
@@ -109,7 +109,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;->b()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/c;->b()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object p1
 
@@ -123,20 +123,20 @@
 
     new-instance v1, Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback$onClick$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback$onClick$1;-><init>(Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback;Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)V
+    invoke-direct {v1, p0, p1}, Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback$onClick$1;-><init>(Lcom/vtosters/lite/fragments/location/AppLocationVc$AdapterCallback;Lcom/vk/im/ui/components/msg_send/picker/location/c;)V
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/fragments/location/AppLocationVc;->a(Lcom/vtosters/lite/fragments/location/AppLocationVc;Lkotlin/jvm/b/Functions;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/fragments/location/AppLocationVc;->a(Lcom/vtosters/lite/fragments/location/AppLocationVc;Lkotlin/jvm/b/a;)V
 
     :cond_3
     :goto_2
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;Landroid/view/View;)V
+.method public a(Lcom/vk/im/ui/components/msg_send/picker/location/c;Landroid/view/View;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vtosters/lite/fragments/location/AppLocationAdapter$a$b;->a(Lcom/vtosters/lite/fragments/location/AppLocationAdapter$a;Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;Landroid/view/View;)V
+    invoke-static {p0, p1, p2}, Lcom/vtosters/lite/fragments/location/a$a$b;->a(Lcom/vtosters/lite/fragments/location/a$a;Lcom/vk/im/ui/components/msg_send/picker/location/c;Landroid/view/View;)V
 
     return-void
 .end method
@@ -153,7 +153,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->a()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->a()Z
 
     move-result v0
 
@@ -178,7 +178,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->b()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->b()Z
 
     move-result v0
 
@@ -191,11 +191,11 @@
     return v0
 .end method
 
-.method public b(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)Z
+.method public b(Lcom/vk/im/ui/components/msg_send/picker/location/c;)Z
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vtosters/lite/fragments/location/AppLocationAdapter$a$b;->a(Lcom/vtosters/lite/fragments/location/AppLocationAdapter$a;Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)Z
+    invoke-static {p0, p1}, Lcom/vtosters/lite/fragments/location/a$a$b;->a(Lcom/vtosters/lite/fragments/location/a$a;Lcom/vk/im/ui/components/msg_send/picker/location/c;)Z
 
     move-result p1
 
@@ -214,7 +214,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->g()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->g()V
 
     :cond_0
     return-void
@@ -232,7 +232,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->o()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->o()V
 
     :cond_0
     return-void
@@ -250,7 +250,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/menu/MenuTitleCallback;->onSearchRequested()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/menu/b;->onSearchRequested()V
 
     :cond_0
     return-void
@@ -282,7 +282,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->p()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->p()V
 
     :cond_1
     return-void
@@ -314,7 +314,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->q()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->q()V
 
     :cond_1
     return-void

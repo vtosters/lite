@@ -205,9 +205,9 @@
     if-eqz v0, :cond_1
 
     .line 3
-    sget-object v0, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
+    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->o()Z
+    invoke-virtual {v0}, Lcom/vk/stickers/t;->o()Z
 
     move-result v0
 
@@ -239,17 +239,17 @@
     invoke-direct {v0, v1}, Lcom/vk/stickers/views/animation/VKAnimationView;-><init>(Landroid/content/Context;)V
 
     .line 6
-    new-instance v1, Lcom/vtosters/lite/ui/FlowLayout$a;
+    new-instance v1, Lcom/vtosters/lite/ui/u$a;
 
-    invoke-direct {v1}, Lcom/vtosters/lite/ui/FlowLayout$a;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/ui/u$a;-><init>()V
 
     .line 7
-    sget v2, Lcom/vk/stickers/StickersConfig;->f:I
+    sget v2, Lcom/vk/stickers/v;->f:I
 
-    iput v2, v1, Lcom/vtosters/lite/ui/FlowLayout$a;->f:I
+    iput v2, v1, Lcom/vtosters/lite/ui/u$a;->f:I
 
     .line 8
-    iput v2, v1, Lcom/vtosters/lite/ui/FlowLayout$a;->g:I
+    iput v2, v1, Lcom/vtosters/lite/ui/u$a;->g:I
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -284,15 +284,15 @@
     invoke-direct {v0, v1}, Lcom/vk/imageloader/view/VKImageView;-><init>(Landroid/content/Context;)V
 
     .line 14
-    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
+    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
 
     move-result-object v1
 
-    check-cast v1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    check-cast v1, Lcom/facebook/drawee/generic/a;
 
-    sget-object v2, Lcom/facebook/drawee/drawable/ScalingUtils$b;->k:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v2, Lcom/facebook/drawee/drawable/r$b;->k:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     .line 15
     invoke-virtual {v0, p2}, Lcom/vk/imageloader/view/VKImageView;->a(Ljava/lang/String;)V

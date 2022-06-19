@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract send(Landroid/support/v4/app/INotificationSideChannel;)V
+.method public abstract send(Landroid/support/v4/app/a;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

@@ -14,20 +14,20 @@
 
 
 # direct methods
-.method public constructor <init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)V
+.method public constructor <init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lorg/json/JSONObject;",
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/actionlinks/ActionLink;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)V
 
     return-void
 .end method

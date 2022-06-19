@@ -3,7 +3,7 @@
 .source "VideoFileController.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/libvideo/y/VideoEvents1;",
+        "Lc/a/z/g<",
+        "Lcom/vk/libvideo/y/a;",
         ">;"
     }
 .end annotation
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/libvideo/y/VideoEvents1;)V
+.method public final a(Lcom/vk/libvideo/y/a;)V
     .locals 2
 
     .line 1
-    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents3;
+    instance-of v0, p1, Lcom/vk/libvideo/y/n;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vk/libvideo/y/VideoEvents3;
+    check-cast p1, Lcom/vk/libvideo/y/n;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/y/VideoEvents3;->a()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vk/libvideo/y/n;->a()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -83,7 +83,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/VideoFileController$k;->a:Lcom/vk/libvideo/VideoFileController;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/y/VideoEvents3;->a()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vk/libvideo/y/n;->a()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -133,9 +133,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/y/VideoEvents1;
+    check-cast p1, Lcom/vk/libvideo/y/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/VideoFileController$k;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/VideoFileController$k;->a(Lcom/vk/libvideo/y/a;)V
 
     return-void
 .end method

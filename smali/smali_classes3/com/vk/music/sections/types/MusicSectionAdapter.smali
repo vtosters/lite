@@ -1,14 +1,14 @@
 .class public final Lcom/vk/music/sections/types/MusicSectionAdapter;
-.super Lcom/vk/music/ui/common/MusicAdapter;
+.super Lcom/vk/music/ui/common/b;
 .source "MusicSectionAdapter.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/music/ui/common/MusicAdapter<",
+        "Lcom/vk/music/ui/common/b<",
         "Ljava/lang/Object;",
-        "Lcom/vk/music/ui/common/MusicViewHolder<",
+        "Lcom/vk/music/ui/common/o<",
         "Ljava/lang/Object;",
         ">;>;"
     }
@@ -29,40 +29,40 @@
 
 .field private final e:Lcom/vk/dto/music/Section$Type;
 
-.field private final f:Lcom/vk/music/sections/MusicSectionsModel;
+.field private final f:Lcom/vk/music/sections/f;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/dto/music/Section$Type;Lcom/vk/music/sections/MusicSectionsModel;)V
+.method public constructor <init>(Lcom/vk/dto/music/Section$Type;Lcom/vk/music/sections/f;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/music/ui/common/MusicAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/ui/common/b;-><init>()V
 
     iput-object p1, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->e:Lcom/vk/dto/music/Section$Type;
 
-    iput-object p2, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iput-object p2, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/sections/types/MusicSectionAdapter;)Lcom/vk/music/sections/MusicSectionsModel;
+.method public static final synthetic a(Lcom/vk/music/sections/types/MusicSectionAdapter;)Lcom/vk/music/sections/f;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iget-object p0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/music/ui/common/MusicViewHolder;I)V
+.method public a(Lcom/vk/music/ui/common/o;I)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Ljava/lang/Object;",
             ">;I)V"
         }
@@ -105,7 +105,7 @@
 
     const-string v2, "MusicPlaybackLaunchConte\u2026rce(section?.source?: \"\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Lcom/vk/music/sections/types/MusicSectionHolder$c;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
@@ -121,7 +121,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/music/ui/common/MusicViewHolder;->a(Ljava/lang/Object;I)V
+    invoke-virtual {p1, v0, p2}, Lcom/vk/music/ui/common/o;->a(Ljava/lang/Object;I)V
 
     :cond_3
     return-void
@@ -214,9 +214,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/music/ui/common/MusicViewHolder;
+    check-cast p1, Lcom/vk/music/ui/common/o;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/music/sections/types/MusicSectionAdapter;->a(Lcom/vk/music/ui/common/MusicViewHolder;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/music/sections/types/MusicSectionAdapter;->a(Lcom/vk/music/ui/common/o;I)V
 
     return-void
 .end method
@@ -225,21 +225,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/music/sections/types/MusicSectionAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/MusicViewHolder;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/music/sections/types/MusicSectionAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/o;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/MusicViewHolder;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/o;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Ljava/lang/Object;",
             ">;"
         }
@@ -289,17 +289,17 @@
 
     .line 4
     :pswitch_0
-    new-instance p2, Lcom/vk/music/sections/types/MusicSectionCustomImageLargeSliderHolder;
+    new-instance p2, Lcom/vk/music/sections/types/i;
 
-    invoke-direct {p2, p1}, Lcom/vk/music/sections/types/MusicSectionCustomImageLargeSliderHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/music/sections/types/i;-><init>(Landroid/view/ViewGroup;)V
 
     goto/16 :goto_3
 
     .line 5
     :pswitch_1
-    new-instance p2, Lcom/vk/music/sections/types/MusicSectionArtistVideoClipsHolder;
+    new-instance p2, Lcom/vk/music/sections/types/d;
 
-    invoke-direct {p2, p1}, Lcom/vk/music/sections/types/MusicSectionArtistVideoClipsHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/music/sections/types/d;-><init>(Landroid/view/ViewGroup;)V
 
     goto/16 :goto_3
 
@@ -315,29 +315,29 @@
     :pswitch_3
     new-instance p2, Lcom/vk/music/sections/types/MusicSectionArtistHolder;
 
-    iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
-    invoke-direct {p2, p1, v0, p0}, Lcom/vk/music/sections/types/MusicSectionArtistHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/music/sections/types/MusicSectionAdapter;)V
+    invoke-direct {p2, p1, v0, p0}, Lcom/vk/music/sections/types/MusicSectionArtistHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/sections/f;Lcom/vk/music/sections/types/MusicSectionAdapter;)V
 
     goto/16 :goto_3
 
     .line 8
     :pswitch_4
-    sget-object p2, Lcom/vk/music/sections/types/MusicSectionPlaylistHolder;->D:Lcom/vk/music/sections/types/MusicSectionPlaylistHolder$a;
+    sget-object p2, Lcom/vk/music/sections/types/m;->D:Lcom/vk/music/sections/types/m$a;
 
-    iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
-    invoke-interface {v0}, Lcom/vk/music/sections/MusicSectionsModel;->r0()Lcom/vk/music/player/PlayerModel;
+    invoke-interface {v0}, Lcom/vk/music/sections/f;->r0()Lcom/vk/music/player/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iget-object v1, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
-    invoke-interface {v1}, Lcom/vk/music/sections/MusicSectionsModel;->q()Lcom/vk/music/common/BoomModel;
+    invoke-interface {v1}, Lcom/vk/music/sections/f;->q()Lcom/vk/music/common/BoomModel;
 
     move-result-object v1
 
-    invoke-virtual {p2, p1, v0, v1}, Lcom/vk/music/sections/types/MusicSectionPlaylistHolder$a;->b(Landroid/view/ViewGroup;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;)Lcom/vk/music/sections/types/MusicSectionPlaylistHolder;
+    invoke-virtual {p2, p1, v0, v1}, Lcom/vk/music/sections/types/m$a;->b(Landroid/view/ViewGroup;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;)Lcom/vk/music/sections/types/m;
 
     move-result-object p2
 
@@ -345,21 +345,21 @@
 
     .line 9
     :pswitch_5
-    sget-object p2, Lcom/vk/music/sections/types/MusicSectionPlaylistHolder;->D:Lcom/vk/music/sections/types/MusicSectionPlaylistHolder$a;
+    sget-object p2, Lcom/vk/music/sections/types/m;->D:Lcom/vk/music/sections/types/m$a;
 
-    iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
-    invoke-interface {v0}, Lcom/vk/music/sections/MusicSectionsModel;->r0()Lcom/vk/music/player/PlayerModel;
+    invoke-interface {v0}, Lcom/vk/music/sections/f;->r0()Lcom/vk/music/player/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iget-object v1, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
-    invoke-interface {v1}, Lcom/vk/music/sections/MusicSectionsModel;->q()Lcom/vk/music/common/BoomModel;
+    invoke-interface {v1}, Lcom/vk/music/sections/f;->q()Lcom/vk/music/common/BoomModel;
 
     move-result-object v1
 
-    invoke-virtual {p2, p1, v0, v1}, Lcom/vk/music/sections/types/MusicSectionPlaylistHolder$a;->a(Landroid/view/ViewGroup;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;)Lcom/vk/music/sections/types/MusicSectionPlaylistHolder;
+    invoke-virtual {p2, p1, v0, v1}, Lcom/vk/music/sections/types/m$a;->a(Landroid/view/ViewGroup;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;)Lcom/vk/music/sections/types/m;
 
     move-result-object p2
 
@@ -373,13 +373,13 @@
 
     invoke-direct {v0, p0}, Lcom/vk/music/sections/types/MusicSectionAdapter$onCreateViewHolder$1;-><init>(Lcom/vk/music/sections/types/MusicSectionAdapter;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
 
     goto :goto_3
 
     .line 11
     :pswitch_7
-    new-instance p2, Lcom/vk/music/sections/types/MusicSectionCustomImageSmallHolder;
+    new-instance p2, Lcom/vk/music/sections/types/j;
 
     invoke-virtual {p0}, Lcom/vk/music/sections/types/MusicSectionAdapter;->getItemCount()I
 
@@ -393,33 +393,33 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-direct {p2, p1, v0}, Lcom/vk/music/sections/types/MusicSectionCustomImageSmallHolder;-><init>(Landroid/view/ViewGroup;Z)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/music/sections/types/j;-><init>(Landroid/view/ViewGroup;Z)V
 
     goto :goto_3
 
     .line 12
     :pswitch_8
-    new-instance p2, Lcom/vk/music/sections/types/MusicSectionNotification;
+    new-instance p2, Lcom/vk/music/sections/types/l;
 
-    invoke-direct {p2, p1}, Lcom/vk/music/sections/types/MusicSectionNotification;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/music/sections/types/l;-><init>(Landroid/view/ViewGroup;)V
 
     goto :goto_3
 
     .line 13
     :pswitch_9
-    new-instance p2, Lcom/vk/music/sections/types/MusicSectionCustomImageBigHolder;
+    new-instance p2, Lcom/vk/music/sections/types/f;
 
-    invoke-direct {p2, p1}, Lcom/vk/music/sections/types/MusicSectionCustomImageBigHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/music/sections/types/f;-><init>(Landroid/view/ViewGroup;)V
 
     goto :goto_3
 
     .line 14
     :pswitch_a
-    sget-object p2, Lcom/vk/music/sections/types/MusicSectionAudioHolder;->a:Lcom/vk/music/sections/types/MusicSectionAudioHolder$a;
+    sget-object p2, Lcom/vk/music/sections/types/e;->a:Lcom/vk/music/sections/types/e$a;
 
-    iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
-    invoke-virtual {p2, p1, v0, p0, v2}, Lcom/vk/music/sections/types/MusicSectionAudioHolder$a;->a(Landroid/view/ViewGroup;Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/music/sections/types/MusicSectionAdapter;Z)Lcom/vk/music/ui/common/MusicViewHolder;
+    invoke-virtual {p2, p1, v0, p0, v2}, Lcom/vk/music/sections/types/e$a;->a(Landroid/view/ViewGroup;Lcom/vk/music/sections/f;Lcom/vk/music/sections/types/MusicSectionAdapter;Z)Lcom/vk/music/ui/common/o;
 
     move-result-object p2
 
@@ -427,9 +427,9 @@
 
     .line 15
     :pswitch_b
-    sget-object p2, Lcom/vk/music/sections/types/MusicSectionAudioHolder;->a:Lcom/vk/music/sections/types/MusicSectionAudioHolder$a;
+    sget-object p2, Lcom/vk/music/sections/types/e;->a:Lcom/vk/music/sections/types/e$a;
 
-    iget-object v3, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iget-object v3, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
     invoke-virtual {p0}, Lcom/vk/music/sections/types/MusicSectionAdapter;->getItemCount()I
 
@@ -443,7 +443,7 @@
     const/4 v0, 0x0
 
     :goto_1
-    invoke-virtual {p2, p1, v3, p0, v0}, Lcom/vk/music/sections/types/MusicSectionAudioHolder$a;->b(Landroid/view/ViewGroup;Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/music/sections/types/MusicSectionAdapter;Z)Lcom/vk/music/ui/common/MusicViewHolder;
+    invoke-virtual {p2, p1, v3, p0, v0}, Lcom/vk/music/sections/types/e$a;->b(Landroid/view/ViewGroup;Lcom/vk/music/sections/f;Lcom/vk/music/sections/types/MusicSectionAdapter;Z)Lcom/vk/music/ui/common/o;
 
     move-result-object p2
 
@@ -451,9 +451,9 @@
 
     .line 16
     :pswitch_c
-    sget-object p2, Lcom/vk/music/sections/types/MusicSectionAudioHolder;->a:Lcom/vk/music/sections/types/MusicSectionAudioHolder$a;
+    sget-object p2, Lcom/vk/music/sections/types/e;->a:Lcom/vk/music/sections/types/e$a;
 
-    iget-object v3, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/MusicSectionsModel;
+    iget-object v3, p0, Lcom/vk/music/sections/types/MusicSectionAdapter;->f:Lcom/vk/music/sections/f;
 
     invoke-virtual {p0}, Lcom/vk/music/sections/types/MusicSectionAdapter;->getItemCount()I
 
@@ -467,7 +467,7 @@
     const/4 v0, 0x0
 
     :goto_2
-    invoke-virtual {p2, p1, v3, p0, v0}, Lcom/vk/music/sections/types/MusicSectionAudioHolder$a;->a(Landroid/view/ViewGroup;Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/music/sections/types/MusicSectionAdapter;Z)Lcom/vk/music/ui/common/MusicViewHolder;
+    invoke-virtual {p2, p1, v3, p0, v0}, Lcom/vk/music/sections/types/e$a;->a(Landroid/view/ViewGroup;Lcom/vk/music/sections/f;Lcom/vk/music/sections/types/MusicSectionAdapter;Z)Lcom/vk/music/ui/common/o;
 
     move-result-object p2
 

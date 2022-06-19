@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # instance fields
@@ -62,7 +62,7 @@
 
     check-cast v6, Ljava/lang/Boolean;
 
-    invoke-static/range {v0 .. v6}, Lcom/vtosters/lite/utils/AdsUtil;->a(ILjava/lang/String;Ljava/lang/String;Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;Ljava/lang/Boolean;)V
+    invoke-static/range {v0 .. v6}, Lcom/vtosters/lite/utils/b;->a(ILjava/lang/String;Ljava/lang/String;Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;Ljava/lang/Boolean;)V
 
     return-void
 .end method

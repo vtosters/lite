@@ -1,12 +1,12 @@
 .class public final Lkotlin/collections/c0;
-.super Lkotlin/collections/_Maps;
+.super Lkotlin/collections/g0;
 
 
 # direct methods
 .method public static bridge synthetic a(I)I
     .locals 0
 
-    invoke-static {p0}, Lkotlin/collections/Maps;->a(I)I
+    invoke-static {p0}, Lkotlin/collections/f0;->a(I)I
 
     move-result p0
 
@@ -29,7 +29,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/Maps;->a([Lkotlin/Pair;)Ljava/util/HashMap;
+    invoke-static {p0}, Lkotlin/collections/f0;->a([Lkotlin/Pair;)Ljava/util/HashMap;
 
     move-result-object p0
 
@@ -50,7 +50,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lkotlin/collections/Maps;->a()Ljava/util/Map;
+    invoke-static {}, Lkotlin/collections/f0;->a()Ljava/util/Map;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/Maps;->a(Ljava/lang/Iterable;)Ljava/util/Map;
+    invoke-static {p0}, Lkotlin/collections/f0;->a(Ljava/lang/Iterable;)Ljava/util/Map;
 
     move-result-object p0
 
@@ -102,7 +102,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1}, Lkotlin/collections/Maps;->a(Ljava/util/Map;Ljava/lang/Iterable;)Ljava/util/Map;
+    invoke-static {p0, p1}, Lkotlin/collections/f0;->a(Ljava/util/Map;Ljava/lang/Iterable;)Ljava/util/Map;
 
     move-result-object p0
 
@@ -125,14 +125,14 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/MapsJVM;->a(Lkotlin/Pair;)Ljava/util/Map;
+    invoke-static {p0}, Lkotlin/collections/e0;->a(Lkotlin/Pair;)Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static bridge synthetic a(Lkotlin/sequences/Sequence;)Ljava/util/Map;
+.method public static bridge synthetic a(Lkotlin/sequences/j;)Ljava/util/Map;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -141,7 +141,7 @@
             "V:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "+",
             "Lkotlin/Pair<",
             "+TK;+TV;>;>;)",
@@ -150,7 +150,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/Maps;->a(Lkotlin/sequences/Sequence;)Ljava/util/Map;
+    invoke-static {p0}, Lkotlin/collections/f0;->a(Lkotlin/sequences/j;)Ljava/util/Map;
 
     move-result-object p0
 
@@ -171,7 +171,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1}, Lkotlin/collections/Maps;->b(Ljava/util/Map;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, p1}, Lkotlin/collections/f0;->b(Ljava/util/Map;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -194,7 +194,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/Maps;->b([Lkotlin/Pair;)Ljava/util/LinkedHashMap;
+    invoke-static {p0}, Lkotlin/collections/f0;->b([Lkotlin/Pair;)Ljava/util/LinkedHashMap;
 
     move-result-object p0
 
@@ -217,7 +217,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/Maps;->c(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {p0}, Lkotlin/collections/f0;->c(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p0
 
@@ -240,7 +240,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/Maps;->c([Lkotlin/Pair;)Ljava/util/Map;
+    invoke-static {p0}, Lkotlin/collections/f0;->c([Lkotlin/Pair;)Ljava/util/Map;
 
     move-result-object p0
 
@@ -263,7 +263,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/Maps;->d(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {p0}, Lkotlin/collections/f0;->d(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p0
 
@@ -286,7 +286,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/Maps;->d([Lkotlin/Pair;)Ljava/util/Map;
+    invoke-static {p0}, Lkotlin/collections/f0;->d([Lkotlin/Pair;)Ljava/util/Map;
 
     move-result-object p0
 
@@ -310,7 +310,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/_Maps;->e(Ljava/util/Map;)Ljava/util/List;
+    invoke-static {p0}, Lkotlin/collections/g0;->e(Ljava/util/Map;)Ljava/util/List;
 
     move-result-object p0
 

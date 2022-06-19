@@ -3,7 +3,7 @@
 .source "CopyrightHolder.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;",
+        "Lc/a/z/g<",
+        "Lcom/vk/api/newsfeed/b$a;",
         ">;"
     }
 .end annotation
@@ -66,7 +66,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;)V
+.method public final a(Lcom/vk/api/newsfeed/b$a;)V
     .locals 8
 
     .line 1
@@ -77,7 +77,7 @@
     if-nez v0, :cond_2
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;->a()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-virtual {p1}, Lcom/vk/api/newsfeed/b$a;->a()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v0
 
@@ -106,9 +106,9 @@
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->d:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/newsfeed/b$a;->d()Ljava/lang/String;
 
     move-result-object v2
 
@@ -139,7 +139,7 @@
 
     const-string v2, "avatarImage"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f04044d
 
@@ -156,7 +156,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->c:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
@@ -172,7 +172,7 @@
     .line 8
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->c:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f04044f
 
@@ -189,7 +189,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->c:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
@@ -198,7 +198,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->c:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v2, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
@@ -214,7 +214,7 @@
     .line 12
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->d:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->e:Lcom/vk/dto/newsfeed/entries/Copyright;
 
@@ -231,7 +231,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/vk/api/newsfeed/b$a;->a(Ljava/lang/String;)V
 
     .line 14
     :cond_3
@@ -239,7 +239,7 @@
 
     const-string v1, "subtitleText"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/vk/newsfeed/holders/CopyrightHolder;->o0()Lcom/vk/newsfeed/holders/CopyrightHolder$a;
 
@@ -247,13 +247,13 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->a:Lcom/vk/newsfeed/holders/CopyrightHolder;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
     const-string v1, "getContext()"
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->a:Lcom/vk/newsfeed/holders/CopyrightHolder;
 
@@ -279,11 +279,11 @@
 
     const-string v1, "response"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v7, p1
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/newsfeed/holders/CopyrightHolder$a;->a(Lcom/vk/newsfeed/holders/CopyrightHolder$a;Landroid/content/Context;IILcom/vk/dto/newsfeed/entries/Copyright$Type;Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;)Ljava/lang/CharSequence;
+    invoke-static/range {v2 .. v7}, Lcom/vk/newsfeed/holders/CopyrightHolder$a;->a(Lcom/vk/newsfeed/holders/CopyrightHolder$a;Landroid/content/Context;IILcom/vk/dto/newsfeed/entries/Copyright$Type;Lcom/vk/api/newsfeed/b$a;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -296,9 +296,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;
+    check-cast p1, Lcom/vk/api/newsfeed/b$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->a(Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->a(Lcom/vk/api/newsfeed/b$a;)V
 
     return-void
 .end method

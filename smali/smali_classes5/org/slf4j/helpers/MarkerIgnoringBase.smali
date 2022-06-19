@@ -3,7 +3,7 @@
 .source "MarkerIgnoringBase.java"
 
 # interfaces
-.implements Lorg/slf4j/Logger;
+.implements Lorg/slf4j/b;
 
 
 # static fields

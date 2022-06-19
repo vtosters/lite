@@ -11,9 +11,9 @@
             "Landroid/view/View;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;>;>;"
         }
     .end annotation
@@ -34,7 +34,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;-><init>(Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/engine/models/dialogs/DialogTheme;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;-><init>(Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/engine/models/dialogs/DialogTheme;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/engine/models/dialogs/DialogTheme;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/engine/models/dialogs/DialogTheme;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -112,7 +112,7 @@
     return-object v0
 .end method
 
-.method private final a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
+.method private final a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -120,9 +120,9 @@
             "Landroid/view/View;",
             ">(TV;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TV;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -149,17 +149,17 @@
     const-string v1, "bindings"
 
     .line 17
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p3, :cond_1
 
     const/4 v1, 0x1
 
-    invoke-static {p3, v1}, Lkotlin/jvm/internal/TypeIntrinsics;->a(Ljava/lang/Object;I)Ljava/lang/Object;
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/s;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-object v1, p3
 
-    check-cast v1, Lkotlin/jvm/b/Functions2;
+    check-cast v1, Lkotlin/jvm/b/b;
 
     invoke-interface {v0, p2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -169,7 +169,7 @@
     invoke-interface {p2, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 19
-    invoke-interface {p3, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -248,7 +248,7 @@
 
     move-result-object v3
 
-    check-cast v3, Lkotlin/jvm/b/Functions2;
+    check-cast v3, Lkotlin/jvm/b/b;
 
     .line 6
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -257,9 +257,9 @@
 
     const-string v5, "bindings.key"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v3, v4}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v4}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -349,7 +349,7 @@
 
     const-string p2, "imageTint"
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -368,7 +368,7 @@
 
     const-string p2, "progressTint"
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -387,7 +387,7 @@
 
     const-string p2, "textColor"
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -406,7 +406,7 @@
 
     const-string p2, "menuTint"
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -429,7 +429,7 @@
 
     const-string p2, "toolbarNavIcon"
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -440,7 +440,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/themes/DialogThemeBinder;->d:Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -476,7 +476,7 @@
 
     const-string p2, "toolbarTitleColor"
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method

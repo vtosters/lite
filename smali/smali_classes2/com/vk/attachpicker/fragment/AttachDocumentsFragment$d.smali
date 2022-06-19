@@ -3,12 +3,12 @@
 .source "AttachDocumentsFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->b(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+    value = Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->b(ILcom/vk/lists/t;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -33,16 +33,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;
 
-.field final synthetic b:Lcom/vk/lists/PaginationHelper;
+.field final synthetic b:Lcom/vk/lists/t;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;Lcom/vk/lists/PaginationHelper;)V
+.method constructor <init>(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;Lcom/vk/lists/t;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;->a:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;
 
-    iput-object p2, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;->b:Lcom/vk/lists/PaginationHelper;
+    iput-object p2, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;->b:Lcom/vk/lists/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,12 +51,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/docs/DocsSearch$a;)Lcom/vk/api/base/VkPaginationList;
+.method public final a(Lb/h/c/i/i$a;)Lcom/vk/api/base/VkPaginationList;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/docs/DocsSearch$a;",
+            "Lb/h/c/i/i$a;",
             ")",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/api/base/Document;",
@@ -71,20 +71,20 @@
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/vk/api/docs/DocsSearch$a;->d:Ljava/lang/String;
+    iget-object v1, p1, Lb/h/c/i/i$a;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;->b:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->a()I
+    invoke-virtual {v0}, Lcom/vk/lists/t;->a()I
 
     move-result v0
 
@@ -93,15 +93,15 @@
     .line 3
     iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;->a:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;
 
-    invoke-static {v0}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/AttachPickerAdapter;
+    invoke-static {v0}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget v1, p1, Lcom/vk/api/docs/DocsSearch$a;->b:I
+    iget v1, p1, Lb/h/c/i/i$a;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/base/AttachPickerAdapter;->J(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/base/a;->J(I)V
 
     .line 4
     :cond_0
@@ -109,13 +109,13 @@
 
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v2, p1, Lcom/vk/api/docs/DocsSearch$a;->a:Ljava/util/List;
+    iget-object v2, p1, Lb/h/c/i/i$a;->a:Ljava/util/List;
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iget v2, p1, Lcom/vk/api/docs/DocsSearch$a;->e:I
+    iget v2, p1, Lb/h/c/i/i$a;->e:I
 
-    iget-boolean p1, p1, Lcom/vk/api/docs/DocsSearch$a;->c:Z
+    iget-boolean p1, p1, Lb/h/c/i/i$a;->c:Z
 
     invoke-direct {v0, v1, v2, p1}, Lcom/vk/api/base/VkPaginationList;-><init>(Ljava/util/ArrayList;IZ)V
 
@@ -140,9 +140,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/docs/DocsSearch$a;
+    check-cast p1, Lb/h/c/i/i$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;->a(Lcom/vk/api/docs/DocsSearch$a;)Lcom/vk/api/base/VkPaginationList;
+    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;->a(Lb/h/c/i/i$a;)Lcom/vk/api/base/VkPaginationList;
 
     move-result-object p1
 

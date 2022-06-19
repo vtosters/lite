@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/api/base/persistent/PersistentRequestManager;->a(Lcom/vk/api/base/ApiRequest;)V
+    value = Lcom/vk/api/base/persistent/PersistentRequestManager;->a(Lcom/vk/api/base/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/api/base/ApiRequest;
+.field final synthetic a:Lcom/vk/api/base/d;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/api/base/ApiRequest;)V
+.method constructor <init>(Lcom/vk/api/base/d;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/api/base/persistent/PersistentRequestManager$b;->a:Lcom/vk/api/base/ApiRequest;
+    iput-object p1, p0, Lcom/vk/api/base/persistent/PersistentRequestManager$b;->a:Lcom/vk/api/base/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,9 +40,9 @@
     .line 1
     sget-object v0, Lcom/vk/api/base/persistent/PersistentRequestManager;->e:Lcom/vk/api/base/persistent/PersistentRequestManager;
 
-    iget-object v1, p0, Lcom/vk/api/base/persistent/PersistentRequestManager$b;->a:Lcom/vk/api/base/ApiRequest;
+    iget-object v1, p0, Lcom/vk/api/base/persistent/PersistentRequestManager$b;->a:Lcom/vk/api/base/d;
 
-    invoke-virtual {v1}, Lcom/vk/api/base/ApiRequest;->l()Lcom/vk/api/base/persistent/PersistentRequest;
+    invoke-virtual {v1}, Lcom/vk/api/base/d;->l()Lcom/vk/api/base/persistent/PersistentRequest;
 
     move-result-object v1
 

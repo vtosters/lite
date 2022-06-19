@@ -3,12 +3,12 @@
 .source "HttpRequestExecutorProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->c(Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;)Lcom/vk/httpexecutor/api/k/LoggingInterceptor;
+    value = Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->c(Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;)Lcom/vk/httpexecutor/api/k/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
-        "Lcom/vk/httpexecutor/api/HttpRequest;",
+        "Lkotlin/jvm/b/c<",
+        "Lcom/vk/httpexecutor/api/e;",
         "Ljava/lang/Throwable;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -61,11 +61,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/httpexecutor/api/HttpRequest;
+    check-cast p1, Lcom/vk/httpexecutor/api/e;
 
     check-cast p2, Ljava/lang/Throwable;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$createLoggingInterceptor$2;->a(Lcom/vk/httpexecutor/api/HttpRequest;Ljava/lang/Throwable;)Z
+    invoke-virtual {p0, p1, p2}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$createLoggingInterceptor$2;->a(Lcom/vk/httpexecutor/api/e;Ljava/lang/Throwable;)Z
 
     move-result p1
 
@@ -76,7 +76,7 @@
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/httpexecutor/api/HttpRequest;Ljava/lang/Throwable;)Z
+.method public final a(Lcom/vk/httpexecutor/api/e;Ljava/lang/Throwable;)Z
     .locals 2
 
     .line 2
@@ -90,7 +90,7 @@
 
     .line 3
     :cond_0
-    invoke-static {p2}, Lcom/vk/httpexecutor/core/Utils;->a(Ljava/lang/Throwable;)Z
+    invoke-static {p2}, Lcom/vk/httpexecutor/core/d;->a(Ljava/lang/Throwable;)Z
 
     move-result p2
 
@@ -100,7 +100,7 @@
 
     .line 4
     :cond_1
-    invoke-static {p1}, Lcom/vk/httpexecutor/core/Utils;->a(Lcom/vk/httpexecutor/api/HttpRequest;)Z
+    invoke-static {p1}, Lcom/vk/httpexecutor/core/d;->a(Lcom/vk/httpexecutor/api/e;)Z
 
     move-result p1
 

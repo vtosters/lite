@@ -8,8 +8,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/LruCache<",
-            "Lcom/vk/im/ui/views/image_zhukov/Strategy$b;",
-            "Lcom/vk/im/ui/views/image_zhukov/Strategy$c;",
+            "Lcom/vk/im/ui/views/image_zhukov/b$b;",
+            "Lcom/vk/im/ui/views/image_zhukov/b$c;",
             ">;"
         }
     .end annotation
@@ -23,22 +23,22 @@
 
 .field private D:I
 
-.field private E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+.field private E:Lcom/vk/im/ui/views/image_zhukov/i;
 
-.field private a:Lcom/vk/im/ui/views/image_zhukov/ZhukovVhPool;
+.field private a:Lcom/vk/im/ui/views/image_zhukov/k;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+.field private final b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
-.field private final c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+.field private final c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
 .field private final d:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;",
+            "Lcom/vk/im/ui/views/image_zhukov/l;",
             ">;"
         }
     .end annotation
@@ -76,18 +76,18 @@
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    new-instance v0, Lcom/vk/im/ui/views/image_zhukov/b$b;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/views/image_zhukov/b$b;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iput-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
     .line 3
-    new-instance v0, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    new-instance v0, Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/views/image_zhukov/b$c;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iput-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
     .line 4
     new-instance v0, Ljava/util/ArrayList;
@@ -113,18 +113,18 @@
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 7
-    new-instance v0, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    new-instance v0, Lcom/vk/im/ui/views/image_zhukov/b$b;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/views/image_zhukov/b$b;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iput-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
     .line 8
-    new-instance v0, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    new-instance v0, Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/views/image_zhukov/b$c;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iput-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
     .line 9
     new-instance v0, Ljava/util/ArrayList;
@@ -148,18 +148,18 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 12
-    new-instance p3, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    new-instance p3, Lcom/vk/im/ui/views/image_zhukov/b$b;
 
-    invoke-direct {p3}, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;-><init>()V
+    invoke-direct {p3}, Lcom/vk/im/ui/views/image_zhukov/b$b;-><init>()V
 
-    iput-object p3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iput-object p3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
     .line 13
-    new-instance p3, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    new-instance p3, Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    invoke-direct {p3}, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;-><init>()V
+    invoke-direct {p3}, Lcom/vk/im/ui/views/image_zhukov/b$c;-><init>()V
 
-    iput-object p3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iput-object p3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
     .line 14
     new-instance p3, Ljava/util/ArrayList;
@@ -186,18 +186,18 @@
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 17
-    new-instance p3, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    new-instance p3, Lcom/vk/im/ui/views/image_zhukov/b$b;
 
-    invoke-direct {p3}, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;-><init>()V
+    invoke-direct {p3}, Lcom/vk/im/ui/views/image_zhukov/b$b;-><init>()V
 
-    iput-object p3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iput-object p3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
     .line 18
-    new-instance p3, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    new-instance p3, Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    invoke-direct {p3}, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;-><init>()V
+    invoke-direct {p3}, Lcom/vk/im/ui/views/image_zhukov/b$c;-><init>()V
 
-    iput-object p3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iput-object p3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
     .line 19
     new-instance p3, Ljava/util/ArrayList;
@@ -214,7 +214,7 @@
     return-void
 .end method
 
-.method private a(Lcom/vk/im/ui/views/image_zhukov/Strategy$b;IIII)Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+.method private a(Lcom/vk/im/ui/views/image_zhukov/b$b;IIII)Lcom/vk/im/ui/views/image_zhukov/b$b;
     .locals 2
 
     const/high16 v0, -0x80000000
@@ -224,38 +224,38 @@
 
     move-result v1
 
-    iput v1, p1, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;->a:I
+    iput v1, p1, Lcom/vk/im/ui/views/image_zhukov/b$b;->a:I
 
     .line 17
     invoke-static {p5, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v0
 
-    iput v0, p1, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;->b:I
+    iput v0, p1, Lcom/vk/im/ui/views/image_zhukov/b$b;->b:I
 
     .line 18
     invoke-static {p4, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p2
 
-    iput p2, p1, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;->c:I
+    iput p2, p1, Lcom/vk/im/ui/views/image_zhukov/b$b;->c:I
 
     .line 19
     invoke-static {p5, p3}, Ljava/lang/Math;->min(II)I
 
     move-result p2
 
-    iput p2, p1, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;->d:I
+    iput p2, p1, Lcom/vk/im/ui/views/image_zhukov/b$b;->d:I
 
     .line 20
     iget p2, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->D:I
 
-    iput p2, p1, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;->e:I
+    iput p2, p1, Lcom/vk/im/ui/views/image_zhukov/b$b;->e:I
 
     .line 21
     iget p2, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->C:I
 
-    iput p2, p1, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;->f:I
+    iput p2, p1, Lcom/vk/im/ui/views/image_zhukov/b$b;->f:I
 
     return-object p1
 .end method
@@ -264,7 +264,7 @@
     .locals 1
 
     .line 10
-    sget p1, Lcom/vk/im/ui/R2;->ZhukovLayout_android_maxWidth:I
+    sget p1, Lcom/vk/im/ui/o;->ZhukovLayout_android_maxWidth:I
 
     const v0, 0x7fffffff
 
@@ -275,7 +275,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->setMaximumWidth(I)V
 
     .line 11
-    sget p1, Lcom/vk/im/ui/R2;->ZhukovLayout_android_maxHeight:I
+    sget p1, Lcom/vk/im/ui/o;->ZhukovLayout_android_maxHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -284,7 +284,7 @@
     invoke-direct {p0, p1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->setMaximumHeight(I)V
 
     .line 12
-    sget p1, Lcom/vk/im/ui/R2;->ZhukovLayout_vkim_divider_size:I
+    sget p1, Lcom/vk/im/ui/o;->ZhukovLayout_vkim_divider_size:I
 
     const/4 v0, 0x0
 
@@ -295,7 +295,7 @@
     invoke-direct {p0, p1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->setDividerSize(I)V
 
     .line 13
-    sget p1, Lcom/vk/im/ui/R2;->ZhukovLayout_vkim_item_min_size:I
+    sget p1, Lcom/vk/im/ui/o;->ZhukovLayout_vkim_item_min_size:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -332,7 +332,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lcom/vk/im/ui/R2;->ZhukovLayout:[I
+    sget-object v1, Lcom/vk/im/ui/o;->ZhukovLayout:[I
 
     .line 5
     invoke-virtual {p1, p2, v1, v0, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -352,7 +352,7 @@
     const/4 p1, 0x0
 
     .line 9
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->setAdapter(Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->setAdapter(Lcom/vk/im/ui/views/image_zhukov/i;)V
 
     return-void
 .end method
@@ -361,14 +361,14 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->a:Lcom/vk/im/ui/views/image_zhukov/ZhukovVhPool;
+    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->a:Lcom/vk/im/ui/views/image_zhukov/k;
 
     if-eqz v0, :cond_0
 
     .line 2
     iget-object v1, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->d:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovVhPool;->a(Ljava/lang/Iterable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/image_zhukov/k;->a(Ljava/lang/Iterable;)V
 
     .line 3
     :cond_0
@@ -377,16 +377,16 @@
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
-    iget-object v0, v0, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;->g:Ljava/util/List;
+    iget-object v0, v0, Lcom/vk/im/ui/views/image_zhukov/b$b;->g:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    iget-object v0, v0, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;->b:Ljava/util/List;
+    iget-object v0, v0, Lcom/vk/im/ui/views/image_zhukov/b$c;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -394,12 +394,12 @@
     invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
     if-eqz v0, :cond_2
 
     .line 8
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->a()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/image_zhukov/i;->a()I
 
     move-result v0
 
@@ -409,33 +409,33 @@
     if-ge v1, v0, :cond_2
 
     .line 9
-    iget-object v2, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v2, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
-    invoke-virtual {v2, v1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->a(I)I
+    invoke-virtual {v2, v1}, Lcom/vk/im/ui/views/image_zhukov/i;->a(I)I
 
     move-result v2
 
     .line 10
-    iget-object v3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->a:Lcom/vk/im/ui/views/image_zhukov/ZhukovVhPool;
+    iget-object v3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->a:Lcom/vk/im/ui/views/image_zhukov/k;
 
-    invoke-virtual {v3, v2}, Lcom/vk/im/ui/views/image_zhukov/ZhukovVhPool;->a(I)Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;
+    invoke-virtual {v3, v2}, Lcom/vk/im/ui/views/image_zhukov/k;->a(I)Lcom/vk/im/ui/views/image_zhukov/l;
 
     move-result-object v3
 
     if-nez v3, :cond_1
 
     .line 11
-    iget-object v3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
-    invoke-virtual {v3, p0, v2}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->a(Landroid/view/ViewGroup;I)Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;
+    invoke-virtual {v3, p0, v2}, Lcom/vk/im/ui/views/image_zhukov/i;->a(Landroid/view/ViewGroup;I)Lcom/vk/im/ui/views/image_zhukov/l;
 
     move-result-object v3
 
     .line 12
     :cond_1
-    iget-object v2, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v2, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
-    invoke-virtual {v2, v3, v1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->a(Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;I)V
+    invoke-virtual {v2, v3, v1}, Lcom/vk/im/ui/views/image_zhukov/i;->a(Lcom/vk/im/ui/views/image_zhukov/l;I)V
 
     .line 13
     iget-object v2, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->d:Ljava/util/List;
@@ -443,31 +443,31 @@
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 14
-    iget-object v2, v3, Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;->a:Landroid/view/View;
+    iget-object v2, v3, Lcom/vk/im/ui/views/image_zhukov/l;->a:Landroid/view/View;
 
     invoke-super {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 15
-    new-instance v2, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;
+    new-instance v2, Lcom/vk/im/ui/views/image_zhukov/j;
 
-    invoke-direct {v2}, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;-><init>()V
+    invoke-direct {v2}, Lcom/vk/im/ui/views/image_zhukov/j;-><init>()V
 
     .line 16
-    iget-object v3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
-    invoke-virtual {v3, v1, v2}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->a(ILcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;)V
+    invoke-virtual {v3, v1, v2}, Lcom/vk/im/ui/views/image_zhukov/i;->a(ILcom/vk/im/ui/views/image_zhukov/j;)V
 
     .line 17
-    iget-object v3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iget-object v3, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
-    iget-object v3, v3, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;->g:Ljava/util/List;
+    iget-object v3, v3, Lcom/vk/im/ui/views/image_zhukov/b$b;->g:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 18
-    iget-object v2, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iget-object v2, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    iget-object v2, v2, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;->b:Ljava/util/List;
+    iget-object v2, v2, Lcom/vk/im/ui/views/image_zhukov/b$c;->b:Ljava/util/List;
 
     new-instance v3, Landroid/graphics/Rect;
 
@@ -665,10 +665,10 @@
 
     move-object v10, v8
 
-    check-cast v10, Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;
+    check-cast v10, Lcom/vk/im/ui/views/image_zhukov/l;
 
     .line 13
-    iget-object v9, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v9, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
     const/4 v8, 0x1
 
@@ -712,7 +712,7 @@
     const/4 v14, 0x0
 
     :goto_5
-    invoke-virtual/range {v9 .. v14}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->a(Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;ZZZZ)V
+    invoke-virtual/range {v9 .. v14}, Lcom/vk/im/ui/views/image_zhukov/i;->a(Lcom/vk/im/ui/views/image_zhukov/l;ZZZZ)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -791,7 +791,7 @@
 
 
 # virtual methods
-.method public a(I)Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;
+.method public a(I)Lcom/vk/im/ui/views/image_zhukov/l;
     .locals 1
 
     .line 15
@@ -801,7 +801,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;
+    check-cast p1, Lcom/vk/im/ui/views/image_zhukov/l;
 
     return-object p1
 .end method
@@ -815,20 +815,20 @@
     return-void
 .end method
 
-.method public getAdapter()Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+.method public getAdapter()Lcom/vk/im/ui/views/image_zhukov/i;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter<",
+            "Lcom/vk/im/ui/views/image_zhukov/i<",
             "+",
-            "Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;",
+            "Lcom/vk/im/ui/views/image_zhukov/l;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
     return-object v0
 .end method
@@ -924,7 +924,7 @@
     move-result p3
 
     .line 6
-    iget-object p4, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object p4, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
     if-eqz p4, :cond_2
 
@@ -946,9 +946,9 @@
     move-result-object v0
 
     .line 8
-    iget-object v1, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iget-object v1, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    iget-object v1, v1, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;->b:Ljava/util/List;
+    iget-object v1, v1, Lcom/vk/im/ui/views/image_zhukov/b$c;->b:Ljava/util/List;
 
     invoke-interface {v1, p5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1053,7 +1053,7 @@
     move-result v15
 
     .line 8
-    iget-object v0, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v0, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
     if-eqz v0, :cond_3
 
@@ -1063,22 +1063,22 @@
 
     .line 9
     :cond_0
-    invoke-static {v15}, Lcom/vk/im/ui/views/image_zhukov/Strategy$a;->a(I)Lcom/vk/im/ui/views/image_zhukov/Strategy;
+    invoke-static {v15}, Lcom/vk/im/ui/views/image_zhukov/b$a;->a(I)Lcom/vk/im/ui/views/image_zhukov/b;
 
     move-result-object v5
 
     .line 10
-    invoke-static {v7, v11, v13, v9}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
+    invoke-static {v7, v11, v13, v9}, Lcom/vk/im/ui/views/e;->a(IIII)I
 
     move-result v4
 
     .line 11
-    invoke-static {v8, v12, v14, v10}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
+    invoke-static {v8, v12, v14, v10}, Lcom/vk/im/ui/views/e;->a(IIII)I
 
     move-result v16
 
     .line 12
-    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
     move-object/from16 v0, p0
 
@@ -1090,48 +1090,48 @@
 
     move/from16 v5, v16
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->a(Lcom/vk/im/ui/views/image_zhukov/Strategy$b;IIII)Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->a(Lcom/vk/im/ui/views/image_zhukov/b$b;IIII)Lcom/vk/im/ui/views/image_zhukov/b$b;
 
     .line 13
     sget-object v0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->F:Landroidx/collection/LruCache;
 
-    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
     invoke-virtual {v0, v1}, Landroidx/collection/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    check-cast v0, Lcom/vk/im/ui/views/image_zhukov/b$c;
 
     if-eqz v0, :cond_1
 
     .line 14
-    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;->a(Lcom/vk/im/ui/views/image_zhukov/Strategy$c;)V
+    invoke-virtual {v1, v0}, Lcom/vk/im/ui/views/image_zhukov/b$c;->a(Lcom/vk/im/ui/views/image_zhukov/b$c;)V
 
     goto :goto_0
 
     .line 15
     :cond_1
-    iget-object v0, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iget-object v0, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
-    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    invoke-interface {v8, v0, v1}, Lcom/vk/im/ui/views/image_zhukov/Strategy;->a(Lcom/vk/im/ui/views/image_zhukov/Strategy$b;Lcom/vk/im/ui/views/image_zhukov/Strategy$c;)V
+    invoke-interface {v8, v0, v1}, Lcom/vk/im/ui/views/image_zhukov/b;->a(Lcom/vk/im/ui/views/image_zhukov/b$b;Lcom/vk/im/ui/views/image_zhukov/b$c;)V
 
     .line 16
     sget-object v0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->F:Landroidx/collection/LruCache;
 
-    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    iget-object v1, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->b:Lcom/vk/im/ui/views/image_zhukov/b$b;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/views/image_zhukov/Strategy$b;->a()Lcom/vk/im/ui/views/image_zhukov/Strategy$b;
+    invoke-virtual {v1}, Lcom/vk/im/ui/views/image_zhukov/b$b;->a()Lcom/vk/im/ui/views/image_zhukov/b$b;
 
     move-result-object v1
 
-    iget-object v2, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iget-object v2, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;->a()Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    invoke-virtual {v2}, Lcom/vk/im/ui/views/image_zhukov/b$c;->a()Lcom/vk/im/ui/views/image_zhukov/b$c;
 
     move-result-object v2
 
@@ -1149,9 +1149,9 @@
     move-result-object v1
 
     .line 18
-    iget-object v2, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iget-object v2, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    iget-object v2, v2, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;->b:Ljava/util/List;
+    iget-object v2, v2, Lcom/vk/im/ui/views/image_zhukov/b$c;->b:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1190,18 +1190,18 @@
 
     .line 24
     :cond_2
-    iget-object v0, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/Strategy$c;
+    iget-object v0, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->c:Lcom/vk/im/ui/views/image_zhukov/b$c;
 
-    iget-object v0, v0, Lcom/vk/im/ui/views/image_zhukov/Strategy$c;->a:Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;
+    iget-object v0, v0, Lcom/vk/im/ui/views/image_zhukov/b$c;->a:Lcom/vk/im/ui/views/image_zhukov/j;
 
-    iget v1, v0, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->a:I
+    iget v1, v0, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
 
     add-int/2addr v9, v1
 
     iput v9, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->f:I
 
     .line 25
-    iget v0, v0, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->b:I
+    iget v0, v0, Lcom/vk/im/ui/views/image_zhukov/j;->b:I
 
     add-int/2addr v10, v0
 
@@ -1210,7 +1210,7 @@
     .line 26
     iget v0, v6, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->f:I
 
-    invoke-static {v7, v11, v13, v0}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
+    invoke-static {v7, v11, v13, v0}, Lcom/vk/im/ui/views/e;->b(IIII)I
 
     move-result v0
 
@@ -1219,7 +1219,7 @@
 
     move/from16 v2, p2
 
-    invoke-static {v2, v12, v14, v1}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
+    invoke-static {v2, v12, v14, v1}, Lcom/vk/im/ui/views/e;->b(IIII)I
 
     move-result v1
 
@@ -1233,12 +1233,12 @@
     move v2, v8
 
     .line 29
-    invoke-static {v7, v11, v13, v9}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
+    invoke-static {v7, v11, v13, v9}, Lcom/vk/im/ui/views/e;->b(IIII)I
 
     move-result v0
 
     .line 30
-    invoke-static {v2, v12, v14, v10}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
+    invoke-static {v2, v12, v14, v10}, Lcom/vk/im/ui/views/e;->b(IIII)I
 
     move-result v1
 
@@ -1248,24 +1248,24 @@
     return-void
 .end method
 
-.method public setAdapter(Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;)V
+.method public setAdapter(Lcom/vk/im/ui/views/image_zhukov/i;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter<",
+            "Lcom/vk/im/ui/views/image_zhukov/i<",
             "+",
-            "Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;",
+            "Lcom/vk/im/ui/views/image_zhukov/l;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->a()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/image_zhukov/i;->a()I
 
     move-result v0
 
@@ -1288,26 +1288,26 @@
     .line 3
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object v0, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
     if-eqz v0, :cond_2
 
     const/4 v1, 0x0
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->a(Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/image_zhukov/i;->a(Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;)V
 
     .line 5
     :cond_2
-    iput-object p1, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iput-object p1, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
     .line 6
-    iget-object p1, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;
+    iget-object p1, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->E:Lcom/vk/im/ui/views/image_zhukov/i;
 
     if-eqz p1, :cond_3
 
     .line 7
-    invoke-virtual {p1, p0}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->a(Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;)V
+    invoke-virtual {p1, p0}, Lcom/vk/im/ui/views/image_zhukov/i;->a(Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;)V
 
     .line 8
     :cond_3
@@ -1331,11 +1331,11 @@
     return-void
 .end method
 
-.method public setPools(Lcom/vk/im/ui/views/image_zhukov/ZhukovVhPool;)V
+.method public setPools(Lcom/vk/im/ui/views/image_zhukov/k;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->a:Lcom/vk/im/ui/views/image_zhukov/ZhukovVhPool;
+    iput-object p1, p0, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->a:Lcom/vk/im/ui/views/image_zhukov/k;
 
     return-void
 .end method

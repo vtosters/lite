@@ -1,9 +1,9 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;
-.super Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;
+.super Lcom/vk/newsfeed/holders/h;
 .source "ZhukovHolder.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/holders/zhukov/BaseHolder$a;
+.implements Lcom/vk/newsfeed/holders/zhukov/a$a;
 
 
 # annotations
@@ -15,22 +15,22 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/newsfeed/holders/BaseNewsEntryHolder<",
+        "Lcom/vk/newsfeed/holders/h<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;",
-        "Lcom/vk/newsfeed/holders/zhukov/BaseHolder$a;"
+        "Lcom/vk/newsfeed/holders/zhukov/a$a;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic L:[Lkotlin/u/KProperty5;
+.field static final synthetic L:[Lkotlin/u/j;
 
 
 # instance fields
 .field private final F:Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;
 
-.field private final G:Lcom/vk/newsfeed/adapters/ImagesAdapter;
+.field private final G:Lcom/vk/newsfeed/adapters/b;
 
 .field private H:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -52,17 +52,17 @@
     .end annotation
 .end field
 
-.field private J:Lcom/vk/bridges/ImageViewer$d;
+.field private J:Lcom/vk/bridges/p$d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/bridges/ImageViewer$d<",
+            "Lcom/vk/bridges/p$d<",
             "Lcom/vk/dto/common/AttachmentWithMedia;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final K:Lkotlin/Lazy2;
+.field private final K:Lkotlin/e;
 
 
 # direct methods
@@ -71,13 +71,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -85,33 +85,33 @@
 
     const-string v4, "getCallback()Lcom/vk/newsfeed/holders/attachments/ZhukovHolder$PhotoViewerHelper;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->L:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->L:[Lkotlin/u/j;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/im/ui/views/image_zhukov/ZhukovVhPool;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/im/ui/views/image_zhukov/k;)V
     .locals 3
 
     const v0, 0x7f0d0098
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/h;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -119,7 +119,7 @@
 
     const/4 v2, 0x2
 
-    invoke-static {p1, v1, v0, v2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, v2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -128,11 +128,11 @@
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->F:Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;
 
     .line 3
-    new-instance p1, Lcom/vk/newsfeed/adapters/ImagesAdapter;
+    new-instance p1, Lcom/vk/newsfeed/adapters/b;
 
-    invoke-direct {p1}, Lcom/vk/newsfeed/adapters/ImagesAdapter;-><init>()V
+    invoke-direct {p1}, Lcom/vk/newsfeed/adapters/b;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/ImagesAdapter;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/b;
 
     .line 4
     new-instance p1, Landroid/util/SparseArray;
@@ -146,28 +146,28 @@
 
     invoke-direct {p1, p0}, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder$callback$2;-><init>(Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->K:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->K:Lkotlin/e;
 
     .line 6
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/ImagesAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/b;
 
-    invoke-virtual {p1, p0}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->a(Lcom/vk/newsfeed/holders/zhukov/BaseHolder$a;)V
+    invoke-virtual {p1, p0}, Lcom/vk/newsfeed/adapters/b;->a(Lcom/vk/newsfeed/holders/zhukov/a$a;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->F:Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->setPools(Lcom/vk/im/ui/views/image_zhukov/ZhukovVhPool;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->setPools(Lcom/vk/im/ui/views/image_zhukov/k;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->F:Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;
 
-    iget-object p2, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/ImagesAdapter;
+    iget-object p2, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/b;
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->setAdapter(Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/image_zhukov/ZhukovLayout;->setAdapter(Lcom/vk/im/ui/views/image_zhukov/i;)V
 
     return-void
 .end method
@@ -185,7 +185,7 @@
     .locals 7
 
     .line 19
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->J:Lcom/vk/bridges/ImageViewer$d;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->J:Lcom/vk/bridges/p$d;
 
     if-eqz v0, :cond_0
 
@@ -275,7 +275,7 @@
 
     .line 30
     :cond_4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->i0()Lcom/vtosters/lite/data/PostInteract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
@@ -287,7 +287,7 @@
 
     .line 31
     :cond_5
-    iget-object p1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
@@ -338,13 +338,13 @@
     invoke-virtual {v0, p1}, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder$a;->a(Ljava/lang/Integer;)V
 
     .line 35
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
     const-string v0, "parent"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -359,7 +359,7 @@
     if-eqz p1, :cond_8
 
     .line 36
-    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
+    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
 
     move-result-object v0
 
@@ -367,21 +367,21 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v4, v1, p1, v2}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-interface {v0, v4, v1, p1, v2}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->J:Lcom/vk/bridges/ImageViewer$d;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->J:Lcom/vk/bridges/p$d;
 
     :cond_8
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;Lcom/vk/bridges/ImageViewer$d;)V
+.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;Lcom/vk/bridges/p$d;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->J:Lcom/vk/bridges/ImageViewer$d;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->J:Lcom/vk/bridges/p$d;
 
     return-void
 .end method
@@ -420,7 +420,7 @@
 
     const-string v2, "item.photo.getImageByWidth(130)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -440,25 +440,25 @@
 
     invoke-direct {p1, v1, v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment$a;-><init>(ILcom/vk/dto/photo/PhotoAlbum;)V
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->j0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment$a;->a(Ljava/lang/String;)Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment$a;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     const-string v1, "parent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -467,35 +467,35 @@
     .locals 2
 
     .line 37
-    new-instance v0, Lcom/vtosters/lite/fragments/market/MarketFragment$f;
+    new-instance v0, Lcom/vtosters/lite/fragments/market/u$f;
 
     iget-object v1, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget v1, v1, Lcom/vk/dto/common/GoodAlbum;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/market/MarketFragment$f;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/market/u$f;-><init>(I)V
 
     .line 38
     iget-object p1, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget p1, p1, Lcom/vk/dto/common/GoodAlbum;->a:I
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/market/MarketFragment$f;->c(I)Lcom/vtosters/lite/fragments/market/MarketFragment$f;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/market/u$f;->c(I)Lcom/vtosters/lite/fragments/market/u$f;
 
     .line 39
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
     const-string v1, "parent"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -504,7 +504,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
@@ -520,11 +520,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;)Lcom/vk/bridges/ImageViewer$d;
+.method public static final synthetic d(Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;)Lcom/vk/bridges/p$d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->J:Lcom/vk/bridges/ImageViewer$d;
+    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->J:Lcom/vk/bridges/p$d;
 
     return-object p0
 .end method
@@ -532,15 +532,15 @@
 .method private final o0()Lcom/vk/newsfeed/holders/attachments/ZhukovHolder$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->K:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->K:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->L:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->L:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -619,20 +619,20 @@
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 1
 
     .line 3
-    instance-of v0, p1, Lcom/vk/newsfeed/h0/AttachmentsPostDisplayItem;
+    instance-of v0, p1, Lcom/vk/newsfeed/h0/b;
 
     if-eqz v0, :cond_0
 
     .line 4
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/newsfeed/h0/AttachmentsPostDisplayItem;
+    check-cast v0, Lcom/vk/newsfeed/h0/b;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/h0/AttachmentsPostDisplayItem;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/h0/b;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -640,7 +640,7 @@
 
     .line 5
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -662,7 +662,7 @@
 
     .line 4
     :goto_0
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/ImagesAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/b;
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->H:Ljava/util/List;
 
@@ -689,12 +689,12 @@
     .line 6
     :cond_2
     :goto_1
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/adapters/b;->a(Ljava/util/List;)V
 
     .line 7
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/ImagesAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->G:Lcom/vk/newsfeed/adapters/b;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->b()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/image_zhukov/i;->b()V
 
     return-void
 .end method

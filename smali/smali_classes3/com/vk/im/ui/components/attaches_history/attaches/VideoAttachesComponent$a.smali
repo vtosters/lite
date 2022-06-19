@@ -3,7 +3,7 @@
 .source "VideoAttachesComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,7 +56,7 @@
     const-string v0, "success"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -97,7 +97,7 @@
     move-result-object v4
 
     .line 4
-    sget v5, Lcom/vk/im/ui/R4;->vkim_video_added:I
+    sget v5, Lcom/vk/im/ui/m;->vkim_video_added:I
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -133,7 +133,7 @@
     move-result-object v4
 
     .line 7
-    sget v5, Lcom/vk/im/ui/R4;->vkim_video_cannot_be_added:I
+    sget v5, Lcom/vk/im/ui/m;->vkim_video_cannot_be_added:I
 
     new-array v2, v2, [Ljava/lang/Object;
 

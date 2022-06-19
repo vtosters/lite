@@ -3,7 +3,7 @@
 .source "ChatSettingsComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lc/a/z/g<",
+        "Lio/reactivex/disposables/b;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/Disposable;)V
+.method public final a(Lio/reactivex/disposables/b;)V
     .locals 1
 
     .line 1
@@ -70,9 +70,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/Disposable;
+    check-cast p1, Lio/reactivex/disposables/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$e;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$e;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

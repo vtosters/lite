@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+.field private final a:Lcom/vk/instantjobs/impl/b;
 
 .field private final b:I
 
@@ -25,13 +25,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/instantjobs/impl/InstantJobInfo;IZLcom/vk/instantjobs/InstantJob$a;)V
+.method public constructor <init>(Lcom/vk/instantjobs/impl/b;IZLcom/vk/instantjobs/InstantJob$a;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/b;
 
     iput p2, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->b:I
 
@@ -42,14 +42,14 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/instantjobs/impl/InstantJobNotifier$b;Lcom/vk/instantjobs/impl/InstantJobInfo;IZLcom/vk/instantjobs/InstantJob$a;ILjava/lang/Object;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
+.method public static synthetic a(Lcom/vk/instantjobs/impl/InstantJobNotifier$b;Lcom/vk/instantjobs/impl/b;IZLcom/vk/instantjobs/InstantJob$a;ILjava/lang/Object;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
     .locals 0
 
     and-int/lit8 p6, p5, 0x1
 
     if-eqz p6, :cond_0
 
-    iget-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/b;
 
     :cond_0
     and-int/lit8 p6, p5, 0x2
@@ -73,7 +73,7 @@
     iget-object p4, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->d:Lcom/vk/instantjobs/InstantJob$a;
 
     :cond_3
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a(Lcom/vk/instantjobs/impl/InstantJobInfo;IZLcom/vk/instantjobs/InstantJob$a;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a(Lcom/vk/instantjobs/impl/b;IZLcom/vk/instantjobs/InstantJob$a;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
     move-result-object p0
 
@@ -82,21 +82,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/instantjobs/impl/InstantJobInfo;IZLcom/vk/instantjobs/InstantJob$a;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
+.method public final a(Lcom/vk/instantjobs/impl/b;IZLcom/vk/instantjobs/InstantJob$a;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
     .locals 1
 
     new-instance v0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;-><init>(Lcom/vk/instantjobs/impl/InstantJobInfo;IZLcom/vk/instantjobs/InstantJob$a;)V
+    invoke-direct {v0, p1, p2, p3, p4}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;-><init>(Lcom/vk/instantjobs/impl/b;IZLcom/vk/instantjobs/InstantJob$a;)V
 
     return-object v0
 .end method
 
-.method public final a()Lcom/vk/instantjobs/impl/InstantJobInfo;
+.method public final a()Lcom/vk/instantjobs/impl/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/b;
 
     return-object v0
 .end method
@@ -105,9 +105,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/b;
 
-    invoke-virtual {v0}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {v0}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v0
 
@@ -132,9 +132,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/b;
 
-    invoke-virtual {v0}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {v0}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v0
 
@@ -193,11 +193,11 @@
 
     check-cast p1, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/b;
 
-    iget-object v1, p1, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v1, p1, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/b;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -219,7 +219,7 @@
 
     iget-object p1, p1, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->d:Lcom/vk/instantjobs/InstantJob$a;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -242,13 +242,13 @@
 .method public hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/b;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/instantjobs/impl/InstantJobInfo;->hashCode()I
+    invoke-virtual {v0}, Lcom/vk/instantjobs/impl/b;->hashCode()I
 
     move-result v0
 
@@ -302,7 +302,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a:Lcom/vk/instantjobs/impl/b;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -3,7 +3,7 @@
 .source "MilkShakeActivationPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/core/ui/milkshake_activation/Step2;",
+        "Lc/a/z/g<",
+        "Lcom/vk/core/ui/milkshake_activation/k;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/ui/milkshake_activation/Step2;)V
+.method public final a(Lcom/vk/core/ui/milkshake_activation/k;)V
     .locals 1
 
     .line 1
@@ -54,13 +54,13 @@
 
     iget-object v0, v0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter$runActivation$1;->this$0:Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;
 
-    invoke-static {v0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->c(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;)Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;
+    invoke-static {v0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->c(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;)Lcom/vk/core/ui/milkshake_activation/e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/milkshake_activation/Step2;->a(Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/milkshake_activation/k;->a(Lcom/vk/core/ui/milkshake_activation/e;)V
 
     :cond_0
     return-void
@@ -70,9 +70,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/ui/milkshake_activation/Step2;
+    check-cast p1, Lcom/vk/core/ui/milkshake_activation/k;
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter$runActivation$1$a;->a(Lcom/vk/core/ui/milkshake_activation/Step2;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter$runActivation$1$a;->a(Lcom/vk/core/ui/milkshake_activation/k;)V
 
     return-void
 .end method

@@ -4,13 +4,13 @@
 
 
 # static fields
-.field static final synthetic c:[Lkotlin/u/KProperty5;
+.field static final synthetic c:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
-.field private final b:Lkotlin/Lazy2;
+.field private final b:Lkotlin/e;
 
 
 # direct methods
@@ -21,11 +21,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -33,9 +33,9 @@
 
     const-string v5, "getTelephonyManager()Landroid/telephony/TelephonyManager;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -43,7 +43,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -51,15 +51,15 @@
 
     const-string v4, "getConnectivityManager()Landroid/net/ConnectivityManager;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->c:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->c:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -75,22 +75,22 @@
 
     invoke-direct {v0, p1}, Lcom/vk/httpexecutor/api/utils/RoamingDetector$telephonyManager$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->a:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->a:Lkotlin/e;
 
     .line 3
     new-instance v0, Lcom/vk/httpexecutor/api/utils/RoamingDetector$connectivityManager$2;
 
     invoke-direct {v0, p1}, Lcom/vk/httpexecutor/api/utils/RoamingDetector$connectivityManager$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->b:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->b:Lkotlin/e;
 
     return-void
 .end method
@@ -98,15 +98,15 @@
 .method private final b()Landroid/net/ConnectivityManager;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->b:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->c:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->c:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -133,15 +133,15 @@
 .method private final d()Landroid/telephony/TelephonyManager;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->c:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/httpexecutor/api/utils/RoamingDetector;->c:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

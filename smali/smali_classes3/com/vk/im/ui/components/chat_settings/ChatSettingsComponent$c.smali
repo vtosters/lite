@@ -3,7 +3,7 @@
 .source "ChatSettingsComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/engine/commands/chats/CreateCasperChatCmd$a;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/engine/commands/chats/d$a;",
         ">;"
     }
 .end annotation
@@ -46,23 +46,23 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/commands/chats/CreateCasperChatCmd$a;)V
+.method public final a(Lcom/vk/im/engine/commands/chats/d$a;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$c;->a:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C()Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C()Lcom/vk/im/ui/components/chat_settings/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/chats/CreateCasperChatCmd$a;->a()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/chats/d$a;->a()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/c;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     :cond_0
     return-void
@@ -72,9 +72,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/commands/chats/CreateCasperChatCmd$a;
+    check-cast p1, Lcom/vk/im/engine/commands/chats/d$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$c;->a(Lcom/vk/im/engine/commands/chats/CreateCasperChatCmd$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$c;->a(Lcom/vk/im/engine/commands/chats/d$a;)V
 
     return-void
 .end method

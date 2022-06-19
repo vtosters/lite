@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -144,7 +144,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/ColorExt;->b(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/vk/core/extensions/d;->b(Ljava/lang/String;)I
 
     move-result v2
 
@@ -167,7 +167,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/ColorExt;->b(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/vk/core/extensions/d;->b(Ljava/lang/String;)I
 
     move-result v3
 
@@ -190,7 +190,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/ColorExt;->b(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/vk/core/extensions/d;->b(Ljava/lang/String;)I
 
     move-result v4
 
@@ -203,7 +203,7 @@
 
     const-string v0, "optString(\"description\")"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     sget-object v0, Lcom/vk/dto/common/data/CatalogBanner;->f:Lcom/vk/dto/common/data/CatalogBanner$b;

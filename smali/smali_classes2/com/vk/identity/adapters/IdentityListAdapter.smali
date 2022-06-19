@@ -1,10 +1,10 @@
 .class public final Lcom/vk/identity/adapters/IdentityListAdapter;
-.super Lcom/vk/lists/SimpleAdapter;
+.super Lcom/vk/lists/i0;
 .source "IdentityListAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/Provider;
-.implements Lcom/vk/common/widget/CardDecorationHelper$a;
+.implements Lcom/vk/core/ui/o;
+.implements Lcom/vk/common/widget/a$a;
 
 
 # annotations
@@ -20,36 +20,36 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/SimpleAdapter<",
-        "Lcom/vk/identity/b/IdentityAdapterItem3;",
+        "Lcom/vk/lists/i0<",
+        "Lcom/vk/identity/b/b;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;",
-        "Lcom/vk/core/ui/Provider;",
-        "Lcom/vk/common/widget/CardDecorationHelper$a;"
+        "Lcom/vk/core/ui/o;",
+        "Lcom/vk/common/widget/a$a;"
     }
 .end annotation
 
 
 # instance fields
-.field private final c:Lcom/vk/common/widget/CardDecorationHelper;
+.field private final c:Lcom/vk/common/widget/a;
 
-.field private final d:Lkotlin/jvm/b/Functions2;
+.field private final d:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/String;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final e:Lkotlin/jvm/b/Functions2;
+.field private final e:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/dto/identity/IdentityCard;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -57,55 +57,55 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/identity/IdentityCard;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->d:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->d:Lkotlin/jvm/b/b;
 
-    iput-object p2, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->e:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->e:Lkotlin/jvm/b/b;
 
     .line 2
-    new-instance p1, Lcom/vk/common/widget/CardDecorationHelper;
+    new-instance p1, Lcom/vk/common/widget/a;
 
-    invoke-direct {p1, p0}, Lcom/vk/common/widget/CardDecorationHelper;-><init>(Lcom/vk/common/widget/CardDecorationHelper$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/common/widget/a;-><init>(Lcom/vk/common/widget/a$a;)V
 
-    iput-object p1, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->c:Lcom/vk/common/widget/CardDecorationHelper;
+    iput-object p1, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->c:Lcom/vk/common/widget/a;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/identity/adapters/IdentityListAdapter;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic a(Lcom/vk/identity/adapters/IdentityListAdapter;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->d:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->d:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/identity/adapters/IdentityListAdapter;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic b(Lcom/vk/identity/adapters/IdentityListAdapter;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->e:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->e:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -116,7 +116,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -124,9 +124,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/identity/b/IdentityAdapterItem3;
+    check-cast p1, Lcom/vk/identity/b/b;
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem3;->a()I
+    invoke-virtual {p1}, Lcom/vk/identity/b/b;->a()I
 
     move-result p1
 
@@ -137,7 +137,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {p0}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v0
 
@@ -148,9 +148,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->c:Lcom/vk/common/widget/CardDecorationHelper;
+    iget-object v0, p0, Lcom/vk/identity/adapters/IdentityListAdapter;->c:Lcom/vk/common/widget/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/widget/CardDecorationHelper;->i(I)I
+    invoke-virtual {v0, p1}, Lcom/vk/common/widget/a;->i(I)I
 
     move-result p1
 
@@ -182,7 +182,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -190,7 +190,7 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/identity/b/IdentityAdapterItem3;
+    check-cast p2, Lcom/vk/identity/b/b;
 
     .line 2
     instance-of v0, p1, Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder;
@@ -201,9 +201,9 @@
 
     if-eqz p2, :cond_0
 
-    check-cast p2, Lcom/vk/identity/b/IdentityAdapterItem6;
+    check-cast p2, Lcom/vk/identity/b/d;
 
-    invoke-virtual {p1, p2}, Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder;->a(Lcom/vk/identity/b/IdentityAdapterItem6;)V
+    invoke-virtual {p1, p2}, Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder;->a(Lcom/vk/identity/b/d;)V
 
     goto :goto_0
 
@@ -226,9 +226,9 @@
 
     if-eqz p2, :cond_2
 
-    check-cast p2, Lcom/vk/identity/b/IdentityAdapterItem7;
+    check-cast p2, Lcom/vk/identity/b/h;
 
-    invoke-virtual {p2}, Lcom/vk/identity/b/IdentityAdapterItem7;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/identity/b/h;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -255,9 +255,9 @@
 
     if-eqz p2, :cond_4
 
-    check-cast p2, Lcom/vk/identity/b/IdentityAdapterItem5;
+    check-cast p2, Lcom/vk/identity/b/e;
 
-    invoke-virtual {p1, p2}, Lcom/vk/identity/adapters/IdentityListAdapter$IdentityHolder;->a(Lcom/vk/identity/b/IdentityAdapterItem5;)V
+    invoke-virtual {p1, p2}, Lcom/vk/identity/adapters/IdentityListAdapter$IdentityHolder;->a(Lcom/vk/identity/b/e;)V
 
     goto :goto_0
 
@@ -280,9 +280,9 @@
 
     if-eqz p2, :cond_6
 
-    check-cast p2, Lcom/vk/identity/b/IdentityAdapterItem4;
+    check-cast p2, Lcom/vk/identity/b/i;
 
-    invoke-virtual {p2}, Lcom/vk/identity/b/IdentityAdapterItem4;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/identity/b/i;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -310,7 +310,7 @@
     if-nez p2, :cond_0
 
     .line 1
-    sget-object p2, Lcom/vk/common/view/Transparent8DpView;->b:Lcom/vk/common/view/Transparent8DpView$a;
+    sget-object p2, Lcom/vk/common/view/d;->b:Lcom/vk/common/view/d$a;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -318,9 +318,9 @@
 
     const-string v0, "parent.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2, p1}, Lcom/vk/common/view/Transparent8DpView$a;->a(Landroid/content/Context;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+    invoke-virtual {p2, p1}, Lcom/vk/common/view/d$a;->a(Landroid/content/Context;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object p1
 
@@ -475,7 +475,7 @@
     :sswitch_0
     new-instance p2, Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p0, p1}, Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder;-><init>(Lcom/vk/identity/adapters/IdentityListAdapter;Landroid/view/View;)V
 
@@ -485,7 +485,7 @@
     :sswitch_1
     new-instance p2, Lcom/vk/identity/adapters/IdentityListAdapter$IdentityHolder;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p0, p1}, Lcom/vk/identity/adapters/IdentityListAdapter$IdentityHolder;-><init>(Lcom/vk/identity/adapters/IdentityListAdapter;Landroid/view/View;)V
 
@@ -495,7 +495,7 @@
     :sswitch_2
     new-instance p2, Lcom/vk/identity/adapters/IdentityListAdapter$a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p1}, Lcom/vk/identity/adapters/IdentityListAdapter$a;-><init>(Landroid/view/View;)V
 

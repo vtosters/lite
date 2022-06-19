@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->b(Lcom/vk/libvideo/autoplay/AutoPlay;)V
+    value = Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->b(Lcom/vk/libvideo/autoplay/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;
 
-.field final synthetic b:Lcom/vk/libvideo/autoplay/AutoPlay;
+.field final synthetic b:Lcom/vk/libvideo/autoplay/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;Lcom/vk/libvideo/autoplay/AutoPlay;)V
+.method constructor <init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;Lcom/vk/libvideo/autoplay/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c$a;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;
 
-    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c$a;->b:Lcom/vk/libvideo/autoplay/AutoPlay;
+    iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c$a;->b:Lcom/vk/libvideo/autoplay/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -85,11 +85,11 @@
 
     iget-object v0, v0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->p(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/b0/VideoSessionController;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->p(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/b0/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c$a;->b:Lcom/vk/libvideo/autoplay/AutoPlay;
+    iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c$a;->b:Lcom/vk/libvideo/autoplay/a;
 
     check-cast v1, Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
@@ -97,7 +97,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/b0/VideoSessionController;->a(Lcom/vk/libvideo/VideoTracker;)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/b0/a;->a(Lcom/vk/libvideo/VideoTracker;)V
 
     return-void
 .end method

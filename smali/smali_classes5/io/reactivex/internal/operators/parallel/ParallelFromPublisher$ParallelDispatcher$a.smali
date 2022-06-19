@@ -3,7 +3,7 @@
 .source "ParallelFromPublisher.java"
 
 # interfaces
-.implements Le/b/Subscription;
+.implements Le/b/d;
 
 
 # annotations
@@ -78,7 +78,7 @@
 
     .line 4
     :cond_1
-    invoke-static {v3, v4, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->a(JJ)J
+    invoke-static {v3, v4, p1, p2}, Lio/reactivex/internal/util/b;->a(JJ)J
 
     move-result-wide v5
 

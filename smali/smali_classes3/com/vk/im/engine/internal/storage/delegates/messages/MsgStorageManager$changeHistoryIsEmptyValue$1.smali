@@ -3,7 +3,7 @@
 .source "MsgStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;",
-        "Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/engine/models/messages/d;",
+        "Lcom/vk/im/engine/models/messages/d;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;)Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+.method public final a(Lcom/vk/im/engine/models/messages/d;)Lcom/vk/im/engine/models/messages/d;
     .locals 6
 
     .line 1
@@ -62,7 +62,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;->a(Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;IZIILjava/lang/Object;)Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+    invoke-static/range {v0 .. v5}, Lcom/vk/im/engine/models/messages/d;->a(Lcom/vk/im/engine/models/messages/d;IZIILjava/lang/Object;)Lcom/vk/im/engine/models/messages/d;
 
     move-result-object p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+    check-cast p1, Lcom/vk/im/engine/models/messages/d;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$changeHistoryIsEmptyValue$1;->a(Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;)Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$changeHistoryIsEmptyValue$1;->a(Lcom/vk/im/engine/models/messages/d;)Lcom/vk/im/engine/models/messages/d;
 
     move-result-object p1
 

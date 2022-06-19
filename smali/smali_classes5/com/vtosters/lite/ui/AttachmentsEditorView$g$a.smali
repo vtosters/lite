@@ -49,7 +49,7 @@
 
     const/16 v1, 0x8
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
 
     return-void
 .end method

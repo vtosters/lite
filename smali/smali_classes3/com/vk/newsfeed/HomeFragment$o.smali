@@ -44,24 +44,24 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/newsfeed/NewsfeedSettingsFragment$a;
+    new-instance v0, Lcom/vk/newsfeed/u$a;
 
-    invoke-direct {v0}, Lcom/vk/newsfeed/NewsfeedSettingsFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/newsfeed/u$a;-><init>()V
 
     iget-object v1, p0, Lcom/vk/newsfeed/HomeFragment$o;->a:Lcom/vk/newsfeed/HomeFragment;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/HomeFragment$o;->a:Lcom/vk/newsfeed/HomeFragment;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/HomeFragment;->c(Lcom/vk/newsfeed/HomeFragment;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-static {v0}, Lcom/vk/newsfeed/HomeFragment;->c(Lcom/vk/newsfeed/HomeFragment;)Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     :cond_0
     return-void

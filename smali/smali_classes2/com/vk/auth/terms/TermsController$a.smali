@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/terms/TermsController;-><init>(Lcom/vk/auth/terms/TermsPresenter;Landroid/view/View;)V
+    value = Lcom/vk/auth/terms/TermsController;-><init>(Lcom/vk/auth/terms/a;Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/auth/terms/TermsController$a;->a:Lcom/vk/auth/terms/TermsController;
 
-    invoke-static {p1}, Lcom/vk/auth/terms/TermsController;->a(Lcom/vk/auth/terms/TermsController;)Lcom/vk/auth/terms/TermsPresenter;
+    invoke-static {p1}, Lcom/vk/auth/terms/TermsController;->a(Lcom/vk/auth/terms/TermsController;)Lcom/vk/auth/terms/a;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vk/auth/terms/TermsPresenter;->a(Z)V
+    invoke-interface {p1, p2}, Lcom/vk/auth/terms/a;->a(Z)V
 
     return-void
 .end method

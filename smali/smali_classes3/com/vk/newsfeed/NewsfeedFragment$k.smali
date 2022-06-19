@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/NewsfeedFragment$k;
-.super Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;
+.super Lcom/vk/newsfeed/k0/b/b/i;
 .source "NewsfeedFragment.kt"
 
 
@@ -19,12 +19,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/newsfeed/contracts/EntriesListContract1;)V
+.method constructor <init>(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/newsfeed/contracts/f;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/newsfeed/contracts/EntriesListContract1;",
+            "Lcom/vk/newsfeed/contracts/f;",
             ")V"
         }
     .end annotation
@@ -32,7 +32,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment$k;->H:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-direct {p0, p2}, Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;-><init>(Lcom/vk/newsfeed/contracts/EntriesListContract1;)V
+    invoke-direct {p0, p2}, Lcom/vk/newsfeed/k0/b/b/i;-><init>(Lcom/vk/newsfeed/contracts/f;)V
 
     return-void
 .end method
@@ -63,15 +63,15 @@
     return-object v0
 .end method
 
-.method protected c()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
+.method protected c()Lcom/vk/newsfeed/posting/l;
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;->c()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
+    invoke-super {p0}, Lcom/vk/newsfeed/k0/b/b/i;->c()Lcom/vk/newsfeed/posting/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->h()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/l;->h()Lcom/vk/newsfeed/posting/l;
 
     return-object v0
 .end method
@@ -89,16 +89,16 @@
     if-eqz v0, :cond_2
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
     const-string v2, "VKAccountManager.getCurrent()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
-    new-instance v2, Lcom/vk/cameraui/builder/CameraBuilder;
+    new-instance v2, Lcom/vk/cameraui/builder/a;
 
     iget-object v3, p0, Lcom/vk/newsfeed/NewsfeedFragment$k;->H:Lcom/vk/newsfeed/NewsfeedFragment;
 
@@ -112,18 +112,18 @@
 
     const-string v5, "posting"
 
-    invoke-direct {v2, v3, v5}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v5}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
 
     move-result v3
 
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->Z()Ljava/lang/String;
+    invoke-virtual {v1}, Lb/h/h/d/c;->Z()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->e0()Lcom/vk/dto/common/Image;
+    invoke-virtual {v1}, Lb/h/h/d/c;->e0()Lcom/vk/dto/common/Image;
 
     move-result-object v1
 
@@ -151,7 +151,7 @@
     const-string v1, "it"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Lcom/vk/cameraui/builder/CameraParams$b;->c(Landroid/content/Context;)V
 
@@ -159,7 +159,7 @@
 
     .line 6
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 

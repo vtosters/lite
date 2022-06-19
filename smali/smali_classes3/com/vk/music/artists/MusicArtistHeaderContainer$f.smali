@@ -1,11 +1,11 @@
 .class public final Lcom/vk/music/artists/MusicArtistHeaderContainer$f;
-.super Lcom/vk/core/widget/LifecycleListener;
+.super Lcom/vk/core/widget/a;
 .source "MusicArtistHeaderContainer.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/MusicSectionsModel;Z)V
+    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/f;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer$f;->c:Lcom/vk/music/artists/MusicArtistHeaderContainer;
 
-    invoke-direct {p0}, Lcom/vk/core/widget/LifecycleListener;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/widget/a;-><init>()V
 
     return-void
 .end method

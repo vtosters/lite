@@ -21,13 +21,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;Landroid/view/ViewGroup;Lcom/vtosters/lite/ui/holder/market/properties/OnPropertyVariantClickListener;)V
+.method public constructor <init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;Landroid/view/ViewGroup;Lcom/vtosters/lite/ui/holder/market/properties/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lcom/vtosters/lite/ui/holder/market/properties/OnPropertyVariantClickListener;",
+            "Lcom/vtosters/lite/ui/holder/market/properties/b;",
             ")V"
         }
     .end annotation
@@ -35,7 +35,7 @@
     const v0, 0x7f0d028f
 
     .line 1
-    invoke-direct {p0, p1, p2, v0, p3}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;-><init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;Landroid/view/ViewGroup;ILcom/vtosters/lite/ui/holder/market/properties/OnPropertyVariantClickListener;)V
+    invoke-direct {p0, p1, p2, v0, p3}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;-><init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;Landroid/view/ViewGroup;ILcom/vtosters/lite/ui/holder/market/properties/b;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -48,7 +48,7 @@
 
     const-string p2, "itemView.findViewById(R.id.item)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -64,16 +64,16 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
+.method public a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;->a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$c;->e:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/e;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -86,9 +86,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/market/properties/e;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$c;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$c;->a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
 
     return-void
 .end method

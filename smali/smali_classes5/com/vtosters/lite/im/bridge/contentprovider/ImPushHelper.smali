@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method private final a([Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+.method private final a([Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -49,7 +49,7 @@
             "Ljava/lang/Object;",
             ">([",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/database/Cursor;",
             "+TT;>;)TT;"
@@ -57,11 +57,11 @@
     .end annotation
 
     .line 7
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -123,7 +123,7 @@
 
     .line 10
     :try_start_2
-    invoke-interface {p2, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
     :try_end_2
@@ -269,17 +269,17 @@
     .end annotation
 
     .line 6
-    sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImContentProviderConstants;->z:[Ljava/lang/String;
+    sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/a;->z:[Ljava/lang/String;
 
     const-string v1, "DEFAULT_PROJECTION"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper$isOtherLoggedIn$1;
 
     invoke-direct {v1, p1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper$isOtherLoggedIn$1;-><init>(I)V
 
-    invoke-direct {p0, v0, v1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;->a([Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {p0, v0, v1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;->a([Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -306,9 +306,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/pushes/j/PushTypes;->INSTANCE:Lcom/vk/pushes/j/PushTypes;
+    sget-object v0, Lcom/vk/pushes/j/f;->i:Lcom/vk/pushes/j/f;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/PushTypes;->e()Ljava/util/Set;
+    invoke-virtual {v0}, Lcom/vk/pushes/j/f;->e()Ljava/util/Set;
 
     move-result-object v0
 
@@ -323,9 +323,9 @@
     if-nez v0, :cond_1
 
     .line 2
-    sget-object v0, Lcom/vk/pushes/j/PushTypes;->INSTANCE:Lcom/vk/pushes/j/PushTypes;
+    sget-object v0, Lcom/vk/pushes/j/f;->i:Lcom/vk/pushes/j/f;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/PushTypes;->c()Ljava/util/Set;
+    invoke-virtual {v0}, Lcom/vk/pushes/j/f;->c()Ljava/util/Set;
 
     move-result-object v0
 
@@ -336,9 +336,9 @@
     if-nez v0, :cond_1
 
     .line 3
-    sget-object v0, Lcom/vk/pushes/j/PushTypes;->INSTANCE:Lcom/vk/pushes/j/PushTypes;
+    sget-object v0, Lcom/vk/pushes/j/f;->i:Lcom/vk/pushes/j/f;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/PushTypes;->a()Ljava/util/Set;
+    invoke-virtual {v0}, Lcom/vk/pushes/j/f;->a()Ljava/util/Set;
 
     move-result-object v0
 
@@ -349,9 +349,9 @@
     if-nez v0, :cond_1
 
     .line 4
-    sget-object v0, Lcom/vk/pushes/j/PushTypes;->INSTANCE:Lcom/vk/pushes/j/PushTypes;
+    sget-object v0, Lcom/vk/pushes/j/f;->i:Lcom/vk/pushes/j/f;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/PushTypes;->f()Ljava/util/Set;
+    invoke-virtual {v0}, Lcom/vk/pushes/j/f;->f()Ljava/util/Set;
 
     move-result-object v0
 

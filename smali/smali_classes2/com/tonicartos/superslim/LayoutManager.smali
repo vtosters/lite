@@ -16,9 +16,9 @@
 
 
 # instance fields
-.field private final a:Lcom/tonicartos/superslim/SectionLayoutManager;
+.field private final a:Lcom/tonicartos/superslim/e;
 
-.field private final b:Lcom/tonicartos/superslim/SectionLayoutManager;
+.field private final b:Lcom/tonicartos/superslim/e;
 
 .field private c:I
 
@@ -31,7 +31,7 @@
         value = {
             "Ljava/util/HashMap<",
             "Ljava/lang/String;",
-            "Lcom/tonicartos/superslim/SectionLayoutManager;",
+            "Lcom/tonicartos/superslim/e;",
             ">;"
         }
     .end annotation
@@ -70,18 +70,18 @@
     iput-boolean v0, p0, Lcom/tonicartos/superslim/LayoutManager;->g:Z
 
     .line 6
-    new-instance v0, Lcom/tonicartos/superslim/LinearSLM;
+    new-instance v0, Lcom/tonicartos/superslim/c;
 
-    invoke-direct {v0, p0}, Lcom/tonicartos/superslim/LinearSLM;-><init>(Lcom/tonicartos/superslim/LayoutManager;)V
+    invoke-direct {v0, p0}, Lcom/tonicartos/superslim/c;-><init>(Lcom/tonicartos/superslim/LayoutManager;)V
 
-    iput-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->a:Lcom/tonicartos/superslim/SectionLayoutManager;
+    iput-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->a:Lcom/tonicartos/superslim/e;
 
     .line 7
-    new-instance v0, Lcom/tonicartos/superslim/GridSLM;
+    new-instance v0, Lcom/tonicartos/superslim/a;
 
-    invoke-direct {v0, p0, p1}, Lcom/tonicartos/superslim/GridSLM;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1}, Lcom/tonicartos/superslim/a;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->b:Lcom/tonicartos/superslim/SectionLayoutManager;
+    iput-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->b:Lcom/tonicartos/superslim/e;
 
     .line 8
     new-instance p1, Ljava/util/HashMap;
@@ -159,12 +159,12 @@
 
     .line 58
     :goto_0
-    new-instance v5, Lcom/tonicartos/superslim/SectionData;
+    new-instance v5, Lcom/tonicartos/superslim/d;
 
-    invoke-direct {v5, v0, v2}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v5, v0, v2}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 59
-    iget-object v2, v5, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v2, v5, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     iget-boolean v8, v2, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->a:Z
 
@@ -213,7 +213,7 @@
     check-cast v13, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     .line 64
-    invoke-virtual {v5, v13}, Lcom/tonicartos/superslim/SectionData;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Z
+    invoke-virtual {v5, v13}, Lcom/tonicartos/superslim/d;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Z
 
     move-result v14
 
@@ -312,12 +312,12 @@
     sub-float/2addr v4, v1
 
     .line 71
-    invoke-direct {v0, v5}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {v0, v5}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v1
 
     .line 72
-    invoke-virtual {v1, v11, v2}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(ILandroid/util/SparseArray;)I
+    invoke-virtual {v1, v11, v2}, Lcom/tonicartos/superslim/e;->a(ILandroid/util/SparseArray;)I
 
     move-result v1
 
@@ -328,7 +328,7 @@
     return v4
 .end method
 
-.method private a(IILcom/tonicartos/superslim/LayoutState;)I
+.method private a(IILcom/tonicartos/superslim/b;)I
     .locals 10
 
     if-lt p2, p1, :cond_0
@@ -354,7 +354,7 @@
     add-int/lit8 v0, v0, 0x1
 
     .line 14
-    invoke-virtual {p3}, Lcom/tonicartos/superslim/LayoutState;->a()Landroidx/recyclerview/widget/RecyclerView$State;
+    invoke-virtual {p3}, Lcom/tonicartos/superslim/b;->a()Landroidx/recyclerview/widget/RecyclerView$State;
 
     move-result-object v1
 
@@ -368,38 +368,38 @@
 
     .line 15
     :cond_2
-    invoke-virtual {p3, v0}, Lcom/tonicartos/superslim/LayoutState;->c(I)Lcom/tonicartos/superslim/LayoutState$a;
+    invoke-virtual {p3, v0}, Lcom/tonicartos/superslim/b;->c(I)Lcom/tonicartos/superslim/b$a;
 
     move-result-object v1
 
     .line 16
-    new-instance v2, Lcom/tonicartos/superslim/SectionData;
+    new-instance v2, Lcom/tonicartos/superslim/d;
 
-    iget-object v3, v1, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v3, v1, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
-    invoke-direct {v2, p0, v3}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v2, p0, v3}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 17
-    iget-boolean v3, v2, Lcom/tonicartos/superslim/SectionData;->b:Z
+    iget-boolean v3, v2, Lcom/tonicartos/superslim/d;->b:Z
 
     if-eqz v3, :cond_3
 
     .line 18
-    iget-object v2, v1, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v2, v1, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     invoke-virtual {p0, v2}, Lcom/tonicartos/superslim/LayoutManager;->b(Landroid/view/View;)V
 
     .line 19
-    new-instance v2, Lcom/tonicartos/superslim/SectionData;
+    new-instance v2, Lcom/tonicartos/superslim/d;
 
-    iget-object v3, v1, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v3, v1, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
-    invoke-direct {v2, p0, v3}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v2, p0, v3}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 20
-    iget-object v3, v1, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v3, v1, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
-    invoke-direct {p0, v3, p2, v2, p3}, Lcom/tonicartos/superslim/LayoutManager;->b(Landroid/view/View;ILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, v3, p2, v2, p3}, Lcom/tonicartos/superslim/LayoutManager;->b(Landroid/view/View;ILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result p2
 
@@ -409,9 +409,9 @@
 
     .line 21
     :cond_3
-    iget-object v3, v1, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v3, v1, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
-    invoke-virtual {p3, v0, v3}, Lcom/tonicartos/superslim/LayoutState;->a(ILandroid/view/View;)V
+    invoke-virtual {p3, v0, v3}, Lcom/tonicartos/superslim/b;->a(ILandroid/view/View;)V
 
     :goto_0
     move v6, p2
@@ -419,7 +419,7 @@
     move v7, v0
 
     .line 22
-    invoke-virtual {p3}, Lcom/tonicartos/superslim/LayoutState;->a()Landroidx/recyclerview/widget/RecyclerView$State;
+    invoke-virtual {p3}, Lcom/tonicartos/superslim/b;->a()Landroidx/recyclerview/widget/RecyclerView$State;
 
     move-result-object p2
 
@@ -430,7 +430,7 @@
     if-ge v7, p2, :cond_4
 
     .line 23
-    invoke-direct {p0, v2}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v2}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v4
 
@@ -441,34 +441,34 @@
     move-object v9, p3
 
     .line 24
-    invoke-virtual/range {v4 .. v9}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(IIILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-virtual/range {v4 .. v9}, Lcom/tonicartos/superslim/e;->a(IIILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v6
 
     .line 25
     :cond_4
-    iget-boolean p2, v2, Lcom/tonicartos/superslim/SectionData;->b:Z
+    iget-boolean p2, v2, Lcom/tonicartos/superslim/d;->b:Z
 
     if-eqz p2, :cond_6
 
     .line 26
-    iget-object p2, v1, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object p2, v1, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->addView(Landroid/view/View;)V
 
     .line 27
-    iget-boolean p2, v1, Lcom/tonicartos/superslim/LayoutState$a;->b:Z
+    iget-boolean p2, v1, Lcom/tonicartos/superslim/b$a;->b:Z
 
     if-eqz p2, :cond_5
 
     .line 28
-    iget p2, v2, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget p2, v2, Lcom/tonicartos/superslim/d;->a:I
 
-    invoke-virtual {p3, p2}, Lcom/tonicartos/superslim/LayoutState;->a(I)V
+    invoke-virtual {p3, p2}, Lcom/tonicartos/superslim/b;->a(I)V
 
     .line 29
     :cond_5
-    iget-object p2, v1, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object p2, v1, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     invoke-virtual {p0, p2}, Lcom/tonicartos/superslim/LayoutManager;->getDecoratedBottom(Landroid/view/View;)I
 
@@ -480,14 +480,14 @@
 
     .line 30
     :cond_6
-    invoke-direct {p0, p1, v6, p3}, Lcom/tonicartos/superslim/LayoutManager;->a(IILcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, p1, v6, p3}, Lcom/tonicartos/superslim/LayoutManager;->a(IILcom/tonicartos/superslim/b;)I
 
     move-result p1
 
     return p1
 .end method
 
-.method private a(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/LayoutState;)I
+.method private a(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/b;)I
     .locals 1
 
     .line 41
@@ -496,7 +496,7 @@
     if-ne p2, v0, :cond_0
 
     .line 42
-    invoke-direct {p0, p1, p3}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, p1, p3}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/b;)I
 
     move-result p1
 
@@ -504,14 +504,14 @@
 
     .line 43
     :cond_0
-    invoke-direct {p0, p1, p3}, Lcom/tonicartos/superslim/LayoutManager;->a(ILcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, p1, p3}, Lcom/tonicartos/superslim/LayoutManager;->a(ILcom/tonicartos/superslim/b;)I
 
     move-result p1
 
     return p1
 .end method
 
-.method private a(ILcom/tonicartos/superslim/LayoutState;)I
+.method private a(ILcom/tonicartos/superslim/b;)I
     .locals 3
 
     .line 31
@@ -534,27 +534,27 @@
     .line 34
     sget-object v2, Lcom/tonicartos/superslim/LayoutManager$Direction;->END:Lcom/tonicartos/superslim/LayoutManager$Direction;
 
-    invoke-direct {p0, v1, v2, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/LayoutState;)Landroid/view/View;
+    invoke-direct {p0, v1, v2, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/b;)Landroid/view/View;
 
     move-result-object v1
 
     .line 35
-    new-instance v2, Lcom/tonicartos/superslim/SectionData;
+    new-instance v2, Lcom/tonicartos/superslim/d;
 
-    invoke-direct {v2, p0, v1}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v2, p0, v1}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 36
-    invoke-direct {p0, v2}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v2}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v1
 
     .line 37
-    invoke-virtual {v1, p1, v0, v2, p2}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(ILandroid/view/View;Lcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-virtual {v1, p1, v0, v2, p2}, Lcom/tonicartos/superslim/e;->a(ILandroid/view/View;Lcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v0
 
     .line 38
-    iget v1, v2, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v1, v2, Lcom/tonicartos/superslim/d;->a:I
 
     invoke-direct {p0, v1}, Lcom/tonicartos/superslim/LayoutManager;->c(I)Landroid/view/View;
 
@@ -568,7 +568,7 @@
     if-gt v0, p1, :cond_0
 
     .line 40
-    invoke-direct {p0, p1, v0, p2}, Lcom/tonicartos/superslim/LayoutManager;->a(IILcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, p1, v0, p2}, Lcom/tonicartos/superslim/LayoutManager;->a(IILcom/tonicartos/superslim/b;)I
 
     move-result v0
 
@@ -604,16 +604,16 @@
     return p1
 .end method
 
-.method private a(Landroid/view/View;IIIILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+.method private a(Landroid/view/View;IIIILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
     .locals 7
 
     .line 98
     iget-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->d:Landroid/graphics/Rect;
 
-    invoke-direct {p0, v0, p6, p7}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/graphics/Rect;Lcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)Landroid/graphics/Rect;
+    invoke-direct {p0, v0, p6, p7}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/graphics/Rect;Lcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)Landroid/graphics/Rect;
 
     .line 99
-    iget-object v1, p6, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v1, p6, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v1}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->d()Z
 
@@ -621,7 +621,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p6, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v1, p6, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v1}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e()Z
 
@@ -635,7 +635,7 @@
     .line 101
     iget p4, v0, Landroid/graphics/Rect;->bottom:I
 
-    iget v1, p6, Lcom/tonicartos/superslim/SectionData;->g:I
+    iget v1, p6, Lcom/tonicartos/superslim/d;->g:I
 
     sub-int/2addr p4, v1
 
@@ -654,7 +654,7 @@
     .line 103
     iget p4, v0, Landroid/graphics/Rect;->top:I
 
-    iget v1, p6, Lcom/tonicartos/superslim/SectionData;->g:I
+    iget v1, p6, Lcom/tonicartos/superslim/d;->g:I
 
     add-int/2addr p4, v1
 
@@ -669,7 +669,7 @@
     .line 105
     iget p4, v0, Landroid/graphics/Rect;->bottom:I
 
-    iget v1, p6, Lcom/tonicartos/superslim/SectionData;->g:I
+    iget v1, p6, Lcom/tonicartos/superslim/d;->g:I
 
     sub-int/2addr p4, v1
 
@@ -677,7 +677,7 @@
 
     .line 106
     :goto_0
-    iget-object p4, p6, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object p4, p6, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {p4}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->g()Z
 
@@ -689,10 +689,10 @@
 
     if-ge p4, p2, :cond_2
 
-    iget p4, p6, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget p4, p6, Lcom/tonicartos/superslim/d;->a:I
 
     .line 107
-    invoke-virtual {p7}, Lcom/tonicartos/superslim/LayoutState;->a()Landroidx/recyclerview/widget/RecyclerView$State;
+    invoke-virtual {p7}, Lcom/tonicartos/superslim/b;->a()Landroidx/recyclerview/widget/RecyclerView$State;
 
     move-result-object p7
 
@@ -708,14 +708,14 @@
     .line 109
     iget p2, v0, Landroid/graphics/Rect;->top:I
 
-    iget p4, p6, Lcom/tonicartos/superslim/SectionData;->g:I
+    iget p4, p6, Lcom/tonicartos/superslim/d;->g:I
 
     add-int/2addr p2, p4
 
     iput p2, v0, Landroid/graphics/Rect;->bottom:I
 
     .line 110
-    iget-object p2, p6, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object p2, p6, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {p2}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->d()Z
 
@@ -723,7 +723,7 @@
 
     if-eqz p2, :cond_2
 
-    iget-object p2, p6, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object p2, p6, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {p2}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e()Z
 
@@ -732,7 +732,7 @@
     if-nez p2, :cond_2
 
     .line 111
-    iget p2, p6, Lcom/tonicartos/superslim/SectionData;->g:I
+    iget p2, p6, Lcom/tonicartos/superslim/d;->g:I
 
     sub-int/2addr p3, p2
 
@@ -748,7 +748,7 @@
     .line 114
     iget p2, v0, Landroid/graphics/Rect;->bottom:I
 
-    iget p4, p6, Lcom/tonicartos/superslim/SectionData;->g:I
+    iget p4, p6, Lcom/tonicartos/superslim/d;->g:I
 
     sub-int/2addr p2, p4
 
@@ -780,7 +780,7 @@
     return p1
 .end method
 
-.method private a(Landroid/view/View;IILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+.method private a(Landroid/view/View;IILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
     .locals 13
 
     move-object v8, p0
@@ -790,7 +790,7 @@
     move-object/from16 v10, p5
 
     .line 151
-    iget-boolean v0, v9, Lcom/tonicartos/superslim/SectionData;->b:Z
+    iget-boolean v0, v9, Lcom/tonicartos/superslim/d;->b:Z
 
     if-nez v0, :cond_0
 
@@ -798,12 +798,12 @@
 
     .line 152
     :cond_0
-    invoke-direct {p0, v9}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v9}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v0
 
     .line 153
-    iget v1, v9, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v1, v9, Lcom/tonicartos/superslim/d;->a:I
 
     invoke-direct {p0, v1}, Lcom/tonicartos/superslim/LayoutManager;->d(I)I
 
@@ -852,7 +852,7 @@
 
     move-result v11
 
-    iget v12, v9, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v12, v9, Lcom/tonicartos/superslim/d;->a:I
 
     if-eq v11, v12, :cond_3
 
@@ -897,7 +897,7 @@
     if-ne v1, v3, :cond_5
 
     .line 163
-    iget-object v1, v9, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v1, v9, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v1}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->d()Z
 
@@ -905,7 +905,7 @@
 
     if-eqz v1, :cond_5
 
-    iget-object v1, v9, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v1, v9, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v1}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e()Z
 
@@ -922,7 +922,7 @@
 
     .line 164
     :goto_2
-    iget-object v1, v9, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v1, v9, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v1}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->d()Z
 
@@ -930,7 +930,7 @@
 
     if-eqz v1, :cond_6
 
-    iget-object v1, v9, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v1, v9, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v1}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e()Z
 
@@ -940,11 +940,11 @@
 
     .line 165
     :cond_6
-    iget v1, v9, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v1, v9, Lcom/tonicartos/superslim/d;->a:I
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(IZ)Landroid/view/View;
+    invoke-virtual {v0, v1, v2}, Lcom/tonicartos/superslim/e;->a(IZ)Landroid/view/View;
 
     move-result-object v1
 
@@ -958,7 +958,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1, v9, v10}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(ILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-virtual {v0, v1, v9, v10}, Lcom/tonicartos/superslim/e;->a(ILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v0
 
@@ -977,12 +977,12 @@
     move-object/from16 v7, p5
 
     .line 167
-    invoke-direct/range {v0 .. v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;IIIILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct/range {v0 .. v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;IIIILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v0
 
     .line 168
-    invoke-direct {p0, p1, p2, v9, v10}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;ILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)V
+    invoke-direct {p0, p1, p2, v9, v10}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;ILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)V
 
     return v0
 .end method
@@ -998,7 +998,7 @@
     return p0
 .end method
 
-.method private a(Landroid/graphics/Rect;Lcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)Landroid/graphics/Rect;
+.method private a(Landroid/graphics/Rect;Lcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)Landroid/graphics/Rect;
     .locals 3
 
     .line 117
@@ -1012,7 +1012,7 @@
     move-result v1
 
     .line 119
-    iget-object v2, p2, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v2, p2, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v2}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->c()Z
 
@@ -1021,7 +1021,7 @@
     if-eqz v2, :cond_3
 
     .line 120
-    iget-object v2, p2, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v2, p2, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v2}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e()Z
 
@@ -1029,18 +1029,18 @@
 
     if-nez v2, :cond_1
 
-    iget-object v2, p2, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v2, p2, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     iget-boolean v2, v2, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->f:Z
 
     if-nez v2, :cond_1
 
-    iget v2, p2, Lcom/tonicartos/superslim/SectionData;->k:I
+    iget v2, p2, Lcom/tonicartos/superslim/d;->k:I
 
     if-lez v2, :cond_1
 
     .line 121
-    iget-boolean p3, p3, Lcom/tonicartos/superslim/LayoutState;->d:Z
+    iget-boolean p3, p3, Lcom/tonicartos/superslim/b;->d:Z
 
     if-eqz p3, :cond_0
 
@@ -1049,7 +1049,7 @@
 
     move-result p3
 
-    iget v0, p2, Lcom/tonicartos/superslim/SectionData;->k:I
+    iget v0, p2, Lcom/tonicartos/superslim/d;->k:I
 
     sub-int/2addr p3, v0
 
@@ -1060,7 +1060,7 @@
     .line 123
     iget p3, p1, Landroid/graphics/Rect;->left:I
 
-    iget p2, p2, Lcom/tonicartos/superslim/SectionData;->f:I
+    iget p2, p2, Lcom/tonicartos/superslim/d;->f:I
 
     add-int/2addr p3, p2
 
@@ -1077,7 +1077,7 @@
     .line 125
     iget p3, p1, Landroid/graphics/Rect;->right:I
 
-    iget p2, p2, Lcom/tonicartos/superslim/SectionData;->f:I
+    iget p2, p2, Lcom/tonicartos/superslim/d;->f:I
 
     sub-int/2addr p3, p2
 
@@ -1087,7 +1087,7 @@
 
     .line 126
     :cond_1
-    iget-boolean p3, p3, Lcom/tonicartos/superslim/LayoutState;->d:Z
+    iget-boolean p3, p3, Lcom/tonicartos/superslim/b;->d:Z
 
     if-eqz p3, :cond_2
 
@@ -1103,7 +1103,7 @@
     .line 128
     iget p3, p1, Landroid/graphics/Rect;->right:I
 
-    iget p2, p2, Lcom/tonicartos/superslim/SectionData;->f:I
+    iget p2, p2, Lcom/tonicartos/superslim/d;->f:I
 
     sub-int/2addr p3, p2
 
@@ -1118,7 +1118,7 @@
     .line 130
     iget p3, p1, Landroid/graphics/Rect;->left:I
 
-    iget p2, p2, Lcom/tonicartos/superslim/SectionData;->f:I
+    iget p2, p2, Lcom/tonicartos/superslim/d;->f:I
 
     add-int/2addr p3, p2
 
@@ -1128,7 +1128,7 @@
 
     .line 131
     :cond_3
-    iget-object v2, p2, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v2, p2, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v2}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->f()Z
 
@@ -1137,7 +1137,7 @@
     if-eqz v2, :cond_7
 
     .line 132
-    iget-object v2, p2, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v2, p2, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v2}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e()Z
 
@@ -1145,18 +1145,18 @@
 
     if-nez v2, :cond_5
 
-    iget-object v2, p2, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v2, p2, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     iget-boolean v2, v2, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e:Z
 
     if-nez v2, :cond_5
 
-    iget v2, p2, Lcom/tonicartos/superslim/SectionData;->j:I
+    iget v2, p2, Lcom/tonicartos/superslim/d;->j:I
 
     if-lez v2, :cond_5
 
     .line 133
-    iget-boolean p3, p3, Lcom/tonicartos/superslim/LayoutState;->d:Z
+    iget-boolean p3, p3, Lcom/tonicartos/superslim/b;->d:Z
 
     if-eqz p3, :cond_4
 
@@ -1168,7 +1168,7 @@
     .line 135
     iget p3, p1, Landroid/graphics/Rect;->right:I
 
-    iget p2, p2, Lcom/tonicartos/superslim/SectionData;->f:I
+    iget p2, p2, Lcom/tonicartos/superslim/d;->f:I
 
     sub-int/2addr p3, p2
 
@@ -1182,7 +1182,7 @@
 
     move-result p3
 
-    iget v0, p2, Lcom/tonicartos/superslim/SectionData;->j:I
+    iget v0, p2, Lcom/tonicartos/superslim/d;->j:I
 
     sub-int/2addr p3, v0
 
@@ -1193,7 +1193,7 @@
     .line 137
     iget p3, p1, Landroid/graphics/Rect;->left:I
 
-    iget p2, p2, Lcom/tonicartos/superslim/SectionData;->f:I
+    iget p2, p2, Lcom/tonicartos/superslim/d;->f:I
 
     add-int/2addr p3, p2
 
@@ -1203,7 +1203,7 @@
 
     .line 138
     :cond_5
-    iget-boolean p3, p3, Lcom/tonicartos/superslim/LayoutState;->d:Z
+    iget-boolean p3, p3, Lcom/tonicartos/superslim/b;->d:Z
 
     if-eqz p3, :cond_6
 
@@ -1213,7 +1213,7 @@
     .line 140
     iget p3, p1, Landroid/graphics/Rect;->left:I
 
-    iget p2, p2, Lcom/tonicartos/superslim/SectionData;->f:I
+    iget p2, p2, Lcom/tonicartos/superslim/d;->f:I
 
     add-int/2addr p3, p2
 
@@ -1234,7 +1234,7 @@
     .line 142
     iget p3, p1, Landroid/graphics/Rect;->right:I
 
-    iget p2, p2, Lcom/tonicartos/superslim/SectionData;->f:I
+    iget p2, p2, Lcom/tonicartos/superslim/d;->f:I
 
     sub-int/2addr p3, p2
 
@@ -1249,7 +1249,7 @@
     .line 144
     iget p3, p1, Landroid/graphics/Rect;->left:I
 
-    iget p2, p2, Lcom/tonicartos/superslim/SectionData;->f:I
+    iget p2, p2, Lcom/tonicartos/superslim/d;->f:I
 
     add-int/2addr p3, p2
 
@@ -1359,7 +1359,7 @@
     return-object p1
 .end method
 
-.method private a(ILjava/lang/String;)Lcom/tonicartos/superslim/SectionLayoutManager;
+.method private a(ILjava/lang/String;)Lcom/tonicartos/superslim/e;
     .locals 1
 
     const/4 v0, -0x1
@@ -1373,7 +1373,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/tonicartos/superslim/SectionLayoutManager;
+    check-cast p1, Lcom/tonicartos/superslim/e;
 
     return-object p1
 
@@ -1383,7 +1383,7 @@
     if-ne p1, p2, :cond_1
 
     .line 74
-    iget-object p1, p0, Lcom/tonicartos/superslim/LayoutManager;->a:Lcom/tonicartos/superslim/SectionLayoutManager;
+    iget-object p1, p0, Lcom/tonicartos/superslim/LayoutManager;->a:Lcom/tonicartos/superslim/e;
 
     return-object p1
 
@@ -1393,7 +1393,7 @@
     if-ne p1, p2, :cond_2
 
     .line 75
-    iget-object p1, p0, Lcom/tonicartos/superslim/LayoutManager;->b:Lcom/tonicartos/superslim/SectionLayoutManager;
+    iget-object p1, p0, Lcom/tonicartos/superslim/LayoutManager;->b:Lcom/tonicartos/superslim/e;
 
     return-object p1
 
@@ -1406,7 +1406,7 @@
     throw p2
 .end method
 
-.method private a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Lcom/tonicartos/superslim/SectionLayoutManager;
+.method private a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Lcom/tonicartos/superslim/e;
     .locals 2
 
     .line 77
@@ -1425,7 +1425,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/tonicartos/superslim/SectionLayoutManager;
+    check-cast p1, Lcom/tonicartos/superslim/e;
 
     return-object p1
 
@@ -1435,7 +1435,7 @@
     if-ne v0, p1, :cond_1
 
     .line 79
-    iget-object p1, p0, Lcom/tonicartos/superslim/LayoutManager;->a:Lcom/tonicartos/superslim/SectionLayoutManager;
+    iget-object p1, p0, Lcom/tonicartos/superslim/LayoutManager;->a:Lcom/tonicartos/superslim/e;
 
     return-object p1
 
@@ -1445,7 +1445,7 @@
     if-ne v0, p1, :cond_2
 
     .line 80
-    iget-object p1, p0, Lcom/tonicartos/superslim/LayoutManager;->b:Lcom/tonicartos/superslim/SectionLayoutManager;
+    iget-object p1, p0, Lcom/tonicartos/superslim/LayoutManager;->b:Lcom/tonicartos/superslim/e;
 
     return-object p1
 
@@ -1458,11 +1458,11 @@
     throw p1
 .end method
 
-.method private a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+.method private a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
     .locals 2
 
     .line 82
-    iget-object v0, p1, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v0, p1, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     iget v0, v0, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->h:I
 
@@ -1473,13 +1473,13 @@
     .line 83
     iget-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->f:Ljava/util/HashMap;
 
-    iget-object v1, p1, Lcom/tonicartos/superslim/SectionData;->d:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tonicartos/superslim/d;->d:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tonicartos/superslim/SectionLayoutManager;
+    check-cast v0, Lcom/tonicartos/superslim/e;
 
     if-eqz v0, :cond_0
 
@@ -1489,7 +1489,7 @@
     :cond_0
     new-instance v0, Lcom/tonicartos/superslim/LayoutManager$UnknownSectionLayoutException;
 
-    iget-object p1, p1, Lcom/tonicartos/superslim/SectionData;->d:Ljava/lang/String;
+    iget-object p1, p1, Lcom/tonicartos/superslim/d;->d:Ljava/lang/String;
 
     invoke-direct {v0, p0, p1}, Lcom/tonicartos/superslim/LayoutManager$UnknownSectionLayoutException;-><init>(Lcom/tonicartos/superslim/LayoutManager;Ljava/lang/String;)V
 
@@ -1501,7 +1501,7 @@
     if-ne v0, v1, :cond_2
 
     .line 85
-    iget-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->a:Lcom/tonicartos/superslim/SectionLayoutManager;
+    iget-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->a:Lcom/tonicartos/superslim/e;
 
     goto :goto_0
 
@@ -1511,11 +1511,11 @@
     if-ne v0, v1, :cond_3
 
     .line 86
-    iget-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->b:Lcom/tonicartos/superslim/SectionLayoutManager;
+    iget-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->b:Lcom/tonicartos/superslim/e;
 
     .line 87
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-virtual {v0, p1}, Lcom/tonicartos/superslim/e;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object p1
 
@@ -1530,13 +1530,13 @@
     throw p1
 .end method
 
-.method private a(Landroid/view/View;ILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)V
+.method private a(Landroid/view/View;ILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)V
     .locals 1
 
     .line 8
-    iget v0, p3, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v0, p3, Lcom/tonicartos/superslim/d;->a:I
 
-    invoke-virtual {p4, v0}, Lcom/tonicartos/superslim/LayoutState;->b(I)Landroid/view/View;
+    invoke-virtual {p4, v0}, Lcom/tonicartos/superslim/b;->b(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1550,7 +1550,7 @@
     if-le v0, p2, :cond_0
 
     .line 10
-    iget p2, p3, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget p2, p3, Lcom/tonicartos/superslim/d;->a:I
 
     invoke-direct {p0, p2}, Lcom/tonicartos/superslim/LayoutManager;->d(I)I
 
@@ -1561,15 +1561,15 @@
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->addView(Landroid/view/View;I)V
 
     .line 11
-    iget p1, p3, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget p1, p3, Lcom/tonicartos/superslim/d;->a:I
 
-    invoke-virtual {p4, p1}, Lcom/tonicartos/superslim/LayoutState;->a(I)V
+    invoke-virtual {p4, p1}, Lcom/tonicartos/superslim/b;->a(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private a(Lcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/LayoutState;)V
+.method private a(Lcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/b;)V
     .locals 1
 
     .line 145
@@ -1578,23 +1578,23 @@
     if-ne p1, v0, :cond_0
 
     .line 146
-    invoke-direct {p0, p2}, Lcom/tonicartos/superslim/LayoutManager;->c(Lcom/tonicartos/superslim/LayoutState;)V
+    invoke-direct {p0, p2}, Lcom/tonicartos/superslim/LayoutManager;->c(Lcom/tonicartos/superslim/b;)V
 
     goto :goto_0
 
     .line 147
     :cond_0
-    invoke-direct {p0, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(Lcom/tonicartos/superslim/LayoutState;)V
+    invoke-direct {p0, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(Lcom/tonicartos/superslim/b;)V
 
     :goto_0
     return-void
 .end method
 
-.method private a(Lcom/tonicartos/superslim/LayoutState;)Z
+.method private a(Lcom/tonicartos/superslim/b;)Z
     .locals 6
 
     .line 89
-    invoke-virtual {p1}, Lcom/tonicartos/superslim/LayoutState;->a()Landroidx/recyclerview/widget/RecyclerView$State;
+    invoke-virtual {p1}, Lcom/tonicartos/superslim/b;->a()Landroidx/recyclerview/widget/RecyclerView$State;
 
     move-result-object p1
 
@@ -1776,9 +1776,9 @@
     move-result v4
 
     .line 48
-    new-instance v5, Lcom/tonicartos/superslim/SectionData;
+    new-instance v5, Lcom/tonicartos/superslim/d;
 
-    invoke-direct {v5, v0, v2}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v5, v0, v2}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 49
     new-instance v2, Landroid/util/SparseArray;
@@ -1826,7 +1826,7 @@
     check-cast v12, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     .line 53
-    invoke-virtual {v5, v12}, Lcom/tonicartos/superslim/SectionData;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Z
+    invoke-virtual {v5, v12}, Lcom/tonicartos/superslim/d;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Z
 
     move-result v13
 
@@ -1928,12 +1928,12 @@
     sub-float/2addr v9, v1
 
     .line 61
-    invoke-direct {v0, v5}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {v0, v5}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v1
 
     .line 62
-    invoke-virtual {v1, v10, v2}, Lcom/tonicartos/superslim/SectionLayoutManager;->b(ILandroid/util/SparseArray;)I
+    invoke-virtual {v1, v10, v2}, Lcom/tonicartos/superslim/e;->b(ILandroid/util/SparseArray;)I
 
     move-result v1
 
@@ -1944,7 +1944,7 @@
     return v9
 .end method
 
-.method private b(IILcom/tonicartos/superslim/LayoutState;)I
+.method private b(IILcom/tonicartos/superslim/b;)I
     .locals 15
 
     move-object v8, p0
@@ -2013,12 +2013,12 @@
 
     .line 14
     :cond_2
-    invoke-virtual {v10, v3}, Lcom/tonicartos/superslim/LayoutState;->c(I)Lcom/tonicartos/superslim/LayoutState$a;
+    invoke-virtual {v10, v3}, Lcom/tonicartos/superslim/b;->c(I)Lcom/tonicartos/superslim/b$a;
 
     move-result-object v0
 
     .line 15
-    invoke-virtual {v0}, Lcom/tonicartos/superslim/LayoutState$a;->a()Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    invoke-virtual {v0}, Lcom/tonicartos/superslim/b$a;->a()Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     move-result-object v0
 
@@ -2030,17 +2030,17 @@
     .line 17
     sget-object v1, Lcom/tonicartos/superslim/LayoutManager$Direction;->START:Lcom/tonicartos/superslim/LayoutManager$Direction;
 
-    invoke-direct {p0, v0, v1, v10}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/LayoutState;)Landroid/view/View;
+    invoke-direct {p0, v0, v1, v10}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/b;)Landroid/view/View;
 
     move-result-object v12
 
     .line 18
-    new-instance v0, Lcom/tonicartos/superslim/SectionData;
+    new-instance v0, Lcom/tonicartos/superslim/d;
 
-    invoke-direct {v0, p0, v12}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v0, p0, v12}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 19
-    iget-boolean v1, v0, Lcom/tonicartos/superslim/SectionData;->b:Z
+    iget-boolean v1, v0, Lcom/tonicartos/superslim/d;->b:Z
 
     if-eqz v1, :cond_3
 
@@ -2048,15 +2048,15 @@
     invoke-virtual {p0, v12}, Lcom/tonicartos/superslim/LayoutManager;->b(Landroid/view/View;)V
 
     .line 21
-    new-instance v0, Lcom/tonicartos/superslim/SectionData;
+    new-instance v0, Lcom/tonicartos/superslim/d;
 
-    invoke-direct {v0, p0, v12}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v0, p0, v12}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     :cond_3
     move-object v13, v0
 
     .line 22
-    invoke-direct {p0, v13}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v13}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v14
 
@@ -2073,7 +2073,7 @@
     move-object/from16 v5, p3
 
     .line 23
-    invoke-virtual/range {v0 .. v5}, Lcom/tonicartos/superslim/SectionLayoutManager;->b(IIILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-virtual/range {v0 .. v5}, Lcom/tonicartos/superslim/e;->b(IIILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v0
 
@@ -2086,12 +2086,12 @@
 
     .line 24
     :goto_1
-    iget-boolean v0, v13, Lcom/tonicartos/superslim/SectionData;->b:Z
+    iget-boolean v0, v13, Lcom/tonicartos/superslim/d;->b:Z
 
     if-eqz v0, :cond_8
 
     .line 25
-    iget-object v0, v13, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v0, v13, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v0}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->d()Z
 
@@ -2099,7 +2099,7 @@
 
     if-eqz v0, :cond_6
 
-    iget-object v0, v13, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v0, v13, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v0}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e()Z
 
@@ -2118,9 +2118,9 @@
     .line 26
     :cond_6
     :goto_3
-    iget v0, v13, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v0, v13, Lcom/tonicartos/superslim/d;->a:I
 
-    invoke-virtual {v14, v0, v11}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(IZ)Landroid/view/View;
+    invoke-virtual {v14, v0, v11}, Lcom/tonicartos/superslim/e;->a(IZ)Landroid/view/View;
 
     move-result-object v0
 
@@ -2134,7 +2134,7 @@
 
     move-result v0
 
-    invoke-virtual {v14, v0, v13, v10}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(ILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-virtual {v14, v0, v13, v10}, Lcom/tonicartos/superslim/e;->a(ILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v0
 
@@ -2154,23 +2154,23 @@
     move-object/from16 v7, p3
 
     .line 28
-    invoke-direct/range {v0 .. v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;IIIILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct/range {v0 .. v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;IIIILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v3
 
     .line 29
-    invoke-direct {p0, v12, v9, v13, v10}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;ILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)V
+    invoke-direct {p0, v12, v9, v13, v10}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;ILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)V
 
     .line 30
     :cond_8
-    invoke-direct {p0, v9, v3, v10}, Lcom/tonicartos/superslim/LayoutManager;->b(IILcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, v9, v3, v10}, Lcom/tonicartos/superslim/LayoutManager;->b(IILcom/tonicartos/superslim/b;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method private b(ILcom/tonicartos/superslim/LayoutState;)I
+.method private b(ILcom/tonicartos/superslim/b;)I
     .locals 9
 
     .line 31
@@ -2193,17 +2193,17 @@
     .line 34
     sget-object v2, Lcom/tonicartos/superslim/LayoutManager$Direction;->START:Lcom/tonicartos/superslim/LayoutManager$Direction;
 
-    invoke-direct {p0, v1, v2, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/LayoutState;)Landroid/view/View;
+    invoke-direct {p0, v1, v2, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/b;)Landroid/view/View;
 
     move-result-object v4
 
     .line 35
-    new-instance v7, Lcom/tonicartos/superslim/SectionData;
+    new-instance v7, Lcom/tonicartos/superslim/d;
 
-    invoke-direct {v7, p0, v4}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v7, p0, v4}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 36
-    invoke-direct {p0, v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v1
 
@@ -2213,7 +2213,7 @@
     move-result v2
 
     .line 38
-    iget v3, v7, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v3, v7, Lcom/tonicartos/superslim/d;->a:I
 
     if-ne v2, v3, :cond_0
 
@@ -2233,7 +2233,7 @@
     if-ne v2, v3, :cond_1
 
     .line 40
-    iget-boolean v2, v7, Lcom/tonicartos/superslim/SectionData;->b:Z
+    iget-boolean v2, v7, Lcom/tonicartos/superslim/d;->b:Z
 
     if-eqz v2, :cond_1
 
@@ -2246,7 +2246,7 @@
 
     .line 42
     :cond_1
-    invoke-virtual {v1, p1, v0, v7, p2}, Lcom/tonicartos/superslim/SectionLayoutManager;->b(ILandroid/view/View;Lcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-virtual {v1, p1, v0, v7, p2}, Lcom/tonicartos/superslim/e;->b(ILandroid/view/View;Lcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v0
 
@@ -2260,14 +2260,14 @@
     move-object v8, p2
 
     .line 43
-    invoke-direct/range {v3 .. v8}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;IILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct/range {v3 .. v8}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;IILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v0
 
     if-le v0, p1, :cond_2
 
     .line 44
-    invoke-direct {p0, p1, v0, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(IILcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, p1, v0, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(IILcom/tonicartos/superslim/b;)I
 
     move-result v0
 
@@ -2275,13 +2275,13 @@
     return v0
 .end method
 
-.method private b(Landroid/view/View;ILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+.method private b(Landroid/view/View;ILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
     .locals 7
 
     .line 71
     iget-object v0, p0, Lcom/tonicartos/superslim/LayoutManager;->d:Landroid/graphics/Rect;
 
-    invoke-direct {p0, v0, p3, p4}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/graphics/Rect;Lcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)Landroid/graphics/Rect;
+    invoke-direct {p0, v0, p3, p4}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/graphics/Rect;Lcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)Landroid/graphics/Rect;
 
     .line 72
     iput p2, v0, Landroid/graphics/Rect;->top:I
@@ -2289,14 +2289,14 @@
     .line 73
     iget p4, v0, Landroid/graphics/Rect;->top:I
 
-    iget v1, p3, Lcom/tonicartos/superslim/SectionData;->g:I
+    iget v1, p3, Lcom/tonicartos/superslim/d;->g:I
 
     add-int/2addr p4, v1
 
     iput p4, v0, Landroid/graphics/Rect;->bottom:I
 
     .line 74
-    iget-object p4, p3, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object p4, p3, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {p4}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->d()Z
 
@@ -2304,7 +2304,7 @@
 
     if-eqz p4, :cond_0
 
-    iget-object p4, p3, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object p4, p3, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {p4}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e()Z
 
@@ -2317,7 +2317,7 @@
 
     .line 76
     :cond_0
-    iget-object p4, p3, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object p4, p3, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {p4}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->g()Z
 
@@ -2337,7 +2337,7 @@
     .line 78
     iget p4, v0, Landroid/graphics/Rect;->top:I
 
-    iget p3, p3, Lcom/tonicartos/superslim/SectionData;->g:I
+    iget p3, p3, Lcom/tonicartos/superslim/d;->g:I
 
     add-int/2addr p4, p3
 
@@ -2362,7 +2362,7 @@
     return p2
 .end method
 
-.method private b(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/LayoutState;)Landroid/view/View;
+.method private b(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/b;)Landroid/view/View;
     .locals 2
 
     .line 63
@@ -2391,15 +2391,15 @@
     if-nez p2, :cond_2
 
     .line 66
-    invoke-virtual {p3, p1}, Lcom/tonicartos/superslim/LayoutState;->c(I)Lcom/tonicartos/superslim/LayoutState$a;
+    invoke-virtual {p3, p1}, Lcom/tonicartos/superslim/b;->c(I)Lcom/tonicartos/superslim/b$a;
 
     move-result-object p2
 
     .line 67
-    iget-object v0, p2, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v0, p2, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     .line 68
-    invoke-virtual {p2}, Lcom/tonicartos/superslim/LayoutState$a;->a()Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    invoke-virtual {p2}, Lcom/tonicartos/superslim/b$a;->a()Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     move-result-object v1
 
@@ -2408,13 +2408,13 @@
     if-eqz v1, :cond_1
 
     .line 69
-    iget-object p2, p2, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object p2, p2, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     invoke-virtual {p0, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(Landroid/view/View;)V
 
     .line 70
     :cond_1
-    invoke-virtual {p3, p1, v0}, Lcom/tonicartos/superslim/LayoutState;->a(ILandroid/view/View;)V
+    invoke-virtual {p3, p1, v0}, Lcom/tonicartos/superslim/b;->a(ILandroid/view/View;)V
 
     move-object p2, v0
 
@@ -2422,7 +2422,7 @@
     return-object p2
 .end method
 
-.method private b(Lcom/tonicartos/superslim/LayoutState;)V
+.method private b(Lcom/tonicartos/superslim/b;)V
     .locals 4
 
     .line 80
@@ -2453,7 +2453,7 @@
     if-lt v3, v0, :cond_0
 
     .line 84
-    iget-object v3, p1, Lcom/tonicartos/superslim/LayoutState;->a:Landroidx/recyclerview/widget/RecyclerView$Recycler;
+    iget-object v3, p1, Lcom/tonicartos/superslim/b;->a:Landroidx/recyclerview/widget/RecyclerView$Recycler;
 
     invoke-virtual {p0, v2, v3}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->removeAndRecycleView(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$Recycler;)V
 
@@ -2640,7 +2640,7 @@
     return p1
 .end method
 
-.method private c(IILcom/tonicartos/superslim/LayoutState;)I
+.method private c(IILcom/tonicartos/superslim/b;)I
     .locals 16
 
     move-object/from16 v8, p0
@@ -2655,17 +2655,17 @@
     move-result v10
 
     .line 40
-    invoke-virtual {v9, v0}, Lcom/tonicartos/superslim/LayoutState;->c(I)Lcom/tonicartos/superslim/LayoutState$a;
+    invoke-virtual {v9, v0}, Lcom/tonicartos/superslim/b;->c(I)Lcom/tonicartos/superslim/b$a;
 
     move-result-object v1
 
     .line 41
-    iget-object v2, v1, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v2, v1, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
-    invoke-virtual {v9, v0, v2}, Lcom/tonicartos/superslim/LayoutState;->a(ILandroid/view/View;)V
+    invoke-virtual {v9, v0, v2}, Lcom/tonicartos/superslim/b;->a(ILandroid/view/View;)V
 
     .line 42
-    invoke-virtual {v1}, Lcom/tonicartos/superslim/LayoutState$a;->a()Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    invoke-virtual {v1}, Lcom/tonicartos/superslim/b$a;->a()Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     move-result-object v1
 
@@ -2674,47 +2674,47 @@
     move-result v1
 
     .line 43
-    invoke-virtual {v9, v1}, Lcom/tonicartos/superslim/LayoutState;->c(I)Lcom/tonicartos/superslim/LayoutState$a;
+    invoke-virtual {v9, v1}, Lcom/tonicartos/superslim/b;->c(I)Lcom/tonicartos/superslim/b$a;
 
     move-result-object v11
 
     .line 44
-    iget-object v2, v11, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v2, v11, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     invoke-virtual {v8, v2}, Lcom/tonicartos/superslim/LayoutManager;->b(Landroid/view/View;)V
 
     .line 45
-    iget-object v2, v11, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v2, v11, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
-    invoke-virtual {v9, v1, v2}, Lcom/tonicartos/superslim/LayoutState;->a(ILandroid/view/View;)V
+    invoke-virtual {v9, v1, v2}, Lcom/tonicartos/superslim/b;->a(ILandroid/view/View;)V
 
     .line 46
-    new-instance v12, Lcom/tonicartos/superslim/SectionData;
+    new-instance v12, Lcom/tonicartos/superslim/d;
 
-    iget-object v1, v11, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v1, v11, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
-    invoke-direct {v12, v8, v1}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v12, v8, v1}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 47
-    invoke-direct {v8, v12}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {v8, v12}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v7
 
     .line 48
-    iget-boolean v1, v12, Lcom/tonicartos/superslim/SectionData;->b:Z
+    iget-boolean v1, v12, Lcom/tonicartos/superslim/d;->b:Z
 
     if-eqz v1, :cond_0
 
-    iget v1, v12, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v1, v12, Lcom/tonicartos/superslim/d;->a:I
 
     if-ne v0, v1, :cond_0
 
     .line 49
-    iget-object v1, v11, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v1, v11, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     move/from16 v13, p2
 
-    invoke-direct {v8, v1, v13, v12, v9}, Lcom/tonicartos/superslim/LayoutManager;->b(Landroid/view/View;ILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {v8, v1, v13, v12, v9}, Lcom/tonicartos/superslim/LayoutManager;->b(Landroid/view/View;ILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v1
 
@@ -2745,26 +2745,26 @@
     move-object/from16 v6, p3
 
     .line 50
-    invoke-virtual/range {v1 .. v6}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(IIILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-virtual/range {v1 .. v6}, Lcom/tonicartos/superslim/e;->a(IIILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v15
 
     .line 51
-    iget-boolean v1, v12, Lcom/tonicartos/superslim/SectionData;->b:Z
+    iget-boolean v1, v12, Lcom/tonicartos/superslim/d;->b:Z
 
     if-eqz v1, :cond_1
 
-    iget v1, v12, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v1, v12, Lcom/tonicartos/superslim/d;->a:I
 
     if-eq v0, v1, :cond_1
 
     .line 52
-    invoke-virtual {v7, v14, v12, v9}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(ILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-virtual {v7, v14, v12, v9}, Lcom/tonicartos/superslim/e;->a(ILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     move-result v4
 
     .line 53
-    iget-object v1, v11, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v1, v11, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     const/4 v2, 0x0
 
@@ -2778,13 +2778,13 @@
 
     move-object/from16 v7, p3
 
-    invoke-direct/range {v0 .. v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;IIIILcom/tonicartos/superslim/SectionData;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct/range {v0 .. v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Landroid/view/View;IIIILcom/tonicartos/superslim/d;Lcom/tonicartos/superslim/b;)I
 
     goto :goto_1
 
     .line 54
     :cond_1
-    iget-object v0, v11, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v0, v11, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     invoke-virtual {v8, v0}, Lcom/tonicartos/superslim/LayoutManager;->getDecoratedBottom(Landroid/view/View;)I
 
@@ -2796,11 +2796,11 @@
 
     .line 55
     :goto_1
-    iget-boolean v0, v12, Lcom/tonicartos/superslim/SectionData;->b:Z
+    iget-boolean v0, v12, Lcom/tonicartos/superslim/d;->b:Z
 
     if-eqz v0, :cond_2
 
-    iget-object v0, v11, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v0, v11, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     invoke-virtual {v8, v0}, Lcom/tonicartos/superslim/LayoutManager;->getDecoratedBottom(Landroid/view/View;)I
 
@@ -2809,18 +2809,18 @@
     if-lez v0, :cond_2
 
     .line 56
-    iget-object v0, v11, Lcom/tonicartos/superslim/LayoutState$a;->a:Landroid/view/View;
+    iget-object v0, v11, Lcom/tonicartos/superslim/b$a;->a:Landroid/view/View;
 
     invoke-virtual {v8, v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->addView(Landroid/view/View;)V
 
     .line 57
-    iget v0, v12, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v0, v12, Lcom/tonicartos/superslim/d;->a:I
 
-    invoke-virtual {v9, v0}, Lcom/tonicartos/superslim/LayoutState;->a(I)V
+    invoke-virtual {v9, v0}, Lcom/tonicartos/superslim/b;->a(I)V
 
     .line 58
     :cond_2
-    invoke-direct {v8, v10, v15, v9}, Lcom/tonicartos/superslim/LayoutManager;->a(IILcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {v8, v10, v15, v9}, Lcom/tonicartos/superslim/LayoutManager;->a(IILcom/tonicartos/superslim/b;)I
 
     move-result v0
 
@@ -2881,11 +2881,11 @@
     return-object p1
 .end method
 
-.method private c(ILcom/tonicartos/superslim/LayoutState;)V
+.method private c(ILcom/tonicartos/superslim/b;)V
     .locals 2
 
     .line 33
-    invoke-direct {p0, p2}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/LayoutState;)Z
+    invoke-direct {p0, p2}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/b;)Z
 
     move-result v0
 
@@ -2913,7 +2913,7 @@
     const/4 p1, 0x0
 
     .line 36
-    invoke-direct {p0, p1, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, p1, p2}, Lcom/tonicartos/superslim/LayoutManager;->b(ILcom/tonicartos/superslim/b;)I
 
     move-result p1
 
@@ -2941,12 +2941,12 @@
     .locals 11
 
     .line 75
-    new-instance v0, Lcom/tonicartos/superslim/SectionData;
+    new-instance v0, Lcom/tonicartos/superslim/d;
 
-    invoke-direct {v0, p0, p1}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 76
-    iget-object v1, v0, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v1, v0, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v1}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->g()Z
 
@@ -2958,7 +2958,7 @@
 
     .line 77
     :cond_0
-    iget v1, v0, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v1, v0, Lcom/tonicartos/superslim/d;->a:I
 
     invoke-direct {p0, v1}, Lcom/tonicartos/superslim/LayoutManager;->d(I)I
 
@@ -2972,27 +2972,27 @@
 
     .line 78
     :cond_1
-    invoke-direct {p0, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v2
 
     .line 79
-    iget v3, v0, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v3, v0, Lcom/tonicartos/superslim/d;->a:I
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getHeight()I
 
     move-result v4
 
-    invoke-virtual {v2, v3, v1, v4}, Lcom/tonicartos/superslim/SectionLayoutManager;->b(III)I
+    invoke-virtual {v2, v3, v1, v4}, Lcom/tonicartos/superslim/e;->b(III)I
 
     move-result v1
 
     .line 80
-    iget v3, v0, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v3, v0, Lcom/tonicartos/superslim/d;->a:I
 
     const/4 v4, 0x0
 
-    invoke-virtual {v2, v3, v4, v4}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(III)I
+    invoke-virtual {v2, v3, v4, v4}, Lcom/tonicartos/superslim/e;->a(III)I
 
     move-result v2
 
@@ -3002,7 +3002,7 @@
     move-result v3
 
     .line 82
-    iget-object v5, v0, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v5, v0, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v5}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->d()Z
 
@@ -3010,7 +3010,7 @@
 
     if-eqz v5, :cond_2
 
-    iget-object v0, v0, Lcom/tonicartos/superslim/SectionData;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    iget-object v0, v0, Lcom/tonicartos/superslim/d;->l:Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     invoke-virtual {v0}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e()Z
 
@@ -3063,7 +3063,7 @@
     return-void
 .end method
 
-.method private c(Lcom/tonicartos/superslim/LayoutState;)V
+.method private c(Lcom/tonicartos/superslim/b;)V
     .locals 7
 
     const/4 v0, 0x0
@@ -3106,7 +3106,7 @@
     if-nez v2, :cond_2
 
     .line 62
-    iget-object p1, p1, Lcom/tonicartos/superslim/LayoutState;->a:Landroidx/recyclerview/widget/RecyclerView$Recycler;
+    iget-object p1, p1, Lcom/tonicartos/superslim/b;->a:Landroidx/recyclerview/widget/RecyclerView$Recycler;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->detachAndScrapAttachedViews(Landroidx/recyclerview/widget/RecyclerView$Recycler;)V
 
@@ -3172,7 +3172,7 @@
     if-ge v3, v1, :cond_5
 
     .line 68
-    iget-object v4, p1, Lcom/tonicartos/superslim/LayoutState;->a:Landroidx/recyclerview/widget/RecyclerView$Recycler;
+    iget-object v4, p1, Lcom/tonicartos/superslim/b;->a:Landroidx/recyclerview/widget/RecyclerView$Recycler;
 
     invoke-virtual {p0, v0, v4}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->removeAndRecycleViewAt(ILandroidx/recyclerview/widget/RecyclerView$Recycler;)V
 
@@ -3214,7 +3214,7 @@
     if-gtz v1, :cond_7
 
     .line 74
-    iget-object p1, p1, Lcom/tonicartos/superslim/LayoutState;->a:Landroidx/recyclerview/widget/RecyclerView$Recycler;
+    iget-object p1, p1, Lcom/tonicartos/superslim/b;->a:Landroidx/recyclerview/widget/RecyclerView$Recycler;
 
     invoke-virtual {p0, v0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->removeAndRecycleView(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$Recycler;)V
 
@@ -3309,7 +3309,7 @@
     .locals 3
 
     .line 9
-    new-instance v0, Lcom/tonicartos/superslim/SectionData;
+    new-instance v0, Lcom/tonicartos/superslim/d;
 
     const/4 v1, 0x0
 
@@ -3317,19 +3317,19 @@
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v0, p0, v1}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 10
-    invoke-direct {p0, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v1
 
-    iget v0, v0, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v0, v0, Lcom/tonicartos/superslim/d;->a:I
 
     const/4 v2, 0x1
 
     .line 11
-    invoke-virtual {v1, v0, v2}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(IZ)Landroid/view/View;
+    invoke-virtual {v1, v0, v2}, Lcom/tonicartos/superslim/e;->a(IZ)Landroid/view/View;
 
     move-result-object v0
 
@@ -3753,7 +3753,7 @@
     .locals 5
 
     .line 1
-    new-instance v0, Lcom/tonicartos/superslim/SectionData;
+    new-instance v0, Lcom/tonicartos/superslim/d;
 
     const/4 v1, 0x0
 
@@ -3761,17 +3761,17 @@
 
     move-result-object v2
 
-    invoke-direct {v0, p0, v2}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v0, p0, v2}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 2
-    invoke-direct {p0, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v2
 
     .line 3
-    iget v3, v0, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v3, v0, Lcom/tonicartos/superslim/d;->a:I
 
-    invoke-virtual {v2, v3, v1}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(IZ)Landroid/view/View;
+    invoke-virtual {v2, v3, v1}, Lcom/tonicartos/superslim/e;->a(IZ)Landroid/view/View;
 
     move-result-object v2
 
@@ -3781,7 +3781,7 @@
     move-result v3
 
     .line 5
-    iget v0, v0, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v0, v0, Lcom/tonicartos/superslim/d;->a:I
 
     add-int/lit8 v4, v0, 0x1
 
@@ -4055,7 +4055,7 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/tonicartos/superslim/SectionData;
+    new-instance v0, Lcom/tonicartos/superslim/d;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildCount()I
 
@@ -4067,17 +4067,17 @@
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/tonicartos/superslim/SectionData;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
+    invoke-direct {v0, p0, v1}, Lcom/tonicartos/superslim/d;-><init>(Lcom/tonicartos/superslim/LayoutManager;Landroid/view/View;)V
 
     .line 2
-    invoke-direct {p0, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/SectionData;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/d;)Lcom/tonicartos/superslim/e;
 
     move-result-object v1
 
     .line 3
-    iget v0, v0, Lcom/tonicartos/superslim/SectionData;->a:I
+    iget v0, v0, Lcom/tonicartos/superslim/d;->a:I
 
-    invoke-virtual {v1, v0}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(I)Landroid/view/View;
+    invoke-virtual {v1, v0}, Lcom/tonicartos/superslim/e;->a(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -4101,14 +4101,14 @@
     .locals 4
 
     .line 6
-    sget-object v0, Lb/h/y/R;->superslim_LayoutManager:[I
+    sget-object v0, Lb/h/y/g;->superslim_LayoutManager:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
     .line 7
-    sget v1, Lb/h/y/R;->superslim_LayoutManager_slm_section_sectionManager:I
+    sget v1, Lb/h/y/g;->superslim_LayoutManager_slm_section_sectionManager:I
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getType(I)I
@@ -4134,7 +4134,7 @@
     if-eqz v1, :cond_2
 
     .line 9
-    sget v1, Lb/h/y/R;->superslim_LayoutManager_slm_section_sectionManager:I
+    sget v1, Lb/h/y/g;->superslim_LayoutManager_slm_section_sectionManager:I
 
     .line 10
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -4157,7 +4157,7 @@
 
     .line 12
     :cond_2
-    sget v1, Lb/h/y/R;->superslim_LayoutManager_slm_section_sectionManager:I
+    sget v1, Lb/h/y/g;->superslim_LayoutManager_slm_section_sectionManager:I
 
     .line 13
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -4169,11 +4169,11 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 15
-    invoke-direct {p0, v2, v3}, Lcom/tonicartos/superslim/LayoutManager;->a(ILjava/lang/String;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v2, v3}, Lcom/tonicartos/superslim/LayoutManager;->a(ILjava/lang/String;)Lcom/tonicartos/superslim/e;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    invoke-virtual {v0, p1, p2}, Lcom/tonicartos/superslim/e;->a(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     move-result-object p1
 
@@ -4208,11 +4208,11 @@
     iput v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
     .line 5
-    invoke-direct {p0, p1}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, p1}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Lcom/tonicartos/superslim/e;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/tonicartos/superslim/SectionLayoutManager;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
+    invoke-virtual {v0, p1}, Lcom/tonicartos/superslim/e;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     move-result-object p1
 
@@ -4577,17 +4577,17 @@
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->detachAndScrapAttachedViews(Landroidx/recyclerview/widget/RecyclerView$Recycler;)V
 
     .line 12
-    new-instance v2, Lcom/tonicartos/superslim/LayoutState;
+    new-instance v2, Lcom/tonicartos/superslim/b;
 
-    invoke-direct {v2, p0, p1, p2}, Lcom/tonicartos/superslim/LayoutState;-><init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
+    invoke-direct {v2, p0, p1, p2}, Lcom/tonicartos/superslim/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
 
     .line 13
-    invoke-direct {p0, v0, v1, v2}, Lcom/tonicartos/superslim/LayoutManager;->c(IILcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, v0, v1, v2}, Lcom/tonicartos/superslim/LayoutManager;->c(IILcom/tonicartos/superslim/b;)I
 
     move-result p1
 
     .line 14
-    invoke-direct {p0, p1, v2}, Lcom/tonicartos/superslim/LayoutManager;->c(ILcom/tonicartos/superslim/LayoutState;)V
+    invoke-direct {p0, p1, v2}, Lcom/tonicartos/superslim/LayoutManager;->c(ILcom/tonicartos/superslim/b;)V
 
     return-void
 .end method
@@ -4740,9 +4740,9 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/tonicartos/superslim/LayoutState;
+    new-instance v0, Lcom/tonicartos/superslim/b;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/tonicartos/superslim/LayoutState;-><init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/tonicartos/superslim/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
 
     if-lez p1, :cond_1
 
@@ -4800,7 +4800,7 @@
     check-cast v7, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;
 
     .line 8
-    invoke-direct {p0, v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Lcom/tonicartos/superslim/SectionLayoutManager;
+    invoke-direct {p0, v7}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/LayoutManager$LayoutParams;)Lcom/tonicartos/superslim/e;
 
     move-result-object v8
 
@@ -4820,7 +4820,7 @@
     move-result v10
 
     .line 10
-    invoke-virtual {v8, v7, v9, v10}, Lcom/tonicartos/superslim/SectionLayoutManager;->b(III)I
+    invoke-virtual {v8, v7, v9, v10}, Lcom/tonicartos/superslim/e;->b(III)I
 
     move-result v7
 
@@ -4851,7 +4851,7 @@
     .line 13
     :cond_4
     :try_start_0
-    invoke-direct {p0, v5, p2, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/LayoutState;)I
+    invoke-direct {p0, v5, p2, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(ILcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/b;)I
 
     move-result p2
     :try_end_0
@@ -4907,11 +4907,11 @@
     sget-object p2, Lcom/tonicartos/superslim/LayoutManager$Direction;->END:Lcom/tonicartos/superslim/LayoutManager$Direction;
 
     :goto_5
-    invoke-direct {p0, p2, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/LayoutState;)V
+    invoke-direct {p0, p2, v0}, Lcom/tonicartos/superslim/LayoutManager;->a(Lcom/tonicartos/superslim/LayoutManager$Direction;Lcom/tonicartos/superslim/b;)V
 
     .line 18
     :cond_8
-    invoke-virtual {v0}, Lcom/tonicartos/superslim/LayoutState;->b()V
+    invoke-virtual {v0}, Lcom/tonicartos/superslim/b;->b()V
 
     return p1
 

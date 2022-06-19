@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vtosters/lite/api/execute/d;->a:Lcom/vk/dto/stickers/SpecialEvents;
 
-    invoke-static {v0}, Lcom/vtosters/lite/api/execute/GetWallInfo;->a(Lcom/vk/dto/stickers/SpecialEvents;)V
+    invoke-static {v0}, Lcom/vtosters/lite/api/execute/i;->a(Lcom/vk/dto/stickers/SpecialEvents;)V
 
     return-void
 .end method

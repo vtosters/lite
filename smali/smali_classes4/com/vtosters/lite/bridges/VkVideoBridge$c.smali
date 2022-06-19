@@ -3,7 +3,7 @@
 .source "VkVideoBridge.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -58,7 +58,7 @@
     const/4 v2, 0x2
 
     .line 1
-    invoke-static {v0, v1, v2, p1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, p1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/bridges/VkVideoBridge$c;->a:Lcom/vk/dto/common/VideoFile;
@@ -66,11 +66,11 @@
     iput-object p1, v0, Lcom/vk/dto/common/VideoFile;->m0:Lcom/vk/dto/actionlinks/ActionLink;
 
     .line 3
-    new-instance p1, Lcom/vk/libvideo/y/VideoEvents3;
+    new-instance p1, Lcom/vk/libvideo/y/n;
 
-    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/VideoEvents3;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/n;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-static {p1}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
+    invoke-static {p1}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
 
     return-void
 .end method

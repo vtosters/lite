@@ -3,7 +3,7 @@
 .source "AudioService.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -59,15 +59,15 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->b()I
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->b()I
 
     move-result v0
 

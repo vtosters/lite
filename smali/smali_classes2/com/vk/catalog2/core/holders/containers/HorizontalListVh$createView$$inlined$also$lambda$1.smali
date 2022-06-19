@@ -3,7 +3,7 @@
 .source "HorizontalListVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
         ">;"
     }
@@ -51,11 +51,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/HorizontalListVh$createView$$inlined$also$lambda$1;->this$0:Lcom/vk/catalog2/core/holders/containers/HorizontalListVh;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/containers/HorizontalListVh;->a(Lcom/vk/catalog2/core/holders/containers/HorizontalListVh;)Lcom/vk/catalog2/core/presenters/CatalogBlockListPresenter;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/containers/HorizontalListVh;->a(Lcom/vk/catalog2/core/holders/containers/HorizontalListVh;)Lcom/vk/catalog2/core/presenters/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/CatalogBlockListPresenter;->q()Lcom/vk/catalog2/core/blocks/UIBlockList;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/a;->q()Lcom/vk/catalog2/core/blocks/UIBlockList;
 
     move-result-object v0
 

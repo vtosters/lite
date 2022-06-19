@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -73,7 +73,7 @@
 
     const-string v5, "this.getJSONObject(i)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v5, Lcom/vk/dto/common/data/ApiApplication;
 
@@ -129,7 +129,7 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/dto/common/data/VkAppsFeatured;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/dto/common/data/VkAppsFeatured;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/i;)V
 
     .line 10
     :goto_1

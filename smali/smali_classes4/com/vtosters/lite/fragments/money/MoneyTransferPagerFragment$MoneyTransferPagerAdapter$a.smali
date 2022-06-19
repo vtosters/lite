@@ -3,7 +3,7 @@
 .source "MoneyTransferPagerFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferFragment$b;
+.implements Lcom/vtosters/lite/fragments/money/q/a$b;
 
 
 # annotations

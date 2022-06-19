@@ -36,7 +36,7 @@
 .method public final onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 0
 
-    invoke-static {p1, p2}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->i(Landroidx/preference/Preference;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lcom/vtosters/lite/fragments/n2/q0;->i(Landroidx/preference/Preference;Ljava/lang/Object;)Z
 
     move-result p1
 

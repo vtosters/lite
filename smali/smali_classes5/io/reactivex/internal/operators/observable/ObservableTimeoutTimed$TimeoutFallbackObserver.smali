@@ -3,8 +3,8 @@
 .source "ObservableTimeoutTimed.java"
 
 # interfaces
-.implements Lio/reactivex/Observer;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lc/a/r;
+.implements Lio/reactivex/disposables/b;
 .implements Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$b;
 
 
@@ -24,11 +24,11 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         ">;",
-        "Lio/reactivex/Observer<",
+        "Lc/a/r<",
         "TT;>;",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         "Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$b;"
     }
 .end annotation
@@ -39,19 +39,19 @@
 
 
 # instance fields
-.field final downstream:Lio/reactivex/Observer;
+.field final downstream:Lc/a/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field fallback:Lio/reactivex/ObservableSource;
+.field fallback:Lc/a/p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "+TT;>;"
         }
     .end annotation
@@ -69,26 +69,26 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final worker:Lio/reactivex/Scheduler$c;
+.field final worker:Lc/a/s$c;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/Observer;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler$c;Lio/reactivex/ObservableSource;)V
+.method constructor <init>(Lc/a/r;JLjava/util/concurrent/TimeUnit;Lc/a/s$c;Lc/a/p;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;J",
             "Ljava/util/concurrent/TimeUnit;",
-            "Lio/reactivex/Scheduler$c;",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/s$c;",
+            "Lc/a/p<",
             "+TT;>;)V"
         }
     .end annotation
@@ -97,7 +97,7 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lio/reactivex/Observer;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lc/a/r;
 
     .line 3
     iput-wide p2, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->timeout:J
@@ -106,10 +106,10 @@
     iput-object p4, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->unit:Ljava/util/concurrent/TimeUnit;
 
     .line 5
-    iput-object p5, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lio/reactivex/Scheduler$c;
+    iput-object p5, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lc/a/s$c;
 
     .line 6
-    iput-object p6, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->fallback:Lio/reactivex/ObservableSource;
+    iput-object p6, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->fallback:Lc/a/p;
 
     .line 7
     new-instance p1, Lio/reactivex/internal/disposables/SequentialDisposable;
@@ -157,38 +157,38 @@
     invoke-static {p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
     .line 9
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->fallback:Lio/reactivex/ObservableSource;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->fallback:Lc/a/p;
 
     const/4 p2, 0x0
 
     .line 10
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->fallback:Lio/reactivex/ObservableSource;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->fallback:Lc/a/p;
 
     .line 11
     new-instance p2, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$a;
 
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lc/a/r;
 
-    invoke-direct {p2, v0, p0}, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$a;-><init>(Lio/reactivex/Observer;Ljava/util/concurrent/atomic/AtomicReference;)V
+    invoke-direct {p2, v0, p0}, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$a;-><init>(Lc/a/r;Ljava/util/concurrent/atomic/AtomicReference;)V
 
-    invoke-interface {p1, p2}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
+    invoke-interface {p1, p2}, Lc/a/p;->a(Lc/a/r;)V
 
     .line 12
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lio/reactivex/Scheduler$c;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lc/a/s$c;
 
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->upstream:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -215,20 +215,20 @@
     invoke-virtual {v0}, Lio/reactivex/internal/disposables/SequentialDisposable;->o()V
 
     .line 4
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lc/a/r;
 
-    invoke-interface {v0, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     .line 5
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lio/reactivex/Scheduler$c;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lc/a/s$c;
 
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     goto :goto_0
 
     .line 6
     :cond_0
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -256,14 +256,14 @@
     invoke-virtual {v0}, Lio/reactivex/internal/disposables/SequentialDisposable;->o()V
 
     .line 9
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lc/a/r;
 
-    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v0}, Lc/a/r;->b()V
 
     .line 10
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lio/reactivex/Scheduler$c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lc/a/s$c;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     return-void
@@ -275,7 +275,7 @@
     .line 6
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->task:Lio/reactivex/internal/disposables/SequentialDisposable;
 
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lio/reactivex/Scheduler$c;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lc/a/s$c;
 
     new-instance v2, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$c;
 
@@ -285,11 +285,11 @@
 
     iget-object v3, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->unit:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1, v2, p1, p2, v3}, Lio/reactivex/Scheduler$c;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v1, v2, p1, p2, v3}, Lc/a/s$c;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -338,14 +338,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 4
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->downstream:Lc/a/r;
 
-    invoke-interface {v0, p1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     .line 5
     invoke-virtual {p0, v3, v4}, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->b(J)V
@@ -363,9 +363,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;)Z
 
     move-result v0
 
@@ -384,9 +384,9 @@
     invoke-static {p0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lio/reactivex/Scheduler$c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimeoutTimed$TimeoutFallbackObserver;->worker:Lc/a/s$c;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     return-void
 .end method

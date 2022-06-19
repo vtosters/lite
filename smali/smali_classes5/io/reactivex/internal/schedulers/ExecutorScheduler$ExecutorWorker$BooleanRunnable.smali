@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/lang/Runnable;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations

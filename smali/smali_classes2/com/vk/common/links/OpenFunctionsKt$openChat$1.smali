@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $callback:Lcom/vk/common/links/OpenCallback;
+.field final synthetic $callback:Lcom/vk/common/links/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/common/links/OpenCallback;)V
+.method constructor <init>(Lcom/vk/common/links/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$openChat$1;->$callback:Lcom/vk/common/links/OpenCallback;
+    iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$openChat$1;->$callback:Lcom/vk/common/links/f;
 
     const/4 p1, 0x0
 
@@ -50,7 +50,7 @@
 
     invoke-virtual {p0}, Lcom/vk/common/links/OpenFunctionsKt$openChat$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -59,11 +59,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$openChat$1;->$callback:Lcom/vk/common/links/OpenCallback;
+    iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$openChat$1;->$callback:Lcom/vk/common/links/f;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/common/links/OpenCallback;->a()V
+    invoke-interface {v0}, Lcom/vk/common/links/f;->a()V
 
     :cond_0
     return-void

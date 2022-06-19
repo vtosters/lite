@@ -3,7 +3,7 @@
 .source "ArtistInfoVh.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->a(Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {p1, v0}, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->a(Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;Lio/reactivex/disposables/b;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh$b;->a:Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;

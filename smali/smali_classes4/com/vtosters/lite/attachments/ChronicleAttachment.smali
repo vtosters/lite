@@ -3,7 +3,7 @@
 .source "ChronicleAttachment.java"
 
 # interfaces
-.implements Lcom/vk/dto/attachments/ImageAttachment;
+.implements Lcom/vk/dto/attachments/b;
 
 
 # static fields

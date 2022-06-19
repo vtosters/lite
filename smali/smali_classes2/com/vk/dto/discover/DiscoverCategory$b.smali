@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -67,7 +67,7 @@
     move-result-object v2
 
     .line 3
-    sget-object v3, Lcom/vtosters/lite/api/newsfeed/NewsfeedCustomGet;->H:Lcom/vtosters/lite/api/newsfeed/NewsfeedCustomGet$a;
+    sget-object v3, Lcom/vtosters/lite/api/newsfeed/a;->H:Lcom/vtosters/lite/api/newsfeed/a$a;
 
     const-string v4, "initial_discover_full"
 
@@ -79,12 +79,12 @@
     const-string v5, "discover_full"
 
     .line 5
-    invoke-virtual {v3, v4, v5, v2}, Lcom/vtosters/lite/api/newsfeed/NewsfeedCustomGet$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Lcom/vk/discover/NewsEntriesContainer;
+    invoke-virtual {v3, v4, v5, v2}, Lcom/vtosters/lite/api/newsfeed/a$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Lcom/vk/discover/NewsEntriesContainer;
 
     move-result-object v10
 
     .line 6
-    sget-object v3, Lcom/vk/api/discover/DiscoverGet;->H:Lcom/vk/api/discover/DiscoverGet$a;
+    sget-object v3, Lb/h/c/h/c;->H:Lb/h/c/h/c$a;
 
     const-string v4, "initial_discover"
 
@@ -104,7 +104,7 @@
     move-object v7, v1
 
     .line 8
-    invoke-static/range {v3 .. v9}, Lcom/vk/api/discover/DiscoverGet$a;->a(Lcom/vk/api/discover/DiscoverGet$a;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/discover/DiscoverCategoryType;ILjava/lang/Object;)Lcom/vk/discover/DiscoverItemsContainer;
+    invoke-static/range {v3 .. v9}, Lb/h/c/h/c$a;->a(Lb/h/c/h/c$a;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/discover/DiscoverCategoryType;ILjava/lang/Object;)Lcom/vk/discover/DiscoverItemsContainer;
 
     move-result-object v9
 
@@ -130,7 +130,7 @@
     const-string v3, "discoverId"
 
     .line 11
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v3, "name"
 
@@ -141,7 +141,7 @@
 
     const-string v3, "json.getString(ServerKeys.NAME)"
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     new-instance v7, Lcom/vk/dto/common/Image;

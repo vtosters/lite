@@ -3,7 +3,7 @@
 .source "ArticleAuthorPageFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;",
         ">;"
     }
@@ -51,13 +51,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$6;->this$0:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-virtual {v0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
+    invoke-virtual {v0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->R0()Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
+    invoke-interface {v0}, Lcom/vk/articles/authorpage/a;->R0()Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
 
     move-result-object v0
 

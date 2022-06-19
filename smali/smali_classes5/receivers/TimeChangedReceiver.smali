@@ -19,9 +19,9 @@
     .locals 0
 
     .line 1
-    sget-object p1, Lcom/vk/utils/g/ServerClock;->INSTANCE:Lcom/vk/utils/g/ServerClock;
+    sget-object p1, Lcom/vk/utils/g/a;->l:Lcom/vk/utils/g/a;
 
-    invoke-virtual {p1}, Lcom/vk/utils/g/ServerClock;->a()V
+    invoke-virtual {p1}, Lcom/vk/utils/g/a;->a()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "ObservablePublish.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/util/concurrent/atomic/AtomicReference<",
         "Ljava/lang/Object;",
         ">;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -34,10 +34,10 @@
 
 
 # instance fields
-.field final child:Lio/reactivex/Observer;
+.field final child:Lc/a/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;"
         }
     .end annotation
@@ -45,12 +45,12 @@
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/Observer;)V
+.method constructor <init>(Lc/a/r;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)V"
         }
     .end annotation
@@ -59,7 +59,7 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;->child:Lio/reactivex/Observer;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;->child:Lc/a/r;
 
     return-void
 .end method

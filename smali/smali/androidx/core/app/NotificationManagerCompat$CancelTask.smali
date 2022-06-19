@@ -80,7 +80,7 @@
 
 
 # virtual methods
-.method public send(Landroid/support/v4/app/INotificationSideChannel;)V
+.method public send(Landroid/support/v4/app/a;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -96,7 +96,7 @@
     .line 2
     iget-object v0, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->packageName:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Landroid/support/v4/app/INotificationSideChannel;->cancelAll(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Landroid/support/v4/app/a;->cancelAll(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -108,7 +108,7 @@
 
     iget-object v2, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->tag:Ljava/lang/String;
 
-    invoke-interface {p1, v0, v1, v2}, Landroid/support/v4/app/INotificationSideChannel;->cancel(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-interface {p1, v0, v1, v2}, Landroid/support/v4/app/a;->cancel(Ljava/lang/String;ILjava/lang/String;)V
 
     :goto_0
     return-void

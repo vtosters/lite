@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/SuggestionsActivity$a;
-.super Lcom/vtosters/lite/ui/ActionBarProgressDrawable;
+.super Lcom/vtosters/lite/ui/o;
 .source "SuggestionsActivity.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/SuggestionsActivity$a;->i:Lcom/vtosters/lite/SuggestionsActivity;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/ActionBarProgressDrawable;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/o;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/SuggestionsActivity$a;->i:Lcom/vtosters/lite/SuggestionsActivity;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ui/ActionBarHacks;->a(Landroid/app/Activity;)Landroid/view/View;
+    invoke-static {v0}, Lcom/vtosters/lite/ui/n;->a(Landroid/app/Activity;)Landroid/view/View;
 
     move-result-object v0
 

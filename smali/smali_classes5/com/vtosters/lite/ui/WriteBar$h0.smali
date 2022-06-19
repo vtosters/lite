@@ -3,7 +3,7 @@
 .source "WriteBar.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow$e;
+.implements Lcom/vtosters/lite/ui/widget/f$e;
 
 
 # annotations
@@ -74,7 +74,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
 
     .line 6
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar$h0;->c:Lcom/vtosters/lite/ui/WriteBar;
@@ -85,7 +85,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v0, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -252,11 +252,11 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar$h0;->c:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/AudioMessageUtils;
+    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->f()Z
+    invoke-virtual {v0}, Lcom/vk/audio/a;->f()Z
 
     move-result v0
 
@@ -265,13 +265,13 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar$h0;->c:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/AudioMessageUtils;
+    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/a;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/audio/AudioMessageUtils;->a(ZZ)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/audio/a;->a(ZZ)V
 
     goto :goto_0
 

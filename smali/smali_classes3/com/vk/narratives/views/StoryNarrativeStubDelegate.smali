@@ -26,14 +26,14 @@
 
 .field private final g:Landroid/view/ViewStub;
 
-.field private final h:Lkotlin/jvm/b/Functions4;
+.field private final h:Lkotlin/jvm/b/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions4<",
+            "Lkotlin/jvm/b/d<",
             "Landroid/view/View;",
             "Ljava/lang/Float;",
             "Ljava/lang/Float;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -41,20 +41,20 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewStub;Lkotlin/jvm/b/Functions4;)V
+.method public constructor <init>(Landroid/view/ViewStub;Lkotlin/jvm/b/d;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewStub;",
-            "Lkotlin/jvm/b/Functions4<",
+            "Lkotlin/jvm/b/d<",
             "-",
             "Landroid/view/View;",
             "-",
             "Ljava/lang/Float;",
             "-",
             "Ljava/lang/Float;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -64,7 +64,7 @@
 
     iput-object p1, p0, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;->g:Landroid/view/ViewStub;
 
-    iput-object p2, p0, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;->h:Lkotlin/jvm/b/Functions4;
+    iput-object p2, p0, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;->h:Lkotlin/jvm/b/d;
 
     return-void
 .end method
@@ -82,7 +82,7 @@
     :cond_0
     const-string p0, "authorText"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -99,7 +99,7 @@
     const v2, 0x7f0a02eb
 
     .line 45
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -110,7 +110,7 @@
     const v2, 0x7f0a0ee1
 
     .line 46
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -121,7 +121,7 @@
     const v2, 0x7f0a0d80
 
     .line 47
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -132,7 +132,7 @@
     const v2, 0x7f0a0141
 
     .line 48
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -149,14 +149,14 @@
 
     invoke-direct {v0, p0}, Lcom/vk/narratives/views/StoryNarrativeStubDelegate$initViews$1;-><init>(Lcom/vk/narratives/views/StoryNarrativeStubDelegate;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions1;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/c;)V
 
     return-void
 
     :cond_0
     const-string p1, "cover"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -174,7 +174,7 @@
     :cond_0
     const-string p0, "cover"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -203,18 +203,18 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public static final synthetic c(Lcom/vk/narratives/views/StoryNarrativeStubDelegate;)Lkotlin/jvm/b/Functions4;
+.method public static final synthetic c(Lcom/vk/narratives/views/StoryNarrativeStubDelegate;)Lkotlin/jvm/b/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;->h:Lkotlin/jvm/b/Functions4;
+    iget-object p0, p0, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;->h:Lkotlin/jvm/b/d;
 
     return-object p0
 .end method
@@ -232,7 +232,7 @@
     :cond_0
     const-string p0, "title"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -252,7 +252,7 @@
     :cond_0
     const-string p0, "views"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -421,7 +421,7 @@
     const-string v6, "ctx"
 
     .line 20
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -474,7 +474,7 @@
 
     invoke-direct {v10, p0}, Lcom/vk/narratives/views/StoryNarrativeStubDelegate$b;-><init>(Lcom/vk/narratives/views/StoryNarrativeStubDelegate;)V
 
-    invoke-virtual {v6, v10}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
+    invoke-virtual {v6, v10}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
 
     .line 23
     iget-object v6, p0, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;->c:Lcom/vk/imageloader/view/VKImageView;
@@ -521,7 +521,7 @@
 
     const-string v5, "ctx.getString(R.string.narrative_attach)"
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_6
 
@@ -531,7 +531,7 @@
 
     const-string v5, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v0, v11, v3
 
@@ -599,79 +599,79 @@
     return-void
 
     :cond_8
-    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 30
     :cond_9
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 31
     :cond_a
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 32
     :cond_b
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 33
     :cond_c
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 34
     :cond_d
-    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 35
     :cond_e
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 36
     :cond_f
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 37
     :cond_10
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 38
     :cond_11
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 39
     :cond_12
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 40
     :cond_13
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 41
     :cond_14
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method

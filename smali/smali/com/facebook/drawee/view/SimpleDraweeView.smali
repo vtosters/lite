@@ -4,10 +4,10 @@
 
 
 # static fields
-.field private static h:Lcom/facebook/common/internal/Supplier;
+.field private static h:Lcom/facebook/common/internal/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/common/internal/Supplier<",
+            "Lcom/facebook/common/internal/j<",
             "+",
             "Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;",
             ">;"
@@ -74,11 +74,11 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/facebook/drawee/generic/GenericDraweeHierarchy;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/facebook/drawee/generic/a;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/facebook/drawee/view/GenericDraweeView;-><init>(Landroid/content/Context;Lcom/facebook/drawee/generic/GenericDraweeHierarchy;)V
+    invoke-direct {p0, p1, p2}, Lcom/facebook/drawee/view/GenericDraweeView;-><init>(Landroid/content/Context;Lcom/facebook/drawee/generic/a;)V
 
     const/4 p2, 0x0
 
@@ -88,12 +88,12 @@
     return-void
 .end method
 
-.method public static a(Lcom/facebook/common/internal/Supplier;)V
+.method public static a(Lcom/facebook/common/internal/j;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/common/internal/Supplier<",
+            "Lcom/facebook/common/internal/j<",
             "+",
             "Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;",
             ">;)V"
@@ -101,7 +101,7 @@
     .end annotation
 
     .line 1
-    sput-object p0, Lcom/facebook/drawee/view/SimpleDraweeView;->h:Lcom/facebook/common/internal/Supplier;
+    sput-object p0, Lcom/facebook/drawee/view/SimpleDraweeView;->h:Lcom/facebook/common/internal/j;
 
     return-void
 .end method
@@ -111,7 +111,7 @@
 
     .line 1
     :try_start_0
-    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->c()Z
+    invoke-static {}, Lcom/facebook/x/j/b;->c()Z
 
     move-result v0
 
@@ -120,7 +120,7 @@
     const-string v0, "SimpleDraweeView#init"
 
     .line 2
-    invoke-static {v0}, Lcom/facebook/x/j/FrescoSystrace;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/facebook/x/j/b;->a(Ljava/lang/String;)V
 
     .line 3
     :cond_0
@@ -152,16 +152,16 @@
 
     .line 6
     :cond_1
-    sget-object v0, Lcom/facebook/drawee/view/SimpleDraweeView;->h:Lcom/facebook/common/internal/Supplier;
+    sget-object v0, Lcom/facebook/drawee/view/SimpleDraweeView;->h:Lcom/facebook/common/internal/j;
 
     const-string v1, "SimpleDraweeView was not initialized!"
 
-    invoke-static {v0, v1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 7
-    sget-object v0, Lcom/facebook/drawee/view/SimpleDraweeView;->h:Lcom/facebook/common/internal/Supplier;
+    sget-object v0, Lcom/facebook/drawee/view/SimpleDraweeView;->h:Lcom/facebook/common/internal/j;
 
-    invoke-interface {v0}, Lcom/facebook/common/internal/Supplier;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lcom/facebook/common/internal/j;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -173,7 +173,7 @@
     if-eqz p2, :cond_5
 
     .line 8
-    sget-object v0, Lcom/facebook/u/R;->SimpleDraweeView:[I
+    sget-object v0, Lcom/facebook/u/a;->SimpleDraweeView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -183,7 +183,7 @@
 
     .line 9
     :try_start_1
-    sget p2, Lcom/facebook/u/R;->SimpleDraweeView_actualImageUri:I
+    sget p2, Lcom/facebook/u/a;->SimpleDraweeView_actualImageUri:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -192,7 +192,7 @@
     if-eqz p2, :cond_2
 
     .line 10
-    sget p2, Lcom/facebook/u/R;->SimpleDraweeView_actualImageUri:I
+    sget p2, Lcom/facebook/u/a;->SimpleDraweeView_actualImageUri:I
 
     .line 11
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -212,7 +212,7 @@
 
     .line 13
     :cond_2
-    sget p2, Lcom/facebook/u/R;->SimpleDraweeView_actualImageResource:I
+    sget p2, Lcom/facebook/u/a;->SimpleDraweeView_actualImageResource:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -221,7 +221,7 @@
     if-eqz p2, :cond_4
 
     .line 14
-    sget p2, Lcom/facebook/u/R;->SimpleDraweeView_actualImageResource:I
+    sget p2, Lcom/facebook/u/a;->SimpleDraweeView_actualImageResource:I
 
     const/4 v0, -0x1
 
@@ -270,14 +270,14 @@
     .line 20
     :cond_5
     :goto_2
-    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->c()Z
+    invoke-static {}, Lcom/facebook/x/j/b;->c()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
     .line 21
-    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->a()V
+    invoke-static {}, Lcom/facebook/x/j/b;->a()V
 
     :cond_6
     return-void
@@ -286,14 +286,14 @@
     move-exception p1
 
     .line 22
-    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->c()Z
+    invoke-static {}, Lcom/facebook/x/j/b;->c()Z
 
     move-result p2
 
     if-eqz p2, :cond_7
 
     .line 23
-    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->a()V
+    invoke-static {}, Lcom/facebook/x/j/b;->a()V
 
     :cond_7
     throw p1
@@ -309,7 +309,7 @@
     .end param
 
     .line 10
-    invoke-static {p1}, Lcom/facebook/common/util/UriUtil;->a(I)Landroid/net/Uri;
+    invoke-static {p1}, Lcom/facebook/common/util/d;->a(I)Landroid/net/Uri;
 
     move-result-object p1
 
@@ -328,24 +328,24 @@
     invoke-virtual {v0, p2}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     .line 4
-    invoke-interface {v0, p1}, Lcom/facebook/u/e/SimpleDraweeControllerBuilder;->a(Landroid/net/Uri;)Lcom/facebook/u/e/SimpleDraweeControllerBuilder;
+    invoke-interface {v0, p1}, Lcom/facebook/u/e/d;->a(Landroid/net/Uri;)Lcom/facebook/u/e/d;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/DraweeController;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/a;
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/facebook/u/e/SimpleDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/u/e/SimpleDraweeControllerBuilder;
+    invoke-interface {p1, p2}, Lcom/facebook/u/e/d;->a(Lcom/facebook/u/e/a;)Lcom/facebook/u/e/d;
 
     .line 6
-    invoke-interface {p1}, Lcom/facebook/u/e/SimpleDraweeControllerBuilder;->k0()Lcom/facebook/u/e/DraweeController;
+    invoke-interface {p1}, Lcom/facebook/u/e/d;->k0()Lcom/facebook/u/e/a;
 
     move-result-object p1
 
     .line 7
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/DraweeController;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/a;)V
 
     return-void
 .end method
@@ -405,18 +405,18 @@
     .line 2
     invoke-virtual {v0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->b(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/DraweeController;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/a;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/AbstractDraweeController;
+    invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/a;
 
     move-result-object p1
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/DraweeController;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/a;)V
 
     return-void
 .end method

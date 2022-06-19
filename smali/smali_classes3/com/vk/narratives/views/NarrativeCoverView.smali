@@ -38,7 +38,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/narratives/views/NarrativeCoverView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/narratives/views/NarrativeCoverView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/4 v0, 0x1
 
@@ -67,7 +67,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/narratives/views/NarrativeCoverView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/narratives/views/NarrativeCoverView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -87,7 +87,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/narratives/views/NarrativeCoverView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/narratives/views/NarrativeCoverView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -139,7 +139,7 @@
 
     const-string p2, "findViewById(R.id.image)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
@@ -148,15 +148,15 @@
     .line 9
     iget-object p1, p0, Lcom/vk/narratives/views/NarrativeCoverView;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
+    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    check-cast p1, Lcom/facebook/drawee/generic/a;
 
     const-string p2, "cover.hierarchy"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/facebook/drawee/generic/RoundingParams;->i()Lcom/facebook/drawee/generic/RoundingParams;
 
@@ -176,7 +176,7 @@
 
     invoke-virtual {p2, p3, v0}, Lcom/facebook/drawee/generic/RoundingParams;->a(IF)Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     const p1, 0x7f0a000f
 
@@ -187,7 +187,7 @@
 
     const-string p2, "findViewById(R.id.access_image)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -201,7 +201,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -330,7 +330,7 @@
 
     const v2, 0x3ecccccd    # 0.4f
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
+    invoke-static {v1, v2}, Lcom/vk/core/util/p;->b(IF)I
 
     move-result v1
 
@@ -402,7 +402,7 @@
     const v1, 0x7f080164
 
     :goto_0
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(I)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/narratives/views/NarrativeCoverView;->b:Lcom/vk/imageloader/view/VKImageView;
@@ -438,13 +438,13 @@
     .line 9
     iget-object v0, p0, Lcom/vk/narratives/views/NarrativeCoverView;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
+    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    check-cast v0, Lcom/facebook/drawee/generic/a;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/narratives/views/NarrativeCoverView;->b:Lcom/vk/imageloader/view/VKImageView;

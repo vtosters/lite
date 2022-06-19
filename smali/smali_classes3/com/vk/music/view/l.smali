@@ -3,22 +3,22 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/music/view/MusicTabbedContainer;
+.field private final synthetic a:Lcom/vk/music/view/s;
 
 .field private final synthetic b:Landroid/view/View$OnClickListener;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/music/view/MusicTabbedContainer;Landroid/view/View$OnClickListener;)V
+.method public synthetic constructor <init>(Lcom/vk/music/view/s;Landroid/view/View$OnClickListener;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/view/l;->a:Lcom/vk/music/view/MusicTabbedContainer;
+    iput-object p1, p0, Lcom/vk/music/view/l;->a:Lcom/vk/music/view/s;
 
     iput-object p2, p0, Lcom/vk/music/view/l;->b:Landroid/view/View$OnClickListener;
 
@@ -30,11 +30,11 @@
 .method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lcom/vk/music/view/l;->a:Lcom/vk/music/view/MusicTabbedContainer;
+    iget-object v0, p0, Lcom/vk/music/view/l;->a:Lcom/vk/music/view/s;
 
     iget-object v1, p0, Lcom/vk/music/view/l;->b:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/view/MusicTabbedContainer;->a(Landroid/view/View$OnClickListener;)Lkotlin/Unit;
+    invoke-virtual {v0, v1}, Lcom/vk/music/view/s;->a(Landroid/view/View$OnClickListener;)Lkotlin/m;
 
     move-result-object v0
 

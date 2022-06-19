@@ -3,7 +3,7 @@
 .source "LottieAnimationView.java"
 
 # interfaces
-.implements Lcom/airbnb/lottie/LottieListener;
+.implements Lcom/airbnb/lottie/h;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/airbnb/lottie/LottieListener<",
+        "Lcom/airbnb/lottie/h<",
         "Ljava/lang/Throwable;",
         ">;"
     }

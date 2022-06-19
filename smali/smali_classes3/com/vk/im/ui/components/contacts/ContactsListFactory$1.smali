@@ -3,7 +3,7 @@
 .source "ContactsListFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions4;
+.implements Lkotlin/jvm/b/d;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions4<",
+        "Lkotlin/jvm/b/d<",
         "Lcom/vk/im/engine/models/Source;",
         "Lcom/vk/im/ui/components/contacts/SortOrder;",
         "Ljava/lang/Boolean;",

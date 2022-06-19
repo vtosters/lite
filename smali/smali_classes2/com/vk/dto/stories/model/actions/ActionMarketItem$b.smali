@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -50,19 +50,19 @@
 
     const-string v2, "json.getString(\"title\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "product_id"
 
     .line 3
-    invoke-static {p1, v2}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {p1, v2}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v2
 
     const-string v3, "owner_id"
 
     .line 4
-    invoke-static {p1, v3}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {p1, v3}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v3
 

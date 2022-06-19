@@ -3,7 +3,7 @@
 .source "ThemedFeedFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/AbstractErrorView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/a;->setVisibility(I)V
 
     .line 2
     :cond_0
@@ -80,7 +80,7 @@
     const-string v0, "it"
 
     .line 3
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-array v0, v1, [Ljava/lang/Object;
 

@@ -3,7 +3,7 @@
 .source "InvalidateMsgsWithAttachesJob.kt"
 
 # interfaces
-.implements Lcom/vk/instantjobs/InstantJobSerializer;
+.implements Lcom/vk/instantjobs/c;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/instantjobs/InstantJobSerializer<",
+        "Lcom/vk/instantjobs/c<",
         "Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;",
         ">;"
     }
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;
+.method public a(Lcom/vk/instantjobs/d;)Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;
     .locals 4
 
     .line 6
@@ -47,21 +47,21 @@
     const-string v1, "id"
 
     .line 7
-    invoke-virtual {p1, v1}, Lcom/vk/instantjobs/PersistedArgs;->c(Ljava/lang/String;)I
+    invoke-virtual {p1, v1}, Lcom/vk/instantjobs/d;->c(Ljava/lang/String;)I
 
     move-result v1
 
     const-string v2, "ownerId"
 
     .line 8
-    invoke-virtual {p1, v2}, Lcom/vk/instantjobs/PersistedArgs;->c(Ljava/lang/String;)I
+    invoke-virtual {p1, v2}, Lcom/vk/instantjobs/d;->c(Ljava/lang/String;)I
 
     move-result v2
 
     const-string v3, "type"
 
     .line 9
-    invoke-virtual {p1, v3}, Lcom/vk/instantjobs/PersistedArgs;->c(Ljava/lang/String;)I
+    invoke-virtual {p1, v3}, Lcom/vk/instantjobs/d;->c(Ljava/lang/String;)I
 
     move-result p1
 
@@ -71,18 +71,18 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/instantjobs/InstantJob;
+.method public bridge synthetic a(Lcom/vk/instantjobs/d;)Lcom/vk/instantjobs/InstantJob;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob$b;->a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob$b;->a(Lcom/vk/instantjobs/d;)Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;Lcom/vk/instantjobs/PersistedArgs;)V
+.method public a(Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;Lcom/vk/instantjobs/d;)V
     .locals 2
 
     .line 3
@@ -92,7 +92,7 @@
 
     const-string v1, "id"
 
-    invoke-virtual {p2, v1, v0}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;I)V
+    invoke-virtual {p2, v1, v0}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;I)V
 
     .line 4
     invoke-virtual {p1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;->m()I
@@ -101,7 +101,7 @@
 
     const-string v1, "ownerId"
 
-    invoke-virtual {p2, v1, v0}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;I)V
+    invoke-virtual {p2, v1, v0}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;I)V
 
     .line 5
     invoke-virtual {p1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;->n()I
@@ -110,18 +110,18 @@
 
     const-string v0, "type"
 
-    invoke-virtual {p2, v0, p1}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;I)V
+    invoke-virtual {p2, v0, p1}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/instantjobs/InstantJob;Lcom/vk/instantjobs/PersistedArgs;)V
+.method public bridge synthetic a(Lcom/vk/instantjobs/InstantJob;Lcom/vk/instantjobs/d;)V
     .locals 0
 
     .line 2
     check-cast p1, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob$b;->a(Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;Lcom/vk/instantjobs/PersistedArgs;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob$b;->a(Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;Lcom/vk/instantjobs/d;)V
 
     return-void
 .end method

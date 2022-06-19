@@ -3,7 +3,7 @@
 .source "LibVerifySignUpPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -60,7 +60,7 @@
             ")",
             "Lkotlin/Pair<",
             "Lcom/vk/auth/api/models/ConfirmPhoneResponse;",
-            "Lcom/vk/auth/main/SignUpModel$b;",
+            "Lcom/vk/auth/main/s$b;",
             ">;"
         }
     .end annotation
@@ -68,13 +68,13 @@
     .line 1
     new-instance v0, Lkotlin/Pair;
 
-    new-instance v1, Lcom/vk/auth/main/SignUpModel$b;
+    new-instance v1, Lcom/vk/auth/main/s$b;
 
     iget-object v2, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate$a;->a:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate$a;->b:Ljava/lang/String;
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/auth/main/SignUpModel$b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/auth/main/s$b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {v0, p1, v1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 

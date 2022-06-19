@@ -3,7 +3,7 @@
 .source "IdentityCountryAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     iget-object p1, p1, Lcom/vk/identity/adapters/IdentityCountryAdapter$Holder;->a:Lcom/vk/identity/adapters/IdentityCountryAdapter;
 
-    invoke-static {p1}, Lcom/vk/identity/adapters/IdentityCountryAdapter;->a(Lcom/vk/identity/adapters/IdentityCountryAdapter;)Lkotlin/jvm/b/Functions2;
+    invoke-static {p1}, Lcom/vk/identity/adapters/IdentityCountryAdapter;->a(Lcom/vk/identity/adapters/IdentityCountryAdapter;)Lkotlin/jvm/b/b;
 
     move-result-object p1
 
@@ -74,9 +74,9 @@
 
     const-string v1, "countries[adapterPosition]"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -89,7 +89,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/identity/adapters/IdentityCountryAdapter$Holder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "CreateChatComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl$selectAvatarByCamera$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -64,11 +64,11 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->t()Lcom/vk/im/ui/p/ImBridge8;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->t()Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     iget-object v1, v1, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->w()Lcom/vk/navigation/ActivityLauncher;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->w()Lcom/vk/navigation/a;
 
     move-result-object v1
 
@@ -88,7 +88,7 @@
 
     move-result v2
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/ImBridge1;->b(Lcom/vk/navigation/ActivityLauncher;I)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/a;->b(Lcom/vk/navigation/a;I)V
 
     return-void
 .end method

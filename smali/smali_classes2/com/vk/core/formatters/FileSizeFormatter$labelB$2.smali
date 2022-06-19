@@ -3,7 +3,7 @@
 .source "FileSizeFormatter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/h/z/R2;->fsize_b:I
+    sget v1, Lb/h/z/k;->fsize_b:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

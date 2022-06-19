@@ -3,25 +3,25 @@
 .source "LiveSwipeView.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract;
-.implements Lcom/vk/navigation/BackListener;
+.implements Lcom/vk/libvideo/live/views/liveswipe/c;
+.implements Lcom/vk/navigation/d;
 .implements Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$f;
 
 
 # instance fields
 .field private B:Z
 
-.field private C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+.field private C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
 .field private final a:Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;
 
 .field private final b:Lcom/vk/libvideo/live/views/recommended/RecommendedBottomView;
 
-.field private c:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+.field private c:Lcom/vk/libvideo/live/views/liveswipe/b;
 
 .field private d:Landroid/view/Window;
 
-.field private e:Lcom/vk/libvideo/a0/LiveAnimationController;
+.field private e:Lcom/vk/libvideo/a0/b;
 
 .field private f:F
 
@@ -121,7 +121,7 @@
     check-cast p1, Landroid/view/LayoutInflater;
 
     .line 9
-    sget p2, Lcom/vk/libvideo/R9;->live_swipe_view:I
+    sget p2, Lcom/vk/libvideo/h;->live_swipe_view:I
 
     const/4 p3, 0x1
 
@@ -130,7 +130,7 @@
     move-result-object p1
 
     .line 10
-    sget p2, Lcom/vk/libvideo/R;->liveSwipePager:I
+    sget p2, Lcom/vk/libvideo/g;->liveSwipePager:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -141,7 +141,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;
 
     .line 11
-    sget p2, Lcom/vk/libvideo/R;->liveSwipeRecommended:I
+    sget p2, Lcom/vk/libvideo/g;->liveSwipeRecommended:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -163,29 +163,29 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/a0/LiveAnimationController;
+.method static synthetic a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/a0/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->e:Lcom/vk/libvideo/a0/LiveAnimationController;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->e:Lcom/vk/libvideo/a0/b;
 
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+.method static synthetic a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;Lcom/vk/libvideo/live/views/liveswipe/f;)Lcom/vk/libvideo/live/views/liveswipe/f;
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     return-object p1
 .end method
 
-.method static synthetic b(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+.method static synthetic b(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/b;
 
     return-object p0
 .end method
@@ -199,11 +199,11 @@
     return-object p0
 .end method
 
-.method static synthetic d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+.method static synthetic d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/f;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     return-object p0
 .end method
@@ -214,12 +214,12 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/b;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->a()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->a()V
 
     .line 5
     :cond_0
@@ -293,11 +293,11 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/LiveContract;
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->o()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->o()V
 
     :cond_0
     return-void
@@ -324,7 +324,7 @@
 
     move-result v2
 
-    invoke-static {v0, v2, p0}, Lcom/vk/libvideo/live/base/TouchHelper;->a(FFLandroid/view/View;)Z
+    invoke-static {v0, v2, p0}, Lcom/vk/libvideo/live/base/h;->a(FFLandroid/view/View;)Z
 
     move-result v0
 
@@ -369,23 +369,23 @@
     .line 7
     :cond_2
     :goto_0
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     if-eqz v0, :cond_4
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->getPresenter()Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->getPresenter()Lcom/vk/libvideo/live/views/liveswipe/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->getPresenter()Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->getPresenter()Lcom/vk/libvideo/live/views/liveswipe/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;->g0()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/liveswipe/b;->g0()V
 
     .line 10
     :cond_3
@@ -408,12 +408,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/b;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->e()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->e()V
 
     .line 3
     :cond_0
@@ -515,7 +515,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     if-eqz v0, :cond_0
 
@@ -568,11 +568,11 @@
     return v0
 .end method
 
-.method public getPresenter()Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+.method public getPresenter()Lcom/vk/libvideo/live/views/liveswipe/b;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/b;
 
     return-object v0
 .end method
@@ -581,14 +581,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->getPresenter()Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->getPresenter()Lcom/vk/libvideo/live/views/liveswipe/b;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getRecommendedView()Lcom/vk/libvideo/live/views/recommended/RecommendedContract1;
+.method public getRecommendedView()Lcom/vk/libvideo/live/views/recommended/b;
     .locals 1
 
     .line 1
@@ -610,25 +610,25 @@
     .locals 9
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    new-instance v0, Lcom/vk/libvideo/live/views/liveswipe/f;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/liveswipe/f;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     .line 3
-    iget-object v2, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object v2, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
-    sget v4, Lcom/vk/libvideo/R11;->live_swipe_tooltip:I
+    sget v4, Lcom/vk/libvideo/j;->live_swipe_tooltip:I
 
     const/16 v0, 0xfa
 
@@ -658,15 +658,15 @@
 
     const-string v3, "live_tooltip.json"
 
-    invoke-virtual/range {v2 .. v8}, Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;->a(Ljava/lang/String;IIIII)V
+    invoke-virtual/range {v2 .. v8}, Lcom/vk/libvideo/live/views/liveswipe/f;->a(Ljava/lang/String;IIIII)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     const/4 v1, 0x0
 
@@ -687,7 +687,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     if-eqz v0, :cond_0
 
@@ -804,22 +804,22 @@
     return p1
 .end method
 
-.method public setLiveAnimationController(Lcom/vk/libvideo/a0/LiveAnimationController;)V
+.method public setLiveAnimationController(Lcom/vk/libvideo/a0/b;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->e:Lcom/vk/libvideo/a0/LiveAnimationController;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->e:Lcom/vk/libvideo/a0/b;
 
     return-void
 .end method
 
-.method public setPagerAdapter(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePagerAdapter;)V
+.method public setPagerAdapter(Lcom/vk/libvideo/live/views/liveswipe/d;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePagerAdapter;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;)V
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/d;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;
@@ -829,18 +829,18 @@
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;)V
+.method public setPresenter(Lcom/vk/libvideo/live/views/liveswipe/b;)V
     .locals 1
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/b;
 
     .line 3
     iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/b;
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->setPresenter(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;)V
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->setPresenter(Lcom/vk/libvideo/live/views/liveswipe/b;)V
 
     return-void
 .end method
@@ -849,9 +849,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    check-cast p1, Lcom/vk/libvideo/live/views/liveswipe/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->setPresenter(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->setPresenter(Lcom/vk/libvideo/live/views/liveswipe/b;)V
 
     return-void
 .end method
@@ -889,12 +889,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->c:Lcom/vk/libvideo/live/views/liveswipe/b;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->t()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->t()V
 
     .line 3
     :cond_0
@@ -913,7 +913,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     if-eqz v0, :cond_1
 
@@ -942,7 +942,7 @@
     if-eqz p1, :cond_0
 
     .line 4
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -975,12 +975,12 @@
 
     .line 6
     :cond_0
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
     .line 7
-    iput-object v1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
+    iput-object v1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->C:Lcom/vk/libvideo/live/views/liveswipe/f;
 
     :cond_1
     :goto_0

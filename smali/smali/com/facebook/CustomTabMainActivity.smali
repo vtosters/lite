@@ -148,7 +148,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -256,14 +256,14 @@
     move-result-object v0
 
     .line 7
-    new-instance v2, Lcom/facebook/internal/CustomTab;
+    new-instance v2, Lcom/facebook/internal/c;
 
     const-string v3, "oauth"
 
-    invoke-direct {v2, v3, p1}, Lcom/facebook/internal/CustomTab;-><init>(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-direct {v2, v3, p1}, Lcom/facebook/internal/c;-><init>(Ljava/lang/String;Landroid/os/Bundle;)V
 
     .line 8
-    invoke-virtual {v2, p0, v0}, Lcom/facebook/internal/CustomTab;->a(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-virtual {v2, p0, v0}, Lcom/facebook/internal/c;->a(Landroid/app/Activity;Ljava/lang/String;)V
 
     .line 9
     iput-boolean v1, p0, Lcom/facebook/CustomTabMainActivity;->a:Z

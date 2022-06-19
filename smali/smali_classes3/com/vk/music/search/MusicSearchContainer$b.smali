@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/search/MusicSearchContainer;->a(Lkotlin/jvm/b/Functions;)Landroid/view/View;
+    value = Lcom/vk/music/search/MusicSearchContainer;->a(Lkotlin/jvm/b/a;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

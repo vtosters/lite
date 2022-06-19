@@ -3,7 +3,7 @@
 .source "VKThemeHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/google/android/gms/maps/model/MapStyleOptions;",
         ">;"
     }
@@ -59,9 +59,9 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    sget v1, Lb/h/z/R12;->map_dark_style:I
+    sget v1, Lb/h/z/j;->map_dark_style:I
 
     invoke-static {v0, v1}, Lcom/google/android/gms/maps/model/MapStyleOptions;->a(Landroid/content/Context;I)Lcom/google/android/gms/maps/model/MapStyleOptions;
 

@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Collection;
-.implements Lkotlin/jvm/internal/t/KMarkers;
+.implements Lkotlin/jvm/internal/t/a;
 
 
 # annotations
@@ -16,7 +16,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Collection<",
         "TE;>;",
-        "Lkotlin/jvm/internal/t/KMarkers;"
+        "Lkotlin/jvm/internal/t/a;"
     }
 .end annotation
 
@@ -116,7 +116,7 @@
     move-result-object v2
 
     .line 3
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -273,7 +273,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lkotlin/jvm/internal/CollectionToArray;->a(Ljava/util/Collection;)[Ljava/lang/Object;
+    invoke-static {p0}, Lkotlin/jvm/internal/h;->a(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -291,7 +291,7 @@
     .end annotation
 
     .line 2
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/CollectionToArray;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/h;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
@@ -333,7 +333,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v8}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v0 .. v8}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

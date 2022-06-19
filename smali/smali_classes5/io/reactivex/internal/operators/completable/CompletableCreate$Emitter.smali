@@ -3,8 +3,8 @@
 .source "CompletableCreate.java"
 
 # interfaces
-.implements Lio/reactivex/CompletableEmitter;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lc/a/b;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -20,10 +20,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/disposables/b;",
         ">;",
-        "Lio/reactivex/CompletableEmitter;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lc/a/b;",
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -33,18 +33,18 @@
 
 
 # instance fields
-.field final downstream:Lio/reactivex/CompletableObserver;
+.field final downstream:Lc/a/c;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/CompletableObserver;)V
+.method constructor <init>(Lc/a/c;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableCreate$Emitter;->downstream:Lio/reactivex/CompletableObserver;
+    iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableCreate$Emitter;->downstream:Lc/a/c;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
     .line 3
     sget-object v1, Lio/reactivex/internal/disposables/DisposableHelper;->DISPOSED:Lio/reactivex/internal/disposables/DisposableHelper;
@@ -94,16 +94,16 @@
 
     .line 4
     :try_start_0
-    iget-object v1, p0, Lio/reactivex/internal/operators/completable/CompletableCreate$Emitter;->downstream:Lio/reactivex/CompletableObserver;
+    iget-object v1, p0, Lio/reactivex/internal/operators/completable/CompletableCreate$Emitter;->downstream:Lc/a/c;
 
-    invoke-interface {v1}, Lio/reactivex/CompletableObserver;->b()V
+    invoke-interface {v1}, Lc/a/c;->b()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     goto :goto_0
 
@@ -112,7 +112,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     throw v1
@@ -149,7 +149,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
     .line 9
     sget-object v1, Lio/reactivex/internal/disposables/DisposableHelper;->DISPOSED:Lio/reactivex/internal/disposables/DisposableHelper;
@@ -158,16 +158,16 @@
 
     .line 10
     :try_start_0
-    iget-object v1, p0, Lio/reactivex/internal/operators/completable/CompletableCreate$Emitter;->downstream:Lio/reactivex/CompletableObserver;
+    iget-object v1, p0, Lio/reactivex/internal/operators/completable/CompletableCreate$Emitter;->downstream:Lc/a/c;
 
-    invoke-interface {v1, p1}, Lio/reactivex/CompletableObserver;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v1, p1}, Lc/a/c;->a(Ljava/lang/Throwable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_1
 
     .line 11
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_1
     const/4 p1, 0x1
@@ -179,7 +179,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_2
     throw p1
@@ -198,9 +198,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;)Z
 
     move-result v0
 

@@ -1,9 +1,9 @@
 .class public final Lcom/vk/balance/BalanceFragment;
-.super Lcom/vk/core/fragments/BaseMvpFragment;
+.super Lcom/vk/core/fragments/c;
 .source "BalanceFragment.kt"
 
 # interfaces
-.implements Lcom/vk/balance/BalanceContract1;
+.implements Lcom/vk/balance/b;
 
 
 # annotations
@@ -15,10 +15,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/BaseMvpFragment<",
-        "Lcom/vk/balance/BalanceContract;",
+        "Lcom/vk/core/fragments/c<",
+        "Lcom/vk/balance/a;",
         ">;",
-        "Lcom/vk/balance/BalanceContract1;"
+        "Lcom/vk/balance/b;"
     }
 .end annotation
 
@@ -42,14 +42,14 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/balance/BalancePresenter;
+    new-instance v0, Lcom/vk/balance/c;
 
-    invoke-direct {v0, p0}, Lcom/vk/balance/BalancePresenter;-><init>(Lcom/vk/balance/BalanceContract1;)V
+    invoke-direct {v0, p0}, Lcom/vk/balance/c;-><init>(Lcom/vk/balance/b;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
+    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
 
     return-void
 .end method
@@ -129,7 +129,7 @@
     const-string p1, "retryBtn"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -137,13 +137,13 @@
     const-string p1, "progressView"
 
     .line 8
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -151,13 +151,13 @@
     const-string p1, "swipeRefreshLayout"
 
     .line 10
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 11
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -169,15 +169,15 @@
     invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/balance/BalanceContract;
+    check-cast p1, Lcom/vk/balance/a;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/balance/BalanceContract;->C()V
+    invoke-interface {p1}, Lcom/vk/balance/a;->C()V
 
     :cond_0
     return-void
@@ -204,7 +204,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/balance/BalanceFragment$onCreateView$1;-><init>(Lcom/vk/balance/BalanceFragment;)V
 
-    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     const p2, 0x7f0a0af7
 
@@ -213,7 +213,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/balance/BalanceFragment$onCreateView$2;-><init>(Lcom/vk/balance/BalanceFragment;)V
 
-    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p2
 
@@ -242,7 +242,7 @@
     :cond_0
     const-string p1, "activatePromoBtn"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -253,7 +253,7 @@
     const/4 v0, 0x2
 
     .line 6
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -275,7 +275,7 @@
     const p2, 0x7f0a015b
 
     .line 8
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -293,7 +293,7 @@
     const p2, 0x7f0a0af0
 
     .line 10
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -315,7 +315,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/balance/BalanceFragment$onCreateView$4;-><init>(Lcom/vk/balance/BalanceFragment;)V
 
-    invoke-static {p1, p2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p1, p2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p2
 
@@ -331,7 +331,7 @@
     const p2, 0x7f0a0d9d
 
     .line 14
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -360,7 +360,7 @@
     const-string p1, "retryBtn"
 
     .line 18
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -368,7 +368,7 @@
     const-string p1, "progressView"
 
     .line 19
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -376,7 +376,7 @@
     const-string p1, "balanceTv"
 
     .line 20
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -384,7 +384,7 @@
     const-string p1, "swipeRefreshLayout"
 
     .line 21
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -444,7 +444,7 @@
     :cond_0
     const-string v0, "retryBtn"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -452,7 +452,7 @@
     const-string v0, "balanceTv"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -464,7 +464,7 @@
     const-string v0, "progressView"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -472,7 +472,7 @@
     const-string v0, "swipeRefreshLayout"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

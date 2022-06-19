@@ -3,7 +3,7 @@
 .source "MasksWrap.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -58,7 +58,7 @@
 
     iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$d;->b:Lcom/vk/dto/masks/Mask;
 
-    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->b(Lcom/vk/dto/masks/Mask;)V
+    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/masks/a;->b(Lcom/vk/dto/masks/Mask;)V
 
     return-void
 .end method

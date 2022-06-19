@@ -12,13 +12,13 @@
 
 .field private d:Landroid/view/View$OnClickListener;
 
-.field private e:Lkotlin/jvm/b/Functions2;
+.field private e:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -26,7 +26,7 @@
 
 .field private f:Z
 
-.field private final g:Lcom/vk/navigation/ActivityResulter;
+.field private final g:Lcom/vk/navigation/c;
 
 .field private final h:Lcom/vk/core/view/search/RoundedSearchView$d;
 
@@ -47,7 +47,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -67,7 +67,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -88,7 +88,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/core/view/search/RoundedSearchView$c;-><init>(Lcom/vk/core/view/search/RoundedSearchView;)V
 
-    iput-object p3, p0, Lcom/vk/core/view/search/RoundedSearchView;->g:Lcom/vk/navigation/ActivityResulter;
+    iput-object p3, p0, Lcom/vk/core/view/search/RoundedSearchView;->g:Lcom/vk/navigation/c;
 
     .line 5
     new-instance p3, Lcom/vk/core/view/search/RoundedSearchView$d;
@@ -102,12 +102,12 @@
 
     move-result-object p1
 
-    sget p3, Lb/h/z/R10;->view_rounded_search:I
+    sget p3, Lb/h/z/h;->view_rounded_search:I
 
     invoke-virtual {p1, p3, p0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 7
-    sget v2, Lb/h/z/R;->search_icon:I
+    sget v2, Lb/h/z/g;->search_icon:I
 
     const/4 v3, 0x0
 
@@ -119,7 +119,7 @@
 
     move-object v1, p0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;->a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;->a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -128,9 +128,9 @@
     iput-object p1, p0, Lcom/vk/core/view/search/RoundedSearchView;->a:Landroid/widget/ImageView;
 
     .line 8
-    sget v2, Lb/h/z/R;->right_icon:I
+    sget v2, Lb/h/z/g;->right_icon:I
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;->a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;->a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -139,9 +139,9 @@
     iput-object p1, p0, Lcom/vk/core/view/search/RoundedSearchView;->b:Landroid/widget/ImageView;
 
     .line 9
-    sget v2, Lb/h/z/R;->query:I
+    sget v2, Lb/h/z/g;->query:I
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;->a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;->a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -159,7 +159,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/core/view/search/RoundedSearchView$$special$$inlined$apply$lambda$2;-><init>(Lcom/vk/core/view/search/RoundedSearchView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 12
     iget-object p2, p0, Lcom/vk/core/view/search/RoundedSearchView;->h:Lcom/vk/core/view/search/RoundedSearchView$d;
@@ -177,9 +177,9 @@
     iput-object p1, p0, Lcom/vk/core/view/search/RoundedSearchView;->c:Landroid/widget/EditText;
 
     .line 15
-    sget v2, Lb/h/z/R;->search_box:I
+    sget v2, Lb/h/z/g;->search_box:I
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;->a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/RoundedSearchView;->a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -190,12 +190,12 @@
 
     invoke-direct {p1, p0}, Lcom/vk/core/view/search/RoundedSearchView$2;-><init>(Lcom/vk/core/view/search/RoundedSearchView;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -218,7 +218,7 @@
     return-void
 .end method
 
-.method private final a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+.method private final a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -227,10 +227,10 @@
             ">(",
             "Landroid/view/View;",
             "I",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)TT;"
         }
     .end annotation
@@ -245,13 +245,13 @@
     if-eqz p1, :cond_0
 
     .line 5
-    invoke-static {p1, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     :cond_0
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+.method static synthetic a(Lcom/vk/core/view/search/RoundedSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
     .locals 0
 
     and-int/lit8 p4, p4, 0x2
@@ -262,7 +262,7 @@
 
     .line 3
     :cond_0
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/core/view/search/RoundedSearchView;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/core/view/search/RoundedSearchView;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p0
 
@@ -328,13 +328,13 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/navigation/ResulterProvider;
+    instance-of v1, v0, Lcom/vk/navigation/u;
 
     const/4 v2, 0x0
 
@@ -343,12 +343,12 @@
     move-object v0, v2
 
     :cond_0
-    check-cast v0, Lcom/vk/navigation/ResulterProvider;
+    check-cast v0, Lcom/vk/navigation/u;
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
 
     move-result v1
 
@@ -363,24 +363,24 @@
 
     check-cast v1, Landroid/app/Activity;
 
-    invoke-static {v1}, Lcom/vk/core/utils/VoiceUtils;->a(Landroid/app/Activity;)Z
+    invoke-static {v1}, Lcom/vk/core/utils/i;->a(Landroid/app/Activity;)Z
 
     .line 4
-    iget-object v1, p0, Lcom/vk/core/view/search/RoundedSearchView;->g:Lcom/vk/navigation/ActivityResulter;
+    iget-object v1, p0, Lcom/vk/core/view/search/RoundedSearchView;->g:Lcom/vk/navigation/c;
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/ResulterProvider;->b(Lcom/vk/navigation/ActivityResulter;)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/u;->b(Lcom/vk/navigation/c;)V
 
     goto :goto_0
 
     .line 5
     :cond_1
-    sget v0, Lb/h/z/R2;->voice_search_unavailable:I
+    sget v0, Lb/h/z/k;->voice_search_unavailable:I
 
     const/4 v1, 0x0
 
     const/4 v3, 0x2
 
-    invoke-static {v0, v1, v3, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v3, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     :goto_0
     return-void
@@ -396,27 +396,27 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/navigation/ResulterProvider;
+    instance-of v1, v0, Lcom/vk/navigation/u;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vk/navigation/ResulterProvider;
+    check-cast v0, Lcom/vk/navigation/u;
 
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v1, p0, Lcom/vk/core/view/search/RoundedSearchView;->g:Lcom/vk/navigation/ActivityResulter;
+    iget-object v1, p0, Lcom/vk/core/view/search/RoundedSearchView;->g:Lcom/vk/navigation/c;
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/ResulterProvider;->a(Lcom/vk/navigation/ActivityResulter;)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/u;->a(Lcom/vk/navigation/c;)V
 
     :cond_1
     return-void
@@ -457,13 +457,13 @@
     if-ne v0, v1, :cond_1
 
     .line 2
-    sget v0, Lb/h/z/R8;->ic_voice_outline_24:I
+    sget v0, Lb/h/z/e;->ic_voice_outline_24:I
 
     goto :goto_1
 
     .line 3
     :cond_1
-    sget v0, Lb/h/z/R8;->ic_cancel_24:I
+    sget v0, Lb/h/z/e;->ic_cancel_24:I
 
     :goto_1
     return v0
@@ -505,12 +505,12 @@
     :goto_0
     if-ne v1, v2, :cond_1
 
-    sget v1, Lb/h/z/R2;->accessibility_voice_search:I
+    sget v1, Lb/h/z/k;->accessibility_voice_search:I
 
     goto :goto_1
 
     :cond_1
-    sget v1, Lb/h/z/R2;->accessibility_clear_input:I
+    sget v1, Lb/h/z/k;->accessibility_clear_input:I
 
     :goto_1
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -519,7 +519,7 @@
 
     const-string v1, "context.getString(if (se\u2026ccessibility_clear_input)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -548,7 +548,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/core/view/search/RoundedSearchView;->c:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/core/view/search/RoundedSearchView;->c:Landroid/widget/EditText;
@@ -567,18 +567,18 @@
     .line 2
     iget-object v0, p0, Lcom/vk/core/view/search/RoundedSearchView;->c:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public final d()Lb/h/v/InitialValueObservable;
+.method public final d()Lb/h/v/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lb/h/v/InitialValueObservable<",
-            "Lb/h/v/TextViewTextChangeEvent;",
+            "Lb/h/v/c<",
+            "Lb/h/v/e;",
             ">;"
         }
     .end annotation
@@ -588,14 +588,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/TextViewExt;->c(Landroid/widget/TextView;)Lb/h/v/InitialValueObservable;
+    invoke-static {v0}, Lcom/vk/core/extensions/a0;->c(Landroid/widget/TextView;)Lb/h/v/c;
 
     move-result-object v0
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -626,7 +626,7 @@
 
     if-eqz v0, :cond_1
 
-    sget v1, Lb/h/z/R8;->ic_search_outline_16:I
+    sget v1, Lb/h/z/e;->ic_search_outline_16:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -634,20 +634,20 @@
     return-void
 .end method
 
-.method public final getOnActionSearchListener()Lkotlin/jvm/b/Functions2;
+.method public final getOnActionSearchListener()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/String;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/search/RoundedSearchView;->e:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/core/view/search/RoundedSearchView;->e:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
@@ -699,13 +699,13 @@
     return v0
 .end method
 
-.method public final setEditMode(Lkotlin/jvm/b/Functions;)V
+.method public final setEditMode(Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -751,9 +751,9 @@
     .line 8
     new-instance v1, Lcom/vk/core/view/search/RoundedSearchView$setEditMode$$inlined$apply$lambda$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/core/view/search/RoundedSearchView$setEditMode$$inlined$apply$lambda$1;-><init>(Lcom/vk/core/view/search/RoundedSearchView;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/core/view/search/RoundedSearchView$setEditMode$$inlined$apply$lambda$1;-><init>(Lcom/vk/core/view/search/RoundedSearchView;Lkotlin/jvm/b/a;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     :cond_1
     return-void
@@ -791,21 +791,21 @@
     return-void
 .end method
 
-.method public final setOnActionSearchListener(Lkotlin/jvm/b/Functions2;)V
+.method public final setOnActionSearchListener(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/view/search/RoundedSearchView;->e:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/core/view/search/RoundedSearchView;->e:Lkotlin/jvm/b/b;
 
     return-void
 .end method

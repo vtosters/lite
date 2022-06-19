@@ -1,11 +1,11 @@
 .class public Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;
-.super Lcom/vk/lists/SimpleAdapter;
+.super Lcom/vk/lists/i0;
 .source "CatalogRecyclerAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/libvideo/autoplay/AutoPlayProvider;
-.implements Lcom/vk/catalog2/core/util/CatalogProcessEditorCmd;
-.implements Lcom/vk/catalog2/core/util/BlockIdRemoveManager;
+.implements Lcom/vk/libvideo/autoplay/b;
+.implements Lcom/vk/catalog2/core/util/h;
+.implements Lcom/vk/catalog2/core/util/a;
 
 
 # annotations
@@ -17,13 +17,13 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/SimpleAdapter<",
+        "Lcom/vk/lists/i0<",
         "Lcom/vk/catalog2/core/blocks/UIBlock;",
-        "Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;",
+        "Lcom/vk/catalog2/core/ui/g;",
         ">;",
-        "Lcom/vk/libvideo/autoplay/AutoPlayProvider;",
-        "Lcom/vk/catalog2/core/util/CatalogProcessEditorCmd;",
-        "Lcom/vk/catalog2/core/util/BlockIdRemoveManager;"
+        "Lcom/vk/libvideo/autoplay/b;",
+        "Lcom/vk/catalog2/core/util/h;",
+        "Lcom/vk/catalog2/core/util/a;"
     }
 .end annotation
 
@@ -33,20 +33,20 @@
 
 
 # instance fields
-.field private final B:Lkotlin/jvm/b/Functions;
+.field private final B:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;",
+            "Lkotlin/jvm/b/a<",
+            "Lcom/vk/catalog2/core/holders/common/i;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private c:Lkotlin/jvm/b/Functions1;
+.field private c:Lkotlin/jvm/b/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions1<",
+            "Lkotlin/jvm/b/c<",
             "-",
             "Ljava/lang/Integer;",
             "-",
@@ -71,9 +71,9 @@
     .end annotation
 .end field
 
-.field private final g:Lcom/vk/catalog2/core/CatalogConfiguration;
+.field private final g:Lcom/vk/catalog2/core/a;
 
-.field private final h:Lcom/vk/catalog2/core/CatalogEntryPointParams;
+.field private final h:Lcom/vk/catalog2/core/e;
 
 
 # direct methods
@@ -84,43 +84,43 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->C:Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/lists/ListDataSet;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lkotlin/jvm/b/Functions;)V
+.method public constructor <init>(Lcom/vk/catalog2/core/a;Lcom/vk/lists/o;Lcom/vk/catalog2/core/e;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/catalog2/core/CatalogConfiguration;",
-            "Lcom/vk/lists/ListDataSet<",
+            "Lcom/vk/catalog2/core/a;",
+            "Lcom/vk/lists/o<",
             "Lcom/vk/catalog2/core/blocks/UIBlock;",
             ">;",
-            "Lcom/vk/catalog2/core/CatalogEntryPointParams;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lcom/vk/catalog2/core/e;",
+            "Lkotlin/jvm/b/a<",
             "+",
-            "Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;",
+            "Lcom/vk/catalog2/core/holders/common/i;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/lists/SimpleAdapter;-><init>(Lcom/vk/lists/BaseListDataSet;)V
+    invoke-direct {p0, p2}, Lcom/vk/lists/i0;-><init>(Lcom/vk/lists/b;)V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->g:Lcom/vk/catalog2/core/CatalogConfiguration;
+    iput-object p1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->g:Lcom/vk/catalog2/core/a;
 
-    iput-object p3, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->h:Lcom/vk/catalog2/core/CatalogEntryPointParams;
+    iput-object p3, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->h:Lcom/vk/catalog2/core/e;
 
-    iput-object p4, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->B:Lkotlin/jvm/b/Functions;
+    iput-object p4, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->B:Lkotlin/jvm/b/a;
 
     .line 2
     sget-object p1, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$absolutePositionResolver$1;->a:Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$absolutePositionResolver$1;
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->c:Lkotlin/jvm/b/Functions1;
+    iput-object p1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->c:Lkotlin/jvm/b/c;
 
     .line 3
     new-instance p1, Ljava/util/LinkedHashSet;
@@ -197,18 +197,18 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;I)V
+.method public a(Lcom/vk/catalog2/core/ui/g;I)V
     .locals 5
 
     .line 5
-    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/vk/catalog2/core/blocks/UIBlock;
 
     .line 6
-    iget-object v1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->c:Lkotlin/jvm/b/Functions1;
+    iget-object v1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->c:Lkotlin/jvm/b/c;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -216,9 +216,9 @@
 
     const-string v3, "block"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v2, v0}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v2, v0}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -229,11 +229,11 @@
     move-result v1
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;->c0()Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/ui/g;->c0()Lcom/vk/catalog2/core/holders/common/n;
 
     move-result-object v2
 
-    instance-of v3, v2, Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder;
+    instance-of v3, v2, Lcom/vk/catalog2/core/holders/common/f;
 
     const/4 v4, 0x0
 
@@ -242,44 +242,44 @@
     move-object v2, v4
 
     :cond_0
-    check-cast v2, Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder;
+    check-cast v2, Lcom/vk/catalog2/core/holders/common/f;
 
     if-eqz v2, :cond_1
 
-    iget-object v3, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->B:Lkotlin/jvm/b/Functions;
+    iget-object v3, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->B:Lkotlin/jvm/b/a;
 
-    invoke-interface {v3}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
+    check-cast v3, Lcom/vk/catalog2/core/holders/common/i;
 
-    invoke-interface {v2, v3}, Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder;->a(Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;)V
+    invoke-interface {v2, v3}, Lcom/vk/catalog2/core/holders/common/f;->a(Lcom/vk/catalog2/core/holders/common/i;)V
 
     .line 8
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;->c0()Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/ui/g;->c0()Lcom/vk/catalog2/core/holders/common/n;
 
     move-result-object v2
 
-    instance-of v3, v2, Lcom/vk/catalog2/core/holders/common/DraggableVh;
+    instance-of v3, v2, Lcom/vk/catalog2/core/holders/common/p;
 
     if-nez v3, :cond_2
 
     move-object v2, v4
 
     :cond_2
-    check-cast v2, Lcom/vk/catalog2/core/holders/common/DraggableVh;
+    check-cast v2, Lcom/vk/catalog2/core/holders/common/p;
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2, p0}, Lcom/vk/catalog2/core/holders/common/DraggableVh;->a(Lcom/vk/catalog2/core/util/BlockIdRemoveManager;)V
+    invoke-virtual {v2, p0}, Lcom/vk/catalog2/core/holders/common/p;->a(Lcom/vk/catalog2/core/util/a;)V
 
     .line 9
     :cond_3
     iget-boolean v2, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->e:Z
 
-    invoke-virtual {p1, v0, p2, v1, v2}, Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;->a(Lcom/vk/catalog2/core/blocks/UIBlock;IIZ)V
+    invoke-virtual {p1, v0, p2, v1, v2}, Lcom/vk/catalog2/core/ui/g;->a(Lcom/vk/catalog2/core/blocks/UIBlock;IIZ)V
 
     return-void
 .end method
@@ -319,12 +319,12 @@
     return-void
 .end method
 
-.method public final b(Lkotlin/jvm/b/Functions1;)V
+.method public final b(Lkotlin/jvm/b/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions1<",
+            "Lkotlin/jvm/b/c<",
             "-",
             "Ljava/lang/Integer;",
             "-",
@@ -335,7 +335,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->c:Lkotlin/jvm/b/Functions1;
+    iput-object p1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->c:Lkotlin/jvm/b/c;
 
     return-void
 .end method
@@ -368,7 +368,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -385,7 +385,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -454,19 +454,19 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
+    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
 
     const-string v1, "dataSet"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
+    invoke-interface {v0}, Lcom/vk/lists/d;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v2, "dataSet.list"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v2, 0xa
 
@@ -585,22 +585,22 @@
 
     .line 11
     :cond_3
-    iget-object v2, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
+    iget-object v2, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v2}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
+    invoke-interface {v2}, Lcom/vk/lists/d;->f()Ljava/util/List;
 
     move-result-object v2
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
     .line 12
-    iget-object v2, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
+    iget-object v2, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v2}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
+    invoke-interface {v2}, Lcom/vk/lists/d;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -613,9 +613,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;
+    check-cast p1, Lcom/vk/catalog2/core/ui/g;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->a(Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->a(Lcom/vk/catalog2/core/ui/g;I)V
 
     return-void
 .end method
@@ -624,14 +624,14 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/catalog2/core/ui/g;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/catalog2/core/ui/g;
     .locals 4
 
     .line 2
@@ -658,13 +658,13 @@
     check-cast p2, Lcom/vk/catalog2/core/api/dto/CatalogViewType;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->g:Lcom/vk/catalog2/core/CatalogConfiguration;
+    iget-object v1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->g:Lcom/vk/catalog2/core/a;
 
-    iget-object v2, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->h:Lcom/vk/catalog2/core/CatalogEntryPointParams;
+    iget-object v2, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->h:Lcom/vk/catalog2/core/e;
 
     const/4 v3, 0x0
 
-    invoke-interface {v1, v0, p2, v3, v2}, Lcom/vk/catalog2/core/CatalogConfiguration;->a(Lcom/vk/catalog2/core/api/dto/CatalogDataType;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+    invoke-interface {v1, v0, p2, v3, v2}, Lcom/vk/catalog2/core/a;->a(Lcom/vk/catalog2/core/api/dto/CatalogDataType;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/holders/common/n;
 
     move-result-object v1
 
@@ -675,13 +675,13 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vk/catalog2/core/holders/common/DraggableVh;
+    new-instance v0, Lcom/vk/catalog2/core/holders/common/p;
 
     invoke-virtual {p2}, Lcom/vk/catalog2/core/api/dto/CatalogViewType;->a()Z
 
     move-result p2
 
-    invoke-direct {v0, v1, p2}, Lcom/vk/catalog2/core/holders/common/DraggableVh;-><init>(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Z)V
+    invoke-direct {v0, v1, p2}, Lcom/vk/catalog2/core/holders/common/p;-><init>(Lcom/vk/catalog2/core/holders/common/n;Z)V
 
     goto :goto_0
 
@@ -690,12 +690,12 @@
 
     .line 5
     :goto_0
-    new-instance p2, Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;
+    new-instance p2, Lcom/vk/catalog2/core/ui/g;
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/catalog2/core/ui/g;-><init>(Landroid/view/ViewGroup;Lcom/vk/catalog2/core/holders/common/n;)V
 
     .line 6
-    instance-of p1, v0, Lcom/vk/catalog2/core/holders/common/DraggableVh;
+    instance-of p1, v0, Lcom/vk/catalog2/core/holders/common/p;
 
     if-nez p1, :cond_1
 
@@ -705,15 +705,15 @@
     move-object v3, v0
 
     :goto_1
-    check-cast v3, Lcom/vk/catalog2/core/holders/common/DraggableVh;
+    check-cast v3, Lcom/vk/catalog2/core/holders/common/p;
 
     if-eqz v3, :cond_2
 
     new-instance p1, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;
 
-    invoke-direct {p1, p2, p0, v0}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;-><init>(Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;)V
+    invoke-direct {p1, p2, p0, v0}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;-><init>(Lcom/vk/catalog2/core/ui/g;Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;Lcom/vk/catalog2/core/holders/common/n;)V
 
-    invoke-virtual {v3, p1}, Lcom/vk/catalog2/core/holders/common/DraggableVh;->b(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v3, p1}, Lcom/vk/catalog2/core/holders/common/p;->b(Lkotlin/jvm/b/a;)V
 
     :cond_2
     return-object p2
@@ -728,7 +728,7 @@
     return-void
 .end method
 
-.method public v(I)Lcom/vk/libvideo/autoplay/AutoPlay;
+.method public v(I)Lcom/vk/libvideo/autoplay/a;
     .locals 3
 
     const/4 v0, 0x0
@@ -736,9 +736,9 @@
     if-ltz p1, :cond_2
 
     .line 1
-    iget-object v1, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
+    iget-object v1, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
 
-    invoke-interface {v1}, Lcom/vk/lists/DataSet;->size()I
+    invoke-interface {v1}, Lcom/vk/lists/d;->size()I
 
     move-result v1
 
@@ -748,13 +748,13 @@
 
     .line 2
     :cond_0
-    iget-object v1, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
+    iget-object v1, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
 
     const-string v2, "dataSet"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
+    invoke-interface {v1}, Lcom/vk/lists/d;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -762,19 +762,19 @@
 
     move-result-object p1
 
-    instance-of v1, p1, Lcom/vk/catalog2/core/ui/CatalogAutoPlayVideoProvider;
+    instance-of v1, p1, Lcom/vk/catalog2/core/ui/a;
 
     if-nez v1, :cond_1
 
     move-object p1, v0
 
     :cond_1
-    check-cast p1, Lcom/vk/catalog2/core/ui/CatalogAutoPlayVideoProvider;
+    check-cast p1, Lcom/vk/catalog2/core/ui/a;
 
     if-eqz p1, :cond_2
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/catalog2/core/ui/CatalogAutoPlayVideoProvider;->f1()Lcom/vk/dto/common/VideoFile;
+    invoke-interface {p1}, Lcom/vk/catalog2/core/ui/a;->f1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -804,9 +804,9 @@
     if-ltz p1, :cond_1
 
     .line 1
-    iget-object v1, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
+    iget-object v1, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
 
-    invoke-interface {v1}, Lcom/vk/lists/DataSet;->size()I
+    invoke-interface {v1}, Lcom/vk/lists/d;->size()I
 
     move-result v1
 
@@ -816,13 +816,13 @@
 
     .line 2
     :cond_0
-    iget-object v1, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
+    iget-object v1, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
 
     const-string v2, "dataSet"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
+    invoke-interface {v1}, Lcom/vk/lists/d;->f()Ljava/util/List;
 
     move-result-object v1
 

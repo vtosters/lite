@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field private mBinder:Landroid/support/customtabs/ICustomTabsService$a;
+.field private mBinder:La/a/a/b$a;
 
 .field final mDeathRecipientMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -64,7 +64,7 @@
 
     invoke-direct {v0, p0}, Landroidx/browser/customtabs/CustomTabsService$1;-><init>(Landroidx/browser/customtabs/CustomTabsService;)V
 
-    iput-object v0, p0, Landroidx/browser/customtabs/CustomTabsService;->mBinder:Landroid/support/customtabs/ICustomTabsService$a;
+    iput-object v0, p0, Landroidx/browser/customtabs/CustomTabsService;->mBinder:La/a/a/b$a;
 
     return-void
 .end method
@@ -155,7 +155,7 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Landroidx/browser/customtabs/CustomTabsService;->mBinder:Landroid/support/customtabs/ICustomTabsService$a;
+    iget-object p1, p0, Landroidx/browser/customtabs/CustomTabsService;->mBinder:La/a/a/b$a;
 
     return-object p1
 .end method

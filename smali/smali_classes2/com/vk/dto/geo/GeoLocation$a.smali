@@ -1,5 +1,5 @@
 .class public final Lcom/vk/dto/geo/GeoLocation$a;
-.super Lcom/vk/dto/common/data/JsonParser;
+.super Lcom/vk/dto/common/data/c;
 .source "JsonParser.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/JsonParser<",
+        "Lcom/vk/dto/common/data/c<",
         "Lcom/vk/dto/geo/GeoLocation;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     .line 1
     sget-object v0, Lcom/vk/dto/geo/GeoLocation;->H:Lcom/vk/dto/geo/GeoLocation$c;
 
-    invoke-static {v0, p1}, Lcom/vk/dto/geo/GeoLocation1;->a(Lcom/vk/dto/geo/GeoLocation$c;Lorg/json/JSONObject;)Lcom/vk/dto/geo/GeoLocation;
+    invoke-static {v0, p1}, Lcom/vk/dto/geo/a;->a(Lcom/vk/dto/geo/GeoLocation$c;Lorg/json/JSONObject;)Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object p1
 

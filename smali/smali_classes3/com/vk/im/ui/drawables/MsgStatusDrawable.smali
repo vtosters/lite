@@ -73,7 +73,7 @@
     iput-object v0, p0, Lcom/vk/im/ui/drawables/MsgStatusDrawable;->h:Lcom/vk/im/ui/drawables/MsgStatusDrawable$StatusState;
 
     .line 4
-    sget v0, Lcom/vk/im/ui/R12;->ic_chats_sending_16:I
+    sget v0, Lcom/vk/im/ui/f;->ic_chats_sending_16:I
 
     invoke-static {p1, v0}, Lcom/vk/im/ui/drawables/MsgStatusDrawable;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -86,7 +86,7 @@
     iput-object v0, p0, Lcom/vk/im/ui/drawables/MsgStatusDrawable;->a:Landroid/graphics/drawable/Drawable;
 
     .line 5
-    sget v0, Lcom/vk/im/ui/R12;->vkim_msg_status_unread_dot:I
+    sget v0, Lcom/vk/im/ui/f;->vkim_msg_status_unread_dot:I
 
     invoke-static {p1, v0}, Lcom/vk/im/ui/drawables/MsgStatusDrawable;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -99,7 +99,7 @@
     iput-object v0, p0, Lcom/vk/im/ui/drawables/MsgStatusDrawable;->b:Landroid/graphics/drawable/Drawable;
 
     .line 6
-    sget v0, Lcom/vk/im/ui/R12;->ic_chats_error_16:I
+    sget v0, Lcom/vk/im/ui/f;->ic_chats_error_16:I
 
     invoke-static {p1, v0}, Lcom/vk/im/ui/drawables/MsgStatusDrawable;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 

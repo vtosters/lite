@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;Ljava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;Ljava/lang/String;ZILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4

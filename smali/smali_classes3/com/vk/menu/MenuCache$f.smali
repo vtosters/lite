@@ -3,12 +3,12 @@
 .source "MenuCache.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/menu/MenuCache;->p()Lio/reactivex/Observable;
+    value = Lcom/vk/menu/MenuCache;->p()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/common/data/ApiApplication;",
@@ -71,15 +71,15 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
+    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "key_menu_games_list"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
 
     .line 2
     sget-object p1, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;

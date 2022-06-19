@@ -177,11 +177,11 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/vtosters/lite/ui/CircleColorDrawable;
+    new-instance v0, Lcom/vtosters/lite/ui/r;
 
     iget v1, p0, Lcom/vtosters/lite/ui/ColorPreference;->c:I
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/CircleColorDrawable;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/r;-><init>(I)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 

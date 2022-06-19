@@ -3,7 +3,7 @@
 .source "ViewGroupExt.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/core/util/TimeoutLock;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/core/util/j1;",
         ">;"
     }
 .end annotation
@@ -55,15 +55,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/util/TimeoutLock;
+.method public final invoke()Lcom/vk/core/util/j1;
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/core/util/TimeoutLock;
+    new-instance v0, Lcom/vk/core/util/j1;
 
     const-wide/16 v1, 0x190
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/core/util/j1;-><init>(J)V
 
     return-object v0
 .end method
@@ -71,7 +71,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Lcom/vk/core/extensions/ViewGroupExtKt$viewExtClickLock$2;->invoke()Lcom/vk/core/util/TimeoutLock;
+    invoke-virtual {p0}, Lcom/vk/core/extensions/ViewGroupExtKt$viewExtClickLock$2;->invoke()Lcom/vk/core/util/j1;
 
     move-result-object v0
 

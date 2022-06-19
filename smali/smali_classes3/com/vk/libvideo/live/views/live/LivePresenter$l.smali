@@ -3,12 +3,12 @@
 .source "LivePresenter.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/live/views/live/LivePresenter;->h()Lio/reactivex/functions/Function;
+    value = Lcom/vk/libvideo/live/views/live/LivePresenter;->h()Lc/a/z/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
-        "Lio/reactivex/Observable<",
+        "Lc/a/z/j<",
+        "Lc/a/m<",
         "Ljava/lang/Throwable;",
         ">;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "*>;>;"
     }
 .end annotation
@@ -41,19 +41,19 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/Observable;)Lio/reactivex/ObservableSource;
+.method public a(Lc/a/m;)Lc/a/p;
     .locals 1
-    .param p1    # Lio/reactivex/Observable;
+    .param p1    # Lc/a/m;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/lang/Throwable;",
             ">;)",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "*>;"
         }
     .end annotation
@@ -69,7 +69,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/libvideo/live/views/live/LivePresenter$l$a;-><init>(Lcom/vk/libvideo/live/views/live/LivePresenter$l;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
@@ -89,9 +89,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lio/reactivex/Observable;
+    check-cast p1, Lc/a/m;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/live/LivePresenter$l;->a(Lio/reactivex/Observable;)Lio/reactivex/ObservableSource;
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/live/LivePresenter$l;->a(Lc/a/m;)Lc/a/p;
 
     move-result-object p1
 

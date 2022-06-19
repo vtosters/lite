@@ -3,7 +3,7 @@
 .source "HeaderPostingPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$c;->a:Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->d(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts;
+    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->d(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/g;
 
     move-result-object p1
 
@@ -60,16 +60,16 @@
 
     const/4 v1, 0x1
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/newsfeed/posting/PostingContracts;->b(ZZ)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/newsfeed/posting/g;->b(ZZ)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$c;->a:Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->c(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->c(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/j;
 
     move-result-object p1
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->c(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/j;->c(Z)V
 
     return-void
 .end method

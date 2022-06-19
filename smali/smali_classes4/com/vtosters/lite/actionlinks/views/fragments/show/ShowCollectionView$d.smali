@@ -3,7 +3,7 @@
 .source "ShowCollectionView.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
 
 
 # annotations
@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView$d;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/show/a;
 
     move-result-object p1
 

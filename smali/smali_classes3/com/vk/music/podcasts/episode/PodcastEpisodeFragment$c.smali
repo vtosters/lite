@@ -3,12 +3,12 @@
 .source "PodcastEpisodeFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;->a(ILkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;->a(ILkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -53,14 +53,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
+.method public final a(Ljava/lang/Boolean;)Lc/a/m;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Boolean;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -73,7 +73,7 @@
 
     move-result v1
 
-    new-instance p1, Lcom/vk/api/groups/GroupsJoin;
+    new-instance p1, Lcom/vk/api/groups/s;
 
     const/4 v2, 0x0
 
@@ -89,27 +89,27 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/api/groups/GroupsJoin;-><init>(IZLjava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/api/groups/s;-><init>(IZLjava/lang/String;IIILkotlin/jvm/internal/i;)V
 
     const-string v0, "episode"
 
     .line 2
-    invoke-virtual {p1, v0}, Lcom/vk/api/groups/GroupsJoin;->d(Ljava/lang/String;)Lcom/vk/api/groups/GroupsJoin;
+    invoke-virtual {p1, v0}, Lcom/vk/api/groups/s;->d(Ljava/lang/String;)Lcom/vk/api/groups/s;
 
     .line 3
     iget-object v0, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$c;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
+    check-cast v0, Lcom/vk/music/podcasts/episode/b;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->q()Lcom/vk/dto/podcast/PodcastPage;
+    invoke-virtual {v0}, Lcom/vk/music/podcasts/episode/b;->q()Lcom/vk/dto/podcast/PodcastPage;
 
     move-result-object v0
 
@@ -129,12 +129,12 @@
     move-object v0, v1
 
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vk/api/groups/GroupsJoin;->e(Ljava/lang/String;)Lcom/vk/api/groups/GroupsJoin;
+    invoke-virtual {p1, v0}, Lcom/vk/api/groups/s;->e(Ljava/lang/String;)Lcom/vk/api/groups/s;
 
     const/4 v0, 0x1
 
     .line 4
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -147,7 +147,7 @@
     .line 1
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$c;->a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$c;->a(Ljava/lang/Boolean;)Lc/a/m;
 
     move-result-object p1
 

@@ -100,7 +100,7 @@
     iput-object v1, p0, Lcom/vk/im/ui/views/ProgressLineView;->B:Landroid/graphics/Path;
 
     .line 12
-    sget-object v1, Lcom/vk/im/ui/R2;->ProgressLineView:[I
+    sget-object v1, Lcom/vk/im/ui/o;->ProgressLineView:[I
 
     const/4 v2, 0x0
 
@@ -109,7 +109,7 @@
     move-result-object p1
 
     .line 13
-    sget p2, Lcom/vk/im/ui/R2;->ProgressLineView_vkim_min:I
+    sget p2, Lcom/vk/im/ui/o;->ProgressLineView_vkim_min:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -120,7 +120,7 @@
     invoke-virtual {p0, p2, p3}, Lcom/vk/im/ui/views/ProgressLineView;->setMin(J)V
 
     .line 14
-    sget p2, Lcom/vk/im/ui/R2;->ProgressLineView_vkim_max:I
+    sget p2, Lcom/vk/im/ui/o;->ProgressLineView_vkim_max:I
 
     const p3, 0x7fffffff
 
@@ -133,7 +133,7 @@
     invoke-virtual {p0, p2, p3}, Lcom/vk/im/ui/views/ProgressLineView;->setMax(J)V
 
     .line 15
-    sget p2, Lcom/vk/im/ui/R2;->ProgressLineView_vkim_progress:I
+    sget p2, Lcom/vk/im/ui/o;->ProgressLineView_vkim_progress:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -144,7 +144,7 @@
     invoke-virtual {p0, p2, p3}, Lcom/vk/im/ui/views/ProgressLineView;->setProgress(J)V
 
     .line 16
-    sget p2, Lcom/vk/im/ui/R2;->ProgressLineView_vkim_cornerRadius:I
+    sget p2, Lcom/vk/im/ui/o;->ProgressLineView_vkim_cornerRadius:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -153,7 +153,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/ProgressLineView;->setCornerRadius(I)V
 
     .line 17
-    sget p2, Lcom/vk/im/ui/R2;->ProgressLineView_vkim_divider_size:I
+    sget p2, Lcom/vk/im/ui/o;->ProgressLineView_vkim_divider_size:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -162,7 +162,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/ProgressLineView;->setDividerSize(I)V
 
     .line 18
-    sget p2, Lcom/vk/im/ui/R2;->ProgressLineView_vkim_colorPrimary:I
+    sget p2, Lcom/vk/im/ui/o;->ProgressLineView_vkim_colorPrimary:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -212,7 +212,7 @@
 
     const v2, 0x3ecccccd    # 0.4f
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
+    invoke-static {v1, v2}, Lcom/vk/core/util/p;->b(IF)I
 
     move-result v1
 
@@ -410,7 +410,7 @@
 
     const v1, 0x3ecccccd    # 0.4f
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ColorUtils;->b(IF)I
+    invoke-static {v0, v1}, Lcom/vk/core/util/p;->b(IF)I
 
     move-result v0
 

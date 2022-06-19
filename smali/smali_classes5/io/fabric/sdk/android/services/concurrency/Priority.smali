@@ -113,27 +113,27 @@
     return-void
 .end method
 
-.method static a(Lio/fabric/sdk/android/services/concurrency/PriorityProvider;Ljava/lang/Object;)I
+.method static a(Lio/fabric/sdk/android/services/concurrency/g;Ljava/lang/Object;)I
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<Y:",
             "Ljava/lang/Object;",
             ">(",
-            "Lio/fabric/sdk/android/services/concurrency/PriorityProvider;",
+            "Lio/fabric/sdk/android/services/concurrency/g;",
             "TY;)I"
         }
     .end annotation
 
     .line 1
-    instance-of v0, p1, Lio/fabric/sdk/android/services/concurrency/PriorityProvider;
+    instance-of v0, p1, Lio/fabric/sdk/android/services/concurrency/g;
 
     if-eqz v0, :cond_0
 
     .line 2
-    check-cast p1, Lio/fabric/sdk/android/services/concurrency/PriorityProvider;
+    check-cast p1, Lio/fabric/sdk/android/services/concurrency/g;
 
-    invoke-interface {p1}, Lio/fabric/sdk/android/services/concurrency/PriorityProvider;->getPriority()Lio/fabric/sdk/android/services/concurrency/Priority;
+    invoke-interface {p1}, Lio/fabric/sdk/android/services/concurrency/g;->getPriority()Lio/fabric/sdk/android/services/concurrency/Priority;
 
     move-result-object p1
 
@@ -149,7 +149,7 @@
 
     move-result p1
 
-    invoke-interface {p0}, Lio/fabric/sdk/android/services/concurrency/PriorityProvider;->getPriority()Lio/fabric/sdk/android/services/concurrency/Priority;
+    invoke-interface {p0}, Lio/fabric/sdk/android/services/concurrency/g;->getPriority()Lio/fabric/sdk/android/services/concurrency/Priority;
 
     move-result-object p0
 

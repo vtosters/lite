@@ -142,7 +142,7 @@
 
     const-string v2, "voe_ad"
 
-    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     new-array v1, v0, [B
@@ -268,7 +268,7 @@
 
     const-string v2, "voe_ad"
 
-    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -301,7 +301,7 @@
 
     const-string v1, "voe_ad"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/voiceengine/AudioDeviceAndroid;->_audioManager:Landroid/media/AudioManager;
@@ -311,7 +311,7 @@
     const-string v0, "Could not get audio routing - no audio manager"
 
     .line 3
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -404,7 +404,7 @@
 
     const-string v2, "voe_ad"
 
-    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -471,7 +471,7 @@
 
     const-string v2, "voe_ad"
 
-    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -578,7 +578,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 
@@ -591,7 +591,7 @@
     const-string p1, "InitPlay invalid audioMg!"
 
     .line 10
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
@@ -633,7 +633,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -661,7 +661,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 .end method
@@ -750,7 +750,7 @@
     const-string v7, "voe_ad"
 
     .line 8
-    invoke-static {v7, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
@@ -800,7 +800,7 @@
     const-string p1, "initRec: NO PERM"
 
     .line 11
-    invoke-static {v7, p1}, Le/c/a/Log;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, p1}, Le/c/a/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -832,7 +832,7 @@
 
     move-result-object p1
 
-    invoke-static {v7, p1}, Le/c/a/Log;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, p1}, Le/c/a/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -909,7 +909,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     :goto_1
@@ -1085,7 +1085,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     :goto_1
@@ -1116,7 +1116,7 @@
     .line 11
     iget-object v2, p0, Lorg/webrtc/voiceengine/AudioDeviceAndroid;->_tempBufRec:[B
 
-    invoke-static {v2, v1}, Le/c/a/Log;->a([BI)V
+    invoke-static {v2, v1}, Le/c/a/a;->a([BI)V
 
     if-eq v1, p1, :cond_2
 
@@ -1141,7 +1141,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -1178,7 +1178,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
@@ -1222,7 +1222,7 @@
 
     const-string v1, "voe_ad"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -1261,7 +1261,7 @@
     const-string v0, "Could not change audio routing - no audio manager"
 
     .line 2
-    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, -0x1
 
@@ -1377,7 +1377,7 @@
 
     const-string v1, "voe_ad"
 
-    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -1402,7 +1402,7 @@
 
     const-string v1, "voe_ad"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -1436,7 +1436,7 @@
     const-string v1, "StartPlayback"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -1471,7 +1471,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     iget-object v2, p0, Lorg/webrtc/voiceengine/AudioDeviceAndroid;->_handler:Landroid/os/Handler;
@@ -1520,7 +1520,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
@@ -1535,7 +1535,7 @@
     const-string v1, "StartRecording"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v1, p0, Lorg/webrtc/voiceengine/AudioDeviceAndroid;->_context:Landroid/content/Context;
@@ -1553,7 +1553,7 @@
     const-string v1, "startRec: NO PERM"
 
     .line 3
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
@@ -1570,7 +1570,7 @@
     invoke-virtual {v3}, Landroid/media/AudioRecord;->startRecording()V
 
     .line 6
-    invoke-static {}, Le/c/a/Log;->f()V
+    invoke-static {}, Le/c/a/a;->f()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1603,7 +1603,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 .end method
@@ -1616,7 +1616,7 @@
     const-string v1, "StopPlayback"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v1, p0, Lorg/webrtc/voiceengine/AudioDeviceAndroid;->_isRecording:Z
@@ -1689,7 +1689,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -1760,7 +1760,7 @@
     const-string v1, "StopRecording"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v1, p0, Lorg/webrtc/voiceengine/AudioDeviceAndroid;->_isPlaying:Z
@@ -1828,7 +1828,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -1868,7 +1868,7 @@
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     .line 14
-    invoke-static {}, Le/c/a/Log;->g()V
+    invoke-static {}, Le/c/a/a;->g()V
 
     .line 15
     iput-boolean v2, p0, Lorg/webrtc/voiceengine/AudioDeviceAndroid;->_isRecording:Z
@@ -1989,7 +1989,7 @@
 
     const-string v0, "voe_ad"
 
-    invoke-static {v0, p0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2014,7 +2014,7 @@
 
     const-string v1, "voe_ad"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iput-boolean p1, p0, Lorg/webrtc/voiceengine/AudioDeviceAndroid;->_enableAudioModeControl:Z
@@ -2260,7 +2260,7 @@
 
     const-string v0, "voe_ad"
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p0, :cond_2
 
@@ -2465,7 +2465,7 @@
 
     const-string v0, "voe_ad"
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 18
     :cond_4
@@ -2497,7 +2497,7 @@
 
     const-string v1, "voe_ad"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/voiceengine/AudioDeviceAndroid;->_audioManager:Landroid/media/AudioManager;
@@ -2538,7 +2538,7 @@
     const-string v1, "onTerminate"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -2620,7 +2620,7 @@
     const-string v2, "voe_ad"
 
     .line 4
-    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -2657,7 +2657,7 @@
 
     const-string v0, "voe_ad"
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

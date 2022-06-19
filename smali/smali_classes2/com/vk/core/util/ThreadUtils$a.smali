@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/util/ThreadUtils;->a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    value = Lcom/vk/core/util/ThreadUtils;->a(Ljava/lang/Object;JLkotlin/jvm/b/a;)Ljava/lang/Object;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,18 +20,18 @@
 # instance fields
 .field final synthetic a:Lkotlin/jvm/internal/Ref$ObjectRef;
 
-.field final synthetic b:Lkotlin/jvm/b/Functions;
+.field final synthetic b:Lkotlin/jvm/b/a;
 
 .field final synthetic c:Ljava/util/concurrent/CountDownLatch;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/internal/Ref$ObjectRef;Lkotlin/jvm/b/Functions;Ljava/util/concurrent/CountDownLatch;)V
+.method constructor <init>(Lkotlin/jvm/internal/Ref$ObjectRef;Lkotlin/jvm/b/a;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/util/ThreadUtils$a;->a:Lkotlin/jvm/internal/Ref$ObjectRef;
 
-    iput-object p2, p0, Lcom/vk/core/util/ThreadUtils$a;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/core/util/ThreadUtils$a;->b:Lkotlin/jvm/b/a;
 
     iput-object p3, p0, Lcom/vk/core/util/ThreadUtils$a;->c:Ljava/util/concurrent/CountDownLatch;
 
@@ -48,9 +48,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/util/ThreadUtils$a;->a:Lkotlin/jvm/internal/Ref$ObjectRef;
 
-    iget-object v1, p0, Lcom/vk/core/util/ThreadUtils$a;->b:Lkotlin/jvm/b/Functions;
+    iget-object v1, p0, Lcom/vk/core/util/ThreadUtils$a;->b:Lkotlin/jvm/b/a;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 

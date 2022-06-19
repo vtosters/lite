@@ -3,7 +3,7 @@
 .source "ChatFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/models/attaches/AttachSticker;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -58,17 +58,17 @@
     move-result-object v4
 
     .line 3
-    invoke-static {}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->c()Lcom/vk/im/engine/utils/collection/IntSet;
+    invoke-static {}, Lcom/vk/im/engine/utils/collection/e;->c()Lcom/vk/im/engine/utils/collection/h;
 
     move-result-object v5
 
     .line 4
-    sget-object v7, Lcom/vk/im/engine/models/messages/MsgSendSource$d;->INSTANCE:Lcom/vk/im/engine/models/messages/MsgSendSource$d;
+    sget-object v7, Lcom/vk/im/engine/models/messages/e$d;->a:Lcom/vk/im/engine/models/messages/e$d;
 
     .line 5
-    sget-object p1, Lcom/vk/im/engine/commands/messages/MsgSendConfig;->e:Lcom/vk/im/engine/commands/messages/MsgSendConfig$a;
+    sget-object p1, Lcom/vk/im/engine/commands/messages/z;->e:Lcom/vk/im/engine/commands/messages/z$a;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/MsgSendConfig$a;->a()Lcom/vk/im/engine/commands/messages/MsgSendConfig;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/messages/z$a;->a()Lcom/vk/im/engine/commands/messages/z;
 
     move-result-object v8
 
@@ -81,7 +81,7 @@
     const/4 v6, 0x0
 
     .line 6
-    invoke-static/range {v0 .. v8}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/MsgSendSource;Lcom/vk/im/engine/commands/messages/MsgSendConfig;)V
+    invoke-static/range {v0 .. v8}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/e;Lcom/vk/im/engine/commands/messages/z;)V
 
     return-void
 .end method
@@ -94,7 +94,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/fragments/ChatFragment$onCreateView$5;->a(Lcom/vk/im/engine/models/attaches/AttachSticker;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

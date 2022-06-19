@@ -3,7 +3,7 @@
 .source "PropertyReference.java"
 
 # interfaces
-.implements Lkotlin/u/KProperty5;
+.implements Lkotlin/u/j;
 
 
 # direct methods
@@ -48,11 +48,11 @@
     check-cast p1, Lkotlin/jvm/internal/PropertyReference;
 
     .line 3
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/KDeclarationContainer;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/e;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/KDeclarationContainer;
+    invoke-virtual {p1}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/e;
 
     move-result-object v3
 
@@ -98,7 +98,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -114,12 +114,12 @@
 
     .line 4
     :cond_2
-    instance-of v0, p1, Lkotlin/u/KProperty5;
+    instance-of v0, p1, Lkotlin/u/j;
 
     if-eqz v0, :cond_3
 
     .line 5
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/KCallable;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/b;
 
     move-result-object v0
 
@@ -133,15 +133,15 @@
     return v2
 .end method
 
-.method protected g()Lkotlin/u/KProperty5;
+.method protected g()Lkotlin/u/j;
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lkotlin/jvm/internal/CallableReference;->g()Lkotlin/u/KCallable;
+    invoke-super {p0}, Lkotlin/jvm/internal/CallableReference;->g()Lkotlin/u/b;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/u/KProperty5;
+    check-cast v0, Lkotlin/u/j;
 
     return-object v0
 .end method
@@ -150,7 +150,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/KDeclarationContainer;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/e;
 
     move-result-object v0
 
@@ -189,7 +189,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/KCallable;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/b;
 
     move-result-object v0
 

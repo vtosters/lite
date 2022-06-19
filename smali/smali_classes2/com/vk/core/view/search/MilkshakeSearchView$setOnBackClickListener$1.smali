@@ -3,12 +3,12 @@
 .source "MilkshakeSearchView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $listener:Lkotlin/jvm/b/Functions;
+.field final synthetic $listener:Lkotlin/jvm/b/a;
 
 .field final synthetic this$0:Lcom/vk/core/view/search/MilkshakeSearchView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/view/search/MilkshakeSearchView;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/core/view/search/MilkshakeSearchView;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;->this$0:Lcom/vk/core/view/search/MilkshakeSearchView;
 
-    iput-object p2, p0, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;->$listener:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;->$listener:Lkotlin/jvm/b/a;
 
     const/4 p1, 0x1
 
@@ -75,7 +75,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

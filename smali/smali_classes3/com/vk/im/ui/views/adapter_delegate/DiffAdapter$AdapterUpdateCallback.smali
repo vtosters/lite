@@ -29,10 +29,10 @@
     .end annotation
 .end field
 
-.field private final c:Lkotlin/jvm/b/Functions;
+.field private final c:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -41,14 +41,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
             "*>;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
@@ -59,7 +59,7 @@
 
     iput-object p1, p0, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->b:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
-    iput-object p2, p0, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->c:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->c:Lkotlin/jvm/b/a;
 
     .line 2
     new-instance p1, Landroid/os/Handler;
@@ -84,28 +84,28 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;Lkotlin/jvm/b/Functions;)V
+.method public static final synthetic a(Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;Lkotlin/jvm/b/a;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/Functions;)V
+.method private final a(Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->b(Lkotlin/jvm/b/Functions;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->b(Lkotlin/jvm/b/a;)Z
 
     move-result v0
 
@@ -116,7 +116,7 @@
 
     new-instance v1, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback$a;-><init>(Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback$a;-><init>(Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;Lkotlin/jvm/b/a;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -124,21 +124,21 @@
     return-void
 .end method
 
-.method private final b(Lkotlin/jvm/b/Functions;)Z
+.method private final b(Lkotlin/jvm/b/a;)Z
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)Z"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->c:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->c:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -159,7 +159,7 @@
 
     .line 2
     :try_start_0
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -204,7 +204,7 @@
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback$onChanged$1;-><init>(Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;IILjava/lang/Object;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -217,7 +217,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback$onInserted$1;-><init>(Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;II)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -230,7 +230,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback$onMoved$1;-><init>(Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;II)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -243,7 +243,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback$onRemoved$1;-><init>(Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;II)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

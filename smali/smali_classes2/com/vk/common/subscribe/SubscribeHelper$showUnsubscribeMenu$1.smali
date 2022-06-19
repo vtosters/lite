@@ -3,12 +3,12 @@
 .source "SubscribeHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/subscribe/SubscribeHelper;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/common/subscribe/SubscribeHelper;->a(Landroid/view/View;ILkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -31,18 +31,18 @@
 
 .field final synthetic $id:I
 
-.field final synthetic $onSubscribed:Lkotlin/jvm/b/Functions2;
+.field final synthetic $onSubscribed:Lkotlin/jvm/b/b;
 
 
 # direct methods
-.method constructor <init>(ILandroid/view/View;Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(ILandroid/view/View;Lkotlin/jvm/b/b;)V
     .locals 0
 
     iput p1, p0, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->$id:I
 
     iput-object p2, p0, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->$anchorView:Landroid/view/View;
 
-    iput-object p3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->$onSubscribed:Lkotlin/jvm/b/Functions2;
+    iput-object p3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->$onSubscribed:Lkotlin/jvm/b/b;
 
     const/4 p1, 0x0
 
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -85,9 +85,9 @@
 
     neg-int v2, v2
 
-    iget-object v3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->$onSubscribed:Lkotlin/jvm/b/Functions2;
+    iget-object v3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->$onSubscribed:Lkotlin/jvm/b/b;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/common/subscribe/SubscribeHelper;->a(Lcom/vk/common/subscribe/SubscribeHelper;Landroid/content/Context;ILkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/common/subscribe/SubscribeHelper;->a(Lcom/vk/common/subscribe/SubscribeHelper;Landroid/content/Context;ILkotlin/jvm/b/b;)V
 
     goto :goto_0
 
@@ -103,9 +103,9 @@
 
     iget v2, p0, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->$id:I
 
-    iget-object v3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->$onSubscribed:Lkotlin/jvm/b/Functions2;
+    iget-object v3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showUnsubscribeMenu$1;->$onSubscribed:Lkotlin/jvm/b/b;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/common/subscribe/SubscribeHelper;->b(Lcom/vk/common/subscribe/SubscribeHelper;Landroid/content/Context;ILkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/common/subscribe/SubscribeHelper;->b(Lcom/vk/common/subscribe/SubscribeHelper;Landroid/content/Context;ILkotlin/jvm/b/b;)V
 
     :goto_0
     return-void

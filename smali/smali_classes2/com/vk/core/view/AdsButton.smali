@@ -3,7 +3,7 @@
 .source "AdsButton.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # annotations
@@ -128,7 +128,7 @@
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
     .line 16
-    sget p2, Lb/h/z/R;->list:I
+    sget p2, Lb/h/z/g;->list:I
 
     invoke-virtual {v0, p2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -384,7 +384,7 @@
 
     move-result-object p1
 
-    sget v1, Lb/h/z/R8;->ads_button:I
+    sget v1, Lb/h/z/e;->ads_button:I
 
     invoke-static {p1, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -393,9 +393,9 @@
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 3
-    sget p1, Lb/h/z/R5;->button_primary_foreground:I
+    sget p1, Lb/h/z/b;->button_primary_foreground:I
 
-    invoke-static {p0, p1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {p0, p1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     .line 4
     iput v0, p0, Lcom/vk/core/view/AdsButton;->h:I
@@ -507,7 +507,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lb/h/z/R8;->vkui_bg_button_outline:I
+    sget v0, Lb/h/z/e;->vkui_bg_button_outline:I
 
     invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->c(I)Landroid/graphics/drawable/Drawable;
 
@@ -520,7 +520,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/h/z/R4;->vkui_outline_button_text:I
+    sget v1, Lb/h/z/c;->vkui_outline_button_text:I
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
@@ -536,7 +536,7 @@
     if-ne v0, v1, :cond_0
 
     .line 4
-    sget v0, Lb/h/z/R8;->ads_button:I
+    sget v0, Lb/h/z/e;->ads_button:I
 
     invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->c(I)Landroid/graphics/drawable/Drawable;
 
@@ -545,9 +545,9 @@
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 5
-    sget v0, Lb/h/z/R5;->button_primary_foreground:I
+    sget v0, Lb/h/z/b;->button_primary_foreground:I
 
-    invoke-static {p0, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {p0, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     goto :goto_0
 

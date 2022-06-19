@@ -12,37 +12,37 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+.field private final a:Lcom/vk/im/engine/internal/storage/memcache/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper<",
+            "Lcom/vk/im/engine/internal/storage/memcache/a<",
             "Lcom/vk/im/engine/models/account/AccountInfo;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+.field private final b:Lcom/vk/im/engine/internal/storage/memcache/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper<",
-            "Lcom/vk/im/engine/models/account/BusinessNotifyConfig;",
+            "Lcom/vk/im/engine/internal/storage/memcache/a<",
+            "Lcom/vk/im/engine/models/account/a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final c:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+.field private final c:Lcom/vk/im/engine/internal/storage/memcache/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper<",
+            "Lcom/vk/im/engine/internal/storage/memcache/a<",
             "Lcom/vk/im/engine/models/account/PrivacySetting;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+.field private final d:Lcom/vk/im/engine/internal/storage/b;
 
 
 # direct methods
@@ -53,28 +53,28 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/b;)V
     .locals 3
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
     .line 2
-    new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/a;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
     const-class v1, Lcom/vk/im/engine/models/account/AccountInfo;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
 
     move-result-object v0
 
@@ -89,19 +89,19 @@
     invoke-direct {v2, p0}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$infoMemCacheHelper$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;)V
 
     .line 6
-    invoke-direct {p1, v0, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;-><init>(Lcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, v0, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/a;-><init>(Lcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/a;
 
     .line 7
-    new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/a;
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
-    const-class v1, Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+    const-class v1, Lcom/vk/im/engine/models/account/a;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
 
     move-result-object v0
 
@@ -116,19 +116,19 @@
     invoke-direct {v2, p0}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$businessNotifyConfigMemCacheHelper$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;)V
 
     .line 11
-    invoke-direct {p1, v0, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;-><init>(Lcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, v0, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/a;-><init>(Lcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->b:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->b:Lcom/vk/im/engine/internal/storage/memcache/a;
 
     .line 12
-    new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/a;
 
     .line 13
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
     const-class v1, Lcom/vk/im/engine/models/account/PrivacySetting;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
 
     move-result-object v0
 
@@ -143,18 +143,18 @@
     invoke-direct {v2, p0}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$onlinePrivacySettingMemCacheHelper$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;)V
 
     .line 16
-    invoke-direct {p1, v0, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;-><init>(Lcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, v0, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/a;-><init>(Lcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->c:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->c:Lcom/vk/im/engine/internal/storage/memcache/a;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;)Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;)Lcom/vk/im/engine/models/account/a;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->c()Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->c()Lcom/vk/im/engine/models/account/a;
 
     move-result-object p0
 
@@ -179,11 +179,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;Lcom/vk/im/engine/models/account/BusinessNotifyConfig;)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;Lcom/vk/im/engine/models/account/a;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->b(Lcom/vk/im/engine/models/account/BusinessNotifyConfig;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->b(Lcom/vk/im/engine/models/account/a;)V
 
     return-void
 .end method
@@ -210,9 +210,9 @@
     move-result-object p1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -231,9 +231,9 @@
     .locals 2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -241,9 +241,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/im/engine/internal/storage/delegates/account/PrivacySettingsSerializer;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/account/PrivacySettingsSerializer;
+    sget-object v1, Lcom/vk/im/engine/internal/storage/delegates/account/a;->a:Lcom/vk/im/engine/internal/storage/delegates/account/a;
 
-    invoke-virtual {v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/account/PrivacySettingsSerializer;->a(Lcom/vk/im/engine/models/account/PrivacySetting;)[B
+    invoke-virtual {v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/account/a;->a(Lcom/vk/im/engine/models/account/PrivacySetting;)[B
 
     move-result-object p1
 
@@ -254,21 +254,21 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/models/account/BusinessNotifyConfig;)V
+.method private final b(Lcom/vk/im/engine/models/account/a;)V
     .locals 2
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$putBusinessNotifyConfigToDb$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$putBusinessNotifyConfigToDb$1;-><init>(Lcom/vk/im/engine/models/account/BusinessNotifyConfig;)V
+    invoke-direct {v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager$putBusinessNotifyConfigToDb$1;-><init>(Lcom/vk/im/engine/models/account/a;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -284,13 +284,13 @@
     return-object p0
 .end method
 
-.method private final c()Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+.method private final c()Lcom/vk/im/engine/models/account/a;
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -320,7 +320,7 @@
 
     .line 5
     :cond_0
-    new-instance v2, Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+    new-instance v2, Lcom/vk/im/engine/models/account/a;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -330,7 +330,7 @@
 
     move-result v0
 
-    invoke-direct {v2, v1, v0}, Lcom/vk/im/engine/models/account/BusinessNotifyConfig;-><init>(ZI)V
+    invoke-direct {v2, v1, v0}, Lcom/vk/im/engine/models/account/a;-><init>(ZI)V
 
     return-object v2
 
@@ -345,9 +345,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -391,7 +391,7 @@
     return-object v1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -400,9 +400,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->d:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -419,9 +419,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vk/im/engine/internal/storage/delegates/account/PrivacySettingsSerializer;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/account/PrivacySettingsSerializer;
+    sget-object v1, Lcom/vk/im/engine/internal/storage/delegates/account/a;->a:Lcom/vk/im/engine/internal/storage/delegates/account/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/account/PrivacySettingsSerializer;->a([B)Lcom/vk/im/engine/models/account/PrivacySetting;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/account/a;->a([B)Lcom/vk/im/engine/models/account/PrivacySetting;
 
     move-result-object v0
 
@@ -436,17 +436,17 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+.method public final a()Lcom/vk/im/engine/models/account/a;
     .locals 1
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->b:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->b:Lcom/vk/im/engine/internal/storage/memcache/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/memcache/a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/account/BusinessNotifyConfig;
+    check-cast v0, Lcom/vk/im/engine/models/account/a;
 
     return-object v0
 .end method
@@ -455,9 +455,9 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/a;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -466,20 +466,20 @@
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->c:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->c:Lcom/vk/im/engine/internal/storage/memcache/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/a;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/account/BusinessNotifyConfig;)V
+.method public final a(Lcom/vk/im/engine/models/account/a;)V
     .locals 1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->b:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->b:Lcom/vk/im/engine/internal/storage/memcache/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/a;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -488,9 +488,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/account/AccountStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheSingleHelper;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/memcache/a;->a()Ljava/lang/Object;
 
     move-result-object v0
 

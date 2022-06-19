@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # instance fields
@@ -30,7 +30,7 @@
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-static {v0, p1}, Lcom/vk/music/view/ToolbarMusicContainer;->a(Landroid/content/Context;Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/MusicEmptyPlaceholderHolder;
+    invoke-static {v0, p1}, Lcom/vk/music/view/u;->a(Landroid/content/Context;Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/e;
 
     move-result-object p1
 

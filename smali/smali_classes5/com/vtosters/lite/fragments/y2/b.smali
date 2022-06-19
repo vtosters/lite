@@ -3,20 +3,20 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/y2/AbsVideoListFragment$d;
+.field private final synthetic a:Lcom/vtosters/lite/fragments/y2/m$d;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/y2/AbsVideoListFragment$d;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/y2/m$d;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/y2/b;->a:Lcom/vtosters/lite/fragments/y2/AbsVideoListFragment$d;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/y2/b;->a:Lcom/vtosters/lite/fragments/y2/m$d;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/y2/b;->a:Lcom/vtosters/lite/fragments/y2/AbsVideoListFragment$d;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/y2/b;->a:Lcom/vtosters/lite/fragments/y2/m$d;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/y2/AbsVideoListFragment$d;->g0()Lkotlin/Unit;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/y2/m$d;->g0()Lkotlin/m;
 
     move-result-object v0
 

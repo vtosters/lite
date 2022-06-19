@@ -1,5 +1,5 @@
 .class final Lcom/vtosters/lite/fragments/MyGamesListFragment$c;
-.super Lcom/vtosters/lite/ui/holder/gamepage/GamesAdapter$a;
+.super Lcom/vtosters/lite/ui/holder/gamepage/o$a;
 .source "MyGamesListFragment.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/holder/gamepage/GamesAdapter$a<",
-        "Lcom/vtosters/lite/ui/holder/gamepage/MyGameHolder;",
+        "Lcom/vtosters/lite/ui/holder/gamepage/o$a<",
+        "Lcom/vtosters/lite/ui/holder/gamepage/r;",
         ">;"
     }
 .end annotation
@@ -42,7 +42,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment$c;->e:Lcom/vtosters/lite/fragments/MyGamesListFragment;
 
-    invoke-direct {p0}, Lcom/vtosters/lite/ui/holder/gamepage/GamesAdapter$a;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/ui/holder/gamepage/o$a;-><init>()V
 
     iput-object p2, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment$c;->d:Ljava/lang/String;
 
@@ -63,7 +63,7 @@
 
     const-string v1, "data"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -138,9 +138,9 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/holder/gamepage/GamesAdapter$a;->n(Ljava/util/List;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/holder/gamepage/o$a;->n(Ljava/util/List;)V
 
     :cond_4
     return-void
@@ -166,11 +166,11 @@
 
     const-string v1, "data"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v2, Lcom/vtosters/lite/ui/holder/gamepage/GamesAdapter$a;->c:Lcom/vtosters/lite/ui/holder/gamepage/GamesAdapter$a$b;
+    sget-object v2, Lcom/vtosters/lite/ui/holder/gamepage/o$a;->c:Lcom/vtosters/lite/ui/holder/gamepage/o$a$b;
 
-    invoke-virtual {v2}, Lcom/vtosters/lite/ui/holder/gamepage/GamesAdapter$a$b;->a()Ljava/util/Comparator;
+    invoke-virtual {v2}, Lcom/vtosters/lite/ui/holder/gamepage/o$a$b;->a()Ljava/util/Comparator;
 
     move-result-object v2
 
@@ -183,7 +183,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -192,30 +192,30 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/MyGamesListFragment$c;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/gamepage/MyGameWithMenuHolder;
+    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/MyGamesListFragment$c;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/gamepage/s;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/gamepage/MyGameWithMenuHolder;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/gamepage/s;
     .locals 3
 
     .line 2
-    new-instance p2, Lcom/vtosters/lite/ui/holder/gamepage/MyGameWithMenuHolder;
+    new-instance p2, Lcom/vtosters/lite/ui/holder/gamepage/s;
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment$c;->d:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment$c;->e:Lcom/vtosters/lite/fragments/MyGamesListFragment;
 
-    invoke-static {v1}, Lcom/vtosters/lite/fragments/MyGamesListFragment;->c(Lcom/vtosters/lite/fragments/MyGamesListFragment;)Lio/reactivex/disposables/CompositeDisposable;
+    invoke-static {v1}, Lcom/vtosters/lite/fragments/MyGamesListFragment;->c(Lcom/vtosters/lite/fragments/MyGamesListFragment;)Lio/reactivex/disposables/a;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-direct {p2, p1, v0, v1, v2}, Lcom/vtosters/lite/ui/holder/gamepage/MyGameWithMenuHolder;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;Lio/reactivex/disposables/CompositeDisposable;Z)V
+    invoke-direct {p2, p1, v0, v1, v2}, Lcom/vtosters/lite/ui/holder/gamepage/s;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;Lio/reactivex/disposables/a;Z)V
 
     return-object p2
 .end method

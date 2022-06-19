@@ -3,7 +3,7 @@
 .source "DocumentThumbnailHolder.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/ImageViewer$a;
+.implements Lcom/vk/bridges/p$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/libvideo/autoplay/AutoPlay;
+.field private final a:Lcom/vk/libvideo/autoplay/a;
 
 .field private final b:Z
 
@@ -41,7 +41,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->c:Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -49,18 +49,18 @@
 
     check-cast p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->a:Lcom/vk/libvideo/autoplay/AutoPlay;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->a:Lcom/vk/libvideo/autoplay/a;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->a:Lcom/vk/libvideo/autoplay/AutoPlay;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->a:Lcom/vk/libvideo/autoplay/a;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/AutoPlay;->b()Z
+    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/a;->b()Z
 
     move-result p1
 
@@ -102,7 +102,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/bridges/ImageViewer$a$a;->b(Lcom/vk/bridges/ImageViewer$a;I)V
+    invoke-static {p0, p1}, Lcom/vk/bridges/p$a$a;->b(Lcom/vk/bridges/p$a;I)V
 
     return-void
 .end method
@@ -111,7 +111,7 @@
     .locals 1
 
     .line 2
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->g(Lcom/vk/bridges/ImageViewer$a;)Z
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->g(Lcom/vk/bridges/p$a;)Z
 
     move-result v0
 
@@ -146,7 +146,7 @@
     .locals 1
 
     .line 2
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->c(Lcom/vk/bridges/ImageViewer$a;)Ljava/lang/Integer;
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->c(Lcom/vk/bridges/p$a;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -159,7 +159,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->c:Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -182,11 +182,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->a:Lcom/vk/libvideo/autoplay/AutoPlay;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->a:Lcom/vk/libvideo/autoplay/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->e()V
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->e()V
 
     :cond_0
     return-void
@@ -196,7 +196,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->h(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->h(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
@@ -205,16 +205,16 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->d(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->d(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
 
-.method public g()Lcom/vk/bridges/ImageViewer$c;
+.method public g()Lcom/vk/bridges/p$c;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$c;
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$c;
 
     move-result-object v0
 
@@ -229,11 +229,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->a:Lcom/vk/libvideo/autoplay/AutoPlay;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->a:Lcom/vk/libvideo/autoplay/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->f()V
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->f()V
 
     :cond_0
     return-void

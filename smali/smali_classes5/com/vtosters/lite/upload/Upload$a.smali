@@ -3,12 +3,12 @@
 .source "Upload.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Predicate;
+.implements Lc/a/z/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/UploadTask;Lkotlin/jvm/b/Functions2;)I
+    value = Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lkotlin/jvm/b/b;)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Predicate<",
+        "Lc/a/z/l<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vtosters/lite/upload/UploadTask;
+.field final synthetic a:Lcom/vtosters/lite/upload/j;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/upload/UploadTask;)V
+.method constructor <init>(Lcom/vtosters/lite/upload/j;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/upload/Upload$a;->a:Lcom/vtosters/lite/upload/UploadTask;
+    iput-object p1, p0, Lcom/vtosters/lite/upload/Upload$a;->a:Lcom/vtosters/lite/upload/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,9 +60,9 @@
 
     move-result p1
 
-    iget-object v0, p0, Lcom/vtosters/lite/upload/Upload$a;->a:Lcom/vtosters/lite/upload/UploadTask;
+    iget-object v0, p0, Lcom/vtosters/lite/upload/Upload$a;->a:Lcom/vtosters/lite/upload/j;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/upload/UploadTask;->m()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result v0
 

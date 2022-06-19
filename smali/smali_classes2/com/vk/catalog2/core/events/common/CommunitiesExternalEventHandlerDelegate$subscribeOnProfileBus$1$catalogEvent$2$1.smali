@@ -3,12 +3,12 @@
 .source "CommunitiesExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+    value = Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
         "Lcom/vk/catalog2/core/blocks/UIBlock;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -57,7 +57,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2$1;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -80,9 +80,9 @@
 
     iget-object v0, p0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2$1;->this$0:Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;
 
-    iget-object v0, v0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->$subscriveEvent:Lb/h/g/l/ProfleEvents;
+    iget-object v0, v0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->$subscriveEvent:Lb/h/g/l/g;
 
-    invoke-virtual {v0}, Lb/h/g/l/ProfleEvents;->b()I
+    invoke-virtual {v0}, Lb/h/g/l/g;->b()I
 
     move-result v0
 
@@ -116,9 +116,9 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2$1;->this$0:Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;
 
-    iget-object p1, p1, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->$subscriveEvent:Lb/h/g/l/ProfleEvents;
+    iget-object p1, p1, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->$subscriveEvent:Lb/h/g/l/g;
 
-    invoke-virtual {p1}, Lb/h/g/l/ProfleEvents;->c()Z
+    invoke-virtual {p1}, Lb/h/g/l/g;->c()Z
 
     move-result p1
 
@@ -160,9 +160,9 @@
 
     iget-object v1, p0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2$1;->this$0:Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;
 
-    iget-object v1, v1, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->$subscriveEvent:Lb/h/g/l/ProfleEvents;
+    iget-object v1, v1, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->$subscriveEvent:Lb/h/g/l/g;
 
-    invoke-virtual {v1}, Lb/h/g/l/ProfleEvents;->c()Z
+    invoke-virtual {v1}, Lb/h/g/l/g;->c()Z
 
     move-result v1
 

@@ -139,7 +139,7 @@
 
     .line 6
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -201,7 +201,7 @@
     .line 11
     iget-object p1, p0, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$giftsReceiver$1;->a:Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->a(Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;)Lcom/vtosters/lite/fragments/m2/GridFragment$c;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->a(Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;)Lcom/vtosters/lite/fragments/m2/a$c;
 
     move-result-object p1
 
@@ -210,7 +210,7 @@
     .line 12
     iget-object p1, p0, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$giftsReceiver$1;->a:Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->a(Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;)Lcom/vtosters/lite/fragments/m2/GridFragment$c;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->a(Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;)Lcom/vtosters/lite/fragments/m2/a$c;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "EnterLoginPasswordPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/auth/t/CredentialsCallback;
+.implements Lcom/vk/auth/t/a;
 
 
 # annotations
@@ -46,13 +46,13 @@
     .line 4
     iget-object v0, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl;->a:Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;
 
-    invoke-static {v0}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/LoginPassView;
+    invoke-static {v0}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/auth/init/loginpass/LoginPassView;->n3()V
+    invoke-interface {v0}, Lcom/vk/auth/init/loginpass/a;->n3()V
 
     :cond_0
     return-void
@@ -66,7 +66,7 @@
     .line 1
     iget-object p2, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl;->a:Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;
 
-    invoke-static {p2}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/LoginPassView;
+    invoke-static {p2}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/a;
 
     move-result-object p2
 
@@ -76,7 +76,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl$onCredentialsRetrieve$1;-><init>(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl;Lcom/vk/auth/api/models/AuthCredentials;)V
 
-    invoke-interface {p2, v0}, Lcom/vk/auth/init/loginpass/LoginPassView;->c(Lkotlin/jvm/b/Functions;)V
+    invoke-interface {p2, v0}, Lcom/vk/auth/init/loginpass/a;->c(Lkotlin/jvm/b/a;)V
 
     goto :goto_0
 
@@ -84,7 +84,7 @@
     :cond_0
     iget-object p2, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl;->a:Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;
 
-    invoke-static {p2}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/LoginPassView;
+    invoke-static {p2}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/a;
 
     move-result-object p2
 
@@ -98,7 +98,7 @@
 
     move-result-object v1
 
-    invoke-interface {p2, v0, v1}, Lcom/vk/auth/base/LoginView;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v0, v1}, Lcom/vk/auth/base/f;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     :cond_1

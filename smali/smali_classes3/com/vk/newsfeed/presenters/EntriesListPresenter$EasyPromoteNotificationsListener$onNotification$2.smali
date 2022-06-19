@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
-        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vtosters/lite/ui/f0/b;",
+        "Lcom/vtosters/lite/ui/f0/b;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $displayItem:Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+.field final synthetic $displayItem:Lcom/vtosters/lite/ui/f0/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;->$displayItem:Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    iput-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;->$displayItem:Lcom/vtosters/lite/ui/f0/b;
 
     const/4 p1, 0x1
 
@@ -46,36 +46,36 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+.method public final a(Lcom/vtosters/lite/ui/f0/b;)Lcom/vtosters/lite/ui/f0/b;
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;->$displayItem:Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;->$displayItem:Lcom/vtosters/lite/ui/f0/b;
 
     .line 2
-    iget v1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->d:I
+    iget v1, p1, Lcom/vtosters/lite/ui/f0/b;->d:I
 
-    iput v1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->d:I
+    iput v1, v0, Lcom/vtosters/lite/ui/f0/b;->d:I
 
     .line 3
-    iget v1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->h:I
+    iget v1, p1, Lcom/vtosters/lite/ui/f0/b;->h:I
 
-    iput v1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->h:I
+    iput v1, v0, Lcom/vtosters/lite/ui/f0/b;->h:I
 
     .line 4
-    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->i:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->i:Ljava/lang/String;
+    iput-object v1, v0, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     .line 5
-    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->j:Lcom/vtosters/lite/data/PostInteract;
+    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/b;->j:Lcom/vtosters/lite/data/PostInteract;
 
-    iput-object v1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->j:Lcom/vtosters/lite/data/PostInteract;
+    iput-object v1, v0, Lcom/vtosters/lite/ui/f0/b;->j:Lcom/vtosters/lite/data/PostInteract;
 
     .line 6
-    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->k:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->k:Lcom/vtosters/lite/ui/f0/a;
 
-    iput-object p1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->k:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
+    iput-object p1, v0, Lcom/vtosters/lite/ui/f0/b;->k:Lcom/vtosters/lite/ui/f0/a;
 
     return-object v0
 .end method
@@ -84,9 +84,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;->a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;->a(Lcom/vtosters/lite/ui/f0/b;)Lcom/vtosters/lite/ui/f0/b;
 
     move-result-object p1
 

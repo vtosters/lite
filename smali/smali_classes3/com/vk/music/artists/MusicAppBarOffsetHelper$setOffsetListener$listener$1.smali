@@ -3,7 +3,7 @@
 .source "MusicAppBarOffsetHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/Integer;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -125,10 +125,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/artists/MusicAppBarOffsetHelper1;
+    check-cast v1, Lcom/vk/music/artists/c;
 
     .line 7
-    invoke-interface {v1, v0}, Lcom/vk/music/artists/MusicAppBarOffsetHelper1;->a(F)V
+    invoke-interface {v1, v0}, Lcom/vk/music/artists/c;->a(F)V
 
     goto :goto_1
 
@@ -148,7 +148,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/artists/MusicAppBarOffsetHelper$setOffsetListener$listener$1;->a(I)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

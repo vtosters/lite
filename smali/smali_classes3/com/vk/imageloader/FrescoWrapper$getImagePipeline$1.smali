@@ -3,12 +3,12 @@
 .source "FrescoWrapper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
+    value = Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/facebook/x/d/ImagePipeline;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/facebook/x/d/g;",
         ">;"
     }
 .end annotation
@@ -55,11 +55,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/facebook/x/d/ImagePipeline;
+.method public final invoke()Lcom/facebook/x/d/g;
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/facebook/u/b/a/Fresco;->b()Lcom/facebook/x/d/ImagePipeline;
+    invoke-static {}, Lcom/facebook/u/b/a/c;->b()Lcom/facebook/x/d/g;
 
     move-result-object v0
 
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/imageloader/FrescoWrapper$getImagePipeline$1;->invoke()Lcom/facebook/x/d/ImagePipeline;
+    invoke-virtual {p0}, Lcom/vk/imageloader/FrescoWrapper$getImagePipeline$1;->invoke()Lcom/facebook/x/d/g;
 
     move-result-object v0
 

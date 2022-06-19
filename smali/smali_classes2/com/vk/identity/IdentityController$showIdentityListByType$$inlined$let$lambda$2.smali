@@ -3,7 +3,7 @@
 .source "IdentityController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -76,7 +76,7 @@
 
     const/16 v1, 0x378
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/identity/IdentityController$showIdentityListByType$$inlined$let$lambda$2;->this$0:Lcom/vk/identity/IdentityController;
@@ -94,7 +94,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/identity/IdentityController$showIdentityListByType$$inlined$let$lambda$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

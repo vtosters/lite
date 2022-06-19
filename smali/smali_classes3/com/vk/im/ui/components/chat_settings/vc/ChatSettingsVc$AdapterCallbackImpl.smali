@@ -3,7 +3,7 @@
 .source "ChatSettingsVc.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
+.implements Lcom/vk/im/ui/components/chat_settings/vc/a;
 
 
 # annotations
@@ -46,13 +46,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/d;->a()V
 
     :cond_0
     return-void
@@ -64,13 +64,13 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->a(Lcom/vk/im/engine/models/dialogs/DialogMember;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/d;->a(Lcom/vk/im/engine/models/dialogs/DialogMember;)V
 
     :cond_0
     return-void
@@ -104,13 +104,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->b()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/d;->b()V
 
     :cond_0
     return-void
@@ -133,13 +133,13 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->b(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/d;->b(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -151,13 +151,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->c()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/d;->c()V
 
     :cond_0
     return-void
@@ -169,13 +169,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->c(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/d;->c(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -187,13 +187,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->d()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/d;->d()V
 
     :cond_0
     return-void
@@ -216,13 +216,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->f()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/d;->f()V
 
     :cond_0
     return-void
@@ -234,13 +234,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->g()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/d;->g()V
 
     :cond_0
     return-void
@@ -264,7 +264,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl$createCasperChat$1;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateChats;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateChats;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -297,13 +297,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->i()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/d;->i()V
 
     :cond_0
     return-void
@@ -315,13 +315,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;->a:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->q()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/d;->q()V
 
     :cond_0
     return-void

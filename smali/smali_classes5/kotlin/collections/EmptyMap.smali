@@ -5,7 +5,7 @@
 # interfaces
 .implements Ljava/util/Map;
 .implements Ljava/io/Serializable;
-.implements Lkotlin/jvm/internal/t/KMarkers;
+.implements Lkotlin/jvm/internal/t/a;
 
 
 # static fields

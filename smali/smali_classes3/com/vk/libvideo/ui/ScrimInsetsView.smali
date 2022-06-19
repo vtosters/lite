@@ -46,7 +46,7 @@
     iput-boolean p2, p0, Lcom/vk/libvideo/ui/ScrimInsetsView;->c:Z
 
     .line 5
-    sget p2, Lcom/vk/libvideo/R7;->scrim_top:I
+    sget p2, Lcom/vk/libvideo/e;->scrim_top:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -55,7 +55,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/ui/ScrimInsetsView;->a:Landroid/graphics/drawable/Drawable;
 
     .line 6
-    sget p2, Lcom/vk/libvideo/R7;->scrim_bottom:I
+    sget p2, Lcom/vk/libvideo/e;->scrim_bottom:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 

@@ -3,7 +3,7 @@
 .source "ChatsChangeAvatarApiCmd.kt"
 
 # interfaces
-.implements Lcom/vk/api/sdk/VKApiResponseParser;
+.implements Lcom/vk/api/sdk/h;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/sdk/VKApiResponseParser<",
+        "Lcom/vk/api/sdk/h<",
         "Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$b;",
         ">;"
     }
@@ -58,7 +58,7 @@
 
     const-string v1, "jsonResp.getString(\"response\")"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, v0}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$b;-><init>(Ljava/lang/String;)V
     :try_end_0

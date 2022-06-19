@@ -17,11 +17,11 @@
 # instance fields
 .field private final a:Ljava/io/InputStream;
 
-.field private final b:Lkotlin/jvm/b/Functions;
+.field private final b:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -29,14 +29,14 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;Lkotlin/jvm/b/Functions;)V
+.method public constructor <init>(Ljava/io/InputStream;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/io/InputStream;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -46,7 +46,7 @@
 
     iput-object p1, p0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$b;->a:Ljava/io/InputStream;
 
-    iput-object p2, p0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$b;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$b;->b:Lkotlin/jvm/b/a;
 
     return-void
 .end method
@@ -75,9 +75,9 @@
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$b;->b:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$b;->b:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

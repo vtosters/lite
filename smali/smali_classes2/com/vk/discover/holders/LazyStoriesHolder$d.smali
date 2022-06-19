@@ -3,7 +3,7 @@
 .source "LazyStoriesHolder.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/stories/model/GetStoriesResponse;",
         ">;"
     }
@@ -72,7 +72,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/discover/holders/LazyStoriesHolder$d;->a:Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-virtual {p1}, Lcom/vk/discover/holders/LazyStoriesHolder;->h0()Lcom/vk/discover/DiscoverAdapter;
+    invoke-virtual {p1}, Lcom/vk/discover/holders/LazyStoriesHolder;->h0()Lcom/vk/discover/b;
 
     move-result-object p1
 

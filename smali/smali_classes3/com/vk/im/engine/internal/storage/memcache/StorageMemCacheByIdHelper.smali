@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic i:[Lkotlin/u/KProperty5;
+.field static final synthetic i:[Lkotlin/u/j;
 
 
 # instance fields
@@ -29,25 +29,25 @@
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private final b:Lcom/vk/core/util/d1;
 
-.field private final c:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private final c:Lcom/vk/core/util/d1;
 
 .field private final d:I
 
-.field private final e:Lcom/vk/im/engine/internal/storage/StorageTrigger;
+.field private final e:Lcom/vk/im/engine/internal/storage/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/internal/storage/StorageTrigger<",
+            "Lcom/vk/im/engine/internal/storage/d<",
             "TT;>;"
         }
     .end annotation
 .end field
 
-.field private final f:Lkotlin/jvm/b/Functions2;
+.field private final f:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "TT;",
             "Ljava/lang/Integer;",
             ">;"
@@ -55,24 +55,24 @@
     .end annotation
 .end field
 
-.field private final g:Lkotlin/jvm/b/Functions2;
+.field private final g:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/im/engine/utils/collection/d;",
             "Landroid/util/SparseArray<",
             "TT;>;>;"
         }
     .end annotation
 .end field
 
-.field private final h:Lkotlin/jvm/b/Functions2;
+.field private final h:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/util/Collection<",
             "+TT;>;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -87,11 +87,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -99,9 +99,9 @@
 
     const-string v5, "getMissedIds()Lcom/vk/im/engine/utils/collection/IntArrayList;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -109,7 +109,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -117,41 +117,41 @@
 
     const-string v4, "getChanges()Ljava/util/List;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->i:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->i:[Lkotlin/u/j;
 
     return-void
 .end method
 
-.method public constructor <init>(ILcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(ILcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/im/engine/internal/storage/StorageTrigger<",
+            "Lcom/vk/im/engine/internal/storage/d<",
             "-TT;>;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
             "Ljava/lang/Integer;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             "+",
             "Landroid/util/SparseArray<",
             "TT;>;>;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/util/Collection<",
             "+TT;>;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -161,13 +161,13 @@
 
     iput p1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->d:I
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->e:Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->e:Lcom/vk/im/engine/internal/storage/d;
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/Functions2;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/b;
 
-    iput-object p4, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->g:Lkotlin/jvm/b/Functions2;
+    iput-object p4, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->g:Lkotlin/jvm/b/b;
 
-    iput-object p5, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->h:Lkotlin/jvm/b/Functions2;
+    iput-object p5, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->h:Lkotlin/jvm/b/b;
 
     .line 2
     new-instance p1, Landroid/util/LruCache;
@@ -181,20 +181,20 @@
     .line 3
     sget-object p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper$missedIds$2;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper$missedIds$2;
 
-    invoke-static {p1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {p1}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->b:Lcom/vk/core/util/ThreadLocalDelegate;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->b:Lcom/vk/core/util/d1;
 
     .line 4
     sget-object p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper$changes$2;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper$changes$2;
 
-    invoke-static {p1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {p1}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->c:Lcom/vk/core/util/ThreadLocalDelegate;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->c:Lcom/vk/core/util/d1;
 
     return-void
 .end method
@@ -208,19 +208,19 @@
     .end annotation
 
     .line 69
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->e:Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->e:Lcom/vk/im/engine/internal/storage/d;
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;
+    new-instance v1, Lcom/vk/im/engine/internal/storage/models/f;
 
-    invoke-direct {v1, p1, p2}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, p1, p2}, Lcom/vk/im/engine/internal/storage/models/f;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-static {v1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/StorageTrigger;->a(Ljava/util/Collection;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/d;->a(Ljava/util/Collection;)V
 
     :cond_0
     return-void
@@ -236,15 +236,15 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->c:Lcom/vk/core/util/ThreadLocalDelegate;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->c:Lcom/vk/core/util/d1;
 
-    sget-object v1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->i:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->i:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -260,7 +260,7 @@
             "(",
             "Ljava/util/Collection<",
             "+",
-            "Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement<",
+            "Lcom/vk/im/engine/internal/storage/models/f<",
             "+TT;>;>;)V"
         }
     .end annotation
@@ -275,11 +275,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->e:Lcom/vk/im/engine/internal/storage/StorageTrigger;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->e:Lcom/vk/im/engine/internal/storage/d;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/StorageTrigger;->a(Ljava/util/Collection;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/d;->a(Ljava/util/Collection;)V
 
     :cond_0
     return-void
@@ -288,15 +288,15 @@
 .method private final d()Lcom/vk/im/engine/utils/collection/IntArrayList;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->b:Lcom/vk/core/util/ThreadLocalDelegate;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->b:Lcom/vk/core/util/d1;
 
-    sget-object v1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->i:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->i:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -307,12 +307,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public final a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
             "TT;>;"
@@ -320,14 +320,14 @@
     .end annotation
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-static {}, Lcom/vk/core/extensions/SparseArrayExt1;->a()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/vk/core/extensions/x;->a()Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -337,7 +337,7 @@
     :cond_0
     new-instance v0, Landroid/util/SparseArray;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->size()I
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->size()I
 
     move-result v1
 
@@ -355,14 +355,14 @@
 
     move-result-object v1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->size()I
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->size()I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Lcom/vk/im/engine/utils/collection/IntArrayList;->d(I)V
 
     .line 7
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->size()I
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->size()I
 
     move-result v1
 
@@ -374,7 +374,7 @@
     if-ge v3, v1, :cond_2
 
     .line 8
-    invoke-interface {p1, v3}, Lcom/vk/im/engine/utils/collection/IntCollection;->b(I)I
+    invoke-interface {p1, v3}, Lcom/vk/im/engine/utils/collection/d;->b(I)I
 
     move-result v4
 
@@ -392,9 +392,9 @@
     if-eqz v5, :cond_1
 
     .line 10
-    iget-object v4, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/Functions2;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/b;
 
-    invoke-interface {v4, v5}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v5}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -434,13 +434,13 @@
     if-eqz p1, :cond_4
 
     .line 13
-    iget-object p1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->g:Lkotlin/jvm/b/Functions2;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->g:Lkotlin/jvm/b/b;
 
     invoke-direct {p0}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->d()Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object v1
 
-    invoke-interface {p1, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -478,7 +478,7 @@
 
     .line 17
     :cond_3
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     :cond_4
     return-object v0
@@ -508,15 +508,15 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
+    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/e;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object v0
 
     const-string v1, "intListOf(id)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {p0, v0}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -539,16 +539,16 @@
     return-void
 .end method
 
-.method public final a(ILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method public final a(ILkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;+TT;>;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -561,12 +561,12 @@
     if-eqz v0, :cond_0
 
     .line 47
-    invoke-interface {p2, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
     .line 48
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -584,7 +584,7 @@
     invoke-virtual {v1, p1, p2}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 50
-    invoke-interface {p3, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 51
     invoke-direct {p0, v0, p2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -593,25 +593,25 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/utils/collection/IntCollection;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method public final a(Lcom/vk/im/engine/utils/collection/d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lkotlin/jvm/b/b<",
             "-TT;+TT;>;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/util/Collection<",
             "+TT;>;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 52
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -643,12 +643,12 @@
     move-result-object v3
 
     .line 57
-    invoke-interface {p2, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     .line 58
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -664,9 +664,9 @@
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 60
-    new-instance v5, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;
+    new-instance v5, Lcom/vk/im/engine/internal/storage/models/f;
 
-    invoke-direct {v5, v3, v4}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v5, v3, v4}, Lcom/vk/im/engine/internal/storage/models/f;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -713,9 +713,9 @@
     .line 64
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a:Landroid/util/LruCache;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/Functions2;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/b;
 
-    invoke-interface {v2, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -729,7 +729,7 @@
 
     move-result-object p1
 
-    invoke-interface {p3, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 66
     :cond_3
@@ -787,7 +787,7 @@
 
     .line 20
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/b;
 
     .line 21
     new-instance v1, Lcom/vk/im/engine/utils/collection/IntArrayList;
@@ -803,7 +803,7 @@
 
     move-result v2
 
-    invoke-interface {v1, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->d(I)V
+    invoke-interface {v1, v2}, Lcom/vk/im/engine/utils/collection/d;->d(I)V
 
     .line 23
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -822,7 +822,7 @@
     move-result-object v3
 
     .line 24
-    invoke-interface {v0, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -832,18 +832,18 @@
 
     move-result v3
 
-    invoke-interface {v1, v3}, Lcom/vk/im/engine/utils/collection/IntCollection;->add(I)V
+    invoke-interface {v1, v3}, Lcom/vk/im/engine/utils/collection/d;->add(I)V
 
     goto :goto_0
 
     .line 25
     :cond_1
-    invoke-virtual {p0, v1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {p0, v1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object v0
 
     .line 26
-    iget-object v1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/Functions2;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/b;
 
     .line 27
     new-instance v2, Landroid/util/SparseArray;
@@ -871,7 +871,7 @@
     move-result-object v3
 
     .line 29
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -924,7 +924,7 @@
     move-result-object v4
 
     .line 36
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -940,9 +940,9 @@
     invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 38
-    new-instance v6, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;
+    new-instance v6, Lcom/vk/im/engine/internal/storage/models/f;
 
-    invoke-direct {v6, v4, v5}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v6, v4, v5}, Lcom/vk/im/engine/internal/storage/models/f;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-interface {p1, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -989,9 +989,9 @@
     .line 42
     iget-object v2, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a:Landroid/util/LruCache;
 
-    iget-object v3, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/Functions2;
+    iget-object v3, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/b;
 
-    invoke-interface {v3, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1001,13 +1001,13 @@
 
     .line 43
     :cond_5
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->h:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->h:Lkotlin/jvm/b/b;
 
     invoke-direct {p0}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->c()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 44
     :cond_6
@@ -1086,9 +1086,9 @@
     .line 4
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a:Landroid/util/LruCache;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/Functions2;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->f:Lkotlin/jvm/b/b;
 
-    invoke-interface {v2, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 

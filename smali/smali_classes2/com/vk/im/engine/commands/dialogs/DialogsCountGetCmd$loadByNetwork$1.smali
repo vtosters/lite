@@ -3,12 +3,12 @@
 .source "DialogsCountGetCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->e(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    value = Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->e(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $counters:Lcom/vk/im/engine/models/messages/MsgCounters;
+.field final synthetic $counters:Lcom/vk/im/engine/models/messages/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/models/messages/MsgCounters;)V
+.method constructor <init>(Lcom/vk/im/engine/models/messages/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;->$counters:Lcom/vk/im/engine/models/messages/MsgCounters;
+    iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;->$counters:Lcom/vk/im/engine/models/messages/a;
 
     const/4 p1, 0x1
 
@@ -50,73 +50,73 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
 
     move-result v0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
 
     move-result-object p1
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
+    new-array v1, v1, [Lcom/vk/im/engine/internal/storage/models/b;
 
     .line 3
-    new-instance v2, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
+    new-instance v2, Lcom/vk/im/engine/internal/storage/models/b;
 
     sget-object v3, Lcom/vk/im/engine/models/dialogs/DialogsFilter;->UNREAD:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    iget-object v4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;->$counters:Lcom/vk/im/engine/models/messages/MsgCounters;
+    iget-object v4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;->$counters:Lcom/vk/im/engine/models/messages/a;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/models/messages/MsgCounters;->c()I
+    invoke-virtual {v4}, Lcom/vk/im/engine/models/messages/a;->c()I
 
     move-result v4
 
-    invoke-direct {v2, v3, v4, v0}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
+    invoke-direct {v2, v3, v4, v0}, Lcom/vk/im/engine/internal/storage/models/b;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
     .line 4
-    new-instance v2, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
+    new-instance v2, Lcom/vk/im/engine/internal/storage/models/b;
 
     sget-object v3, Lcom/vk/im/engine/models/dialogs/DialogsFilter;->REQUESTS:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    iget-object v4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;->$counters:Lcom/vk/im/engine/models/messages/MsgCounters;
+    iget-object v4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;->$counters:Lcom/vk/im/engine/models/messages/a;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/models/messages/MsgCounters;->b()I
+    invoke-virtual {v4}, Lcom/vk/im/engine/models/messages/a;->b()I
 
     move-result v4
 
-    invoke-direct {v2, v3, v4, v0}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
+    invoke-direct {v2, v3, v4, v0}, Lcom/vk/im/engine/internal/storage/models/b;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
 
     const/4 v3, 0x1
 
     aput-object v2, v1, v3
 
     .line 5
-    new-instance v2, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
+    new-instance v2, Lcom/vk/im/engine/internal/storage/models/b;
 
     sget-object v3, Lcom/vk/im/engine/models/dialogs/DialogsFilter;->BUSINESS_NOTIFY:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    iget-object v4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;->$counters:Lcom/vk/im/engine/models/messages/MsgCounters;
+    iget-object v4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;->$counters:Lcom/vk/im/engine/models/messages/a;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/models/messages/MsgCounters;->a()I
+    invoke-virtual {v4}, Lcom/vk/im/engine/models/messages/a;->a()I
 
     move-result v4
 
-    invoke-direct {v2, v3, v4, v0}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
+    invoke-direct {v2, v3, v4, v0}, Lcom/vk/im/engine/internal/storage/models/b;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
 
     const/4 v0, 0x2
 
@@ -140,7 +140,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

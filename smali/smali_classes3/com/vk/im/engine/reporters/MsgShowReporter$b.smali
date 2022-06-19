@@ -178,7 +178,7 @@
 
     const-string p4, "postIdSb.append(ownerId)\u2026append(postId).toString()"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     new-instance p4, Lcom/vk/im/engine/reporters/MsgShowReporter$a;
@@ -321,7 +321,7 @@
 
     const-string v8, "postId"
 
-    invoke-static {v5, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v5}, Lcom/vk/im/engine/reporters/MsgShowReporter$PostVisibleTime;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -339,7 +339,7 @@
 
     .line 6
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 

@@ -29,18 +29,18 @@
 
 
 # direct methods
-.method constructor <init>(Le/b/Subscriber;II)V
+.method constructor <init>(Le/b/c;II)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;II)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;-><init>(Le/b/Subscriber;II)V
+    invoke-direct {p0, p1, p2, p3}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;-><init>(Le/b/c;II)V
 
     return-void
 .end method
@@ -90,9 +90,9 @@
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->downstream:Le/b/Subscriber;
+    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->downstream:Le/b/c;
 
-    invoke-interface {v0, p2}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p2}, Le/b/c;->b(Ljava/lang/Object;)V
 
     .line 4
     iget-object p2, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->requested:Ljava/util/concurrent/atomic/AtomicLong;
@@ -122,12 +122,12 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p1}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->c()Lc/a/a0/b/SimplePlainQueue;
+    invoke-virtual {p1}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->c()Lc/a/a0/b/j;
 
     move-result-object v0
 
     .line 8
-    invoke-interface {v0, p2}, Lc/a/a0/b/SimpleQueue;->offer(Ljava/lang/Object;)Z
+    invoke-interface {v0, p2}, Lc/a/a0/b/k;->offer(Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -168,12 +168,12 @@
 
     .line 14
     :cond_3
-    invoke-virtual {p1}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->c()Lc/a/a0/b/SimplePlainQueue;
+    invoke-virtual {p1}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->c()Lc/a/a0/b/j;
 
     move-result-object v0
 
     .line 15
-    invoke-interface {v0, p2}, Lc/a/a0/b/SimpleQueue;->offer(Ljava/lang/Object;)Z
+    invoke-interface {v0, p2}, Lc/a/a0/b/k;->offer(Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -281,7 +281,7 @@
     array-length v2, v1
 
     .line 3
-    iget-object v3, v0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->downstream:Le/b/Subscriber;
+    iget-object v3, v0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->downstream:Le/b/c;
 
     const/4 v5, 0x1
 
@@ -343,19 +343,19 @@
     aget-object v4, v1, v10
 
     .line 9
-    iget-object v12, v4, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/SimplePlainQueue;
+    iget-object v12, v4, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/j;
 
     if-eqz v12, :cond_3
 
     .line 10
-    invoke-interface {v12}, Lc/a/a0/b/SimplePlainQueue;->poll()Ljava/lang/Object;
+    invoke-interface {v12}, Lc/a/a0/b/j;->poll()Ljava/lang/Object;
 
     move-result-object v12
 
     if-eqz v12, :cond_3
 
     .line 11
-    invoke-interface {v3, v12}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
+    invoke-interface {v3, v12}, Le/b/c;->b(Ljava/lang/Object;)V
 
     .line 12
     invoke-virtual {v4}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->d()V
@@ -405,13 +405,13 @@
 
     move-result-object v1
 
-    invoke-interface {v3, v1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v3, v1}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     goto :goto_4
 
     .line 15
     :cond_5
-    invoke-interface {v3}, Le/b/Subscriber;->b()V
+    invoke-interface {v3}, Le/b/c;->b()V
 
     :goto_4
     return-void
@@ -471,12 +471,12 @@
     aget-object v13, v1, v12
 
     .line 20
-    iget-object v13, v13, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/SimplePlainQueue;
+    iget-object v13, v13, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/j;
 
     if-eqz v13, :cond_b
 
     .line 21
-    invoke-interface {v13}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
+    invoke-interface {v13}, Lc/a/a0/b/k;->isEmpty()Z
 
     move-result v13
 
@@ -517,13 +517,13 @@
 
     move-result-object v1
 
-    invoke-interface {v3, v1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v3, v1}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     goto :goto_9
 
     .line 24
     :cond_d
-    invoke-interface {v3}, Le/b/Subscriber;->b()V
+    invoke-interface {v3}, Le/b/c;->b()V
 
     :goto_9
     return-void

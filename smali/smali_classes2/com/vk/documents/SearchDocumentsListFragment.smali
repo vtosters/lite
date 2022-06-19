@@ -13,7 +13,7 @@
 
 
 # static fields
-.field static final synthetic S:[Lkotlin/u/KProperty5;
+.field static final synthetic S:[Lkotlin/u/j;
 
 .field public static final T:Lcom/vk/documents/SearchDocumentsListFragment$b;
     .annotation runtime Ljava/lang/Deprecated;
@@ -24,11 +24,11 @@
 # instance fields
 .field private I:Lcom/vk/core/view/search/MilkshakeSearchView;
 
-.field private J:Lcom/vk/lists/PaginationHelper;
+.field private J:Lcom/vk/lists/t;
 
-.field private K:Lcom/vk/lists/PaginationHelper;
+.field private K:Lcom/vk/lists/t;
 
-.field private final L:Lkotlin/Lazy2;
+.field private final L:Lkotlin/e;
 
 .field private M:Ljava/lang/String;
 
@@ -44,11 +44,11 @@
 
 .field private O:I
 
-.field private final P:Lkotlin/Lazy2;
+.field private final P:Lkotlin/e;
 
-.field private final Q:Lkotlin/Lazy2;
+.field private final Q:Lkotlin/e;
 
-.field private final R:Lkotlin/Lazy2;
+.field private final R:Lkotlin/e;
 
 
 # direct methods
@@ -57,13 +57,13 @@
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/documents/SearchDocumentsListFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -71,9 +71,9 @@
 
     const-string v4, "getOwnerId()I"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
@@ -83,7 +83,7 @@
 
     const-class v2, Lcom/vk/documents/SearchDocumentsListFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -91,9 +91,9 @@
 
     const-string v4, "getSearchItemsProvider()Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$1;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x1
 
@@ -103,7 +103,7 @@
 
     const-class v2, Lcom/vk/documents/SearchDocumentsListFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -111,9 +111,9 @@
 
     const-string v4, "getUserItemsProvider()Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$1;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x2
 
@@ -123,7 +123,7 @@
 
     const-class v2, Lcom/vk/documents/SearchDocumentsListFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -131,21 +131,21 @@
 
     const-string v4, "getErrorConsumer()Lcom/vk/documents/SearchDocumentsListFragment$errorConsumer$2$1;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/documents/SearchDocumentsListFragment$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/documents/SearchDocumentsListFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/documents/SearchDocumentsListFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/documents/SearchDocumentsListFragment;->T:Lcom/vk/documents/SearchDocumentsListFragment$b;
 
@@ -163,11 +163,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/documents/SearchDocumentsListFragment$ownerId$2;-><init>(Lcom/vk/documents/SearchDocumentsListFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->L:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->L:Lkotlin/e;
 
     const-string v0, ""
 
@@ -186,33 +186,33 @@
 
     invoke-direct {v0, p0}, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2;-><init>(Lcom/vk/documents/SearchDocumentsListFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->P:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->P:Lkotlin/e;
 
     .line 6
     new-instance v0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2;
 
     invoke-direct {v0, p0}, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2;-><init>(Lcom/vk/documents/SearchDocumentsListFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->Q:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->Q:Lkotlin/e;
 
     .line 7
     new-instance v0, Lcom/vk/documents/SearchDocumentsListFragment$errorConsumer$2;
 
     invoke-direct {v0, p0}, Lcom/vk/documents/SearchDocumentsListFragment$errorConsumer$2;-><init>(Lcom/vk/documents/SearchDocumentsListFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->R:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->R:Lkotlin/e;
 
     return-void
 .end method
@@ -228,15 +228,15 @@
 .method private final T4()Lcom/vk/documents/SearchDocumentsListFragment$errorConsumer$2$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->R:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->R:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/j;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -248,15 +248,15 @@
 .method private final U4()Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->P:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->P:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -268,15 +268,15 @@
 .method private final V4()Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->Q:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->Q:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -333,15 +333,15 @@
 .method private final b()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->L:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->L:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/documents/SearchDocumentsListFragment;->S:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -423,11 +423,11 @@
     return p0
 .end method
 
-.method public static final synthetic g(Lcom/vk/documents/SearchDocumentsListFragment;)Lcom/vk/lists/PaginationHelper;
+.method public static final synthetic g(Lcom/vk/documents/SearchDocumentsListFragment;)Lcom/vk/lists/t;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object p0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/t;
 
     return-object p0
 .end method
@@ -480,15 +480,15 @@
     if-eqz v1, :cond_6
 
     .line 4
-    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->j()V
+    invoke-virtual {v0}, Lcom/vk/lists/t;->j()V
 
     .line 5
     :cond_3
-    iget-object v1, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/PaginationHelper;
+    iget-object v1, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/t;
 
     if-eqz v1, :cond_5
 
@@ -504,12 +504,12 @@
 
     const-wide/16 v5, 0x0
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$q;ZZJ)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$q;ZZJ)V
 
     goto :goto_0
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p1
 
@@ -519,15 +519,15 @@
 
     .line 6
     :cond_6
-    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->j()V
+    invoke-virtual {v0}, Lcom/vk/lists/t;->j()V
 
     .line 7
     :cond_7
-    iget-object v3, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object v3, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/t;
 
     if-eqz v3, :cond_9
 
@@ -543,31 +543,31 @@
 
     const-wide/16 v7, 0x0
 
-    invoke-virtual/range {v3 .. v8}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$q;ZZJ)V
+    invoke-virtual/range {v3 .. v8}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$q;ZZJ)V
 
     goto :goto_1
 
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p1
 
     .line 8
     :cond_9
     :goto_1
-    iget-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/t;
 
     if-eqz p1, :cond_a
 
-    invoke-virtual {p1, v2}, Lcom/vk/lists/PaginationHelper;->b(Z)V
+    invoke-virtual {p1, v2}, Lcom/vk/lists/t;->b(Z)V
 
     .line 9
     :cond_a
-    iget-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/t;
 
     if-eqz p1, :cond_b
 
-    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
 
     :cond_b
     return-void
@@ -639,7 +639,7 @@
     const/4 v1, 0x0
 
     .line 6
-    invoke-static {v0, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -650,7 +650,7 @@
     const p2, 0x7f0a036f
 
     .line 7
-    invoke-static {v0, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -677,28 +677,28 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->j()V
+    invoke-virtual {v0}, Lcom/vk/lists/t;->j()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/PaginationHelper;
+    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/t;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object v1, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/t;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lcom/vk/lists/PaginationHelper;->j()V
+    invoke-virtual {v1}, Lcom/vk/lists/t;->j()V
 
     .line 4
     :cond_1
-    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iput-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/t;
 
     .line 5
     invoke-super {p0}, Lcom/vk/documents/list/DocumentsListFragment;->onDestroyView()V
@@ -724,7 +724,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/documents/SearchDocumentsListFragment$onViewCreated$$inlined$apply$lambda$1;-><init>(Lcom/vk/documents/SearchDocumentsListFragment;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/a;)V
 
     const/4 v0, 0x1
 
@@ -742,14 +742,14 @@
     move-object v0, p2
 
     .line 5
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
     .line 6
     sget-object v1, Lcom/vk/documents/SearchDocumentsListFragment$e;->a:Lcom/vk/documents/SearchDocumentsListFragment$e;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object v0
 
@@ -758,7 +758,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/documents/SearchDocumentsListFragment$c;-><init>(Lcom/vk/documents/SearchDocumentsListFragment;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object v0
 
@@ -767,7 +767,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/documents/SearchDocumentsListFragment$d;-><init>(Lcom/vk/documents/SearchDocumentsListFragment;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     const v0, 0x7f120cc6
 
@@ -779,28 +779,28 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-static {p2}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
 
     move-result-object p2
 
     const/16 v0, 0x32
 
     .line 11
-    invoke-virtual {p2, v0}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p2, v0}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
 
     const/4 v1, 0x0
 
     .line 12
-    invoke-virtual {p2, v1}, Lcom/vk/lists/PaginationHelper$k;->b(Z)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p2, v1}, Lcom/vk/lists/t$k;->b(Z)Lcom/vk/lists/t$k;
 
     const/16 v1, 0xa
 
     .line 13
-    invoke-virtual {p2, v1}, Lcom/vk/lists/PaginationHelper$k;->b(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p2, v1}, Lcom/vk/lists/t$k;->b(I)Lcom/vk/lists/t$k;
 
     const-string v2, "PaginationHelper.createW\u2026set(LOADING_START_OFFSET)"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     invoke-virtual {p0}, Lcom/vk/documents/list/DocumentsListFragment;->R4()Lcom/vk/lists/RecyclerPaginatedView;
@@ -809,28 +809,28 @@
 
     if-eqz v3, :cond_2
 
-    invoke-static {p2, v3}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {p2, v3}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iput-object p2, p0, Lcom/vk/documents/SearchDocumentsListFragment;->J:Lcom/vk/lists/t;
 
     .line 15
     invoke-direct {p0}, Lcom/vk/documents/SearchDocumentsListFragment;->V4()Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-static {p2}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
 
     move-result-object p2
 
     .line 16
-    invoke-virtual {p2, v0}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p2, v0}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
 
     .line 17
-    invoke-virtual {p2, v1}, Lcom/vk/lists/PaginationHelper$k;->b(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p2, v1}, Lcom/vk/lists/t$k;->b(I)Lcom/vk/lists/t$k;
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
     invoke-virtual {p0}, Lcom/vk/documents/list/DocumentsListFragment;->R4()Lcom/vk/lists/RecyclerPaginatedView;
@@ -839,18 +839,18 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {p2, v0}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {p2, v0}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/PaginationHelper;
+    iput-object p2, p0, Lcom/vk/documents/SearchDocumentsListFragment;->K:Lcom/vk/lists/t;
 
     const p2, 0x7f0a0d9d
 
     const/4 v0, 0x2
 
     .line 19
-    invoke-static {p1, p2, v6, v0, v6}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v6, v0, v6}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -868,13 +868,13 @@
 
     .line 21
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v6
 
     .line 22
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v6
 
@@ -882,7 +882,7 @@
     const-string p1, "searchView"
 
     .line 23
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v6
 .end method

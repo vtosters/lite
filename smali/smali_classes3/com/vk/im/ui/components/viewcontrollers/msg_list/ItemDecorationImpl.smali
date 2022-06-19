@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl$Companion;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->i:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl$Companion;
 
@@ -565,7 +565,7 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
     .line 2
-    sget p1, Lcom/vk/im/ui/R5;->im_msg_part_story_padding:I
+    sget p1, Lcom/vk/im/ui/c;->im_msg_part_story_padding:I
 
     invoke-static {p2, p1}, Lcom/vk/core/util/ContextExtKt;->i(Landroid/content/Context;I)I
 
@@ -576,11 +576,11 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
 
     move-result p1
 
@@ -589,14 +589,14 @@
     return p1
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
     .locals 6
 
     .line 1
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 2
-    iget-object p2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object p2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     const/4 v0, 0x0
 
@@ -616,7 +616,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -662,11 +662,11 @@
     return v0
 .end method
 
-.method private final b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+.method private final b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
     .locals 3
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
 
     move-result v0
 
@@ -678,7 +678,7 @@
 
     .line 3
     :cond_0
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     instance-of v0, p1, Lcom/vk/im/engine/models/messages/WithUserContent;
 
@@ -719,23 +719,23 @@
     return v1
 .end method
 
-.method private final b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+.method private final b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c()Z
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     const/4 v0, 0x0
 
@@ -745,7 +745,7 @@
 
     move-result p1
 
-    iget-object p2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object p2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz p2, :cond_0
 
@@ -760,12 +760,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
@@ -776,14 +776,14 @@
     return p1
 .end method
 
-.method private final c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+.method private final c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
     .locals 3
 
     .line 1
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 2
-    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->d:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->d:Lcom/vk/im/engine/models/messages/NestedMsg;
 
     const/4 v2, 0x0
 
@@ -795,7 +795,7 @@
 
     .line 3
     :cond_0
-    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
+    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
 
     const/16 v0, 0x34
 
@@ -845,11 +845,11 @@
     return v2
 .end method
 
-.method private final d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+.method private final d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
     .locals 1
 
     .line 1
-    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
+    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
 
     const/16 v0, 0x53
 
@@ -898,7 +898,7 @@
     :cond_1
     iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {p3, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    invoke-virtual {p3, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
     move-result-object p3
 
@@ -911,14 +911,14 @@
 
     add-int/lit8 p2, p2, 0x1
 
-    invoke-virtual {v0, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    invoke-virtual {v0, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
     move-result-object p2
 
     if-eqz p2, :cond_15
 
     .line 5
-    invoke-direct {p0, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+    invoke-direct {p0, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
 
     move-result p4
 
@@ -934,21 +934,21 @@
 
     .line 8
     :cond_2
-    invoke-direct {p0, p3, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+    invoke-direct {p0, p3, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
 
     move-result p4
 
     if-eqz p4, :cond_8
 
     .line 9
-    invoke-direct {p0, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+    invoke-direct {p0, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
 
     move-result p4
 
     if-eqz p4, :cond_7
 
     .line 10
-    iget p2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
+    iget p2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
 
     const/16 p4, 0x33
 
@@ -979,7 +979,7 @@
 
     .line 13
     :cond_4
-    invoke-direct {p0, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+    invoke-direct {p0, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
 
     move-result p2
 
@@ -1008,14 +1008,14 @@
 
     .line 17
     :cond_8
-    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c()Z
+    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c()Z
 
     move-result p4
 
     if-eqz p4, :cond_a
 
     .line 18
-    invoke-direct {p0, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+    invoke-direct {p0, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
 
     move-result p4
 
@@ -1032,7 +1032,7 @@
 
     .line 19
     :cond_a
-    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i()Z
+    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i()Z
 
     move-result p4
 
@@ -1044,7 +1044,7 @@
 
     .line 20
     :cond_b
-    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->b()Z
+    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->b()Z
 
     move-result p4
 
@@ -1056,7 +1056,7 @@
 
     .line 21
     :cond_c
-    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->h()Z
+    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->h()Z
 
     move-result p4
 
@@ -1072,19 +1072,19 @@
 
     .line 23
     :goto_1
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c()Z
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_11
 
     .line 24
-    invoke-direct {p0, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+    invoke-direct {p0, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
 
     move-result v0
 
     .line 25
-    invoke-direct {p0, p3, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
+    invoke-direct {p0, p3, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
 
     move-result p2
 
@@ -1117,7 +1117,7 @@
 
     .line 28
     :cond_11
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i()Z
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i()Z
 
     move-result p3
 
@@ -1129,7 +1129,7 @@
 
     .line 29
     :cond_12
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->b()Z
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->b()Z
 
     move-result p3
 
@@ -1141,7 +1141,7 @@
 
     .line 30
     :cond_13
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->h()Z
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->h()Z
 
     move-result p2
 
@@ -1177,13 +1177,13 @@
 
     .line 33
     :cond_15
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p4
 
     .line 34
     :cond_16
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p4
 .end method

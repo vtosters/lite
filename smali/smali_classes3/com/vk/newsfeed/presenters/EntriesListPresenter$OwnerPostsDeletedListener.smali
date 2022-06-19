@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lb/h/g/l/NotificationListener;
+.implements Lb/h/g/l/e;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/g/l/NotificationListener<",
+        "Lb/h/g/l/e<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -63,35 +63,35 @@
 
     invoke-direct {p2, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$1;-><init>(Ljava/lang/Integer;)V
 
-    invoke-static {p1, p2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
+    invoke-static {p1, p2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 3
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener;->a:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/DiffListDataSet;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/g;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcom/vk/lists/ListDataSet;->c:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vk/lists/o;->c:Ljava/util/ArrayList;
 
     const-string p2, "displayItemsDataSet.list"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;
 
     invoke-direct {p2, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;-><init>(Ljava/lang/Integer;)V
 
-    invoke-static {p1, p2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
+    invoke-static {p1, p2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 4
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener;->a:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/DiffListDataSet;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/g;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/BaseListDataSet;->a()V
+    invoke-virtual {p1}, Lcom/vk/lists/b;->a()V
 
     .line 5
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener;->a:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
@@ -107,7 +107,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, p2, p3, v0}, Lcom/vk/newsfeed/contracts/EntriesListContract$a1;->a(Lcom/vk/newsfeed/contracts/EntriesListContract;ZILjava/lang/Object;)V
+    invoke-static {p1, p2, p3, v0}, Lcom/vk/newsfeed/contracts/e$a;->a(Lcom/vk/newsfeed/contracts/e;ZILjava/lang/Object;)V
 
     return-void
 .end method

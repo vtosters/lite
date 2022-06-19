@@ -60,7 +60,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/newsfeed/views/poster/PosterTextDelegate$PosterSpan$onClick$1;-><init>(Lcom/vk/newsfeed/views/poster/PosterTextDelegate$PosterSpan;Landroid/view/View;)V
 
-    invoke-static {v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

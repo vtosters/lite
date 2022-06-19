@@ -1,13 +1,13 @@
 .class public final Lcom/vk/fave/fragments/holders/FaveEmptyHolder;
-.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "FaveEmptyHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
-        "Lcom/vk/fave/entities/FaveEntries1;",
+        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vk/fave/entities/b;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
     const v0, 0x7f0d01bd
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -45,7 +45,7 @@
 
     const-string v0, "itemView.findViewById(R.id.fl_root_container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -62,7 +62,7 @@
 
     const-string v0, "itemView.findViewById(R.\u2026.ll_fave_empty_container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -77,7 +77,7 @@
 
     const-string v0, "itemView.findViewById(R.id.tv_fave_empty_title)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -94,7 +94,7 @@
 
     const-string v0, "itemView.findViewById(R.\u2026v_fave_empty_description)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -111,7 +111,7 @@
 
     const-string v0, "itemView.findViewById(R.id.tv_clear_filter)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -128,7 +128,7 @@
 
     const-string v0, "itemView.findViewById(R.\u2026v_fave_empty_top_divider)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/fave/fragments/holders/FaveEmptyHolder;->g:Landroid/view/View;
 
@@ -137,7 +137,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/fave/entities/FaveEntries1;)V
+.method public a(Lcom/vk/fave/entities/b;)V
     .locals 4
 
     if-eqz p1, :cond_4
@@ -145,7 +145,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveEmptyHolder;->c:Landroid/view/ViewGroup;
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveEntries1;->b()I
+    invoke-virtual {p1}, Lcom/vk/fave/entities/b;->b()I
 
     move-result v1
 
@@ -154,7 +154,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveEmptyHolder;->d:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveEntries1;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/b;->e()Ljava/lang/String;
 
     move-result-object v1
 
@@ -191,7 +191,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveEmptyHolder;->d:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveEntries1;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/b;->e()Ljava/lang/String;
 
     move-result-object v1
 
@@ -200,7 +200,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveEmptyHolder;->e:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveEntries1;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/b;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -209,7 +209,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveEmptyHolder;->f:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveEntries1;->c()Z
+    invoke-virtual {p1}, Lcom/vk/fave/entities/b;->c()Z
 
     move-result v1
 
@@ -228,13 +228,13 @@
     .line 6
     iget-object v0, p0, Lcom/vk/fave/fragments/holders/FaveEmptyHolder;->g:Landroid/view/View;
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveEntries1;->d()Z
+    invoke-virtual {p1}, Lcom/vk/fave/entities/b;->d()Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
@@ -253,7 +253,7 @@
 
     sget-object v0, Lcom/vk/fave/fragments/holders/FaveEmptyHolder$onBind$1$1;->a:Lcom/vk/fave/fragments/holders/FaveEmptyHolder$onBind$1$1;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     :cond_4
     return-void
@@ -263,9 +263,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/fave/entities/FaveEntries1;
+    check-cast p1, Lcom/vk/fave/entities/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/holders/FaveEmptyHolder;->a(Lcom/vk/fave/entities/FaveEntries1;)V
+    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/holders/FaveEmptyHolder;->a(Lcom/vk/fave/entities/b;)V
 
     return-void
 .end method

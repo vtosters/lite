@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/AnimationProperties;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/a;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/core/tips/WindowBackground;
+.field final synthetic a:Lcom/vk/core/tips/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/tips/WindowBackground;)V
+.method constructor <init>(Lcom/vk/core/tips/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/core/tips/TipTextWindow$l;->a:Lcom/vk/core/tips/WindowBackground;
+    iput-object p1, p0, Lcom/vk/core/tips/TipTextWindow$l;->a:Lcom/vk/core/tips/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,11 +38,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/tips/TipTextWindow$l;->a:Lcom/vk/core/tips/WindowBackground;
+    iget-object v0, p0, Lcom/vk/core/tips/TipTextWindow$l;->a:Lcom/vk/core/tips/b;
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -56,7 +56,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/tips/WindowBackground;->setAlpha(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/tips/b;->setAlpha(I)V
 
     return-void
 

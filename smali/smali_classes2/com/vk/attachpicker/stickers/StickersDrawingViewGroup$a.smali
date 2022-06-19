@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
+    value = Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,13 @@
 # instance fields
 .field final synthetic a:Lcom/vk/attachpicker/stickers/ISticker;
 
-.field final synthetic b:Lkotlin/jvm/b/Functions4;
+.field final synthetic b:Lkotlin/jvm/b/d;
 
 .field final synthetic c:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
+.method constructor <init>(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
     .locals 0
 
     .line 1
@@ -34,7 +34,7 @@
 
     iput-object p2, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->a:Lcom/vk/attachpicker/stickers/ISticker;
 
-    iput-object p3, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->b:Lkotlin/jvm/b/Functions4;
+    iput-object p3, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->b:Lkotlin/jvm/b/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -98,7 +98,7 @@
     move-result v1
 
     .line 8
-    iget-object v3, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->b:Lkotlin/jvm/b/Functions4;
+    iget-object v3, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->b:Lkotlin/jvm/b/d;
 
     if-eqz v3, :cond_2
 
@@ -112,7 +112,7 @@
     invoke-interface {v3, v4, v5}, Lcom/vk/attachpicker/stickers/ISticker;->a(FF)V
 
     .line 10
-    iget-object v3, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->b:Lkotlin/jvm/b/Functions4;
+    iget-object v3, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->b:Lkotlin/jvm/b/d;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -124,19 +124,19 @@
 
     iget-object v4, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->a:Lcom/vk/attachpicker/stickers/ISticker;
 
-    invoke-interface {v3, v0, v1, v4}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v0, v1, v4}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 11
     :cond_2
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->c:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
-    invoke-static {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;)Lcom/vk/attachpicker/stickers/StickersState;
+    invoke-static {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;)Lcom/vk/attachpicker/stickers/m0;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->a:Lcom/vk/attachpicker/stickers/ISticker;
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/StickersState;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/m0;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup$a;->c:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;

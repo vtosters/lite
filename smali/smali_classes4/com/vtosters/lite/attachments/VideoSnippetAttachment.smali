@@ -53,7 +53,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->P:Lcom/vtosters/lite/attachments/VideoSnippetAttachment$b;
 
@@ -89,7 +89,7 @@
     iput-boolean v1, v0, Lcom/vk/dto/common/VideoFile;->V:Z
 
     .line 16
-    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->q:I
+    sget v0, Lcom/vk/dto/attachments/a;->q:I
 
     iput v0, p0, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->O:I
 
@@ -189,7 +189,7 @@
     iput-boolean v0, p1, Lcom/vk/dto/common/VideoFile;->V:Z
 
     .line 4
-    sget p1, Lcom/vk/dto/attachments/AttachmentWeights;->q:I
+    sget p1, Lcom/vk/dto/attachments/a;->q:I
 
     iput p1, p0, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->O:I
 

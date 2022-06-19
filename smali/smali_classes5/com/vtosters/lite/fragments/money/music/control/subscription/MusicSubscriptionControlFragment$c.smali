@@ -1,5 +1,5 @@
 .class final Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$c;
-.super Lcom/vk/core/ui/CardItemDecorator;
+.super Lcom/vk/core/ui/d;
 .source "MusicSubscriptionControlFragment.kt"
 
 
@@ -23,7 +23,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/core/ui/CardItemDecorator;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/Provider;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/core/ui/d;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/o;Z)V
 
     iput-object p2, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$c;->H:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
@@ -36,12 +36,12 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/ui/CardItemDecorator;->a(Landroid/graphics/Rect;I)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/ui/d;->a(Landroid/graphics/Rect;I)V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$c;->H:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/MergedAdapter;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/p;->getItemCount()I
 
     move-result v0
 
@@ -52,7 +52,7 @@
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/core/ui/CardItemDecorator;->a()I
+    invoke-virtual {p0}, Lcom/vk/core/ui/d;->a()I
 
     move-result p2
 

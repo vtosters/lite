@@ -3,12 +3,12 @@
 .source "PostingInteractor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/PostingInteractor;->c(Lb/h/c/w/NewPostRequest;Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;)Lio/reactivex/Observable;
+    value = Lcom/vk/newsfeed/posting/PostingInteractor;->c(Lb/h/c/w/f;Lcom/vk/newsfeed/posting/dto/d;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,35 +19,35 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vtosters/lite/upload/UploadNotification$b;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $params:Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;
+.field final synthetic $params:Lcom/vk/newsfeed/posting/dto/d;
 
-.field final synthetic $posterParams:Lcom/vk/newsfeed/posting/dto/PostingRequestParams;
+.field final synthetic $posterParams:Lcom/vk/newsfeed/posting/dto/a;
 
-.field final synthetic $request:Lb/h/c/w/NewPostRequest;
+.field final synthetic $request:Lb/h/c/w/f;
 
 .field final synthetic $subject:Lio/reactivex/subjects/PublishSubject;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/subjects/PublishSubject;Lcom/vk/newsfeed/posting/dto/PostingRequestParams;Lb/h/c/w/NewPostRequest;Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;)V
+.method constructor <init>(Lio/reactivex/subjects/PublishSubject;Lcom/vk/newsfeed/posting/dto/a;Lb/h/c/w/f;Lcom/vk/newsfeed/posting/dto/d;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$subject:Lio/reactivex/subjects/PublishSubject;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$posterParams:Lcom/vk/newsfeed/posting/dto/PostingRequestParams;
+    iput-object p2, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$posterParams:Lcom/vk/newsfeed/posting/dto/a;
 
-    iput-object p3, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$request:Lb/h/c/w/NewPostRequest;
+    iput-object p3, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$request:Lb/h/c/w/f;
 
-    iput-object p4, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$params:Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;
+    iput-object p4, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$params:Lcom/vk/newsfeed/posting/dto/d;
 
     const/4 p1, 0x1
 
@@ -106,7 +106,7 @@
     if-eqz p1, :cond_2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$posterParams:Lcom/vk/newsfeed/posting/dto/PostingRequestParams;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$posterParams:Lcom/vk/newsfeed/posting/dto/a;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/SaveCustomPosterResponse;->u1()I
 
@@ -116,16 +116,16 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/posting/dto/PostingRequestParams;->a(Ljava/lang/Integer;)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/posting/dto/a;->a(Ljava/lang/Integer;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$posterParams:Lcom/vk/newsfeed/posting/dto/PostingRequestParams;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$posterParams:Lcom/vk/newsfeed/posting/dto/a;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/SaveCustomPosterResponse;->t1()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/dto/PostingRequestParams;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/dto/a;->a(Ljava/lang/String;)V
 
     .line 5
     :cond_2
@@ -133,9 +133,9 @@
 
     new-instance v0, Lkotlin/Pair;
 
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$request:Lb/h/c/w/NewPostRequest;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$request:Lb/h/c/w/f;
 
-    iget-object v2, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$params:Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;
+    iget-object v2, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$params:Lcom/vk/newsfeed/posting/dto/d;
 
     invoke-direct {v0, v1, v2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
@@ -176,7 +176,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->a(Lcom/vtosters/lite/upload/UploadNotification$b;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

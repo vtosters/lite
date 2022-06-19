@@ -3,7 +3,7 @@
 .source "LiveView.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Action;
+.implements Lc/a/z/a;
 
 
 # annotations
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/live/LiveView;->b(Lcom/vk/libvideo/live/views/live/LiveView;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/live/LiveView;->b(Lcom/vk/libvideo/live/views/live/LiveView;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     return-void
 .end method

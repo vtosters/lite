@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->d(Lcom/vk/instantjobs/impl/InstantJobInfo;)Ljava/lang/Runnable;
+    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->d(Lcom/vk/instantjobs/impl/b;)Ljava/lang/Runnable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-.field final synthetic b:Lcom/vk/instantjobs/impl/InstantJobInfo;
+.field final synthetic b:Lcom/vk/instantjobs/impl/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)V
+.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$createJobCancelByTimeoutRunnable$1;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$createJobCancelByTimeoutRunnable$1;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$createJobCancelByTimeoutRunnable$1;->b:Lcom/vk/instantjobs/impl/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -75,7 +75,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v2, v1, v3}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Z)Ljava/util/Collection;
+    invoke-static {v0, v2, v1, v3}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Ljava/lang/String;Lkotlin/jvm/b/b;Z)Ljava/util/Collection;
 
     return-void
 .end method

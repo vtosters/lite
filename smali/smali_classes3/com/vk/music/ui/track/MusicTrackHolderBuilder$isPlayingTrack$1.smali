@@ -3,12 +3,12 @@
 .source "MusicTrackHolderBuilder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/ui/track/MusicTrackHolderBuilder;-><init>(Lkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/music/ui/track/MusicTrackHolderBuilder;-><init>(Lkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Ljava/lang/Integer;",
         "Lcom/vk/dto/music/MusicTrack;",
         "Ljava/lang/Boolean;",
@@ -76,13 +76,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$isPlayingTrack$1;->this$0:Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
 
-    invoke-static {p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/track/MusicTrackHolderBuilder;)Lcom/vk/music/player/PlayerModel;
+    invoke-static {p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/track/MusicTrackHolderBuilder;)Lcom/vk/music/player/d;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->S()Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {p1}, Lcom/vk/music/player/d;->S()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p1
 
@@ -92,7 +92,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

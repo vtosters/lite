@@ -1,11 +1,11 @@
 .class public final Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$c;
-.super Lcom/vk/mentions/MentionUtils1;
+.super Lcom/vk/mentions/l;
 .source "TextDialogClickableDelegate.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;-><init>(Lcom/vk/attachpicker/stickers/text/TextStickerDialog;)V
+    value = Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;-><init>(Lcom/vk/attachpicker/stickers/text/i;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/mentions/MentionUtils1<",
+        "Lcom/vk/mentions/l<",
         "Lcom/vk/stories/clickable/StoryMentionSpan;",
         ">;"
     }
@@ -31,7 +31,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/mentions/MentionUtils1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/mentions/l;-><init>()V
 
     const/4 v0, -0x1
 
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public bridge synthetic a(I)Lcom/vk/mentions/Spans;
+.method public bridge synthetic a(I)Lcom/vk/mentions/k;
     .locals 0
 
     .line 1
@@ -76,7 +76,7 @@
 
     move v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/clickable/StoryMentionSpan;-><init>(IZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/clickable/StoryMentionSpan;-><init>(IZIILkotlin/jvm/internal/i;)V
 
     return-object v6
 .end method

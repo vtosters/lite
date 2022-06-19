@@ -3,12 +3,12 @@
 .source "LoggerSettings.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/log/settings/LoggerSettings;-><init>(Ljava/lang/String;Landroid/content/SharedPreferences;ZLkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/log/settings/LoggerSettings;-><init>(Ljava/lang/String;Landroid/content/SharedPreferences;ZLkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/log/settings/LoggerSettings$a;",
         ">;"
     }
@@ -51,13 +51,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/log/settings/LoggerSettings$remoteLogTypesMap$1;->this$0:Lcom/vk/log/settings/LoggerSettings;
 
-    invoke-virtual {v0}, Lcom/vk/log/settings/LoggerSettings;->c()Lkotlin/jvm/b/Functions;
+    invoke-virtual {v0}, Lcom/vk/log/settings/LoggerSettings;->c()Lkotlin/jvm/b/a;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 

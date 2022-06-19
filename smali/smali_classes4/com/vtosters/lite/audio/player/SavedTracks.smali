@@ -67,13 +67,13 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/vtosters/lite/audio/player/DownloadTaskBase;",
+            "Lcom/vtosters/lite/audio/player/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final g:Lcom/vtosters/lite/audio/utils/WakeLockEx;
+.field private final g:Lcom/vtosters/lite/audio/utils/f;
 
 .field private h:Lcom/vtosters/lite/audio/player/SavedTracks$e;
 
@@ -126,11 +126,11 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vtosters/lite/audio/player/SavedTracks;Ljava/lang/String;)Lcom/vtosters/lite/audio/player/DownloadTaskBase;
+.method static synthetic a(Lcom/vtosters/lite/audio/player/SavedTracks;Ljava/lang/String;)Lcom/vtosters/lite/audio/player/m;
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/audio/player/SavedTracks;->e(Ljava/lang/String;)Lcom/vtosters/lite/audio/player/DownloadTaskBase;
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/audio/player/SavedTracks;->e(Ljava/lang/String;)Lcom/vtosters/lite/audio/player/m;
 
     move-result-object p0
 
@@ -178,13 +178,13 @@
     return-void
 .end method
 
-.method private a(Lcom/vtosters/lite/audio/player/DownloadTaskBase;)V
+.method private a(Lcom/vtosters/lite/audio/player/m;)V
     .locals 2
 
     .line 27
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/SavedTracks;->f:Ljava/util/Map;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/audio/player/DownloadTaskBase;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/audio/player/m;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -200,9 +200,9 @@
     invoke-virtual {p1, v0, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 29
-    iget-object p1, p0, Lcom/vtosters/lite/audio/player/SavedTracks;->g:Lcom/vtosters/lite/audio/utils/WakeLockEx;
+    iget-object p1, p0, Lcom/vtosters/lite/audio/player/SavedTracks;->g:Lcom/vtosters/lite/audio/utils/f;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/audio/utils/WakeLockEx;->a()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/audio/utils/f;->a()V
 
     .line 30
     invoke-direct {p0}, Lcom/vtosters/lite/audio/player/SavedTracks;->c()V
@@ -279,7 +279,7 @@
     .line 3
     sget-object v0, Landroid/os/Environment;->DIRECTORY_MUSIC:Ljava/lang/String;
 
-    invoke-static {p0, v0}, Lcom/vtosters/lite/audio/utils/Utils;->a(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;
+    invoke-static {p0, v0}, Lcom/vtosters/lite/audio/utils/e;->a(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object p0
 
@@ -554,11 +554,11 @@
     return-void
 .end method
 
-.method static synthetic d(Lcom/vtosters/lite/audio/player/SavedTracks;)Lcom/vtosters/lite/audio/utils/WakeLockEx;
+.method static synthetic d(Lcom/vtosters/lite/audio/player/SavedTracks;)Lcom/vtosters/lite/audio/utils/f;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/audio/player/SavedTracks;->g:Lcom/vtosters/lite/audio/utils/WakeLockEx;
+    iget-object p0, p0, Lcom/vtosters/lite/audio/player/SavedTracks;->g:Lcom/vtosters/lite/audio/utils/f;
 
     return-object p0
 .end method
@@ -608,7 +608,7 @@
     return p1
 .end method
 
-.method private e(Ljava/lang/String;)Lcom/vtosters/lite/audio/player/DownloadTaskBase;
+.method private e(Ljava/lang/String;)Lcom/vtosters/lite/audio/player/m;
     .locals 1
 
     .line 2
@@ -618,7 +618,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/audio/player/DownloadTaskBase;
+    check-cast p1, Lcom/vtosters/lite/audio/player/m;
 
     return-object p1
 .end method
@@ -852,11 +852,11 @@
     .end annotation
 
     .line 6
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->Y()Z
+    invoke-virtual {v0}, Lb/h/h/d/c;->Y()Z
 
     move-result v0
 
@@ -954,7 +954,7 @@
     if-nez p1, :cond_5
 
     .line 14
-    new-instance p1, Lcom/vtosters/lite/audio/player/DownloadTaskTracks;
+    new-instance p1, Lcom/vtosters/lite/audio/player/n;
 
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/SavedTracks;->a:Landroid/content/Context;
 
@@ -964,9 +964,9 @@
 
     invoke-direct {v2, p0, v3}, Lcom/vtosters/lite/audio/player/SavedTracks$c;-><init>(Lcom/vtosters/lite/audio/player/SavedTracks;Lcom/vtosters/lite/audio/player/SavedTracks$a;)V
 
-    invoke-direct {p1, v1, v2, v0, p2}, Lcom/vtosters/lite/audio/player/DownloadTaskTracks;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/DownloadTaskBase$d;Ljava/util/Collection;Z)V
+    invoke-direct {p1, v1, v2, v0, p2}, Lcom/vtosters/lite/audio/player/n;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/m$d;Ljava/util/Collection;Z)V
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/audio/player/SavedTracks;->a(Lcom/vtosters/lite/audio/player/DownloadTaskBase;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/audio/player/SavedTracks;->a(Lcom/vtosters/lite/audio/player/m;)V
 
     :cond_5
     return-void
@@ -1010,10 +1010,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vtosters/lite/audio/player/DownloadTaskBase;
+    check-cast v1, Lcom/vtosters/lite/audio/player/m;
 
     .line 9
-    invoke-virtual {v1, p1}, Lcom/vtosters/lite/audio/player/DownloadTaskBase;->a(Ljava/lang/String;)Z
+    invoke-virtual {v1, p1}, Lcom/vtosters/lite/audio/player/m;->a(Ljava/lang/String;)Z
 
     move-result v1
 

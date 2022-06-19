@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/DoNotStrip;
+.annotation build Lcom/facebook/common/internal/d;
 .end annotation
 
 
@@ -53,14 +53,14 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {v0}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
+    invoke-static {v0}, Lcom/facebook/common/internal/g;->a(Z)V
 
     .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isMutable()Z
 
     move-result v0
 
-    invoke-static {v0}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
+    invoke-static {v0}, Lcom/facebook/common/internal/g;->a(Z)V
 
     .line 3
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -81,7 +81,7 @@
     const/4 v0, 0x0
 
     :goto_1
-    invoke-static {v0}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
+    invoke-static {v0}, Lcom/facebook/common/internal/g;->a(Z)V
 
     .line 4
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
@@ -100,7 +100,7 @@
     const/4 v2, 0x0
 
     :goto_2
-    invoke-static {v2}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
+    invoke-static {v2}, Lcom/facebook/common/internal/g;->a(Z)V
 
     .line 5
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getRowBytes()I
@@ -124,6 +124,6 @@
 .end method
 
 .method private static native nativeCopyBitmap(Landroid/graphics/Bitmap;ILandroid/graphics/Bitmap;II)V
-    .annotation build Lcom/facebook/common/internal/DoNotStrip;
+    .annotation build Lcom/facebook/common/internal/d;
     .end annotation
 .end method

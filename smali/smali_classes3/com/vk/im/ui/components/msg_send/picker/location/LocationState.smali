@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;
-.super Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+.super Lcom/vk/im/ui/components/msg_send/picker/d;
 .source "LocationState.kt"
 
 
@@ -12,11 +12,11 @@
 
 
 # static fields
-.field static final synthetic i:[Lkotlin/u/KProperty5;
+.field static final synthetic i:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final e:Lkotlin/Lazy2;
+.field private final e:Lkotlin/e;
 
 .field private final f:Landroid/app/Activity;
 
@@ -31,13 +31,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -45,24 +45,24 @@
 
     const-string v4, "getLocationComponent()Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;->i:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;->i:[Lkotlin/u/j;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p4, p5}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;-><init>(Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)V
+    invoke-direct {p0, p4, p5}, Lcom/vk/im/ui/components/msg_send/picker/d;-><init>(Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;->f:Landroid/app/Activity;
 
@@ -75,11 +75,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState$locationComponent$2;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;->e:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;->e:Lkotlin/e;
 
     return-void
 .end method
@@ -114,15 +114,15 @@
 .method private final l()Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;->e:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;->e:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;->i:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;->i:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -180,7 +180,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
 
     return-void
 .end method
@@ -227,7 +227,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -242,7 +242,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     return-void
 .end method
@@ -255,7 +255,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
 
     return-void
 .end method

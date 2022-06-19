@@ -3,7 +3,7 @@
 .source "LoginManager.java"
 
 # interfaces
-.implements Lcom/facebook/login/StartActivityDelegate;
+.implements Lcom/facebook/login/e;
 
 
 # annotations
@@ -31,7 +31,7 @@
     const-string v0, "activity"
 
     .line 2
-    invoke-static {p1, v0}, Lcom/facebook/internal/Validate;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/facebook/internal/s;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     iput-object p1, p0, Lcom/facebook/login/LoginManager$c;->a:Landroid/app/Activity;

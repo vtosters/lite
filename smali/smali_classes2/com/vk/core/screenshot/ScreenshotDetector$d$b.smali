@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/screenshot/ScreenshotDetector$d;->a(Lio/reactivex/ObservableEmitter;)V
+    value = Lcom/vk/core/screenshot/ScreenshotDetector$d;->a(Lc/a/n;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic a:Lio/reactivex/ObservableEmitter;
+.field final synthetic a:Lc/a/n;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/ObservableEmitter;)V
+.method constructor <init>(Lc/a/n;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/screenshot/ScreenshotDetector$d$b;->a:Lio/reactivex/ObservableEmitter;
+    iput-object p1, p0, Lcom/vk/core/screenshot/ScreenshotDetector$d$b;->a:Lc/a/n;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,9 +39,9 @@
     .locals 0
 
     .line 1
-    iget-object p2, p0, Lcom/vk/core/screenshot/ScreenshotDetector$d$b;->a:Lio/reactivex/ObservableEmitter;
+    iget-object p2, p0, Lcom/vk/core/screenshot/ScreenshotDetector$d$b;->a:Lc/a/n;
 
-    invoke-interface {p2, p1}, Lio/reactivex/Emitter;->b(Ljava/lang/Object;)V
+    invoke-interface {p2, p1}, Lc/a/f;->b(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -50,9 +50,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/screenshot/ScreenshotDetector$d$b;->a:Lio/reactivex/ObservableEmitter;
+    iget-object v0, p0, Lcom/vk/core/screenshot/ScreenshotDetector$d$b;->a:Lc/a/n;
 
-    invoke-interface {v0, p1}, Lio/reactivex/ObservableEmitter;->b(Ljava/lang/Throwable;)Z
+    invoke-interface {v0, p1}, Lc/a/n;->b(Ljava/lang/Throwable;)Z
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "FriendRequestsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/VoidF2Int;
+.implements Lcom/vk/common/g/j;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/VoidF2Int<",
+        "Lcom/vk/common/g/j<",
         "Lcom/vk/dto/user/RequestUserProfile;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -57,7 +57,7 @@
 
     const-string v0, "request"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p2, :cond_0
 
@@ -70,7 +70,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 

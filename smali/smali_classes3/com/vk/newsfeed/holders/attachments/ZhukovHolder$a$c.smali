@@ -3,7 +3,7 @@
 .source "ZhukovHolder.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/photo/Photo;",
         ">;>;"
@@ -131,7 +131,7 @@
     const-string v0, "it"
 
     .line 5
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     new-instance v0, Ljava/util/ArrayList;
@@ -183,13 +183,13 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder$a;->d:Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->d(Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-static {p1}, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->d(Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;)Lcom/vk/bridges/p$d;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1, v0}, Lcom/vk/bridges/ImageViewer$d;->a(Ljava/util/List;)V
+    invoke-interface {p1, v0}, Lcom/vk/bridges/p$d;->a(Ljava/util/List;)V
 
     :cond_4
     return-void

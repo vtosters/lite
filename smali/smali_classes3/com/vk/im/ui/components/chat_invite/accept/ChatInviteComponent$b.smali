@@ -3,7 +3,7 @@
 .source "ChatInviteComponent.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;
+.implements Lcom/vk/im/ui/components/chat_invite/accept/vc/a;
 
 
 # annotations

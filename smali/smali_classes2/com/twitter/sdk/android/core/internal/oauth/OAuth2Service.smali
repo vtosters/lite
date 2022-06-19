@@ -1,5 +1,5 @@
 .class public Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service;
-.super Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;
+.super Lcom/twitter/sdk/android/core/internal/oauth/d;
 .source "OAuth2Service.java"
 
 
@@ -16,20 +16,20 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/twitter/sdk/android/core/TwitterCore;Lcom/twitter/sdk/android/core/u/TwitterApi;)V
+.method public constructor <init>(Lcom/twitter/sdk/android/core/r;Lcom/twitter/sdk/android/core/u/n;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;-><init>(Lcom/twitter/sdk/android/core/TwitterCore;Lcom/twitter/sdk/android/core/u/TwitterApi;)V
+    invoke-direct {p0, p1, p2}, Lcom/twitter/sdk/android/core/internal/oauth/d;-><init>(Lcom/twitter/sdk/android/core/r;Lcom/twitter/sdk/android/core/u/n;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;->b()Lretrofit2/Retrofit;
+    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/d;->b()Lf/m;
 
     move-result-object p1
 
     const-class p2, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$OAuth2Api;
 
-    invoke-virtual {p1, p2}, Lretrofit2/Retrofit;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lf/m;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -69,11 +69,11 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;->c()Lcom/twitter/sdk/android/core/TwitterCore;
+    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/d;->c()Lcom/twitter/sdk/android/core/r;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/TwitterCore;->b()Lcom/twitter/sdk/android/core/TwitterAuthConfig;
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/r;->b()Lcom/twitter/sdk/android/core/TwitterAuthConfig;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/twitter/sdk/android/core/u/p/UrlUtils;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/twitter/sdk/android/core/u/p/d;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/twitter/sdk/android/core/u/p/UrlUtils;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/twitter/sdk/android/core/u/p/d;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -141,12 +141,12 @@
 
 
 # virtual methods
-.method a(Lcom/twitter/sdk/android/core/Callback;)V
+.method a(Lcom/twitter/sdk/android/core/b;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/twitter/sdk/android/core/Callback<",
+            "Lcom/twitter/sdk/android/core/b<",
             "Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Token;",
             ">;)V"
         }
@@ -161,23 +161,23 @@
 
     const-string v2, "client_credentials"
 
-    invoke-interface {v0, v1, v2}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$OAuth2Api;->getAppAuthToken(Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
+    invoke-interface {v0, v1, v2}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$OAuth2Api;->getAppAuthToken(Ljava/lang/String;Ljava/lang/String;)Lf/b;
 
     move-result-object v0
 
     .line 2
-    invoke-interface {v0, p1}, Lretrofit2/Call;->a(Lretrofit2/Callback;)V
+    invoke-interface {v0, p1}, Lf/b;->a(Lf/d;)V
 
     return-void
 .end method
 
-.method a(Lcom/twitter/sdk/android/core/Callback;Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Token;)V
+.method a(Lcom/twitter/sdk/android/core/b;Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Token;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/twitter/sdk/android/core/Callback<",
-            "Lcom/twitter/sdk/android/core/internal/oauth/GuestTokenResponse;",
+            "Lcom/twitter/sdk/android/core/b<",
+            "Lcom/twitter/sdk/android/core/internal/oauth/a;",
             ">;",
             "Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Token;",
             ")V"
@@ -191,21 +191,21 @@
 
     move-result-object p2
 
-    invoke-interface {v0, p2}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$OAuth2Api;->getGuestToken(Ljava/lang/String;)Lretrofit2/Call;
+    invoke-interface {v0, p2}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$OAuth2Api;->getGuestToken(Ljava/lang/String;)Lf/b;
 
     move-result-object p2
 
-    invoke-interface {p2, p1}, Lretrofit2/Call;->a(Lretrofit2/Callback;)V
+    invoke-interface {p2, p1}, Lf/b;->a(Lf/d;)V
 
     return-void
 .end method
 
-.method public b(Lcom/twitter/sdk/android/core/Callback;)V
+.method public b(Lcom/twitter/sdk/android/core/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/twitter/sdk/android/core/Callback<",
+            "Lcom/twitter/sdk/android/core/b<",
             "Lcom/twitter/sdk/android/core/internal/oauth/GuestAuthToken;",
             ">;)V"
         }
@@ -214,10 +214,10 @@
     .line 1
     new-instance v0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;
 
-    invoke-direct {v0, p0, p1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;-><init>(Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service;Lcom/twitter/sdk/android/core/Callback;)V
+    invoke-direct {v0, p0, p1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;-><init>(Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service;Lcom/twitter/sdk/android/core/b;)V
 
     .line 2
-    invoke-virtual {p0, v0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service;->a(Lcom/twitter/sdk/android/core/Callback;)V
+    invoke-virtual {p0, v0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service;->a(Lcom/twitter/sdk/android/core/b;)V
 
     return-void
 .end method

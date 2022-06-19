@@ -213,14 +213,14 @@
 
     move-result-object v1
 
-    sget-object v2, Lb/h/z/R3;->OverlayView:[I
+    sget-object v2, Lb/h/z/m;->OverlayView:[I
 
     invoke-virtual {v1, p1, v2, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 2
-    sget p2, Lb/h/z/R3;->OverlayView_overlay:I
+    sget p2, Lb/h/z/m;->OverlayView_overlay:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -233,7 +233,7 @@
 
     .line 4
     :cond_0
-    sget p2, Lb/h/z/R3;->OverlayView_padOverlay:I
+    sget p2, Lb/h/z/m;->OverlayView_padOverlay:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -242,7 +242,7 @@
     iput-boolean p2, p0, Lcom/vk/core/view/OverlayTextView;->d:Z
 
     .line 5
-    sget p2, Lb/h/z/R3;->OverlayView_padAsBackground:I
+    sget p2, Lb/h/z/m;->OverlayView_padAsBackground:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -251,7 +251,7 @@
     iput-boolean p2, p0, Lcom/vk/core/view/OverlayTextView;->e:Z
 
     .line 6
-    sget p2, Lb/h/z/R3;->OverlayView_colors:I
+    sget p2, Lb/h/z/m;->OverlayView_colors:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -260,7 +260,7 @@
     iput-object p2, p0, Lcom/vk/core/view/OverlayTextView;->c:Landroid/content/res/ColorStateList;
 
     .line 7
-    sget p2, Lb/h/z/R3;->OverlayView_src:I
+    sget p2, Lb/h/z/m;->OverlayView_src:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -659,7 +659,7 @@
 
     .line 3
     :cond_1
-    invoke-static {p1, v0}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v0}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -667,11 +667,11 @@
 
     .line 4
     :goto_0
-    new-instance p1, Lcom/vk/core/drawable/CenteredImageSpan;
+    new-instance p1, Lcom/vk/core/drawable/b;
 
     iget-object v0, p0, Lcom/vk/core/view/OverlayTextView;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {p1, v0}, Lcom/vk/core/drawable/CenteredImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p1, v0}, Lcom/vk/core/drawable/b;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     iput-object p1, p0, Lcom/vk/core/view/OverlayTextView;->D:Landroid/text/style/ImageSpan;
 

@@ -3,7 +3,7 @@
 .source "VkVideoBridge.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Landroid/content/DialogInterface;",
         "Ljava/lang/CharSequence;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/bridges/VkVideoBridge$a;->a(Landroid/content/DialogInterface;Ljava/lang/CharSequence;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -69,7 +69,7 @@
     .locals 2
 
     .line 2
-    new-instance p1, Lcom/vtosters/lite/fragments/y2/AddVideoByLink;
+    new-instance p1, Lcom/vtosters/lite/fragments/y2/n;
 
     iget-object v0, p0, Lcom/vtosters/lite/bridges/VkVideoBridge$a;->a:Landroid/app/Activity;
 
@@ -79,9 +79,9 @@
 
     move-result-object p2
 
-    invoke-direct {p1, v0, v1, p2}, Lcom/vtosters/lite/fragments/y2/AddVideoByLink;-><init>(Landroid/app/Activity;ILjava/lang/String;)V
+    invoke-direct {p1, v0, v1, p2}, Lcom/vtosters/lite/fragments/y2/n;-><init>(Landroid/app/Activity;ILjava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/y2/AddVideoByLink;->a()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/y2/n;->a()V
 
     return-void
 .end method

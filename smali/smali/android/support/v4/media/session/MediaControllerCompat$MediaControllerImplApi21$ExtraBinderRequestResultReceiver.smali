@@ -83,12 +83,12 @@
     move-result-object v2
 
     .line 5
-    invoke-static {v2}, Landroid/support/v4/media/session/IMediaSession$a;->a(Landroid/os/IBinder;)Landroid/support/v4/media/session/IMediaSession;
+    invoke-static {v2}, Landroid/support/v4/media/session/b$a;->a(Landroid/os/IBinder;)Landroid/support/v4/media/session/b;
 
     move-result-object v2
 
     .line 6
-    invoke-virtual {v1, v2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->a(Landroid/support/v4/media/session/IMediaSession;)V
+    invoke-virtual {v1, v2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->a(Landroid/support/v4/media/session/b;)V
 
     .line 7
     iget-object v1, p1, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->e:Landroid/support/v4/media/session/MediaSessionCompat$Token;

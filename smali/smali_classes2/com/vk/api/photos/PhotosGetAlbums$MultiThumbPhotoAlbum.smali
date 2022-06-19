@@ -45,7 +45,7 @@
 
     const/high16 v1, 0x43020000    # 130.0f
 
-    invoke-interface {v0, v1}, Lb/h/h/ModelConfig$a;->a(F)I
+    invoke-interface {v0, v1}, Lb/h/h/a$a;->a(F)I
 
     move-result v0
 

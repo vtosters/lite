@@ -54,7 +54,7 @@
 
     iget-object p1, p1, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;
 
-    invoke-static {p1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/MusicStatsTracker;
+    invoke-static {p1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/d;
 
     move-result-object p1
 
@@ -66,7 +66,7 @@
 
     const-string v1, "unknown"
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/music/stats/MusicStatsTracker;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/music/stats/d;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -92,7 +92,7 @@
 
     iget-object p1, p1, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;
 
-    invoke-static {p1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/MusicStatsTracker;
+    invoke-static {p1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/d;
 
     move-result-object p1
 
@@ -104,7 +104,7 @@
 
     const-string v1, "success"
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/music/stats/MusicStatsTracker;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/music/stats/d;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$$special$$inlined$let$lambda$1$a;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$$special$$inlined$let$lambda$1;

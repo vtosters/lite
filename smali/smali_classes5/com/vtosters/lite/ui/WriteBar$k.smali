@@ -108,9 +108,9 @@
 
     if-eqz p2, :cond_4
 
-    sget-object p2, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
+    sget-object p2, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
 
-    invoke-virtual {p2}, Lcom/vk/stickers/Stickers;->h()I
+    invoke-virtual {p2}, Lcom/vk/stickers/t;->h()I
 
     move-result p2
 

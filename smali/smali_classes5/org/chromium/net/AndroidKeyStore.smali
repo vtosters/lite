@@ -101,7 +101,7 @@
     new-array p1, v2, [Ljava/lang/Object;
 
     .line 7
-    invoke-static {v0, p0, p1}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, p0, p1}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v1
 
@@ -137,7 +137,7 @@
 
     new-array p1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, p0, p1}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, p0, p1}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v1
 .end method
@@ -212,7 +212,7 @@
 
     const-string v1, "AndroidKeyStore"
 
-    invoke-static {v1, p0, p1}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, p0, p1}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :catch_1
     return v0
@@ -270,7 +270,7 @@
 
     const-string v1, "AndroidKeyStore"
 
-    invoke-static {v1, p0, p1}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, p0, p1}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :catch_1
     return v0
@@ -364,7 +364,7 @@
     new-array p1, v2, [Ljava/lang/Object;
 
     .line 8
-    invoke-static {v0, p0, p1}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, p0, p1}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v1
 
@@ -394,7 +394,7 @@
 
     new-array p1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, p0, p1}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, p0, p1}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v1
 .end method

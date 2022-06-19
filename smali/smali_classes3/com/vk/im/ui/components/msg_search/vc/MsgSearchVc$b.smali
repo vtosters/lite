@@ -49,13 +49,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$b;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/f;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$b;->b:Lcom/vk/im/ui/components/msg_search/MsgSearchState;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;->a(Lcom/vk/im/ui/components/msg_search/MsgSearchState;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/f;->a(Lcom/vk/im/ui/components/msg_search/MsgSearchState;)V
 
     return-void
 .end method

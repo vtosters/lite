@@ -3,7 +3,7 @@
 .source "FriendsRecommendationsFragment.kt"
 
 # interfaces
-.implements Lcom/facebook/FacebookCallback;
+.implements Lcom/facebook/d;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/facebook/FacebookCallback<",
-        "Lcom/facebook/login/LoginResult;",
+        "Lcom/facebook/d<",
+        "Lcom/facebook/login/d;",
         ">;"
     }
 .end annotation
@@ -57,7 +57,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Lcom/facebook/CallbackManager;)V
+    invoke-virtual {p1, v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Lcom/facebook/c;)V
 
     const p1, 0x7f120369
 
@@ -66,12 +66,12 @@
     const/4 v2, 0x2
 
     .line 7
-    invoke-static {p1, v1, v2, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v1, v2, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public a(Lcom/facebook/login/LoginResult;)V
+.method public a(Lcom/facebook/login/d;)V
     .locals 3
 
     .line 2
@@ -79,10 +79,10 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Lcom/facebook/CallbackManager;)V
+    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Lcom/facebook/c;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/facebook/login/LoginResult;->a()Lcom/facebook/AccessToken;
+    invoke-virtual {p1}, Lcom/facebook/login/d;->a()Lcom/facebook/AccessToken;
 
     move-result-object v0
 
@@ -98,13 +98,13 @@
     invoke-direct {v0, v1, v2}, Lcom/vk/friends/recommendations/FriendsImportFragment$b;-><init>(ILcom/vk/friends/recommendations/FriendsImportFragment$ImportType;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/facebook/login/LoginResult;->a()Lcom/facebook/AccessToken;
+    invoke-virtual {p1}, Lcom/facebook/login/d;->a()Lcom/facebook/AccessToken;
 
     move-result-object p1
 
     const-string v1, "loginResult.accessToken"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/FriendsImportFragment$b;->a(Lcom/facebook/AccessToken;)Lcom/vk/friends/recommendations/FriendsImportFragment$b;
 
@@ -114,7 +114,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void
@@ -124,9 +124,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/facebook/login/LoginResult;
+    check-cast p1, Lcom/facebook/login/d;
 
-    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$h;->a(Lcom/facebook/login/LoginResult;)V
+    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$h;->a(Lcom/facebook/login/d;)V
 
     return-void
 .end method
@@ -139,7 +139,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Lcom/facebook/CallbackManager;)V
+    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Lcom/facebook/c;)V
 
     return-void
 .end method

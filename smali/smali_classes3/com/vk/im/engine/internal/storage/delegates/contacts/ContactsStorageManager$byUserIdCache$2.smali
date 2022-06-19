@@ -3,12 +3,12 @@
 .source "ContactsStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+    value = Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/engine/utils/collection/IntCollection;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/engine/utils/collection/d;",
         "Landroid/util/SparseArray<",
         "Lcom/vk/im/engine/models/contacts/Contact;",
         ">;>;"
@@ -41,12 +41,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public final a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/contacts/Contact;",
@@ -59,7 +59,7 @@
     check-cast v0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;
 
     .line 1
-    invoke-static {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-static {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->b(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -74,12 +74,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -98,9 +98,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/utils/collection/IntCollection;
+    check-cast p1, Lcom/vk/im/engine/utils/collection/d;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$byUserIdCache$2;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$byUserIdCache$2;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p1
 

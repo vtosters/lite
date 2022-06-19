@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vk/stories/clickable/stickers/StoryTimerSticker;)V
+.method public abstract a(Lcom/vk/stories/clickable/stickers/i;)V
 .end method

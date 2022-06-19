@@ -3,7 +3,7 @@
 .source "MusicRestrictionManagerImpl.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet$b;
+.implements Lcom/vk/core/dialogs/bottomsheet/k/a$b;
 
 
 # annotations
@@ -35,16 +35,16 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/dialogs/bottomsheet/modern/impl/CustomisableBottomSheetDialog;Landroid/view/View;F)V
+.method public a(Lcom/vk/core/dialogs/bottomsheet/modern/impl/a;Landroid/view/View;F)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet$b$a;->a(Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet$b;Lcom/vk/core/dialogs/bottomsheet/modern/impl/CustomisableBottomSheetDialog;Landroid/view/View;F)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/core/dialogs/bottomsheet/k/a$b$a;->a(Lcom/vk/core/dialogs/bottomsheet/k/a$b;Lcom/vk/core/dialogs/bottomsheet/modern/impl/a;Landroid/view/View;F)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/core/dialogs/bottomsheet/modern/impl/CustomisableBottomSheetDialog;Landroid/view/View;I)V
+.method public a(Lcom/vk/core/dialogs/bottomsheet/modern/impl/a;Landroid/view/View;I)V
     .locals 0
 
     const/4 p1, 0x5
@@ -56,7 +56,7 @@
 
     iget-object p1, p1, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;
 
-    invoke-static {p1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/MusicStatsTracker;
+    invoke-static {p1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/d;
 
     move-result-object p1
 
@@ -66,7 +66,7 @@
 
     const-string p3, "swipe_close"
 
-    invoke-interface {p1, p2, p3}, Lcom/vk/music/stats/MusicStatsTracker;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, p2, p3}, Lcom/vk/music/stats/d;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void

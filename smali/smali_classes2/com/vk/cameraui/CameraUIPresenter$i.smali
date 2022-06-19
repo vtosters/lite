@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -84,11 +84,11 @@
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {p1}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/cameraui/CameraUIPositions;->c()V
+    invoke-interface {p1}, Lcom/vk/cameraui/e;->c()V
 
     return-void
 .end method

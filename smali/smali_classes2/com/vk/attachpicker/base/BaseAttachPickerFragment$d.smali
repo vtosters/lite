@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$d;->a:Lcom/vk/attachpicker/base/BaseAttachPickerFragment;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->c(Lcom/vk/attachpicker/base/BaseAttachPickerFragment;)Lcom/vtosters/lite/ui/SearchViewWrapper;
+    invoke-static {p1}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->c(Lcom/vk/attachpicker/base/BaseAttachPickerFragment;)Lcom/vtosters/lite/ui/x;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/SearchViewWrapper;->e()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/x;->e()V
 
     :cond_0
     return-void

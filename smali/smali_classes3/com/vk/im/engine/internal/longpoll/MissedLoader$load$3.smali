@@ -3,7 +3,7 @@
 .source "MissedLoader.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/util/Map<",
         "Lcom/vk/dto/user/Platform;",
         "+",
-        "Lcom/vk/im/engine/utils/collection/IntCollection;",
+        "Lcom/vk/im/engine/utils/collection/d;",
         ">;>;"
     }
 .end annotation
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic $apiManager:Lcom/vk/api/internal/ApiManager;
 
-.field final synthetic $friendsGetOnlines:Lcom/vk/im/engine/internal/f/h/FriendsGetOnlineApiCmd;
+.field final synthetic $friendsGetOnlines:Lcom/vk/im/engine/internal/f/h/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/api/internal/ApiManager;Lcom/vk/im/engine/internal/f/h/FriendsGetOnlineApiCmd;)V
+.method constructor <init>(Lcom/vk/api/internal/ApiManager;Lcom/vk/im/engine/internal/f/h/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/MissedLoader$load$3;->$apiManager:Lcom/vk/api/internal/ApiManager;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/longpoll/MissedLoader$load$3;->$friendsGetOnlines:Lcom/vk/im/engine/internal/f/h/FriendsGetOnlineApiCmd;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/longpoll/MissedLoader$load$3;->$friendsGetOnlines:Lcom/vk/im/engine/internal/f/h/a;
 
     const/4 p1, 0x0
 
@@ -70,7 +70,7 @@
             "()",
             "Ljava/util/Map<",
             "Lcom/vk/dto/user/Platform;",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ">;"
         }
     .end annotation
@@ -78,9 +78,9 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/MissedLoader$load$3;->$apiManager:Lcom/vk/api/internal/ApiManager;
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/MissedLoader$load$3;->$friendsGetOnlines:Lcom/vk/im/engine/internal/f/h/FriendsGetOnlineApiCmd;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/MissedLoader$load$3;->$friendsGetOnlines:Lcom/vk/im/engine/internal/f/h/a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
 
     move-result-object v0
 

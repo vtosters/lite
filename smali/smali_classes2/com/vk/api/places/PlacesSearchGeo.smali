@@ -1,12 +1,12 @@
 .class public final Lcom/vk/api/places/PlacesSearchGeo;
-.super Lcom/vk/api/base/ApiRequest;
+.super Lcom/vk/api/base/d;
 .source "PlacesSearchGeo.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/ApiRequest<",
+        "Lcom/vk/api/base/d<",
         "Lcom/vk/api/base/VkPaginationList<",
         "Lcom/vk/dto/geo/GeoLocation;",
         ">;>;"
@@ -21,7 +21,7 @@
     const-string v0, "places.search"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
 
     .line 2
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
@@ -30,7 +30,7 @@
 
     const-string p2, "latitude"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     .line 3
     invoke-static {p3, p4}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
@@ -39,19 +39,19 @@
 
     const-string p2, "longitude"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     const-string p1, "offset"
 
     .line 4
-    invoke-virtual {p0, p1, p6}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, p6}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
 
     if-lez p7, :cond_0
 
     const-string p1, "count"
 
     .line 5
-    invoke-virtual {p0, p1, p7}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, p7}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
 
     .line 6
     :cond_0
@@ -78,7 +78,7 @@
     const-string p1, "q"
 
     .line 7
-    invoke-virtual {p0, p1, p5}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, p5}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     :cond_2
     if-eqz p8, :cond_4
@@ -102,13 +102,13 @@
     const-string p1, "fields"
 
     .line 9
-    invoke-virtual {p0, p1, p8}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, p8}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     :cond_5
     return-void
 .end method
 
-.method public synthetic constructor <init>(DDLjava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(DDLjava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/i;)V
     .locals 10
 
     and-int/lit8 v0, p9, 0x20
@@ -168,7 +168,7 @@
 
     sget-object v0, Lcom/vk/api/places/PlacesSearchGeo$parse$1;->a:Lcom/vk/api/places/PlacesSearchGeo$parse$1;
 
-    invoke-static {p1, v0}, Lcom/vk/api/base/VkPaginationList1;->a(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)Lcom/vk/api/base/VkPaginationList;
+    invoke-static {p1, v0}, Lcom/vk/api/base/k;->a(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)Lcom/vk/api/base/VkPaginationList;
 
     move-result-object p1
     :try_end_0

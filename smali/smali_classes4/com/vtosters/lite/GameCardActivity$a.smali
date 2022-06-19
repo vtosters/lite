@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/GameCardActivity$a;
-.super Lcom/vk/api/apps/CatalogLoader;
+.super Lcom/vk/api/apps/e0;
 .source "GameCardActivity.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/GameCardActivity$a;->g:Lcom/vtosters/lite/GameCardActivity;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/vk/api/apps/CatalogLoader;-><init>(Ljava/util/List;Lcom/vk/dto/common/data/CatalogInfo;Z)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/vk/api/apps/e0;-><init>(Ljava/util/List;Lcom/vk/dto/common/data/CatalogInfo;Z)V
 
     return-void
 .end method

@@ -63,7 +63,7 @@
 
 .field private H:Z
 
-.field private I:Lio/reactivex/disposables/Disposable;
+.field private I:Lio/reactivex/disposables/b;
 
 .field private J:Z
 
@@ -107,11 +107,11 @@
 
 .field private b:I
 
-.field private b0:Lio/reactivex/disposables/Disposable;
+.field private b0:Lio/reactivex/disposables/b;
 
 .field private c:I
 
-.field private c0:Lio/reactivex/disposables/Disposable;
+.field private c0:Lio/reactivex/disposables/b;
 
 .field private d:F
 
@@ -119,7 +119,7 @@
 
 .field private e:Lcom/vk/cameraui/widgets/shutter/ShutterButton$a;
 
-.field private final e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+.field private final e0:Lcom/vk/cameraui/widgets/shutter/a;
 
 .field private f:Landroid/view/View$OnTouchListener;
 
@@ -142,7 +142,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButton$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButton$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->u0:Lcom/vk/cameraui/widgets/shutter/ShutterButton$b;
 
@@ -178,7 +178,7 @@
     sput v0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->k0:F
 
     .line 4
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f06030c
 
@@ -189,7 +189,7 @@
     sput v0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->l0:I
 
     .line 5
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f06001d
 
@@ -200,7 +200,7 @@
     sput v0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->m0:I
 
     .line 6
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f0601f2
 
@@ -336,7 +336,7 @@
 
     const-string p3, "ViewConfiguration.get(context)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
@@ -374,11 +374,11 @@
     iput-boolean p2, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->d0:Z
 
     .line 10
-    new-instance p1, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    new-instance p1, Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-direct {p1, p0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;-><init>(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)V
+    invoke-direct {p1, p0}, Lcom/vk/cameraui/widgets/shutter/a;-><init>(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)V
 
-    iput-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iput-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
     .line 11
     iget-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->g:Landroid/graphics/Paint;
@@ -426,11 +426,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+.method public static final synthetic b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object p0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
     return-object p0
 .end method
@@ -641,9 +641,9 @@
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->a(Lcom/vk/cameraui/widgets/shutter/ShutterButton$d;)V
+    invoke-virtual {v1, v0}, Lcom/vk/cameraui/widgets/shutter/a;->a(Lcom/vk/cameraui/widgets/shutter/ShutterButton$d;)V
 
     .line 4
     invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton$d;->e()Z
@@ -898,32 +898,32 @@
     .locals 11
 
     .line 73
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->a(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/widgets/shutter/a;->a(F)V
 
     .line 74
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->c0:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->c0:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 75
     :cond_0
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b0:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b0:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 76
     :cond_1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->e()F
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/a;->e()F
 
     move-result v0
 
@@ -951,15 +951,15 @@
     if-lez v0, :cond_3
 
     .line 78
-    new-instance v0, Lcom/vk/cameraui/utils/RxAnimators;
+    new-instance v0, Lcom/vk/cameraui/utils/c;
 
-    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->e()F
+    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/a;->e()F
 
     move-result v1
 
-    invoke-direct {v0, v1, p1, p2, p3}, Lcom/vk/cameraui/utils/RxAnimators;-><init>(FFJ)V
+    invoke-direct {v0, v1, p1, p2, p3}, Lcom/vk/cameraui/utils/c;-><init>(FFJ)V
 
     move-object p1, v0
 
@@ -967,11 +967,11 @@
 
     .line 79
     :cond_3
-    new-instance p1, Lcom/vk/cameraui/utils/RxAnimators1;
+    new-instance p1, Lcom/vk/cameraui/utils/e;
 
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->e()F
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/a;->e()F
 
     move-result v3
 
@@ -985,7 +985,7 @@
 
     move-wide v5, p2
 
-    invoke-direct/range {v2 .. v10}, Lcom/vk/cameraui/utils/RxAnimators1;-><init>(FFJJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v10}, Lcom/vk/cameraui/utils/e;-><init>(FFJJILkotlin/jvm/internal/i;)V
 
     .line 80
     :goto_1
@@ -993,11 +993,11 @@
 
     invoke-direct {v0, p0, p4, p2, p3}, Lcom/vk/cameraui/widgets/shutter/ShutterButton$p;-><init>(Lcom/vk/cameraui/widgets/shutter/ShutterButton;ZJ)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    iput-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b0:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b0:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -1022,9 +1022,9 @@
     const/4 v0, 0x0
 
     .line 21
-    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->f()F
+    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/a;->f()F
 
     move-result v1
 
@@ -1069,9 +1069,9 @@
 
     .line 24
     :cond_2
-    iget-object p2, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object p2, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {p2, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->d(F)V
+    invoke-virtual {p2, p1}, Lcom/vk/cameraui/widgets/shutter/a;->d(F)V
 
     .line 25
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
@@ -1218,7 +1218,7 @@
     const-string v0, "anim"
 
     .line 95
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x12c
 
@@ -1309,9 +1309,9 @@
     aget v3, v3, v2
 
     .line 36
-    iget-object v4, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v4, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v4}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b()Landroid/graphics/RectF;
+    invoke-virtual {v4}, Lcom/vk/cameraui/widgets/shutter/a;->b()Landroid/graphics/RectF;
 
     move-result-object v4
 
@@ -1325,9 +1325,9 @@
 
     sub-float/2addr v4, v5
 
-    iget-object v5, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v5, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v5}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b()Landroid/graphics/RectF;
+    invoke-virtual {v5}, Lcom/vk/cameraui/widgets/shutter/a;->b()Landroid/graphics/RectF;
 
     move-result-object v5
 
@@ -1352,9 +1352,9 @@
     if-gtz v0, :cond_5
 
     .line 37
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b()Landroid/graphics/RectF;
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/a;->b()Landroid/graphics/RectF;
 
     move-result-object v0
 
@@ -1368,9 +1368,9 @@
 
     sub-float/2addr v0, v4
 
-    iget-object v4, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v4, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v4}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b()Landroid/graphics/RectF;
+    invoke-virtual {v4}, Lcom/vk/cameraui/widgets/shutter/a;->b()Landroid/graphics/RectF;
 
     move-result-object v4
 
@@ -1619,11 +1619,11 @@
     iput v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->F:F
 
     .line 58
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->I:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->I:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_f
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 59
     :cond_f
@@ -1636,25 +1636,25 @@
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v0, v1, v2}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, v2}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
 
     move-result-object v0
 
     .line 61
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
     .line 62
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
@@ -1663,11 +1663,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton$h;-><init>(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->I:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->I:Lio/reactivex/disposables/b;
 
     .line 64
     :cond_10
@@ -1688,19 +1688,19 @@
     .locals 5
 
     .line 4
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->c0:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->c0:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 5
     :cond_0
-    new-instance v0, Lcom/vk/cameraui/utils/RxAnimators;
+    new-instance v0, Lcom/vk/cameraui/utils/c;
 
-    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->a()F
+    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/a;->a()F
 
     move-result v1
 
@@ -1708,17 +1708,17 @@
 
     const-wide/16 v3, 0x154
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/cameraui/utils/RxAnimators;-><init>(FFJ)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/cameraui/utils/c;-><init>(FFJ)V
 
     new-instance v1, Lcom/vk/cameraui/widgets/shutter/ShutterButton$l;
 
     invoke-direct {v1, p0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton$l;-><init>(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v1, Lio/reactivex/disposables/Disposable;
+    check-cast v1, Lio/reactivex/disposables/b;
 
-    iput-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->c0:Lio/reactivex/disposables/Disposable;
+    iput-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->c0:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -1839,11 +1839,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b0:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b0:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     return-void
@@ -1942,9 +1942,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->g()F
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/a;->g()F
 
     move-result v0
 
@@ -2013,9 +2013,9 @@
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/a;->a(Landroid/graphics/Canvas;)V
 
     :cond_0
     return-void
@@ -2103,9 +2103,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b()Landroid/graphics/RectF;
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/a;->b()Landroid/graphics/RectF;
 
     move-result-object v0
 
@@ -2115,9 +2115,9 @@
 
     sub-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b()Landroid/graphics/RectF;
+    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/a;->b()Landroid/graphics/RectF;
 
     move-result-object v1
 
@@ -2140,9 +2140,9 @@
     if-gtz v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b()Landroid/graphics/RectF;
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/a;->b()Landroid/graphics/RectF;
 
     move-result-object v0
 
@@ -2152,9 +2152,9 @@
 
     sub-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b()Landroid/graphics/RectF;
+    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/a;->b()Landroid/graphics/RectF;
 
     move-result-object v1
 
@@ -2200,7 +2200,7 @@
 
     .line 6
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -2249,9 +2249,9 @@
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->a(IIII)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/cameraui/widgets/shutter/a;->a(IIII)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->p()V
@@ -2288,9 +2288,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->e(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/a;->e(F)V
 
     return-void
 .end method
@@ -2335,9 +2335,9 @@
     iput p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->d:F
 
     .line 2
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->c(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/a;->c(F)V
 
     return-void
 .end method
@@ -2349,9 +2349,9 @@
     iput-boolean p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->h0:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/a;->a(Z)V
 
     return-void
 .end method
@@ -2378,9 +2378,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/a;->b(Z)V
 
     return-void
 .end method
@@ -2424,9 +2424,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->c(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/a;->c(Z)V
 
     return-void
 .end method
@@ -2435,9 +2435,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->e0:Lcom/vk/cameraui/widgets/shutter/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->g(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/a;->g(F)V
 
     return-void
 .end method

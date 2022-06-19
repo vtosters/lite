@@ -3,7 +3,7 @@
 .source "ChatSettingsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$ChatSettingsComponentCallbackImpl$selectAvatarByCamera$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$ChatSettingsComponentCallbackImpl;->a:Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;
 
-    invoke-static {v0}, Lcom/vk/navigation/ActivityLauncher1;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/ActivityLauncher;
+    invoke-static {v0}, Lcom/vk/navigation/b;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/a;
 
     move-result-object v0
 
@@ -73,17 +73,17 @@
 
     iget-object v1, v1, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$ChatSettingsComponentCallbackImpl;->a:Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;
 
-    invoke-static {v1}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->b(Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;)Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {v1}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->b(Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;)Lcom/vk/im/ui/p/b;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
 
     move-result-object v1
 
     const v2, 0x9807
 
-    invoke-interface {v1, v0, v2}, Lcom/vk/im/ui/p/ImBridge1;->b(Lcom/vk/navigation/ActivityLauncher;I)V
+    invoke-interface {v1, v0, v2}, Lcom/vk/im/ui/p/a;->b(Lcom/vk/navigation/a;I)V
 
     return-void
 .end method

@@ -129,7 +129,7 @@
     .line 3
     check-cast v0, Lcom/facebook/share/model/ShareLinkContent;
 
-    invoke-static {v0}, Lcom/facebook/share/internal/WebDialogParameters;->a(Lcom/facebook/share/model/ShareLinkContent;)Landroid/os/Bundle;
+    invoke-static {v0}, Lcom/facebook/share/internal/c;->a(Lcom/facebook/share/model/ShareLinkContent;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -144,7 +144,7 @@
     .line 5
     check-cast v0, Lcom/facebook/share/model/ShareOpenGraphContent;
 
-    invoke-static {v0}, Lcom/facebook/share/internal/WebDialogParameters;->a(Lcom/facebook/share/model/ShareOpenGraphContent;)Landroid/os/Bundle;
+    invoke-static {v0}, Lcom/facebook/share/internal/c;->a(Lcom/facebook/share/model/ShareOpenGraphContent;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/facebook/internal/Validate;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/internal/s;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/facebook/internal/Validate;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/internal/s;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -217,7 +217,7 @@
     invoke-virtual {v3, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {}, Lcom/facebook/s/a/DeviceRequestsHelper;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/s/a/a;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -244,7 +244,7 @@
     invoke-direct/range {v0 .. v5}, Lcom/facebook/GraphRequest;-><init>(Lcom/facebook/AccessToken;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/GraphRequest$f;)V
 
     .line 9
-    invoke-virtual {v6}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/GraphRequestAsyncTask;
+    invoke-virtual {v6}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/g;
 
     return-void
 .end method
@@ -370,7 +370,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/s/a/DeviceRequestsHelper;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/facebook/s/a/a;->a(Ljava/lang/String;)V
 
     :cond_0
     const-string v0, "error"
@@ -447,7 +447,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/common/R3;->com_facebook_auth_dialog:I
+    sget v1, Lcom/facebook/common/e;->com_facebook_auth_dialog:I
 
     invoke-direct {p1, v0, v1}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
@@ -463,7 +463,7 @@
     move-result-object p1
 
     .line 3
-    sget v0, Lcom/facebook/common/R1;->com_facebook_device_auth_dialog_fragment:I
+    sget v0, Lcom/facebook/common/c;->com_facebook_device_auth_dialog_fragment:I
 
     const/4 v1, 0x0
 
@@ -472,7 +472,7 @@
     move-result-object p1
 
     .line 4
-    sget v0, Lcom/facebook/common/R2;->progress_bar:I
+    sget v0, Lcom/facebook/common/b;->progress_bar:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -483,7 +483,7 @@
     iput-object v0, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment;->a:Landroid/widget/ProgressBar;
 
     .line 5
-    sget v0, Lcom/facebook/common/R2;->confirmation_code:I
+    sget v0, Lcom/facebook/common/b;->confirmation_code:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -494,7 +494,7 @@
     iput-object v0, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment;->b:Landroid/widget/TextView;
 
     .line 6
-    sget v0, Lcom/facebook/common/R2;->cancel_button:I
+    sget v0, Lcom/facebook/common/b;->cancel_button:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -510,7 +510,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 8
-    sget v0, Lcom/facebook/common/R2;->com_facebook_device_auth_instructions:I
+    sget v0, Lcom/facebook/common/b;->com_facebook_device_auth_instructions:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -519,7 +519,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 9
-    sget v1, Lcom/facebook/common/R4;->com_facebook_device_auth_instructions:I
+    sget v1, Lcom/facebook/common/d;->com_facebook_device_auth_instructions:I
 
     .line 10
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

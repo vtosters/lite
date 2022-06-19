@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Action;
+.implements Lc/a/z/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;ILcom/vk/common/links/OpenCallback;Lcom/vk/common/links/LinkProcessor$b;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;ILcom/vk/common/links/f;Lcom/vk/common/links/c$b;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/common/links/OpenCallback;
+.field final synthetic a:Lcom/vk/common/links/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/common/links/OpenCallback;)V
+.method constructor <init>(Lcom/vk/common/links/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$d0;->a:Lcom/vk/common/links/OpenCallback;
+    iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$d0;->a:Lcom/vk/common/links/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,7 +38,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$d0;->a:Lcom/vk/common/links/OpenCallback;
+    iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$d0;->a:Lcom/vk/common/links/f;
 
     if-eqz v0, :cond_0
 
@@ -46,7 +46,7 @@
 
     invoke-direct {v1}, Lcom/vk/common/links/exceptions/DisposableException;-><init>()V
 
-    invoke-interface {v0, v1}, Lcom/vk/common/links/OpenCallback;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lcom/vk/common/links/f;->a(Ljava/lang/Throwable;)V
 
     :cond_0
     return-void

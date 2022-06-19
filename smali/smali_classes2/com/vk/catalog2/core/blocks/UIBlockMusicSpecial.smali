@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/blocks/UIBlockMusicSpecial$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/blocks/UIBlockMusicSpecial$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/blocks/UIBlockMusicSpecial$a;
@@ -207,7 +207,7 @@
     move/from16 v9, p7
 
     .line 1
-    invoke-direct/range {v0 .. v11}, Lcom/vk/catalog2/core/blocks/UIBlock;-><init>(Ljava/lang/String;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/api/dto/CatalogDataType;Ljava/lang/String;ILjava/util/List;JZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/catalog2/core/blocks/UIBlock;-><init>(Ljava/lang/String;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/api/dto/CatalogDataType;Ljava/lang/String;ILjava/util/List;JZILkotlin/jvm/internal/i;)V
 
     move-object/from16 v0, p8
 
@@ -365,13 +365,13 @@
 
     iget-object v0, p0, Lcom/vk/catalog2/core/blocks/UIBlockMusicSpecial;->D:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/c;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0}, Lkotlin/jvm/internal/TypeIntrinsics;->c(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/jvm/internal/s;->c(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v8
 
@@ -463,7 +463,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/blocks/UIBlockMusicSpecial;->D:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -473,7 +473,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/blocks/UIBlockMusicSpecial;->E:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -483,7 +483,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/blocks/UIBlockMusicSpecial;->F:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -493,7 +493,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/blocks/UIBlockMusicSpecial;->H:Lcom/vk/catalog2/core/blocks/actions/UIBlockActionPlayAudiosFromBlock;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -503,7 +503,7 @@
 
     iget-object p1, p1, Lcom/vk/catalog2/core/blocks/UIBlockMusicSpecial;->G:Lcom/vk/catalog2/core/blocks/actions/UIBlockActionShowAll;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -590,7 +590,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p0}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 

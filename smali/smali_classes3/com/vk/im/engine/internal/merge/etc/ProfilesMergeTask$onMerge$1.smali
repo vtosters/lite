@@ -3,12 +3,12 @@
 .source "ProfilesMergeTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    value = Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask;->b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
+.field final synthetic $env:Lcom/vk/im/engine/d;
 
 .field final synthetic $result:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
@@ -36,14 +36,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/ImEnvironment;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/d;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask;
 
     iput-object p2, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$result:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
 
     const/4 p1, 0x1
 
@@ -87,15 +87,15 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/im/engine/internal/merge/contacts/ContactsMergeTask;-><init>(Landroid/util/SparseArray;JZ)V
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object v0
 
     const-string v1, "ContactsMergeTask(profil\u2026placeContacts).merge(env)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/util/SparseArray;
 
@@ -126,15 +126,15 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;-><init>(Landroid/util/SparseArray;J)V
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object v0
 
     const-string v1, "UsersMergeTask(profiles.\u2026ers, syncTime).merge(env)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/util/SparseArray;
 
@@ -145,7 +145,7 @@
     iget-object p1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$result:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     .line 8
-    new-instance v0, Lcom/vk/im/engine/internal/k/b/EmailsMergeTask;
+    new-instance v0, Lcom/vk/im/engine/internal/k/b/a;
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask;
 
@@ -157,17 +157,17 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/k/b/EmailsMergeTask;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/k/b/a;-><init>(Landroid/util/SparseArray;)V
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object v0
 
     const-string v1, "EmailsMergeTask(profiles.emails).merge(env)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/util/SparseArray;
 
@@ -178,7 +178,7 @@
     iget-object p1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$result:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     .line 11
-    new-instance v0, Lcom/vk/im/engine/internal/k/c/GroupsMergeTask;
+    new-instance v0, Lcom/vk/im/engine/internal/k/c/a;
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask;
 
@@ -196,17 +196,17 @@
 
     move-result-wide v2
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/internal/k/c/GroupsMergeTask;-><init>(Landroid/util/SparseArray;J)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/internal/k/c/a;-><init>(Landroid/util/SparseArray;J)V
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object v0
 
     const-string v1, "GroupsMergeTask(profiles\u2026ups, syncTime).merge(env)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/util/SparseArray;
 
@@ -224,7 +224,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask$onMerge$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

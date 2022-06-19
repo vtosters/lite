@@ -1,10 +1,10 @@
 .class public final Lcom/vk/catalog2/core/holders/headers/ToolbarVh;
-.super Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;
+.super Lcom/vk/catalog2/core/y/b;
 .source "ToolbarVh.kt"
 
 # interfaces
 .implements Lcom/vk/core/ui/themes/VKThemeHelper$a;
-.implements Lcom/vk/catalog2/core/util/DraggableChangeStateListener;
+.implements Lcom/vk/catalog2/core/util/i;
 
 
 # annotations
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private B:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.field private B:Lcom/vk/core/dialogs/actionspopup/a;
 
 .field private C:Lcom/vk/catalog2/core/blocks/UIBlockList;
 
@@ -28,7 +28,7 @@
 
 .field private E:Landroid/view/MenuItem;
 
-.field private final F:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+.field private final F:Lcom/vk/catalog2/core/w/a;
 
 .field private final G:Ljava/lang/String;
 
@@ -61,14 +61,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->L:Lcom/vk/catalog2/core/holders/headers/ToolbarVh$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/catalog2/core/util/CatalogOnClickListener;Lcom/vk/catalog2/core/w/CatalogCommandsBus;Ljava/lang/String;IZLcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Z)V
+.method public constructor <init>(Lcom/vk/catalog2/core/util/g;Lcom/vk/catalog2/core/w/a;Ljava/lang/String;IZLcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Z)V
     .locals 0
     .param p4    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -76,9 +76,9 @@
     .end param
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;-><init>(Lcom/vk/catalog2/core/util/CatalogOnClickListener;)V
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/y/b;-><init>(Lcom/vk/catalog2/core/util/g;)V
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->F:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    iput-object p2, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->F:Lcom/vk/catalog2/core/w/a;
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->G:Ljava/lang/String;
 
@@ -93,7 +93,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/catalog2/core/util/CatalogOnClickListener;Lcom/vk/catalog2/core/w/CatalogCommandsBus;Ljava/lang/String;IZLcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/catalog2/core/util/g;Lcom/vk/catalog2/core/w/a;Ljava/lang/String;IZLcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;ZILkotlin/jvm/internal/i;)V
     .locals 10
 
     and-int/lit8 v0, p8, 0x4
@@ -115,7 +115,7 @@
     if-eqz v0, :cond_1
 
     .line 1
-    sget v0, Lcom/vk/catalog2/core/R7;->catalog_toolbar:I
+    sget v0, Lcom/vk/catalog2/core/r;->catalog_toolbar:I
 
     move v6, v0
 
@@ -170,7 +170,7 @@
     move-object v4, p2
 
     .line 2
-    invoke-direct/range {v2 .. v9}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;-><init>(Lcom/vk/catalog2/core/util/CatalogOnClickListener;Lcom/vk/catalog2/core/w/CatalogCommandsBus;Ljava/lang/String;IZLcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Z)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;-><init>(Lcom/vk/catalog2/core/util/g;Lcom/vk/catalog2/core/w/a;Ljava/lang/String;IZLcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Z)V
 
     return-void
 .end method
@@ -183,27 +183,27 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lcom/vk/catalog2/core/R1;->ic_cancel_outline_28:I
+    sget v0, Lcom/vk/catalog2/core/p;->ic_cancel_outline_28:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lcom/vk/catalog2/core/R1;->ic_back_outline_28:I
+    sget v0, Lcom/vk/catalog2/core/p;->ic_back_outline_28:I
 
     .line 36
     :goto_0
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    sget v1, Lcom/vk/catalog2/core/R6;->header_tint_alternate:I
+    sget v1, Lcom/vk/catalog2/core/l;->header_tint_alternate:I
 
     goto :goto_1
 
     :cond_1
-    sget v1, Lcom/vk/catalog2/core/R6;->header_tint:I
+    sget v1, Lcom/vk/catalog2/core/l;->header_tint:I
 
     .line 37
     :goto_1
@@ -227,7 +227,7 @@
     if-eqz v2, :cond_3
 
     .line 38
-    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
+    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
 
     move-result-object v0
 
@@ -245,27 +245,27 @@
 
     if-eqz p1, :cond_0
 
-    sget p1, Lcom/vk/catalog2/core/R1;->ic_done_outline_28:I
+    sget p1, Lcom/vk/catalog2/core/p;->ic_done_outline_28:I
 
     goto :goto_0
 
     :cond_0
-    sget p1, Lcom/vk/catalog2/core/R1;->ic_edit_outline_28:I
+    sget p1, Lcom/vk/catalog2/core/p;->ic_edit_outline_28:I
 
     .line 40
     :goto_0
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    sget v0, Lcom/vk/catalog2/core/R6;->header_tint_alternate:I
+    sget v0, Lcom/vk/catalog2/core/l;->header_tint_alternate:I
 
     goto :goto_1
 
     :cond_1
-    sget v0, Lcom/vk/catalog2/core/R6;->header_tint:I
+    sget v0, Lcom/vk/catalog2/core/l;->header_tint:I
 
     .line 41
     :goto_1
@@ -277,7 +277,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-static {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
+    invoke-static {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
 
     move-result-object p1
 
@@ -293,13 +293,13 @@
     return-void
 
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 43
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -313,11 +313,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;Lcom/vk/core/dialogs/actionspopup/ActionsPopup;)V
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;Lcom/vk/core/dialogs/actionspopup/a;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/a;
 
     return-void
 .end method
@@ -331,11 +331,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;)Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+.method public static final synthetic c(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;)Lcom/vk/catalog2/core/w/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->F:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->F:Lcom/vk/catalog2/core/w/a;
 
     return-object p0
 .end method
@@ -383,7 +383,7 @@
     :cond_1
     const-string p1, "spinnerDrawable"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -403,11 +403,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.method public static final synthetic e(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;)Lcom/vk/core/dialogs/actionspopup/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/a;
 
     return-object p0
 .end method
@@ -442,17 +442,17 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->F:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->F:Lcom/vk/catalog2/core/w/a;
 
-    new-instance v2, Lcom/vk/catalog2/core/w/e/CatalogCommand5;
+    new-instance v2, Lcom/vk/catalog2/core/w/e/c;
 
     sget-object v3, Lcom/vk/catalog2/core/util/EditorMode;->DISCARD_DIFF:Lcom/vk/catalog2/core/util/EditorMode;
 
-    invoke-direct {v2, v3, v0}, Lcom/vk/catalog2/core/w/e/CatalogCommand5;-><init>(Lcom/vk/catalog2/core/util/EditorMode;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v0}, Lcom/vk/catalog2/core/w/e/c;-><init>(Lcom/vk/catalog2/core/util/EditorMode;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a(Lcom/vk/catalog2/core/w/e/CatalogCommand6;Z)V
+    invoke-virtual {v1, v2, v0}, Lcom/vk/catalog2/core/w/a;->a(Lcom/vk/catalog2/core/w/e/b;Z)V
 
     .line 3
     iget-boolean v1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->D:Z
@@ -480,7 +480,7 @@
     move-result-object p1
 
     .line 4
-    sget p2, Lcom/vk/catalog2/core/R10;->title:I
+    sget p2, Lcom/vk/catalog2/core/q;->title:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -488,14 +488,14 @@
 
     const-string p3, "view.findViewById(R.id.title)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->d:Landroid/widget/TextView;
 
     .line 5
-    sget p2, Lcom/vk/catalog2/core/R10;->title_horizontal_offset:I
+    sget p2, Lcom/vk/catalog2/core/q;->title_horizontal_offset:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -509,12 +509,12 @@
     const-string p3, "view.findViewById<View>(\u2026wBackButton\n            }"
 
     .line 7
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->e:Landroid/view/View;
 
     .line 8
-    sget p2, Lcom/vk/catalog2/core/R10;->title_dropdown:I
+    sget p2, Lcom/vk/catalog2/core/q;->title_dropdown:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -530,12 +530,12 @@
     const-string v1, "view.findViewById<ImageV\u2026ble = false\n            }"
 
     .line 10
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->h:Landroid/widget/ImageView;
 
     .line 11
-    sget p2, Lcom/vk/catalog2/core/R10;->owner_photo:I
+    sget p2, Lcom/vk/catalog2/core/q;->owner_photo:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -543,21 +543,21 @@
 
     const-string p3, "view.findViewById(R.id.owner_photo)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/imageloader/view/VKImageView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->g:Lcom/vk/imageloader/view/VKImageView;
 
     .line 12
-    sget p2, Lcom/vk/catalog2/core/R10;->avatar_wrapper:I
+    sget p2, Lcom/vk/catalog2/core/q;->avatar_wrapper:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     .line 13
-    invoke-virtual {p0, p0}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->a(Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
+    invoke-virtual {p0, p0}, Lcom/vk/catalog2/core/y/b;->a(Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object p3
 
@@ -566,12 +566,12 @@
     const-string p3, "view.findViewById<View>(\u2026ToolbarVh))\n            }"
 
     .line 14
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->f:Landroid/view/View;
 
     .line 15
-    sget p2, Lcom/vk/catalog2/core/R10;->toolbar:I
+    sget p2, Lcom/vk/catalog2/core/q;->toolbar:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -582,7 +582,7 @@
     check-cast p3, Landroidx/appcompat/widget/Toolbar;
 
     .line 16
-    sget v1, Lcom/vk/catalog2/core/R8;->catalog_show_all_menu:I
+    sget v1, Lcom/vk/catalog2/core/s;->catalog_show_all_menu:I
 
     invoke-virtual {p3, v1}, Landroidx/appcompat/widget/Toolbar;->inflateMenu(I)V
 
@@ -591,7 +591,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/catalog2/core/R10;->edit:I
+    sget v2, Lcom/vk/catalog2/core/q;->edit:I
 
     invoke-interface {v1, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -607,14 +607,14 @@
     const-string v2, "menu.findItem(R.id.edit)\u2026      }\n                }"
 
     .line 19
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->E:Landroid/view/MenuItem;
 
     const-string v1, "this"
 
     .line 20
-    invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p3}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->a(Landroidx/appcompat/widget/Toolbar;)V
 
@@ -622,7 +622,7 @@
     invoke-direct {p0, p3, v0}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->a(Landroidx/appcompat/widget/Toolbar;Z)V
 
     .line 22
-    sget v0, Lcom/vk/catalog2/core/R9;->accessibility_toolbar_back:I
+    sget v0, Lcom/vk/catalog2/core/u;->accessibility_toolbar_back:I
 
     invoke-virtual {p3, v0}, Landroidx/appcompat/widget/Toolbar;->setNavigationContentDescription(I)V
 
@@ -631,14 +631,14 @@
 
     invoke-direct {v0, p0}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh$c;-><init>(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->a(Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
+    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/y/b;->a(Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object v0
 
     invoke-virtual {p3, v0}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 24
-    invoke-virtual {p0, p0}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->a(Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
+    invoke-virtual {p0, p0}, Lcom/vk/catalog2/core/y/b;->a(Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object v0
 
@@ -647,7 +647,7 @@
     const-string v0, "view.findViewById<Toolba\u2026oolbarVh))\n\n            }"
 
     .line 25
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->c:Landroidx/appcompat/widget/Toolbar;
 
@@ -676,7 +676,7 @@
     const-string p2, "inflater.inflate(layoutI\u2026kObserver(this)\n        }"
 
     .line 28
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -684,7 +684,7 @@
     const-string p1, "titleView"
 
     .line 29
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -700,17 +700,17 @@
     invoke-virtual {v0, p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(Lcom/vk/core/ui/themes/VKThemeHelper$a;)V
 
     .line 45
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 46
-    iput-object v0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iput-object v0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/a;
 
     return-void
 .end method
@@ -725,7 +725,7 @@
 
     if-eqz p1, :cond_3
 
-    sget v1, Lcom/vk/catalog2/core/R6;->header_text:I
+    sget v1, Lcom/vk/catalog2/core/l;->header_text:I
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -762,18 +762,18 @@
     :cond_0
     const-string p1, "editBtn"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 33
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -781,7 +781,7 @@
     const-string p1, "titleView"
 
     .line 34
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -790,7 +790,7 @@
     .locals 4
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->k()Lcom/vk/catalog2/core/blocks/UIBlock;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/y/b;->k()Lcom/vk/catalog2/core/blocks/UIBlock;
 
     move-result-object v0
 
@@ -862,13 +862,13 @@
     return-void
 
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -985,13 +985,13 @@
     goto :goto_3
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 9
     :cond_5
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
@@ -1104,36 +1104,36 @@
     goto :goto_5
 
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 18
     :cond_a
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     :cond_b
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 19
     :cond_c
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 20
     :cond_d
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 21
     :cond_e
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
@@ -1167,25 +1167,25 @@
 
     .line 26
     :cond_10
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 27
     :cond_11
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 28
     :cond_12
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 29
     :cond_13
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 .end method
@@ -1216,7 +1216,7 @@
     .locals 10
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->k()Lcom/vk/catalog2/core/blocks/UIBlock;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/y/b;->k()Lcom/vk/catalog2/core/blocks/UIBlock;
 
     move-result-object v0
 
@@ -1237,7 +1237,7 @@
     move-result v1
 
     .line 3
-    sget v3, Lcom/vk/catalog2/core/R10;->toolbar:I
+    sget v3, Lcom/vk/catalog2/core/q;->toolbar:I
 
     if-ne v1, v3, :cond_5
 
@@ -1282,20 +1282,20 @@
     invoke-direct {v3, p0, p1, v0}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh$onClick$onFilterChanged$1;-><init>(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;Landroid/view/View;Lcom/vk/catalog2/core/blocks/UIBlockList;)V
 
     .line 8
-    sget-object p1, Lcom/vk/catalog2/core/ui/CatalogDialogs;->INSTANCE:Lcom/vk/catalog2/core/ui/CatalogDialogs;
+    sget-object p1, Lcom/vk/catalog2/core/ui/b;->b:Lcom/vk/catalog2/core/ui/b;
 
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->d:Landroid/widget/TextView;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p1, v0, v1, v3}, Lcom/vk/catalog2/core/ui/CatalogDialogs;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-virtual {p1, v0, v1, v3}, Lcom/vk/catalog2/core/ui/b;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/a;
 
     .line 9
-    iget-object p1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iget-object p1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->B:Lcom/vk/core/dialogs/actionspopup/a;
 
     if-eqz p1, :cond_7
 
@@ -1303,7 +1303,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh$onClick$1;-><init>(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/actionspopup/a;->a(Lkotlin/jvm/b/a;)V
 
     goto :goto_0
 
@@ -1311,7 +1311,7 @@
     const-string p1, "titleView"
 
     .line 10
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1320,7 +1320,7 @@
 
     .line 11
     :cond_5
-    sget v0, Lcom/vk/catalog2/core/R10;->avatar_wrapper:I
+    sget v0, Lcom/vk/catalog2/core/q;->avatar_wrapper:I
 
     if-ne v1, v0, :cond_6
 
@@ -1339,7 +1339,7 @@
     move-result v3
 
     .line 12
-    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
+    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
 
     move-result-object v1
 
@@ -1349,7 +1349,7 @@
 
     const-string p1, "v.context"
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -1363,13 +1363,13 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     goto :goto_0
 
     .line 13
     :cond_6
-    invoke-super {p0, p1}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->onClick(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/vk/catalog2/core/y/b;->onClick(Landroid/view/View;)V
 
     :cond_7
     :goto_0

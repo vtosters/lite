@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;-><init>(Landroidx/appcompat/app/AppCompatActivity;Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet$b;)V
+    value = Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;-><init>(Landroidx/appcompat/app/AppCompatActivity;Lcom/vk/music/subscription/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;Lcom/vk/core/dialogs/bottomsheet/k/a$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$a;->a:Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;
 
-    invoke-static {p1}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->c(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lkotlin/jvm/b/Functions;
+    invoke-static {p1}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->c(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lkotlin/jvm/b/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

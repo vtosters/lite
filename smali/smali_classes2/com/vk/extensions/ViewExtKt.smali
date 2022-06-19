@@ -4,15 +4,15 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
-.field private static final b:Lkotlin/Lazy2;
+.field private static final b:Lkotlin/e;
 
-.field private static final c:Lkotlin/Lazy2;
+.field private static final c:Lkotlin/e;
 
 .field private static final d:Landroid/graphics/Rect;
 
-.field private static final e:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private static final e:Lcom/vk/core/util/d1;
 
 
 # direct methods
@@ -23,13 +23,13 @@
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference0Impl;
 
     const-string v3, "libui_release"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
 
     move-result-object v4
 
@@ -37,9 +37,9 @@
 
     const-string v6, "getViewExtClickLock()Lcom/vk/core/util/TimeoutLock;"
 
-    invoke-direct {v2, v4, v5, v6}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v4, v5, v6}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
 
     const/4 v4, 0x0
 
@@ -47,7 +47,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference0Impl;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
 
     move-result-object v4
 
@@ -55,9 +55,9 @@
 
     const-string v6, "getBottomNavigationClickLock()Lcom/vk/core/util/TimeoutLock;"
 
-    invoke-direct {v2, v4, v5, v6}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v4, v5, v6}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
 
     const/4 v4, 0x1
 
@@ -65,7 +65,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference0Impl;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
 
     move-result-object v0
 
@@ -73,33 +73,33 @@
 
     const-string v4, "getLocation()[I"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
 
     const/4 v0, 0x2
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/extensions/ViewExtKt;->a:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/extensions/ViewExtKt;->a:[Lkotlin/u/j;
 
     .line 1
     sget-object v0, Lcom/vk/extensions/ViewExtKt$viewExtClickLock$2;->a:Lcom/vk/extensions/ViewExtKt$viewExtClickLock$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/extensions/ViewExtKt;->b:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/extensions/ViewExtKt;->b:Lkotlin/e;
 
     .line 2
     sget-object v0, Lcom/vk/extensions/ViewExtKt$bottomNavigationClickLock$2;->a:Lcom/vk/extensions/ViewExtKt$bottomNavigationClickLock$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/extensions/ViewExtKt;->c:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/extensions/ViewExtKt;->c:Lkotlin/e;
 
     .line 3
     new-instance v0, Landroid/graphics/Rect;
@@ -111,11 +111,11 @@
     .line 4
     sget-object v0, Lcom/vk/extensions/ViewExtKt$location$2;->a:Lcom/vk/extensions/ViewExtKt$location$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/extensions/ViewExtKt;->e:Lcom/vk/core/util/ThreadLocalDelegate;
+    sput-object v0, Lcom/vk/extensions/ViewExtKt;->e:Lcom/vk/core/util/d1;
 
     return-void
 .end method
@@ -261,26 +261,26 @@
     return-object v0
 .end method
 
-.method public static final a(Lcom/vk/core/ui/BottomNavigationMenuViewClickListener;)Landroid/view/View$OnClickListener;
+.method public static final a(Lcom/vk/core/ui/a;)Landroid/view/View$OnClickListener;
     .locals 1
 
     .line 21
     new-instance v0, Lcom/vk/extensions/ViewExtKt$t;
 
-    invoke-direct {v0, p0}, Lcom/vk/extensions/ViewExtKt$t;-><init>(Lcom/vk/core/ui/BottomNavigationMenuViewClickListener;)V
+    invoke-direct {v0, p0}, Lcom/vk/extensions/ViewExtKt$t;-><init>(Lcom/vk/core/ui/a;)V
 
     return-object v0
 .end method
 
-.method public static final a(Lkotlin/jvm/b/Functions2;)Landroid/view/View$OnClickListener;
+.method public static final a(Lkotlin/jvm/b/b;)Landroid/view/View$OnClickListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)",
             "Landroid/view/View$OnClickListener;"
         }
@@ -289,17 +289,17 @@
     .line 18
     new-instance v0, Lcom/vk/extensions/ViewExtKt$q;
 
-    invoke-direct {v0, p0}, Lcom/vk/extensions/ViewExtKt$q;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p0}, Lcom/vk/extensions/ViewExtKt$q;-><init>(Lkotlin/jvm/b/b;)V
 
     return-object v0
 .end method
 
-.method public static final a(Lkotlin/jvm/b/Functions2;)Landroid/view/View$OnLongClickListener;
+.method public static final a(Lkotlin/jvm/b/b;)Landroid/view/View$OnLongClickListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
             "Ljava/lang/Boolean;",
@@ -311,7 +311,7 @@
     .line 19
     new-instance v0, Lcom/vk/extensions/ViewExtKt$r;
 
-    invoke-direct {v0, p0}, Lcom/vk/extensions/ViewExtKt$r;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p0}, Lcom/vk/extensions/ViewExtKt$r;-><init>(Lkotlin/jvm/b/b;)V
 
     return-object v0
 .end method
@@ -372,7 +372,7 @@
     return-object p0
 .end method
 
-.method public static final a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)Landroid/view/View;
+.method public static final a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)Landroid/view/View;
     .locals 1
     .param p1    # I
         .annotation build Landroidx/annotation/IdRes;
@@ -386,15 +386,15 @@
             "Landroid/view/View;",
             "I",
             "Landroid/view/View$OnClickListener;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)TT;"
         }
     .end annotation
 
     .line 8
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p2
 
@@ -420,7 +420,7 @@
 
     const-string v0, "context"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p0, p1}, Lcom/vk/core/util/ContextExtKt;->f(Landroid/content/Context;I)Ljava/lang/String;
 
@@ -437,7 +437,7 @@
     throw p2
 .end method
 
-.method public static synthetic a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+.method public static synthetic a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -455,14 +455,14 @@
     sget-object p3, Lcom/vk/extensions/ViewExtKt$find$1;->a:Lcom/vk/extensions/ViewExtKt$find$1;
 
     :cond_1
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+.method public static final a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -471,10 +471,10 @@
             ">(",
             "Landroid/view/View;",
             "I",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)TT;"
         }
     .end annotation
@@ -491,9 +491,9 @@
     if-eqz p2, :cond_0
 
     .line 4
-    new-instance p1, Lcom/vk/extensions/ViewExt1;
+    new-instance p1, Lcom/vk/extensions/q;
 
-    invoke-direct {p1, p2}, Lcom/vk/extensions/ViewExt1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, p2}, Lcom/vk/extensions/q;-><init>(Lkotlin/jvm/b/b;)V
 
     goto :goto_0
 
@@ -509,7 +509,7 @@
     return-object p0
 .end method
 
-.method public static synthetic a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+.method public static synthetic a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -520,7 +520,7 @@
 
     .line 2
     :cond_0
-    invoke-static {p0, p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p0, p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p0
 
@@ -549,7 +549,7 @@
 
     const-string p1, "LayoutInflater.from(cont\u2026tRes, this, attachToRoot)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -623,13 +623,13 @@
     return-object v0
 .end method
 
-.method public static final a(Landroid/view/ViewParent;Lcom/vk/common/g/Predicate;)Landroid/view/View;
+.method public static final a(Landroid/view/ViewParent;Lcom/vk/common/g/e;)Landroid/view/View;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewParent;",
-            "Lcom/vk/common/g/Predicate<",
+            "Lcom/vk/common/g/e<",
             "Landroid/view/View;",
             ">;)",
             "Landroid/view/View;"
@@ -645,7 +645,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    invoke-interface {p1, v0}, Lcom/vk/common/g/Predicate;->a(Ljava/lang/Object;)Z
+    invoke-interface {p1, v0}, Lcom/vk/common/g/e;->a(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -679,7 +679,7 @@
     move-result-object v3
 
     .line 68
-    invoke-interface {p1, v3}, Lcom/vk/common/g/Predicate;->a(Ljava/lang/Object;)Z
+    invoke-interface {p1, v3}, Lcom/vk/common/g/e;->a(Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -700,7 +700,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/ViewParent;Lcom/vk/common/g/Predicate;)Landroid/view/View;
+    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/ViewParent;Lcom/vk/common/g/e;)Landroid/view/View;
 
     move-result-object v0
 
@@ -713,12 +713,12 @@
     return-object v0
 .end method
 
-.method public static final a(Lkotlin/jvm/b/Functions2;)Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;
+.method public static final a(Lkotlin/jvm/b/b;)Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/MenuItem;",
             "Ljava/lang/Boolean;",
@@ -730,19 +730,19 @@
     .line 20
     new-instance v0, Lcom/vk/extensions/ViewExtKt$s;
 
-    invoke-direct {v0, p0}, Lcom/vk/extensions/ViewExtKt$s;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p0}, Lcom/vk/extensions/ViewExtKt$s;-><init>(Lkotlin/jvm/b/b;)V
 
     return-object v0
 .end method
 
-.method public static final a(Landroid/widget/EditText;)Lio/reactivex/Observable;
+.method public static final a(Landroid/widget/EditText;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/widget/EditText;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -753,22 +753,22 @@
 
     invoke-direct {v0, p0}, Lcom/vk/extensions/ViewExtKt$a;-><init>(Landroid/widget/EditText;)V
 
-    invoke-static {v0}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
+    invoke-static {v0}, Lc/a/m;->a(Lc/a/o;)Lc/a/m;
 
     move-result-object p0
 
     const-string v0, "Observable.create<String\u2026Listener(watcher) }\n    }"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static final synthetic a()Lcom/vk/core/util/TimeoutLock;
+.method public static final synthetic a()Lcom/vk/core/util/j1;
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->e()Lcom/vk/core/util/TimeoutLock;
+    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->e()Lcom/vk/core/util/j1;
 
     move-result-object v0
 
@@ -890,7 +890,7 @@
     .end param
 
     .line 12
-    invoke-static {}, Lb/h/g/g/BuildInfo;->h()Z
+    invoke-static {}, Lb/h/g/g/b;->h()Z
 
     move-result v0
 
@@ -902,15 +902,15 @@
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;JLkotlin/jvm/b/Functions;)V
+.method public static final a(Landroid/view/View;JLkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "J",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -918,14 +918,14 @@
     .line 25
     new-instance v0, Lcom/vk/extensions/ViewExtKt$d;
 
-    invoke-direct {v0, p0, p3, p1, p2}, Lcom/vk/extensions/ViewExtKt$d;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;J)V
+    invoke-direct {v0, p0, p3, p1, p2}, Lcom/vk/extensions/ViewExtKt$d;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;J)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Landroid/view/View;JLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+.method public static synthetic a(Landroid/view/View;JLkotlin/jvm/b/a;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x1
@@ -936,7 +936,7 @@
 
     .line 24
     :cond_0
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/Functions;)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -958,14 +958,14 @@
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public static final a(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -973,21 +973,21 @@
     .line 28
     new-instance v0, Lcom/vk/extensions/ViewExtKt$b;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/extensions/ViewExtKt$b;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/extensions/ViewExtKt$b;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;Lkotlin/jvm/b/Functions;J)V
+.method public static final a(Landroid/view/View;Lkotlin/jvm/b/a;J)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;J)V"
         }
     .end annotation
@@ -995,23 +995,23 @@
     .line 23
     new-instance v0, Lcom/vk/extensions/ViewExtKt$l;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt$l;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;J)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt$l;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;J)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+.method public static final a(Landroid/view/View;Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/graphics/Rect;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1019,25 +1019,25 @@
     .line 26
     new-instance v0, Lcom/vk/extensions/ViewExtKt$f;
 
-    invoke-direct {v0, p1}, Lcom/vk/extensions/ViewExtKt$f;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p1}, Lcom/vk/extensions/ViewExtKt$f;-><init>(Lkotlin/jvm/b/b;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
 
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;Lkotlin/jvm/b/Functions1;)V
+.method public static final a(Landroid/view/View;Lkotlin/jvm/b/c;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions1<",
+            "Lkotlin/jvm/b/c<",
             "-",
             "Ljava/lang/Float;",
             "-",
             "Ljava/lang/Float;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1053,27 +1053,27 @@
     .line 72
     new-instance v1, Lcom/vk/extensions/ViewExtKt$setOnClickListenerWithCoordinates$1;
 
-    invoke-direct {v1, v0, p1}, Lcom/vk/extensions/ViewExtKt$setOnClickListenerWithCoordinates$1;-><init>(Lcom/vk/extensions/ViewExtKt$n;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {v1, v0, p1}, Lcom/vk/extensions/ViewExtKt$setOnClickListenerWithCoordinates$1;-><init>(Lcom/vk/extensions/ViewExtKt$n;Lkotlin/jvm/b/c;)V
 
-    invoke-static {p0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;Lkotlin/jvm/b/Functions4;)V
+.method public static final a(Landroid/view/View;Lkotlin/jvm/b/d;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions4<",
+            "Lkotlin/jvm/b/d<",
             "-",
             "Landroid/view/View;",
             "-",
             "Ljava/lang/Integer;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1081,7 +1081,7 @@
     .line 41
     new-instance v0, Lcom/vk/extensions/ViewExtKt$g;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/extensions/ViewExtKt$g;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions4;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/extensions/ViewExtKt$g;-><init>(Landroid/view/View;Lkotlin/jvm/b/d;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
@@ -1110,14 +1110,14 @@
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;ZLkotlin/jvm/b/Functions;)V
+.method public static final a(Landroid/view/View;ZLkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "Z",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
@@ -1126,7 +1126,7 @@
     .line 27
     new-instance v0, Lcom/vk/extensions/ViewExtKt$c;
 
-    invoke-direct {v0, p2, p1}, Lcom/vk/extensions/ViewExtKt$c;-><init>(Lkotlin/jvm/b/Functions;Z)V
+    invoke-direct {v0, p2, p1}, Lcom/vk/extensions/ViewExtKt$c;-><init>(Lkotlin/jvm/b/a;Z)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
@@ -1260,13 +1260,13 @@
     return-void
 .end method
 
-.method public static final a(Landroidx/appcompat/widget/Toolbar;Lkotlin/jvm/b/Functions2;)V
+.method public static final a(Landroidx/appcompat/widget/Toolbar;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/appcompat/widget/Toolbar;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/MenuItem;",
             "Ljava/lang/Boolean;",
@@ -1275,7 +1275,7 @@
     .end annotation
 
     .line 14
-    invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->a(Lkotlin/jvm/b/Functions2;)Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;
+    invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->a(Lkotlin/jvm/b/b;)Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;
 
     move-result-object p1
 
@@ -1284,13 +1284,13 @@
     return-void
 .end method
 
-.method public static final a(Lkotlin/jvm/b/Functions;)V
+.method public static final a(Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1306,14 +1306,14 @@
 
     .line 16
     :cond_0
-    invoke-interface {p0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     .line 17
-    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->g()Lcom/vk/core/util/TimeoutLock;
+    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->g()Lcom/vk/core/util/j1;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {p0}, Lcom/vk/core/util/j1;->a()Z
 
     return-void
 .end method
@@ -1335,7 +1335,7 @@
 
     const-string v1, "window"
 
-    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -1343,7 +1343,7 @@
 
     const-string v1, "window.decorView"
 
-    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -1434,7 +1434,7 @@
     return-object v0
 .end method
 
-.method public static final b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)Landroid/view/View;
+.method public static final b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)Landroid/view/View;
     .locals 0
     .param p1    # I
         .annotation build Landroidx/annotation/IdRes;
@@ -1448,9 +1448,9 @@
             "Landroid/view/View;",
             "I",
             "Landroid/view/View$OnClickListener;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)TT;"
         }
     .end annotation
@@ -1463,7 +1463,7 @@
     if-eqz p0, :cond_0
 
     .line 4
-    invoke-interface {p3, p0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p2, :cond_1
 
@@ -1480,7 +1480,7 @@
     return-object p0
 .end method
 
-.method public static synthetic b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+.method public static synthetic b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -1498,7 +1498,7 @@
     sget-object p3, Lcom/vk/extensions/ViewExtKt$findNullable$1;->a:Lcom/vk/extensions/ViewExtKt$findNullable$1;
 
     :cond_1
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p0
 
@@ -1647,13 +1647,13 @@
     return-void
 .end method
 
-.method public static final b(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public static final b(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
@@ -1662,21 +1662,21 @@
     const/4 v0, 0x0
 
     .line 12
-    invoke-static {p0, v0, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ZLkotlin/jvm/b/Functions;)V
+    invoke-static {p0, v0, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ZLkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public static final b(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+.method public static final b(Landroid/view/View;Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1700,7 +1700,7 @@
     :cond_0
     new-instance v0, Lcom/vk/extensions/ViewExtKt$h;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/extensions/ViewExtKt$h;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/extensions/ViewExtKt$h;-><init>(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
@@ -1709,7 +1709,7 @@
     .line 15
     :cond_1
     :goto_0
-    invoke-interface {p1, p0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -1789,11 +1789,11 @@
     return-object v2
 .end method
 
-.method public static final synthetic c()Lcom/vk/core/util/TimeoutLock;
+.method public static final synthetic c()Lcom/vk/core/util/j1;
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->g()Lcom/vk/core/util/TimeoutLock;
+    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->g()Lcom/vk/core/util/j1;
 
     move-result-object v0
 
@@ -1822,7 +1822,7 @@
     const-string p0, "You can\'t increase click area without parent view"
 
     .line 23
-    invoke-static {p0}, Lcom/vk/core/util/DebugUtils;->a(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/vk/core/util/q;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -1927,14 +1927,14 @@
     return-void
 .end method
 
-.method public static final c(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public static final c(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1946,7 +1946,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -1969,29 +1969,29 @@
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
     .line 6
     :cond_0
-    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public static final c(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+.method public static final c(Landroid/view/View;Lkotlin/jvm/b/b;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -2003,7 +2003,7 @@
 
     new-instance v1, Lcom/vk/extensions/ViewExtKt$i;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/extensions/ViewExtKt$i;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/extensions/ViewExtKt$i;-><init>(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
@@ -2102,14 +2102,14 @@
     return-void
 .end method
 
-.method public static final d(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public static final d(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -2124,7 +2124,7 @@
     .line 4
     new-instance v0, Lcom/vk/extensions/ViewExtKt$j;
 
-    invoke-direct {v0, p1}, Lcom/vk/extensions/ViewExtKt$j;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, p1}, Lcom/vk/extensions/ViewExtKt$j;-><init>(Lkotlin/jvm/b/a;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
@@ -2141,22 +2141,22 @@
     throw p0
 .end method
 
-.method public static final d(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+.method public static final d(Landroid/view/View;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->a(Lkotlin/jvm/b/Functions2;)Landroid/view/View$OnClickListener;
+    invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->a(Lkotlin/jvm/b/b;)Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
@@ -2173,11 +2173,11 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->g()Lcom/vk/core/util/TimeoutLock;
+    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->g()Lcom/vk/core/util/j1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/j1;->a()Z
 
     move-result v0
 
@@ -2198,22 +2198,22 @@
     return-object v0
 .end method
 
-.method private static final e()Lcom/vk/core/util/TimeoutLock;
+.method private static final e()Lcom/vk/core/util/j1;
     .locals 3
 
-    sget-object v0, Lcom/vk/extensions/ViewExtKt;->c:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/extensions/ViewExtKt;->c:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/extensions/ViewExtKt;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/extensions/ViewExtKt;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/util/TimeoutLock;
+    check-cast v0, Lcom/vk/core/util/j1;
 
     return-object v0
 .end method
@@ -2231,14 +2231,14 @@
     return-void
 .end method
 
-.method public static final e(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public static final e(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -2250,29 +2250,29 @@
 
     new-instance v1, Lcom/vk/extensions/ViewExtKt$k;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/extensions/ViewExtKt$k;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/extensions/ViewExtKt$k;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     return-void
 .end method
 
-.method public static final e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+.method public static final e(Landroid/view/View;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->a(Lkotlin/jvm/b/Functions2;)Landroid/view/View$OnClickListener;
+    invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->a(Lkotlin/jvm/b/b;)Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
@@ -2312,14 +2312,14 @@
     return-void
 .end method
 
-.method public static final f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public static final f(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -2327,18 +2327,18 @@
     const-wide/16 v0, 0x0
 
     .line 3
-    invoke-static {p0, p1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions;J)V
+    invoke-static {p0, p1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/a;J)V
 
     return-void
 .end method
 
-.method public static final f(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+.method public static final f(Landroid/view/View;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
             "Ljava/lang/Boolean;",
@@ -2347,7 +2347,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->a(Lkotlin/jvm/b/Functions2;)Landroid/view/View$OnLongClickListener;
+    invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->a(Lkotlin/jvm/b/b;)Landroid/view/View$OnLongClickListener;
 
     move-result-object p1
 
@@ -2359,9 +2359,9 @@
 .method public static final f()[I
     .locals 3
 
-    sget-object v0, Lcom/vk/extensions/ViewExtKt;->e:Lcom/vk/core/util/ThreadLocalDelegate;
+    sget-object v0, Lcom/vk/extensions/ViewExtKt;->e:Lcom/vk/core/util/d1;
 
-    sget-object v1, Lcom/vk/extensions/ViewExtKt;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/extensions/ViewExtKt;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
@@ -2369,7 +2369,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
+    invoke-static {v0, v2, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2378,34 +2378,34 @@
     return-object v0
 .end method
 
-.method private static final g()Lcom/vk/core/util/TimeoutLock;
+.method private static final g()Lcom/vk/core/util/j1;
     .locals 3
 
-    sget-object v0, Lcom/vk/extensions/ViewExtKt;->b:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/extensions/ViewExtKt;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/extensions/ViewExtKt;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/extensions/ViewExtKt;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/util/TimeoutLock;
+    check-cast v0, Lcom/vk/core/util/j1;
 
     return-object v0
 .end method
 
-.method public static final g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+.method public static final g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)",
             "Ljava/lang/Object;"
         }
@@ -2414,7 +2414,7 @@
     .line 1
     new-instance v0, Lcom/vk/extensions/ViewExtKt$m;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/extensions/ViewExtKt$m;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/extensions/ViewExtKt$m;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     .line 2
     invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -2510,11 +2510,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->g()Lcom/vk/core/util/TimeoutLock;
+    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->g()Lcom/vk/core/util/j1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->b()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/j1;->b()Z
 
     move-result v0
 
@@ -2760,7 +2760,7 @@
 
     const-string v4, "context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -2774,13 +2774,13 @@
 
     const-string v4, "it.window"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/Window;->getStatusBarColor()I
 
     move-result v3
 
-    invoke-static {v3}, Lcom/vk/core/util/ColorUtils;->b(I)Z
+    invoke-static {v3}, Lcom/vk/core/util/p;->b(I)Z
 
     move-result v3
 

@@ -3,7 +3,7 @@
 .source "TrafficLight.kt"
 
 # interfaces
-.implements Lcom/vk/core/network/b/NetworkTrafficMeter$b;
+.implements Lcom/vk/core/network/b/a$b;
 
 
 # annotations
@@ -21,7 +21,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/core/network/b/NetworkTrafficMeter$b;",
+            "Lcom/vk/core/network/b/a$b;",
             ">;"
         }
     .end annotation
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/network/metrics/traffic/TrafficLight$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/network/metrics/traffic/TrafficLight$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -140,7 +140,7 @@
     iput-object v0, p0, Lcom/vk/core/network/metrics/traffic/TrafficLight;->c:Lcom/vk/core/network/metrics/traffic/TrafficLight$State;
 
     .line 11
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -166,10 +166,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/network/b/NetworkTrafficMeter$b;
+    check-cast v1, Lcom/vk/core/network/b/a$b;
 
     .line 15
-    invoke-interface {v1}, Lcom/vk/core/network/b/NetworkTrafficMeter$b;->a()V
+    invoke-interface {v1}, Lcom/vk/core/network/b/a$b;->a()V
 
     goto :goto_0
 
@@ -221,17 +221,17 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/core/network/b/NetworkTrafficMeter$b;
+    check-cast v2, Lcom/vk/core/network/b/a$b;
 
     .line 4
-    invoke-interface {v2, p1}, Lcom/vk/core/network/b/NetworkTrafficMeter$b;->a(Ljava/lang/String;)Z
+    invoke-interface {v2, p1}, Lcom/vk/core/network/b/a$b;->a(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 5
-    invoke-interface {v2}, Lcom/vk/core/network/b/NetworkTrafficMeter$b;->b()V
+    invoke-interface {v2}, Lcom/vk/core/network/b/a$b;->b()V
 
     goto :goto_0
 
@@ -304,10 +304,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/network/b/NetworkTrafficMeter$b;
+    check-cast v1, Lcom/vk/core/network/b/a$b;
 
     .line 14
-    invoke-interface {v1}, Lcom/vk/core/network/b/NetworkTrafficMeter$b;->b()V
+    invoke-interface {v1}, Lcom/vk/core/network/b/a$b;->b()V
 
     goto :goto_0
 
@@ -356,7 +356,7 @@
 
     .line 7
     :cond_1
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -401,7 +401,7 @@
 
     .line 5
     :cond_0
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -424,7 +424,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/core/network/b/NetworkTrafficMeter$b;",
+            "Lcom/vk/core/network/b/a$b;",
             ">;"
         }
     .end annotation

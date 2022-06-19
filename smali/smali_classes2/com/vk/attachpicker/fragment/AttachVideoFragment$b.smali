@@ -3,12 +3,12 @@
 .source "AttachVideoFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/fragment/AttachVideoFragment;->b(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+    value = Lcom/vk/attachpicker/fragment/AttachVideoFragment;->b(ILcom/vk/lists/t;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -117,13 +117,13 @@
     :goto_1
     iget-object v1, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$b;->a:Lcom/vk/attachpicker/fragment/AttachVideoFragment;
 
-    invoke-static {v1}, Lcom/vk/attachpicker/fragment/AttachVideoFragment;->a(Lcom/vk/attachpicker/fragment/AttachVideoFragment;)Lcom/vk/attachpicker/base/AttachPickerAdapter;
+    invoke-static {v1}, Lcom/vk/attachpicker/fragment/AttachVideoFragment;->a(Lcom/vk/attachpicker/fragment/AttachVideoFragment;)Lcom/vk/attachpicker/base/a;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1, v0}, Lcom/vk/attachpicker/base/AttachPickerAdapter;->J(I)V
+    invoke-virtual {v1, v0}, Lcom/vk/attachpicker/base/a;->J(I)V
 
     :cond_2
     return-object p1

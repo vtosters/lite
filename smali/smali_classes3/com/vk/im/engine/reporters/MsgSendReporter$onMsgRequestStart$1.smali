@@ -3,7 +3,7 @@
 .source "MsgSendReporter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/reporters/MsgSendReporter$a;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -62,38 +62,38 @@
     .line 1
     sget-object v0, Lcom/vk/im/engine/reporters/MsgSendReporter;->g:Lcom/vk/im/engine/reporters/MsgSendReporter;
 
-    invoke-static {v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->e(Lcom/vk/im/engine/reporters/MsgSendReporter;)Lcom/vk/core/util/TimeProvider;
+    invoke-static {v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->e(Lcom/vk/im/engine/reporters/MsgSendReporter;)Lcom/vk/core/util/h1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/util/TimeProvider;->b()J
+    invoke-virtual {v0}, Lcom/vk/core/util/h1;->b()J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->f(J)V
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
+    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->l()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/core/util/v;->l()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->e(Ljava/lang/String;)V
 
     .line 3
-    sget-object v0, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
+    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->i()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/core/util/v;->i()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->d(Ljava/lang/String;)V
 
     .line 4
-    sget-object v0, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
+    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->j()I
+    invoke-virtual {v0}, Lcom/vk/core/util/v;->j()I
 
     move-result v0
 
@@ -110,7 +110,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgRequestStart$1;->a(Lcom/vk/im/engine/reporters/MsgSendReporter$a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
