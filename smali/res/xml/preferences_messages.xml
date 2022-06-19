@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/vtlinterfacemsg">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="voice"
+            android:summary="@string/vtlvoicesummary"
+            android:title="@string/vtlvoice" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="roundedmsgs"
+            android:title="@string/roundedmsgs" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/sett_media">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="compressPhotos"
+            android:title="@string/sett_compress_photos" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="compressVideos"
+            android:title="@string/sett_compress_videos" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="VK Me">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="vkme"
+            android:summary="@string/vkmesumm"
+            android:title="@string/vkme" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="vkme_notifs"
+            android:title="@string/vkme_notifs" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/interfaceemoji">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="alteremoji"
+            android:summary="@string/alteremojisum"
+            android:title="@string/alteremoji" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="systememoji"
+            android:summary="@string/systememojisum"
+            android:title="@string/systememoji" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="isBGStickersEnabled"
+            android:summary="@string/BGStickerssum"
+            android:title="@string/BGStickers" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlother">
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="30"
+            android:dialogTitle="@string/messages_other_choose_count"
+            android:entries="@array/msgcount_value"
+            android:entryValues="@array/msgcount"
+            android:key="msgcount"
+            android:title="@string/messages_other_download_first" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="convUsersOnline"
+            android:summary="@string/convUsersOnlinesum"
+            android:title="@string/convUsersOnline" />
+    </PreferenceCategory>
+</PreferenceScreen>

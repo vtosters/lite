@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="О GMS">
+        <Preference
+            android:enabled="false"
+            android:summary="GMS - Google Mobile Services, необходимый компонент для нормальной работы приложений. Все уведомления, вход в игры, Google Play и прочие функции устройства используют этот компонент"
+            android:title="Что такое GMS?" />
+        <Preference
+            android:enabled="false"
+            android:summary="GMS необходим для работы уведомлений, для работы музыки и ещё очень многих компонентов приложения"
+            android:title="Зачем мне нужен GMS для VTosters?" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Как скачать?">
+        <Preference
+            android:enabled="false"
+            android:summary="Вам необходимо скачать MicroG."
+            android:title="Что тогда делать?" />
+        <Preference
+            android:enabled="false"
+            android:summary="Это открытая альтернатива сервисам GMS с возможностью установить на устройство без GMS"
+            android:title="Что такое MicroG?" />
+        <Preference
+            android:persistent="false"
+            android:title="Официальный сайт MicroG">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://microg.org/download.html" />
+        </Preference>
+        <Preference
+            android:persistent="false"
+            android:title="Скачать MicroG">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://microg.org" />
+        </Preference>
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Что делать дальше?">
+        <Preference
+            android:enabled="false"
+            android:summary="Обновите регистрацию Firebase в прочих настройках"
+            android:title="Что делать после установки MicroG?" />
+    </PreferenceCategory>
+</PreferenceScreen>
