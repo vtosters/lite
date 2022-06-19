@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/vkx_title">
+        <Preference
+            android:enabled="false"
+            android:summary="@string/vkx_why_summary"
+            android:title="@string/vkx_why" />
+        <Preference
+            android:persistent="false"
+            android:title="@string/vkx_download">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://vkx.app" />
+        </Preference>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="libvkx_integration"
+            android:title="@string/vkx_integration" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vk_fix_music_other">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="gcmfix"
+            android:summary="@string/vk_fix_music_summary"
+            android:title="@string/vk_fix_music" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="musicFixNew"
+            android:title="Фикс музыки v2" />
+    </PreferenceCategory>
+</PreferenceScreen>

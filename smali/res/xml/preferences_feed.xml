@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/vtad">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="__dbg_no_ads"
+            android:summary="@string/feed_ads_regular_summary"
+            android:title="@string/vtldads" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="adsgroup"
+            android:summary="@string/vtldgadssummary"
+            android:title="@string/vtldgads" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="__dbg_no_slider_ads"
+            android:summary="@string/feed_ads_carousel_summary"
+            android:title="@string/vtldca" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="adsstories"
+            android:summary="@string/feed_ads_stories_summary"
+            android:title="@string/vtldas" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="copyright_post"
+            android:summary="@string/feed_ads_sources_summary"
+            android:title="@string/feed_ads_sources" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlfilters">
+        <Preference
+            android:enabled="false"
+            android:summary="@string/vtlhtmfsummary"
+            android:title="@string/vtlhtmf" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="spamfilters"
+            android:title="@string/vtlownfilter" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="default_ad_list"
+            android:summary="@string/vtlsfiltersummary"
+            android:title="@string/vtlsfilter" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="shortlinkfilter"
+            android:summary="@string/vtlsfiltershortsummary"
+            android:title="@string/vtlsfiltershort" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="refsfilter"
+            android:summary="@string/vtlsfilterrefssummary"
+            android:title="@string/vtlsfilterrefs" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="shitposting"
+            android:summary="@string/shitpostingsummary"
+            android:title="@string/shitposting" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlrecommend">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="friendsrecomm"
+            android:summary="@string/feed_recommendations_friends_summary"
+            android:title="@string/vtlrecommendfriend" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="authorsrecomm"
+            android:summary="@string/feed_recommendations_authors_summary"
+            android:title="@string/vtlrecommendauthor" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="postsrecomm"
+            android:summary="@string/feed_recommendations_friends_reacted_summary"
+            android:title="@string/vtlrecommendfriendpost" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="captions"
+            android:summary="@string/vtlrecommendmarksummary"
+            android:title="@string/vtlrecommendmark" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlfeedwork">
+        <Preference
+            android:key="officialnewssett"
+            android:summary="@string/officialnewssett_summary"
+            android:title="@string/officialnewssett" />
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="@string/feed_other_update_dialog_title"
+            android:entries="@array/newsupdate_value"
+            android:entryValues="@array/newsupdate"
+            android:key="newsupdate"
+            android:title="@string/feed_other_update" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="commentssorting"
+            android:summary="@string/feed_other_sort_comments_summary"
+            android:title="@string/feed_other_sort_comments" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="feedcache"
+            android:summary="@string/feed_other_cache_summary"
+            android:title="@string/vtlfeedcache" />
+    </PreferenceCategory>
+</PreferenceScreen>

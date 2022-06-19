@@ -3893,4 +3893,22 @@
     <item type="id" name="x_container" />
     <item type="id" name="youtube" />
     <item type="id" name="zhukov" />
+
+    <item type="id" name="import_theme" />
+    <item type="id" name="remove_btn" />
+    <item type="id" name="card"  />
+    <item type="id" name="author" />
+    <item type="id" name="color_picker_view"  />
+    <item type="id" name="text_hex_wrapper"  />
+    <item type="id" name="hex_val"  />
+    <item type="id" name="old_color_panel"  />
+    <item type="id" name="new_color_panel"  />
+    <item type="id" name="btn1"  />
+    <item type="id" name="remove_from_cache" />
+    <item type="id" name="animation_view" />
+    <item type="id" name="msgupdate" />
+    <item type="id" name="btnfoaf" />
+    <item type="id" name="btncopyid" />
+    <item type="id" name="download_video" />
+    <item type="id" name="savedmsg" />
 </resources>

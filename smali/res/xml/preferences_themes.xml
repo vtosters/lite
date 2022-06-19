@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/vtlthemes">
+        <Preference
+            android:enabled="false"
+            android:summary="@string/appearance_theme_info_summary"
+            android:title="@string/appearance_theme_info" />
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="@string/appearance_theme_dialog_title"
+            android:entries="@array/darktheme_value"
+            android:entryValues="@array/darktheme"
+            android:key="darktheme"
+            android:title="@string/appearance_theme_dark_theme" />
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="@string/appearance_theme_dialog_title"
+            android:entries="@array/lighttheme_value"
+            android:entryValues="@array/lighttheme"
+            android:key="lighttheme"
+            android:title="@string/appearance_theme_light_theme" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="oldicons"
+            android:summary="@string/interface_global_old_icons_summary"
+            android:title="@string/interface_global_old_icons" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vticon">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="iconvk"
+            android:summary="@string/vticonsummary"
+            android:title="@string/vticonbtn" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlother">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="navbar"
+            android:summary="@string/appearance_other_color_navbar_summary"
+            android:title="@string/vtlnavbar" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="VKUI_INJ"
+            android:summary="@string/appearance_other_color_webview_summary"
+            android:title="@string/vkuiinj" />
+    </PreferenceCategory>
+</PreferenceScreen>

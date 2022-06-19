@@ -642,4 +642,163 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
+    <string-array name="animations">
+        <item>No Animation</item>
+        <item>Android Q</item>
+        <item>Fade</item>
+        <item>AndroidX</item>
+        <item>Slide</item>
+        <item>System</item>
+        <item>System task</item>
+    </string-array>
+    <string-array name="animations_values">
+        <item>noanim</item>
+        <item>q</item>
+        <item>frag_fade</item>
+        <item>frag_enter</item>
+        <item>slide</item>
+        <item>system</item>
+        <item>system_task</item>
+    </string-array>
+    <string-array name="animations2">
+        <item>No Animation</item>
+        <item>System</item>
+        <item>System task</item>
+    </string-array>
+    <string-array name="animations_values2">
+        <item>noanim</item>
+        <item>system</item>
+        <item>system_task</item>
+    </string-array>
+    <string-array name="language">
+        <item>System</item>
+        <item>English</item>
+        <item>Russian</item>
+        <item>Ukraininan</item>
+    </string-array>
+    <string-array name="lang_value">
+        <item>system</item>
+        <item>en</item>
+        <item>ru</item>
+        <item>uk</item>
+    </string-array>
+    <string-array name="start">
+        <item>Default</item>
+        <item>Newsfeed</item>
+        <item>Dialogs</item>
+        <item>Menu</item>
+        <item>Profile</item>
+        <item>Documents</item>
+        <item>Lives</item>
+        <item>Birthdays</item>
+        <item>Groups</item>
+        <item>Music</item>
+        <item>Friends</item>
+        <item>Photos</item>
+        <item>Videos</item>
+        <item>Settings</item>
+        <item>Apps</item>
+        <item>Discover</item>
+        <item>Notifications</item>
+        <item>Money Transfer</item>
+        <item>Games</item>
+        <item>Bookmarks</item>
+    </string-array>
+    <string-array name="start_values">
+        <item>default</item>
+        <item>newsfeed</item>
+        <item>messenger</item>
+        <item>menu</item>
+        <item>profile</item>
+        <item>docs</item>
+        <item>lives</item>
+        <item>brtd</item>
+        <item>groups</item>
+        <item>music</item>
+        <item>friends</item>
+        <item>photos</item>
+        <item>videos</item>
+        <item>settings</item>
+        <item>apps</item>
+        <item>discover</item>
+        <item>notifications</item>
+        <item>money</item>
+        <item>games</item>
+        <item>liked</item>
+    </string-array>
+    <string-array name="proxy">
+        <item>No Proxy</item>
+        <item>zaborona.help</item>
+        <item>Custom API proxy</item>
+        <item>Custom HTTP</item>
+        <item>Custom HTTPS</item>
+        <item>Custom SOCKS</item>
+    </string-array>
+    <string-array name="proxy_value">
+        <item>noproxy</item>
+        <item>zaborona</item>
+        <item>apiproxy</item>
+        <item>http</item>
+        <item>https</item>
+        <item>socks</item>
+    </string-array>
+    <string-array name="msgcount_value">
+        <item>Default</item>
+        <item>40 messages</item>
+        <item>50 messages</item>
+        <item>70 messages</item>
+        <item>100 messages</item>
+        <item>150 messages</item>
+        <item>200 messages</item>
+    </string-array>
+    <string-array name="msgcount">
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="lighttheme_value">
+        <item>Default</item>
+    </string-array>
+    <string-array name="lighttheme">
+        <item>default</item>
+    </string-array>
+    <string-array name="darktheme_value">
+        <item>Default</item>
+        <item>Amoled</item>
+    </string-array>
+    <string-array name="darktheme">
+        <item>default</item>
+        <item>amoled</item>
+    </string-array>
+    <string-array name="newsupdate_value">
+        <item>Default</item>
+        <item>Do not update</item>
+        <item>Immediately update</item>
+    </string-array>
+    <string-array name="newsupdate">
+        <item>default</item>
+        <item>no_update</item>
+        <item>imd_update</item>
+    </string-array>
+    <string-array name="undel_value">
+        <item>[Deleted]</item>
+        <item>🗑</item>
+        <item>❌</item>
+    </string-array>
+    <string-array name="dateformat_value">
+        <item>Default</item>
+        <item>15 april 18:42</item>
+        <item>15 april 18:42:28</item>
+        <item>15 april 2022 18:42:28</item>
+    </string-array>
+    <string-array name="dateformat">
+        <item>default</item>
+        <item>noseconds</item>
+        <item>noyear</item>
+        <item>full</item>
+    </string-array>
 </resources>

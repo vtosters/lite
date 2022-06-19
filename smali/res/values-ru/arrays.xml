@@ -543,4 +543,81 @@
         <item>В субботу</item>
         <item>В воскресенье</item>
     </string-array>
+    <string-array name="animations2">
+        <item>Без анимации</item>
+        <item>Системный</item>
+        <item>Системный (task)</item>
+    </string-array>
+    <string-array name="animations">
+        <item>Без анимации</item>
+        <item>Android Q</item>
+        <item>Fade</item>
+        <item>AndroidX</item>
+        <item>Слайд</item>
+        <item>Системный</item>
+        <item>Системный (task)</item>
+    </string-array>
+    <string-array name="language">
+        <item>Системный</item>
+        <item>Английский</item>
+        <item>Русский</item>
+        <item>Украинский</item>
+    </string-array>
+    <string-array name="start">
+        <item>По умолчанию</item>
+        <item>Новости</item>
+        <item>Диалоги</item>
+        <item>Меню</item>
+        <item>Профиль</item>
+        <item>Документы</item>
+        <item>Прямые эфиры</item>
+        <item>Дни рождения</item>
+        <item>Группы</item>
+        <item>Музыка</item>
+        <item>Друзья</item>
+        <item>Фото</item>
+        <item>Видео</item>
+        <item>Настройки</item>
+        <item>Приложения</item>
+        <item>Дискавер</item>
+        <item>Уведомления</item>
+        <item>Перевод средств</item>
+        <item>Игры</item>
+        <item>Закладки</item>
+    </string-array>
+    <string-array name="proxy">
+        <item>Без прокси</item>
+        <item>zaborona.help</item>
+        <item>Сторонний прокси для API</item>
+        <item>Сторонний HTTP</item>
+        <item>Сторонний HTTPS</item>
+        <item>Сторонний SOCKS</item>
+    </string-array>
+    <string-array name="msgcount_value">
+        <item>По умолчанию</item>
+        <item>40 сообщений</item>
+        <item>50 сообщений</item>
+        <item>70 сообщений</item>
+        <item>100 сообщений</item>
+        <item>150 сообщений</item>
+        <item>200 сообщений</item>
+    </string-array>
+    <string-array name="darktheme_value">
+        <item>По умолчанию</item>
+        <item>Полностью чёрная</item>
+    </string-array>
+    <string-array name="lighttheme_value">
+        <item>По умолчанию</item>
+    </string-array>
+    <string-array name="undel_value">
+        <item>[Удалено]</item>
+        <item>🗑</item>
+        <item>❌</item>
+    </string-array>
+    <string-array name="dateformat_value">
+        <item>По умолчанию</item>
+        <item>15 апреля в 18:42</item>
+        <item>15 апреля в 18:42:28</item>
+        <item>15 апреля 2022 в 18:42:28</item>
+    </string-array>
 </resources>
