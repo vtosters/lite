@@ -39,6 +39,7 @@ import com.vk.about.AboutAppFragment;
 import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
+import com.vk.webapp.fragments.BugtrackerFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
@@ -58,6 +59,8 @@ import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.SSFS;
+import ru.vtosters.lite.utils.VKUIwrapper;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
 
@@ -153,7 +156,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addPreference(this, "", Globals.getString("vkconnect"), "", "ic_tags_24", preference -> {
             Context context = getContext();
-            Intent a2 = new Navigator(VKConnect.class).b(context);
+            VKUIwrapper.setLink("https://id.vk.com/account");
+            Intent a2 = new Navigator(VKUIwrapper.class).b(context);
             context.startActivity(a2);
             return false;
         });
@@ -174,14 +178,15 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addPreference(this, "", Globals.getString("bugs"), "", "ic_bug_24", preference -> {
             Context context = getContext();
-            Intent a2 = new Navigator(Bugs.class).b(context);
+            Intent a2 = new Navigator(BugtrackerFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
         PreferencesUtil.addPreference(this, "", Globals.getString("vtssfs"), ssfs, "ic_link_24", preference -> {
             Context context = getContext();
-            Intent a2 = new Navigator(SSFS.class).b(context);
+            VKUIwrapper.setLink(SSFS.getSSFSLink());
+            Intent a2 = new Navigator(VKUIwrapper.class).b(context);
             context.startActivity(a2);
             return false;
         });
