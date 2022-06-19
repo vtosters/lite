@@ -1,23 +1,15 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-import static com.vk.core.ui.themes.VKThemeHelper.k;
-import static com.vk.core.ui.themes.VKThemeHelper.l;
-import static com.vk.im.ui.themes.ImTheme.VKAPP_AMOLED;
-import static com.vk.im.ui.themes.ImTheme.VKAPP_DARK;
-import static com.vk.im.ui.themes.ImTheme.VKAPP_LIGHT;
-import static com.vk.im.ui.themes.ImTheme.VKME_AMOLED;
-import static com.vk.im.ui.themes.ImTheme.VKME_DARK;
-import static com.vk.im.ui.themes.ImTheme.VKME_LIGHT;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getCenterScreenCoords;
+import static ru.vtosters.lite.utils.Globals.getCurrentActivity;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
 import static ru.vtosters.lite.utils.Preferences.navbar;
-import static ru.vtosters.lite.utils.Preferences.roundedmsgs;
 import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vksans;
@@ -34,6 +26,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.ColorUtils;
 
 import com.vk.articles.preload.WebCachePreloader;
@@ -41,7 +34,6 @@ import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.ui.themes.MilkshakeHelper;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
-import com.vk.im.ui.themes.ImTheme;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 
@@ -54,7 +46,7 @@ public class Themes {
     );
 
     public static void applyTheme(VKTheme theme) {
-        // TODO
+        setSelectedTheme(getCurrentActivity(), theme);
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
     public static void setTheme(Activity activity) {
@@ -65,6 +57,10 @@ public class Themes {
 
     public static boolean isDarkTheme() {
         return VKThemeHelper.r();
+    }
+
+    public static void setSelectedTheme(Activity paramActivity, VKTheme theme) {
+        VKThemeHelper.k.a(paramActivity, theme, getCenterScreenCoords());
     }
 
     public static int getAccentColor() {
@@ -379,9 +375,9 @@ public class Themes {
         boolean isDarkTheme = isDarkTheme();
 
         if (isDarkTheme){
-            applyTheme(getDarkTheme(), getImDarkTheme());
+            applyTheme(getDarkTheme());
         } else {
-            applyTheme(getLightTheme(), getImLightTheme());
+            applyTheme(getLightTheme());
         }
 
         if (!systemtheme()){
