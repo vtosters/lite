@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:id="@id/profile_show_info" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="40.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_info_20" android:tint="?accent" android:layout_marginStart="@dimen/post_side_padding" />
-    <TextView android:textSize="15.0sp" android:textColor="?accent" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_show_info" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" android:paddingStart="12.0dip" android:paddingEnd="@dimen/post_side_padding" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/profile_show_info"
+    android:layout_width="fill_parent"
+    android:layout_height="40.0dip"
+    android:background="@drawable/highlight"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@id/icon"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/post_side_padding"
+        android:src="@drawable/ic_info_20"
+        android:tint="?accent" />
+
+    <TextView
+        android:id="@id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:includeFontPadding="false"
+        android:paddingStart="12.0dip"
+        android:paddingEnd="@dimen/post_side_padding"
+        android:singleLine="true"
+        android:text="@string/profile_show_info"
+        android:textColor="?accent"
+        android:textSize="15.0sp" />
 </LinearLayout>

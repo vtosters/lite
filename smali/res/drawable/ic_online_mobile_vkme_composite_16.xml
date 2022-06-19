@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@id/online_composite_background">
-        <bitmap android:gravity="center" android:src="@drawable/online_substract" android:tint="?background_content" />
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/online_substract"
+            android:tint="?background_content" />
     </item>
     <item>
-        <bitmap android:gravity="center" android:src="@drawable/online_vkme" />
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/online_vkme" />
     </item>
 </layer-list>

@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/banner_container" android:clipChildren="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:id="@id/pinned_msg_container" android:background="@drawable/vkim_bg_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <FrameLayout android:id="@id/bar_container" android:background="@drawable/vkim_bg_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <FrameLayout android:id="@id/business_notify_container" android:background="@drawable/vkim_bg_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <FrameLayout android:id="@id/player_container" android:background="@drawable/vkim_bg_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <com.vk.core.view.AppBarShadowView android:id="@id/separator" app:appbar_forceMode="separator" style="@style/AppBarShadow" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/banner_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="true"
+    android:clipToPadding="true">
+
+    <FrameLayout
+        android:id="@id/pinned_msg_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vkim_bg_banner" />
+
+    <FrameLayout
+        android:id="@id/bar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vkim_bg_banner" />
+
+    <FrameLayout
+        android:id="@id/business_notify_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vkim_bg_banner" />
+
+    <FrameLayout
+        android:id="@id/player_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vkim_bg_banner" />
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/separator"
+        style="@style/AppBarShadow"
+        app:appbar_forceMode="separator" />
 </FrameLayout>

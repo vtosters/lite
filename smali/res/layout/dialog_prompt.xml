@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:paddingLeft="8.0dip" android:paddingTop="16.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditText android:textColor="?text_primary" android:textColorHint="?text_secondary" android:id="@android:id/input" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:inputType="textMultiLine" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8.0dip"
+    android:paddingTop="16.0dip"
+    android:paddingRight="8.0dip"
+    android:paddingBottom="8.0dip">
+
+    <EditText
+        android:id="@android:id/input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:paddingBottom="18.0dip"
+        android:textColor="?text_primary"
+        android:textColorHint="?text_secondary" />
 </FrameLayout>

@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="220.0dip" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <com.vk.profile.ui.photos.album_list.AlbumImageView android:id="@id/cover" android:layout_width="fill_parent" android:layout_height="124.0dip" />
-        <ImageView android:layout_gravity="start|bottom|center" android:id="@id/privacy_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginBottom="4.0dip" android:src="@drawable/ic_lock_shadow_24" android:layout_marginStart="4.0dip" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/content"
+    android:layout_width="220.0dip"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.vk.profile.ui.photos.album_list.AlbumImageView
+            android:id="@id/cover"
+            android:layout_width="fill_parent"
+            android:layout_height="124.0dip" />
+
+        <ImageView
+            android:id="@id/privacy_icon"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_gravity="start|bottom|center"
+            android:layout_marginStart="4.0dip"
+            android:layout_marginBottom="4.0dip"
+            android:src="@drawable/ic_lock_shadow_24" />
     </FrameLayout>
-    <TextView android:textColor="?text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:lines="1" style="@style/VKUIText.Subhead1" />
-    <TextView android:textColor="?text_subhead" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="12.0dip" android:fontFamily="@font/roboto_regular" style="@style/VKUIText.Caption1" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7.0dip"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="?text_primary" />
+
+    <TextView
+        android:id="@id/subtitle"
+        style="@style/VKUIText.Caption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="?text_subhead" />
 </LinearLayout>

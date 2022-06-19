@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center_horizontal" android:id="@id/empty_icon" android:layout_width="@dimen/vkim_list_empty_icon_size" android:layout_height="@dimen/vkim_list_empty_icon_size" android:scaleType="centerInside" android:contentDescription="@null" />
-    <TextView android:textSize="16.0sp" android:textColor="?text_placeholder" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/empty_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:lineSpacingExtra="4.0dip" android:fontFamily="@string/fontRobotoRegular" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@id/empty_icon"
+        android:layout_width="@dimen/vkim_list_empty_icon_size"
+        android:layout_height="@dimen/vkim_list_empty_icon_size"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@null"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@id/empty_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12.0dip"
+        android:fontFamily="@string/fontRobotoRegular"
+        android:gravity="center"
+        android:lineSpacingExtra="4.0dip"
+        android:textColor="?text_placeholder"
+        android:textSize="16.0sp" />
 </merge>

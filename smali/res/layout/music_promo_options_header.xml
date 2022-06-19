@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="end|center" android:orientation="horizontal" android:id="@id/table_header" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar_title"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="11.0sp" android:textStyle="normal" android:textColor="?text_subhead" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="78.0dip" android:text="@string/music_new_options_table_header_free" android:lineSpacingExtra="3.0sp" android:textAllCaps="true" android:fontFamily="sans-serif-medium" android:letterSpacing="0.04" />
-    <TextView android:textSize="11.0sp" android:textStyle="normal" android:textColor="?accent" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="78.0dip" android:text="@string/music_new_options_table_header_paid" android:lineSpacingExtra="3.0sp" android:textAllCaps="true" android:fontFamily="sans-serif-medium" android:letterSpacing="0.04" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/table_header"
+    android:layout_width="fill_parent"
+    android:layout_height="44.0dip"
+    android:layout_marginStart="16.0dip"
+    android:layout_marginEnd="16.0dip"
+    android:gravity="end|center"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar_title">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.04"
+        android:lineSpacingExtra="3.0sp"
+        android:minWidth="78.0dip"
+        android:text="@string/music_new_options_table_header_free"
+        android:textAllCaps="true"
+        android:textColor="?text_subhead"
+        android:textSize="11.0sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.04"
+        android:lineSpacingExtra="3.0sp"
+        android:minWidth="78.0dip"
+        android:text="@string/music_new_options_table_header_paid"
+        android:textAllCaps="true"
+        android:textColor="?accent"
+        android:textSize="11.0sp"
+        android:textStyle="normal" />
 </LinearLayout>

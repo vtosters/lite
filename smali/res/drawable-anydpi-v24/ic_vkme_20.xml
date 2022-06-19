@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector android:height="20.0dip" android:width="22.0dip" android:viewportWidth="22.0" android:viewportHeight="20.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#ffffffff" android:pathData="M12.15,0.8c5.058,0.01 9.05,4.151 9.05,9.2 0,5.059 -3.992,9.2 -9.05,9.2C5.914,19.2 3.096,12.32 0,10 3.097,7.69 5.915,0.8 12.15,0.8zM12,8.6a1.4,1.4 0,1 0,0 2.8,1.4 1.4,0 0,0 0,-2.8zM8,8.6a1.4,1.4 0,1 0,0 2.8,1.4 1.4,0 0,0 0,-2.8zM16,8.6a1.4,1.4 0,1 0,0 2.8,1.4 1.4,0 0,0 0,-2.8z" android:fillType="nonZero" />
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22.0dip"
+    android:height="20.0dip"
+    android:viewportWidth="22.0"
+    android:viewportHeight="20.0">
+    <path
+        android:fillColor="#ffffffff"
+        android:fillType="nonZero"
+        android:pathData="M12.15,0.8c5.058,0.01 9.05,4.151 9.05,9.2 0,5.059 -3.992,9.2 -9.05,9.2C5.914,19.2 3.096,12.32 0,10 3.097,7.69 5.915,0.8 12.15,0.8zM12,8.6a1.4,1.4 0,1 0,0 2.8,1.4 1.4,0 0,0 0,-2.8zM8,8.6a1.4,1.4 0,1 0,0 2.8,1.4 1.4,0 0,0 0,-2.8zM16,8.6a1.4,1.4 0,1 0,0 2.8,1.4 1.4,0 0,0 0,-2.8z" />
 </vector>

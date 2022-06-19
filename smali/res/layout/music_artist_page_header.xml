@@ -1,13 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="@dimen/music_artist_logo_height" app:collapsedTitleTextAppearance="@style/ArtistNameStyle" app:contentScrim="?header_background" app:expandedTitleGravity="start|bottom|center" app:expandedTitleMarginBottom="16.0dip" app:expandedTitleMarginEnd="68.0dip" app:expandedTitleMarginStart="16.0dip" app:expandedTitleTextAppearance="@style/ArtistNameStyle.Expanded" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:statusBarScrim="@android:color/transparent">
-        <FrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_collapseMode="parallax">
-            <com.vk.imageloader.view.VKImageView android:id="@id/artist_header_image" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
-            <View android:id="@id/artist_header_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-            <TextView android:textSize="16.0dip" android:textStyle="normal" android:textColor="#ccffffff" android:layout_gravity="start|bottom|center" android:id="@id/artist_genre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:includeFontPadding="false" android:lineSpacingExtra="4.0sp" android:layout_marginStart="16.0dip" android:layout_marginEnd="52.0dip" android:letterSpacing="-0.02" app:fontFamily="@font/roboto_regular" style="@style/MusicTextStyle.SingleLine" />
-            <ImageView android:layout_gravity="end|bottom|center" android:id="@id/artist_listen_all" android:background="@drawable/vkui_bg_button_play" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginBottom="16.0dip" android:scaleType="centerInside" android:text="@string/music_artist_listen_all_btn" android:contentDescription="@string/music_talkback_artist_play_all" android:layout_marginEnd="16.0dip" app:fontFamily="@font/roboto_medium" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@id/collapsing_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/music_artist_logo_height"
+        android:fitsSystemWindows="true"
+        app:collapsedTitleTextAppearance="@style/ArtistNameStyle"
+        app:contentScrim="?header_background"
+        app:expandedTitleGravity="start|bottom|center"
+        app:expandedTitleMarginBottom="16.0dip"
+        app:expandedTitleMarginEnd="68.0dip"
+        app:expandedTitleMarginStart="16.0dip"
+        app:expandedTitleTextAppearance="@style/ArtistNameStyle.Expanded"
+        app:layout_scrollFlags="exitUntilCollapsed|scroll"
+        app:statusBarScrim="@android:color/transparent">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fitsSystemWindows="true"
+            app:layout_collapseMode="parallax">
+
+            <com.vk.imageloader.view.VKImageView
+                android:id="@id/artist_header_image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:id="@id/artist_header_background"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <TextView
+                android:id="@id/artist_genre"
+                style="@style/MusicTextStyle.SingleLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom|center"
+                android:layout_marginStart="16.0dip"
+                android:layout_marginEnd="52.0dip"
+                android:layout_marginBottom="16.0dip"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="4.0sp"
+                android:textColor="#ccffffff"
+                android:textSize="16.0dip"
+                android:textStyle="normal"
+                app:fontFamily="@font/roboto_regular" />
+
+            <ImageView
+                android:id="@id/artist_listen_all"
+                android:layout_width="36.0dip"
+                android:layout_height="36.0dip"
+                android:layout_gravity="end|bottom|center"
+                android:layout_marginEnd="16.0dip"
+                android:layout_marginBottom="16.0dip"
+                android:background="@drawable/vkui_bg_button_play"
+                android:contentDescription="@string/music_talkback_artist_play_all"
+                android:scaleType="centerInside"
+                android:text="@string/music_artist_listen_all_btn"
+                android:visibility="gone"
+                app:fontFamily="@font/roboto_medium" />
         </FrameLayout>
-        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_collapseMode="pin" app:titleTextColor="?header_text" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_collapseMode="pin"
+            app:titleTextColor="?header_text" />
     </com.google.android.material.appbar.CollapsingToolbarLayout>
 </merge>

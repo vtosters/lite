@@ -1,8 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:gravity="start|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="480.0dip" android:minHeight="56.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/iv_icon" android:visibility="visible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/iv_avatar" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center_vertical" android:id="@id/iv_avatar" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/sn_content" app:layout_constraintStart_toEndOf="@id/iv_icon" app:layout_constraintTop_toTopOf="parent" />
-    <FrameLayout android:id="@id/additional_view_frame" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_chainStyle="spread" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <com.vk.core.dialogs.snackbar.VkSnackbarContentLayout android:id="@id/vk_snackbar_content" android:paddingTop="13.0dip" android:paddingBottom="13.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_chainStyle="spread" app:layout_constraintStart_toEndOf="@id/iv_avatar" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start|center"
+    android:maxWidth="480.0dip"
+    android:minHeight="56.0dip"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@id/iv_icon"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_marginStart="12.0dip"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/iv_avatar"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="12.0dip"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sn_content"
+        app:layout_constraintStart_toEndOf="@id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@id/additional_view_frame"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vk.core.dialogs.snackbar.VkSnackbarContentLayout
+        android:id="@id/vk_snackbar_content"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:paddingTop="13.0dip"
+        android:paddingBottom="13.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

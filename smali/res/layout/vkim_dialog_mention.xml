@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/list" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:scrollbars="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:fastScrollEnabled="false" android:fadeScrollbars="true" android:fastScrollAlwaysVisible="false" android:requiresFadingEdge="none"
-      xmlns:android="http://schemas.android.com/apk/res/android" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fadeScrollbars="true"
+        android:fastScrollAlwaysVisible="false"
+        android:fastScrollEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:paddingTop="0.0dip"
+        android:paddingBottom="0.0dip"
+        android:requiresFadingEdge="none"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical" />
 </FrameLayout>

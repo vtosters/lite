@@ -1,26 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vtosters.lite.ui.widget.RatioFrameLayout android:id="@id/video_wrap" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:contentDescription="@string/accessibility_video" app:orientation="horizontal">
-        <com.vk.media.player.video.view.VideoTextureView android:layout_gravity="center" android:id="@id/video_display" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <FrameLayout android:id="@id/video_inline_live_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <com.google.android.exoplayer2.ui.VKSubtitleView android:layout_gravity="center" android:id="@id/video_subtitles" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <com.vk.newsfeed.FrescoImageView android:layout_gravity="center" android:id="@id/video_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
-        <View android:layout_gravity="end|center|top" android:id="@id/sound_control" android:background="@drawable/ic_sound_off_shadow_48" android:layout_width="48.0dip" android:layout_height="48.0dip" android:contentDescription="@string/video_accessibility_sound_on" />
-        <LinearLayout android:layout_gravity="top" android:id="@id/duration_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip">
-            <com.vk.libvideo.ui.DurationView android:id="@id/duration_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-            <com.vk.libvideo.live.views.spectators.SpectatorsInlineView android:id="@id/spectators_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <com.vtosters.lite.ui.widget.RatioFrameLayout
+        android:id="@id/video_wrap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/accessibility_video"
+        android:paddingTop="8.0dip"
+        app:orientation="horizontal">
+
+        <com.vk.media.player.video.view.VideoTextureView
+            android:id="@id/video_display"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" />
+
+        <FrameLayout
+            android:id="@id/video_inline_live_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <com.google.android.exoplayer2.ui.VKSubtitleView
+            android:id="@id/video_subtitles"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" />
+
+        <com.vk.newsfeed.FrescoImageView
+            android:id="@id/video_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null" />
+
+        <View
+            android:id="@id/sound_control"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_gravity="end|center|top"
+            android:background="@drawable/ic_sound_off_shadow_48"
+            android:contentDescription="@string/video_accessibility_sound_on" />
+
+        <LinearLayout
+            android:id="@id/duration_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="8.0dip">
+
+            <com.vk.libvideo.ui.DurationView
+                android:id="@id/duration_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.vk.libvideo.live.views.spectators.SpectatorsInlineView
+                android:id="@id/spectators_view"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:visibility="gone" />
         </LinearLayout>
-        <ProgressBar android:layout_gravity="bottom" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.5dip" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/progress_video_feed" />
-        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/play" android:visibility="invisible" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_attachment_video_play" android:contentDescription="@null" />
-        <com.vk.libvideo.ui.PlayButton android:layout_gravity="center" android:id="@id/replay" android:background="@drawable/highlight_video_play" android:visibility="invisible" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/ic_replay_36" android:scaleType="center" android:contentDescription="@string/video_accessibility_replay" />
-        <com.vk.libvideo.ui.VideoErrorView android:layout_gravity="center" android:id="@id/error_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-        <com.vk.libvideo.ui.ActionLinkView android:layout_gravity="start|bottom|center" android:id="@id/video_action_link_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:minHeight="30.0dip" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" android:layout_marginStart="8.0dip" style="@style/VKUIButton.MediaOverlay8" />
-        <com.vk.libvideo.ad.VideoAdLayout android:id="@id/video_instream_ad_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <com.vk.libvideo.ui.VideoRestrictionView android:id="@id/restriction_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:vrv_size="medium" />
+
+        <ProgressBar
+            android:id="@id/progress_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="2.5dip"
+            android:layout_gravity="bottom"
+            android:indeterminate="false"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_video_feed"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@id/play"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:src="@drawable/ic_attachment_video_play"
+            android:visibility="invisible" />
+
+        <com.vk.libvideo.ui.PlayButton
+            android:id="@id/replay"
+            android:layout_width="72.0dip"
+            android:layout_height="72.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/highlight_video_play"
+            android:contentDescription="@string/video_accessibility_replay"
+            android:scaleType="center"
+            android:src="@drawable/ic_replay_36"
+            android:visibility="invisible" />
+
+        <com.vk.libvideo.ui.VideoErrorView
+            android:id="@id/error_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <com.vk.libvideo.ui.ActionLinkView
+            android:id="@id/video_action_link_view"
+            style="@style/VKUIButton.MediaOverlay8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom|center"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:minHeight="30.0dip"
+            android:paddingStart="0.0dip"
+            android:paddingEnd="0.0dip" />
+
+        <com.vk.libvideo.ad.VideoAdLayout
+            android:id="@id/video_instream_ad_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <com.vk.libvideo.ui.VideoRestrictionView
+            android:id="@id/restriction_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            app:vrv_size="medium" />
     </com.vtosters.lite.ui.widget.RatioFrameLayout>
-    <Space android:id="@id/space" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_below="@id/video_wrap" />
-    <TextView android:textAppearance="@string/font_family_medium" android:textSize="15.0sp" android:textColor="?text_muted" android:ellipsize="end" android:id="@id/attach_title" android:paddingLeft="?attach_left_right_padding" android:paddingRight="?attach_left_right_padding" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/post_side_padding" android:layout_marginRight="@dimen/post_side_padding" android:layout_below="@id/space" android:lineSpacingExtra="4.0sp" />
-    <TextView android:textAppearance="@string/font_family_regular" android:textSize="13.0sp" android:textColor="?newsfeed_attach_subtitle_color" android:ellipsize="end" android:id="@id/attach_subtitle" android:paddingLeft="?attach_left_right_padding" android:paddingRight="?attach_left_right_padding" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/post_side_padding" android:layout_marginRight="@dimen/post_side_padding" android:maxLines="1" android:layout_below="@id/attach_title" />
-    <com.vk.core.view.links.LinkedTextView android:textAppearance="@string/font_family_regular" android:textSize="15.0sp" android:textColor="?text_primary" android:id="@id/attach_description" android:paddingLeft="?attach_left_right_padding" android:paddingRight="?attach_left_right_padding" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/post_side_padding" android:layout_marginRight="@dimen/post_side_padding" android:layout_below="@id/attach_subtitle" android:lineSpacingExtra="4.0sp" />
+
+    <Space
+        android:id="@id/space"
+        android:layout_width="fill_parent"
+        android:layout_height="5.0dip"
+        android:layout_below="@id/video_wrap" />
+
+    <TextView
+        android:id="@id/attach_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space"
+        android:layout_marginLeft="@dimen/post_side_padding"
+        android:layout_marginRight="@dimen/post_side_padding"
+        android:ellipsize="end"
+        android:lineSpacingExtra="4.0sp"
+        android:paddingLeft="?attach_left_right_padding"
+        android:paddingRight="?attach_left_right_padding"
+        android:paddingBottom="3.0dip"
+        android:textAppearance="@string/font_family_medium"
+        android:textColor="?text_muted"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@id/attach_subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/attach_title"
+        android:layout_marginLeft="@dimen/post_side_padding"
+        android:layout_marginRight="@dimen/post_side_padding"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="?attach_left_right_padding"
+        android:paddingRight="?attach_left_right_padding"
+        android:paddingBottom="10.0dip"
+        android:textAppearance="@string/font_family_regular"
+        android:textColor="?newsfeed_attach_subtitle_color"
+        android:textSize="13.0sp" />
+
+    <com.vk.core.view.links.LinkedTextView
+        android:id="@id/attach_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/attach_subtitle"
+        android:layout_marginLeft="@dimen/post_side_padding"
+        android:layout_marginRight="@dimen/post_side_padding"
+        android:lineSpacingExtra="4.0sp"
+        android:paddingLeft="?attach_left_right_padding"
+        android:paddingRight="?attach_left_right_padding"
+        android:paddingBottom="10.0dip"
+        android:textAppearance="@string/font_family_regular"
+        android:textColor="?text_primary"
+        android:textSize="15.0sp" />
 </RelativeLayout>

@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <Button android:id="@id/tooltip_start_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start" android:layout_marginStart="8.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <Button android:id="@id/tooltip_center_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Center" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <Button android:id="@id/tooltip_end_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="End" android:layout_marginEnd="18.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <Button android:id="@id/tooltip_overlay_rect_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Overlay" android:layout_marginStart="8.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tooltip_start_btn" />
-    <Button android:id="@id/tooltip_overlay_square_btn" android:layout_width="50.0dip" android:layout_height="wrap_content" android:text="Ov" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tooltip_center_btn" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@id/tooltip_start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:text="Start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@id/tooltip_center_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@id/tooltip_end_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18.0dip"
+        android:text="End"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@id/tooltip_overlay_rect_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:text="Overlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tooltip_start_btn" />
+
+    <Button
+        android:id="@id/tooltip_overlay_square_btn"
+        android:layout_width="50.0dip"
+        android:layout_height="wrap_content"
+        android:text="Ov"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tooltip_center_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

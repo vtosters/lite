@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="?text_primary" android:layout_gravity="start|center|top" android:id="@id/questions_header_count_text" android:paddingTop="16.0dip" android:paddingBottom="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/story_question_header" android:fontFamily="@string/font_family_medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
-    <TextView android:textSize="14.0sp" android:textColor="?accent" android:layout_gravity="end|center|top" android:id="@id/tv_questions_show_all" android:background="@drawable/highlight_radius_4" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="6.0dip" android:text="@string/story_question_show_all" android:fontFamily="@string/font_family_medium" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginStart="6.0dip" android:layout_marginEnd="6.0dip" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/questions_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" android:layout_marginBottom="16.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@id/questions_header_count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center|top"
+        android:fontFamily="@string/font_family_medium"
+        android:paddingStart="16.0dip"
+        android:paddingTop="16.0dip"
+        android:paddingEnd="16.0dip"
+        android:paddingBottom="12.0dip"
+        android:text="@string/story_question_header"
+        android:textColor="?text_primary"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@id/tv_questions_show_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center|top"
+        android:layout_marginStart="6.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginEnd="6.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:background="@drawable/highlight_radius_4"
+        android:fontFamily="@string/font_family_medium"
+        android:paddingStart="10.0dip"
+        android:paddingTop="6.0dip"
+        android:paddingEnd="10.0dip"
+        android:paddingBottom="6.0dip"
+        android:text="@string/story_question_show_all"
+        android:textColor="?accent"
+        android:textSize="14.0sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/questions_recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48.0dip"
+        android:layout_marginBottom="16.0dip" />
 </FrameLayout>

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <selector>
-            <item android:state_selected="true" android:drawable="@drawable/vkui_bg_button_secondary" />
-            <item android:state_selected="false" android:drawable="@drawable/vkui_bg_button_tertiary" />
+            <item
+                android:drawable="@drawable/vkui_bg_button_secondary"
+                android:state_selected="true" />
+            <item
+                android:drawable="@drawable/vkui_bg_button_tertiary"
+                android:state_selected="false" />
         </selector>
     </item>
 </layer-list>

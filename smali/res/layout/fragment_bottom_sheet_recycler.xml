@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.view.FitSystemWindowsFrameLayout android:id="@id/fragment_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@id/blackout" android:background="@color/picker_semi_transparent_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/coordinator" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <LinearLayout android:orientation="vertical" android:id="@id/recycler_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <FrameLayout android:id="@id/list_toolbar" android:focusable="true" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
-                <ImageView android:layout_gravity="center_vertical" android:id="@id/close" android:background="@drawable/highlight_circle" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginStart="4.0dip" />
-                <TextView android:textColor="?text_muted" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="64.0dip" style="@style/VKUIText.Title1" />
+<com.vk.core.view.FitSystemWindowsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/fragment_wrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <View
+        android:id="@id/blackout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/picker_semi_transparent_background" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@id/coordinator"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@id/recycler_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@id/list_toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@id/close"
+                    android:layout_width="48.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4.0dip"
+                    android:background="@drawable/highlight_circle"
+                    android:padding="12.0dip" />
+
+                <TextView
+                    android:id="@id/title"
+                    style="@style/VKUIText.Title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="64.0dip"
+                    android:textColor="?text_muted" />
             </FrameLayout>
-            <View android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:background="?background_page" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="?separator_alpha" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/recycler_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="?background_page" />
         </LinearLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </com.vk.core.view.FitSystemWindowsFrameLayout>

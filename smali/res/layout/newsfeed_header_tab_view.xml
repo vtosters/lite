@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.newsfeed.views.TabTextView android:ellipsize="end" android:gravity="center_vertical" android:id="@android:id/text1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" android:drawablePadding="4.0dip" android:fontFamily="@font/roboto_medium" android:paddingStart="10.5dip" android:paddingEnd="10.5dip" app:autoSizeMaxTextSize="16.0sp" app:autoSizeMinTextSize="14.0sp" app:autoSizeStepGranularity="1.0sp" app:autoSizeTextType="uniform" app:dotSize="4.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<com.vk.newsfeed.views.TabTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/text1"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:drawablePadding="4.0dip"
+    android:ellipsize="end"
+    android:fontFamily="@font/roboto_medium"
+    android:gravity="center_vertical"
+    android:maxLines="1"
+    android:paddingStart="10.5dip"
+    android:paddingEnd="10.5dip"
+    app:autoSizeMaxTextSize="16.0sp"
+    app:autoSizeMinTextSize="14.0sp"
+    app:autoSizeStepGranularity="1.0sp"
+    app:autoSizeTextType="uniform"
+    app:dotSize="4.0dip" />

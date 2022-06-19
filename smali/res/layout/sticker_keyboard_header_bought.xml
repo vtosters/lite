@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip" android:paddingStart="16.0dip" android:paddingEnd="4.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="?text_secondary" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/pack_name" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_alignParentBottom="true" android:lineSpacingExtra="2.0sp" android:textAllCaps="true" android:fontFamily="sans-serif-medium" android:layout_alignParentStart="true" android:letterSpacing="0.02" />
-    <TextView android:layout_gravity="center_vertical" android:id="@id/gift_button" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/stickers_gift" android:layout_alignParentBottom="true" android:lineSpacingExtra="4.0sp" android:layout_alignParentEnd="true" android:letterSpacing="0.01" style="@style/VKUIButton.Tertiary" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40.0dip"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="4.0dip">
+
+    <TextView
+        android:id="@id/pack_name"
+        android:layout_width="wrap_content"
+        android:layout_height="40.0dip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="2.0sp"
+        android:textAllCaps="true"
+        android:textColor="?text_secondary"
+        android:textSize="12.0sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@id/gift_button"
+        style="@style/VKUIButton.Tertiary"
+        android:layout_width="wrap_content"
+        android:layout_height="40.0dip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="4.0sp"
+        android:text="@string/stickers_gift" />
 </RelativeLayout>

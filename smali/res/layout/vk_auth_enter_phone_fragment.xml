@@ -1,12 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="?vk_background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.auth.ui.VkAuthToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/vk_auth_accessibility_back" app:navigationIcon="@drawable/vk_ic_back_outline_28" />
-    <include android:layout_gravity="center_horizontal" android:layout_width="@dimen/vk_auth_client_logo_size" android:layout_height="@dimen/vk_auth_client_logo_size" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" layout="@layout/vk_auth_client_logo_layout" />
-    <TextView android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/vk_auth_sign_up_enter_phone" style="@style/VkAuth.Title.Primary" />
-    <TextView android:layout_gravity="center_horizontal" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginBottom="20.0dip" android:text="@string/vk_auth_sign_up_enter_phone_reason" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/VkAuth.Title.Secondary" />
-    <com.vk.auth.ui.VkAuthPhoneView android:id="@id/phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
-    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" layout="@layout/vk_auth_terms" />
-    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
-    <com.vk.auth.ui.VkLoadingButton android:textSize="16.0sp" android:id="@id/continue_btn" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="16.0dip" android:text="@string/vk_auth_sign_up_get_code" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/VkAuth.Button.Primary" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?vk_background_content"
+    android:orientation="vertical">
+
+    <com.vk.auth.ui.VkAuthToolbar
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        app:navigationContentDescription="@string/vk_auth_accessibility_back"
+        app:navigationIcon="@drawable/vk_ic_back_outline_28" />
+
+    <include
+        layout="@layout/vk_auth_client_logo_layout"
+        android:layout_width="@dimen/vk_auth_client_logo_size"
+        android:layout_height="@dimen/vk_auth_client_logo_size"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="12.0dip" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VkAuth.Title.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4.0dip"
+        android:text="@string/vk_auth_sign_up_enter_phone" />
+
+    <TextView
+        android:id="@id/subtitle"
+        style="@style/VkAuth.Title.Secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="24.0dip"
+        android:layout_marginTop="11.0dip"
+        android:layout_marginEnd="24.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:text="@string/vk_auth_sign_up_enter_phone_reason" />
+
+    <com.vk.auth.ui.VkAuthPhoneView
+        android:id="@id/phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip" />
+
+    <include
+        layout="@layout/vk_auth_terms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="9.0dip"
+        android:layout_marginEnd="16.0dip" />
+
+    <View
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+    <com.vk.auth.ui.VkLoadingButton
+        android:id="@id/continue_btn"
+        style="@style/VkAuth.Button.Primary"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:text="@string/vk_auth_sign_up_get_code"
+        android:textSize="16.0sp" />
 </LinearLayout>

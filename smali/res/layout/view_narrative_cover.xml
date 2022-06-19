@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="4.0dip" app:actualImageScaleType="centerCrop" />
-    <ImageView android:layout_gravity="center" android:id="@id/access_image" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:tint="?placeholder_icon_foreground_primary" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_margin="4.0dip"
+        app:actualImageScaleType="centerCrop" />
+
+    <ImageView
+        android:id="@id/access_image"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="center"
+        android:tint="?placeholder_icon_foreground_primary"
+        android:visibility="gone" />
 </merge>

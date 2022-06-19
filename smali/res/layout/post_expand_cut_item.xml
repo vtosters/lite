@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="16.0sp" android:textColor="?control_foreground" android:id="@id/text" android:background="@drawable/highlight" android:paddingTop="13.0dip" android:paddingBottom="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="2.0sp" android:fontFamily="@string/font_family_medium" android:textDirection="locale" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding" android:hyphenationFrequency="none"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/text"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/highlight"
+    android:fontFamily="@string/font_family_medium"
+    android:hyphenationFrequency="none"
+    android:includeFontPadding="false"
+    android:lineSpacingExtra="2.0sp"
+    android:paddingStart="@dimen/post_side_padding"
+    android:paddingTop="13.0dip"
+    android:paddingEnd="@dimen/post_side_padding"
+    android:paddingBottom="13.0dip"
+    android:textColor="?control_foreground"
+    android:textDirection="locale"
+    android:textSize="16.0sp" />

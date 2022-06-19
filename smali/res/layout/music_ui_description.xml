@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.core.view.links.LinkedTextView android:textSize="15.0dip" android:textStyle="normal" android:textColor="?text_primary" android:id="@id/audio_description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:fontFamily="@font/roboto_regular" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <com.vk.core.view.links.LinkedTextView
+        android:id="@id/audio_description"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:textColor="?text_primary"
+        android:textSize="15.0dip"
+        android:textStyle="normal"
+        app:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

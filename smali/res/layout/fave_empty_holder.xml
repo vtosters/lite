@@ -1,10 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/fl_root_container" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:layout_gravity="top" android:id="@id/v_fave_empty_top_divider" android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
-    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_fave_empty_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="?text_primary" android:layout_gravity="center_horizontal" android:id="@id/tv_fave_empty_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:text="@string/fave_emty_title" android:lineSpacingExtra="4.0sp" android:fontFamily="@string/font_family_medium" />
-        <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="?text_secondary" android:gravity="center" android:layout_gravity="top" android:id="@id/tv_fave_empty_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="4.0sp" android:fontFamily="sans-serif" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" android:letterSpacing="0.01" />
-        <TextView android:id="@id/tv_clear_filter" android:paddingTop="7.0dip" android:paddingBottom="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/fave_clear_filter" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/VKUIButton.Tertiary" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/fl_root_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?background_content">
+
+    <View
+        android:id="@id/v_fave_empty_top_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_gravity="top"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:background="?separator_alpha" />
+
+    <LinearLayout
+        android:id="@id/ll_fave_empty_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/tv_fave_empty_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="7.0dip"
+            android:fontFamily="@string/font_family_medium"
+            android:lineSpacingExtra="4.0sp"
+            android:text="@string/fave_emty_title"
+            android:textColor="?text_primary"
+            android:textSize="20.0sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@id/tv_fave_empty_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4.0sp"
+            android:textColor="?text_secondary"
+            android:textSize="16.0sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@id/tv_clear_filter"
+            style="@style/VKUIButton.Tertiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:paddingStart="16.0dip"
+            android:paddingTop="7.0dip"
+            android:paddingEnd="16.0dip"
+            android:paddingBottom="7.0dip"
+            android:text="@string/fave_clear_filter" />
     </LinearLayout>
 </FrameLayout>

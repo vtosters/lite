@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape>
             <solid android:color="?background_content" />
         </shape>
     </item>
-    <item android:left="?vkapp_common_separator_padding" android:top="47.5dip" android:right="?vkapp_common_separator_padding">
+    <item
+        android:left="?vkapp_common_separator_padding"
+        android:right="?vkapp_common_separator_padding"
+        android:top="47.5dip">
         <shape>
             <solid android:color="?separator_alpha" />
         </shape>

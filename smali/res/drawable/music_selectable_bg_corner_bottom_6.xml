@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="@color/music_selectable_bg_pressed"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/music_selectable_bg_pressed">
     <item android:id="@android:id/mask">
         <shape>
             <solid android:color="#ff000000" />
-            <corners android:bottomLeftRadius="6.0dip" android:bottomRightRadius="6.0dip" />
+            <corners
+                android:bottomLeftRadius="6.0dip"
+                android:bottomRightRadius="6.0dip" />
         </shape>
     </item>
     <item>
@@ -12,13 +14,17 @@
             <item android:state_selected="true">
                 <shape>
                     <solid android:color="@color/music_selectable_bg_selected" />
-                    <corners android:bottomLeftRadius="6.0dip" android:bottomRightRadius="6.0dip" />
+                    <corners
+                        android:bottomLeftRadius="6.0dip"
+                        android:bottomRightRadius="6.0dip" />
                 </shape>
             </item>
             <item>
                 <shape>
                     <solid android:color="@color/music_selectable_bg_normal" />
-                    <corners android:bottomLeftRadius="6.0dip" android:bottomRightRadius="6.0dip" />
+                    <corners
+                        android:bottomLeftRadius="6.0dip"
+                        android:bottomRightRadius="6.0dip" />
                 </shape>
             </item>
         </selector>

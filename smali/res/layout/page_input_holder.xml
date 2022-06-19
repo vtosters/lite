@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/fave_search_input_height"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.core.view.search.RoundedSearchView android:id="@id/search_view" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/fave_search_input_height">
+
+    <com.vk.core.view.search.RoundedSearchView
+        android:id="@id/search_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 </FrameLayout>

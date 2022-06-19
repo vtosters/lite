@@ -7,8 +7,8 @@
             android:title="@string/firebasefix" />
         <Preference
             android:key="stickfix"
-            android:title="@string/other_clear_stickers_cache"
-            android:summary="@string/other_clear_stickers_cache_summary" />
+            android:summary="@string/other_clear_stickers_cache_summary"
+            android:title="@string/other_clear_stickers_cache" />
         <Preference
             android:key="deleteprefs"
             android:summary="@string/other_reset_settings_summary"

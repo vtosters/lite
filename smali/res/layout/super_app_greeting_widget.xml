@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="8.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="21.0sp" android:textColor="?text_primary" android:gravity="center" android:id="@id/message_one" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/tt_commons_medium" />
-    <TextView android:textSize="21.0sp" android:textColor="?text_primary" android:gravity="center" android:id="@id/message_two" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/tt_commons_medium" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingStart="8.0dip"
+    android:paddingEnd="8.0dip">
+
+    <TextView
+        android:id="@id/message_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tt_commons_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textColor="?text_primary"
+        android:textSize="21.0sp" />
+
+    <TextView
+        android:id="@id/message_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tt_commons_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textColor="?text_primary"
+        android:textSize="21.0sp" />
 </FrameLayout>

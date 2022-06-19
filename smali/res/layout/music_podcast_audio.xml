@@ -1,13 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <View android:layout_gravity="center_vertical" android:id="@id/play_pause" android:background="@drawable/ic_attachment_audio_play" android:layout_width="40.0dip" android:layout_height="40.0dip" android:contentDescription="@string/music_talkback_play" android:layout_marginStart="16.0dip" />
-    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-1.0dip" android:minHeight="36.0dip" android:layout_marginStart="68.0dip" android:layout_marginEnd="44.0dip">
-        <TextView android:textColor="?text_primary" android:id="@id/audio_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/podcast_play" android:singleLine="true" style="@style/VKUIText.Title2" />
-        <com.vk.core.widget.FluidHorizontalLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
-            <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:id="@id/time_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="16.0dip" android:singleLine="true" android:includeFontPadding="false" app:vk_layout_isFluid="true" />
-            <View android:layout_gravity="center_vertical" android:id="@id/iv_explicit" android:background="@drawable/ic_explicit_16" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginStart="3.5dip" android:backgroundTint="?icon_outline_secondary" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@id/play_pause"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16.0dip"
+        android:background="@drawable/ic_attachment_audio_play"
+        android:contentDescription="@string/music_talkback_play" />
+
+    <LinearLayout
+        android:id="@id/wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="68.0dip"
+        android:layout_marginTop="-1.0dip"
+        android:layout_marginEnd="44.0dip"
+        android:minHeight="36.0dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/audio_title"
+            style="@style/VKUIText.Title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/podcast_play"
+            android:textColor="?text_primary" />
+
+        <com.vk.core.widget.FluidHorizontalLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.0dip">
+
+            <TextView
+                android:id="@id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:minHeight="16.0dip"
+                android:singleLine="true"
+                android:textColor="?text_secondary"
+                android:textSize="13.0sp"
+                app:vk_layout_isFluid="true" />
+
+            <View
+                android:id="@id/iv_explicit"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3.5dip"
+                android:background="@drawable/ic_explicit_16"
+                android:backgroundTint="?icon_outline_secondary" />
         </com.vk.core.widget.FluidHorizontalLayout>
     </LinearLayout>
-    <ImageView android:layout_gravity="end|center" android:id="@id/audio_menu" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="44.0dip" android:src="@drawable/ic_more_vertical_16" android:scaleType="centerInside" android:tint="?icon_secondary" android:contentDescription="@string/music_talkback_more" android:layout_marginStart="2.0dip" android:layout_marginEnd="6.0dip" style="@style/ActionButton" />
+
+    <ImageView
+        android:id="@id/audio_menu"
+        style="@style/ActionButton"
+        android:layout_width="32.0dip"
+        android:layout_height="44.0dip"
+        android:layout_gravity="end|center"
+        android:layout_marginStart="2.0dip"
+        android:layout_marginEnd="6.0dip"
+        android:contentDescription="@string/music_talkback_more"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_more_vertical_16"
+        android:tint="?icon_secondary"
+        android:visibility="gone" />
 </merge>

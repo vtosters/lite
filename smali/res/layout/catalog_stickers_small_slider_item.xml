@@ -1,11 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/catalog_sticker_pack_item_bg" android:padding="4.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="186.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/pack_image_bg" android:layout_width="@dimen/stiсkers_catalog_small_slider_image_bg_size" android:layout_height="@dimen/stiсkers_catalog_small_slider_image_bg_size" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:roundedCornerRadius="@dimen/stiсkers_catalog_small_slider_image_corner_radius" app:roundingBorderColor="?image_border" app:roundingBorderWidth="0.5dip" />
-    <com.vk.imageloader.view.VKImageView android:id="@id/pack_image" android:layout_width="@dimen/stiсkers_catalog_small_slider_image_size" android:layout_height="@dimen/stiсkers_catalog_small_slider_image_size" app:layout_constraintBottom_toBottomOf="@id/pack_image_bg" app:layout_constraintEnd_toEndOf="@id/pack_image_bg" app:layout_constraintStart_toStartOf="@id/pack_image_bg" app:layout_constraintTop_toTopOf="@id/pack_image_bg" />
-    <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/badge" android:background="@drawable/catalog_stickers_badge" android:paddingTop="0.5dip" android:paddingBottom="0.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.5dip" android:translationX="-4.0dip" android:fontFamily="sans-serif" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" app:layout_constraintStart_toStartOf="@id/pack_image_bg" app:layout_constraintTop_toTopOf="@id/pack_image_bg" />
-    <ImageView android:id="@id/anim_pack" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginBottom="4.0dip" android:src="@drawable/badge_animated_stickers" android:layout_marginEnd="4.0dip" app:layout_constraintBottom_toBottomOf="@id/pack_image_bg" app:layout_constraintEnd_toEndOf="@id/pack_image_bg" />
-    <TextView android:textSize="14.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/pack_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="2" android:fontFamily="sans_serif" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/pack_image_bg" />
-    <TextView android:textSize="13.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/pack_subtitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="1" android:fontFamily="sans_serif" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/pack_title" />
-    <TextView android:textSize="13.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/pack_subsubtitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="1" android:fontFamily="sans_serif" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/pack_subtitle" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="186.0dip"
+    android:background="@drawable/catalog_sticker_pack_item_bg"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="4.0dip">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/pack_image_bg"
+        android:layout_width="@dimen/stiсkers_catalog_small_slider_image_bg_size"
+        android:layout_height="@dimen/stiсkers_catalog_small_slider_image_bg_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="@dimen/stiсkers_catalog_small_slider_image_corner_radius"
+        app:roundingBorderColor="?image_border"
+        app:roundingBorderWidth="0.5dip" />
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/pack_image"
+        android:layout_width="@dimen/stiсkers_catalog_small_slider_image_size"
+        android:layout_height="@dimen/stiсkers_catalog_small_slider_image_size"
+        app:layout_constraintBottom_toBottomOf="@id/pack_image_bg"
+        app:layout_constraintEnd_toEndOf="@id/pack_image_bg"
+        app:layout_constraintStart_toStartOf="@id/pack_image_bg"
+        app:layout_constraintTop_toTopOf="@id/pack_image_bg" />
+
+    <TextView
+        android:id="@id/badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.5dip"
+        android:background="@drawable/catalog_stickers_badge"
+        android:fontFamily="sans-serif"
+        android:paddingStart="4.0dip"
+        android:paddingTop="0.5dip"
+        android:paddingEnd="4.0dip"
+        android:paddingBottom="0.5dip"
+        android:textColor="@color/white"
+        android:textSize="11.0sp"
+        android:textStyle="bold"
+        android:translationX="-4.0dip"
+        app:layout_constraintStart_toStartOf="@id/pack_image_bg"
+        app:layout_constraintTop_toTopOf="@id/pack_image_bg" />
+
+    <ImageView
+        android:id="@id/anim_pack"
+        android:layout_width="16.0dip"
+        android:layout_height="16.0dip"
+        android:layout_marginEnd="4.0dip"
+        android:layout_marginBottom="4.0dip"
+        android:src="@drawable/badge_animated_stickers"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/pack_image_bg"
+        app:layout_constraintEnd_toEndOf="@id/pack_image_bg" />
+
+    <TextView
+        android:id="@id/pack_title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:ellipsize="end"
+        android:fontFamily="sans_serif"
+        android:maxLines="2"
+        android:textColor="?text_primary"
+        android:textSize="14.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pack_image_bg" />
+
+    <TextView
+        android:id="@id/pack_subtitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:ellipsize="end"
+        android:fontFamily="sans_serif"
+        android:maxLines="1"
+        android:textColor="?text_secondary"
+        android:textSize="13.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pack_title" />
+
+    <TextView
+        android:id="@id/pack_subsubtitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dip"
+        android:ellipsize="end"
+        android:fontFamily="sans_serif"
+        android:maxLines="1"
+        android:textColor="?text_secondary"
+        android:textSize="13.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pack_subtitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

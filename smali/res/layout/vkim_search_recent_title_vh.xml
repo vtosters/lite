@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="40.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="17.0sp" android:textColor="?text_subhead" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/vkim_search_recent" android:fontFamily="@font/roboto_medium" android:layout_marginStart="16.0dip" />
-    <ImageView android:layout_gravity="end|center" android:id="@id/vkim_recent_clear" android:background="?selectableItemBackgroundBorderless" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_cancel_24_in_circle_bg_transparent" android:contentDescription="@string/accessibility_clear" android:layout_marginEnd="8.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40.0dip">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="16.0dip"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_vertical"
+        android:text="@string/vkim_search_recent"
+        android:textColor="?text_subhead"
+        android:textSize="17.0sp" />
+
+    <ImageView
+        android:id="@id/vkim_recent_clear"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_gravity="end|center"
+        android:layout_marginEnd="8.0dip"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/accessibility_clear"
+        android:padding="8.0dip"
+        android:src="@drawable/ic_cancel_24_in_circle_bg_transparent" />
 </FrameLayout>

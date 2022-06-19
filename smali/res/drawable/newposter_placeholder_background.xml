@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape android:shape="rectangle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
     <corners android:radius="@dimen/newposter_image_radius" />
-    <stroke android:width="2.0dip" android:color="?accent" android:dashWidth="8.0dip" android:dashGap="8.0dip" />
+    <stroke
+        android:width="2.0dip"
+        android:color="?accent"
+        android:dashWidth="8.0dip"
+        android:dashGap="8.0dip" />
 </shape>

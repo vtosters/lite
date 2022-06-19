@@ -1,18 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/playlist_header_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="180.0dip" android:paddingStart="24.0dip" android:paddingEnd="24.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.music.view.ThumbsImageView android:layout_gravity="center_vertical" android:id="@id/playlist_foreground_image" android:focusable="true" android:layout_width="132.0dip" android:layout_height="132.0dip" android:elevation="5.0dip" app:tiv_background_image="?background_content" app:tiv_border_width="0.5dip" app:tiv_placeholder_resource="@drawable/ic_podcast_48" app:tiv_placeholder_tint="?placeholder_icon_foreground_secondary" />
-    <LinearLayout android:orientation="vertical" android:paddingBottom="7.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:layout_marginStart="156.0dip">
-        <TextView android:textSize="17.0sp" android:textColor="?text_primary" android:id="@id/playlist_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@font/roboto_bold" />
-        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:id="@id/playlist_owner_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:minHeight="18.0dip" android:singleLine="true" android:fontFamily="@font/roboto_regular" style="@style/VKUIText.Subhead1" />
-        <LinearLayout android:orientation="horizontal" android:id="@id/buttons_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
-            <CheckedTextView android:id="@id/subscribe_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PodcastToggleButton.Subscription" />
-            <CheckedTextView android:id="@id/notifications_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" style="@style/PodcastToggleButton.Notification" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/playlist_header_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="180.0dip"
+    android:paddingStart="24.0dip"
+    android:paddingEnd="24.0dip">
+
+    <com.vk.music.view.ThumbsImageView
+        android:id="@id/playlist_foreground_image"
+        android:layout_width="132.0dip"
+        android:layout_height="132.0dip"
+        android:layout_gravity="center_vertical"
+        android:elevation="5.0dip"
+        android:focusable="true"
+        app:tiv_background_image="?background_content"
+        app:tiv_border_width="0.5dip"
+        app:tiv_placeholder_resource="@drawable/ic_podcast_48"
+        app:tiv_placeholder_tint="?placeholder_icon_foreground_secondary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156.0dip"
+        android:layout_marginTop="36.0dip"
+        android:orientation="vertical"
+        android:paddingBottom="7.5dip">
+
+        <TextView
+            android:id="@id/playlist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:singleLine="true"
+            android:textColor="?text_primary"
+            android:textSize="17.0sp" />
+
+        <TextView
+            android:id="@id/playlist_owner_text"
+            style="@style/VKUIText.Subhead1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.0dip"
+            android:fontFamily="@font/roboto_regular"
+            android:minHeight="18.0dip"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp" />
+
+        <LinearLayout
+            android:id="@id/buttons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:orientation="horizontal">
+
+            <CheckedTextView
+                android:id="@id/subscribe_button"
+                style="@style/PodcastToggleButton.Subscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckedTextView
+                android:id="@id/notifications_button"
+                style="@style/PodcastToggleButton.Notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12.0dip"
+                android:visibility="gone" />
         </LinearLayout>
-        <com.vk.core.widget.FluidHorizontalLayout android:gravity="center_vertical" android:id="@id/friends" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:minHeight="32.0dip">
-            <TextView android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/friends_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="30.0dip" android:maxLines="2" android:includeFontPadding="false" app:vk_layout_isFluid="true" style="@style/VKUIText.Subhead2" />
-            <com.vk.core.view.PhotoStripView android:layout_gravity="center_vertical" android:id="@id/friends_photos" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_marginStart="16.0dip" />
+
+        <com.vk.core.widget.FluidHorizontalLayout
+            android:id="@id/friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:gravity="center_vertical"
+            android:minHeight="32.0dip">
+
+            <TextView
+                android:id="@id/friends_text"
+                style="@style/VKUIText.Subhead2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:minHeight="30.0dip"
+                app:vk_layout_isFluid="true" />
+
+            <com.vk.core.view.PhotoStripView
+                android:id="@id/friends_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="32.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16.0dip" />
         </com.vk.core.widget.FluidHorizontalLayout>
     </LinearLayout>
-    <View android:layout_gravity="bottom" android:id="@id/separator" android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+
+    <View
+        android:id="@id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_gravity="bottom"
+        android:background="?separator_alpha" />
 </FrameLayout>

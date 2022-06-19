@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/privacy_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_lock_outline_24" android:tint="@color/sky_300" android:contentDescription="@string/story_privacy_hint_setup" android:layout_marginStart="16.0dip" />
-    <TextView android:textSize="13.0sp" android:textColor="@color/gray_400" android:layout_gravity="center_vertical" android:id="@id/privacy_hint_text" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:lineSpacingExtra="3.0sp" android:paddingEnd="2.0dip" />
-    <TextView android:textSize="14.0sp" android:textColor="@color/sky_300" android:layout_gravity="end|center" android:id="@id/privacy_hint_setup_button" android:background="@drawable/highlight" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="4.0dip" android:text="@string/story_privacy_hint_setup" android:fontFamily="@font/roboto_medium" android:layout_marginEnd="4.0dip" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@id/privacy_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16.0dip"
+        android:contentDescription="@string/story_privacy_hint_setup"
+        android:src="@drawable/ic_lock_outline_24"
+        android:tint="@color/sky_300" />
+
+    <TextView
+        android:id="@id/privacy_hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:lineSpacingExtra="3.0sp"
+        android:paddingEnd="2.0dip"
+        android:paddingRight="2.0dip"
+        android:textColor="@color/gray_400"
+        android:textSize="13.0sp" />
+
+    <TextView
+        android:id="@id/privacy_hint_setup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginEnd="4.0dip"
+        android:layout_marginRight="4.0dip"
+        android:layout_marginBottom="4.0dip"
+        android:background="@drawable/highlight"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="12.0dip"
+        android:text="@string/story_privacy_hint_setup"
+        android:textColor="@color/sky_300"
+        android:textSize="14.0sp" />
 </merge>

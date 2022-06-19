@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout style="@style/UserSmallRoot"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
-    <ImageButton android:id="@id/action" android:background="@drawable/rounded_list_selector" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_list_remove" android:tint="?icon_secondary" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/accessibility_delete" />
-    <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_toLeftOf="@id/action" style="@style/UserSmallTitle" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/UserSmallRoot">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/photo"
+        style="@style/UserSmallPhoto"
+        app:placeholderImage="@drawable/photo_loading" />
+
+    <ImageButton
+        android:id="@id/action"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rounded_list_selector"
+        android:contentDescription="@string/accessibility_delete"
+        android:src="@drawable/ic_list_remove"
+        android:tint="?icon_secondary" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/UserSmallTitle"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@id/action" />
+
     <ImageView style="@style/Online.Small" />
 </RelativeLayout>

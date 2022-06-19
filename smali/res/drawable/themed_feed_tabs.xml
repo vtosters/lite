@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_selected="true">
-        <inset android:insetLeft="4.0dip" android:insetRight="4.0dip" android:insetTop="8.0dip" android:insetBottom="8.0dip">
+        <inset android:insetLeft="4.0dip" android:insetTop="8.0dip" android:insetRight="4.0dip" android:insetBottom="8.0dip">
             <shape>
                 <corners android:radius="16.0dip" />
                 <solid android:color="?accent_alpha10" />
@@ -10,7 +9,7 @@
         </inset>
     </item>
     <item android:state_selected="false">
-        <inset android:insetLeft="4.0dip" android:insetRight="4.0dip" android:insetTop="8.0dip" android:insetBottom="8.0dip">
+        <inset android:insetLeft="4.0dip" android:insetTop="8.0dip" android:insetRight="4.0dip" android:insetBottom="8.0dip">
             <shape>
                 <corners android:radius="16.0dip" />
                 <solid android:color="@color/transparent" />

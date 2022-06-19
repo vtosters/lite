@@ -1,17 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.widget.FluidHorizontalLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.core.view.FrameLayoutSameSize android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="36.0dip">
-        <com.vk.im.ui.views.msg.MsgPartExpiredStorySnippet android:id="@id/expired_story_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:minHeight="28.0dip" />
-        <com.vk.im.ui.views.FrescoImageView android:id="@id/image" android:layout_width="124.0dip" android:layout_height="220.0dip" android:contentDescription="@string/vkim_accessibility_photo" app:vkim_scaleType="center_crop" />
-        <ImageView android:id="@id/image_gradient" android:layout_width="0.0dip" android:layout_height="0.0dip" android:src="@drawable/vkim_msg_part_story_gradient" android:importantForAccessibility="no" app:layout_same_size_as="@id/image" />
-        <ImageView android:layout_gravity="center" android:id="@id/ic_one_time" android:background="@drawable/bg_black_alpha35_circle" android:visibility="gone" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/ic_bomb_outline_28" android:scaleType="centerInside" android:tint="@color/white" android:importantForAccessibility="no" />
-        <com.vk.core.view.UploadProgressView android:layout_gravity="center" android:id="@id/loader" style="@style/VkIm.MsgPart.UploadIndicator.Default" />
-        <TextView android:textSize="13.0sp" android:textColor="@color/white_alpha60" android:id="@id/story_title" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
-        <TextView android:textAppearance="@style/VkIm.MsgPart.Time.TextContrast" android:layout_gravity="bottom|center|right" android:id="@id/time" android:background="?im_msg_part_time_contrast_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:lines="1" />
+<com.vk.core.widget.FluidHorizontalLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.vk.core.view.FrameLayoutSameSize
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="36.0dip">
+
+        <com.vk.im.ui.views.msg.MsgPartExpiredStorySnippet
+            android:id="@id/expired_story_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginBottom="4.0dip"
+            android:minHeight="28.0dip" />
+
+        <com.vk.im.ui.views.FrescoImageView
+            android:id="@id/image"
+            android:layout_width="124.0dip"
+            android:layout_height="220.0dip"
+            android:contentDescription="@string/vkim_accessibility_photo"
+            app:vkim_scaleType="center_crop" />
+
+        <ImageView
+            android:id="@id/image_gradient"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:importantForAccessibility="no"
+            android:src="@drawable/vkim_msg_part_story_gradient"
+            app:layout_same_size_as="@id/image" />
+
+        <ImageView
+            android:id="@id/ic_one_time"
+            android:layout_width="44.0dip"
+            android:layout_height="44.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_black_alpha35_circle"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_bomb_outline_28"
+            android:tint="@color/white"
+            android:visibility="gone" />
+
+        <com.vk.core.view.UploadProgressView
+            android:id="@id/loader"
+            style="@style/VkIm.MsgPart.UploadIndicator.Default"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@id/story_title"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginEnd="12.0dip"
+            android:fontFamily="@font/roboto_regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/white_alpha60"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center|right"
+            android:layout_margin="4.0dip"
+            android:background="?im_msg_part_time_contrast_bg"
+            android:lines="1"
+            android:textAppearance="@style/VkIm.MsgPart.Time.TextContrast" />
     </com.vk.core.view.FrameLayoutSameSize>
-    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/story_info_container" android:background="@drawable/vkim_msg_part_transparent_black_bg" android:visibility="gone" android:layout_width="140.0dip" android:layout_height="wrap_content" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip">
-        <View android:layout_gravity="start" android:id="@id/story_info_image" android:background="@drawable/ic_archive_20" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="8.0dip" android:importantForAccessibility="no" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
-        <TextView android:textSize="13.0sp" android:textColor="@color/white" android:layout_gravity="bottom" android:id="@id/story_info_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:layout_marginBottom="8.0dip" android:text="@string/vkim_story_visible_only_for_you" android:fontFamily="@font/roboto_regular" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
+
+    <FrameLayout
+        android:id="@id/story_info_container"
+        android:layout_width="140.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="4.0dip"
+        android:layout_marginEnd="4.0dip"
+        android:background="@drawable/vkim_msg_part_transparent_black_bg"
+        android:visibility="gone">
+
+        <View
+            android:id="@id/story_info_image"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_gravity="start"
+            android:layout_marginStart="12.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginEnd="12.0dip"
+            android:background="@drawable/ic_archive_20"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@id/story_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="12.0dip"
+            android:layout_marginTop="36.0dip"
+            android:layout_marginEnd="12.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/vkim_story_visible_only_for_you"
+            android:textColor="@color/white"
+            android:textSize="13.0sp" />
     </FrameLayout>
 </com.vk.core.widget.FluidHorizontalLayout>

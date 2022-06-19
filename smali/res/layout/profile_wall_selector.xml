@@ -1,15 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:id="@id/profile_wall_selector" android:background="@drawable/profile_selector_bar" android:paddingLeft="@dimen/post_side_padding_btn" android:paddingRight="@dimen/post_side_padding_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <HorizontalScrollView android:scrollbars="none" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0">
-        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/post_side_padding_menu" android:layout_marginEnd="48.0dip">
-            <TextView android:textSize="14.0dip" android:textColor="@color/tab_color_state_list" android:gravity="center" android:id="@id/profile_wall_all_posts" android:background="@drawable/profile_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/wall_all_posts" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
-            <TextView android:textSize="14.0dip" android:textColor="@color/tab_color_state_list" android:gravity="center" android:id="@id/profile_wall_owner_posts" android:background="@drawable/profile_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/wall_owners_posts" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
-            <TextView android:textSize="14.0dip" android:textColor="@color/tab_color_state_list" android:gravity="center" android:id="@id/profile_wall_archived_posts" android:background="@drawable/profile_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/wall_tab_archived_posts" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/profile_wall_selector"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/profile_selector_bar"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/post_side_padding_btn"
+    android:paddingRight="@dimen/post_side_padding_btn"
+    android:weightSum="1.0">
+
+    <HorizontalScrollView
+        android:layout_width="0.0dip"
+        android:layout_height="48.0dip"
+        android:layout_weight="1.0"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48.0dip"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/post_side_padding_menu">
+
+            <TextView
+                android:id="@id/profile_wall_all_posts"
+                android:layout_width="wrap_content"
+                android:layout_height="48.0dip"
+                android:background="@drawable/profile_selector"
+                android:fontFamily="@string/font_family_medium"
+                android:gravity="center"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:singleLine="true"
+                android:text="@string/wall_all_posts"
+                android:textColor="@color/tab_color_state_list"
+                android:textSize="14.0dip" />
+
+            <TextView
+                android:id="@id/profile_wall_owner_posts"
+                android:layout_width="wrap_content"
+                android:layout_height="48.0dip"
+                android:background="@drawable/profile_selector"
+                android:fontFamily="@string/font_family_medium"
+                android:gravity="center"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:singleLine="true"
+                android:text="@string/wall_owners_posts"
+                android:textColor="@color/tab_color_state_list"
+                android:textSize="14.0dip" />
+
+            <TextView
+                android:id="@id/profile_wall_archived_posts"
+                android:layout_width="wrap_content"
+                android:layout_height="48.0dip"
+                android:background="@drawable/profile_selector"
+                android:fontFamily="@string/font_family_medium"
+                android:gravity="center"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:singleLine="true"
+                android:text="@string/wall_tab_archived_posts"
+                android:textColor="@color/tab_color_state_list"
+                android:textSize="14.0dip"
+                android:visibility="gone" />
         </LinearLayout>
     </HorizontalScrollView>
-    <FrameLayout android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/post_side_padding_menu">
-        <ImageView android:id="@id/profile_wall_post_btn" android:background="@drawable/highlight_icon" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_search_24" android:scaleType="center" android:tint="?icon_secondary" android:contentDescription="@string/accessibility_search_by_user" />
-        <ProgressBar android:layout_gravity="center" android:id="@id/profile_wall_progress" android:layout_width="24.0dip" android:layout_height="24.0dip" android:indeterminateTint="?activity_indicator_tint" android:indeterminateTintMode="src_in" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/post_side_padding_menu">
+
+        <ImageView
+            android:id="@id/profile_wall_post_btn"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:background="@drawable/highlight_icon"
+            android:contentDescription="@string/accessibility_search_by_user"
+            android:scaleType="center"
+            android:src="@drawable/ic_search_24"
+            android:tint="?icon_secondary"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@id/profile_wall_progress"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_gravity="center"
+            android:indeterminateTint="?activity_indicator_tint"
+            android:indeterminateTintMode="src_in" />
     </FrameLayout>
 </LinearLayout>

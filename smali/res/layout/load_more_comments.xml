@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vtosters.lite.LoadMoreCommentsView android:id="@id/load_more_comments" android:background="@drawable/highlight" android:paddingBottom="0.5dip" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="48.5dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="14.0sp" android:textColor="?control_foreground" android:gravity="center" android:layout_gravity="center" android:id="@id/loadmore_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:fontFamily="@string/font_family_medium" />
-    <ProgressBar android:layout_gravity="center" android:id="@id/loadmore_progress" android:visibility="invisible" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginBottom="1.0dip" android:indeterminateTint="?activity_indicator_tint" android:indeterminateTintMode="src_in" />
+<com.vtosters.lite.LoadMoreCommentsView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/load_more_comments"
+    android:layout_width="fill_parent"
+    android:layout_height="48.5dip"
+    android:background="@drawable/highlight"
+    android:focusableInTouchMode="false"
+    android:paddingBottom="0.5dip">
+
+    <TextView
+        android:id="@id/loadmore_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="1.0dip"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center"
+        android:textColor="?control_foreground"
+        android:textSize="14.0sp" />
+
+    <ProgressBar
+        android:id="@id/loadmore_progress"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="1.0dip"
+        android:indeterminateTint="?activity_indicator_tint"
+        android:indeterminateTintMode="src_in"
+        android:visibility="invisible" />
 </com.vtosters.lite.LoadMoreCommentsView>

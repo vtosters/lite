@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <bitmap android:src="@drawable/vkim_bg_button_down_shadow" />
     </item>
     <item>
-        <bitmap android:src="@drawable/vkim_bg_button_down_white" android:tint="?float_button_background" android:tintMode="src_in" />
+        <bitmap
+            android:src="@drawable/vkim_bg_button_down_white"
+            android:tint="?float_button_background"
+            android:tintMode="src_in" />
     </item>
-    <item android:gravity="center" android:left="14.0dip" android:top="12.0dip" android:right="22.0dip" android:bottom="16.0dip">
-        <bitmap android:src="@drawable/ic_scroll_arrows_16" android:tint="?float_button_foreground" />
+    <item
+        android:bottom="16.0dip"
+        android:gravity="center"
+        android:left="14.0dip"
+        android:right="22.0dip"
+        android:top="12.0dip">
+        <bitmap
+            android:src="@drawable/ic_scroll_arrows_16"
+            android:tint="?float_button_foreground" />
     </item>
-    <item android:drawable="@drawable/vkim_ripple_circle_highlight" android:left="3.0dip" android:top="3.0dip" android:right="3.0dip" android:bottom="7.0dip" />
+    <item
+        android:bottom="7.0dip"
+        android:drawable="@drawable/vkim_ripple_circle_highlight"
+        android:left="3.0dip"
+        android:right="3.0dip"
+        android:top="3.0dip" />
 </layer-list>

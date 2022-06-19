@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/appkit_loader_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/app_bar_layout"
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
         <include layout="@layout/appkit_toolbar" />
     </com.google.android.material.appbar.AppBarLayout>
-    <com.vk.market.orders.MarketCartRecycler android:id="@id/recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" android:layout_marginBottom="68.0dip" />
-    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/bottom_layout" android:background="?background_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="68.0dip">
-        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:gravity="center" android:id="@id/cart_has_unavailable_goods_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:minHeight="14.0dip" android:text="@string/market_cart_one_of_items_is_unavailable" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-        <TextView android:textSize="16.0sp" android:id="@id/place_order_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="12.0dip" android:minHeight="44.0dip" android:text="@string/market_cart_place_order" android:includeFontPadding="false" android:lineSpacingExtra="1.0sp" android:fontFamily="@string/font_family_medium" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/cart_has_unavailable_goods_text" style="@style/VKUIButton.Primary" />
-        <View android:id="@id/disabled_button_click_target" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/place_order_button" app:layout_constraintEnd_toEndOf="@id/place_order_button" app:layout_constraintStart_toStartOf="@id/place_order_button" app:layout_constraintTop_toTopOf="@id/place_order_button" />
+
+    <com.vk.market.orders.MarketCartRecycler
+        android:id="@id/recycler"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:layout_marginBottom="68.0dip" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?background_content"
+        android:minHeight="68.0dip"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@id/cart_has_unavailable_goods_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:gravity="center"
+            android:minHeight="14.0dip"
+            android:text="@string/market_cart_one_of_items_is_unavailable"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/place_order_button"
+            style="@style/VKUIButton.Primary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:fontFamily="@string/font_family_medium"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="1.0sp"
+            android:minHeight="44.0dip"
+            android:text="@string/market_cart_place_order"
+            android:textSize="16.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cart_has_unavailable_goods_text" />
+
+        <View
+            android:id="@id/disabled_button_click_target"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/place_order_button"
+            app:layout_constraintEnd_toEndOf="@id/place_order_button"
+            app:layout_constraintStart_toStartOf="@id/place_order_button"
+            app:layout_constraintTop_toTopOf="@id/place_order_button" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" style="@style/AppBarShadow" />
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/shadow"
+        style="@style/AppBarShadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

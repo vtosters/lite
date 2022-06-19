@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/cardContainer" android:paddingTop="8.0dip" android:paddingBottom="22.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:textColor="?text_primary" android:gravity="center_vertical" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/price" />
-        <LinearLayout android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip">
-            <EditText android:textColor="?text_primary" android:textColorHint="?text_secondary" android:id="@id/startPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:maxLines="1" android:lines="1" android:selectAllOnFocus="true" android:maxLength="11" android:inputType="number" style="@style/EditTextStandard" />
-            <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/price_divider" />
-            <EditText android:textColor="?text_primary" android:textColorHint="?text_secondary" android:id="@id/finishPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:maxLines="1" android:lines="1" android:selectAllOnFocus="true" android:maxLength="11" android:inputType="number" style="@style/EditTextStandard" />
-            <TextView android:textColor="?text_primary" android:id="@id/currency" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@id/cardContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8.0dip"
+        android:paddingBottom="22.0dip">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/post_side_padding"
+            android:paddingRight="@dimen/post_side_padding"
+            android:text="@string/price"
+            android:textColor="?text_primary" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40.0dip"
+            android:paddingLeft="@dimen/post_side_padding"
+            android:paddingRight="@dimen/post_side_padding">
+
+            <EditText
+                android:id="@id/startPrice"
+                style="@style/EditTextStandard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:minWidth="50.0dip"
+                android:selectAllOnFocus="true"
+                android:textColor="?text_primary"
+                android:textColorHint="?text_secondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip"
+                android:text="@string/price_divider"
+                android:textColor="?text_secondary"
+                android:textSize="14.0dip" />
+
+            <EditText
+                android:id="@id/finishPrice"
+                style="@style/EditTextStandard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:minWidth="50.0dip"
+                android:selectAllOnFocus="true"
+                android:textColor="?text_primary"
+                android:textColorHint="?text_secondary" />
+
+            <TextView
+                android:id="@id/currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip"
+                android:textColor="?text_primary" />
         </LinearLayout>
     </FrameLayout>
 </FrameLayout>

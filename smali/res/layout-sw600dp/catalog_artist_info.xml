@@ -1,10 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/artist_header_image" android:layout_width="0.0dip" android:layout_height="0.0dip" app:actualImageScaleType="centerCrop" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="2" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <View android:id="@id/artist_header_background" android:background="@color/music_artist_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <TextView android:textSize="24.0sp" android:textStyle="normal" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/artist_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:lineSpacingExtra="4.0sp" android:layout_marginStart="32.0dip" android:layout_marginEnd="16.0dip" app:fontFamily="@font/roboto_black" app:layout_constrainedWidth="true" app:layout_constraintBottom_toTopOf="@id/artist_genre" app:layout_constraintEnd_toStartOf="@id/subscription_state" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="1.0" app:layout_constraintVertical_chainStyle="packed" app:layout_goneMarginBottom="32.0dip" />
-    <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="?header_text" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/artist_genre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="32.0dip" android:singleLine="true" android:includeFontPadding="false" android:lineSpacingExtra="4.0sp" android:layout_marginStart="32.0dip" android:layout_marginEnd="8.0dip" app:fontFamily="@font/roboto_regular" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/subscription_state" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/artist_name" style="@style/MusicTextStyle.SingleLine" />
-    <com.vk.music.view.MusicActionButton android:id="@id/artist_listen_all" android:background="@drawable/music_white_rounded_button" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginBottom="32.0dip" android:layout_below="@id/artist_genre" android:layout_centerInParent="true" android:paddingStart="12.0dip" android:paddingEnd="20.0dip" android:layout_marginEnd="32.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:mab_icon="@drawable/ic_play_24" app:mab_text="@string/music_artist_listen_all_btn" style="@style/MusicActionButton.White" />
-    <ImageView android:id="@id/subscription_state" android:background="@drawable/bg_artist_subscribe" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:scaleType="centerInside" android:layout_marginEnd="12.0dip" app:layout_constraintBottom_toBottomOf="@id/artist_listen_all" app:layout_constraintEnd_toStartOf="@id/artist_listen_all" app:layout_constraintTop_toTopOf="@id/artist_listen_all" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/artist_header_image"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:actualImageScaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@id/artist_header_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/music_artist_bg_color" />
+
+    <TextView
+        android:id="@id/artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4.0sp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="24.0sp"
+        android:textStyle="normal"
+        app:fontFamily="@font/roboto_black"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/artist_genre"
+        app:layout_constraintEnd_toStartOf="@id/subscription_state"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_goneMarginBottom="32.0dip" />
+
+    <TextView
+        android:id="@id/artist_genre"
+        style="@style/MusicTextStyle.SingleLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_marginBottom="32.0dip"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="4.0sp"
+        android:singleLine="true"
+        android:textColor="?header_text"
+        android:textSize="16.0sp"
+        android:textStyle="normal"
+        app:fontFamily="@font/roboto_regular"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/subscription_state"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/artist_name" />
+
+    <com.vk.music.view.MusicActionButton
+        android:id="@id/artist_listen_all"
+        style="@style/MusicActionButton.White"
+        android:layout_width="wrap_content"
+        android:layout_height="36.0dip"
+        android:layout_below="@id/artist_genre"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="32.0dip"
+        android:layout_marginBottom="32.0dip"
+        android:background="@drawable/music_white_rounded_button"
+        android:paddingStart="12.0dip"
+        android:paddingEnd="20.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:mab_icon="@drawable/ic_play_24"
+        app:mab_text="@string/music_artist_listen_all_btn" />
+
+    <ImageView
+        android:id="@id/subscription_state"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:background="@drawable/bg_artist_subscribe"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/artist_listen_all"
+        app:layout_constraintEnd_toStartOf="@id/artist_listen_all"
+        app:layout_constraintTop_toTopOf="@id/artist_listen_all" />
 </androidx.constraintlayout.widget.ConstraintLayout>

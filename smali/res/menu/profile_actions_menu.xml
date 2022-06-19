@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@id/menu_copy" android:title="@string/profile_actions_copy" />
-    <item android:id="@id/menu_share" android:title="@string/profile_actions_share" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/menu_copy"
+        android:title="@string/profile_actions_copy" />
+    <item
+        android:id="@id/menu_share"
+        android:title="@string/profile_actions_share" />
 </menu>

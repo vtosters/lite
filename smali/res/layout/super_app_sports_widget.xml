@@ -1,22 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/container" android:background="@drawable/bg_widgets_gray" android:layout_width="fill_parent" android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="40.0dip" layout="@layout/super_app_widget_header" />
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/single_match_container" android:background="@drawable/highlight_radius_14" android:paddingTop="48.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="12.0dip">
-        <com.vk.imageloader.view.VKImageView android:id="@id/icon_team_a" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="centerInside" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:roundedCornerRadius="28.0dip" />
-        <com.vk.imageloader.view.VKImageView android:id="@id/icon_team_b" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="centerInside" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:roundedCornerRadius="28.0dip" />
-        <TextView android:textSize="20.0sp" android:textColor="?text_primary" android:gravity="center" android:id="@id/score_team_a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:singleLine="true" android:includeFontPadding="false" app:layout_constraintEnd_toStartOf="@id/score" app:layout_constraintTop_toTopOf="parent" />
-        <TextView android:textSize="20.0sp" android:textColor="?text_primary" android:gravity="center" android:id="@id/score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="@string/super_app_match_score" android:includeFontPadding="false" app:layout_constraintEnd_toStartOf="@id/icon_team_b" app:layout_constraintStart_toEndOf="@id/icon_team_a" app:layout_constraintTop_toTopOf="parent" />
-        <TextView android:textSize="20.0sp" android:textColor="?text_primary" android:gravity="center" android:id="@id/score_team_b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:includeFontPadding="false" app:layout_constraintStart_toEndOf="@id/score" app:layout_constraintTop_toTopOf="parent" />
-        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:gravity="center" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:singleLine="true" android:includeFontPadding="false" app:layout_constraintEnd_toStartOf="@id/icon_team_b" app:layout_constraintStart_toEndOf="@id/icon_team_a" app:layout_constraintTop_toBottomOf="@id/score" />
-        <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/middle_guideline" android:layout_width="wrap_content" android:layout_height="fill_parent" app:layout_constraintGuide_percent="0.5" />
-        <TextView android:textSize="13.0sp" android:textColor="?text_primary" android:gravity="start" android:id="@id/name_team_a" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" app:layout_constraintEnd_toStartOf="@id/middle_guideline" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/icon_team_a" />
-        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:gravity="start" android:id="@id/desc_team_a" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" app:layout_constraintEnd_toStartOf="@id/middle_guideline" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/name_team_a" />
-        <TextView android:textSize="13.0sp" android:textColor="?text_primary" android:gravity="end" android:id="@id/name_team_b" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/middle_guideline" app:layout_constraintTop_toBottomOf="@id/icon_team_b" />
-        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:gravity="end" android:id="@id/desc_team_b" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/middle_guideline" app:layout_constraintTop_toBottomOf="@id/name_team_b" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_widgets_gray">
+
+    <include
+        android:id="@id/header_container"
+        layout="@layout/super_app_widget_header"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/single_match_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/highlight_radius_14"
+        android:paddingStart="12.0dip"
+        android:paddingTop="48.0dip"
+        android:paddingEnd="12.0dip"
+        android:paddingBottom="12.0dip"
+        android:visibility="gone">
+
+        <com.vk.imageloader.view.VKImageView
+            android:id="@id/icon_team_a"
+            android:layout_width="56.0dip"
+            android:layout_height="56.0dip"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundedCornerRadius="28.0dip" />
+
+        <com.vk.imageloader.view.VKImageView
+            android:id="@id/icon_team_b"
+            android:layout_width="56.0dip"
+            android:layout_height="56.0dip"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundedCornerRadius="28.0dip" />
+
+        <TextView
+            android:id="@id/score_team_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7.0dip"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="?text_primary"
+            android:textSize="20.0sp"
+            app:layout_constraintEnd_toStartOf="@id/score"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7.0dip"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/super_app_match_score"
+            android:textColor="?text_primary"
+            android:textSize="20.0sp"
+            app:layout_constraintEnd_toStartOf="@id/icon_team_b"
+            app:layout_constraintStart_toEndOf="@id/icon_team_a"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/score_team_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7.0dip"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="?text_primary"
+            android:textSize="20.0sp"
+            app:layout_constraintStart_toEndOf="@id/score"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp"
+            app:layout_constraintEnd_toStartOf="@id/icon_team_b"
+            app:layout_constraintStart_toEndOf="@id/icon_team_a"
+            app:layout_constraintTop_toBottomOf="@id/score" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@id/middle_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@id/name_team_a"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="?text_primary"
+            android:textSize="13.0sp"
+            app:layout_constraintEnd_toStartOf="@id/middle_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon_team_a" />
+
+        <TextView
+            android:id="@id/desc_team_a"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp"
+            app:layout_constraintEnd_toStartOf="@id/middle_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_team_a" />
+
+        <TextView
+            android:id="@id/name_team_b"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="?text_primary"
+            android:textSize="13.0sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/middle_guideline"
+            app:layout_constraintTop_toBottomOf="@id/icon_team_b" />
+
+        <TextView
+            android:id="@id/desc_team_b"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/middle_guideline"
+            app:layout_constraintTop_toBottomOf="@id/name_team_b" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <LinearLayout android:orientation="vertical" android:id="@id/multi_matches_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="42.0dip">
-        <androidx.recyclerview.widget.RecyclerView android:id="@id/matches_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-        <TextView android:textSize="15.0sp" android:textColor="?accent" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/matches_button" android:background="@drawable/highlight_radius_14_bottom" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="4.0dip" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+
+    <LinearLayout
+        android:id="@id/multi_matches_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42.0dip"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/matches_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@id/matches_button"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="4.0dip"
+            android:background="@drawable/highlight_radius_14_bottom"
+            android:gravity="center_vertical"
+            android:paddingStart="12.0dip"
+            android:paddingEnd="12.0dip"
+            android:paddingBottom="4.0dip"
+            android:textColor="?accent"
+            android:textSize="15.0sp" />
     </LinearLayout>
 </FrameLayout>

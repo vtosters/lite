@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="@drawable/vkui_bg_button_white" android:layout_width="fill_parent" android:layout_height="@dimen/vkim_bot_button_min_height" android:layout_margin="@dimen/vkim_bot_button_margin"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.core.view.TintTextView android:textSize="16.0dip" android:textColor="?text_muted" android:ellipsize="end" android:layout_gravity="center" android:id="@id/vkim_bot_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:singleLine="true" android:includeFontPadding="false" android:drawablePadding="8.0dip" android:drawableTint="?accent" />
-    <ImageView android:layout_gravity="end" android:id="@id/vkim_ic_link" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_margin="1.0dip" android:src="@drawable/ic_link_24" android:tint="?text_muted" />
-    <ProgressBar android:layout_gravity="center" android:id="@id/vkim_progress_bar" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:indeterminateTint="?activity_indicator_tint" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/vkim_bot_button_min_height"
+    android:layout_margin="@dimen/vkim_bot_button_margin"
+    android:background="@drawable/vkui_bg_button_white">
+
+    <com.vk.core.view.TintTextView
+        android:id="@id/vkim_bot_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8.0dip"
+        android:drawablePadding="8.0dip"
+        android:drawableTint="?accent"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textColor="?text_muted"
+        android:textSize="16.0dip" />
+
+    <ImageView
+        android:id="@id/vkim_ic_link"
+        android:layout_width="12.0dip"
+        android:layout_height="12.0dip"
+        android:layout_gravity="end"
+        android:layout_margin="1.0dip"
+        android:src="@drawable/ic_link_24"
+        android:tint="?text_muted" />
+
+    <ProgressBar
+        android:id="@id/vkim_progress_bar"
+        android:layout_width="16.0dip"
+        android:layout_height="16.0dip"
+        android:layout_gravity="center"
+        android:indeterminateTint="?activity_indicator_tint"
+        android:visibility="gone" />
 </FrameLayout>

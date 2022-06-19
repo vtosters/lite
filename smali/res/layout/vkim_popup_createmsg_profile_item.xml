@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.im.ui.views.avatars.AvatarView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:contentDescription="@null" android:importantForAccessibility="no" style="@style/VkIm.AvatarView" />
-    <TextView android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:contentDescription="@null" android:importantForAccessibility="no" android:layout_marginStart="12.0dip" android:layout_marginEnd="8.0dip" style="@style/VKUIText.Headline" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:minHeight="48.0dip"
+    android:orientation="horizontal"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="16.0dip">
+
+    <com.vk.im.ui.views.avatars.AvatarView
+        android:id="@id/avatar"
+        style="@style/VkIm.AvatarView"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@id/name"
+        style="@style/VKUIText.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:contentDescription="@null"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:importantForAccessibility="no"
+        android:maxLines="1" />
 </LinearLayout>

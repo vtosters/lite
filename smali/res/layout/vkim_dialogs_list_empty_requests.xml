@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="16.0sp" android:textColor="?text_placeholder" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:maxWidth="232.0dip" android:text="@string/vkim_dialogs_list_empty_requests" android:includeFontPadding="false" android:fontFamily="@string/fontRobotoRegular"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="12.0dip"
+    android:fontFamily="@string/fontRobotoRegular"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:maxWidth="232.0dip"
+    android:text="@string/vkim_dialogs_list_empty_requests"
+    android:textColor="?text_placeholder"
+    android:textSize="16.0sp" />

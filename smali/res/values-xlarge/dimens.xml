@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="_post_side_padding">-32.0dip</dimen>
-    <item type="dimen" name="abc_dialog_fixed_width_major">50.0%</item>
-    <item type="dimen" name="abc_dialog_fixed_width_minor">70.00001%</item>
-    <item type="dimen" name="abc_dialog_min_width_major">45.000004%</item>
-    <item type="dimen" name="abc_dialog_min_width_minor">72.0%</item>
+    <item name="abc_dialog_fixed_width_major" type="dimen">50.0%</item>
+    <item name="abc_dialog_fixed_width_minor" type="dimen">70.00001%</item>
+    <item name="abc_dialog_min_width_major" type="dimen">45.000004%</item>
+    <item name="abc_dialog_min_width_minor" type="dimen">72.0%</item>
     <dimen name="friends_header_padding">12.0dip</dimen>
     <dimen name="gift_min_size">128.0dip</dimen>
     <dimen name="gifts_category_padding">28.0dip</dimen>

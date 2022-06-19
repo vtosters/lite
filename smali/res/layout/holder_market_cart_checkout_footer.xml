@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.view.links.LinkedTextView android:textSize="14.0sp" android:textColor="?text_secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" style="@style/VKUIText.Text"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<com.vk.core.view.links.LinkedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/VKUIText.Text"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16.0dip"
+    android:layout_marginTop="8.0dip"
+    android:layout_marginRight="16.0dip"
+    android:layout_marginBottom="16.0dip"
+    android:textColor="?text_secondary"
+    android:textSize="14.0sp" />

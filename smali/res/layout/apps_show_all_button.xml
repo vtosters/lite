@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="14.0dip" android:textColor="@color/text_blue" android:gravity="center_vertical" android:id="@id/title" android:paddingLeft="@dimen/game_show_all_padding" android:paddingRight="@dimen/game_show_all_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" android:drawableLeft="@drawable/game_button_show_all_dots" android:drawablePadding="28.0dip" android:drawableStart="@drawable/game_button_show_all_dots" android:fontFamily="@string/font_family_medium"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/title"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:drawableStart="@drawable/game_button_show_all_dots"
+    android:drawableLeft="@drawable/game_button_show_all_dots"
+    android:drawablePadding="28.0dip"
+    android:fontFamily="@string/font_family_medium"
+    android:gravity="center_vertical"
+    android:minHeight="56.0dip"
+    android:paddingLeft="@dimen/game_show_all_padding"
+    android:paddingRight="@dimen/game_show_all_padding"
+    android:textColor="@color/text_blue"
+    android:textSize="14.0dip" />

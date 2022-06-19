@@ -1,17 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/container" android:clipChildren="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.im.ui.views.FrescoImageView android:id="@id/dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent" app:vkim_scaleType="center_crop" />
-    <ViewStub android:id="@id/dialog_header_container_stub" android:layout="@layout/vkim_include_dialog_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
-    <FrameLayout android:id="@id/messages_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/divider" android:layout_below="@id/dialog_header_container" />
-    <com.vk.core.view.AppBarShadowView android:layout_below="@id/dialog_header_container" app:appbar_forceMode="shadow" style="@style/AppBarShadow" />
-    <ViewStub android:id="@id/banner_container_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dialog_header_container" />
-    <ViewStub android:id="@id/mentions_container_stub" android:layout="@layout/vkim_mentions_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/divider" android:layout_below="@id/dialog_header_container" />
-    <ViewStub android:id="@id/sticker_bar_container_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/divider" />
-    <FrameLayout android:id="@id/write_area" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
-    <View android:id="@id/divider" android:background="?separator_alternate" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_above="@id/write_area" />
-    <ViewStub android:id="@id/install_vk_me_btn_stub" android:layout="@layout/vkim_install_vkme_btn_container" android:inflatedId="@id/install_btn_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
-    <ViewStub android:id="@id/dialog_actions_stub" android:layout="@layout/vkim_dialog_actions_vc_by_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/dialog_header_container" />
-    <ViewStub android:id="@id/dialogs_search_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <ViewStub android:id="@id/dialogs_chat_message_request_stub" android:layout="@layout/vkim_dialogs_chat_message_request" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipChildren="true"
+    android:clipToPadding="true">
+
+    <com.vk.im.ui.views.FrescoImageView
+        android:id="@id/dialog_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:vkim_scaleType="center_crop" />
+
+    <ViewStub
+        android:id="@id/dialog_header_container_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout="@layout/vkim_include_dialog_header" />
+
+    <FrameLayout
+        android:id="@id/messages_list_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/divider"
+        android:layout_below="@id/dialog_header_container" />
+
+    <com.vk.core.view.AppBarShadowView
+        style="@style/AppBarShadow"
+        android:layout_below="@id/dialog_header_container"
+        app:appbar_forceMode="shadow" />
+
+    <ViewStub
+        android:id="@id/banner_container_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_header_container" />
+
+    <ViewStub
+        android:id="@id/mentions_container_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/divider"
+        android:layout_below="@id/dialog_header_container"
+        android:layout="@layout/vkim_mentions_container" />
+
+    <ViewStub
+        android:id="@id/sticker_bar_container_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/divider" />
+
+    <FrameLayout
+        android:id="@id/write_area"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
+
+    <View
+        android:id="@id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_above="@id/write_area"
+        android:background="?separator_alternate" />
+
+    <ViewStub
+        android:id="@id/install_vk_me_btn_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:inflatedId="@id/install_btn_container"
+        android:layout="@layout/vkim_install_vkme_btn_container" />
+
+    <ViewStub
+        android:id="@id/dialog_actions_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/dialog_header_container"
+        android:layout="@layout/vkim_dialog_actions_vc_by_view" />
+
+    <ViewStub
+        android:id="@id/dialogs_search_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <ViewStub
+        android:id="@id/dialogs_chat_message_request_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout="@layout/vkim_dialogs_chat_message_request" />
 </RelativeLayout>

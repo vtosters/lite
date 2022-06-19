@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="?accent" />
-    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="@dimen/story_question_viewer_border_radius" android:bottomRightRadius="@dimen/story_question_viewer_border_radius" />
+    <corners
+        android:bottomLeftRadius="@dimen/story_question_viewer_border_radius"
+        android:bottomRightRadius="@dimen/story_question_viewer_border_radius"
+        android:topLeftRadius="0.0dip"
+        android:topRightRadius="0.0dip" />
 </shape>

@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@id/dialog_actions_list_container" android:background="@drawable/vkim_bg_overlay" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="?modal_card_background" android:backgroundTintMode="multiply"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.im.ui.views.dialog_actions.DialogActionsListView android:id="@id/dialog_actions_list_content" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:fadingEdge="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:vklib_alv_dividerColor="?separator_alpha" app:vklib_alv_dividerHeight="16.0dip" app:vklib_alv_dividerSize="0.5dip" app:vklib_alv_optionBackground="@drawable/vkim_ripple_dark" app:vklib_alv_optionIconLabelSpace="18.0dip" app:vklib_alv_optionIconTint="?im_dropdown_icon_color" app:vklib_alv_optionLabelTextColor="?text_primary" app:vklib_alv_optionLabelTextSize="16.0sp" app:vklib_alv_optionPaddingEnd="16.0dip" app:vklib_alv_optionPaddingStart="18.0dip" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/dialog_actions_list_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/vkim_bg_overlay"
+    android:backgroundTint="?modal_card_background"
+    android:backgroundTintMode="multiply"
+    android:padding="16.0dip">
+
+    <com.vk.im.ui.views.dialog_actions.DialogActionsListView
+        android:id="@id/dialog_actions_list_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fadingEdge="none"
+        android:paddingTop="8.0dip"
+        android:paddingBottom="8.0dip"
+        app:vklib_alv_dividerColor="?separator_alpha"
+        app:vklib_alv_dividerHeight="16.0dip"
+        app:vklib_alv_dividerSize="0.5dip"
+        app:vklib_alv_optionBackground="@drawable/vkim_ripple_dark"
+        app:vklib_alv_optionIconLabelSpace="18.0dip"
+        app:vklib_alv_optionIconTint="?im_dropdown_icon_color"
+        app:vklib_alv_optionLabelTextColor="?text_primary"
+        app:vklib_alv_optionLabelTextSize="16.0sp"
+        app:vklib_alv_optionPaddingEnd="16.0dip"
+        app:vklib_alv_optionPaddingStart="18.0dip" />
 </LinearLayout>

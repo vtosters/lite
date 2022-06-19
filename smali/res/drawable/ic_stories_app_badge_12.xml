@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@id/online_composite_background">
-        <bitmap android:gravity="center" android:src="@drawable/badge_services_foreground_12" android:tint="?background_content" />
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/badge_services_foreground_12"
+            android:tint="?background_content" />
     </item>
     <item>
-        <bitmap android:gravity="center" android:src="@drawable/badge_services_background_8" android:tint="@color/red_nice" />
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/badge_services_background_8"
+            android:tint="@color/red_nice" />
     </item>
 </layer-list>

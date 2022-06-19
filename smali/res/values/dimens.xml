@@ -19,29 +19,33 @@
     <dimen name="abc_action_button_min_width_overflow_material">36.0dip</dimen>
     <dimen name="abc_alert_dialog_button_bar_height">48.0dip</dimen>
     <dimen name="abc_alert_dialog_button_dimen">48.0dip</dimen>
-    <item type="dimen" name="abc_button_inset_horizontal_material">@dimen/abc_control_inset_material</item>
+    <item name="abc_button_inset_horizontal_material" type="dimen">
+        @dimen/abc_control_inset_material
+    </item>
     <dimen name="abc_button_inset_vertical_material">6.0dip</dimen>
     <dimen name="abc_button_padding_horizontal_material">8.0dip</dimen>
-    <item type="dimen" name="abc_button_padding_vertical_material">@dimen/abc_control_padding_material</item>
+    <item name="abc_button_padding_vertical_material" type="dimen">
+        @dimen/abc_control_padding_material
+    </item>
     <dimen name="abc_cascading_menus_min_smallest_width">720.0dip</dimen>
     <dimen name="abc_config_prefDialogWidth">320.0dip</dimen>
     <dimen name="abc_control_corner_material">2.0dip</dimen>
     <dimen name="abc_control_inset_material">4.0dip</dimen>
     <dimen name="abc_control_padding_material">4.0dip</dimen>
     <dimen name="abc_dialog_corner_radius_material">2.0dip</dimen>
-    <item type="dimen" name="abc_dialog_fixed_height_major">79.99999%</item>
-    <item type="dimen" name="abc_dialog_fixed_height_minor">100.0%</item>
+    <item name="abc_dialog_fixed_height_major" type="dimen">79.99999%</item>
+    <item name="abc_dialog_fixed_height_minor" type="dimen">100.0%</item>
     <dimen name="abc_dialog_fixed_width_major">320.0dip</dimen>
     <dimen name="abc_dialog_fixed_width_minor">320.0dip</dimen>
     <dimen name="abc_dialog_list_padding_bottom_no_buttons">8.0dip</dimen>
     <dimen name="abc_dialog_list_padding_top_no_title">8.0dip</dimen>
-    <item type="dimen" name="abc_dialog_min_width_major">65.0%</item>
-    <item type="dimen" name="abc_dialog_min_width_minor">95.00001%</item>
+    <item name="abc_dialog_min_width_major" type="dimen">65.0%</item>
+    <item name="abc_dialog_min_width_minor" type="dimen">95.00001%</item>
     <dimen name="abc_dialog_padding_material">24.0dip</dimen>
     <dimen name="abc_dialog_padding_top_material">18.0dip</dimen>
     <dimen name="abc_dialog_title_divider_material">8.0dip</dimen>
-    <item type="dimen" name="abc_disabled_alpha_material_dark">0.3</item>
-    <item type="dimen" name="abc_disabled_alpha_material_light">0.26</item>
+    <item name="abc_disabled_alpha_material_dark" type="dimen">0.3</item>
+    <item name="abc_disabled_alpha_material_light" type="dimen">0.26</item>
     <dimen name="abc_dropdownitem_icon_width">32.0dip</dimen>
     <dimen name="abc_dropdownitem_text_padding_left">8.0dip</dimen>
     <dimen name="abc_dropdownitem_text_padding_right">8.0dip</dimen>
@@ -49,7 +53,9 @@
     <dimen name="abc_edit_text_inset_horizontal_material">4.0dip</dimen>
     <dimen name="abc_edit_text_inset_top_material">10.0dip</dimen>
     <dimen name="abc_floating_window_z">16.0dip</dimen>
-    <item type="dimen" name="abc_list_item_padding_horizontal_material">@dimen/abc_action_bar_content_inset_material</item>
+    <item name="abc_list_item_padding_horizontal_material" type="dimen">
+        @dimen/abc_action_bar_content_inset_material
+    </item>
     <dimen name="abc_panel_menu_list_width">296.0dip</dimen>
     <dimen name="abc_progress_bar_height_material">4.0dip</dimen>
     <dimen name="abc_search_view_preferred_height">48.0dip</dimen>
@@ -76,7 +82,7 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16.0dip</dimen>
     <dimen name="abc_text_size_title_material">20.0sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20.0dip</dimen>
-    <item type="dimen" name="album_edit_padding">@dimen/post_side_padding</item>
+    <item name="album_edit_padding" type="dimen">@dimen/post_side_padding</item>
     <dimen name="ampm_label_size">16.0sp</dimen>
     <dimen name="ampm_left_padding">6.0dip</dimen>
     <dimen name="android_4_fix">0.0dip</dimen>
@@ -213,12 +219,12 @@
     <dimen name="design_tab_text_size">14.0sp</dimen>
     <dimen name="design_tab_text_size_2line">12.0sp</dimen>
     <dimen name="design_textinput_caption_translate_y">5.0dip</dimen>
-    <item type="dimen" name="disabled_alpha_material_dark">0.3</item>
-    <item type="dimen" name="disabled_alpha_material_light">0.26</item>
+    <item name="disabled_alpha_material_dark" type="dimen">0.3</item>
+    <item name="disabled_alpha_material_light" type="dimen">0.26</item>
     <dimen name="discover_corners">4.0dip</dimen>
     <dimen name="divider_width">0.5dip</dimen>
     <dimen name="doc_item_height">64.0dip</dimen>
-    <item type="dimen" name="docs_padding">@dimen/standard_list_item_padding</item>
+    <item name="docs_padding" type="dimen">@dimen/standard_list_item_padding</item>
     <dimen name="document_preview_height">48.0dip</dimen>
     <dimen name="document_preview_space">8.0dip</dimen>
     <dimen name="document_preview_width">64.0dip</dimen>
@@ -230,7 +236,7 @@
     <dimen name="emoji_keyboard_item_height">48.0dip</dimen>
     <dimen name="emoji_keyboard_item_width">56.0dip</dimen>
     <dimen name="expanded_map_height">112.0dip</dimen>
-    <item type="dimen" name="extended_search_padding">@dimen/post_side_padding</item>
+    <item name="extended_search_padding" type="dimen">@dimen/post_side_padding</item>
     <dimen name="extra_time_label_margin">-30.0dip</dimen>
     <dimen name="fastscroll_default_thickness">8.0dip</dimen>
     <dimen name="fastscroll_margin">0.0dip</dimen>
@@ -262,20 +268,20 @@
     <dimen name="gift_min_size">104.0dip</dimen>
     <dimen name="gift_size_in_message">176.0dip</dimen>
     <dimen name="gift_wrapper_padding">6.0dip</dimen>
-    <item type="dimen" name="gifts_all_padding">@dimen/post_side_padding_menu</item>
+    <item name="gifts_all_padding" type="dimen">@dimen/post_side_padding_menu</item>
     <dimen name="gifts_category_padding">12.0dip</dimen>
-    <item type="dimen" name="gifts_padding">@dimen/post_side_padding</item>
+    <item name="gifts_padding" type="dimen">@dimen/post_side_padding</item>
     <dimen name="good_description_padding_bottom">16.0dip</dimen>
     <dimen name="good_description_padding_top">16.0dip</dimen>
     <dimen name="grid_thickness">1.0dip</dimen>
     <dimen name="header_height">96.0dip</dimen>
-    <item type="dimen" name="highlight_alpha_material_colored">0.26</item>
-    <item type="dimen" name="highlight_alpha_material_dark">0.2</item>
-    <item type="dimen" name="highlight_alpha_material_light">0.12</item>
-    <item type="dimen" name="hint_alpha_material_dark">0.5</item>
-    <item type="dimen" name="hint_alpha_material_light">0.38</item>
-    <item type="dimen" name="hint_pressed_alpha_material_dark">0.7</item>
-    <item type="dimen" name="hint_pressed_alpha_material_light">0.54</item>
+    <item name="highlight_alpha_material_colored" type="dimen">0.26</item>
+    <item name="highlight_alpha_material_dark" type="dimen">0.2</item>
+    <item name="highlight_alpha_material_light" type="dimen">0.12</item>
+    <item name="hint_alpha_material_dark" type="dimen">0.5</item>
+    <item name="hint_alpha_material_light" type="dimen">0.38</item>
+    <item name="hint_pressed_alpha_material_dark" type="dimen">0.7</item>
+    <item name="hint_pressed_alpha_material_light" type="dimen">0.54</item>
     <dimen name="html5_bottom_margin">12.0dip</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20.0dip</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800.0dip</dimen>
@@ -295,7 +301,7 @@
     <dimen name="libverify_message_text_margin_left">8.0dip</dimen>
     <dimen name="libverify_message_text_margin_top">6.0dip</dimen>
     <dimen name="libverify_message_time_margin_left">12.0dip</dimen>
-    <item type="dimen" name="match_parent">-1</item>
+    <item name="match_parent" type="dimen">-1</item>
     <dimen name="mention_item_height">44.0dip</dimen>
     <dimen name="menu_app_item_image_size">56.0dip</dimen>
     <dimen name="message_max_padding">64.0dip</dimen>
@@ -341,7 +347,7 @@
     <dimen name="mtrl_btn_icon_btn_padding_left">12.0dip</dimen>
     <dimen name="mtrl_btn_icon_padding">8.0dip</dimen>
     <dimen name="mtrl_btn_inset">6.0dip</dimen>
-    <item type="dimen" name="mtrl_btn_letter_spacing">0.07</item>
+    <item name="mtrl_btn_letter_spacing" type="dimen">0.07</item>
     <dimen name="mtrl_btn_padding_bottom">4.0dip</dimen>
     <dimen name="mtrl_btn_padding_left">16.0dip</dimen>
     <dimen name="mtrl_btn_padding_right">16.0dip</dimen>
@@ -451,7 +457,7 @@
     <dimen name="newsfeed_floating_placeholder_text_left_space_default">64.0dip</dimen>
     <dimen name="newsfeed_floating_placeholder_text_size">14.0dip</dimen>
     <dimen name="newsfeed_html5_error_space">24.0dip</dimen>
-    <item type="dimen" name="newsfeed_menu_item_width">@dimen/match_parent</item>
+    <item name="newsfeed_menu_item_width" type="dimen">@dimen/match_parent</item>
     <dimen name="newsfeed_newpost_add_item_header_height">56.0dip</dimen>
     <dimen name="newsfeed_newpost_authors_layout_elevation">8.0dip</dimen>
     <dimen name="newsfeed_newpost_authors_layout_height">180.0dip</dimen>
@@ -476,7 +482,8 @@
     <dimen name="newsfeed_newpost_search_view_height">52.0dip</dimen>
     <dimen name="newsfeed_newpost_search_view_space">8.0dip</dimen>
     <dimen name="newsfeed_newpost_search_view_top_space">4.0dip</dimen>
-    <item type="dimen" name="newsfeed_newpost_settings_dialog_space">@dimen/newsfeed_newpost_space</item>
+    <item name="newsfeed_newpost_settings_dialog_space" type="dimen">@dimen/newsfeed_newpost_space
+    </item>
     <dimen name="newsfeed_newpost_settings_dialog_top_bottom_space">14.0dip</dimen>
     <dimen name="newsfeed_newpost_settings_layout_bottom_space">48.0dip</dimen>
     <dimen name="newsfeed_newpost_settings_layout_height">60.0dip</dimen>
@@ -532,7 +539,7 @@
     <dimen name="notification_subtext_size">13.0sp</dimen>
     <dimen name="notification_top_pad">10.0dip</dimen>
     <dimen name="notification_top_pad_large_text">5.0dip</dimen>
-    <item type="dimen" name="notifications_padding">@dimen/post_side_padding</item>
+    <item name="notifications_padding" type="dimen">@dimen/post_side_padding</item>
     <dimen name="photo_good_tag_bubble_max_width">204.0dip</dimen>
     <dimen name="pick_position_prompt_bottom_margin">32.0dip</dimen>
     <dimen name="picker_attach_btn_height">68.0dip</dimen>
@@ -558,7 +565,7 @@
     <dimen name="picker_tab_panel_height">96.0dip</dimen>
     <dimen name="picker_tabs_container_height">48.0dip</dimen>
     <dimen name="picker_toolbar_height">56.0dip</dimen>
-    <item type="dimen" name="picker_top_margin">@dimen/picker_search_height</item>
+    <item name="picker_top_margin" type="dimen">@dimen/picker_search_height</item>
     <dimen name="picker_top_offset">296.0dip</dimen>
     <dimen name="picker_viewer_bottom_padding">48.0dip</dimen>
     <dimen name="player_big_widget_height">180.0dip</dimen>
@@ -568,8 +575,8 @@
     <dimen name="poll_bg_small_height">55.0dip</dimen>
     <dimen name="poll_bg_view_holder_height">160.0dip</dimen>
     <dimen name="poll_bg_view_holder_width">84.0dip</dimen>
-    <item type="dimen" name="poll_bg_width">@dimen/poll_bg_view_holder_width</item>
-    <item type="dimen" name="poll_edit_padding">@dimen/post_side_padding_btn</item>
+    <item name="poll_bg_width" type="dimen">@dimen/poll_bg_view_holder_width</item>
+    <item name="poll_edit_padding" type="dimen">@dimen/post_side_padding_btn</item>
     <dimen name="post_ad_block_item_padding">12.0dip</dimen>
     <dimen name="post_ad_block_item_size">248.0dip</dimen>
     <dimen name="post_attach_common_icon_size">40.0dip</dimen>
@@ -601,7 +608,7 @@
     <dimen name="profile_section_article_item_width">220.0dip</dimen>
     <dimen name="promo_page_indicator_height">36.0dip</dimen>
     <dimen name="ptr_progress_bar_stroke_width">4.0dip</dimen>
-    <item type="dimen" name="quick_search_padding">@dimen/post_side_padding_menu</item>
+    <item name="quick_search_padding" type="dimen">@dimen/post_side_padding_menu</item>
     <dimen name="registration_login_max_width">500.0dip</dimen>
     <dimen name="selected_calendar_layout_height">155.0dip</dimen>
     <dimen name="selected_date_day_size">75.0dip</dimen>
@@ -628,13 +635,13 @@
     <dimen name="sharing_target_width">72.0dip</dimen>
     <dimen name="shopping_center_catalog_list_bottom_offset">8.0dip</dimen>
     <dimen name="shopping_center_catalog_list_top_offset">8.0dip</dimen>
-    <item type="dimen" name="small_list_item_padding">@dimen/small_post_side_padding</item>
+    <item name="small_list_item_padding" type="dimen">@dimen/small_post_side_padding</item>
     <dimen name="small_photo_size">48.0dip</dimen>
     <dimen name="small_post_side_padding">12.0dip</dimen>
     <dimen name="small_video_corner_radius">6.0dip</dimen>
     <dimen name="spb_default_stroke_separator_length">4.0dip</dimen>
     <dimen name="spb_default_stroke_width">4.0dip</dimen>
-    <item type="dimen" name="standard_list_item_padding">@dimen/post_side_padding</item>
+    <item name="standard_list_item_padding" type="dimen">@dimen/post_side_padding</item>
     <dimen name="sticker_list_holder_height">80.0dip</dimen>
     <dimen name="sticker_suggest_size">80.0dip</dimen>
     <dimen name="stickers_banner_size">225.0dip</dimen>
@@ -774,7 +781,7 @@
     <dimen name="video_catalog_large_avatar_item_width">36.0dip</dimen>
     <dimen name="video_catalog_large_bottom_decorator_offset">0.0dip</dimen>
     <dimen name="video_catalog_large_content_item_height">0.0dip</dimen>
-    <item type="dimen" name="video_catalog_large_content_item_width">@dimen/match_parent</item>
+    <item name="video_catalog_large_content_item_width" type="dimen">@dimen/match_parent</item>
     <dimen name="video_catalog_large_slider_avatar_item_height">36.0dip</dimen>
     <dimen name="video_catalog_large_slider_avatar_item_width">36.0dip</dimen>
     <dimen name="video_catalog_large_slider_bottom_decorator_offset">0.0dip</dimen>
@@ -845,7 +852,7 @@
     <dimen name="webview_ad_action_button_top_bottom_space">16.0dip</dimen>
     <dimen name="widget_post_side_padding_medium">12.0dip</dimen>
     <dimen name="widget_post_side_padding_small">8.0dip</dimen>
-    <item type="dimen" name="wrap_content">-2</item>
+    <item name="wrap_content" type="dimen">-2</item>
     <dimen name="year_label_height">64.0dip</dimen>
     <dimen name="year_label_text_size">22.0dip</dimen>
 </resources>

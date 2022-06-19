@@ -1,12 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <View android:id="@id/header" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="40.0dip" android:importantForAccessibility="no" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:textColor="?text_primary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/photos" android:textAllCaps="true" android:layout_marginStart="@dimen/standard_list_item_padding" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/VKUIText.Caption1" />
-    <TextView android:id="@id/counter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:importantForAccessibility="no" android:fontFamily="@font/roboto_regular" android:layout_marginStart="6.0dip" app:layout_constraintStart_toEndOf="@id/title" app:layout_constraintTop_toTopOf="parent" style="@style/VKUIText.Caption1" />
-    <ImageView android:id="@id/icon" android:layout_width="16.0dip" android:layout_height="24.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/ic_arrow_24" android:scaleType="centerCrop" android:tint="?icon_tertiary" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/standard_list_item_padding" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <com.vk.profile.view.PhotosGridView android:id="@id/photos_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="44.0dip" android:layout_marginStart="@dimen/standard_list_item_padding" android:layout_marginEnd="@dimen/standard_list_item_padding" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <FrameLayout android:id="@id/add_photo_label" android:background="@drawable/bg_profile_scrim_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="@drawable/highlight" app:layout_constraintBottom_toBottomOf="@id/photos_grid" app:layout_constraintTop_toTopOf="@id/photos_grid">
-        <com.vk.core.view.TintTextView android:textColor="?accent" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:text="@string/add_photo" android:drawablePadding="8.0dip" android:drawableStart="@drawable/ic_camera_outline_28" android:layout_marginStart="6.0dip" app:drawableTint="?accent" app:layout_constraintStart_toEndOf="@id/title" app:layout_constraintTop_toTopOf="parent" style="@style/VKUIText.Title2" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8.0dip">
+
+    <View
+        android:id="@id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@drawable/highlight"
+        android:importantForAccessibility="no"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Caption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_list_item_padding"
+        android:layout_marginTop="15.0dip"
+        android:text="@string/photos"
+        android:textAllCaps="true"
+        android:textColor="?text_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/counter"
+        style="@style/VKUIText.Caption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6.0dip"
+        android:layout_marginTop="15.0dip"
+        android:fontFamily="@font/roboto_regular"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toEndOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@id/icon"
+        android:layout_width="16.0dip"
+        android:layout_height="24.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginEnd="@dimen/standard_list_item_padding"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_arrow_24"
+        android:tint="?icon_tertiary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vk.profile.view.PhotosGridView
+        android:id="@id/photos_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_list_item_padding"
+        android:layout_marginTop="44.0dip"
+        android:layout_marginEnd="@dimen/standard_list_item_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@id/add_photo_label"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:background="@drawable/bg_profile_scrim_content"
+        android:foreground="@drawable/highlight"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/photos_grid"
+        app:layout_constraintTop_toTopOf="@id/photos_grid">
+
+        <com.vk.core.view.TintTextView
+            style="@style/VKUIText.Title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="6.0dip"
+            android:layout_marginTop="36.0dip"
+            android:drawableStart="@drawable/ic_camera_outline_28"
+            android:drawablePadding="8.0dip"
+            android:gravity="center_vertical"
+            android:text="@string/add_photo"
+            android:textColor="?accent"
+            app:drawableTint="?accent"
+            app:layout_constraintStart_toEndOf="@id/title"
+            app:layout_constraintTop_toTopOf="parent" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

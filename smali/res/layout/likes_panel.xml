@@ -1,13 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:duplicateParentState="false" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="48.0dip" android:baselineAligned="false"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:id="@id/likes" android:background="@drawable/highlight" android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="84.0dip" android:paddingStart="@dimen/post_side_padding">
-        <ImageView android:layout_gravity="start|center" android:id="@id/iv_likes" android:duplicateParentState="true" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_like_outline_24" />
-        <com.vk.core.view.TintTextView android:textSize="15.0sp" android:textColor="@color/post_counters" android:gravity="center_vertical" android:layout_gravity="start|center" android:id="@id/tv_likes" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:fontFamily="@string/font_family_medium" android:layout_marginStart="28.0dip" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:baselineAligned="false"
+    android:clipChildren="false"
+    android:duplicateParentState="false"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@id/likes"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/highlight"
+        android:clickable="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:minWidth="84.0dip"
+        android:paddingStart="@dimen/post_side_padding">
+
+        <ImageView
+            android:id="@id/iv_likes"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_gravity="start|center"
+            android:duplicateParentState="true"
+            android:src="@drawable/ic_like_outline_24" />
+
+        <com.vk.core.view.TintTextView
+            android:id="@id/tv_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="28.0dip"
+            android:duplicateParentState="true"
+            android:fontFamily="@string/font_family_medium"
+            android:gravity="center_vertical"
+            android:textColor="@color/post_counters"
+            android:textSize="15.0sp" />
     </FrameLayout>
-    <com.vk.core.view.TintTextView android:textSize="15.0sp" android:textColor="?text_action_counter" android:gravity="start|center" android:id="@id/comments" android:background="@drawable/highlight" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="84.0dip" android:drawablePadding="4.0dip" android:drawableStart="@drawable/ic_comment_outline_24" android:fontFamily="@string/font_family_medium" android:paddingStart="@dimen/post_side_padding" app:drawableTint="?icon_outline_secondary" />
-    <com.vk.core.view.TintTextView android:textSize="15.0sp" android:textColor="?text_action_counter" android:gravity="start|center" android:id="@id/shares" android:background="@drawable/highlight" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="84.0dip" android:drawablePadding="4.0dip" android:drawableStart="@drawable/ic_share_outline_24" android:fontFamily="@string/font_family_medium" android:paddingStart="@dimen/post_side_padding" app:drawableTint="?icon_outline_secondary" />
-    <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
-    <com.vk.core.view.TintTextView android:textSize="15.0sp" android:textColor="?text_tertiary" android:gravity="start|center" android:id="@id/views" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawablePadding="2.0dip" android:drawableStart="@drawable/ic_view_20" android:paddingEnd="@dimen/post_side_padding" app:drawableTint="?icon_tertiary" />
-    <ImageView android:id="@id/add" android:background="@drawable/highlight" android:visibility="gone" android:layout_width="56.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_add_check_selectable_24" android:scaleType="centerInside" android:tint="?icon_outline_secondary" />
+
+    <com.vk.core.view.TintTextView
+        android:id="@id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/highlight"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_comment_outline_24"
+        android:drawablePadding="4.0dip"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="start|center"
+        android:minWidth="84.0dip"
+        android:paddingStart="@dimen/post_side_padding"
+        android:textColor="?text_action_counter"
+        android:textSize="15.0sp"
+        android:visibility="gone"
+        app:drawableTint="?icon_outline_secondary" />
+
+    <com.vk.core.view.TintTextView
+        android:id="@id/shares"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/highlight"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_share_outline_24"
+        android:drawablePadding="4.0dip"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="start|center"
+        android:minWidth="84.0dip"
+        android:paddingStart="@dimen/post_side_padding"
+        android:textColor="?text_action_counter"
+        android:textSize="15.0sp"
+        app:drawableTint="?icon_outline_secondary" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+    <com.vk.core.view.TintTextView
+        android:id="@id/views"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:drawableStart="@drawable/ic_view_20"
+        android:drawablePadding="2.0dip"
+        android:focusable="true"
+        android:gravity="start|center"
+        android:paddingEnd="@dimen/post_side_padding"
+        android:textColor="?text_tertiary"
+        android:textSize="15.0sp"
+        app:drawableTint="?icon_tertiary" />
+
+    <ImageView
+        android:id="@id/add"
+        android:layout_width="56.0dip"
+        android:layout_height="fill_parent"
+        android:background="@drawable/highlight"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_add_check_selectable_24"
+        android:tint="?icon_outline_secondary"
+        android:visibility="gone" />
 </LinearLayout>

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.music.subscription.MusicSubscriptionDetailsContainer android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="-8.0dip" android:layout_marginEnd="-8.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.vk.music.subscription.MusicSubscriptionDetailsContainer
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-8.0dip"
+        android:layout_marginEnd="-8.0dip"
+        android:orientation="vertical" />
 </FrameLayout>

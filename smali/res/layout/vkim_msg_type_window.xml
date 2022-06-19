@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:id="@id/popup_btn_container" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:id="@id/mute_msg_btn" android:text="@string/vkim_mute_msg_send" android:drawableStart="@drawable/ic_accent_mute_outline_28" android:elevation="4.0dip" style="@style/VkIm.PopupButton" />
-        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <TextView android:id="@id/disappeared_msg_btn" android:text="@string/vkim_disappear_msg_send" android:drawableStart="@drawable/ic_accent_bomb_outline_28" android:elevation="4.0dip" style="@style/VkIm.PopupButton" />
-            <TextView android:textSize="15.0sp" android:textColor="?text_secondary" android:gravity="center" android:layout_gravity="end" android:id="@id/duration_btn" android:background="@drawable/vkim_bg_modul_btn_right" android:focusable="true" android:clickable="true" android:layout_width="88.0dip" android:layout_height="48.0dip" android:drawableEnd="@drawable/ic_dropdown_20" android:fontFamily="@string/fontRobotoRegular" android:paddingStart="6.0dip" android:paddingEnd="16.0dip" android:layout_marginEnd="12.0dip" android:elevation="4.0dip" />
-            <View android:layout_gravity="end" android:background="?separator_alternate" android:layout_width="0.5dip" android:layout_height="48.0dip" android:layout_marginEnd="100.0dip" android:elevation="4.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@id/popup_btn_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8.0dip">
+
+        <TextView
+            android:id="@id/mute_msg_btn"
+            style="@style/VkIm.PopupButton"
+            android:drawableStart="@drawable/ic_accent_mute_outline_28"
+            android:elevation="4.0dip"
+            android:text="@string/vkim_mute_msg_send" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@id/disappeared_msg_btn"
+                style="@style/VkIm.PopupButton"
+                android:drawableStart="@drawable/ic_accent_bomb_outline_28"
+                android:elevation="4.0dip"
+                android:text="@string/vkim_disappear_msg_send" />
+
+            <TextView
+                android:id="@id/duration_btn"
+                android:layout_width="88.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="end"
+                android:layout_marginEnd="12.0dip"
+                android:background="@drawable/vkim_bg_modul_btn_right"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_dropdown_20"
+                android:elevation="4.0dip"
+                android:focusable="true"
+                android:fontFamily="@string/fontRobotoRegular"
+                android:gravity="center"
+                android:paddingStart="6.0dip"
+                android:paddingEnd="16.0dip"
+                android:textColor="?text_secondary"
+                android:textSize="15.0sp" />
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="end"
+                android:layout_marginEnd="100.0dip"
+                android:background="?separator_alternate"
+                android:elevation="4.0dip" />
         </FrameLayout>
     </LinearLayout>
 </FrameLayout>

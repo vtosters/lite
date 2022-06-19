@@ -1,7 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="32.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/text" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0" />
-    <com.vk.core.view.links.LinkedTextView android:textColor="?text_subhead" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:lineSpacingExtra="2.0dip" android:layout_marginStart="12.0dip" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/play_pause_btn" app:layout_constraintStart_toEndOf="@id/icon" app:layout_constraintTop_toTopOf="parent" style="@style/VKUIText.Text" />
-    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/play_pause_btn" android:background="@drawable/highlight" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:tint="?accent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/highlight"
+    android:minHeight="32.0dip"
+    android:paddingLeft="@dimen/post_side_padding"
+    android:paddingRight="@dimen/post_side_padding">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/icon"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginBottom="6.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.vk.core.view.links.LinkedTextView
+        android:id="@id/text"
+        style="@style/VKUIText.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2.0dip"
+        android:textColor="?text_subhead"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/play_pause_btn"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/play_pause_btn"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:background="@drawable/highlight"
+        android:tint="?accent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

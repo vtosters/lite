@@ -1,22 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:id="@id/im_appbar" style="@style/Vk.Theme.Appbar">
-        <FrameLayout android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_scrollFlags="enterAlways|scroll">
-            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" style="@style/VkIm.Toolbar.Style.LargeWithBack" />
-            <com.vk.core.view.search.MilkshakeSearchView android:id="@id/vkim_search" android:background="?header_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="?im_toolbar_search_style" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/im_appbar"
+        style="@style/Vk.Theme.Appbar">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_scrollFlags="enterAlways|scroll">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@id/toolbar"
+                style="@style/VkIm.Toolbar.Style.LargeWithBack" />
+
+            <com.vk.core.view.search.MilkshakeSearchView
+                android:id="@id/vkim_search"
+                style="?im_toolbar_search_style"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize"
+                android:background="?header_background"
+                android:visibility="gone" />
         </FrameLayout>
     </com.google.android.material.appbar.AppBarLayout>
-    <FrameLayout android:id="@id/vkim_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" style="@style/AppBarShadow" />
-    <View android:id="@id/vkim_search_shadow" android:visibility="gone" app:layout_behavior="@string/appbar_scrolling_view_behavior" style="?im_toolbar_shadow_style_thick" />
-    <FrameLayout android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="horizontal" android:id="@id/vkim_description_container" android:background="?background_content" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="68.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
-            <ImageView android:id="@id/vkim_description_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" />
-            <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:id="@id/vkim_description_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="5" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
-            <ImageView android:id="@id/vkim_description_close" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_cancel_24_in_circle_bg_transparent" />
+
+    <FrameLayout
+        android:id="@id/vkim_list_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/shadow"
+        style="@style/AppBarShadow" />
+
+    <View
+        android:id="@id/vkim_search_shadow"
+        style="?im_toolbar_shadow_style_thick"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:id="@id/vkim_description_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="68.0dip"
+            android:background="?background_content"
+            android:orientation="horizontal"
+            android:paddingStart="16.0dip"
+            android:paddingTop="12.0dip"
+            android:paddingEnd="16.0dip"
+            android:paddingBottom="12.0dip">
+
+            <ImageView
+                android:id="@id/vkim_description_icon"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip" />
+
+            <TextView
+                android:id="@id/vkim_description_text"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12.0dip"
+                android:layout_marginEnd="12.0dip"
+                android:layout_weight="1.0"
+                android:includeFontPadding="false"
+                android:maxLines="5"
+                android:textColor="?text_secondary"
+                android:textSize="14.0sp" />
+
+            <ImageView
+                android:id="@id/vkim_description_close"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/ic_cancel_24_in_circle_bg_transparent" />
         </LinearLayout>
-        <View android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="?separator_alpha" />
     </FrameLayout>
-    <com.vk.core.view.BottomConfirmButton android:id="@id/vkim_confirm_btn" app:bcb_cancel_text="@string/cancel" style="@style/VkIm.BottomButton" />
+
+    <com.vk.core.view.BottomConfirmButton
+        android:id="@id/vkim_confirm_btn"
+        style="@style/VkIm.BottomButton"
+        app:bcb_cancel_text="@string/cancel" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

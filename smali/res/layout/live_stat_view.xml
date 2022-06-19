@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/live_viewers_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/live_viewers_error_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="64.0dip">
-        <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:text="@string/err_text" style="@style/VKUIText.Subhead1" />
-        <Button android:textColor="?accent" android:id="@id/live_viewers_reload" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vk_retry" style="@style/VKUIButton.Tertiary" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/live_viewers_recycler"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:id="@id/live_viewers_error_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="64.0dip"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/VKUIText.Subhead1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4.0dip"
+            android:gravity="center"
+            android:text="@string/err_text" />
+
+        <Button
+            android:id="@id/live_viewers_reload"
+            style="@style/VKUIButton.Tertiary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vk_retry"
+            android:textColor="?accent" />
     </LinearLayout>
-    <ProgressBar android:layout_gravity="center" android:id="@id/live_viewers_progress" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_margin="64.0dip" android:progressTint="?accent" android:indeterminateTint="?activity_indicator_tint" android:indeterminateTintMode="src_in" />
+
+    <ProgressBar
+        android:id="@id/live_viewers_progress"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:layout_gravity="center"
+        android:layout_margin="64.0dip"
+        android:indeterminateTint="?activity_indicator_tint"
+        android:indeterminateTintMode="src_in"
+        android:progressTint="?accent" />
 </merge>

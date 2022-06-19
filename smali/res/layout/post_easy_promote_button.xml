@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="?content_tint_background" android:addStatesFromChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:orientation="horizontal" android:background="@drawable/highlight" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding">
-        <TextView android:textSize="12.0sp" android:textColor="?content_tint_foreground" android:gravity="center_vertical" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ads_easy_promote_description" android:includeFontPadding="false" android:layout_centerVertical="true" android:lineSpacingExtra="2.0dip" android:layout_marginEnd="15.0dip" android:layout_toStartOf="@id/button" />
-        <TextView android:id="@id/button" android:paddingTop="4.5dip" android:paddingBottom="6.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ads_easy_promote_button" android:layout_alignParentEnd="true" style="@style/VKUIButton.Primary" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:addStatesFromChildren="false"
+    android:background="?content_tint_background">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/highlight"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/post_side_padding"
+        android:paddingTop="10.0dip"
+        android:paddingEnd="@dimen/post_side_padding"
+        android:paddingBottom="10.0dip">
+
+        <TextView
+            android:id="@id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15.0dip"
+            android:layout_toStartOf="@id/button"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="2.0dip"
+            android:text="@string/ads_easy_promote_description"
+            android:textColor="?content_tint_foreground"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@id/button"
+            style="@style/VKUIButton.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="4.5dip"
+            android:paddingBottom="6.5dip"
+            android:text="@string/ads_easy_promote_button" />
     </RelativeLayout>
 </FrameLayout>

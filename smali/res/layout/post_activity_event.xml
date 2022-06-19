@@ -1,14 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="?content_tint_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/highlight"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout android:paddingTop="12.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding">
-        <TextView android:textSize="11.0sp" android:textColor="?accent" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="1.0sp" android:textAllCaps="true" app:fontFamily="@font/roboto_medium" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="2.5dip" android:singleLine="true" android:includeFontPadding="false" android:lineSpacingExtra="3.0sp" android:layout_marginEnd="8.0dip" app:layout_constraintEnd_toStartOf="@id/button" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/date" app:layout_goneMarginEnd="32.0dip" />
-        <TextView android:id="@id/button" android:visibility="visible" android:maxWidth="160.0dip" app:layout_constraintBottom_toBottomOf="@id/description" app:layout_constraintEnd_toEndOf="parent" style="@style/VKUIButton.Primary" />
-        <View android:id="@id/done_button" android:background="@drawable/ic_done_24" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="24.0dip" android:layout_height="24.0dip" android:contentDescription="@string/event_change_decision" android:backgroundTint="?icon_secondary" app:layout_constraintBottom_toBottomOf="@id/description" app:layout_constraintEnd_toEndOf="parent" />
-        <View android:id="@id/separator" android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="13.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/description" />
-        <com.vk.core.view.PhotoStripView android:layout_gravity="center_vertical" android:id="@id/photos" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginTop="21.0dip" android:layout_marginEnd="10.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/description" />
-        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:minHeight="40.0dip" android:singleLine="true" android:includeFontPadding="false" android:lineSpacingExtra="1.0sp" android:layout_marginStart="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/photos" app:layout_constraintTop_toBottomOf="@id/description" app:layout_goneMarginStart="0.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?content_tint_background"
+    android:foreground="@drawable/highlight">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/post_side_padding"
+        android:paddingTop="12.0dip"
+        android:paddingEnd="@dimen/post_side_padding">
+
+        <TextView
+            android:id="@id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="1.0sp"
+            android:textAllCaps="true"
+            android:textColor="?accent"
+            android:textSize="11.0sp"
+            app:fontFamily="@font/roboto_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/description"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.5dip"
+            android:layout_marginEnd="8.0dip"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="3.0sp"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp"
+            app:layout_constraintEnd_toStartOf="@id/button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date"
+            app:layout_goneMarginEnd="32.0dip" />
+
+        <TextView
+            android:id="@id/button"
+            style="@style/VKUIButton.Primary"
+            android:maxWidth="160.0dip"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/description"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@id/done_button"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:background="@drawable/ic_done_24"
+            android:backgroundTint="?icon_secondary"
+            android:clickable="true"
+            android:contentDescription="@string/event_change_decision"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/description"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@id/separator"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="13.0dip"
+            android:background="?separator_alpha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <com.vk.core.view.PhotoStripView
+            android:id="@id/photos"
+            android:layout_width="wrap_content"
+            android:layout_height="24.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="21.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <TextView
+            android:id="@id/text"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginTop="13.0dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="1.0sp"
+            android:minHeight="40.0dip"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/photos"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_goneMarginStart="0.0dip" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <View android:layout_gravity="bottom" android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_gravity="bottom"
+        android:background="?separator_alpha" />
 </FrameLayout>

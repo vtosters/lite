@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <include android:elevation="0.0dip" layout="@layout/toolbar" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/appkit_loader_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/toolbar"
+            android:elevation="0.0dip" />
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycle" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/toolbar_behavior_scrolling" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recycle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_behavior="@string/toolbar_behavior_scrolling" />
+
     <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

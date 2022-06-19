@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.attachpicker.widget.SquareImageView android:background="#ffc7ccd1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_camera_48" android:scaleType="center"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<com.vk.attachpicker.widget.SquareImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffc7ccd1"
+    android:scaleType="center"
+    android:src="@drawable/ic_camera_48" />

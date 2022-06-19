@@ -1,12 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/iv_story_image" android:layout_width="@dimen/story_elongated_width" android:layout_height="@dimen/story_elongated_height" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholderImage="@color/discover_stories_placeholder" app:placeholderImageScaleType="fitCenter" app:roundedCornerRadius="4.0dip" />
-    <View android:layout_gravity="bottom" android:id="@id/gradient" android:background="@drawable/scrim_bottom_opaque" android:layout_width="@dimen/story_elongated_width" android:layout_height="70.0dip" android:layout_marginBottom="4.0dip" android:backgroundTint="#90000000" />
-    <View android:layout_gravity="bottom" android:id="@id/gradient_corners" android:background="@drawable/bottom_corners_rect_4dp" android:layout_width="@dimen/story_elongated_width" android:layout_height="4.0dip" android:backgroundTint="#90000000" />
-    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:layout_marginStart="6.0dip">
-        <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="@color/white" android:ellipsize="end" android:id="@id/story_elongated_line_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:shadowColor="#51000000" android:shadowDy="2.0" android:shadowRadius="4.0" android:lineSpacingExtra="2.0sp" android:fontFamily="@string/font_family_medium" />
-        <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="@color/white" android:ellipsize="end" android:id="@id/story_elongated_line_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:shadowColor="#51000000" android:shadowDy="2.0" android:shadowRadius="4.0" android:lineSpacingExtra="2.0sp" android:fontFamily="@string/font_family_medium" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/iv_story_image"
+        android:layout_width="@dimen/story_elongated_width"
+        android:layout_height="@dimen/story_elongated_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@color/discover_stories_placeholder"
+        app:placeholderImageScaleType="fitCenter"
+        app:roundedCornerRadius="4.0dip" />
+
+    <View
+        android:id="@id/gradient"
+        android:layout_width="@dimen/story_elongated_width"
+        android:layout_height="70.0dip"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="4.0dip"
+        android:background="@drawable/scrim_bottom_opaque"
+        android:backgroundTint="#90000000" />
+
+    <View
+        android:id="@id/gradient_corners"
+        android:layout_width="@dimen/story_elongated_width"
+        android:layout_height="4.0dip"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_corners_rect_4dp"
+        android:backgroundTint="#90000000" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="6.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/story_elongated_line_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@string/font_family_medium"
+            android:lineSpacingExtra="2.0sp"
+            android:lines="1"
+            android:shadowColor="#51000000"
+            android:shadowDy="2.0"
+            android:shadowRadius="4.0"
+            android:textColor="@color/white"
+            android:textSize="12.0sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@id/story_elongated_line_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@string/font_family_medium"
+            android:lineSpacingExtra="2.0sp"
+            android:lines="1"
+            android:shadowColor="#51000000"
+            android:shadowDy="2.0"
+            android:shadowRadius="4.0"
+            android:textColor="@color/white"
+            android:textSize="12.0sp"
+            android:textStyle="normal" />
     </LinearLayout>
-    <View android:layout_gravity="center_horizontal" android:id="@id/story_holder_click_handler" android:background="@drawable/story_elongated_background_rounded_4dp" android:layout_width="@dimen/story_elongated_width" android:layout_height="@dimen/story_elongated_height" />
+
+    <View
+        android:id="@id/story_holder_click_handler"
+        android:layout_width="@dimen/story_elongated_width"
+        android:layout_height="@dimen/story_elongated_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/story_elongated_background_rounded_4dp" />
 </merge>

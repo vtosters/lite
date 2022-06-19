@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke android:width="0.5dip" android:color="?separator_alpha" />
-    <corners android:topLeftRadius="@dimen/story_question_viewer_border_radius" android:topRightRadius="@dimen/story_question_viewer_border_radius" android:bottomLeftRadius="@dimen/story_question_viewer_border_radius" android:bottomRightRadius="@dimen/story_question_viewer_border_radius" />
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="0.5dip"
+        android:color="?separator_alpha" />
+    <corners
+        android:bottomLeftRadius="@dimen/story_question_viewer_border_radius"
+        android:bottomRightRadius="@dimen/story_question_viewer_border_radius"
+        android:topLeftRadius="@dimen/story_question_viewer_border_radius"
+        android:topRightRadius="@dimen/story_question_viewer_border_radius" />
 </shape>

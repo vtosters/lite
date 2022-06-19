@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:elevation="3.0dip" android:outlineProvider="bounds" app:collapseIcon="@drawable/ic_back_collapse_header" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" style="?actionBarTheme"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/toolbar"
+    style="?actionBarTheme"
+    android:layout_width="fill_parent"
+    android:layout_height="?actionBarSize"
+    android:background="?header_background"
+    android:elevation="3.0dip"
+    android:outlineProvider="bounds"
+    app:collapseIcon="@drawable/ic_back_collapse_header"
+    app:popupTheme="?actionBarPopupTheme"
+    app:theme="?actionBarTheme" />

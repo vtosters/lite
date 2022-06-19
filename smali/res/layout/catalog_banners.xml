@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.ui.infiniteviewpager.ViewPagerInfinite android:id="@id/banners_pager" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="200.0dip" app:layout_scrollFlags="enterAlwaysCollapsed|scroll" app:nextPeriodSec="3"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<com.vk.core.ui.infiniteviewpager.ViewPagerInfinite xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/banners_pager"
+    android:layout_width="fill_parent"
+    android:layout_height="200.0dip"
+    android:clipToPadding="false"
+    app:layout_scrollFlags="enterAlwaysCollapsed|scroll"
+    app:nextPeriodSec="3" />

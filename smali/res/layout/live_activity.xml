@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.libvideo.ui.layout.SwipeLayout android:id="@id/live_video_swipe_layout" android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.libvideo.live.views.liveswipe.LiveSwipeView android:id="@id/drag_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+<com.vk.libvideo.ui.layout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/live_video_swipe_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <com.vk.libvideo.live.views.liveswipe.LiveSwipeView
+        android:id="@id/drag_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
 </com.vk.libvideo.ui.layout.SwipeLayout>

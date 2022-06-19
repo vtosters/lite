@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/vkui_edittext_default_bg_8dp" android:state_activated="false" />
     <item android:drawable="@drawable/vkui_edittext_accent_bg_8dp" android:state_activated="true" />
 </selector>

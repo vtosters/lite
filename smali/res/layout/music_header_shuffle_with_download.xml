@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textStyle="normal" android:id="@id/music_shuffle_btn" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/music_button_shuffle" android:drawablePadding="16.0dip" android:fontFamily="sans-serif" style="@style/TextButton.Blue.Big"
-      xmlns:android="http://schemas.android.com/apk/res/android" />
-    <ImageView android:layout_gravity="end" android:id="@id/playlist_download_btn" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_download_24" android:scaleType="centerInside" android:layout_marginEnd="4.0dip" style="@style/ActionButton.Blue" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@id/music_shuffle_btn"
+        style="@style/TextButton.Blue.Big"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip"
+        android:drawablePadding="16.0dip"
+        android:fontFamily="sans-serif"
+        android:text="@string/music_button_shuffle"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@id/playlist_download_btn"
+        style="@style/ActionButton.Blue"
+        android:layout_width="56.0dip"
+        android:layout_height="56.0dip"
+        android:layout_gravity="end"
+        android:layout_marginEnd="4.0dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_download_24" />
 </FrameLayout>

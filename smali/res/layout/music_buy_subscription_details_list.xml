@@ -1,13 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/active_indicator" android:background="@drawable/music_buy_music_subscription_selector_rect" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="52.0dip" android:layout_marginStart="6.0dip" android:layout_marginEnd="6.0dip" app:layout_constraintBottom_toBottomOf="@id/music_subscription_option_1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/music_subscription_option_1" />
-    <TextView android:textSize="21.0sp" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/music_subscription_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:maxLines="1" android:lineSpacingExtra="1.0sp" android:fontFamily="@font/tt_commons_demi_bold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:id="@id/music_subscription_option_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="34.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/music_subscription_title" style="@style/MusicSubscriptionDetailsTitle" />
-    <TextView android:id="@id/music_subscription_option_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/music_subscription_option_1" style="@style/MusicSubscriptionDetailsTitle" />
-    <TextView android:id="@id/music_subscription_option_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/music_subscription_option_2" style="@style/MusicSubscriptionDetailsTitle" />
-    <TextView android:id="@id/music_subscription_option_4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/music_subscription_option_3" style="@style/MusicSubscriptionDetailsTitle" />
-    <TextView android:id="@id/music_subscription_option_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/music_subscription_option_4" style="@style/MusicSubscriptionDetailsTitle" />
-    <com.vk.music.ui.subscription.BuyMusicSubscriptionButton android:id="@id/buy_music_subscription_btn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="34.0dip" android:layout_marginBottom="16.0dip" android:minHeight="48.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/music_subscription_option_5" style="@style/VKUIButton.Primary" />
-    <TextView android:textSize="17.0sp" android:textColor="@color/azure_300" android:gravity="center" android:id="@id/music_cancel_dialog" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="34.0dip" android:layout_marginBottom="16.0dip" android:minHeight="48.0dip" android:text="@string/music_buy_subscription_bottomsheet_cancel_dialog_buutton" android:lineSpacingExtra="5.0sp" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:letterSpacing="-0.02" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/music_subscription_option_5" style="@style/VKUIButton.Muted" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@id/active_indicator"
+        android:layout_width="0.0dip"
+        android:layout_height="52.0dip"
+        android:layout_marginStart="6.0dip"
+        android:layout_marginEnd="6.0dip"
+        android:background="@drawable/music_buy_music_subscription_selector_rect"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/music_subscription_option_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/music_subscription_option_1" />
+
+    <TextView
+        android:id="@id/music_subscription_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@font/tt_commons_demi_bold"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="1.0sp"
+        android:maxLines="1"
+        android:textColor="?text_primary"
+        android:textSize="21.0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/music_subscription_option_1"
+        style="@style/MusicSubscriptionDetailsTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_subscription_title" />
+
+    <TextView
+        android:id="@id/music_subscription_option_2"
+        style="@style/MusicSubscriptionDetailsTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_subscription_option_1" />
+
+    <TextView
+        android:id="@id/music_subscription_option_3"
+        style="@style/MusicSubscriptionDetailsTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_subscription_option_2" />
+
+    <TextView
+        android:id="@id/music_subscription_option_4"
+        style="@style/MusicSubscriptionDetailsTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_subscription_option_3" />
+
+    <TextView
+        android:id="@id/music_subscription_option_5"
+        style="@style/MusicSubscriptionDetailsTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_subscription_option_4" />
+
+    <com.vk.music.ui.subscription.BuyMusicSubscriptionButton
+        android:id="@id/buy_music_subscription_btn"
+        style="@style/VKUIButton.Primary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="34.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:minHeight="48.0dip"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_subscription_option_5" />
+
+    <TextView
+        android:id="@id/music_cancel_dialog"
+        style="@style/VKUIButton.Muted"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="34.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:gravity="center"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="5.0sp"
+        android:minHeight="48.0dip"
+        android:text="@string/music_buy_subscription_bottomsheet_cancel_dialog_buutton"
+        android:textColor="@color/azure_300"
+        android:textSize="17.0sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_subscription_option_5" />
 </merge>

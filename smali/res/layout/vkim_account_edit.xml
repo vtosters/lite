@@ -1,29 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:layout_scrollFlags="" app:title="@string/vkim_settings_account" style="@style/VkIm.Toolbar.Style.LargeWithBack" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            style="@style/VkIm.Toolbar.Style.LargeWithBack"
+            app:layout_scrollFlags=""
+            app:title="@string/vkim_settings_account" />
     </com.google.android.material.appbar.AppBarLayout>
-    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true" />
-    <com.vk.im.ui.views.ContentErrorView android:layout_gravity="center" android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" app:vkim_buttonText="@string/vkim_retry" style="@style/VkIm.ContentErrorView" />
-    <ScrollView android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <LinearLayout android:orientation="vertical" android:id="@id/name_change_request_container" android:background="@drawable/bg_settings_edittext_normal" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
-                <TextView android:textSize="14.0sp" android:textColor="?text_primary" android:id="@id/name_change_request_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" />
-                <TextView android:textSize="14.0sp" android:textColor="?accent" android:id="@id/name_change_request_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/vkim_name_change_request_cancel" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@id/progress"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:matProg_barColor="?accent"
+        app:matProg_progressIndeterminate="true" />
+
+    <com.vk.im.ui.views.ContentErrorView
+        android:id="@id/error"
+        style="@style/VkIm.ContentErrorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:vkim_buttonText="@string/vkim_retry" />
+
+    <ScrollView
+        android:id="@id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@id/name_change_request_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16.0dip"
+                android:layout_marginTop="16.0dip"
+                android:layout_marginEnd="16.0dip"
+                android:background="@drawable/bg_settings_edittext_normal"
+                android:orientation="vertical"
+                android:padding="12.0dip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@id/name_change_request_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:includeFontPadding="false"
+                    android:textColor="?text_primary"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@id/name_change_request_cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1.0dip"
+                    android:fontFamily="@font/roboto_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/vkim_name_change_request_cancel"
+                    android:textColor="?accent"
+                    android:textSize="14.0sp" />
             </LinearLayout>
-            <LinearLayout android:orientation="vertical" android:id="@id/first_last_name_container" android:padding="0.5dip" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="104.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintTop_toBottomOf="@id/name_change_request_container">
-                <com.vk.core.ui.edittext.PlainEditText android:id="@id/first_name" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip" android:hint="@string/vkim_hint_first_name" style="@style/VkIm.Settings.EditTextArea.SingleLine" />
-                <View android:id="@id/divider" android:background="?separator_alternate" android:layout_width="fill_parent" android:layout_height="0.5dip" android:importantForAccessibility="no" />
-                <com.vk.core.ui.edittext.PlainEditText android:id="@id/last_name" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip" android:hint="@string/vkim_hint_last_name" app:layout_constraintStart_toStartOf="@id/divider" style="@style/VkIm.Settings.EditTextArea.SingleLine" />
+
+            <LinearLayout
+                android:id="@id/first_last_name_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="104.0dip"
+                android:layout_marginTop="16.0dip"
+                android:layout_marginEnd="16.0dip"
+                android:descendantFocusability="afterDescendants"
+                android:orientation="vertical"
+                android:padding="0.5dip"
+                app:layout_constraintTop_toBottomOf="@id/name_change_request_container">
+
+                <com.vk.core.ui.edittext.PlainEditText
+                    android:id="@id/first_name"
+                    style="@style/VkIm.Settings.EditTextArea.SingleLine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/vkim_hint_first_name"
+                    android:minHeight="44.0dip" />
+
+                <View
+                    android:id="@id/divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="?separator_alternate"
+                    android:importantForAccessibility="no" />
+
+                <com.vk.core.ui.edittext.PlainEditText
+                    android:id="@id/last_name"
+                    style="@style/VkIm.Settings.EditTextArea.SingleLine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/vkim_hint_last_name"
+                    android:minHeight="44.0dip"
+                    app:layout_constraintStart_toStartOf="@id/divider" />
             </LinearLayout>
-            <com.vk.im.ui.views.avatars.AvatarView android:id="@id/avatar" android:layout_width="72.0dip" android:layout_height="72.0dip" android:contentDescription="@string/vkim_accessibility_avatar" android:layout_marginStart="16.0dip" app:av_tintColor="@color/black_alpha35" app:layout_constraintBottom_toBottomOf="@id/first_last_name_container" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/first_last_name_container" style="@style/VkIm.AvatarView" />
-            <androidx.appcompat.widget.AppCompatImageView android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/ic_camera_outline_28" android:tint="@color/white" android:contentDescription="@null" android:importantForAccessibility="no" app:layout_constraintBottom_toBottomOf="@id/avatar" app:layout_constraintEnd_toEndOf="@id/avatar" app:layout_constraintStart_toStartOf="@id/avatar" app:layout_constraintTop_toTopOf="@id/avatar" />
-            <com.vk.im.ui.views.settings.DividerSettingsView android:id="@id/divider1" android:layout_marginTop="4.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/first_last_name_container" style="@style/VkIm.Settings.Divider" />
-            <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/change_password" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/divider1" app:vkim_titleText="@string/vkim_settings_change_password" style="@style/VkIm.Settings.Label.Normal" />
-            <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/change_phone" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/change_password" app:vkim_titleText="@string/vkim_settings_change_phone" style="@style/VkIm.Settings.Label.Normal" />
-            <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/change_screen_name" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/change_phone" app:vkim_titleText="@string/vkim_settings_short_name" style="@style/VkIm.Settings.Label.Normal" />
+
+            <com.vk.im.ui.views.avatars.AvatarView
+                android:id="@id/avatar"
+                style="@style/VkIm.AvatarView"
+                android:layout_width="72.0dip"
+                android:layout_height="72.0dip"
+                android:layout_marginStart="16.0dip"
+                android:contentDescription="@string/vkim_accessibility_avatar"
+                app:av_tintColor="@color/black_alpha35"
+                app:layout_constraintBottom_toBottomOf="@id/first_last_name_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/first_last_name_container" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:contentDescription="@null"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_camera_outline_28"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/avatar"
+                app:layout_constraintEnd_toEndOf="@id/avatar"
+                app:layout_constraintStart_toStartOf="@id/avatar"
+                app:layout_constraintTop_toTopOf="@id/avatar" />
+
+            <com.vk.im.ui.views.settings.DividerSettingsView
+                android:id="@id/divider1"
+                style="@style/VkIm.Settings.Divider"
+                android:layout_marginTop="4.0dip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_last_name_container" />
+
+            <com.vk.im.ui.views.settings.LabelSettingsView
+                android:id="@id/change_password"
+                style="@style/VkIm.Settings.Label.Normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider1"
+                app:vkim_titleText="@string/vkim_settings_change_password" />
+
+            <com.vk.im.ui.views.settings.LabelSettingsView
+                android:id="@id/change_phone"
+                style="@style/VkIm.Settings.Label.Normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/change_password"
+                app:vkim_titleText="@string/vkim_settings_change_phone" />
+
+            <com.vk.im.ui.views.settings.LabelSettingsView
+                android:id="@id/change_screen_name"
+                style="@style/VkIm.Settings.Label.Normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/change_phone"
+                app:vkim_titleText="@string/vkim_settings_short_name" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
     <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

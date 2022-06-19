@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="6.0dip" android:paddingTop="3.0dip" android:paddingRight="6.0dip" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:gravity="center" android:id="@id/icon_wrap" android:layout_width="0.0dip" android:layout_height="14.0dip" android:layout_marginRight="0.0dip">
-        <ImageView android:layout_gravity="center|right" android:id="@id/icon_progress" android:visibility="visible" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginRight="4.0dip" android:contentDescription="@null" />
-        <ImageView android:layout_gravity="center|right" android:id="@id/icon_play" android:visibility="visible" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginRight="4.0dip" android:contentDescription="@null" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="6.0dip"
+    android:paddingTop="3.0dip"
+    android:paddingRight="6.0dip"
+    android:paddingBottom="3.0dip">
+
+    <FrameLayout
+        android:id="@id/icon_wrap"
+        android:layout_width="0.0dip"
+        android:layout_height="14.0dip"
+        android:layout_marginRight="0.0dip"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@id/icon_progress"
+            android:layout_width="12.0dip"
+            android:layout_height="12.0dip"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="4.0dip"
+            android:contentDescription="@null"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@id/icon_play"
+            android:layout_width="12.0dip"
+            android:layout_height="12.0dip"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="4.0dip"
+            android:contentDescription="@null"
+            android:visibility="visible" />
     </FrameLayout>
 </merge>

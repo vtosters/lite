@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="13.0sp" android:textColor="?vk_text_secondary" android:paddingTop="15.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/vk_roboto_medium" android:paddingStart="16.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/vk_roboto_medium"
+    android:paddingStart="16.0dip"
+    android:paddingTop="15.0dip"
+    android:paddingBottom="5.0dip"
+    android:textColor="?vk_text_secondary"
+    android:textSize="13.0sp" />

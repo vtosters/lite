@@ -24,12 +24,14 @@
     <dimen name="design_snackbar_extra_spacing_horizontal">24.0dip</dimen>
     <dimen name="design_snackbar_max_width">576.0dip</dimen>
     <dimen name="design_snackbar_min_width">320.0dip</dimen>
-    <item type="dimen" name="design_snackbar_padding_vertical_2lines">@dimen/design_snackbar_padding_vertical</item>
+    <item name="design_snackbar_padding_vertical_2lines" type="dimen">
+        @dimen/design_snackbar_padding_vertical
+    </item>
     <dimen name="design_tab_scrollable_min_width">160.0dip</dimen>
     <dimen name="extra_time_label_margin">-50.0dip</dimen>
     <dimen name="footer_height">60.0dip</dimen>
     <dimen name="friends_header_padding">12.0dip</dimen>
-    <item type="dimen" name="gift_category_min_size">@dimen/gift_min_size</item>
+    <item name="gift_category_min_size" type="dimen">@dimen/gift_min_size</item>
     <dimen name="gift_min_size">128.0dip</dimen>
     <dimen name="gifts_category_padding">28.0dip</dimen>
     <dimen name="good_description_padding_bottom">19.0dip</dimen>

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <nine-patch android:src="@drawable/vkim_bg_msg_out_def_top" android:tint="?background_content" />
+        <nine-patch
+            android:src="@drawable/vkim_bg_msg_out_def_top"
+            android:tint="?background_content" />
     </item>
     <item>
-        <nine-patch android:src="@drawable/vkim_bg_msg_out_def_top_outline" android:tint="?separator_alpha" />
+        <nine-patch
+            android:src="@drawable/vkim_bg_msg_out_def_top_outline"
+            android:tint="?separator_alpha" />
     </item>
 </layer-list>

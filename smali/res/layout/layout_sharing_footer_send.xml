@@ -1,11 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/sharing_send_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/sharing_actions_height"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <EditText android:textSize="17.0dip" android:textColor="?text_primary" android:textColorHint="?text_secondary" android:id="@id/sharing_comment_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="11.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:hint="@string/sharing_hint_comment" android:singleLine="true" android:inputType="textCapSentences" style="@style/VKUIEditText" />
-    <FrameLayout android:id="@id/sharing_attach_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
-    <View android:layout_gravity="bottom" android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
-    <RelativeLayout android:id="@id/sharing_send_button" android:background="@drawable/sharing_blue_btn" android:layout_width="fill_parent" android:layout_height="0.0dip" android:minHeight="48.0dip" android:layout_weight="1.0">
-        <TextView android:textSize="16.0dip" android:textColor="@color/sharing_blue_btn_text" android:gravity="center" android:id="@android:id/text1" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sharing_send_button_label" android:includeFontPadding="false" android:layout_centerInParent="true" android:textAllCaps="true" android:fontFamily="@font/roboto_medium" />
-        <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="?button_primary_background" android:gravity="center" android:id="@id/sharing_send_button_counter" android:background="@drawable/white_circle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:minWidth="20.0dip" android:minHeight="20.0dip" android:includeFontPadding="false" android:layout_toRightOf="@android:id/text1" android:layout_centerVertical="true" android:layout_marginStart="8.0dip" android:layout_toEndOf="@android:id/text1" app:typeface="Medium" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/sharing_send_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/sharing_actions_height"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@id/sharing_comment_input"
+        style="@style/VKUIEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginTop="11.0dip"
+        android:layout_marginRight="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:hint="@string/sharing_hint_comment"
+        android:inputType="textCapSentences"
+        android:singleLine="true"
+        android:textColor="?text_primary"
+        android:textColorHint="?text_secondary"
+        android:textSize="17.0dip" />
+
+    <FrameLayout
+        android:id="@id/sharing_attach_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip"
+        android:layout_gravity="bottom"
+        android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" />
+
+    <RelativeLayout
+        android:id="@id/sharing_send_button"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/sharing_blue_btn"
+        android:minHeight="48.0dip">
+
+        <TextView
+            android:id="@android:id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:duplicateParentState="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/sharing_send_button_label"
+            android:textAllCaps="true"
+            android:textColor="@color/sharing_blue_btn_text"
+            android:textSize="16.0dip" />
+
+        <com.vtosters.lite.ui.BadooTextView
+            android:id="@id/sharing_send_button_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginLeft="8.0dip"
+            android:layout_toEndOf="@android:id/text1"
+            android:layout_toRightOf="@android:id/text1"
+            android:background="@drawable/white_circle"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minWidth="20.0dip"
+            android:minHeight="20.0dip"
+            android:textColor="?button_primary_background"
+            android:textSize="14.0dip"
+            android:visibility="gone"
+            app:typeface="Medium" />
     </RelativeLayout>
 </LinearLayout>

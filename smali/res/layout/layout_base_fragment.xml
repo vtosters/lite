@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/appkit_loader_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/app_bar_layout"
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
         <include layout="@layout/appkit_toolbar" />
     </com.google.android.material.appbar.AppBarLayout>
-    <com.vk.lists.RecyclerPaginatedView android:id="@id/rpb_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/toolbar_behavior_scrolling" />
-    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" style="@style/AppBarShadow" />
+
+    <com.vk.lists.RecyclerPaginatedView
+        android:id="@id/rpb_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/toolbar_behavior_scrolling" />
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/shadow"
+        style="@style/AppBarShadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,16 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.appcompat.widget.Toolbar android:theme="@style/AppTheme.ActionBarTheme" android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:titleTextColor="?header_text">
-        <TextView android:theme="@style/AppTheme.ActionBarTheme" android:textSize="20.0dip" android:textColor="?header_text" android:gravity="center_vertical" android:id="@id/playlist_collapsed_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:fontFamily="?toolbar_font" style="@style/ToolbarTitle" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?header_background"
+        android:theme="@style/AppTheme.ActionBarTheme"
+        app:titleTextColor="?header_text">
+
+        <TextView
+            android:id="@id/playlist_collapsed_title"
+            style="@style/ToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:fontFamily="?toolbar_font"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="?header_text"
+            android:textSize="20.0dip"
+            android:theme="@style/AppTheme.ActionBarTheme" />
     </androidx.appcompat.widget.Toolbar>
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <com.vk.lists.CustomSwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <androidx.recyclerview.widget.RecyclerView android:id="@id/music_playlist_content_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.vk.lists.CustomSwipeRefreshLayout
+            android:id="@id/swipe_refresh_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/music_playlist_content_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:overScrollMode="never"
+                android:scrollbars="vertical" />
         </com.vk.lists.CustomSwipeRefreshLayout>
-        <FrameLayout android:id="@id/error_layout" android:background="?background_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <include android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/music_ui_playlist_error" />
+
+        <FrameLayout
+            android:id="@id/error_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="?background_content"
+            android:visibility="gone">
+
+            <include
+                layout="@layout/music_ui_playlist_error"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
         </FrameLayout>
-        <include android:id="@id/progress" layout="@layout/music_ui_progress" />
+
+        <include
+            android:id="@id/progress"
+            layout="@layout/music_ui_progress" />
     </FrameLayout>
 </LinearLayout>

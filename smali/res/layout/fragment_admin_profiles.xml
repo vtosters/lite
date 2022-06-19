@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.newsfeed.UsableRecyclerPaginatedView android:id="@id/rpb_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/toolbar_behavior_scrolling" />
-    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:elevation="3.0dip" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" style="?actionBarTheme">
-        <TextView android:id="@id/custom_action_bar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/ActionBarTitleStyle" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/appkit_loader_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+    <com.vk.newsfeed.UsableRecyclerPaginatedView
+        android:id="@id/rpb_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/toolbar_behavior_scrolling" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        style="?actionBarTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:elevation="3.0dip"
+        app:popupTheme="?actionBarPopupTheme"
+        app:theme="?actionBarTheme">
+
+        <TextView
+            android:id="@id/custom_action_bar_title"
+            style="@style/ActionBarTitleStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true" />
     </androidx.appcompat.widget.Toolbar>
-    <View android:id="@id/loader_overlay_statusbar_bg" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:elevation="3.0dip" app:theme="?actionBarTheme" />
+
+    <View
+        android:id="@id/loader_overlay_statusbar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:background="?header_background"
+        android:elevation="3.0dip"
+        app:theme="?actionBarTheme" />
 </FrameLayout>

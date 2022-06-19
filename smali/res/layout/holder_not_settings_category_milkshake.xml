@@ -1,8 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="horizontal" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="64.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColor="?text_muted" android:id="@id/tv_category_title" android:layout_marginTop="11.0dip" android:layout_above="@id/tv_category_desc" android:layout_centerVertical="true" android:layout_marginStart="@dimen/standard_list_item_padding" android:layout_marginEnd="@dimen/standard_list_item_padding" android:layout_toEndOf="@id/iv_icon" style="@style/Preference.Title" />
-    <TextView android:id="@id/tv_category_desc" android:layout_marginTop="1.0dip" android:layout_marginBottom="11.0dip" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/standard_list_item_padding" android:layout_toEndOf="@id/iv_icon" style="@style/Preference.SubTitle" />
-    <View android:layout_gravity="bottom" android:id="@id/muted" android:background="@drawable/ic_not_push_muted_badge_16" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_alignBottom="@id/tv_category_desc" android:layout_marginStart="2.0dip" android:layout_marginEnd="@dimen/standard_list_item_padding" android:layout_toEndOf="@id/tv_category_desc" android:backgroundTint="?icon_tertiary" />
-    <com.vk.imageloader.view.VKCircleImageView android:id="@id/iv_icon" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_centerVertical="true" android:layout_marginStart="@dimen/standard_list_item_padding" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="64.0dip"
+    android:background="@drawable/highlight"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@id/tv_category_title"
+        style="@style/Preference.Title"
+        android:layout_above="@id/tv_category_desc"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/standard_list_item_padding"
+        android:layout_marginTop="11.0dip"
+        android:layout_marginEnd="@dimen/standard_list_item_padding"
+        android:layout_toEndOf="@id/iv_icon"
+        android:textColor="?text_muted" />
+
+    <TextView
+        android:id="@id/tv_category_desc"
+        style="@style/Preference.SubTitle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/standard_list_item_padding"
+        android:layout_marginTop="1.0dip"
+        android:layout_marginBottom="11.0dip"
+        android:layout_toEndOf="@id/iv_icon" />
+
+    <View
+        android:id="@id/muted"
+        android:layout_width="16.0dip"
+        android:layout_height="16.0dip"
+        android:layout_alignBottom="@id/tv_category_desc"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="2.0dip"
+        android:layout_marginEnd="@dimen/standard_list_item_padding"
+        android:layout_toEndOf="@id/tv_category_desc"
+        android:background="@drawable/ic_not_push_muted_badge_16"
+        android:backgroundTint="?icon_tertiary" />
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/iv_icon"
+        android:layout_width="28.0dip"
+        android:layout_height="28.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/standard_list_item_padding" />
 </RelativeLayout>

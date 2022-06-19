@@ -1,11 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="?background_content" android:paddingLeft="4.0dip" android:paddingTop="12.0dip" android:paddingRight="4.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="16.0sp" android:id="@id/button_add_to_cart" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="44.0dip" android:text="@string/write_to_the_good_owner" android:lineSpacingExtra="1.0sp" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" app:layout_constraintEnd_toStartOf="@id/button_add_to_cart_one_more" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/VKUIButton.Primary" />
-    <ImageView android:id="@id/button_go_to_cart_bg" android:layout_width="0.0dip" android:layout_height="0.0dip" android:src="@drawable/vkui_bg_button_green" android:minHeight="44.0dip" android:importantForAccessibility="no" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" app:layout_constraintBottom_toBottomOf="@id/button_go_to_cart_bottom_margin" app:layout_constraintEnd_toStartOf="@id/button_add_to_cart_one_more" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:textColor="@color/vkui_primary_button_text" android:gravity="center" android:id="@id/button_go_to_cart_top_line" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:fontFamily="@string/font_family_medium" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintEnd_toStartOf="@id/button_add_to_cart_one_more" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/button_go_to_cart_bg" style="@style/VKUIText.Subhead1" />
-    <TextView android:textColor="@color/vkui_primary_button_text" android:gravity="center" android:id="@id/button_go_to_cart_bottom_line" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/product_open_cart" android:alpha="0.72" android:fontFamily="@string/font_family_regular" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintEnd_toStartOf="@id/button_add_to_cart_one_more" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/button_go_to_cart_top_line" style="@style/VKUIText.Caption2" />
-    <Space android:id="@id/button_go_to_cart_bottom_margin" android:layout_width="5.0dip" android:layout_height="5.0dip" app:layout_constraintStart_toStartOf="@id/button_go_to_cart_bottom_line" app:layout_constraintTop_toBottomOf="@id/button_go_to_cart_bottom_line" />
-    <androidx.constraintlayout.widget.Group android:id="@id/button_go_to_cart" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:constraint_referenced_ids="button_go_to_cart_bg,button_go_to_cart_top_line,button_go_to_cart_bottom_line" />
-    <TextView android:textSize="16.0sp" android:id="@id/button_add_to_cart_one_more" android:layout_width="wrap_content" android:layout_height="0.0dip" android:minHeight="44.0dip" android:text="@string/product_add_to_cart_one_more" android:lineSpacingExtra="1.0sp" android:layout_marginStart="18.0dip" android:layout_marginEnd="12.0dip" app:layout_constraintBottom_toBottomOf="@id/button_go_to_cart_bg" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/button_go_to_cart_bg" style="@style/VKUIButton.Muted" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?background_content"
+    android:orientation="vertical"
+    android:paddingLeft="4.0dip"
+    android:paddingTop="12.0dip"
+    android:paddingRight="4.0dip"
+    android:paddingBottom="12.0dip">
+
+    <TextView
+        android:id="@id/button_add_to_cart"
+        style="@style/VKUIButton.Primary"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:lineSpacingExtra="1.0sp"
+        android:minHeight="44.0dip"
+        android:text="@string/write_to_the_good_owner"
+        android:textSize="16.0sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/button_add_to_cart_one_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@id/button_go_to_cart_bg"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:importantForAccessibility="no"
+        android:minHeight="44.0dip"
+        android:src="@drawable/vkui_bg_button_green"
+        app:layout_constraintBottom_toBottomOf="@id/button_go_to_cart_bottom_margin"
+        app:layout_constraintEnd_toStartOf="@id/button_add_to_cart_one_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/button_go_to_cart_top_line"
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center"
+        android:textColor="@color/vkui_primary_button_text"
+        app:layout_constraintEnd_toStartOf="@id/button_add_to_cart_one_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button_go_to_cart_bg" />
+
+    <TextView
+        android:id="@id/button_go_to_cart_bottom_line"
+        style="@style/VKUIText.Caption2"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:alpha="0.72"
+        android:fontFamily="@string/font_family_regular"
+        android:gravity="center"
+        android:text="@string/product_open_cart"
+        android:textColor="@color/vkui_primary_button_text"
+        app:layout_constraintEnd_toStartOf="@id/button_add_to_cart_one_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_go_to_cart_top_line" />
+
+    <Space
+        android:id="@id/button_go_to_cart_bottom_margin"
+        android:layout_width="5.0dip"
+        android:layout_height="5.0dip"
+        app:layout_constraintStart_toStartOf="@id/button_go_to_cart_bottom_line"
+        app:layout_constraintTop_toBottomOf="@id/button_go_to_cart_bottom_line" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/button_go_to_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="button_go_to_cart_bg,button_go_to_cart_top_line,button_go_to_cart_bottom_line" />
+
+    <TextView
+        android:id="@id/button_add_to_cart_one_more"
+        style="@style/VKUIButton.Muted"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_marginStart="18.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:lineSpacingExtra="1.0sp"
+        android:minHeight="44.0dip"
+        android:text="@string/product_add_to_cart_one_more"
+        android:textSize="16.0sp"
+        app:layout_constraintBottom_toBottomOf="@id/button_go_to_cart_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button_go_to_cart_bg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape android:shape="rectangle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
     <solid android:color="?vk_field_background" />
     <corners android:radius="8.0dip" />
-    <stroke android:width="0.5dip" android:color="?vk_field_border" />
+    <stroke
+        android:width="0.5dip"
+        android:color="?vk_field_border" />
 </shape>

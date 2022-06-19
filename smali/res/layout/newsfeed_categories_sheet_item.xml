@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RadioButton android:textSize="16.0sp" android:textColor="?text_primary" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:paddingStart="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/Widget.AppCompat.CompoundButton.RadioButton" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48.0dip">
+
+    <RadioButton
+        android:id="@id/text"
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:gravity="center_vertical"
+        android:paddingStart="16.0dip"
+        android:singleLine="true"
+        android:textColor="?text_primary"
+        android:textSize="16.0sp" />
 </FrameLayout>

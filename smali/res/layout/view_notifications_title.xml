@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:id="@id/title_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColor="?header_text" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" style="@style/Toolbar.Title.Large.Autosize" />
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/dropdown" android:layout_width="20.0dip" android:layout_height="16.0dip" android:src="@drawable/dropdown_20" android:scaleType="centerInside" android:adjustViewBounds="true" android:tint="?header_tint" android:contentDescription="@null" android:translationY="1.5dip" android:importantForAccessibility="no" android:layout_marginStart="4.0dip" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/title_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@id/title"
+        style="@style/Toolbar.Title.Large.Autosize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:minHeight="48.0dip"
+        android:textColor="?header_text" />
+
+    <ImageView
+        android:id="@id/dropdown"
+        android:layout_width="20.0dip"
+        android:layout_height="16.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="4.0dip"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:scaleType="centerInside"
+        android:src="@drawable/dropdown_20"
+        android:tint="?header_tint"
+        android:translationY="1.5dip" />
 </LinearLayout>

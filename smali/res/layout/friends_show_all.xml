@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="16.0sp" android:textColor="?accent" android:gravity="center" android:background="@drawable/picker_white_ripple_bounded" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/friends_show_all_requests" android:maxLines="1" android:fontFamily="@string/font_family_medium"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:background="@drawable/picker_white_ripple_bounded"
+    android:fontFamily="@string/font_family_medium"
+    android:gravity="center"
+    android:maxLines="1"
+    android:text="@string/friends_show_all_requests"
+    android:textColor="?accent"
+    android:textSize="16.0sp" />

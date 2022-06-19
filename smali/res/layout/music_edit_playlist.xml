@@ -1,20 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.core.view.VKAppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <FrameLayout android:orientation="horizontal" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:elevation="0.0dip" android:outlineProvider="none" style="@style/Toolbar">
-            <ImageView android:layout_gravity="center_vertical" android:id="@id/close_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/picker_ic_close_24" android:contentDescription="@string/ui_accessibility_close" style="@style/ActionButton.White" />
-            <TextView android:textColor="?header_text" android:layout_gravity="center_vertical" android:id="@id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="64.0dip" android:layout_marginRight="16.0dip" android:text="@string/music_title_new_playlist" style="@style/title_text" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.vk.core.view.VKAppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0.0dip"
+            android:minHeight="?actionBarSize"
+            android:orientation="horizontal"
+            android:outlineProvider="none">
+
+            <ImageView
+                android:id="@id/close_btn"
+                style="@style/ActionButton.White"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4.0dip"
+                android:contentDescription="@string/ui_accessibility_close"
+                android:src="@drawable/picker_ic_close_24" />
+
+            <TextView
+                android:id="@id/toolbar_title"
+                style="@style/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="64.0dip"
+                android:layout_marginRight="16.0dip"
+                android:text="@string/music_title_new_playlist"
+                android:textColor="?header_text" />
         </FrameLayout>
     </com.vk.core.view.VKAppBarLayout>
+
     <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
-    <ViewAnimator android:id="@id/content_animator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
-        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyle" />
-        <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <androidx.recyclerview.widget.RecyclerView android:id="@id/list" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-            <FrameLayout android:layout_width="fill_parent" android:layout_height="68.0dip">
-                <View android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-                <TextView android:layout_gravity="bottom" android:id="@id/save_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:text="@string/music_save_button_label" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:fontFamily="@font/roboto_medium" style="@style/VKUIButton.Primary.Big" />
+
+    <ViewAnimator
+        android:id="@id/content_animator"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?actionBarSize">
+
+        <ProgressBar
+            android:id="@id/progress"
+            style="?android:progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:id="@id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:clipToPadding="false"
+                android:paddingBottom="8.0dip" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="68.0dip">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="?separator_alpha" />
+
+                <TextView
+                    android:id="@id/save_btn"
+                    style="@style/VKUIButton.Primary.Big"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="16.0dip"
+                    android:layout_marginTop="12.0dip"
+                    android:layout_marginEnd="16.0dip"
+                    android:layout_marginBottom="12.0dip"
+                    android:text="@string/music_save_button_label"
+                    app:fontFamily="@font/roboto_medium" />
             </FrameLayout>
         </LinearLayout>
     </ViewAnimator>

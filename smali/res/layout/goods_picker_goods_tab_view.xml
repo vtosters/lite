@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.lists.RecyclerPaginatedView android:id="@id/goods_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" app:enableItemAnimations="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<com.vk.lists.RecyclerPaginatedView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/goods_recycler"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingStart="10.0dip"
+    android:paddingEnd="10.0dip"
+    app:enableItemAnimations="true" />

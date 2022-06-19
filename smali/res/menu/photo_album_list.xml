@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_revert_back_24" android:id="@id/reverse" android:title="@string/revers_photos" app:menuTint="?header_tint" app:showAsAction="always" />
-    <item android:icon="@drawable/ic_more_vertical_24" android:id="@id/options" android:title="" app:menuTint="?header_tint" app:showAsAction="always" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/reverse"
+        android:icon="@drawable/ic_revert_back_24"
+        android:title="@string/revers_photos"
+        app:menuTint="?header_tint"
+        app:showAsAction="always" />
+    <item
+        android:id="@id/options"
+        android:icon="@drawable/ic_more_vertical_24"
+        android:title=""
+        app:menuTint="?header_tint"
+        app:showAsAction="always" />
 </menu>

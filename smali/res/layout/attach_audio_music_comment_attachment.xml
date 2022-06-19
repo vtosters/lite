@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/audio_attachment_artist_container" android:background="@drawable/music_selectable_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.music.view.ThumbsImageView android:id="@id/audio_attachment_image" android:layout_width="80.0dip" android:layout_height="80.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tiv_background_image="?placeholder_icon_background" app:tiv_empty_tint="?placeholder_icon_foreground_secondary" />
-    <TextView android:id="@id/audio_attachment_artist_listen_btn" android:layout_width="wrap_content" android:layout_height="30.0dip" android:text="@string/music_artist_open_btn" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toBottomOf="@id/audio_attachment_image" app:layout_constraintStart_toEndOf="@id/audio_attachment_image" style="@style/VKUIButton.Outline" />
-    <TextView android:textSize="15.0sp" android:textColor="?text_muted" android:ellipsize="end" android:gravity="center" android:id="@id/audio_attachment_title" android:layout_width="wrap_content" android:layout_height="19.0dip" android:maxLines="1" android:layout_marginEnd="12.0dip" app:fontFamily="@font/roboto_medium" app:layout_constrainedWidth="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="@id/audio_attachment_artist_listen_btn" app:layout_constraintTop_toTopOf="@id/audio_attachment_image" />
-    <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:gravity="center" android:id="@id/audio_attachment_description" android:layout_width="wrap_content" android:layout_height="19.0dip" android:text="@string/attach_artist" android:layout_marginEnd="12.0dip" app:fontFamily="@font/roboto_regular" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="@id/audio_attachment_artist_listen_btn" app:layout_constraintTop_toBottomOf="@id/audio_attachment_title" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/audio_attachment_artist_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1.0dip"
+    android:background="@drawable/music_selectable_bg">
+
+    <com.vk.music.view.ThumbsImageView
+        android:id="@id/audio_attachment_image"
+        android:layout_width="80.0dip"
+        android:layout_height="80.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tiv_background_image="?placeholder_icon_background"
+        app:tiv_empty_tint="?placeholder_icon_foreground_secondary" />
+
+    <TextView
+        android:id="@id/audio_attachment_artist_listen_btn"
+        style="@style/VKUIButton.Outline"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:layout_marginStart="12.0dip"
+        android:text="@string/music_artist_open_btn"
+        app:layout_constraintBottom_toBottomOf="@id/audio_attachment_image"
+        app:layout_constraintStart_toEndOf="@id/audio_attachment_image" />
+
+    <TextView
+        android:id="@id/audio_attachment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="19.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="?text_muted"
+        android:textSize="15.0sp"
+        app:fontFamily="@font/roboto_medium"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/audio_attachment_artist_listen_btn"
+        app:layout_constraintTop_toTopOf="@id/audio_attachment_image" />
+
+    <TextView
+        android:id="@id/audio_attachment_description"
+        android:layout_width="wrap_content"
+        android:layout_height="19.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:gravity="center"
+        android:text="@string/attach_artist"
+        android:textColor="?text_secondary"
+        android:textSize="14.0sp"
+        app:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/audio_attachment_artist_listen_btn"
+        app:layout_constraintTop_toBottomOf="@id/audio_attachment_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

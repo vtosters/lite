@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/card_view" android:layout_width="fill_parent" android:layout_height="60.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/vkim_progress" android:layout_width="40.0dip" android:layout_height="40.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/card_view"
+    android:layout_width="fill_parent"
+    android:layout_height="60.0dip">
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@id/vkim_progress"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_gravity="center"
+        app:matProg_barColor="?accent"
+        app:matProg_progressIndeterminate="true" />
 </FrameLayout>

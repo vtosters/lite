@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:enabled="false" android:ellipsize="end" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/VKUIText.Subhead1" />
-    <TextView android:textColor="?text_primary" android:id="@id/property_variants" android:background="@drawable/vkui_spinner_default_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:minHeight="44.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title" style="@style/VKUIFormButton" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8.0dip">
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:enabled="false"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/property_variants"
+        style="@style/VKUIFormButton"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        android:background="@drawable/vkui_spinner_default_bg"
+        android:minHeight="44.0dip"
+        android:textColor="?text_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

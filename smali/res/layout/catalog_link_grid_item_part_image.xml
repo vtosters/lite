@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:layout_constraintBottom_toTopOf="@id/title" app:placeholderImage="?content_tint_background" />
-    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:layout_gravity="end|center|top" android:id="@id/discount" android:background="@drawable/bg_round_rect_4_5dp_red" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:lineSpacingExtra="1.0sp" android:fontFamily="sans-serif-medium" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" android:layout_marginEnd="8.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:placeholderImage="?content_tint_background" />
+
+    <TextView
+        android:id="@id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center|top"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:background="@drawable/bg_round_rect_4_5dp_red"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="1.0sp"
+        android:paddingStart="4.0dip"
+        android:paddingTop="2.0dip"
+        android:paddingEnd="4.0dip"
+        android:paddingBottom="2.0dip"
+        android:textColor="@color/white"
+        android:textSize="12.0sp" />
 </FrameLayout>

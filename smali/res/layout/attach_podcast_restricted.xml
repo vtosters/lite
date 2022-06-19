@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:gravity="center_vertical" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="12.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <View android:id="@id/image" android:background="@drawable/podcast_restricted_placeholder_24" android:layout_width="64.0dip" android:layout_height="fill_parent" android:minHeight="64.0dip" />
-    <TextView android:textSize="14.0sp" android:textColor="@color/gray_400" android:ellipsize="end" android:id="@id/description" android:background="@drawable/attach_podcast_right" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="64.0dip" android:includeFontPadding="false" android:lineSpacingExtra="1.5sp" android:paddingStart="16.0dip" android:paddingEnd="44.0dip" android:layout_marginStart="64.0dip" app:fontFamily="@font/roboto_bold" />
-    <View android:layout_gravity="end|center|top" android:id="@id/attach_podcast_remove_button" android:background="@drawable/ic_close_attach_36" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:contentDescription="@string/delete" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingStart="12.0dip"
+    android:paddingTop="8.0dip"
+    android:paddingEnd="12.0dip"
+    android:paddingBottom="8.0dip">
+
+    <View
+        android:id="@id/image"
+        android:layout_width="64.0dip"
+        android:layout_height="fill_parent"
+        android:background="@drawable/podcast_restricted_placeholder_24"
+        android:minHeight="64.0dip" />
+
+    <TextView
+        android:id="@id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64.0dip"
+        android:background="@drawable/attach_podcast_right"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="1.5sp"
+        android:minHeight="64.0dip"
+        android:paddingStart="16.0dip"
+        android:paddingTop="14.0dip"
+        android:paddingEnd="44.0dip"
+        android:paddingBottom="14.0dip"
+        android:textColor="@color/gray_400"
+        android:textSize="14.0sp"
+        app:fontFamily="@font/roboto_bold" />
+
+    <View
+        android:id="@id/attach_podcast_remove_button"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip"
+        android:layout_gravity="end|center|top"
+        android:background="@drawable/ic_close_attach_36"
+        android:contentDescription="@string/delete"
+        android:visibility="gone" />
 </FrameLayout>

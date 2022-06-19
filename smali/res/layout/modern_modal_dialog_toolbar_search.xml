@@ -1,25 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:id="@id/bottom_sheet_content_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <FrameLayout android:layout_gravity="top" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0dip" android:paddingStart="4.0dip" android:paddingEnd="4.0dip">
-            <ImageView android:layout_gravity="start|center" android:id="@id/toolbar_left_icon" android:background="?selectableItemBackgroundBorderless" android:padding="12.0dip" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_cancel_24" android:tint="?icon_secondary" android:contentDescription="@string/close" />
-            <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:id="@id/toolbar_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip">
-                <TextView android:textColor="?text_primary" android:ellipsize="end" android:id="@id/toolbar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/VKUIText.Title1" />
-                <TextView android:textColor="?text_subhead" android:id="@id/toolbar_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKUIText.Subhead1" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@id/bottom_sheet_content_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:id="@id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip"
+            android:layout_gravity="top"
+            android:paddingStart="4.0dip"
+            android:paddingEnd="4.0dip">
+
+            <ImageView
+                android:id="@id/toolbar_left_icon"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="start|center"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/close"
+                android:padding="12.0dip"
+                android:src="@drawable/ic_cancel_24"
+                android:tint="?icon_secondary"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@id/toolbar_text_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="12.0dip"
+                android:layout_marginEnd="12.0dip"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/toolbar_title"
+                    style="@style/VKUIText.Title1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?text_primary" />
+
+                <TextView
+                    android:id="@id/toolbar_subtitle"
+                    style="@style/VKUIText.Subhead1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?text_subhead" />
             </LinearLayout>
-            <ImageView android:layout_gravity="end|center" android:id="@id/toolbar_right_icon" android:background="@drawable/vkui_ripple_circle_highlight" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_search_24" android:scaleType="centerInside" android:tint="?icon_secondary" android:contentDescription="@string/talkback_ic_search" />
+
+            <ImageView
+                android:id="@id/toolbar_right_icon"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="end|center"
+                android:background="@drawable/vkui_ripple_circle_highlight"
+                android:contentDescription="@string/talkback_ic_search"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_search_24"
+                android:tint="?icon_secondary" />
         </FrameLayout>
-        <com.vk.core.view.search.ModernSearchView android:id="@id/search" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginStart="-4.0dip" app:theme="@style/ActionBarTheme.White" style="@style/ActionBarTheme.White" />
-        <FrameLayout android:layout_gravity="top" android:id="@id/static_toolbar" android:layout_width="fill_parent" android:layout_height="56.0dip" android:paddingStart="4.0dip" android:paddingEnd="4.0dip">
-            <ImageView android:layout_gravity="start|center" android:id="@id/static_toolbar_left_icon" android:background="?selectableItemBackgroundBorderless" android:padding="12.0dip" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_back_outline_28" android:tint="?icon_secondary" android:contentDescription="@string/talkback_ic_back" />
-            <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="64.0dip" android:layout_marginEnd="12.0dip">
-                <TextView android:textColor="?text_primary" android:ellipsize="end" android:id="@id/static_toolbar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/VKUIText.Title1" />
-                <TextView android:textColor="?text_subhead" android:id="@id/static_toolbar_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKUIText.Subhead1" />
+
+        <com.vk.core.view.search.ModernSearchView
+            android:id="@id/search"
+            style="@style/ActionBarTheme.White"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginStart="-4.0dip"
+            android:visibility="gone"
+            app:theme="@style/ActionBarTheme.White" />
+
+        <FrameLayout
+            android:id="@id/static_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip"
+            android:layout_gravity="top"
+            android:paddingStart="4.0dip"
+            android:paddingEnd="4.0dip">
+
+            <ImageView
+                android:id="@id/static_toolbar_left_icon"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="start|center"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/talkback_ic_back"
+                android:padding="12.0dip"
+                android:src="@drawable/ic_back_outline_28"
+                android:tint="?icon_secondary"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="64.0dip"
+                android:layout_marginEnd="12.0dip"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/static_toolbar_title"
+                    style="@style/VKUIText.Title1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?text_primary" />
+
+                <TextView
+                    android:id="@id/static_toolbar_subtitle"
+                    style="@style/VKUIText.Subhead1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?text_subhead" />
             </LinearLayout>
-            <ImageView android:layout_gravity="end|center" android:id="@id/static_toolbar_right_icon" android:background="@drawable/vkui_ripple_circle_highlight" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_search_24" android:scaleType="centerInside" android:tint="?icon_secondary" android:contentDescription="@string/talkback_ic_search" />
+
+            <ImageView
+                android:id="@id/static_toolbar_right_icon"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="end|center"
+                android:background="@drawable/vkui_ripple_circle_highlight"
+                android:contentDescription="@string/talkback_ic_search"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_search_24"
+                android:tint="?icon_secondary"
+                android:visibility="gone" />
         </FrameLayout>
-        <View android:layout_gravity="top" android:id="@id/header_divider" android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="56.0dip" android:layout_marginStart="16.0dip" />
-        <View android:layout_gravity="top" android:id="@id/header_shadow" android:background="@drawable/bg_toolbar_shadow_light" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginTop="56.0dip" />
+
+        <View
+            android:id="@id/header_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_gravity="top"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginTop="56.0dip"
+            android:background="?separator_alpha" />
+
+        <View
+            android:id="@id/header_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="8.0dip"
+            android:layout_gravity="top"
+            android:layout_marginTop="56.0dip"
+            android:background="@drawable/bg_toolbar_shadow_light"
+            android:visibility="invisible" />
     </FrameLayout>
 </LinearLayout>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_check_24" android:id="@id/ok" android:title="@string/ok" android:showAsAction="always" app:menuTint="?toolbarIconsColor" app:showAsAction="always" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/ok"
+        android:icon="@drawable/ic_check_24"
+        android:showAsAction="always"
+        android:title="@string/ok"
+        app:menuTint="?toolbarIconsColor"
+        app:showAsAction="always" />
 </menu>

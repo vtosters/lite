@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="?button_primary_foreground" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/bottom_button_text" android:background="@drawable/btn_send_story" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:singleLine="true" android:fontFamily="@string/font_family_medium" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@id/bottom_button_text"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:background="@drawable/btn_send_story"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="?button_primary_foreground"
+        android:textSize="16.0sp" />
 </merge>

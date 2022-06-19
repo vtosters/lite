@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" app:layout_collapseMode="pin" app:layout_scrollFlags="enterAlways|scroll|snap"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/back_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="4.0dip" android:tint="?header_tint_alternate" android:contentDescription="@string/music_talkback_go_back" android:layout_marginStart="4.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ActionButton.White" />
-    <FrameLayout android:id="@id/search_container" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/iv_icon_right" app:layout_constraintStart_toEndOf="@id/back_btn" app:layout_constraintTop_toTopOf="parent" />
-    <ImageView android:id="@id/iv_icon_right" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="4.0dip" android:tint="?header_tint_alternate" android:layout_marginEnd="4.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ActionButton.White" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="horizontal"
+    app:layout_collapseMode="pin"
+    app:layout_scrollFlags="enterAlways|scroll|snap">
+
+    <ImageView
+        android:id="@id/back_btn"
+        style="@style/ActionButton.White"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginStart="4.0dip"
+        android:layout_marginTop="4.0dip"
+        android:contentDescription="@string/music_talkback_go_back"
+        android:tint="?header_tint_alternate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@id/search_container"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_icon_right"
+        app:layout_constraintStart_toEndOf="@id/back_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@id/iv_icon_right"
+        style="@style/ActionButton.White"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginEnd="4.0dip"
+        android:tint="?header_tint_alternate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

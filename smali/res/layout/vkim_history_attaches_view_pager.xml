@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="48.0dip" app:layout_scrollFlags="enterAlways|scroll|snap" style="@style/VkIm.Toolbar.Style.LargeWithBack" />
-        <com.vk.core.view.VKTabLayout android:id="@id/vkim_tab_layout" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="48.0dip" app:tabGravity="fill" app:tabIndicator="?tabBarIndicator" app:tabIndicatorColor="?header_tint" app:tabMode="fixed" app:tabPaddingEnd="16.0dip" app:tabPaddingStart="16.0dip" app:tabSelectedTextColor="?header_tab_active_text" app:tabTextAppearance="@style/TabBarTheme.TabTextAppearance" app:tabTextColor="?header_tab_inactive_text" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?background_content">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            style="@style/VkIm.Toolbar.Style.LargeWithBack"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            app:layout_scrollFlags="enterAlways|scroll|snap" />
+
+        <com.vk.core.view.VKTabLayout
+            android:id="@id/vkim_tab_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            android:background="?header_background"
+            app:tabGravity="fill"
+            app:tabIndicator="?tabBarIndicator"
+            app:tabIndicatorColor="?header_tint"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="16.0dip"
+            app:tabPaddingStart="16.0dip"
+            app:tabSelectedTextColor="?header_tab_active_text"
+            app:tabTextAppearance="@style/TabBarTheme.TabTextAppearance"
+            app:tabTextColor="?header_tab_inactive_text" />
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.viewpager.widget.ViewPager android:id="@id/vkim_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    <com.vk.core.view.AppBarShadowView app:appbar_forceMode="shadow" style="@style/AppBarShadow" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/vkim_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.vk.core.view.AppBarShadowView
+        style="@style/AppBarShadow"
+        app:appbar_forceMode="shadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

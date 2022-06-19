@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@drawable/rounded_list_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/place_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:singleLine="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
-    <TextView android:ellipsize="end" android:id="@id/place_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:maxLines="2" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/VKUIText.Subhead2" />
-    <View android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="16.0dip" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_list_selector"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@id/place_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="?text_primary"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@id/place_info"
+        style="@style/VKUIText.Subhead2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="1.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:ellipsize="end"
+        android:maxLines="2" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="16.0dip"
+        android:background="?separator_alpha" />
 </LinearLayout>

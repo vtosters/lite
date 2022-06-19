@@ -1,10 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.im.ui.views.avatars.AvatarView android:layout_gravity="center_horizontal" android:id="@id/im_avatar" android:layout_width="96.0dip" android:layout_height="96.0dip" android:layout_marginTop="34.0dip" android:contentDescription="@string/vkim_accessibility_avatar" style="@style/VkIm.AvatarView" />
-    <com.vk.core.widget.FluidHorizontalLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
-        <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/im_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:includeFontPadding="false" android:lineSpacingExtra="4.0sp" android:fontFamily="@string/font_family_medium" app:vk_layout_isFluid="true" />
-        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/im_verified" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@null" android:translationY="0.0sp" android:layout_marginStart="4.0dip" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.vk.im.ui.views.avatars.AvatarView
+        android:id="@id/im_avatar"
+        style="@style/VkIm.AvatarView"
+        android:layout_width="96.0dip"
+        android:layout_height="96.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="34.0dip"
+        android:contentDescription="@string/vkim_accessibility_avatar" />
+
+    <com.vk.core.widget.FluidHorizontalLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24.0dip"
+        android:layout_marginTop="11.0dip"
+        android:layout_marginEnd="24.0dip"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@id/im_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:fontFamily="@string/font_family_medium"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="4.0sp"
+            android:lines="1"
+            android:textColor="?text_primary"
+            android:textSize="20.0sp"
+            android:textStyle="normal"
+            app:vk_layout_isFluid="true" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/im_verified"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4.0dip"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:translationY="0.0sp"
+            android:visibility="gone" />
     </com.vk.core.widget.FluidHorizontalLayout>
-    <TextView android:textSize="15.0sp" android:textColor="#ff909499" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/im_last_seen" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:lines="1" android:lineSpacingExtra="5.0sp" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+
+    <TextView
+        android:id="@id/im_last_seen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24.0dip"
+        android:layout_marginTop="2.0dip"
+        android:layout_marginEnd="24.0dip"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="5.0sp"
+        android:lines="1"
+        android:textColor="#ff909499"
+        android:textSize="15.0sp" />
 </LinearLayout>

@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/collection_item_add_top" android:background="@drawable/rounded_list_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="15.0dip" android:textColor="?accent" android:gravity="center" android:id="@id/collection_item_add_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="16.0dip" android:text="Добавить объект" android:drawableLeft="@drawable/ic_add_24" android:drawablePadding="20.0dip" android:drawableTint="?accent" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/collection_item_add_top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_list_selector">
+
+    <TextView
+        android:id="@id/collection_item_add_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginRight="32.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:drawableLeft="@drawable/ic_add_24"
+        android:drawablePadding="20.0dip"
+        android:drawableTint="?accent"
+        android:gravity="center"
+        android:text="Добавить объект"
+        android:textColor="?accent"
+        android:textSize="15.0dip" />
 </FrameLayout>

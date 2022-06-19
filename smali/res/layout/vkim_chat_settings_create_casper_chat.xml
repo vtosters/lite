@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="60.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/vkim_icon" android:background="@drawable/bg_empty_placeholder" android:padding="10.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_ghost_outline_28" android:tint="?accent" android:layout_marginStart="16.0dip" />
-    <TextView android:textSize="16.0sp" android:textColor="?accent" android:layout_gravity="center_vertical" android:id="@id/vkim_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vkim_chat_settings_create_casper_chat" android:lines="1" android:layout_marginStart="76.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60.0dip"
+    android:background="?selectableItemBackground">
+
+    <ImageView
+        android:id="@id/vkim_icon"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16.0dip"
+        android:background="@drawable/bg_empty_placeholder"
+        android:padding="10.0dip"
+        android:src="@drawable/ic_ghost_outline_28"
+        android:tint="?accent" />
+
+    <TextView
+        android:id="@id/vkim_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="76.0dip"
+        android:lines="1"
+        android:text="@string/vkim_chat_settings_create_casper_chat"
+        android:textColor="?accent"
+        android:textSize="16.0sp" />
 </FrameLayout>

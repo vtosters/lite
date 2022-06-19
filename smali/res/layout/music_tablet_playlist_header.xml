@@ -1,13 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/playlist_header_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="180.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.music.view.ThumbsImageView android:id="@id/playlist_foreground_image" android:focusable="true" android:layout_width="132.0dip" android:layout_height="132.0dip" android:layout_marginStart="24.0dip" android:elevation="5.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tiv_background_image="?placeholder_icon_background" app:tiv_border_width="0.5dip" app:tiv_empty_resource="@drawable/ic_playlist_48" app:tiv_empty_tint="?placeholder_icon_foreground_secondary" />
-    <TextView android:textSize="17.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/playlist_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:maxLines="1" android:layout_marginStart="25.0dip" android:layout_marginEnd="16.0dip" app:fontFamily="@font/roboto_bold" app:layout_constraintBottom_toTopOf="@id/playlist_owner" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/playlist_foreground_image" app:layout_constraintTop_toTopOf="@id/playlist_foreground_image" app:layout_constraintVertical_chainStyle="packed" app:layout_constraintWidth_default="wrap" />
-    <LinearLayout android:orientation="horizontal" android:id="@id/playlist_owner" android:background="@drawable/music_selectable_bg" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:minHeight="18.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toTopOf="@id/playlist_info" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="@id/playlist_title" app:layout_constraintTop_toBottomOf="@id/playlist_title" app:layout_constraintWidth_default="wrap">
-        <TextView android:textSize="13.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/playlist_owner_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:fontFamily="@font/roboto_regular" app:layout_constraintWidth_default="wrap" />
-        <ImageView android:layout_gravity="center_vertical" android:id="@id/chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chevron_16" android:layout_marginStart="3.5dip" app:tint="?icon_secondary" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/playlist_header_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="180.0dip"
+    android:fitsSystemWindows="true">
+
+    <com.vk.music.view.ThumbsImageView
+        android:id="@id/playlist_foreground_image"
+        android:layout_width="132.0dip"
+        android:layout_height="132.0dip"
+        android:layout_marginStart="24.0dip"
+        android:elevation="5.0dip"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tiv_background_image="?placeholder_icon_background"
+        app:tiv_border_width="0.5dip"
+        app:tiv_empty_resource="@drawable/ic_playlist_48"
+        app:tiv_empty_tint="?placeholder_icon_foreground_secondary" />
+
+    <TextView
+        android:id="@id/playlist_title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25.0dip"
+        android:layout_marginTop="13.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="?text_primary"
+        android:textSize="17.0dip"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toTopOf="@id/playlist_owner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/playlist_foreground_image"
+        app:layout_constraintTop_toTopOf="@id/playlist_foreground_image"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_default="wrap" />
+
+    <LinearLayout
+        android:id="@id/playlist_owner"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:background="@drawable/music_selectable_bg"
+        android:minHeight="18.0dip"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/playlist_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/playlist_title"
+        app:layout_constraintTop_toBottomOf="@id/playlist_title"
+        app:layout_constraintWidth_default="wrap">
+
+        <TextView
+            android:id="@id/playlist_owner_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="?text_secondary"
+            android:textSize="13.0dip"
+            app:fontFamily="@font/roboto_regular"
+            app:layout_constraintWidth_default="wrap" />
+
+        <ImageView
+            android:id="@id/chevron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="3.5dip"
+            android:src="@drawable/ic_chevron_16"
+            app:tint="?icon_secondary" />
     </LinearLayout>
-    <TextView android:textSize="13.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/playlist_info" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:minHeight="18.0dip" android:maxLines="1" android:layout_marginEnd="16.0dip" app:fontFamily="@font/roboto_regular" app:layout_constraintBottom_toTopOf="@id/fl_buttons" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="@id/playlist_title" app:layout_constraintTop_toBottomOf="@id/playlist_owner" app:layout_constraintWidth_default="wrap" />
-    <FrameLayout android:id="@id/fl_buttons" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="@id/playlist_title" app:layout_constraintTop_toBottomOf="@id/playlist_info" app:layout_constraintWidth_max="328.0dip" />
-    <View android:background="?separator_common" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@id/playlist_info"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minHeight="18.0dip"
+        android:textColor="?text_secondary"
+        android:textSize="13.0dip"
+        app:fontFamily="@font/roboto_regular"
+        app:layout_constraintBottom_toTopOf="@id/fl_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/playlist_title"
+        app:layout_constraintTop_toBottomOf="@id/playlist_owner"
+        app:layout_constraintWidth_default="wrap" />
+
+    <FrameLayout
+        android:id="@id/fl_buttons"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/playlist_title"
+        app:layout_constraintTop_toBottomOf="@id/playlist_info"
+        app:layout_constraintWidth_max="328.0dip" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginEnd="32.0dip"
+        android:background="?separator_common"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

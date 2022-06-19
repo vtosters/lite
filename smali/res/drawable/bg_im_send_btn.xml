@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <bitmap android:src="@drawable/bg_input_send_button" android:tint="?modal_card_background" android:tintMode="multiply"
-          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/bg_input_send_button"
+            android:tint="?modal_card_background"
+            android:tintMode="multiply" />
     </item>
     <item android:drawable="?selectableItemBackgroundBorderless" />
 </layer-list>

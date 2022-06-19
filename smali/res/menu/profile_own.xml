@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_qr_24" android:id="@id/show_my_qr" android:title="@string/qr_my" app:menuTint="?toolbarIconsColor" app:showAsAction="always" />
-    <item android:id="@id/open_right_menu" android:title="@string/right_menu_open" app:actionLayout="@layout/right_menu_with_counter" app:showAsAction="always" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/show_my_qr"
+        android:icon="@drawable/ic_qr_24"
+        android:title="@string/qr_my"
+        app:menuTint="?toolbarIconsColor"
+        app:showAsAction="always" />
+    <item
+        android:id="@id/open_right_menu"
+        android:title="@string/right_menu_open"
+        app:actionLayout="@layout/right_menu_with_counter"
+        app:showAsAction="always" />
 </menu>

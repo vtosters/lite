@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape>
-            <size android:height="20.0dip" android:width="20.0dip" />
+            <size
+                android:width="20.0dip"
+                android:height="20.0dip" />
             <corners android:radius="4.0dip" />
             <solid android:color="#521f1f1f" />
         </shape>
     </item>
-    <item android:drawable="@drawable/ic_market_12_white" android:left="4.0dip" android:top="4.0dip" android:right="4.0dip" android:bottom="4.0dip" />
+    <item
+        android:bottom="4.0dip"
+        android:drawable="@drawable/ic_market_12_white"
+        android:left="4.0dip"
+        android:right="4.0dip"
+        android:top="4.0dip" />
 </layer-list>

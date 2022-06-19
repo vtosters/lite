@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="wrap_content" android:layout_height="106.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center|top" android:id="@id/delete" android:background="@drawable/bg_story_edit_delete" android:layout_width="36.0dip" android:layout_height="32.0dip" android:foreground="@drawable/white_ripple_bounded_4dp" android:src="@drawable/ic_delete_24" android:scaleType="center" android:contentDescription="@string/accessibility_delete" />
-    <ImageView android:layout_gravity="center|top" android:id="@id/photo" android:background="@drawable/clip_radius_4dp" android:layout_width="36.0dip" android:layout_height="48.0dip" android:layout_marginTop="52.0dip" android:layout_marginBottom="6.0dip" android:foreground="@drawable/bg_editor_photo" android:scaleType="centerCrop" android:contentDescription="@string/accessibility_photo" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="106.0dip"
+    android:layout_marginStart="4.0dip"
+    android:layout_marginEnd="4.0dip">
+
+    <ImageView
+        android:id="@id/delete"
+        android:layout_width="36.0dip"
+        android:layout_height="32.0dip"
+        android:layout_gravity="center|top"
+        android:background="@drawable/bg_story_edit_delete"
+        android:contentDescription="@string/accessibility_delete"
+        android:foreground="@drawable/white_ripple_bounded_4dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_delete_24" />
+
+    <ImageView
+        android:id="@id/photo"
+        android:layout_width="36.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="52.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:background="@drawable/clip_radius_4dp"
+        android:contentDescription="@string/accessibility_photo"
+        android:foreground="@drawable/bg_editor_photo"
+        android:scaleType="centerCrop" />
 </FrameLayout>

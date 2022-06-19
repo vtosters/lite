@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout style="@style/UserMediumRoot"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:scaleType="fitXY" app:actualImageScaleType="center" app:emptyImagePlaceholder="@drawable/user_placeholder_icon" app:placeholderImage="@drawable/user_placeholder" style="@style/UserMediumPhoto" />
-    <ImageView android:id="@id/action" android:contentDescription="@string/accessibility_send_gift" style="@style/UserMediumAction" />
-    <TextView android:id="@id/title" style="@style/UserMediumTitle" />
-    <TextView android:id="@id/subtitle" style="@style/UserMediumSubtitle" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/UserMediumRoot">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/photo"
+        style="@style/UserMediumPhoto"
+        android:scaleType="fitXY"
+        app:actualImageScaleType="center"
+        app:emptyImagePlaceholder="@drawable/user_placeholder_icon"
+        app:placeholderImage="@drawable/user_placeholder" />
+
+    <ImageView
+        android:id="@id/action"
+        style="@style/UserMediumAction"
+        android:contentDescription="@string/accessibility_send_gift" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/UserMediumTitle" />
+
+    <TextView
+        android:id="@id/subtitle"
+        style="@style/UserMediumSubtitle" />
+
     <ImageView style="@style/Online.Medium" />
 </RelativeLayout>

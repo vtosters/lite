@@ -1,8 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/story_elongated_rounded_4dp_bg" android:layout_width="@dimen/story_elongated_width" android:layout_height="@dimen/story_elongated_height"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_camera_outline_28" android:contentDescription="@string/story_elongated_create_content_description" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="@color/white" android:ellipsize="end" android:id="@id/story_create_line_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/story_elongated_create_title_line_1" android:lines="1" android:shadowColor="#51000000" android:shadowDy="2.0" android:shadowRadius="4.0" android:lineSpacingExtra="2.0sp" android:fontFamily="@string/font_family_medium" app:layout_constraintBottom_toTopOf="@id/story_create_line_2" app:layout_constraintStart_toStartOf="@id/story_create_line_2" />
-    <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="@color/white" android:ellipsize="end" android:id="@id/story_create_line_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="@string/story_elongated_create_title_line_2" android:lines="1" android:shadowColor="#51000000" android:shadowDy="2.0" android:shadowRadius="4.0" android:lineSpacingExtra="2.0sp" android:fontFamily="@string/font_family_medium" android:layout_marginStart="6.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" />
-    <View android:layout_gravity="center_horizontal" android:id="@id/story_holder_click_handler" android:background="@drawable/story_elongated_background_rounded_4dp" android:layout_width="@dimen/story_elongated_width" android:layout_height="@dimen/story_elongated_height" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/story_elongated_width"
+    android:layout_height="@dimen/story_elongated_height"
+    android:background="@drawable/story_elongated_rounded_4dp_bg">
+
+    <ImageView
+        android:layout_width="28.0dip"
+        android:layout_height="28.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:contentDescription="@string/story_elongated_create_content_description"
+        android:src="@drawable/ic_camera_outline_28"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/story_create_line_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_medium"
+        android:lineSpacingExtra="2.0sp"
+        android:lines="1"
+        android:shadowColor="#51000000"
+        android:shadowDy="2.0"
+        android:shadowRadius="4.0"
+        android:text="@string/story_elongated_create_title_line_1"
+        android:textColor="@color/white"
+        android:textSize="12.0sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/story_create_line_2"
+        app:layout_constraintStart_toStartOf="@id/story_create_line_2" />
+
+    <TextView
+        android:id="@id/story_create_line_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_medium"
+        android:lineSpacingExtra="2.0sp"
+        android:lines="1"
+        android:shadowColor="#51000000"
+        android:shadowDy="2.0"
+        android:shadowRadius="4.0"
+        android:text="@string/story_elongated_create_title_line_2"
+        android:textColor="@color/white"
+        android:textSize="12.0sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@id/story_holder_click_handler"
+        android:layout_width="@dimen/story_elongated_width"
+        android:layout_height="@dimen/story_elongated_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/story_elongated_background_rounded_4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

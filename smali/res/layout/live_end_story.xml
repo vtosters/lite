@@ -1,20 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/liveEndStoryViewBack" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" app:actualImageScaleType="centerCrop" />
-    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/liveEndStoryViewTimeBarHolder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:foreground="?selectableItemBackground">
-        <com.vk.libvideo.ui.VideoNextView android:id="@id/liveEndStoryViewTimeBarNew" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/liveEndStoryViewBack"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.0"
+        app:actualImageScaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@id/liveEndStoryViewTimeBarHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16.0dip"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.vk.libvideo.ui.VideoNextView
+            android:id="@id/liveEndStoryViewTimeBarNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="44.0dip">
-        <com.vk.imageloader.view.VKCircleImageView android:id="@id/liveEndStoryUserImage" android:layout_width="72.0dip" android:layout_height="72.0dip" />
-        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/liveEndStoryText" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginTop="16.0dip" android:text="@string/live_video_story_ended" android:maxLines="1" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" app:fontFamily="@font/roboto_medium" />
-        <com.vk.core.view.links.LinkedTextView android:textSize="16.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/liveEndStoryUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:maxLines="2" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
-        <com.vk.libvideo.live.views.addbutton.AddButtonView android:id="@id/liveEndStoryAddButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/VKUIButton.Primary" />
-        <Button android:textColor="@color/blue" android:id="@id/liveEndStoryGotoProfileButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:foreground="?selectableItemBackground" android:text="@string/live_story_end_goto_profile" style="@style/Widget.AppCompat.Button.Borderless" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="44.0dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.vk.imageloader.view.VKCircleImageView
+            android:id="@id/liveEndStoryUserImage"
+            android:layout_width="72.0dip"
+            android:layout_height="72.0dip" />
+
+        <TextView
+            android:id="@id/liveEndStoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="48.0dip"
+            android:layout_marginTop="16.0dip"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:shadowColor="#52000000"
+            android:shadowDy="2.0"
+            android:shadowRadius="12.0"
+            android:text="@string/live_video_story_ended"
+            android:textColor="@color/white"
+            android:textSize="20.0sp"
+            app:fontFamily="@font/roboto_medium" />
+
+        <com.vk.core.view.links.LinkedTextView
+            android:id="@id/liveEndStoryUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32.0dip"
+            android:layout_marginRight="32.0dip"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="2"
+            android:shadowColor="#52000000"
+            android:shadowDy="2.0"
+            android:shadowRadius="12.0"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+
+        <com.vk.libvideo.live.views.addbutton.AddButtonView
+            android:id="@id/liveEndStoryAddButton"
+            style="@style/VKUIButton.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@id/liveEndStoryGotoProfileButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:foreground="?selectableItemBackground"
+            android:text="@string/live_story_end_goto_profile"
+            android:textColor="@color/blue" />
     </LinearLayout>
-    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="14.0sp" android:textColor="@color/white_alpha60" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/liveEndStoryStartStreamingHint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="64.0dip" android:layout_marginRight="64.0dip" android:layout_marginBottom="24.0dip" android:text="@string/live_story_end_start_streaming_hint" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
-        <androidx.appcompat.widget.AppCompatButton android:gravity="center" android:id="@id/liveEndStoryStartSteamingButton" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="12.0dip" android:text="@string/live_story_end_start_streaming" style="@style/VKUIButton.WhiteTransparent20" />
-        <androidx.appcompat.widget.AppCompatButton android:gravity="center" android:id="@id/liveEndStoryShareButton" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="12.0dip" android:text="@string/live_story_end_share_video" style="@style/VKUIButton.White" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/liveEndStoryStartStreamingHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="64.0dip"
+            android:layout_marginRight="64.0dip"
+            android:layout_marginBottom="24.0dip"
+            android:gravity="center"
+            android:shadowColor="#52000000"
+            android:shadowDy="2.0"
+            android:shadowRadius="12.0"
+            android:text="@string/live_story_end_start_streaming_hint"
+            android:textColor="@color/white_alpha60"
+            android:textSize="14.0sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/liveEndStoryStartSteamingButton"
+            style="@style/VKUIButton.WhiteTransparent20"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:gravity="center"
+            android:text="@string/live_story_end_start_streaming" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/liveEndStoryShareButton"
+            style="@style/VKUIButton.White"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:gravity="center"
+            android:text="@string/live_story_end_share_video" />
     </LinearLayout>
 </FrameLayout>

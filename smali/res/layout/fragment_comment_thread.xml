@@ -1,18 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
-        <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <com.google.android.material.appbar.AppBarLayout android:id="@id/attach_appbar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@id/attach_appbar_layout"
+                style="@style/VKAppBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
                 <include layout="@layout/toolbar_white" />
             </com.google.android.material.appbar.AppBarLayout>
-            <com.vk.common.widget.BottomSwipePaginatedView android:id="@id/rpb_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <com.vk.common.widget.BottomSwipePaginatedView
+                android:id="@id/rpb_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
             <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
-        <ImageView android:layout_gravity="end|bottom|center" android:id="@id/jump_to_end" android:background="@drawable/comments_scroll_to_bottom" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/comments_ripple_scroll_to_bottom" android:minHeight="56.0dip" android:contentDescription="@string/accessibility_scroll_to_bottom_comments" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
-        <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/comments_mentions_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <View android:layout_gravity="bottom" android:id="@id/bottom_navigation_shadow" android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
-        <FrameLayout android:id="@id/empty_view" android:background="?background_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip">
+
+        <ImageView
+            android:id="@id/jump_to_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom|center"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginEnd="8.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:background="@drawable/comments_scroll_to_bottom"
+            android:contentDescription="@string/accessibility_scroll_to_bottom_comments"
+            android:minHeight="56.0dip"
+            android:src="@drawable/comments_ripple_scroll_to_bottom"
+            android:visibility="gone" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@id/comments_mentions_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <View
+            android:id="@id/bottom_navigation_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="8.0dip"
+            android:layout_gravity="bottom"
+            android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" />
+
+        <FrameLayout
+            android:id="@id/empty_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="12.0dip"
+            android:background="?background_content"
+            android:visibility="gone">
+
             <include layout="@layout/view_empty_state" />
         </FrameLayout>
     </FrameLayout>

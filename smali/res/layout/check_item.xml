@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CheckBox android:id="@id/check_item_text" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@drawable/checkbox_selector"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/check_item_text"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:button="@drawable/checkbox_selector"
+    android:padding="15.0dip" />

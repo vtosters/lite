@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.view.search.ModernSearchView android:id="@id/search" android:layout_width="fill_parent" android:layout_height="52.0dip" app:layout_collapseMode="pin" app:layout_scrollFlags="enterAlways|scroll|snap" app:theme="@style/ActionBarTheme.White" style="@style/ActionBarTheme.White"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<com.vk.core.view.search.ModernSearchView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/search"
+    style="@style/ActionBarTheme.White"
+    android:layout_width="fill_parent"
+    android:layout_height="52.0dip"
+    app:layout_collapseMode="pin"
+    app:layout_scrollFlags="enterAlways|scroll|snap"
+    app:theme="@style/ActionBarTheme.White" />

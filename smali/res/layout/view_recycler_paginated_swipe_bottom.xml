@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vtosters.lite.ui.refreshlayout.BottomSwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+<com.vtosters.lite.ui.refreshlayout.BottomSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipe_refresh_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusableInTouchMode="true">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" />
 </com.vtosters.lite.ui.refreshlayout.BottomSwipeRefreshLayout>

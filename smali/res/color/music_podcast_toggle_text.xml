@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="true" android:state_checked="false" android:color="?button_primary_foreground" />
-    <item android:state_enabled="true" android:state_checked="true" android:color="?button_secondary_foreground" />
-    <item android:state_checked="false" android:color="?button_primary_foreground_disabled" />
-    <item android:state_checked="true" android:color="?button_secondary_foreground_disabled" />
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="?button_primary_foreground" android:state_checked="false" android:state_enabled="true" />
+    <item android:color="?button_secondary_foreground" android:state_checked="true" android:state_enabled="true" />
+    <item android:color="?button_primary_foreground_disabled" android:state_checked="false" />
+    <item android:color="?button_secondary_foreground_disabled" android:state_checked="true" />
 </selector>

@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:padding="0.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKUIFormSelectableButtonCorner"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="?text_primary" android:gravity="center" android:id="@id/item" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip" android:lineSpacingExtra="1.0sp" style="@style/VKUIFormSelectableGridButton" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/VKUIFormSelectableButtonCorner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:padding="0.0dip">
+
+    <TextView
+        android:id="@id/item"
+        style="@style/VKUIFormSelectableGridButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:gravity="center"
+        android:lineSpacingExtra="1.0sp"
+        android:minHeight="44.0dip"
+        android:textColor="?text_primary"
+        android:textSize="16.0sp" />
 </FrameLayout>

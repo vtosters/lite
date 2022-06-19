@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="@dimen/newsfeed_disclaimer_text_size" android:textColor="?text_secondary" android:gravity="center_vertical" android:id="@id/text" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="@dimen/newsfeed_disclaimer_padding_top" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="@dimen/newsfeed_disclaimer_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sponsored_post_in_group" android:drawablePadding="6.0dip" android:lineSpacingExtra="@dimen/newsfeed_disclaimer_spacing_extra" android:fontFamily="@font/roboto_regular" android:letterSpacing="0.02"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/text"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:drawablePadding="6.0dip"
+    android:fontFamily="@font/roboto_regular"
+    android:gravity="center_vertical"
+    android:letterSpacing="0.02"
+    android:lineSpacingExtra="@dimen/newsfeed_disclaimer_spacing_extra"
+    android:paddingLeft="@dimen/post_side_padding"
+    android:paddingTop="@dimen/newsfeed_disclaimer_padding_top"
+    android:paddingRight="@dimen/post_side_padding"
+    android:paddingBottom="@dimen/newsfeed_disclaimer_padding_bottom"
+    android:text="@string/sponsored_post_in_group"
+    android:textColor="?text_secondary"
+    android:textSize="@dimen/newsfeed_disclaimer_text_size" />

@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
         <include layout="@layout/appkit_toolbar" />
-        <com.google.android.material.tabs.TabLayout android:id="@id/tabs" android:background="?header_background" style="?tabBarTheme" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@id/tabs"
+            style="?tabBarTheme"
+            android:background="?header_background" />
     </com.google.android.material.appbar.AppBarLayout>
-    <com.vk.core.view.VKViewPager android:id="@id/viewpager" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" style="@style/AppBarShadow" />
+
+    <com.vk.core.view.VKViewPager
+        android:id="@id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="?background_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/shadow"
+        style="@style/AppBarShadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

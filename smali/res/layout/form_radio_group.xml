@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/form_field_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wall" style="@style/CardsSectionHeader" />
-    <com.vtosters.lite.ui.CompoundRadioGroup android:orientation="vertical" android:id="@id/form_field_radiogroup" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider" android:showDividers="middle" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@id/form_field_title"
+        style="@style/CardsSectionHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wall" />
+
+    <com.vtosters.lite.ui.CompoundRadioGroup
+        android:id="@id/form_field_radiogroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider"
+        android:orientation="vertical"
+        android:paddingBottom="8.0dip"
+        android:showDividers="middle" />
 </LinearLayout>

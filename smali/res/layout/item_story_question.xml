@@ -1,11 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="14.0dip" android:layout_marginTop="10.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="8.0dip">
-        <TextView android:textSize="9.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:gravity="start|center" android:layout_gravity="top" android:id="@id/tv_author_name" android:layout_width="0.0dip" android:layout_height="fill_parent" android:lines="1" android:layout_weight="1.0" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" android:letterSpacing="0.02" />
-        <ImageView android:id="@id/iv_options" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginBottom="1.0dip" android:scaleType="centerInside" android:layout_marginStart="1.0dip" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="14.0dip"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:gravity="start|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/tv_author_name"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:fontFamily="@string/font_family_medium"
+            android:gravity="start|center"
+            android:letterSpacing="0.02"
+            android:lines="1"
+            android:textAllCaps="true"
+            android:textColor="?text_secondary"
+            android:textSize="9.0dip" />
+
+        <ImageView
+            android:id="@id/iv_options"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_marginStart="1.0dip"
+            android:layout_marginBottom="1.0dip"
+            android:scaleType="centerInside" />
     </LinearLayout>
-    <TextView android:textSize="16.0sp" android:textColor="?text_primary" android:ellipsize="end" android:gravity="start|center|top" android:layout_gravity="center" android:id="@id/tv_story_question" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="34.0dip" android:layout_marginBottom="30.0dip" android:maxLines="3" android:singleLine="false" android:lineSpacingExtra="2.0sp" android:translationX="4.0dip" android:translationY="-11.0dip" android:fontFamily="@string/font_family_medium" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" android:letterSpacing="0.01" app:autoSizeTextType="uniform" />
-    <View android:layout_gravity="end" android:id="@id/v_options_click_area" android:background="@drawable/bg_story_viewer_option_area" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/story_question_share_height" android:contentDescription="@string/common_actions" />
-    <TextView android:textSize="14.0sp" android:textColor="@drawable/bg_story_share_btn_text_color" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_story_share_question" android:background="@drawable/bg_story_viewer_share_question" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/story_question_share_height" android:text="@string/story_question_share" android:lineSpacingExtra="4.0sp" android:fontFamily="@string/font_family_medium" />
+
+    <TextView
+        android:id="@id/tv_story_question"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="34.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_marginBottom="30.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="start|center|top"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="2.0sp"
+        android:maxLines="3"
+        android:singleLine="false"
+        android:textColor="?text_primary"
+        android:textSize="16.0sp"
+        android:translationX="4.0dip"
+        android:translationY="-11.0dip"
+        app:autoSizeTextType="uniform" />
+
+    <View
+        android:id="@id/v_options_click_area"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="end"
+        android:layout_marginBottom="@dimen/story_question_share_height"
+        android:background="@drawable/bg_story_viewer_option_area"
+        android:contentDescription="@string/common_actions" />
+
+    <TextView
+        android:id="@id/tv_story_share_question"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/story_question_share_height"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_story_viewer_share_question"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="4.0sp"
+        android:paddingBottom="1.0dip"
+        android:text="@string/story_question_share"
+        android:textColor="@drawable/bg_story_share_btn_text_color"
+        android:textSize="14.0sp" />
 </merge>

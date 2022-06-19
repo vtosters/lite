@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColor="?text_primary" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip" android:layout_weight="1.0" android:layout_marginEnd="16.0dip" style="@style/VKUIText.Headline" />
-    <TextView android:textColor="?text_secondary" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/VKUIText.Headline" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="16.0dip">
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Headline"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="14.0dip"
+        android:layout_weight="1.0"
+        android:textColor="?text_primary" />
+
+    <TextView
+        android:id="@id/text"
+        style="@style/VKUIText.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?text_secondary" />
 </LinearLayout>

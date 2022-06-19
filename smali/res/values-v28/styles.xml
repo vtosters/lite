@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="Base.Theme.AppCompat" parent="@style/Base.V28.Theme.AppCompat" />
+
     <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V28.Theme.AppCompat.Light" />
+
     <style name="PickerFullScreenNoStatusDialog" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
@@ -17,6 +20,7 @@
         <item name="android:windowLightNavigationBar">false</item>
         <item name="android:windowLayoutInDisplayCutoutMode">never</item>
     </style>
+
     <style name="StorySettingsRed">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textColor">@color/red</item>
@@ -25,6 +29,7 @@
         <item name="android:letterSpacing">0.01</item>
         <item name="android:lineHeight">20.0sp</item>
     </style>
+
     <style name="StorySettingsSubtitle">
         <item name="android:textSize">13.0sp</item>
         <item name="android:textColor">?text_secondary</item>
@@ -33,6 +38,7 @@
         <item name="android:letterSpacing">0.01</item>
         <item name="android:lineHeight">16.0sp</item>
     </style>
+
     <style name="StorySettingsTitle">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textColor">?text_primary</item>
@@ -41,6 +47,7 @@
         <item name="android:letterSpacing">0.01</item>
         <item name="android:lineHeight">16.0sp</item>
     </style>
+
     <style name="StorySettingsTitle2">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textColor">?text_primary</item>
@@ -49,16 +56,19 @@
         <item name="android:letterSpacing">0.01</item>
         <item name="android:lineHeight">20.0sp</item>
     </style>
+
     <style name="TooltipDialogStyle" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
     </style>
+
     <style name="TooltipFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
     </style>
+
     <style name="VideoFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
@@ -79,6 +89,7 @@
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="colorAccent">#ffffffff</item>
     </style>
+
     <style name="VideoPlayerTranslucentStyle" parent="@style/TranslucentStyle">
         <item name="android:textColorSecondary">#ccffffff</item>
         <item name="android:windowFullscreen">true</item>
@@ -89,6 +100,7 @@
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="colorAccent">@color/white</item>
     </style>
+
     <style name="Vk.Theme.VkApp" parent="@style/Vk.Theme">
         <item name="android:windowLayoutInDisplayCutoutMode">default</item>
         <item name="im_avatars_combine">true</item>
@@ -151,9 +163,11 @@
         <item name="im_msg_box_margin_start_no_avatar">6.0dip</item>
         <item name="im_msg_box_margin_start_with_avatar">6.0dip</item>
         <item name="im_msg_part_button_bg">@drawable/vkim_msg_part_btn_bg</item>
-        <item name="im_msg_part_label_contrast_bg">@drawable/vkim_msg_part_label_contrast_bg_old</item>
+        <item name="im_msg_part_label_contrast_bg">@drawable/vkim_msg_part_label_contrast_bg_old
+        </item>
         <item name="im_msg_part_story_padding">0.5dip</item>
-        <item name="im_msg_part_time_contrast_bg">@drawable/vkim_msg_part_time_contrast_bg_old</item>
+        <item name="im_msg_part_time_contrast_bg">@drawable/vkim_msg_part_time_contrast_bg_old
+        </item>
         <item name="im_msg_part_time_sticker_bg">@drawable/vkim_msg_part_time_sticker_bg_old</item>
         <item name="im_new_theme">false</item>
         <item name="im_toolbar_addition_top_margin">0.0dip</item>
@@ -163,6 +177,7 @@
         <item name="im_toolbar_shadow_style_thin">@style/Vk.Theme.ToolbarShadow.Thin</item>
         <item name="im_unread_line_divider">?im_service_message_text</item>
     </style>
+
     <style name="Vk.Theme.VkMe" parent="@style/Vk.Theme">
         <item name="android:windowLayoutInDisplayCutoutMode">default</item>
         <item name="im_avatars_combine">false</item>
@@ -221,8 +236,10 @@
         <item name="im_msg_box_margin_start_no_avatar">0.0dip</item>
         <item name="im_msg_box_margin_start_with_avatar">8.0dip</item>
         <item name="im_msg_part_button_bg">@drawable/vkim_msg_part_oval_btn_bg</item>
-        <item name="im_msg_part_label_contrast_bg">@drawable/vkim_msg_part_label_contrast_bg_new</item>
-        <item name="im_msg_part_time_contrast_bg">@drawable/vkim_msg_part_time_contrast_bg_new</item>
+        <item name="im_msg_part_label_contrast_bg">@drawable/vkim_msg_part_label_contrast_bg_new
+        </item>
+        <item name="im_msg_part_time_contrast_bg">@drawable/vkim_msg_part_time_contrast_bg_new
+        </item>
         <item name="im_msg_part_time_sticker_bg">@drawable/vkim_msg_part_time_sticker_bg_new</item>
         <item name="im_new_theme">true</item>
         <item name="im_toolbar_addition_top_margin">12.0dip</item>
@@ -239,9 +256,11 @@
         <item name="toolbar_shadow">@drawable/bg_toolbar_shadow_light</item>
         <item name="toolbar_title_textColor">?header_tint</item>
     </style>
+
     <style name="Base.V28.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat">
         <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
     </style>
+
     <style name="Base.V28.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light">
         <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
     </style>

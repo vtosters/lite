@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/vkui_ic_voip_call_24" android:id="@id/call" android:visible="false" android:title="@string/voip_call_user" app:menuTint="?toolbarIconsColor" app:showAsAction="always" />
-    <item android:icon="@drawable/vkui_ic_voip_call_video_24" android:id="@id/call_video" android:visible="false" android:title="@string/voip_call_user" app:menuTint="?toolbarIconsColor" app:showAsAction="always" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/call"
+        android:icon="@drawable/vkui_ic_voip_call_24"
+        android:title="@string/voip_call_user"
+        android:visible="false"
+        app:menuTint="?toolbarIconsColor"
+        app:showAsAction="always" />
+    <item
+        android:id="@id/call_video"
+        android:icon="@drawable/vkui_ic_voip_call_video_24"
+        android:title="@string/voip_call_user"
+        android:visible="false"
+        app:menuTint="?toolbarIconsColor"
+        app:showAsAction="always" />
 </menu>

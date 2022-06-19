@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.im.ui.views.settings.DividerSettingsView android:paddingBottom="0.0dip" style="@style/VkIm.Settings.Divider" />
-    <TextView android:textAppearance="@style/VkIm.Settings.Header.Large" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/count" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:maxLines="1" android:singleLine="true" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.vk.im.ui.views.settings.DividerSettingsView
+        style="@style/VkIm.Settings.Divider"
+        android:paddingBottom="0.0dip" />
+
+    <TextView
+        android:id="@id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="40.0dip"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:singleLine="true"
+        android:textAppearance="@style/VkIm.Settings.Header.Large" />
 </LinearLayout>

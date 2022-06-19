@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/good_view" android:background="@drawable/bg_story_clickable_holder" android:paddingTop="@dimen/story_clickable_sticker_inner_vertical_padding" android:paddingBottom="@dimen/story_clickable_sticker_inner_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/story_clickable_sticker_bottom_divider_height" android:paddingStart="@dimen/story_clickable_sticker_inner_horizontal_padding" android:paddingEnd="@dimen/story_clickable_sticker_inner_horizontal_padding" android:layout_marginStart="@dimen/story_clickable_sticker_inner_horizontal_margin" android:layout_marginEnd="@dimen/story_clickable_sticker_inner_horizontal_margin">
-        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_stories_goods_24" android:tint="@color/story_market_item_grad_start" android:layout_marginEnd="4.0dip" />
-        <com.vk.stories.clickable.views.StoryGradientTextView android:textSize="@dimen/story_clickable_sticker_font_size" android:textColor="@color/white" android:gravity="center" android:layout_gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/story_good" android:lines="1" android:textAllCaps="true" android:fontFamily="@font/tt_commons_demi_bold" android:letterSpacing="0.01" app:gradient_tv_endColor="@color/story_market_item_grad_end" app:gradient_tv_startColor="@color/story_market_item_grad_start" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@id/good_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/story_clickable_sticker_inner_horizontal_margin"
+        android:layout_marginEnd="@dimen/story_clickable_sticker_inner_horizontal_margin"
+        android:layout_marginBottom="@dimen/story_clickable_sticker_bottom_divider_height"
+        android:background="@drawable/bg_story_clickable_holder"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/story_clickable_sticker_inner_horizontal_padding"
+        android:paddingTop="@dimen/story_clickable_sticker_inner_vertical_padding"
+        android:paddingEnd="@dimen/story_clickable_sticker_inner_horizontal_padding"
+        android:paddingBottom="@dimen/story_clickable_sticker_inner_vertical_padding">
+
+        <ImageView
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_marginEnd="4.0dip"
+            android:src="@drawable/ic_stories_goods_24"
+            android:tint="@color/story_market_item_grad_start" />
+
+        <com.vk.stories.clickable.views.StoryGradientTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/tt_commons_demi_bold"
+            android:gravity="center"
+            android:letterSpacing="0.01"
+            android:lines="1"
+            android:text="@string/story_good"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/story_clickable_sticker_font_size"
+            app:gradient_tv_endColor="@color/story_market_item_grad_end"
+            app:gradient_tv_startColor="@color/story_market_item_grad_start" />
     </LinearLayout>
 </merge>

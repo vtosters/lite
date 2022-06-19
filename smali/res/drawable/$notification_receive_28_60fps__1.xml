@@ -1,11 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set android:ordering="together"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__1__0" android:duration="167" android:startOffset="0" android:propertyName="translateXY" android:pathData="M 0,0C -0.5,0 -2.5,0 -3,0" android:propertyXName="translateX" android:propertyYName="translateY" />
-    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__1__1" android:duration="133" android:startOffset="167" android:propertyName="translateXY" android:pathData="M -3,0C -3,0 3.5,0 3,0" android:propertyXName="translateX" android:propertyYName="translateY" />
-    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__1__2" android:duration="133" android:startOffset="300" android:propertyName="translateXY" android:pathData="M 3,0C 3,0 -2.5,0 -3,0" android:propertyXName="translateX" android:propertyYName="translateY" />
-    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__1__3" android:duration="133" android:startOffset="433" android:propertyName="translateXY" android:pathData="M -3,0C -3,0 2.333,0 2,0" android:propertyXName="translateX" android:propertyYName="translateY" />
-    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__1__4" android:duration="133" android:startOffset="567" android:propertyName="translateXY" android:pathData="M 2,0C 1.667,0 -1.667,0 -2,0" android:propertyXName="translateX" android:propertyYName="translateY" />
-    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__1__5" android:duration="133" android:startOffset="700" android:propertyName="translateXY" android:pathData="M -2,0C -2.333,0 1.333,0 1,0" android:propertyXName="translateX" android:propertyYName="translateY" />
-    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__1__6" android:duration="100" android:startOffset="833" android:propertyName="translateXY" android:pathData="M 1,0C 0.667,0 0.167,0 0,0" android:propertyXName="translateX" android:propertyYName="translateY" />
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:ordering="together">
+    <objectAnimator
+        android:duration="167"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__1__0"
+        android:pathData="M 0,0C -0.5,0 -2.5,0 -3,0"
+        android:propertyName="translateXY"
+        android:propertyXName="translateX"
+        android:propertyYName="translateY"
+        android:startOffset="0" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__1__1"
+        android:pathData="M -3,0C -3,0 3.5,0 3,0"
+        android:propertyName="translateXY"
+        android:propertyXName="translateX"
+        android:propertyYName="translateY"
+        android:startOffset="167" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__1__2"
+        android:pathData="M 3,0C 3,0 -2.5,0 -3,0"
+        android:propertyName="translateXY"
+        android:propertyXName="translateX"
+        android:propertyYName="translateY"
+        android:startOffset="300" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__1__3"
+        android:pathData="M -3,0C -3,0 2.333,0 2,0"
+        android:propertyName="translateXY"
+        android:propertyXName="translateX"
+        android:propertyYName="translateY"
+        android:startOffset="433" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__1__4"
+        android:pathData="M 2,0C 1.667,0 -1.667,0 -2,0"
+        android:propertyName="translateXY"
+        android:propertyXName="translateX"
+        android:propertyYName="translateY"
+        android:startOffset="567" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__1__5"
+        android:pathData="M -2,0C -2.333,0 1.333,0 1,0"
+        android:propertyName="translateXY"
+        android:propertyXName="translateX"
+        android:propertyYName="translateY"
+        android:startOffset="700" />
+    <objectAnimator
+        android:duration="100"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__1__6"
+        android:pathData="M 1,0C 0.667,0 0.167,0 0,0"
+        android:propertyName="translateXY"
+        android:propertyXName="translateX"
+        android:propertyYName="translateY"
+        android:startOffset="833" />
 </set>

@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:id="@id/broadcastTop"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/live_broadcast_friends_users_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" />
-    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/live_broadcast_friends_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="350.0dip" android:maxLines="2" android:includeFontPadding="false" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" app:fontFamily="@font/roboto_medium" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/broadcastTop">
+
+    <LinearLayout
+        android:id="@id/live_broadcast_friends_users_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="8.0dip"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@id/live_broadcast_friends_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxWidth="350.0dip"
+        android:maxLines="2"
+        android:shadowColor="#52000000"
+        android:shadowDy="2.0"
+        android:shadowRadius="12.0"
+        android:textColor="@color/white"
+        android:textSize="12.0sp"
+        app:fontFamily="@font/roboto_medium" />
 </merge>

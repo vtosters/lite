@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/appkit_loader_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
         <include layout="@layout/appkit_toolbar" />
-        <FrameLayout android:id="@id/audio_msg_player_container" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <ViewStub android:id="@id/audio_msg_player_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-            <com.vk.core.view.AppBarShadowView android:id="@id/audio_msg_player_separator" app:appbar_forceMode="separator" style="@style/AppBarShadow" />
+
+        <FrameLayout
+            android:id="@id/audio_msg_player_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="?background_content">
+
+            <ViewStub
+                android:id="@id/audio_msg_player_stub"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.vk.core.view.AppBarShadowView
+                android:id="@id/audio_msg_player_separator"
+                style="@style/AppBarShadow"
+                app:appbar_forceMode="separator" />
         </FrameLayout>
     </com.google.android.material.appbar.AppBarLayout>
-    <ViewStub android:id="@id/im_dialogs_list_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/toolbar_behavior_scrolling" />
-    <com.vk.core.view.AppBarShadowView android:id="@id/im_appbar_shadow" style="@style/AppBarShadow" />
-    <ViewStub android:id="@id/dialogs_search_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+    <ViewStub
+        android:id="@id/im_dialogs_list_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/toolbar_behavior_scrolling" />
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/im_appbar_shadow"
+        style="@style/AppBarShadow" />
+
+    <ViewStub
+        android:id="@id/dialogs_search_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

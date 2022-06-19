@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="2.0dip" app:cardBackgroundColor="?background_content" app:cardCornerRadius="@dimen/base_link_grid_item_corner_radius"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackground">
-        <include android:id="@id/content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/catalog_link_grid_item_part_video" />
-        <include android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/catalog_link_grid_item_part_detail_footer" />
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:elevation="2.0dip"
+    app:cardBackgroundColor="?background_content"
+    app:cardCornerRadius="@dimen/base_link_grid_item_corner_radius">
+
+    <LinearLayout
+        android:id="@id/content_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:foreground="?selectableItemBackground"
+        android:orientation="vertical">
+
+        <include
+            android:id="@id/content"
+            layout="@layout/catalog_link_grid_item_part_video"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <include
+            android:id="@id/footer"
+            layout="@layout/catalog_link_grid_item_part_detail_footer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -1,13 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="206.0dip" />
-    <TextView android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view_count_label" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/video_action_link_stat_sheet_label_views" android:maxLines="1" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintEnd_toStartOf="@id/guideline" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="?text_secondary" android:gravity="end|center" android:id="@id/view_count_value" android:layout_width="0.0dip" android:layout_height="0.0dip" android:lineSpacingExtra="4.0sp" android:fontFamily="sans-serif" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:letterSpacing="0.01" app:layout_constraintBottom_toBottomOf="@id/view_count_label" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0" app:layout_constraintStart_toEndOf="@id/guideline" app:layout_constraintTop_toTopOf="@id/view_count_label" app:layout_constraintVertical_bias="0.0" />
-    <TextView android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/clicks_count_label" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/video_action_link_stat_sheet_label_clicks" android:maxLines="1" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintEnd_toStartOf="@id/guideline" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/view_count_label" />
-    <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="?text_secondary" android:gravity="end|center" android:id="@id/clicks_count_value" android:layout_width="0.0dip" android:layout_height="0.0dip" android:lineSpacingExtra="4.0sp" android:fontFamily="sans-serif" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:letterSpacing="0.01" app:layout_constraintBottom_toBottomOf="@id/clicks_count_label" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0" app:layout_constraintStart_toEndOf="@id/guideline" app:layout_constraintTop_toTopOf="@id/clicks_count_label" app:layout_constraintVertical_bias="0.0" />
-    <TextView android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/clicks_ratio_count_label" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/video_action_link_stat_sheet_label_ratio" android:maxLines="1" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintEnd_toStartOf="@id/guideline" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/clicks_count_label" />
-    <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="?text_secondary" android:gravity="end|center" android:id="@id/clicks_ratio_count_value" android:layout_width="0.0dip" android:layout_height="0.0dip" android:lineSpacingExtra="4.0sp" android:fontFamily="sans-serif" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:letterSpacing="0.01" app:layout_constraintBottom_toBottomOf="@id/clicks_ratio_count_label" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0" app:layout_constraintStart_toEndOf="@id/guideline" app:layout_constraintTop_toTopOf="@id/clicks_ratio_count_label" app:layout_constraintVertical_bias="0.0" />
-    <TextView android:textSize="13.0sp" android:textStyle="normal" android:textColor="?text_secondary" android:id="@id/description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/video_action_link_stat_sheet_description" android:lineSpacingExtra="3.0sp" android:fontFamily="sans-serif" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:letterSpacing="0.02" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/clicks_ratio_count_value" app:layout_constraintWidth_default="wrap" />
-    <ProgressBar android:id="@id/progress" android:layout_width="50.0dip" android:layout_height="50.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="206.0dip" />
+
+    <TextView
+        android:id="@id/view_count_label"
+        android:layout_width="0.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="@string/video_action_link_stat_sheet_label_views"
+        android:textColor="?text_primary"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/view_count_value"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:fontFamily="sans-serif"
+        android:gravity="end|center"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="4.0sp"
+        android:textColor="?text_secondary"
+        android:textSize="16.0sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/view_count_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/view_count_label"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@id/clicks_count_label"
+        android:layout_width="0.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="@string/video_action_link_stat_sheet_label_clicks"
+        android:textColor="?text_primary"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_count_label" />
+
+    <TextView
+        android:id="@id/clicks_count_value"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:fontFamily="sans-serif"
+        android:gravity="end|center"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="4.0sp"
+        android:textColor="?text_secondary"
+        android:textSize="16.0sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/clicks_count_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/clicks_count_label"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@id/clicks_ratio_count_label"
+        android:layout_width="0.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="@string/video_action_link_stat_sheet_label_ratio"
+        android:textColor="?text_primary"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clicks_count_label" />
+
+    <TextView
+        android:id="@id/clicks_ratio_count_value"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:fontFamily="sans-serif"
+        android:gravity="end|center"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="4.0sp"
+        android:textColor="?text_secondary"
+        android:textSize="16.0sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/clicks_ratio_count_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/clicks_ratio_count_label"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@id/description"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="3.0sp"
+        android:text="@string/video_action_link_stat_sheet_description"
+        android:textColor="?text_secondary"
+        android:textSize="13.0sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clicks_ratio_count_value"
+        app:layout_constraintWidth_default="wrap" />
+
+    <ProgressBar
+        android:id="@id/progress"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

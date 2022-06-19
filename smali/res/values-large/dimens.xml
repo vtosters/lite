@@ -2,19 +2,19 @@
 <resources>
     <dimen name="_post_side_padding">-24.0dip</dimen>
     <dimen name="abc_config_prefDialogWidth">440.0dip</dimen>
-    <item type="dimen" name="abc_dialog_fixed_height_major">60.000004%</item>
-    <item type="dimen" name="abc_dialog_fixed_height_minor">90.0%</item>
-    <item type="dimen" name="abc_dialog_fixed_width_major">60.000004%</item>
-    <item type="dimen" name="abc_dialog_fixed_width_minor">90.0%</item>
-    <item type="dimen" name="abc_dialog_min_width_major">55.000008%</item>
-    <item type="dimen" name="abc_dialog_min_width_minor">79.99999%</item>
+    <item name="abc_dialog_fixed_height_major" type="dimen">60.000004%</item>
+    <item name="abc_dialog_fixed_height_minor" type="dimen">90.0%</item>
+    <item name="abc_dialog_fixed_width_major" type="dimen">60.000004%</item>
+    <item name="abc_dialog_fixed_width_minor" type="dimen">90.0%</item>
+    <item name="abc_dialog_min_width_major" type="dimen">55.000008%</item>
+    <item name="abc_dialog_min_width_minor" type="dimen">79.99999%</item>
     <dimen name="game_padding_lr0">16.0dip</dimen>
     <dimen name="game_padding_lr8">24.0dip</dimen>
     <dimen name="game_page_margin">10.0dip</dimen>
     <dimen name="game_page_maxWidth">800.0dip</dimen>
     <dimen name="game_page_pgMargin">16.0dip</dimen>
     <dimen name="game_show_all_padding">48.0dip</dimen>
-    <item type="dimen" name="gift_category_min_size">@dimen/gift_min_size</item>
+    <item name="gift_category_min_size" type="dimen">@dimen/gift_min_size</item>
     <dimen name="gift_min_size">104.0dip</dimen>
     <dimen name="good_description_padding_bottom">19.0dip</dimen>
     <dimen name="good_description_padding_top">8.0dip</dimen>
