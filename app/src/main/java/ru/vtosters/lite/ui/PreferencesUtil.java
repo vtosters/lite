@@ -58,7 +58,7 @@ public class PreferencesUtil {
         preference.setDefaultValue(def); // setDefaultValue
         if (icon != null)
             preference.setIcon(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
-        fragment.getPreferenceScreen().d(preference); // fragment.getPreferenceScreen().addPreference(preference)
+        fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
     public static void addMaterialSwitchPreference(MaterialPreferenceToolbarFragment materialPreferenceToolbarFragment, String key, CharSequence title, CharSequence summary, boolean defValue) {
@@ -183,7 +183,7 @@ public class PreferencesUtil {
             margin.setMargins(convertDpToPixel(24f), 0, convertDpToPixel(24f), 0);
             editText.setLayoutParams(margin);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(fragment.p());
+            AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getContext());
             builder.setTitle(title);
             builder.setView(linearLayout);
             builder.setPositiveButton("OK", (dialog, which) -> {
