@@ -1,7 +1,5 @@
 package ru.vtosters.lite.audio.gcm;
 
-import static ru.vtosters.lite.audio.gcm.NewGcmFix.FixToken;
-import static ru.vtosters.lite.audio.gcm.NewGcmFix.FixToken2;
 import static ru.vtosters.lite.utils.Preferences.VKVersion;
 import static ru.vtosters.lite.utils.Preferences.VKVersionBuild;
 import static ru.vtosters.lite.utils.Preferences.musicFixNew;
@@ -42,12 +40,12 @@ public class GCMFix {
     }
 
     public static String requestTokenV2(String orig){
-        if(musicFixNew()) return FixToken2();
+        if(musicFixNew()) return "null"; // TODO FIX TOKENMOD v2
         return orig;
     }
 
     public static String requestToken(String orig){
-        if(musicFixNew()) return FixToken();
+        if(musicFixNew()) return "{null}"; // TODO FIX TOKENMOD v2
         if(orig.equals("")) return requestToken();
         return orig;
     }
