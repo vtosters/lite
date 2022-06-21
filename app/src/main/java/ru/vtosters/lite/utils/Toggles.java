@@ -1,0 +1,212 @@
+package ru.vtosters.lite.utils;
+
+import static ru.vtosters.lite.utils.Preferences.feedcache;
+import static ru.vtosters.lite.utils.Preferences.milkshake;
+import static ru.vtosters.lite.utils.Preferences.returnnorifs;
+import static ru.vtosters.lite.utils.Preferences.superapp;
+
+import com.vk.toggle.FeatureManager;
+import com.vk.toggle.Features;
+
+public class Toggles {
+    public static boolean redirect(FeatureManager.b f){
+        Features.Type feature = (Features.Type) f;
+
+        switch (feature) {
+            case EXPERIMENT_NEWS_DISABLE_CACHE:
+                return feedcache();
+            case FEATURE_SUPERAPP_MENU:
+                return superapp();
+            case FEATURE_MILKSHAKE:
+                return milkshake();
+            case FEATURE_MILKSHAKE_NOTIFICATIONS_RETURN:
+                return returnnorifs();
+        }
+
+        switch (feature) {
+            case FEATURE_SEAMLESS_CACHE:
+            case FEATURE_APP_ABOUT_MOBILEHELP:
+            case FEATURE_INAPP_UPDATES:
+            case FEATURE_APP_STATISTIC_FTR:
+            case FEATURE_APP_STATISTIC_BENCHMARK:
+            case FEATURE_APP_STATISTIC_PRODUCT:
+            case FEATURE_APP_STATISTIC_MEDIA:
+            case FEATURE_MUSIC_BG_OFF:
+            case FEATURE_GQUIC_METRICS_ENABLE:
+            case FEATURE_VIDEO_ADS:
+                return false;
+
+            case FEATURE_IM_AUDIO_MSG_TRANSCRIPT:
+            case FEATURE_GROUP_ADMIN_MESSAGES:
+            case FEATURE_GROUP_MSG_PUSH_PARAM:
+            case FEATURE_IMAGE_QUALITY_UPGRADE:
+            case FEATURE_IM_DISABLE_FORCE_OPEN_VK_ME:
+            case FEATURE_IMAGE_QUALITY_UPGRADE:
+            case FEATURE_IMAGE_QUALITY_UPGRADE:
+            case FEATURE_IMAGE_QUALITY_UPGRADE:
+            case FEATURE_IMAGE_QUALITY_UPGRADE:
+                return true
+
+            default:
+                return true;
+        }
+    }
+
+    public static class ToggleModule {
+        public enum Type {
+            AB_GIFTS_FROM_KEYBOARD,
+            AB_IM_LONGPOLL_MSG_BATCHING,
+            AB_IM_LP_ATTACHES,
+            AB_IM_VIEW_POOL,
+            AB_MULTI_GIFTS,
+            AB_NEWS_VIDEO_LAYOUT_TEXT,
+            AB_STICKERS_DISCOVER,
+            EXPERIMENT_FORCE_INSTALL_VK_ME,
+            EXPERIMENT_NEWS_DISABLE_CACHE,
+            EXPERIMENT_NEWS_VIDEO_LAYOUT_TEXT,
+            FEATURE_APP_ABOUT_MOBILEHELP,
+            FEATURE_APP_STATISTIC_BENCHMARK,
+            FEATURE_APP_STATISTIC_FTR,
+            FEATURE_APP_STATISTIC_MEDIA,
+            FEATURE_APP_STATISTIC_PRODUCT,
+            FEATURE_ASYNC_PURCHASE_MANAGER,
+            FEATURE_AWAY_APP_ENTRY_POINT,
+            FEATURE_BUGTRACKER_ENABLED,
+            FEATURE_CACHE_INFO_UNTIL,
+            FEATURE_CATALOG_24CACHE,
+            FEATURE_CATALOG_NO_STATE,
+            FEATURE_CHECK_PARENT_FRAGMENT_HIDDEN_STATE,
+            FEATURE_COMPACT_REPOST,
+            FEATURE_DEBUG_CRASH_INFO,
+            FEATURE_DEBUG_CYCLE_CALLS,
+            FEATURE_DEBUG_FULL_MSG_LOGS,
+            FEATURE_DEBUG_LOG_CONFIG,
+            FEATURE_DEBUG_MENU,
+            FEATURE_DEBUG_STAT_NAVIGATION,
+            FEATURE_DEBUG_VIDEO_RENDERER,
+            FEATURE_DISCOVER_CATEGORIES,
+            FEATURE_FAVE_PERF_IMPROVE,
+            FEATURE_FEED_CACHE_NOCOUNTER,
+            FEATURE_FEED_DEFAULT_LIST_ALWAYS,
+            FEATURE_FORCE_RETURN,
+            FEATURE_GQUIC_BETA_TEST,
+            FEATURE_GQUIC_INTEGRATION,
+            FEATURE_GQUIC_METRICS_ENABLE,
+            FEATURE_GROUP_ADMIN_MESSAGES,
+            FEATURE_GROUP_MSG_PUSH_PARAM,
+            FEATURE_IMAGE_QUALITY_UPGRADE,
+            FEATURE_IM_AUDIO_MSG_TRANSCRIPT,
+            FEATURE_IM_CASPER_MSGS,
+            FEATURE_IM_DISABLE_FORCE_OPEN_VK_ME,
+            FEATURE_IM_GIF_AUTOPLAY,
+            FEATURE_IM_MR_IN_VKAPP,
+            FEATURE_INAPP_UPDATES,
+            FEATURE_INTERNAL_STORAGE_LOGS,
+            FEATURE_MEMORIES_ENABLED,
+            FEATURE_MENU_GAMES_CAROUSEL,
+            FEATURE_MILKSHAKE,
+            FEATURE_MILKSHAKE_ACTIVATION_DISABLED,
+            FEATURE_MILKSHAKE_CHANGE_FEED_BY_TIMEOUT,
+            FEATURE_MILKSHAKE_DISCOVER_IN_MENU,
+            FEATURE_MILKSHAKE_FEED_BLUE_TITLE,
+            FEATURE_MILKSHAKE_FORCE_DISABLED,
+            FEATURE_MILKSHAKE_NEWS_HEADER_HIDE,
+            FEATURE_MILKSHAKE_NEWS_HEADER_HIDE_SNAP,
+            FEATURE_MILKSHAKE_NEWS_SCROLL_ON_BACK,
+            FEATURE_MILKSHAKE_NOTIFICATIONS_RETURN,
+            FEATURE_MILKSHAKE_SWITCH_THEME_ON_TAP,
+            FEATURE_ML_BRANDS,
+            FEATURE_ML_FEATURES,
+            FEATURE_ML_MODELS_LOADING,
+            FEATURE_MONEY_TRANSFERS_VKPAY,
+            FEATURE_MOZJPEG,
+            FEATURE_MUSIC_ARTIST_CATALOG,
+            FEATURE_MUSIC_AUDIO_SERVICE,
+            FEATURE_MUSIC_BG_OFF,
+            FEATURE_MUSIC_LIKE_IN_PLAYER,
+            FEATURE_MUSIC_NEW_CATALOG,
+            FEATURE_MUSIC_REINIT_PLAYER,
+            FEATURE_MUSIC_STOP_PLAYER_ON_TASK_REMOVAL,
+            FEATURE_MUSIC_SUBS_PUSH,
+            FEATURE_MUS_PUSH_RES_COUNT,
+            FEATURE_MUS_RETRIES_BUY_SUB_COUNT,
+            FEATURE_NARRATIVE_SNIPPET_TYPE,
+            FEATURE_NEWS_GAMES_IN_DISCOVER,
+            FEATURE_NEWS_HEADER_SCROLL,
+            FEATURE_NEW_FORMAT_SHOW_WPB,
+            FEATURE_NOTIFICATION_ANIM,
+            FEATURE_PODCASTS_PAGE,
+            FEATURE_PRODUCT_ATTACH_BTN,
+            FEATURE_PURCHASE_MANAGER_RETRIES_ENABLED,
+            FEATURE_QR_CREATE_QR,
+            FEATURE_QR_DYNAMIC_FRAME,
+            FEATURE_QR_SCAN_FROM_PHOTO,
+            FEATURE_QR_VISION_DECODER,
+            FEATURE_QUEUE_COUNTERS,
+            FEATURE_REEF,
+            FEATURE_ROAMING_AUTOPLAY,
+            FEATURE_SEAMLESS_CACHE,
+            FEATURE_SECURITY_SETTINGS,
+            FEATURE_SHARE_MSGS_ON_INVITE,
+            FEATURE_STICKERS_BOT_LINK,
+            FEATURE_STICKERS_NEW_CATALOG,
+            FEATURE_STORIES_AVATAR,
+            FEATURE_STORIES_FEED_TYPE,
+            FEATURE_STORIES_SHOW_ALWAYS,
+            FEATURE_STORY_ANSWER_PUBLIC,
+            FEATURE_STORY_APP_STICKER,
+            FEATURE_STORY_ARCHIVE,
+            FEATURE_STORY_ARCHIVE_POST,
+            FEATURE_STORY_BAKGROUND_ALL,
+            FEATURE_STORY_BOX,
+            FEATURE_STORY_CADRE,
+            FEATURE_STORY_CAMERA_TOOLTIP,
+            FEATURE_STORY_EDITOR_GALLERY,
+            FEATURE_STORY_EDITOR_TYPE,
+            FEATURE_STORY_ENDLESS_VIDEO,
+            FEATURE_STORY_FAST_REACTIONS,
+            FEATURE_STORY_GIF,
+            FEATURE_STORY_GROUPED,
+            FEATURE_STORY_HIGH_QUALITY,
+            FEATURE_STORY_MASKS_FRONTAL,
+            FEATURE_STORY_MENTION_ICON,
+            FEATURE_STORY_MODERN_PUBLISH,
+            FEATURE_STORY_MUSIC_EDITOR,
+            FEATURE_STORY_MUSIC_REPLIES,
+            FEATURE_STORY_MUSIC_REPLIES_2,
+            FEATURE_STORY_NEW_FRAME,
+            FEATURE_STORY_ONE_TIME,
+            FEATURE_STORY_PHOTO_SHARING,
+            FEATURE_STORY_PHOTO_STICKER,
+            FEATURE_STORY_POLLS,
+            FEATURE_STORY_POST_REPOST,
+            FEATURE_STORY_PRELOADING,
+            FEATURE_STORY_QUESTION,
+            FEATURE_STORY_QUESTION_STYLE,
+            FEATURE_STORY_RLOTTIE,
+            FEATURE_STORY_RLOTTIE_CACHE,
+            FEATURE_STORY_SAVE_DEFAULT_ON,
+            FEATURE_STORY_SEND_DIALOG_LIST,
+            FEATURE_STORY_STICKER_PACK,
+            FEATURE_STORY_TIME,
+            FEATURE_STORY_VIEWER_CAMERA,
+            FEATURE_STORY_VOICE_ANSWER,
+            FEATURE_STORY_WITH_CONTEXT,
+            FEATURE_SUPERAPP_MENU,
+            FEATURE_TRAFFIC_SAVER,
+            FEATURE_VIDEO_ADS,
+            FEATURE_VIDEO_RESTRICTION,
+            FEATURE_VKPAY_PAY_WITH_QR,
+            FEATURE_VKPAY_WIDGET,
+            FEATURE_VKUI_INTERNAL_TO_MINI_APPS,
+            FEATURE_VKUI_TOKEN_CACHE,
+            FEATURE_VK_APPS_SEARCH,
+            FEATURE_VOIP_PREALLOCATE,
+            FEATURE_VOTES_BALANCE,
+            FEATURE_VOTES_BALANCE_PROMO,
+            FEATURE_WEBVIEW_TOKEN_ACTIVE,
+            FEATURE_WISHLIST_ENTRY_POINT,
+            FEATURE_WISHLIST_MY_PROFILE
+        }
+    }
+}
