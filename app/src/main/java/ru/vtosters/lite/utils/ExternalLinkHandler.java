@@ -33,7 +33,7 @@ public class ExternalLinkHandler {
         if (checkYoutubeLink(file)) {
             try {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(file.n));
+                intent.setData(Uri.parse(file.G));
                 context.startActivity(intent);
                 return true;
             } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ExternalLinkHandler {
     }
 
     private static boolean checkYoutubeLink(VideoFile file) {
-        if (!isEmpty(file.n)) {
+        if (!isEmpty(file.G)) {
             for (String filter : filters) {
-                if (file.n.contains(filter))
+                if (file.G.contains(filter))
                     return true;
             }
         }
@@ -69,13 +69,13 @@ public class ExternalLinkHandler {
     }
 
     /**
-     * this.e = var3.optString("mp4_240", var3.optString("src"));
-     * this.f = var3.optString("mp4_360");
-     * this.g = var3.optString("mp4_480");
-     * this.h = var3.optString("mp4_720");
-     * this.i = var3.optString("mp4_1080");
-     * this.j = var3.optString("mp4_1440");
-     * this.k = var3.optString("mp4_2160");
+     *  this.e = var66.optString("mp4_240", var66.optString("src"));
+     *  this.f = var66.optString("mp4_360");
+     *  this.g = var66.optString("mp4_480");
+     *  this.h = var66.optString("mp4_720");
+     *  this.B = var66.optString("mp4_1080");
+     *  this.C = var66.optString("mp4_1440");
+     *  this.D = var66.optString("mp4_2160");
      */
     public static boolean checkVkVideo(VideoFile videoFile) {
         if (!isEmpty(videoFile.e)) {
@@ -90,14 +90,14 @@ public class ExternalLinkHandler {
         if (!isEmpty(videoFile.h)) {
             qualities.put("720", videoFile.h);
         }
-        if (!isEmpty(videoFile.i)) {
-            qualities.put("1080", videoFile.i);
+        if (!isEmpty(videoFile.B)) {
+            qualities.put("1080", videoFile.B);
         }
-        if (!isEmpty(videoFile.j)) {
-            qualities.put("1440", videoFile.j);
+        if (!isEmpty(videoFile.C)) {
+            qualities.put("1440", videoFile.C);
         }
-        if (!isEmpty(videoFile.k)) {
-            qualities.put("2160", videoFile.k);
+        if (!isEmpty(videoFile.D)) {
+            qualities.put("2160", videoFile.D);
         }
 
         return qualities.size() > 0;

@@ -2,6 +2,7 @@ package ru.vtosters.lite.downloaders;
 
 import static ru.vtosters.lite.utils.Globals.getString;
 
+import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -31,7 +32,7 @@ public class OTADownloader {
             var manager = (DownloadManager) Globals.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
             var cursor = manager.query(query);
             if (cursor.moveToFirst()) {
-                var status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
+                @SuppressLint("Range") var status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
                 if (status == DownloadManager.STATUS_SUCCESSFUL) {
                     var downloadDir = new File(Environment.getExternalStorageDirectory(), "Download");
                     if (!downloadDir.exists()) return;
@@ -45,7 +46,7 @@ public class OTADownloader {
                             maxIndex = Math.max(maxIndex, Integer.parseInt(name.replaceFirst(".+-(\\d+).+", "$1")));
                     }
                     File apk = maxIndex == -1 ? new File(downloadDir, "VTLite.apk") : new File(downloadDir, "VTLite-" + maxIndex + ".apk");
-                    APKInstallActivity.installOta(context, FileUtils.h(apk));
+                    APKInstallActivity.installOta(context, FileUtils.n(apk));
                 } else if (status == DownloadManager.STATUS_FAILED) {
                     Globals.sendToast(getString("downloaderr"));
                 }

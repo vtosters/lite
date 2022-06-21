@@ -84,11 +84,12 @@ public class DockBarFragment extends MaterialPreferenceToolbarFragment {
     }
 
     @Override
-    public void a(View arg0, Bundle arg1) {
-        o_(true);
+    public void onViewCreated(View arg0, Bundle arg1) {
+        setHasOptionsMenu(true);
 
-        super.a(arg0, arg1);
+        super.onViewCreated(arg0, arg1);
 
-        a(getString("dockbar_editor"));
+        // TODO: хз что это
+        //a(getString("dockbar_editor"));
     }
 }
