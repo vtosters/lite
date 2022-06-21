@@ -217,6 +217,20 @@ public class Preferences {
         return getBoolValue("feedcache", true);
     }
 
+
+    public static boolean superapp() {
+        return getBoolValue("superapp", true);
+    }
+
+    public static boolean milkshake() {
+        return getBoolValue("milkshake", true);
+    }
+
+    public static boolean returnnorifs() {
+        return getBoolValue("returnnorifs", false);
+    }
+
+
     public static boolean CommentsSort() {
         return getBoolValue("commentssorting", false);
     }
